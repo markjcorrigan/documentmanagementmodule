@@ -1,0 +1,85 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}EpicstoTasks{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container">
+  <h3>Using Azure Devops for Scrum (1 hour 30 minute how to video)<br>
+    And the Epics, Features, User Stories and Tasks or Bugs etc. structure in Azure DevOps</h3>
+  <hr>
+  <p><a href="#playlist">PLAYLIST</a></p>
+  <div id="player" align="center">
+    <!-- video source and track elements will be populated from playlist -->
+    <video id="video1" preload="false" data-able-player playsinline ></video>
+  </div>
+  <div id="playlist">
+    <h2><a name="playlist"></a>Playlist</h2>
+    <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+    <!-- The value of data-player must match the id of the media element -->
+    <!-- see documentation for additional details -->
+    <ul class="able-playlist" data-player="video1">
+		 <li  data-poster="/images/agilescrumlifecycldiagram.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/epicstotasksinazure/azuredevopsintro.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/azuredevopsintro.png') }}" alt="">Azure DevOps Intro </button>
+      </li>
+
+
+      <li  data-poster="/images/agilescrumlifecycldiagram.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/epicstotasksinazure/azurescrumproject.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/agilescrumlifecycldiagram.png') }}" alt="">The full 1 hour 30 mins course bought from Patrick on Udemy is available to assist my team and colleagues here. </button>
+      </li>
+      <li  data-poster="/images/epicstotasksinazure.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/epicstotasksinazure/epicstotasksinazure.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/epicstotasksinazure.jpg') }}" alt="">Epics down to Tasks in Azure </button>
+      </li>
+    </ul>
+    <br>
+	  	<p><a href="/azureviewvideo/resources/helloazureworld.mp4" >Cool overview of using Azure Agile / Scrum</a></p>
+    <br>
+  </div>
+</div>
+<br>
+<br>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+  <h3>Using Azure Devops for Scrum (1 hour 30 minute how to video)<br>
+    And the Epics, Features, User Stories and Tasks or Bugs etc. structure in Azure DevOps</h3>
+  <hr>
+  <p><a href="#playlist">PLAYLIST</a></p>
+  <div id="player" align="center">
+    <!-- video source and track elements will be populated from playlist -->
+    <video id="video1" preload="false" data-able-player playsinline ></video>
+  </div>
+  <div id="playlist">
+    <h2><a name="playlist"></a>Playlist</h2>
+    <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+    <!-- The value of data-player must match the id of the media element -->
+    <!-- see documentation for additional details -->
+    <ul class="able-playlist" data-player="video1">
+      <li  data-poster="/images/agilescrumlifecycldiagram.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/epicstotasksinazure/azurescrumproject.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/agilescrumlifecycldiagram.png') }}" alt="">The full 1 hour 30 mins course bought from Patrick on Udemy is available to assist my team and colleagues here. </button>
+      </li>
+      <li  data-poster="/images/epicstotasksinazure.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/epicstotasksinazure/epicstotasksinazure.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/epicstotasksinazure.jpg') }}" alt="">Epics down to Tasks in Azure </button>
+      </li>
+    </ul>
+    <br>
+    <br>
+  </div>
+</div>
+<br>
+<br>
+
+<!--ENDBODY-->
+
+{% endif %}
+{% endblock %}

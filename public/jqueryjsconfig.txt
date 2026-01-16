@@ -1,0 +1,159 @@
+https://larainfo.com/blogs/how-to-install-jquery-in-laravel-9
+
+
+How to Install JQuery in Laravel 9
+✍ Laravel
+⚇ by larainfo
+⌚ 13-09-2022
+how to install jquery in laravel 9
+In this we will see how to install and use jquery in laravel 9. There is three way you can use jquery in laravel 9 you can use cdn or download jquery and import in laravel project or you can use jquery via npm.
+
+
+1.Using JQuery CDN in laravel 9
+Jquery cdn is very easy and simple way you just need to put cdn in laravel blade file.
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+
+resources/views/welcome.blade.php
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel 9 JQuery</title>
+    </head>
+
+    <body>
+        <div style="text-align: center;">
+            <h1>laravel 9 use jquery</h1>
+            <p>Laravel 9 using jquery with cdn</p>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("h1").css('color', 'red');
+              $("p").css({ 'color': 'blue', 'font-size': '18px' });
+            });
+        </script>
+    </body>
+
+</html> 
+setup laravel 9 jquery
+
+
+2. Using JQuery in laravel with Asset File
+Download JQuery and create jquery.js file in public folder and add download jquery code in jquery.js.
+
+<script src="{{ asset('jquery.js') }}"></script>
+use download jquery in laravel 9 via asset file
+
+
+resources/views/welcome.blade.php
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel 9 JQuery</title>
+    </head>
+
+    <body>
+        <div style="text-align: center;">
+            <h1>laravel 9 use jquery</h1>
+            <p>Laravel 9 using jquery with asset file</p>
+        </div>
+        <script src="{{ asset('jquery.js') }}"></script>
+        <script>
+            $(document).ready(function(){
+                $("h1").css('color', 'red');
+              $("p").css({ 'color': 'blue', 'font-size': '18px' });
+            });
+        </script>
+    </body>
+
+</html>
+
+
+3. Install JQuery in laravel 9 with Vite
+install Jquery via NPM:
+
+npm i jquery
+
+
+import jquery in resources/js/app.js
+
+resources/js/app.js
+
+import jQuery from 'jquery';
+window.$ = jQuery;
+
+
+Add JQuery Vite Config file
+
+vite.config.js
+
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+
+export default defineConfig({
+    plugins: [
+        laravel({
+            input: [
+                'resources/css/app.css',
+                'resources/js/app.js',
+            ],
+            refresh: true,
+        }),
+    ],
+    resolve: {
+        alias: {
+            '$': 'jQuery'
+        },
+    },
+});
+
+
+Now add @vite(['resources/css/app.css', 'resources/js/app.js']) in blade file.
+
+resources/views/welcome.blade.php
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel 9 JQuery with vite</title>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    </head>
+
+    <body>
+        <div style="text-align: center;">
+            <h1>laravel 9 use jquery with vite</h1>
+            <p>Laravel 9 using jquery with vite</p>
+        </div>
+        <script type="module">
+            $(document).ready(function(){
+                $("h1").css('color', 'red');
+              $("p").css({ 'color': 'blue', 'font-size': '18px' });
+            });
+        </script>
+    </body>
+
+</html>
+
+
+run laravel and vite server
+
+php artisan serve
+// and in next terminal
+npm run dev

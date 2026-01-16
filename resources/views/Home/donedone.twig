@@ -1,0 +1,348 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Done Done{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" >
+<br>
+<h3 align="left">Done Done:&nbsp; It ain't over 'till it's over!</h3>
+<hr>
+<p>In the Scrum.org Headquarters there is a picture of Ken Schwaber - one of the founders of Scrum - pointing at a sticky saying
+  &quot;Done.&quot; <br>
+  This picture underscores the most essential rule in Scrum: create &quot;Done&quot; software every Sprint.</p>
+<p id="c56e" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">But many teams struggle with this rule. It is tempting to fall into
+  &quot;shades of Done.&quot; An increment is considered &quot;Done&quot; by the Development Team, but requires further testing and stabilization in the next Sprint. Or work is considered
+  &quot;Done&quot; by the Development Team, but the install package still needs to be created. Or work is considered
+  &quot;Done,&quot; but acceptance testing hasn't been done yet.</p>
+<p id="899c" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">But
+  &quot;Done&quot; doesn't support adjectives like &quot;nearly,&quot; &quot;pretty much&quot; or &quot;almost.&quot; An increment is
+  &quot;Done&quot; or it isn't - there is no gray area. And there is a very powerful, compelling reason behind this: the Scrum Framework only helps to reduce the risk of wasting money and effort when you deliver
+  &quot;Done&quot; software <em class="my">every</em> Sprint. <br>
+  <br>
+  Essentially Done Software is a new version of your product that is, or with the proverbial press of a button, can be, released to users which can be used by them and which is valuable to them! <br>
+  <br>
+  <b>If you are unable to deliver a
+  &quot;Done&quot; increment during a Sprint, you are not doing Scrum!</b><br>
+  This is clearly explained in the image directly below.  Now click the image to see what happens if this problem continues sprint after sprint.</p>
+<p align="center"> <a href="/scrumrca#indexc"  title="Click the image to find out more about the 7 Dysfunctional Scrum Types"><img alt="" class="img-fluid ui-draggable ui-draggable-handle" title="It aint done till its done done!"  src="{{ asset('storage/images/doneandundone.jpg') }}" onmouseover="this.src='{{ asset('storage/images/undonescrum.jpg') }}'" onmouseout="this.src='{{ asset('storage/images/doneandundone.jpg') }}'" style="position: relative;"><br>
+  <i>Click here for the 7 types of Scrum Dysfunctions of which Undone Scrum is one</i></a></p>
+<blockquote class="mz">
+  <div id="457d" class="na nb hm aq kw b ln nc nd ne nf ng mx"> </div>
+</blockquote>
+<h3 id="c7c0" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">Defining
+  &quot;Done&quot;</h3>
+<p id="c09f" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">What constitutes
+  &quot;Done&quot; depends greatly on context. Building a website for an external customer will require different work then when you're working with different Scrum Teams on mission-critical software for internal users. It depends on the quality guidelines that already exist within your organization, how critical the software is to the business, the level of involvement of users, the technologies in use and many other factors.</p>
+<p id="2687" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">Suppose that you are building a new feature for your product as part of the current Sprint. Building this feature requires a workflow of all sorts of tasks, from writing code to creating unit tests, from creating a design to testing it on mobile devices and from testing it with users to integrating it with work done by other teams. And ultimately deploying it to your users. Necessarily, this requires all sorts of skills in the Development Team. And it requires an effective workflow to do all this within a single Sprint.</p>
+<p align="left">It may be tempting to limit
+  &quot;Done&quot; to what a Development Team can actually do</p>
+<div align="left">Many teams starting out with Scrum are unable to do this because of technical and organizational impediments. It may be tempting to limit the definition of
+  &quot;Done&quot; to what a Development Team can <em class="my">actually achieve</em> in a Sprint. Thus, they may end up defining
+  &quot;Done&quot; as no more than:
+  </p>
+  <ul class="">
+    <li id="6989" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx om on oo">The code has been peer reviewed by another developer in the team;</li>
+    <li id="232a" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">Unit tests have been written and are passing for the item;</li>
+    <li id="906d" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">The code is merged and has been checked into the develop-branch;</li>
+  </ul>
+  <p id="6492" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">More specifically, the Development Team will move items to
+    &quot;Done&quot; on their Scrum Board when it meets these criteria.</p>
+  <h3 id="8198" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv"> &quot;Done&quot; and Undone Work</h3>
+  <p id="8394" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">This Development Team may think they are delivering a
+    &quot;Done&quot; - increment every Sprint. After all, they can tick all the boxes in their definition of
+    &quot;Done.&quot; <br>
+    But are they really? But with a definition of &quot;Done&quot; that is mostly focused on working code, the resulting software will be hard to review by the Product Owner. Any feedback on this intermediate result will be incomplete at best. A number of things may happen in the next Sprints, <em class="my">after </em>the team considers work
+    &quot;Done,&quot; when other steps in the workflow are completed. Some examples are:</p>
+  <ul class="">
+    <li id="3ec4" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx om on oo">When reviewing the feature, the Product Owner determines that an essential element promised to stakeholders is missing, requiring changes during the next Sprint;</li>
+    <li id="7f3c" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">While testing the feature, a user discovers a breaking bug that needs to be fixed during the next Sprint;</li>
+    <li id="b799" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">Integration of the code with work done by another team for the same product fails, requiring the Development Team to resolve complicated merge conflicts during the next Sprint;</li>
+    <li id="1efa" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">The feature doesn't scale correctly on some mobile devices, requiring the Development Team to fix the feature in the next Sprint;</li>
+    <li id="3d8f" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">When trying to deploy the feature to production, the install fails. After investigation during the next Sprint, the Development Team discovers that the issue is caused by a missing dependency;</li>
+    <li id="a70a" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">A security scan uncovers that the feature is susceptible to SQL Injection, requiring the Development Team to fix this during the next Sprint;</li>
+    <li id="3cbb" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">After deploying the feature, it is discovered that latency on the network is too high to make the features work well for users;</li>
+    <li id="bdd3" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">Because of missing support documentation, the Development Team receives several support calls about the feature that are easy to answer, but nonetheless take time away from the current Sprint;</li>
+    <li id="614c" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">The feature turns out to be unusable by people with (for example) poor eyesight - an important group of users - requiring tweaks in the current Sprint.</li>
+  </ul>
+  <p id="2580" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">Fundamentally, this work is not <em class="my">discovered </em>during the current Sprint, but during future Sprints. This makes them examples of <strong class="mm ou">undone work</strong>;<strong class="mm ou"> </strong>work that is required to truly complete an item on the Product Backlog and is not covered by the definition of
+    &quot;Done.&quot; Undone work has four consequences:</p>
+  <ol class="">
+    <li id="1e28" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx ov on oo">It <strong class="mm ou">draws time and energy </strong>from the Development Team away from the focus and work in future Sprints. The bigger the gap between what a team defines as
+      &quot;Done&quot; and what is actually needed - the more disruptions and interruptions will happen in future Sprints due to undone work. It will become progressively harder for the Scrum Team to make any kind of meaningful forecasts about work in future Sprints;</li>
+    <li id="9a62" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx ov on oo">Because undone work is not discovered during the current Sprint, it is unclear and unpredictable how much of it will occur. This <strong class="mm ou">decreases the</strong> <strong class="mm ou">transparency of the Increment</strong> and the features being developed. More specifically, it will be harder to answer questions from stakeholders about whether or not a feature is
+      &quot;Done&quot;;</li>
+    <li id="0687" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx ov on oo">Scrum Teams fool themselves into believing that they are successful by <strong class="mm ou"> &quot;staying busy.</strong>&quot; They pull a lot of work into their Sprint Backlogs, their velocity may be excellent, everyone is working very hard all the time. But at the end of a Sprint, there is no potentially releasable product increment;</li>
+    <li id="2d81" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx ov on oo">The <strong class="mm ou">risk of software development </strong>remains high as both the state of the Increment and its features, but also the amount of undone work remaining, is not transparent. We still can't validate assumptions about features or the product as a whole because it isn't really
+      &quot;Done.&quot;</li>
+  </ol>
+  <p id="97b1" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">Taken together, this will erode trust in the Scrum Team over time as stakeholders and management lose confidence in what the team - and Scrum - can deliver.</p>
+  <blockquote class="mz">
+    <div id="55ad" class="na nb hm aq kw b ln nc nd ne nf ng mx">
+      <p class="kw b nh ni au">The bigger the gap between what a team defines as
+        &quot;Done&quot; and what is actually needed - the more disruptions and interruptions will happen in future Sprints due to undone work.</p>
+    </div>
+  </blockquote>
+  <h3 id="d48f" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">Three examples to illustrate the point</h3>
+  <ul class="">
+    <li id="cfdb" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx om on oo">I recently witnessed a Scrum Team that had spent months customizing software for complicated machinery. They involved users from the very start and worked hard to release
+      &quot;Done&quot; software every Sprint. For practical reasons, they decided not to roll out to the actual machinery, effectively keeping the software running in a pre-production environment. When they did roll out, they discovered that hardware issues caused so many issues in the software that users reverted to the old software. After months of work, the team was confronted with the possibility that the project had to be cancelled altogether - effectively negating the investments up to that point;</li>
+    <li id="bb54" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">I once participated in a Scrum Team that was building a product that was supposed to change the market we were operating in at the time. The Product Owner was wholly convinced of this and continued to pour money into its development, spurred on by positive feedback from the internal organization. But the product was never exposed to actual users throughout the first year of development. When it was finally deployed, the expected demand for the product didn't pan out, effectively wasting the investment;</li>
+    <li id="1b9e" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">We recently spend a week with a Development Team to build the website for The Liberators. Although very small by comparison, we noticed how both the Product Owner and stakeholders could only provide useful feedback to Product Backlog Items that were really
+      &quot;Done.&quot; It was hard to give feedback to any of the earlier stages - from wire-frames to designs, and from looking over the shoulder of a developer creating pages to acceptance versions with placeholder texts and images;</li>
+  </ul>
+  <p id="5cdb" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">Not only do these examples illustrate how limiting
+    &quot;Done&quot; reduces your ability to minimize the risk of complex work, it also illustrates how releasing to users early and often is the best way to mitigate risk. It also illustrates clearly how defining
+    &quot;Done&quot; should be a collaboration between Development Teams and Product Owners, integrating both technical and business considerations.</p>
+  <blockquote class="mz">
+    <div id="4254" class="na nb hm aq kw b ln nc nd ne nf ng mx">
+      <p class="kw b nh ni au">A complete definition of
+        &quot;Done&quot; is your most powerful risk detector for complex work</p>
+    </div>
+  </blockquote>
+  <h3 id="5836" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">Definition of Done as a
+    &quot;risk detector&quot;</h3>
+  <p id="561c" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">In Scrum, a complete definition of
+    &quot;Done&quot; is your most powerful risk detector for complex work. It helps you reduce the risk of undone work by making transparent all that is needed to create
+    &quot;Done&quot; increments <em class="my">every </em> Sprint. It will also make very transparent all the impediments that are
+    getting in the way of achieving this goal.</p>
+  <div class="v w">
+    <div class="jr js jt ju jv jw ab jx ac jy af">
+      <figure class="oc od oe of og ff kf kg paragraph-image">
+        <div class="kh ki et kj af">
+          <div class="dl dm pa">
+            <div class="kn l et ko">
+              <div class="pb l">
+                <noscript>
+                <img alt="" class="gm n o gl af" src="https://miro.medium.com/max/3000/1*XtyT7W3OMAEdRGcBPAUYwQ.jpeg" width="1500" height="1061" role="presentation"/>
+                </noscript>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="au ei oi oj hr dn dl dm ok ol ap cu">Of course risk never entirely drops to zero. It remains complex, unpredictable work. One could easily add another column called
+          &quot;Value Validated&quot; and increase the distance between 'Releasable' and
+          'Released'. But we didn't want to over-complicate this picture for the sake of this post.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="bt kt af dn dj dk">
+  <h3 id="ea2c" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">Now what?</h3>
+  <p id="9a18" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">Obviously, creating
+    &quot;Done&quot; increments <em class="my">every </em>Sprint is a tall order for any Scrum Team. But there are things that help:</p>
+  <ul class="">
+    <li id="3fde" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx om on oo"><strong class="mm ou">Maintain a ruthless focus on
+      &quot;Done&quot; software</strong>. If you can't deliver a potentially releasable increment in a Sprint, don't fill the Sprint Backlog with work to give the impression that you're creating value. Instead, populate the Sprint Backlog with whatever is needed to create potentially releasable increments. This may involve setting up infrastructure, learning skills or technologies and removing organizational impediments;</li>
+    <li id="ad65" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo"><strong class="mm ou">Make the gap between what you can do and what is needed for
+      &quot;Done&quot; transparent</strong>. Don't go the easy way and limit your definition of
+      &quot;Done&quot; to what you can realistically do. Instead, identify what you <em class="my">should be doing </em>to achieve a
+      &quot;Done&quot; increment and offset it with what you <em class="my">are currently capable of doing</em>. List all the things getting in the way as impediments that need to be resolved, and keep reminding everyone involved - in particular management - that you will only really start reducing risks when the gap decreases;</li>
+    <li id="ad65" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo"> <strong class="mm ou">Make it smaller &amp; simpler</strong>. The simplest truth in Scrum, and everything Agile, is to make it smaller and simpler. This is why refinement is such an important activity in the Scrum Framework. If its impossible to go through all the required steps for a piece of software, make it smaller and focus on getting those smaller bits through the entire pipeline in one Sprint. Less really is more with Scrum;</li>
+    <li id="b077" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo"> <strong class="mm ou">It's not about Scrum, but about reducing risk and maximizing value and making impediments transparent</strong>. It might be tempting to throw your hands in the air and consider what Scrum asks of you impossible. But in the world of complex work - which software development is - an empirical process (like Scrum) is the best tool we have to reduce risks and to maximize the value we can deliver to stakeholders. Furthermore, it is the best way to make everything holding you back - like team composition, organizational procedures and bottlenecks - transparent and (therefore) resolvable. And yes, this transparency should hurt.</li>
+  </ul>
+  <h3 id="3dd1" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">A hard truth</h3>
+  <p id="f6f7" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">The hard truth is that if you are unable to deliver a
+    &quot;Done&quot; increment (at least) every Sprint, you aren't there yet. You can congratulate yourself on your journey towards Scrum, but don't fool yourself by calling it Scrum. Because your ability to detect risks is still very limited, you will see very little benefits of the empirical process that the Scrum Framework is all about. But the good news is that keeping a ruthless focus on creating
+    &quot;Done&quot; software every Sprint will make everything getting in the way of this highly visible.</p>
+  <p class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx"><a href="https://medium.com/the-liberators/why-scrum-requires-completely-done-software-every-sprint-f7fa3ca33286">Thanks to
+    the Liberators for the above</a>.&nbsp; Excellent work guys.</p>
+  <div align="center">
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsedonedone" aria-expanded="false" aria-controls=
+        "collapsedonedone">Done Done </button>
+    <div class="collapse" id="collapsedonedone">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center"> It aint over 'till its over!</h5>
+          <div class="card-body text-center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/donedone.jpg') }}"  > <br>
+            <br>
+            <p align="left"><a href="/productincrement" >Click here for information about the Product Increment.</a></p>
+          </div>
+          <div class="card-footer"> </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" >
+<br>
+<h3 align="left">Done Done:&nbsp; It ain't over 'till it's over!</h3>
+<hr>
+<p>In the Scrum.org Headquarters there is a picture of Ken Schwaber - one of the founders of Scrum - pointing at a sticky saying
+  &quot;Done.&quot; <br>
+  This picture underscores the most essential rule in Scrum: create &quot;Done&quot; software every Sprint.</p>
+<p id="c56e" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">But many teams struggle with this rule. It is tempting to fall into
+  &quot;shades of Done.&quot; An increment is considered &quot;Done&quot; by the Development Team, but requires further testing and stabilization in the next Sprint. Or work is considered
+  &quot;Done&quot; by the Development Team, but the install package still needs to be created. Or work is considered
+  &quot;Done,&quot; but acceptance testing hasn't been done yet.</p>
+<p id="899c" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">But
+  &quot;Done&quot; doesn't support adjectives like &quot;nearly,&quot; &quot;pretty much&quot; or &quot;almost.&quot; An increment is
+  &quot;Done&quot; or it isn't - there is no gray area. And there is a very powerful, compelling reason behind this: the Scrum Framework only helps to reduce the risk of wasting money and effort when you deliver
+  &quot;Done&quot; software <em class="my">every</em> Sprint. <br>
+  <br>
+  Essentially Done Software is a new version of your product that is, or with the proverbial press of a button, can be, released to users which can be used by them and which is valuable to them! <br>
+  <br>
+  <b>If you are unable to deliver a
+  &quot;Done&quot; increment during a Sprint, you are not doing Scrum!</b><br>
+  This is clearly explained in the image directly below.  Now click the image to see what happens if this problem continues sprint after sprint.</p>
+<p align="center"> <a href="/scrumrca#indexc"  title="Click the image to find out more about the 7 Dysfunctional Scrum Types"><img alt="" class="img-fluid ui-draggable ui-draggable-handle" title="It aint done till its done done!"  src="{{ asset('storage/images/doneandundone.jpg') }}" onmouseover="this.src='{{ asset('storage/images/undonescrum.jpg') }}'" onmouseout="this.src='{{ asset('storage/images/doneandundone.jpg') }}'" style="position: relative;"><br>
+  <i>Click here for the 7 types of Scrum Dysfunctions of which Undone Scrum is one</i></a></p>
+<blockquote class="mz">
+  <div id="457d" class="na nb hm aq kw b ln nc nd ne nf ng mx"> </div>
+</blockquote>
+<h3 id="c7c0" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">Defining
+  &quot;Done&quot;</h3>
+<p id="c09f" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">What constitutes
+  &quot;Done&quot; depends greatly on context. Building a website for an external customer will require different work then when you're working with different Scrum Teams on mission-critical software for internal users. It depends on the quality guidelines that already exist within your organization, how critical the software is to the business, the level of involvement of users, the technologies in use and many other factors.</p>
+<p id="2687" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">Suppose that you are building a new feature for your product as part of the current Sprint. Building this feature requires a workflow of all sorts of tasks, from writing code to creating unit tests, from creating a design to testing it on mobile devices and from testing it with users to integrating it with work done by other teams. And ultimately deploying it to your users. Necessarily, this requires all sorts of skills in the Development Team. And it requires an effective workflow to do all this within a single Sprint.</p>
+<p align="left">It may be tempting to limit
+  &quot;Done&quot; to what a Development Team can actually do</p>
+<div align="left">Many teams starting out with Scrum are unable to do this because of technical and organizational impediments. It may be tempting to limit the definition of
+  &quot;Done&quot; to what a Development Team can <em class="my">actually achieve</em> in a Sprint. Thus, they may end up defining
+  &quot;Done&quot; as no more than:
+  </p>
+  <ul class="">
+    <li id="6989" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx om on oo">The code has been peer reviewed by another developer in the team;</li>
+    <li id="232a" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">Unit tests have been written and are passing for the item;</li>
+    <li id="906d" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">The code is merged and has been checked into the develop-branch;</li>
+  </ul>
+  <p id="6492" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">More specifically, the Development Team will move items to
+    &quot;Done&quot; on their Scrum Board when it meets these criteria.</p>
+  <h3 id="8198" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv"> &quot;Done&quot; and Undone Work</h3>
+  <p id="8394" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">This Development Team may think they are delivering a
+    &quot;Done&quot; - increment every Sprint. After all, they can tick all the boxes in their definition of
+    &quot;Done.&quot; <br>
+    But are they really? But with a definition of &quot;Done&quot; that is mostly focused on working code, the resulting software will be hard to review by the Product Owner. Any feedback on this intermediate result will be incomplete at best. A number of things may happen in the next Sprints, <em class="my">after </em>the team considers work
+    &quot;Done,&quot; when other steps in the workflow are completed. Some examples are:</p>
+  <ul class="">
+    <li id="3ec4" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx om on oo">When reviewing the feature, the Product Owner determines that an essential element promised to stakeholders is missing, requiring changes during the next Sprint;</li>
+    <li id="7f3c" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">While testing the feature, a user discovers a breaking bug that needs to be fixed during the next Sprint;</li>
+    <li id="b799" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">Integration of the code with work done by another team for the same product fails, requiring the Development Team to resolve complicated merge conflicts during the next Sprint;</li>
+    <li id="1efa" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">The feature doesn't scale correctly on some mobile devices, requiring the Development Team to fix the feature in the next Sprint;</li>
+    <li id="3d8f" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">When trying to deploy the feature to production, the install fails. After investigation during the next Sprint, the Development Team discovers that the issue is caused by a missing dependency;</li>
+    <li id="a70a" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">A security scan uncovers that the feature is susceptible to SQL Injection, requiring the Development Team to fix this during the next Sprint;</li>
+    <li id="3cbb" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">After deploying the feature, it is discovered that latency on the network is too high to make the features work well for users;</li>
+    <li id="bdd3" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">Because of missing support documentation, the Development Team receives several support calls about the feature that are easy to answer, but nonetheless take time away from the current Sprint;</li>
+    <li id="614c" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">The feature turns out to be unusable by people with (for example) poor eyesight - an important group of users - requiring tweaks in the current Sprint.</li>
+  </ul>
+  <p id="2580" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">Fundamentally, this work is not <em class="my">discovered </em>during the current Sprint, but during future Sprints. This makes them examples of <strong class="mm ou">undone work</strong>;<strong class="mm ou"> </strong>work that is required to truly complete an item on the Product Backlog and is not covered by the definition of
+    &quot;Done.&quot; Undone work has four consequences:</p>
+  <ol class="">
+    <li id="1e28" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx ov on oo">It <strong class="mm ou">draws time and energy </strong>from the Development Team away from the focus and work in future Sprints. The bigger the gap between what a team defines as
+      &quot;Done&quot; and what is actually needed - the more disruptions and interruptions will happen in future Sprints due to undone work. It will become progressively harder for the Scrum Team to make any kind of meaningful forecasts about work in future Sprints;</li>
+    <li id="9a62" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx ov on oo">Because undone work is not discovered during the current Sprint, it is unclear and unpredictable how much of it will occur. This <strong class="mm ou">decreases the</strong> <strong class="mm ou">transparency of the Increment</strong> and the features being developed. More specifically, it will be harder to answer questions from stakeholders about whether or not a feature is
+      &quot;Done&quot;;</li>
+    <li id="0687" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx ov on oo">Scrum Teams fool themselves into believing that they are successful by <strong class="mm ou"> &quot;staying busy.</strong>&quot; They pull a lot of work into their Sprint Backlogs, their velocity may be excellent, everyone is working very hard all the time. But at the end of a Sprint, there is no potentially releasable product increment;</li>
+    <li id="2d81" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx ov on oo">The <strong class="mm ou">risk of software development </strong>remains high as both the state of the Increment and its features, but also the amount of undone work remaining, is not transparent. We still can't validate assumptions about features or the product as a whole because it isn't really
+      &quot;Done.&quot;</li>
+  </ol>
+  <p id="97b1" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">Taken together, this will erode trust in the Scrum Team over time as stakeholders and management lose confidence in what the team - and Scrum - can deliver.</p>
+  <blockquote class="mz">
+    <div id="55ad" class="na nb hm aq kw b ln nc nd ne nf ng mx">
+      <p class="kw b nh ni au">The bigger the gap between what a team defines as
+        &quot;Done&quot; and what is actually needed - the more disruptions and interruptions will happen in future Sprints due to undone work.</p>
+    </div>
+  </blockquote>
+  <h3 id="d48f" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">Three examples to illustrate the point</h3>
+  <ul class="">
+    <li id="cfdb" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx om on oo">I recently witnessed a Scrum Team that had spent months customizing software for complicated machinery. They involved users from the very start and worked hard to release
+      &quot;Done&quot; software every Sprint. For practical reasons, they decided not to roll out to the actual machinery, effectively keeping the software running in a pre-production environment. When they did roll out, they discovered that hardware issues caused so many issues in the software that users reverted to the old software. After months of work, the team was confronted with the possibility that the project had to be cancelled altogether - effectively negating the investments up to that point;</li>
+    <li id="bb54" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">I once participated in a Scrum Team that was building a product that was supposed to change the market we were operating in at the time. The Product Owner was wholly convinced of this and continued to pour money into its development, spurred on by positive feedback from the internal organization. But the product was never exposed to actual users throughout the first year of development. When it was finally deployed, the expected demand for the product didn't pan out, effectively wasting the investment;</li>
+    <li id="1b9e" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo">We recently spend a week with a Development Team to build the website for The Liberators. Although very small by comparison, we noticed how both the Product Owner and stakeholders could only provide useful feedback to Product Backlog Items that were really
+      &quot;Done.&quot; It was hard to give feedback to any of the earlier stages - from wire-frames to designs, and from looking over the shoulder of a developer creating pages to acceptance versions with placeholder texts and images;</li>
+  </ul>
+  <p id="5cdb" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx">Not only do these examples illustrate how limiting
+    &quot;Done&quot; reduces your ability to minimize the risk of complex work, it also illustrates how releasing to users early and often is the best way to mitigate risk. It also illustrates clearly how defining
+    &quot;Done&quot; should be a collaboration between Development Teams and Product Owners, integrating both technical and business considerations.</p>
+  <blockquote class="mz">
+    <div id="4254" class="na nb hm aq kw b ln nc nd ne nf ng mx">
+      <p class="kw b nh ni au">A complete definition of
+        &quot;Done&quot; is your most powerful risk detector for complex work</p>
+    </div>
+  </blockquote>
+  <h3 id="5836" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">Definition of Done as a
+    &quot;risk detector&quot;</h3>
+  <p id="561c" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">In Scrum, a complete definition of
+    &quot;Done&quot; is your most powerful risk detector for complex work. It helps you reduce the risk of undone work by making transparent all that is needed to create
+    &quot;Done&quot; increments <em class="my">every </em> Sprint. It will also make very transparent all the impediments that are
+    getting in the way of achieving this goal.</p>
+  <div class="v w">
+    <div class="jr js jt ju jv jw ab jx ac jy af">
+      <figure class="oc od oe of og ff kf kg paragraph-image">
+        <div class="kh ki et kj af">
+          <div class="dl dm pa">
+            <div class="kn l et ko">
+              <div class="pb l">
+                <noscript>
+                <img alt="" class="gm n o gl af" src="https://miro.medium.com/max/3000/1*XtyT7W3OMAEdRGcBPAUYwQ.jpeg" width="1500" height="1061" role="presentation"/>
+                </noscript>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="au ei oi oj hr dn dl dm ok ol ap cu">Of course risk never entirely drops to zero. It remains complex, unpredictable work. One could easily add another column called
+          &quot;Value Validated&quot; and increase the distance between 'Releasable' and
+          'Released'. But we didn't want to over-complicate this picture for the sake of this post.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="bt kt af dn dj dk">
+  <h3 id="ea2c" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">Now what?</h3>
+  <p id="9a18" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">Obviously, creating
+    &quot;Done&quot; increments <em class="my">every </em>Sprint is a tall order for any Scrum Team. But there are things that help:</p>
+  <ul class="">
+    <li id="3fde" class="mk ml ef aq mm b mn mo mp mq mr ms mt mu mv mw mx om on oo"><strong class="mm ou">Maintain a ruthless focus on
+      &quot;Done&quot; software</strong>. If you can't deliver a potentially releasable increment in a Sprint, don't fill the Sprint Backlog with work to give the impression that you're creating value. Instead, populate the Sprint Backlog with whatever is needed to create potentially releasable increments. This may involve setting up infrastructure, learning skills or technologies and removing organizational impediments;</li>
+    <li id="ad65" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo"><strong class="mm ou">Make the gap between what you can do and what is needed for
+      &quot;Done&quot; transparent</strong>. Don't go the easy way and limit your definition of
+      &quot;Done&quot; to what you can realistically do. Instead, identify what you <em class="my">should be doing </em>to achieve a
+      &quot;Done&quot; increment and offset it with what you <em class="my">are currently capable of doing</em>. List all the things getting in the way as impediments that need to be resolved, and keep reminding everyone involved - in particular management - that you will only really start reducing risks when the gap decreases;</li>
+    <li id="ad65" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo"> <strong class="mm ou">Make it smaller &amp; simpler</strong>. The simplest truth in Scrum, and everything Agile, is to make it smaller and simpler. This is why refinement is such an important activity in the Scrum Framework. If its impossible to go through all the required steps for a piece of software, make it smaller and focus on getting those smaller bits through the entire pipeline in one Sprint. Less really is more with Scrum;</li>
+    <li id="b077" class="mk ml ef aq mm b mn op mp oq mr or mt os mv ot mx om on oo"> <strong class="mm ou">It's not about Scrum, but about reducing risk and maximizing value and making impediments transparent</strong>. It might be tempting to throw your hands in the air and consider what Scrum asks of you impossible. But in the world of complex work - which software development is - an empirical process (like Scrum) is the best tool we have to reduce risks and to maximize the value we can deliver to stakeholders. Furthermore, it is the best way to make everything holding you back - like team composition, organizational procedures and bottlenecks - transparent and (therefore) resolvable. And yes, this transparency should hurt.</li>
+  </ul>
+  <h3 id="3dd1" class="nj nk ef aq ap ed nl nm nn no np nq nr ns nt nu nv">A hard truth</h3>
+  <p id="f6f7" class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx">The hard truth is that if you are unable to deliver a
+    &quot;Done&quot; increment (at least) every Sprint, you aren't there yet. You can congratulate yourself on your journey towards Scrum, but don't fool yourself by calling it Scrum. Because your ability to detect risks is still very limited, you will see very little benefits of the empirical process that the Scrum Framework is all about. But the good news is that keeping a ruthless focus on creating
+    &quot;Done&quot; software every Sprint will make everything getting in the way of this highly visible.</p>
+  <p class="mk ml ef aq mm b mn nw mp nx mr ny mt nz mv oa mx"><a href="https://medium.com/the-liberators/why-scrum-requires-completely-done-software-every-sprint-f7fa3ca33286">Thanks to
+    the Liberators for the above</a>.&nbsp; Excellent work guys.</p>
+  <div align="center">
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsedonedone" aria-expanded="false" aria-controls=
+        "collapsedonedone">Done Done </button>
+    <div class="collapse" id="collapsedonedone">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center"> It aint over 'till its over!</h5>
+          <div class="card-body text-center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/donedone.jpg') }}"  > <br>
+            <br>
+            <p align="left"><a href="/productincrement" >Click here for information about the Product Increment.</a></p>
+          </div>
+          <div class="card-footer"> </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

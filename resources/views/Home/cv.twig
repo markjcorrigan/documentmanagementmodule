@@ -1,0 +1,393 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}CV{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+<div class="container">
+
+
+
+      <h3 class="auto-style1">Index to Mark&#39;s CV, Credentials and etc.</h3>
+      <hr />
+      <ul>
+        <li>
+          <h5 class="auto-style3"><a href="/cv/markcorriganpic.jpg" target="_target">Mark Corrigan&#39;s Picture.</a></h5>
+        </li>
+        <hr>
+        <li><h5 class="auto-style3"><a href="{{ asset('storage/assets/cv.pdf') }}" target="_target"><b><u>Mark Corrigan Curriculum Vitae in PDF format
+		2020/10/15</u></b></a></h5></li>
+		 <li><h5 class="auto-style3"><a href="{{ asset('storage/assets/cv.docx') }}" target="_target"><b><u>(CV above in Microsoft Word format
+		2020/10/15)</u></b></a></h5></li>
+        <hr>
+
+		    <li>
+          <h5 class="auto-style3">
+			  <a href="{{ asset('storage/assets/combineddefreescerts2020.pdf') }}" target="_target">[<i>Combined Degrees Certificates Certified in November 2020 (7 megs).pdf</i>]</a>
+          </h5>
+        </li>
+		      <li>
+          <h5 class="auto-style3">
+			  <a href="{{ asset('storage/assets/combineddegreescerts2020compressed.pdf') }}" target="_target">[<i>Combined Degrees Certificates Certified in November 2020 compressed (1.1 megs).pdf</i>]</a>
+          </h5>
+        </li>
+		     <hr>
+        <!--<li>
+          <h5 class="auto-style3">
+            <a href="/cv/degreescertscertified2020.pdf" target="_target">Degrees and Certifications below
+			(Certified 09th September 2020 and combined into a
+            single pdf file).</a>
+          </h5>
+        </li>-->
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/bcomhons2020.pdf') }}" target="_target">BCom Informatics
+            Honors Degree.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/ba2020.pdf') }}" target="_target">BA Degree.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/pmp2020.pdf') }}"
+            target="_target">Project Management Professional Certification Nr1722574.pdf</a>
+          </h5>
+       <ul>
+            <li><a href="{{ asset('storage/assets/ingoodstanding.jpg') }}" >I am in good standing with the PMI up to 9th June 2023</a>.<br>Verify my status: <a href="https://www.pmi.org/certifications/registry" > <b><u>PMI Online Credential Registry</u></b></a><br>entering: [ Last Name: <b>Corrigan</b> | First Name: <b>Mark</b> | Country: <b>South Africa</b> | Credential: <b>PMP</b> ] in the search fields.
+          <!-- <a href="https://www.youracclaim.com/badges/dd02d782-75cb-47e6-9383-a39fd12d6d06" >Click here for the PMI Badge</a></li>--></ul>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/prince22020.pdf') }}" target="_target">PRINCE2 Practitioner.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/spo2020.pdf') }}" target="_target">SCRUM
+			Product Owner.pdf</a>
+          </h5>
+        </li>
+          <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/sm2020.pdf') }}" target="_target">SCRUM Master.pdf</a>
+          </h5>
+        </li>
+
+          <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/agilepm2020.pdf') }}" target="_target">AgilePM Practitioner.pdf</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilfoundation.pdf') }}" target="_target">ITIL Foundation.pdf</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilpract2019.pdf') }}" target="_target">ITIL Practitioner.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilss2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Service Strategy.pdf</a>
+          </h5>
+        </li>
+          <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilsd2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Service Design.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilst2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Service Transition.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilso2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Service Operation.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilcsi2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Continual Service Improvement.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/cobit52020.pdf') }}" target="_target">COBIT 5 Foundation.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/cmmi2020.pdf') }}" target="_target">CMM and CMMi
+            Certificates.pdf</a>
+          </h5>
+        </li>
+          <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/microsoft.pdf') }}" target="_target">Microsoft Certifications.pdf</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/id%20certificate.pdf') }}" target="_target">ID Certificate.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/drivers license.pdf') }}" target="_target">Drivers License.pdf</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/4references.pdf') }}" target="_target">Mark Corrigan: 4 References</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3"><a href="{{ asset('storage/assets/state%20security%20clearance%20nrs13050415201.pdf') }}" target="__target">
+         State Security Clearance NrS13050415201.pdf</a>
+          </h5>
+        </li>
+
+
+             <li>
+              <h5 class="auto-style3">Mark&#39;s paper from his Masters of Science (MSc.)Degree.&nbsp;&nbsp;
+			  <br>Title: <a href="{{ asset('storage/assets/paper.pdf#page=299') }}" >The Project Management Information System as Enabler for Achieving Capability Maturity Level 2 and Above (on page 295 of the Springer Journal)</a>. </h5>
+
+
+            </li>
+
+
+		     <li>
+              <h5 class="auto-style3">Mark&#39;s Summary Presentation About ITIL as a Strategic Driver for Success:
+
+              <a href="{{ asset('storage/assets/itilfouroverview.pptx') }}" >ITIL Overview.pptx</a>&nbsp; </h5>
+				 <p><small>Note:  This presentation gives an overview of how Mark can combine the above skills to assist any business from a Strategic Management Perspective to build value within governance constraits.</small></p>
+            </li>
+             <li>
+              <h5 class="auto-style3">Mark&#39;s Project / Process Improvement Web Site:
+
+              <a href="\" >https://pmway.hopto.org</a>&nbsp; </h5>
+				 <p><small>Note:  The PMWay web site was built by Mark to facilitate his Master of Science Degree.  It is an ideas sandbox of which the paper above is an output. Note: As the web is very large (600 gigs in size), due to costs for hosting this through a servie provider it is hosted privately by Mark.  The site is up intermittently.  It is available for Mark for consluting purposes to server documents etc.  It can be opened up to you on request per an emailed request:  markjc@mweb.co.za</small></p>
+
+            </li>
+
+
+
+          </ul>
+
+</div>
+
+
+
+
+                   {% endif %}
+
+	 {% if not user %}
+
+<div class="container">
+
+
+
+      <h3 class="auto-style1">Index to Mark&#39;s CV, Credentials and etc.</h3>
+      <hr />
+      <ul>
+        <li>
+          <h5 class="auto-style3"><a href="/cv/markcorriganpic.jpg" target="_target">Mark Corrigan&#39;s Picture.</a></h5>
+        </li>
+        <hr>
+        <li><h5 class="auto-style3"><a href="{{ asset('storage/assets/cv.pdf') }}" target="_target"><b><u>Mark Corrigan Curriculum Vitae in PDF format
+		2020/10/15</u></b></a></h5></li>
+		 <li><h5 class="auto-style3"><a href="{{ asset('storage/assets/cv.docx') }}" target="_target"><b><u>(CV above in Microsoft Word format
+		2020/10/15)</u></b></a></h5></li>
+        <hr>
+
+		    <li>
+          <h5 class="auto-style3">
+			  <a href="{{ asset('storage/assets/combineddefreescerts2020.pdf') }}" target="_target">[<i>Combined Degrees Certificates Certified in November 2020 (7 megs).pdf</i>]</a>
+          </h5>
+        </li>
+		      <li>
+          <h5 class="auto-style3">
+			  <a href="{{ asset('storage/assets/combineddegreescerts2020compressed.pdf') }}" target="_target">[<i>Combined Degrees Certificates Certified in November 2020 compressed (1.1 megs).pdf</i>]</a>
+          </h5>
+        </li>
+		  <hr>
+        <!--<li>
+          <h5 class="auto-style3">
+            <a href="/cv/degreescertscertified2020.pdf" target="_target">Degrees and Certifications below
+			(Certified 09th September 2020 and combined into a
+            single pdf file).</a>
+          </h5>
+        </li>-->
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/bcomhons2020.pdf') }}" target="_target">BCom Informatics
+            Honors Degree.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/ba2020.pdf') }}" target="_target">BA Degree.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/pmp2020.pdf') }}"
+            target="_target">Project Management Professional Certification Nr1722574.pdf</a>
+          </h5>
+       <ul>
+            <li><a href="{{ asset('storage/assets/ingoodstanding.jpg') }}" >I am in good standing with the PMI up to 9th June 2023</a>.<br>Verify my status: <a href="https://www.pmi.org/certifications/registry" > <b><u>PMI Online Credential Registry</u></b></a><br>entering: [ Last Name: <b>Corrigan</b> | First Name: <b>Mark</b> | Country: <b>South Africa</b> | Credential: <b>PMP</b> ] in the search fields.
+          <!-- <a href="https://www.youracclaim.com/badges/dd02d782-75cb-47e6-9383-a39fd12d6d06" >Click here for the PMI Badge</a></li>--></ul>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/prince22020.pdf') }}" target="_target">PRINCE2 Practitioner.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/spo2020.pdf') }}" target="_target">SCRUM
+			Product Owner.pdf</a>
+          </h5>
+        </li>
+          <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/sm2020.pdf') }}" target="_target">SCRUM Master.pdf</a>
+          </h5>
+        </li>
+
+          <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/agilepm2020.pdf') }}" target="_target">AgilePM Practitioner.pdf</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilfoundation.pdf') }}" target="_target">ITIL Foundation.pdf</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilpract2019.pdf') }}" target="_target">ITIL Practitioner.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilss2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Service Strategy.pdf</a>
+          </h5>
+        </li>
+          <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilsd2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Service Design.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilst2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Service Transition.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilso2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Service Operation.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/itilcsi2020.pdf') }}" target="_target">ITIL Intermediate Lifecycle Stream -
+            Continual Service Improvement.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/cobit52020.pdf') }}" target="_target">COBIT 5 Foundation.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/cmmi2020.pdf') }}" target="_target">CMM and CMMi
+            Certificates.pdf</a>
+          </h5>
+        </li>
+          <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/microsoft.pdf') }}" target="_target">Microsoft Certifications.pdf</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/id%20certificate.pdf') }}" target="_target">ID Certificate.pdf</a>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/drivers license.pdf') }}" target="_target">Drivers License.pdf</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3">
+            <a href="{{ asset('storage/assets/4references.pdf') }}" target="_target">Mark Corrigan: 4 References</a>
+          </h5>
+        </li>
+
+        <li>
+          <h5 class="auto-style3"><a href="{{ asset('storage/assets/state%20security%20clearance%20nrs13050415201.pdf') }}" target="__target">
+         State Security Clearance NrS13050415201.pdf</a>
+          </h5>
+        </li>
+
+
+             <li>
+              <h5 class="auto-style3">Mark&#39;s paper from his Masters of Science (MSc.)Degree.&nbsp;&nbsp;
+			  <br>Title: <a href="{{ asset('storage/assets/paper.pdf#page=299') }}" >The Project Management Information System as Enabler for Achieving Capability Maturity Level 2 and Above (on page 295 of the Springer Journal)</a>. </h5>
+
+
+            </li>
+
+
+		     <li>
+              <h5 class="auto-style3">Mark&#39;s Summary Presentation About ITIL as a Strategic Driver for Success:
+
+              <a href="{{ asset('storage/assets/itilfouroverview.pptx') }}" >ITIL Overview.pptx</a>&nbsp; </h5>
+				 <p><small>Note:  This presentation gives an overview of how Mark can combine the above skills to assist any business from a Strategic Management Perspective to build value within governance constraits.</small></p>
+            </li>
+             <li>
+              <h5 class="auto-style3">Mark&#39;s Project / Process Improvement Web Site:
+
+              <a href="\" >https://pmway.hopto.org</a>&nbsp; </h5>
+				 <p><small>Note:  The PMWay web site was built by Mark to facilitate his Master of Science Degree.  It is an ideas sandbox of which the paper above is an output. Note: As the web is very large (600 gigs in size), due to costs for hosting this through a servie provider it is hosted privately by Mark.  The site is up intermittently.  It is available for Mark for consluting purposes to server documents etc.  It can be opened up to you on request per an emailed request:  markjc@mweb.co.za</small></p>
+
+            </li>
+
+
+          </ul>
+
+</div>
+
+
+
+                    {% endif %}
+
+
+{% endblock %}

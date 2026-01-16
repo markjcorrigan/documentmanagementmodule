@@ -1,0 +1,8 @@
+rg --color=always \
+   --colors 'path:fg:yellow' \
+   --colors 'path:style:bold' \
+   --colors 'line:fg:yellow' \
+   --colors 'line:style:bold' \
+   --colors 'match:fg:yellow' \
+   --colors 'match:style:bold' \
+   -i -n -C 3 "The LRH Free Dictionary (Opens in new tab)" resources/views/ -g "*.blade.php"

@@ -1,0 +1,94 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Process not outcomes {% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<div class="container">
+  <h3>Process focus not outcomes</h3>
+  <hr>
+  <p><a href="#playlist">PLAYLIST</a></p>
+  <div id="player" align="center">
+    <!-- video source and track elements will be populated from playlist -->
+    <video id="video1" preload="auto" data-able-player playsinline ></video>
+  </div>
+  <div id="playlist">
+    <h2><a name="playlist"></a>Playlist</h2>
+    <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+    <!-- The value of data-player must match the id of the media element -->
+    <!-- see documentation for additional details -->
+    <ul class="able-playlist" data-player="video1">
+      <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/processnotoutcome/processnotoutcome.mp4"> </span>
+        <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">Process not outcomes video one </button>
+      </li>
+      <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/processnotoutcome/processnotoutcometwo.mp4"> </span>
+        <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">Process not outcomes video two </button>
+      </li>
+      <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/processnotoutcome/processnotoutcomethree.mp4"> </span>
+        <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">Process not outcomes three </button>
+      </li>
+      <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/processnotoutcome/processnotoutcomefour.mp4"> </span>
+        <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">Process not outcomes four </button>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+  <h3>Process focus not outcomes</h3>
+  <hr>
+  <p><a href="#playlist">PLAYLIST</a></p>
+  <div id="player" align="center">
+    <!-- video source and track elements will be populated from playlist -->
+    <video id="video1" preload="auto" data-able-player playsinline ></video>
+  </div>
+  <div id="playlist">
+    <h2><a name="playlist"></a>Playlist</h2>
+    <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+    <!-- The value of data-player must match the id of the media element -->
+    <!-- see documentation for additional details -->
+    <ul class="able-playlist" data-player="video1">
+      <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/processnotoutcome/processnotoutcome.mp4"> </span>
+        <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">Process not outcomes video one </button>
+      </li>
+      <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/processnotoutcome/processnotoutcometwo.mp4"> </span>
+        <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">Process not outcomes video two </button>
+      </li>
+      <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/processnotoutcome/processnotoutcomethree.mp4"> </span>
+        <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">Process not outcomes three </button>
+      </li>
+      <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/processnotoutcome/processnotoutcomefour.mp4"> </span>
+        <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">Process not outcomes four </button>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+{% endif %}
+
+
+{% endblock %}

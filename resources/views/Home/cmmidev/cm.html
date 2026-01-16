@@ -1,0 +1,813 @@
+{% extends 'base.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}CM{% endif %}  {% endblock %}
+{% block body %}
+{% if current_user %}	
+<div class="container">
+<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td><span class="auto-style2"><strong>
+					<a href="/home/cmmidevdash">Configuration 
+					Management (CM)</a></strong><br />
+					<br />
+					</span></td>
+				</tr>
+		</table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+<tr>
+<td>
+<p>Software configuration management can be functionally broken out into the 
+areas of:</p>
+<li>Version control
+</li><li>Document control
+</li><li>Change management
+</li><li>Build management,
+</li><li>Release control.
+<br>
+<br>
+A great internet resource for starting research into SCM can be found at <a href="http://www.methodsandtools.com/archive/archive.php?id=3">MethodsAndTools.com</a>
+<br>
+</li></td>
+</tr>
+</tbody></table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Configuration Management (CM)<br />A Support Process Area at Maturity Level 2</b>
+<br>
+<br>
+<b>Purpose</b>
+<br>
+<br>
+The purpose of Configuration Management (CM) is to establish and maintain the integrity of work products using configuration identification, configuration control, configuration status accounting, and configuration audits.
+<br>
+<br>
+<b>
+Introductory Notes
+</b>
+The Configuration Management process area involves the following:
+<br>
+<br>
+<li>Identifying the configuration of selected work products that compose the baselines at given points in time
+</li><li>Controlling changes to configuration items
+</li><li>Building or providing specifications to build work products from the configuration management system
+</li><li>Maintaining the integrity of baselines
+</li><li>Providing accurate status and current configuration data to developers, end users, and customers
+<br>
+<br>
+The work products placed under configuration management include the products that are delivered to the customer, designated internal work products, acquired products, tools, and other items that are used in creating and describing these work products. (See the definition of “configuration management” in the glossary.)
+<br>
+<br>
+Acquired products may need to be placed under configuration management by both the supplier and the project. Provisions for conducting configuration management should be established in supplier agreements. Methods to ensure that the data is complete and consistent should be established and maintained.
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about establishing and maintaining agreements with suppliers.
+<br>
+<br>
+Examples of work products that may be placed under configuration management include the following:
+<br>
+<br>
+</li><li>Plans
+</li><li>Process descriptions
+</li><li>Requirements
+</li><li>Design data
+</li><li>Drawings
+</li><li>Product specifications
+</li><li>Code
+</li><li>Compilers
+</li><li>Product data files
+</li><li>Product technical publications
+<br>
+<br>
+Configuration management of work products may be performed at several levels of granularity. Configuration items can be decomposed into configuration components and configuration units. Only the term “configuration item” is used in this process area. Therefore, in these practices, “configuration item” may be interpreted as “configuration component” or “configuration unit” as appropriate. (See the definition of “configuration item” in the glossary.)
+<br>
+<br>
+Baselines provide a stable basis for continuing evolution of configuration items.
+<br>
+<br>
+An example of a baseline is an approved description of a product that includes internally consistent versions of requirements, requirement traceability matrices, design, discipline-specific items, and end-user documentation.
+<br>
+<br>
+Baselines are added to the configuration management system as they are developed. Changes to baselines and the release of work products built from the configuration management system are systematically controlled and monitored via the configuration control, change management, and configuration auditing functions of configuration management.
+<br>
+<br>
+This process area applies not only to configuration management on projects, but also to configuration management on organizational work products such as standards, procedures, and reuse libraries.
+<br>
+<br>
+Configuration management is focused on the rigorous control of the managerial and technical aspects of work products, including the delivered system.
+<br>
+<br>
+This process area covers the practices for performing the configuration management function and is applicable to all work products that are placed under configuration management.
+<br>
+<br>
+
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Project Planning process area for information on developing plans and work breakdown structures, which may be useful for determining configuration items.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about performance analyses and corrective actions.
+<br> 
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1	Establish Baselines</b>
+<br>
+Baselines of identified work products are established.
+<br>
+Specific practices to establish baselines are covered by this specific goal. The specific practices under the Track and Control Changes specific goal serve to maintain the baselines. The specific practices of the Establish Integrity specific goal document and audit the integrity of the baselines.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<a name="sp1.1"></a>
+<b>SP 1.1 Identify Configuration Items</b>
+<br>
+Identify the configuration items, components, and related work products that will be placed under configuration management.
+<br>
+<br>
+Configuration identification is the selection, creation, and specification of the following:
+<br>
+<br>
+</li><li>Products that are delivered to the customer
+</li><li>Designated internal work products
+</li><li>Acquired products
+</li><li>Tools and other capital assets of the project's work environment
+</li><li>Other items that are used in creating and describing these work products
+<br>
+<br>
+Items under configuration management will include specifications and interface documents that define the requirements for the product. Other documents, such as test results, may also be included, depending on their criticality to defining the product.
+<br>
+<br>
+A <i>configuration item</i> is an entity designated for configuration management, which may consist of multiple related work products that form a baseline. This logical grouping provides ease of identification and controlled access. The selection of work products for configuration management should be based on criteria established during planning.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+Identified configuration items
+<br>
+<br>
+Subpractice 1: Select the configuration items and the work products that compose them based on documented criteria.
+<br>
+<br>
+Select the configuration items and the work products that compose them based on documented criteria.
+<br>
+<br>
+Example criteria for selecting configuration items at the appropriate work product level include the following:
+<br>
+<br>
+</li><li>Work products that may be used by two or more groups
+</li><li>Work products that are expected to change over time either because of errors or change of requirements
+</li><li>Work products that are dependent on each other in that a change in one mandates a change in the others
+</li><li>Work products that are critical for the project
+<br>
+<br>
+Examples of work products that may be part of a configuration item include the following:
+<br>
+<br>
+</li><li>Process descriptions
+</li><li>Requirements
+</li><li>Design
+</li><li>Test plans and procedures
+</li><li>Test results
+</li><li>Interface descriptions
+</li><li>Drawings
+</li><li>Source code
+</li><li>Tools (e.g., compilers)
+<br>
+<br>
+Subpractice 2: Assign unique identifiers to configuration items.
+<br>
+<br>
+Subpractice 3: Specify the important characteristics of each configuration item.
+<br>
+<br>
+Example characteristics of configuration items include author, document or file type, and programming language for software code files.
+<br>
+<br>
+Subpractice 4: Specify when each configuration item is placed under configuration management.
+<br>
+<br>
+Example criteria for determining when to place work products under configuration management include the following:
+<br>
+<br>
+</li><li>Stage of the project lifecycle
+</li><li>When the work product is ready for test
+</li><li>Degree of control desired on the work product
+</li><li>Cost and schedule limitations
+</li><li>Customer requirements
+<br>
+<br>
+Subpractice 5: Identify the owner responsible for each configuration item.
+<br>
+<br>
+<a name="sp1.2"></a>
+<b>SP 1.2 Establish a Configuration Management System</b>
+<br>
+<br>
+Establish and maintain a configuration management and change management system for controlling work products.
+<br>
+<br>
+A configuration management system includes the storage media, the procedures, and the tools for accessing the configuration system.
+<br>
+<br>
+A change management system includes the storage media, the procedures, and tools for recording and accessing change requests.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Configuration management system with controlled work products
+</li><li>Configuration management system access control procedures
+</li><li>Change request database
+<br>
+<br>
+Subpractice 1: Establish a mechanism to manage multiple control levels of configuration management.
+<br>
+<br>
+The level of control is typically selected based on project objectives, risk, and/or resources. Control levels may vary in relation to the project lifecycle, type of system under development, and specific project requirements.
+<br>
+<br>
+Example levels of control include the following:
+<br>
+<br>
+</li><li>Create – controlled by author
+</li><li>Engineering – notification to relevant stakeholders when changes are made
+</li><li>Development – lower level CCB control
+</li><li>Formal – higher level CCB control with customer involvement
+<br>
+<br>
+Levels of control can range from informal control that simply tracks changes made when the configuration items are being developed to formal configuration control using baselines that can only be changed as part of a formal configuration management process.
+<br>
+<br>
+Subpractice 2: Store and retrieve configuration items in a configuration management system.
+<br>
+<br>
+Examples of configuration management systems include the following:
+<br>
+<br>
+</li><li>Dynamic (or author’s) systems contain components currently being created or revised. They are in the author’s workspace and are controlled by the author. Configuration items in a dynamic system are under version control.
+</li><li>Master (or controlled) systems contain current baselines and changes to them. Configuration items in a master system are under full configuration management as described in this process area.
+</li><li>Static systems contain archives of various baselines released for use. Static systems are under full configuration management as described in this process area.
+<br>
+<br>
+Subpractice 3: Share and transfer configuration items between control levels within the configuration management system.
+<br>
+<br>
+Subpractice 4: Store and recover archived versions of configuration items.
+<br>
+<br>
+Subpractice 5: Store, update, and retrieve configuration management records.
+<br>
+<br>
+Subpractice 6: Create configuration management reports from the configuration management system.
+<br>
+<br>
+Subpractice 7: Preserve the contents of the configuration management system.
+<br>
+<br>
+Examples of preservation functions of the configuration management system include the following:
+<br>
+<br>
+</li><li>Backups and restoration of configuration management files
+</li><li>Archiving of configuration management files
+</li><li>Recovery from configuration management errors
+<br>
+<br>
+Subpractice 8: Revise the configuration management structure as necessary.
+<br>
+<br>
+<a name="sp1.3"></a>
+<b>SP 1.3 Create or Release Baselines</b>
+<br>
+<br>
+Create or release baselines for internal use and for delivery to the customer.
+<br>
+<br>
+A baseline is a set of specifications or work products that has been formally reviewed and agreed on, that thereafter serves as the basis for further development or delivery, and that can be changed only through change control procedures. A baseline represents the assignment of an identifier to a configuration item or a collection of configuration items and associated entities. As a product evolves, several baselines may be used to control its development and testing.
+<br>
+<br>
+For Systems Engineering
+<br>
+<br>
+One common set of baselines includes the system-level requirements, system-element-level design requirements, and the product definition at the end of development/beginning of production. These are typically referred to as the “functional baseline,” “allocated baseline,” and “product baseline.”
+<br>
+<br>
+For Software Engineering
+<br>
+<br>
+A software baseline can be a set of requirements, design, source code files and the associated executable code, build files, and user documentation (associated entities) that have been assigned a unique identifier.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Baselines
+</li><li>Description of baselines
+<br>
+<br>
+Subpractice 1: Obtain authorization from the configuration control board (CCB) before creating or releasing baselines of configuration items.
+<br>
+<br>
+Subpractice 2: Create or release baselines only from configuration items in the configuration management system.
+<br>
+<br>
+Subpractice 3: Document the set of configuration items that are contained in a baseline.
+<br>
+<br>
+Subpractice 4: Make the current set of baselines readily available.
+<br>
+<br>
+<a name="sg2"></a> 
+<b>SG 2	Track and Control Changes</b>
+<br>
+Changes to the work products under configuration management are tracked and controlled.
+<br>
+<br>
+The specific practices under this specific goal serve to maintain the baselines after they are established by the specific practices under the Establish Baselines specific goal.
+<br>
+<br>
+<a name="sp2.1"></a> 
+<b>SP 2.1 Track Change Requests</b>
+<br>
+<br>
+Track change requests for the configuration items.
+<br>
+<br>
+Change requests address not only new or changed requirements, but also failures and defects in the work products.
+<br>
+<br>
+Change requests are analyzed to determine the impact that the change will have on the work product, related work products, budget, and schedule.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Change requests
+<br>
+<br>
+Subpractice 1: Initiate and record change requests in the change request database.
+<br>
+<br>
+Subpractice 2: Analyze the impact of changes and fixes proposed in the change requests.
+<br>
+<br>
+Changes are evaluated through activities that ensure that they are consistent with all technical and project requirements.
+<br>
+<br>
+Changes are evaluated for their impact beyond immediate project or contract requirements. Changes to an item used in multiple products can resolve an immediate issue while causing a problem in other applications.
+<br>
+<br>
+Subpractice 3: Review change requests that will be addressed in the next baseline with the relevant stakeholders and get their agreement.
+<br>
+<br>
+Conduct the change request review with appropriate participants. Record the disposition of each change request and the rationale for the decision, including success criteria, a brief action plan if appropriate, and needs met or unmet by the change. Perform the actions required in the disposition, and report the results to relevant stakeholders.
+<br>
+<br>
+Subpractice 4: Track the status of change requests to closure.
+<br>
+<br>
+Change requests brought into the system need to be handled in an efficient and timely manner. Once a change request has been processed, it is critical to close the request with the appropriate approved action as soon as it is practical. Actions left open result in larger than necessary status lists, which in turn result in added costs and confusion.
+<br>
+<br>
+<a name="sp2.2"></a>
+<b>SP 2.2 Control Configuration Items</b>
+<br>
+<br>
+Control changes to the configuration items.
+<br>
+<br>
+Control is maintained over the configuration of the work product baseline. This control includes tracking the configuration of each of the configuration items, approving a new configuration if necessary, and updating the baseline.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Revision history of configuration items
+</li><li>Archives of the baselines
+<br>
+<br>
+Subpractice 1: Control changes to configuration items throughout the life of the product.
+<br>
+<br>
+Subpractice 2: Obtain appropriate authorization before changed configuration items are entered into the configuration management system.
+<br>
+<br>
+For example, authorization may come from the CCB, the project manager, or the customer.
+<br>
+<br>
+Subpractice 3: Check in and check out configuration items from the configuration management system for incorporation of changes in a manner that maintains the correctness and integrity of the configuration items.
+<br>
+<br>
+Examples of check-in and check-out steps include the following:
+<br>
+<br>
+</li><li>Confirming that the revisions are authorized
+</li><li>Updating the configuration items
+</li><li>Archiving the replaced baseline and retrieving the new baseline
+<br>
+<br>
+Subpractice 4: Perform reviews to ensure that changes have not caused unintended effects on the baselines (e.g., ensure that the changes have not compromised the safety and/or security of the system).
+<br>
+<br>
+Subpractice 5: Record changes to configuration items and the reasons for the changes as appropriate.
+<br>
+<br>
+If a proposed change to the work product is accepted, a schedule is identified for incorporating the change into the work product and other affected areas.
+<br>
+<br>
+Configuration control mechanisms can be tailored to categories of changes. For example, the approval considerations could be less stringent for component changes that do not affect other components.
+<br>
+<br>
+Changed configuration items are released after review and approval of configuration changes. Changes are not official until they are released.
+<br>
+<br>
+<a name="sg3"></a> 
+<b>SG 3	Establish Integrity</b>
+<br>
+<br>
+Integrity of baselines is established and maintained.
+<br>
+<br>
+The integrity of the baselines, established by processes associated with the Establish Baselines specific goal, and maintained by processes associated with the Track and Control Changes specific goal, is provided by the specific practices under this specific goal.
+<br>
+<br>
+<a name="sp3.1"></a>
+<b>SP 3.1 Establish Configuration Management Records</b>
+<br>
+<br>
+Establish and maintain records describing configuration items.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Revision history of configuration items
+</li><li>Change log
+</li><li>Copy of the change requests
+</li><li>Status of configuration items
+</li><li>Differences between baselines
+<br>
+<br>
+Subpractice 1: Record configuration management actions in sufficient detail so the content and status of each configuration item is known and previous versions can be recovered.
+<br>
+<br>
+Subpractice 2: Ensure that relevant stakeholders have access to and knowledge of the configuration status of the configuration items.
+<br>
+<br>
+Examples of activities for communicating configuration status include the following:
+<br>
+<br>
+</li><li>Providing access permissions to authorized end users
+</li><li>Making baseline copies readily available to authorized end users
+<br>
+<br>
+Subpractice 3: Specify the latest version of the baselines.
+<br>
+<br>
+Subpractice 4: Identify the version of configuration items that constitute a particular baseline.
+<br>
+<br>
+Subpractice 5: Describe the differences between successive baselines.
+<br>
+<br>
+Subpractice 6: Revise the status and history (i.e., changes and other actions) of each configuration item as necessary.
+<br>
+<br>
+<a name="sp3.2"></a>
+<b>SP 3.2 Perform Configuration Audits</b>
+<br>
+<br>
+Perform configuration audits to maintain integrity of the configuration baselines.
+<br>
+<br>
+Configuration audits confirm that the resulting baselines and documentation conform to a specified standard or requirement. Audit results should be recorded as appropriate. (See the glossary for a definition of “configuration audit.”)
+<br>
+<br>
+Examples of audit types include the following:
+<br>
+<br>
+</li><li>Functional Configuration Audits (FCA) – Audits conducted to verify that the as-tested functional characteristics of a configuration item have achieved the requirements specified in its functional baseline documentation and that the operational and support documentation is complete and satisfactory.
+</li><li>Physical Configuration Audit (PCA) – Audits conducted to verify that the as-built configuration item conforms to the technical documentation that defines it.
+</li><li>Configuration management audits – Audits conducted to confirm that configuration management records and configuration items are complete, consistent, and accurate.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Configuration audit results
+</li><li>Action items
+<br>
+<br>
+Subpractice 1: Assess the integrity of the baselines.
+<br>
+<br>
+Subpractice 2: Confirm that the configuration management records correctly identify the configuration items.
+<br>
+<br>
+Subpractice 3: Review the structure and integrity of the items in the configuration management system.
+<br>
+<br>
+Subpractice 4: Confirm the completeness and correctness of the items in the configuration management system.
+Completeness and correctness of the content is based on the requirements as stated in the plan and the disposition of approved change requests.
+<br>
+<br>
+Subpractice 5: Confirm compliance with applicable configuration management standards and procedures.
+<br>
+<br>
+Subpractice 6: Track action items from the audit to closure.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a>
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the configuration management process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the configuration management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for establishing and maintaining baselines, tracking and controlling changes to the work products (under configuration management), and establishing and maintaining integrity of the baselines.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the configuration management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the configuration management process can be included in (or referenced by) the project plan, which is described in the Project Planning process area.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the configuration management process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of resources provided include the following tools:
+<br>
+<br>
+</li><li>Configuration management tools
+</li><li>Data management tools
+</li><li>Archiving and reproduction tools
+</li><li>Database programs
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the configuration management process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the configuration management process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Roles, responsibilities, and authority of the configuration management staff
+</li><li>Configuration management standards, procedures, and methods
+</li><li>Configuration library system
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the configuration management process under appropriate levels of control.
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Access lists
+</li><li>Change status reports
+</li><li>Change request database
+</li><li>CCB meeting minutes
+</li><li>Archived baselines
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the configuration management process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Establishing baselines
+</li><li>Reviewing configuration management system reports and resolving issues
+</li><li>Assessing the impact of changes for the configuration items
+</li><li>Performing configuration audits
+</li><li>Reviewing the results of configuration management audits
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the configuration management process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Number of changes to configuration items
+</li><li>Number of configuration audits conducted
+</li><li>Schedule of CCB or audit activities
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the configuration management process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Establishing baselines
+</li><li>Tracking and controlling changes
+</li><li>Establishing and maintaining integrity of baselines
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Archives of the baselines
+</li><li>Change request database
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the configuration management process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined configuration management process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the configuration management process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Trends in the status of configuration items
+</li><li>Configuration audit results
+</li><li>Change request aging reports
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the configuration management process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the configuration management process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+<b>The process is institutionalized as an optimizing process.</b>
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the configuration management process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the configuration management process.
+
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+</div>
+
+
+
+{% endif %}
+{% endblock %}
+
+

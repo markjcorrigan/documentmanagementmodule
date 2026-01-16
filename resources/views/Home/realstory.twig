@@ -1,0 +1,460 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Real Story @ L1{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+
+<!-- The secure stuff goes here -->
+<h3>Capability Maturity Model integrated (CMMi)  Level 1: <br>
+  Rules of Project Management</h3>
+<hr>
+<h5>If you insist on playing the game at CMMi Level 1; &#39;just for fun,&#39; here are some rules you
+  should get to know!</h5>
+<hr>
+<p align="left"> <b><a name="1"></a>1.</b> It takes one woman nine months to have a baby. It cannot be done in one month by impregnating nine women.<br>
+  Or as Frederick P. Brooks, Jr., in The Mythical Man Month (Chapter 1. Page 17.) said:&nbsp; <br>
+  The bearing of a child takes nine months, no matter how many women are
+  assigned.<br>
+<p align="left"> <img alt="You have to change your evil ways" class="img-fluid" src="{{ asset('storage/images/changeyourways.png') }}" ></p>
+<p align="left"><span style="color: rgb(84, 84, 84); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18.2000007629395px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"> "</span><em style="font-weight: bold; font-style: normal; color: rgb(84, 84, 84); font-family: arial, sans-serif; font-size: small; font-variant: normal; letter-spacing: normal; line-height: 18.2000007629395px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">Insanity</em><span style="color: rgb(84, 84, 84); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18.2000007629395px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">:
+  I.e. doing the same thing over and over again and expecting different results." -
+  Albert Einstein</span></p>
+<div align="left"> <b><a name="2"></a>
+  <p align="left">2.</b> Nothing is impossible for the person who doesn't have to do it.<br>
+    <br>
+    <b><a name="3"></a>3.</b> You can con a sucker into committing to an impossible deadline, but you cannot con him into meeting it. </p>
+  <p align="left"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/1percent.jpg') }}" ></p>
+  <p align="left"> <b><a name="4"></a>4.</b> At the heart of every large project is a small project trying to get out. </p>
+  <p align="left"> <b><a name="5"></a>5.</b> The more desperate the situation the more optimistic the situatee. <br>
+    <br>
+    <b><a name="6"></a>6.</b> A problem shared is a buck passed. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/buck-passing.jpg') }}" ><br>
+    <br>
+    <b><a name="7"></a>7.</b> A change freeze is like the abominable snowman: it is a myth and would anyway melt when heat is applied. <br>
+    <br>
+    <b><a name="8"></a>8.</b> A user will tell you anything you ask about, but nothing more. <br>
+    <br>
+    <b><a name="9"></a>9.</b> Of several possible interpretations of a communication, the least convenient is the correct one. <br>
+    <br>
+    <b><a name="10"></a>10.</b> What you don't know can hurt you. <br>
+    <img src="{{ asset('storage/images/knowhurt.png') }}" onmouseover="this.src='{{ asset('storage/images/knowknow.png') }}'" onmouseout="this.src='{{ asset('storage/images/knowhurt.png') }}'"> <span class="auto-style25">I.e. </span> <span class="auto-style25">The Dunning-Kruger effect</span><br>
+    <b><a name="11"></a>11.</b> There's never enough time (or money) to do it right first time but there's always enough time (and
+    money) to go back and do it again. <br>
+    <br>
+    <b><a name="12"></a>12.</b> The bitterness of poor quality lasts long after the sweetness of making a date is forgotten. <br>
+    <br>
+    <b><a name="13"></a>13.</b> I know that you believe that you understand what you think I said, but I am not sure you
+    realize that what you heard is not what I meant. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/duh.png') }}"  ><br>
+    <br>
+    <b><a name="14"></a>14.</b> What is not on paper has not been said. <br>
+    <br>
+    <b><a name="15"></a>15.</b> A little risk management saves a lot of fan cleaning. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/risksandshtf.jpg') }}" ><br>
+    <br>
+    <b><a name="16"></a>16.</b> If you can keep your head while all about you are losing theirs, you haven't understood the plan. <br>
+    <br>
+    <b><a name="17"></a>17.</b> If at first you don't succeed, remove all evidence you ever tried. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/trunkmusic.jpg') }}"  ><br>
+    <br>
+    <b><a name="18"></a>18.</b> Feather and down are padding, changes and contingencies will be real events. <br>
+    <br>
+    <b><a name="19"></a>19.</b> There are no good project managers - only lucky ones. <br>
+    <br>
+    <b><a name="20"></a>20.</b> The more you plan the luckier you get. <br>
+    <br>
+    <img alt="" class="img-fluid" width="300px" src="{{ asset('storage/images/luck.jpg') }}"  ><br>
+    <br>
+    <b><a name="21"></a>21.</b> A project is one small step for the project sponsor, one giant leap for the project manager. <br>
+    <br>
+    <b><a name="22"></a>22.</b> Good project management is not so much knowing what to do and when, as knowing what excuses to give and when. <br>
+    <br>
+    <b><a name="23"></a>23.</b> If everything is going exactly to plan, something somewhere is going massively wrong. <br>
+    <br>
+    <b><a name="24"></a>24.</b> Everyone asks for a strong project manager - when they get them they don't want them. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/drill.jpg') }}" ><br>
+    <br>
+    <b><a name="25"></a>25.</b> Overtime is a figment of the naive project manager's imagination. <br>
+    <br>
+    <b><a name="26"></a>26.</b> Quantitative project management is for predicting cost and schedule overruns well in advance. <br>
+    <br>
+    <b><a name="27"></a>27.</b> The sooner you begin coding the later you finish. <br>
+    <br>
+    <b><a name="28"></a>28.</b> Metrics are learned men's excuses. <br>
+    <br>
+    <b><a name="29"></a>29.</b> For a project manager overruns are as certain as death and taxes. <br>
+    <br>
+    <b><a name="30"></a>30.</b> Some projects finish on time in spite of project management best practices. <br>
+    <br>
+    <b><a name="31"></a>31.</b> Fast - cheap - good - you can have any two. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/designertriangle.jpg') }}" ><br>
+    <br>
+    <b><a name="32"></a>32.</b> There is such a thing as an unrealistic timescale. <br>
+    <br>
+    <b><a name="33"></a>33.</b> The project would not have been started if the truth had been told about the cost and timescale. <br>
+    <br>
+    <b><a name="34"></a>34.</b> A two year project will take three years, a three year project will never finish. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/the-five-year-project.png') }}" > <br>
+    <br>
+    <b><a name="35"></a>35.</b> When the weight of the project paperwork equals the weight of the project itself, the project can be considered complete. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images//paperwork.jpg') }}"  ><br>
+    <br>
+    <b><a name="36"></a>36.</b> A badly planned project will take three times longer than expected - a well planned project only twice as long as expected. <br>
+    <br>
+    <b><a name="37"></a>37.</b> Warning: dates in a calendar are closer than they appear to be. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/datesarecloser.jpg') }}"  ><br>
+    <br>
+    <b><a name="38"></a>38.</b> Anything that can be changed will be changed until there is no time left to change anything. <br>
+    <br>
+    <b><a name="39"></a>39.</b> There is no such thing as scope creep, only scope gallop. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/creep.png') }}" ><br>
+    <br>
+    <b><a name="40"></a>40.</b> A project gets a year late one day at a time. <br>
+    <br>
+    <img alt="" class="img-fluid" width="700px"  src="{{ asset('storage/images/daybyday.jpg') }}"  ><br>
+    <br>
+    <b><a name="41"></a>41.</b> If you're 6 months late on a milestone due next week but really believe you can make it, you're a project manager. <br>
+    <br>
+    <b><a name="42"></a>42.</b> No project has ever finished on time, within budget, to requirement - yours won't be the first to. <br>
+    <br>
+    <b><a name="43"></a>43.</b> Activity is not achievement. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/stuck%20in%20mud.jpg') }}" > <br>
+    <br>
+    <b><a name="44"></a>44.</b> Managing IT people at CMMi Level 1 is like herding cats. <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/catz.png') }}" ><br>
+    <br>
+    <b><a name="45"></a>45.</b> If you don't know how to do a task, start it, then ten people who know less than you will tell you how to do it. <br>
+    <br>
+    <b><a name="46"></a>46.</b> If you don't plan, it doesn't work. If you do plan, it doesn't work either. <a href="/home/strategy">Why plan</a>! <br>
+    <br>
+    <b><a name="47"></a>47.</b> The person who says it will take the longest and cost the most is the only one with a clue how to do the job. <br>
+    <br>
+    <b><a name="48"></a>48.</b> The sooner you get behind schedule, the more time you have to make it up. <br>
+    <br>
+    <b><a name="49"></a>49.</b> The nice thing about not planning is that failure comes as a complete surprise rather than being preceded by a period of worry and depression. <br>
+    <br>
+    <b><a name="50"></a>50.</b> Good control reveals problems early - which only means you'll have longer to worry about them. <br>
+    <br>
+    <b><a name="51"></a>51.</b> Murphy's Law of shortcuts:  The problems associated with a shortcut are inversely proportional to the shortness of the cut. <br>
+    <br>
+    <img alt="" class="img-fluid" width="400"  src="{{ asset('storage/images/cutcorners.png') }}"  ><br>
+    <br>
+    <b><a name="52"></a>52.</b> Murphy's Law of advice about arguing with idiots: <br>
+    -- Never argue with an idiot. <br>
+    -- They will drag you down to their level and beat you up with facts! <br>
+    <br>
+    <b><a name="53"></a>53.</b> Adding more people to a software project makes it finish quicker!&nbsp; <br>
+    Actually NO!&nbsp; This is false! <br>
+    If fact Brooks's Law states:
+    Adding manpower to a late software project makes it later. </p>
+  <p align="left"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/onemonth.png') }}"  >
+    <p align="left" > <img alt="" class="img-fluid" width="500"  src="{{ asset('storage/images/brookslaw.jpg') }}"  ></p>
+  </p>
+  <p align="left"> <b><a name="54"></a>54.</b>&nbsp; Remember why you planned!<br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/alligatorsr.png') }}" ></p>
+  <p align="left"><b><a name="55"></a>55.</b> The SSDD formula!<br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/ssdd.gif') }}"  ><br>
+
+  <p align="left"> I.e. Because the Executive <a href="/home/removetheredbeads">do not have
+    the 'gumption' to remove the Red Beads</a>, nothing ever changes (I.e. SSDD),
+    fires rage and tired firefighters are the hero's - until they burn out, ready
+    to be replaced by the next hero.  Or is there a CMMi Level Zero reason why nothing changes for the better?<br>
+  </p>
+  <p align="left"> FYI:&nbsp; </p>
+  <h1 class="meaning" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; line-height: normal; text-indent: 0px; color: rgb(0, 0, 0); padding: 8px 0px 5px 4px; margin: 0px 0px 10px; height: 30px; width: auto; font-size: 20px; text-align: left; letter-spacing: normal; font-style: normal; font-variant: normal; orphans: auto; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-image: none; background-color: rgb(255, 255, 255);"> gumption</h1>
+  <div align="left"> <i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"> Pronunciation:<span class="Apple-converted-space">&nbsp;</span></i><span class="serif" style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">(gump'sh<i>u</i>n),</span><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><br style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);" >
+    <span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"> �</span><i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">n.</i><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">Informal.</i><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><br style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);" >
+    <b style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"> 1.<span class="Apple-converted-space">&nbsp;</span></b><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">initiative;
+    aggressiveness; resourcefulness:<span class="Apple-converted-space">&nbsp;</span></span><i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">With
+    his gumption he'll make a success of himself.</i><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><br style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);" >
+    <b style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"> 2.<span class="Apple-converted-space">&nbsp;</span></b><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">courage;
+    spunk; guts:<span class="Apple-converted-space">&nbsp;</span></span><i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">It
+    takes gumption to quit a high-paying job.</i><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><br style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);" >
+    <b style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"> 3.<span class="Apple-converted-space">&nbsp;</span></b><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">common
+    sense; shrewdness.</span> </div>
+  <p align="left"><b><a name="56"></a>56</b> This one is self
+    explanatory.</p>
+  <p><em> Hover your mouse
+    cursor over the image if you do not get it.</em></p>
+  <img src="{{ asset('storage/images/manyrabbits.jpg') }}" onmouseover="this.src='{{ asset('storage/images/2rabbits.jpg') }}'" onmouseout="this.src='{{ asset('storage/images/manyrabbits.jpg') }}'">
+  <p align="left"><b><a name="57"></a>57.</b> And my all time CMMi Level 1 best!
+    <p align="left"> <a href="/home/pdca" > <img alt="" class="img-fluid"  src="{{ asset('storage/images/a%20lack%20of%20planning.jpeg') }}" title="Click here for more information on PDCA."  class="auto-style24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<!--<a href="/home/cmmi" ><img src="{{ asset('storage/images/cmmi projectnew.png') }}" class="img-fluid" title="Click here for more information on the CMMi model."class="auto-style24"></a>-->
+
+  </p>
+  <p align="left">The image above goes hand in hand with the concept of the
+    CMMi L1 quest for a HERO and the stupidity of the Hospital Pass:</p>
+  <div align="left"> <a name="hospital"></a> <img alt="" class="img-fluid"  src="{{ asset('storage/images/hospital-pass%201a.png') }}"  ><img alt="" class="img-fluid" src="{{ asset('storage/images/hospital-pass%201.png') }}"  ><br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/hospital%20pass%20rubgy.jpg') }}"  > <img alt="" class="img-fluid"  src="{{ asset('storage/images/hospitalpassamericanfootball.jpg') }}"  > <br>
+  </div>
+  <p align="left"> <img alt="Under the buss" class="img-fluid"  src="{{ asset('storage/images/underthebus.png') }}" ></p>
+  <p align="left"><b><a name="58"></a>58.</b> And when you start to feel really uneasy; per the advice from Kenny Rogers.
+    <div class="ctr">
+    <p class="auto-style22"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/knowrun.jpg') }}"  ></p>
+  </div>
+  <p align="left"><b><a name="59"></a>59.</b> And finally when you are just about to lose your mind;
+    and running away is not a viable option for now.
+    <p align="left">
+
+  <div align="center"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/serenity.png') }}"  ><br>
+    <br>
+    <br>
+  </div>
+  <p> <a href="/realstory#55">c.f.&nbsp; #55
+    above</a>.&nbsp; If you are in Information Technology provision then,
+    between 55 and 58 you will immediately see the problem.&nbsp; <br>
+    I.e. by not making the break and running away you have created a never
+    ending loop that operates
+    and glorifies the acceptance of <a href="/home/cmm#justdoit">CMMi
+    Level 1 incompetence</a>.</p>
+  <p align="left"> The ONLY WAY to sort this out <a href="/home/cmmil2essence">is to
+    install PP and PMC at CMMi Level 2</a>.&nbsp; The only way to install PP and
+    PMC at CMMi Level 2 is by using the<a href="/home/epms"> EPMS</a>.<br>
+    To kill CMMi Level 1 STONE DEAD use PP and PMC at CMMi Level 2 in
+    combination with <a href="/home/evm"> EVM</a>.&nbsp; I suggest that <a href="/home/princepmboksoup">PMBoK
+    as the ingredients and PRINCE2 as the recipe</a> is how to install processes
+    for PP and PMC that will ensure CMMi Level 2 competence (<a href="/home/stats">performance
+    stats</a>) remains firmly in place.<br>
+    <br>
+  </p>
+  <br>
+  <br>
+  <br>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+<div class="container" align="left">
+
+<!-- The secure stuff goes here -->
+<h3>Capability Maturity Model integrated (CMMi)  Level 1: <br>
+  Rules of Project Management</h3>
+<hr>
+<h5>If you insist on playing the game at CMMi Level 1; &#39;just for fun,&#39; here are some rules you
+  should get to know!</h5>
+<hr>
+<p align="left"> <b><a name="1"></a>1.</b> It takes one woman nine months to have a baby. It cannot be done in one month by impregnating nine women.<br>
+  Or as Frederick P. Brooks, Jr., in The Mythical Man Month (Chapter 1. Page 17.) said:&nbsp; <br>
+  The bearing of a child takes nine months, no matter how many women are
+  assigned.<br>
+<p align="left"> <img alt="You have to change your evil ways" class="img-fluid" src="{{ asset('storage/images/changeyourways.png') }}" ></p>
+<p align="left"><span style="color: rgb(84, 84, 84); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18.2000007629395px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"> "</span><em style="font-weight: bold; font-style: normal; color: rgb(84, 84, 84); font-family: arial, sans-serif; font-size: small; font-variant: normal; letter-spacing: normal; line-height: 18.2000007629395px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">Insanity</em><span style="color: rgb(84, 84, 84); font-family: arial, sans-serif; font-size: small; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18.2000007629395px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">:
+  I.e. doing the same thing over and over again and expecting different results." -
+  Albert Einstein</span></p>
+<div align="left">
+<b><a name="2"></a>
+<p align="left">2.</b> Nothing is impossible for the person who doesn't have to do it.<br>
+  <br>
+  <b><a name="3"></a>3.</b> You can con a sucker into committing to an impossible deadline, but you cannot con him into meeting it. </p>
+<p align="left"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/1percent.jpg') }}" ></p>
+<p align="left"> <b><a name="4"></a>4.</b> At the heart of every large project is a small project trying to get out. </p>
+<p align="left"> <b><a name="5"></a>5.</b> The more desperate the situation the more optimistic the situatee. <br>
+  <br>
+  <b><a name="6"></a>6.</b> A problem shared is a buck passed. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/buck-passing.jpg') }}" ><br>
+  <br>
+  <b><a name="7"></a>7.</b> A change freeze is like the abominable snowman: it is a myth and would anyway melt when heat is applied. <br>
+  <br>
+  <b><a name="8"></a>8.</b> A user will tell you anything you ask about, but nothing more. <br>
+  <br>
+  <b><a name="9"></a>9.</b> Of several possible interpretations of a communication, the least convenient is the correct one. <br>
+  <br>
+  <b><a name="10"></a>10.</b> What you don't know can hurt you. <br>
+  <img src="{{ asset('storage/images/knowhurt.png') }}" onmouseover="this.src='{{ asset('storage/images/knowknow.png') }}'" onmouseout="this.src='{{ asset('storage/images/knowhurt.png') }}'"> <span class="auto-style25">I.e. </span> <a href="/pin" > <span class="auto-style25">The Dunning-Kruger effect</span></a><br>
+  <b><a name="11"></a>11.</b> There's never enough time (or money) to do it right first time but there's always enough time (and
+  money) to go back and do it again. <br>
+  <br>
+  <b><a name="12"></a>12.</b> The bitterness of poor quality lasts long after the sweetness of making a date is forgotten. <br>
+  <br>
+  <b><a name="13"></a>13.</b> I know that you believe that you understand what you think I said, but I am not sure you
+  realize that what you heard is not what I meant. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/duh.png') }}"  ><br>
+  <br>
+  <b><a name="14"></a>14.</b> What is not on paper has not been said. <br>
+  <br>
+  <b><a name="15"></a>15.</b> A little risk management saves a lot of fan cleaning. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/risksandshtf.jpg') }}" ><br>
+  <br>
+  <b><a name="16"></a>16.</b> If you can keep your head while all about you are losing theirs, you haven't understood the plan. <br>
+  <br>
+  <b><a name="17"></a>17.</b> If at first you don't succeed, remove all evidence you ever tried. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/trunkmusic.jpg') }}"  ><br>
+  <br>
+  <b><a name="18"></a>18.</b> Feather and down are padding, changes and contingencies will be real events. <br>
+  <br>
+  <b><a name="19"></a>19.</b> There are no good project managers - only lucky ones. <br>
+  <br>
+  <b><a name="20"></a>20.</b> The more you plan the luckier you get. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/luck.jpg') }}"  ><br>
+  <br>
+  <b><a name="21"></a>21.</b> A project is one small step for the project sponsor, one giant leap for the project manager. <br>
+  <br>
+  <b><a name="22"></a>22.</b> Good project management is not so much knowing what to do and when, as knowing what excuses to give and when. <br>
+  <br>
+  <b><a name="23"></a>23.</b> If everything is going exactly to plan, something somewhere is going massively wrong. <br>
+  <br>
+  <b><a name="24"></a>24.</b> Everyone asks for a strong project manager - when they get them they don't want them. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/drill.jpg') }}" ><br>
+  <br>
+  <b><a name="25"></a>25.</b> Overtime is a figment of the naive project manager's imagination. <br>
+  <br>
+  <b><a name="26"></a>26.</b> Quantitative project management is for predicting cost and schedule overruns well in advance. <br>
+  <br>
+  <b><a name="27"></a>27.</b> The sooner you begin coding the later you finish. <br>
+  <br>
+  <b><a name="28"></a>28.</b> Metrics are learned men's excuses. <br>
+  <br>
+  <b><a name="29"></a>29.</b> For a project manager overruns are as certain as death and taxes. <br>
+  <br>
+  <b><a name="30"></a>30.</b> Some projects finish on time in spite of project management best practices. <br>
+  <br>
+  <b><a name="31"></a>31.</b> Fast - cheap - good - you can have any two. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/designertriangle.jpg') }}" ><br>
+  <br>
+  <b><a name="32"></a>32.</b> There is such a thing as an unrealistic timescale. <br>
+  <br>
+  <b><a name="33"></a>33.</b> The project would not have been started if the truth had been told about the cost and timescale. <br>
+  <br>
+  <b><a name="34"></a>34.</b> A two year project will take three years, a three year project will never finish. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/the-five-year-project.png') }}" > <br>
+  <br>
+  <b><a name="35"></a>35.</b> When the weight of the project paperwork equals the weight of the project itself, the project can be considered complete. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images//paperwork.jpg') }}"  ><br>
+  <br>
+  <b><a name="36"></a>36.</b> A badly planned project will take three times longer than expected - a well planned project only twice as long as expected. <br>
+  <br>
+  <b><a name="37"></a>37.</b> Warning: dates in a calendar are closer than they appear to be. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/datesarecloser.jpg') }}"  ><br>
+  <br>
+  <b><a name="38"></a>38.</b> Anything that can be changed will be changed until there is no time left to change anything. <br>
+  <br>
+  <b><a name="39"></a>39.</b> There is no such thing as scope creep, only scope gallop. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/creep.png') }}" ><br>
+  <br>
+  <b><a name="40"></a>40.</b> A project gets a year late one day at a time. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/daybyday.jpg') }}"  ><br>
+  <br>
+  <b><a name="41"></a>41.</b> If you're 6 months late on a milestone due next week but really believe you can make it, you're a project manager. <br>
+  <br>
+  <b><a name="42"></a>42.</b> No project has ever finished on time, within budget, to requirement - yours won't be the first to. <br>
+  <br>
+  <b><a name="43"></a>43.</b> Activity is not achievement. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/stuck%20in%20mud.jpg') }}" > <br>
+  <br>
+  <b><a name="44"></a>44.</b> Managing IT people at CMMi Level 1 is like herding cats. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/catz.png') }}" ><br>
+  <br>
+  <b><a name="45"></a>45.</b> If you don't know how to do a task, start it, then ten people who know less than you will tell you how to do it. <br>
+  <br>
+  <b><a name="46"></a>46.</b> If you don't plan, it doesn't work. If you do plan, it doesn't work either. <a href="/register" title="Note you must be registered with PMWay to follow this link">Why plan</a>! <br>
+  <br>
+  <b><a name="47"></a>47.</b> The person who says it will take the longest and cost the most is the only one with a clue how to do the job. <br>
+  <br>
+  <b><a name="48"></a>48.</b> The sooner you get behind schedule, the more time you have to make it up. <br>
+  <br>
+  <b><a name="49"></a>49.</b> The nice thing about not planning is that failure comes as a complete surprise rather than being preceded by a period of worry and depression. <br>
+  <br>
+  <b><a name="50"></a>50.</b> Good control reveals problems early - which only means you'll have longer to worry about them. <br>
+  <br>
+  <b><a name="51"></a>51.</b> Murphy's Law of shortcuts:  The problems associated with a shortcut are inversely proportional to the shortness of the cut. <br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/cutcorners.png') }}"  ><br>
+  <br>
+  <b><a name="52"></a>52.</b> Murphy's Law of advice about arguing with idiots: <br>
+  -- Never argue with an idiot. <br>
+  -- They will drag you down to their level and beat you up with facts! <br>
+  <br>
+  <b><a name="53"></a>53.</b> Adding more people to a software project makes it finish quicker!&nbsp; <br>
+  Actually NO!&nbsp; This is false! <br>
+  If fact Brooks's Law states:
+  Adding manpower to a late software project makes it later. </p>
+<p align="left"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/onemonth.png') }}"  >
+<p align="left" > <img alt="" class="img-fluid"  src="{{ asset('storage/images/brookslaw.jpg') }}"  ></p>
+</p>
+<p align="left"> <b><a name="54"></a>54.</b>&nbsp; Remember why you planned!<br>
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/alligatorsr.png') }}" ></p>
+    <p id="55"><b>55.</b> The SSDD formula!<br>
+
+  <br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/ssdd.gif') }}"  ><br>
+<h1 class="meaning" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; line-height: normal; text-indent: 0px; color: rgb(0, 0, 0); padding: 8px 0px 5px 4px; margin: 0px 0px 10px; height: 30px; width: auto; font-size: 20px; text-align: left; letter-spacing: normal; font-style: normal; font-variant: normal; orphans: auto; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-image: none; background-color: rgb(255, 255, 255);"> gumption</h1>
+<div align="left"> <i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"> Pronunciation:<span class="Apple-converted-space">&nbsp;</span></i><span class="serif" style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">(gump'sh<i>u</i>n),</span><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><br style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);" >
+  <i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">n.</i><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">Informal.</i><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><br style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);" >
+  <b style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"> 1.<span class="Apple-converted-space">&nbsp;</span></b><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">initiative;
+  aggressiveness; resourcefulness:<span class="Apple-converted-space">&nbsp;</span></span><i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">With
+  his gumption he'll make a success of himself.</i><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><br style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);" >
+  <b style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"> 2.<span class="Apple-converted-space">&nbsp;</span></b><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">courage;
+  spunk; guts:<span class="Apple-converted-space">&nbsp;</span></span><i style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">It
+  takes gumption to quit a high-paying job.</i><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span class="Apple-converted-space">&nbsp;</span></span><br style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);" >
+  <b style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"> 3.<span class="Apple-converted-space">&nbsp;</span></b><span style="color: rgb(81, 80, 80); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: -webkit-left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">common
+  sense; shrewdness.</span> </div>
+<p align="left"><b><a name="56"></a>56</b> This one is self
+  explanatory.</p>
+<p><em> Hover your mouse
+  cursor over the image if you do not get it.</em></p>
+<img src="{{ asset('storage/images/manyrabbits.jpg') }}" onmouseover="this.src='{{ asset('storage/images/2rabbits.jpg') }}'" onmouseout="this.src='{{ asset('storage/images/manyrabbits.jpg') }}'">
+<p align="left"><b><a name="57"></a>57.</b> And my all time CMMi Level 1 best!
+<p align="left"> <a href="/home/pdca" > <img alt="" class="img-fluid"  src="{{ asset('storage/images/a%20lack%20of%20planning.jpeg') }}" title="Click here for more information on PDCA."  class="auto-style24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<!--<a href="/home/cmmi" ><img src="{{ asset('storage/images/cmmi projectnew.png') }}" class="img-fluid" title="Click here for more information on the CMMi model."class="auto-style24"></a>-->
+</p>
+<p align="left">The image above goes hand in hand with the concept of the
+  CMMi L1 quest for a HERO and the stupidity of the Hospital Pass:</p>
+<div align="left"> <a name="hospital"></a> <img alt="" class="img-fluid"  src="{{ asset('storage/images/hospital-pass%201a.png') }}"  ><img alt="" class="img-fluid" src="{{ asset('storage/images/hospital-pass%201.png') }}"  ><br>
+  <img alt="" class="img-fluid"  src="{{ asset('storage/images/hospital%20pass%20rubgy.jpg') }}"  > <img alt="" class="img-fluid"  src="{{ asset('storage/images/hospitalpassamericanfootball.jpg') }}"  > <br>
+</div>
+<p align="left"> <img alt="Under the buss" class="img-fluid"  src="{{ asset('storage/images/underthebus.png') }}" ></p>
+<p align="left"><b><a name="58"></a>58.</b> And when you start to feel really uneasy; per the advice from Kenny Rogers.
+<div class="ctr">
+  <p class="auto-style22"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/knowrun.jpg') }}"  ></p>
+</div>
+<p align="left"><b><a name="59"></a>59.</b> And finally when you are just about to lose your mind;
+  and running away is not a viable option for now.
+<p align="left">
+<div align="center"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/serenity.png') }}"  ><br>
+  <br>
+  <br>
+</div>
+<p>c.f. #55 above.&nbsp; If you are in Information Technology provision then,
+  between 55 and 58 you will immediately see the problem.&nbsp; <br>
+  I.e. by not making the break and running away you have created a never ending loop that operates and glorifies the acceptance of heroics at CMMi Level 1.<br>
+    PMWay suggests much of the solution to solving the above problems is found in understanding the <a href="/cmmi-landing">CMMi model</a> and what goes on (or does not go on) at Level 1.</p>
+<br>
+<br>
+<br>
+{% endif %}
+
+
+{% endblock %}

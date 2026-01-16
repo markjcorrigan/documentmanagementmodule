@@ -1,0 +1,133 @@
+My Goal:  To secure a folder in Dave's MVC Framework from registered access at a level above simply registered.
+Why do I want this:  I.e. if I want to grant membership access then I will elevate access giving them specific rights as discussed below.  I.e. view file.html files / view file.pdf and save file.pdf.
+
+Previously to Daves Framework I used CPanel and could only put a password on a folder via CPanel.  
+Also all my files were not in a MVC environment but were php files sitting in the public_html foder on the linex server.
+
+My goals was to secure foldername in ../App/Views/Foldername at a level above simply registered access.  I.e. this access is secured access that I grant only to registered user that I have decided to give elevated access to.  To do this I have created another column in Users table called is-access.  This column is exactly the same as DAve's is_active.  I.e. it has a flag set to ZERO '0' by default.  But which I change to '1' via CPanel directly on the User Table if I want to grant a particular user higher access to a secured folder within ../App/Views/SecuredFolderNamewhichihavecalledforthisexampleItil.  Elevated access allows access to the folder Itil index.html or other.html files via url: Itil/index or Itil/otherfilename
+The user can also view or download filename.pdf files that are sitting in the ../App/Views/Itil folder. 
+
+>>>These are the routes in the index.php file in my public_html
+
+$router->add('itil', ['controller' => 'Itil', 'action' => 'index']); //use this with /itil/index
+$router->add('itil/{page}', ['controller' => 'Itil','action' => 'show']);
+$router->add('itilsave/{filename:[\w\s\.-]+}', ['controller' => 'Itil', 'action' => 'save']);  //use this with /itilsave/filename.pdf
+$router->add('itilview/{filename:[\w\s\.-]+}', ['controller' => 'Itil', 'action' => 'view']);  //use this with /itilview/filename.pdf
+
+>>>This is the controller for Itil folder i.e. App/Controllers/Itil.php
+
+<?php
+
+namespace App\Controllers;
+
+use \Core\View;
+use \App\Auth;
+
+class Itil extends \Core\Controller
+{
+
+
+/**
+ * Home controller
+ *
+ * PHP version 7.0
+ 
+ */
+
+ 
+ /*   public function indexAction()
+    {
+        View::renderTemplate('Pmboksixmanual/index.html');
+       
+    }
+
+ */
+       public function showAction() //nb this runs all pages but kills the home page corkboard from loading
+    	{
+    	$page = $this->route_params['page'];
+		$pageWithHtmlExt = "$page.html";  
+
+        if (!Auth::getUser()->is_access) 
+        {
+            echo "
+			<script type='text/javascript'>alert(\"You do not have sufficient rights to access this page. Click Contact to apply for Membership.\");
+    		window.location='/';
+   			</script>";
+    	} elseif (file_exists("../App/Views/Itil/". $pageWithHtmlExt)) 
+    	
+    	{
+    	 View::renderTemplate("./Itil/$pageWithHtmlExt");                    
+    	} else 
+    
+    	{
+            throw new \Exception('File not found.', 404);
+    	}  
+}      
+    
+     protected function saveAction()
+
+    {
+    if ( ! Auth::getUser()->is_access) {
+ 
+      echo "<script type='text/javascript'>alert(\"You do not have sufficient rights to access this page. Click Contact to apply for Membership.\");
+    window.location='/';
+    
+    </script>";
+} else 
+
+    {
+        // Get the filename from the URL and prepend the directory
+    		$filename = "../App/Views/Itil/" . $this->route_params['filename'];
+        // Check if the file exists, throw a 404 if not found
+        if (file_exists($filename)) {
+            header("Content-type: application/pdf");  
+            header("Content-Disposition: attachment; filename=\"" . basename($filename) . "\"");
+           //header("Content-Disposition: attachment; filename=downloaded.pdf");
+           //header('Content-Disposition: attachment; filename="'.basename($filename).'"' ); 
+            
+            readfile($filename);
+                    
+        } else {
+            throw new \Exception('File not found.', 404);
+        }   
+    }   
+
+  }
+    
+    
+    
+       protected function viewAction()
+
+    {
+    if ( ! Auth::getUser()->is_access) {
+ 
+      echo "<script type='text/javascript'>alert(\"You do not have sufficient rights to access this page.\");
+    window.location='/';
+    
+    </script>";
+
+
+
+} else 
+
+
+    {
+        // Get the filename from the URL and prepend the directory
+    		$filename = "../App/Views/Itil/" . $this->route_params['filename'];
+        // Check if the file exists, throw a 404 if not found
+        if (file_exists($filename)) {
+            header("Content-type: application/pdf");  
+            header("Content-Disposition: inline; filename=\"" . basename($filename) . "\"");
+           header('Content-Transfer-Encoding: binary');     
+           header('Content-Length: ' . filesize($filename));       
+            readfile($filename);
+                    
+        } else {
+            throw new \Exception('File not found.', 404);
+            
+        }   
+    }   
+
+  } 
+    
+ }

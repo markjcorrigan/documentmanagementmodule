@@ -1,0 +1,654 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}RACI{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container">
+  <h3>RACI Matrix</h3>
+  <hr>
+  <p>A project management tool often used to pin down
+    communication requirements is called the RACI matrix.&nbsp;</p>
+  <p> <img alt="" class="img-fluid" src="{{ asset('storage/images/racithree.jpg') }}" ></p>
+  <p>This matrix puts the audience along one axis and then ties this
+    up with the types of communication they need to receive along
+    the other axis by:</p>
+  <h4><span id="Key_responsibility_roles"
+                      class="mw-headline">Key responsibility roles</span></h4>
+  <dl>
+    <dt class="auto-style1">Responsible</dt>
+    <dd>
+      <p>Those who do the work to achieve the task. There is
+        typically one role with a participation type of <i> responsible</i>, although others can be delegated to assist
+        in the work required (see also <i>RASCI</i> below for
+        separately identifying those who participate in a supporting
+        role).</p>
+    </dd>
+  </dl>
+  <dl>
+    <dt><span class="auto-style2"><em>Accountable (also approver or final
+      approving authority</em></span>)</dt>
+    <dd>
+      <p>The one ultimately answerable for the correct and
+        thorough completion of the deliverable or task, and the one
+        from whom <i>responsible</i> is delegated the work. In other words, an <i> accountable</i> must sign off (approve) on work that <i> responsible</i> provides. There <b>must</b> be only one <i>accountable</i> specified for each task or deliverable.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dt><span class="auto-style2"><em>Consulted (sometimes
+      counsel</em></span>)</dt>
+    <dd>
+      <p>Those whose opinions are sought, typically subject
+        matter experts; and with whom there is two-way
+        communication.&nbsp; <br />
+        Note:&nbsp; The image above sees consulted as a gate.&nbsp;
+        I.e. Must be consulted before a decision can be taken.&nbsp;
+        The suitable response will need to be defined within the
+        project context.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dt class="auto-style2"><em>Informed</em></dt>
+    <dd>
+      <p>Those who are kept up-to-date on progress, often only on
+        completion of the task or deliverable; and with whom there
+        is just one-way communication.</p>
+    </dd>
+  </dl>
+  <p>Very often the role that is <i>accountable</i> for a task or deliverable may also be <i>responsible</i> for completing it (indicated on the matrix by
+    the task or deliverable having a role <i>accountable</i> for it, but no role <i>responsible</i> for its completion, I.e. it is implied).
+    Outside of this exception, it is generally recommended that each
+    role in the project or process for each task receive, at most,
+    just one of the participation types. Where more than one
+    participation type is shown, this generally implies that
+    participation has not yet been fully resolved, which can impede
+    the value of this technique in clarifying the participation of
+    each role on each task.</p>
+  <p>A powerpoint presentation explaining RACI is available if you <a href="{{ asset('storage/assets/raci_approach.pdf') }}"
+                   >click here</a>:</p>
+  <p>Note:&nbsp; There are other more advanced forms:&nbsp;</p>
+  <h3><span id="RASCI"
+                      class="mw-headline">RASCI</span></h3>
+  <dl>
+    <dd>
+      <p> <span class="goog_qs-tidbit goog_qs-tidbit-0">This is an
+        expanded version</span> <span class="goog_qs-tidbit goog_qs-tidbit-0">of the
+        standard RACI, less frequently known as</span> <i><span class="goog_qs-tidbit goog_qs-tidbit-0"> RASIC</span></i><span class="goog_qs-tidbit goog_qs-tidbit-0"> ,</span> <span class="goog_qs-tidbit goog_qs-tidbit-0">breaking the</span> <i><span class="goog_qs-tidbit goog_qs-tidbit-0"> responsible</span></i> <span class="goog_qs-tidbit goog_qs-tidbit-0">participation
+        into:</span></p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"> <em>Responsible</em></dt>
+        <dd>
+          <p> <span class="goog_qs-tidbit goog_qs-tidbit-0"> Those who are</span> responsible for the task,
+            ensuring that it is done as per the <i>approver</i>.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Support</em></dt>
+        <dd>
+          <p>Resources allocated to <i>responsible</i>. Unlike <i>consulted</i>, who may provide input to the task, <i> support</i> will assist in completing the task.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h3><span id="RACI-VS"
+                      class="mw-headline">RACI-VS</span></h3>
+  <dl>
+    <dd>
+      <p>This is an expanded version of the standard RACI, with
+        two additional participation types:</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Verifier</em></dt>
+        <dd>
+          <p>Those who check whether the product meets the
+            acceptance criteria set forth in the product
+            description.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Signatory</em></dt>
+        <dd>
+          <p>Those who approve the <i>verify</i> decision and authorize the product hand-off. It
+            seems to make sense that the <i>signatory</i> should
+            be the party being <i>accountable</i> for its
+            successor.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h3><span id="CAIRO"
+                      class="mw-headline">CAIRO</span></h3>
+  <dl>
+    <dd>
+      <p>This is an expanded version, of the standard RACI, also
+        known as <i>RACIO</i> with one additional participation
+        type.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt><span class="auto-style2"><em>Out of the loop (or
+          omitted</em></span>)</dt>
+        <dd>
+          <p>Designating individuals or groups who are
+            specifically not part of the task. Specifying that a
+            resource does not participate can be as beneficial
+            to a task's completion as specifying those who do
+            participate.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h3><span id="DACI"
+                      class="mw-headline">DACI</span></h3>
+  <dl>
+    <dd>
+      <p>Another version that has been used to centralize
+        decision making, and clarify who can re-open discussions.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Driver</em></dt>
+        <dd>
+          <p>A single <i>driver</i> of overall project like
+            the person steering a car.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Approver</em></dt>
+        <dd>
+          <p>One or more <i>approver</i>s who make most
+            project decisions, and are responsible if it fails.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Contributors</em></dt>
+        <dd>
+          <p>Are the worker-bees who are responsible for
+            deliverables; and with whom there is two-way
+            communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Informed</em></dt>
+        <dd>
+          <p>Those who are impacted by the project and are
+            provided status and informed of decisions; and with
+            whom there is one-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h4><span id="Variations"
+                      class="mw-headline">Variations</span></h4>
+  <p>There are also a number of variations to the meaning of RACI
+    participation types:</p>
+  <h3><span id="RACI_.28alternative_scheme.29"
+                      class="mw-headline">RACI (alternative scheme)</span></h3>
+  <dl>
+    <dd>
+      <p>There is an alternative <i>coding</i>, less widely
+        published but used by some practitioners and process mapping
+        software, which modifies the application of the <i>R</i> and <i> A</i> codes of the original scheme. The overall methodology
+        remains the same but this alternative avoids potential
+        confusion of the terms <i>accountable</i> and <i>responsible</i>, which may be understood by management
+        professionals but not always so clearly differentiated by
+        others:</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Responsible</em></dt>
+        <dd>
+          <p>Those responsible for the performance of the
+            task. There should be exactly one person with this
+            assignment for each task.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Assists</em></dt>
+        <dd>
+          <p>Those who assist completion of the task.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Consulted</em></dt>
+        <dd>
+          <p>Those whose opinions are sought; and with whom
+            there is two-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Informed</em></dt>
+        <dd>
+          <p>Those who are kept up-to-date on progress; and
+            with whom there is one-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h3><span id="RACI_.28decisions.29"
+                      class="mw-headline">RACI (decisions)</span></h3>
+  <dl>
+    <dd>
+      <p>This alternative is focused only on documenting who has
+        the authority to make which decisions. May be suitable for
+        use within a small work group.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Recommends</em></dt>
+        <dd>
+          <p>Responsible to <i>recommend</i> an answer to the
+            decision.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Approves</em></dt>
+        <dd>
+          <p>Authorized to <i>approve</i> an answer to the
+            decision.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Consulted</em></dt>
+        <dd>
+          <p>Those whose opinions are sought; and with whom
+            there is two-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Informed</em></dt>
+        <dd>
+          <p>Those who are informed after the decision is
+            made; and with whom there is one-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <p><a href="{{ asset('storage/assets/racispiralofblame.pdf') }}" >Click here</a> for RACI and how it can be used to reverse flagging production stats and stop the Spiral of Blame.</p>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+  <h3>RACI Matrix</h3>
+  <hr>
+  <p>A project management tool often used to pin down
+    communication requirements is called the RACI matrix.&nbsp;</p>
+  <p> <img alt="" class="img-fluid" src="{{ asset('storage/images/racithree.jpg') }}" ></p>
+  <p>This matrix puts the audience along one axis and then ties this
+    up with the types of communication they need to receive along
+    the other axis by:</p>
+  <h4><span id="Key_responsibility_roles"
+                      class="mw-headline">Key responsibility roles</span></h4>
+  <dl>
+    <dt class="auto-style1">Responsible</dt>
+    <dd>
+      <p>Those who do the work to achieve the task. There is
+        typically one role with a participation type of <i> responsible</i>, although others can be delegated to assist
+        in the work required (see also <i>RASCI</i> below for
+        separately identifying those who participate in a supporting
+        role).</p>
+    </dd>
+  </dl>
+  <dl>
+    <dt><span class="auto-style2"><em>Accountable (also approver or final
+      approving authority</em></span>)</dt>
+    <dd>
+      <p>The one ultimately answerable for the correct and
+        thorough completion of the deliverable or task, and the one
+        from whom <i>responsible</i> is delegated the work. In other words, an <i> accountable</i> must sign off (approve) on work that <i> responsible</i> provides. There <b>must</b> be only one <i>accountable</i> specified for each task or deliverable.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dt><span class="auto-style2"><em>Consulted (sometimes
+      counsel</em></span>)</dt>
+    <dd>
+      <p>Those whose opinions are sought, typically subject
+        matter experts; and with whom there is two-way
+        communication.&nbsp; <br />
+        Note:&nbsp; The image above sees consulted as a gate.&nbsp;
+        I.e. Must be consulted before a decision can be taken.&nbsp;
+        The suitable response will need to be defined within the
+        project context.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dt class="auto-style2"><em>Informed</em></dt>
+    <dd>
+      <p>Those who are kept up-to-date on progress, often only on
+        completion of the task or deliverable; and with whom there
+        is just one-way communication.</p>
+    </dd>
+  </dl>
+  <p>Very often the role that is <i>accountable</i> for a task or deliverable may also be <i>responsible</i> for completing it (indicated on the matrix by
+    the task or deliverable having a role <i>accountable</i> for it, but no role <i>responsible</i> for its completion, I.e. it is implied).
+    Outside of this exception, it is generally recommended that each
+    role in the project or process for each task receive, at most,
+    just one of the participation types. Where more than one
+    participation type is shown, this generally implies that
+    participation has not yet been fully resolved, which can impede
+    the value of this technique in clarifying the participation of
+    each role on each task.</p>
+  <p>A powerpoint presentation explaining RACI is available if you <a href="{{ asset('storage/assets/raci_approach.pdf') }}"
+                   >click here</a>:</p>
+  <p>Note:&nbsp; There are other more advanced forms:&nbsp;</p>
+  <h3><span id="RASCI"
+                      class="mw-headline">RASCI</span></h3>
+  <dl>
+    <dd>
+      <p> <span class="goog_qs-tidbit goog_qs-tidbit-0">This is an
+        expanded version</span> <span class="goog_qs-tidbit goog_qs-tidbit-0">of the
+        standard RACI, less frequently known as</span> <i><span class="goog_qs-tidbit goog_qs-tidbit-0"> RASIC</span></i><span class="goog_qs-tidbit goog_qs-tidbit-0"> ,</span> <span class="goog_qs-tidbit goog_qs-tidbit-0">breaking the</span> <i><span class="goog_qs-tidbit goog_qs-tidbit-0"> responsible</span></i> <span class="goog_qs-tidbit goog_qs-tidbit-0">participation
+        into:</span></p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"> <em>Responsible</em></dt>
+        <dd>
+          <p> <span class="goog_qs-tidbit goog_qs-tidbit-0"> Those who are</span> responsible for the task,
+            ensuring that it is done as per the <i>approver</i>.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Support</em></dt>
+        <dd>
+          <p>Resources allocated to <i>responsible</i>. Unlike <i>consulted</i>, who may provide input to the task, <i> support</i> will assist in completing the task.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h3><span id="RACI-VS"
+                      class="mw-headline">RACI-VS</span></h3>
+  <dl>
+    <dd>
+      <p>This is an expanded version of the standard RACI, with
+        two additional participation types:</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Verifier</em></dt>
+        <dd>
+          <p>Those who check whether the product meets the
+            acceptance criteria set forth in the product
+            description.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Signatory</em></dt>
+        <dd>
+          <p>Those who approve the <i>verify</i> decision and authorize the product hand-off. It
+            seems to make sense that the <i>signatory</i> should
+            be the party being <i>accountable</i> for its
+            successor.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h3><span id="CAIRO"
+                      class="mw-headline">CAIRO</span></h3>
+  <dl>
+    <dd>
+      <p>This is an expanded version, of the standard RACI, also
+        known as <i>RACIO</i> with one additional participation
+        type.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt><span class="auto-style2"><em>Out of the loop (or
+          omitted</em></span>)</dt>
+        <dd>
+          <p>Designating individuals or groups who are
+            specifically not part of the task. Specifying that a
+            resource does not participate can be as beneficial
+            to a task's completion as specifying those who do
+            participate.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h3><span id="DACI"
+                      class="mw-headline">DACI</span></h3>
+  <dl>
+    <dd>
+      <p>Another version that has been used to centralize
+        decision making, and clarify who can re-open discussions.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Driver</em></dt>
+        <dd>
+          <p>A single <i>driver</i> of overall project like
+            the person steering a car.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Approver</em></dt>
+        <dd>
+          <p>One or more <i>approver</i>s who make most
+            project decisions, and are responsible if it fails.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Contributors</em></dt>
+        <dd>
+          <p>Are the worker-bees who are responsible for
+            deliverables; and with whom there is two-way
+            communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Informed</em></dt>
+        <dd>
+          <p>Those who are impacted by the project and are
+            provided status and informed of decisions; and with
+            whom there is one-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h4><span id="Variations"
+                      class="mw-headline">Variations</span></h4>
+  <p>There are also a number of variations to the meaning of RACI
+    participation types:</p>
+  <h3><span id="RACI_.28alternative_scheme.29"
+                      class="mw-headline">RACI (alternative scheme)</span></h3>
+  <dl>
+    <dd>
+      <p>There is an alternative <i>coding</i>, less widely
+        published but used by some practitioners and process mapping
+        software, which modifies the application of the <i>R</i> and <i> A</i> codes of the original scheme. The overall methodology
+        remains the same but this alternative avoids potential
+        confusion of the terms <i>accountable</i> and <i>responsible</i>, which may be understood by management
+        professionals but not always so clearly differentiated by
+        others:</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Responsible</em></dt>
+        <dd>
+          <p>Those responsible for the performance of the
+            task. There should be exactly one person with this
+            assignment for each task.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Assists</em></dt>
+        <dd>
+          <p>Those who assist completion of the task.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Consulted</em></dt>
+        <dd>
+          <p>Those whose opinions are sought; and with whom
+            there is two-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Informed</em></dt>
+        <dd>
+          <p>Those who are kept up-to-date on progress; and
+            with whom there is one-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <h3><span id="RACI_.28decisions.29"
+                      class="mw-headline">RACI (decisions)</span></h3>
+  <dl>
+    <dd>
+      <p>This alternative is focused only on documenting who has
+        the authority to make which decisions. May be suitable for
+        use within a small work group.</p>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Recommends</em></dt>
+        <dd>
+          <p>Responsible to <i>recommend</i> an answer to the
+            decision.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Approves</em></dt>
+        <dd>
+          <p>Authorized to <i>approve</i> an answer to the
+            decision.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Consulted</em></dt>
+        <dd>
+          <p>Those whose opinions are sought; and with whom
+            there is two-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <dl>
+    <dd>
+      <dl>
+        <dt class="auto-style2"><em>Informed</em></dt>
+        <dd>
+          <p>Those who are informed after the decision is
+            made; and with whom there is one-way communication.</p>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+  <p><a href="{{ asset('storage/assets/racispiralofblame.pdf') }}" >Click here</a> for RACI and how it can be used to reverse flagging production stats and stop the Spiral of Blame.</p>
+</div>
+{% endif %}
+
+
+{% endblock %}

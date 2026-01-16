@@ -1,0 +1,598 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Clean Code{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+<!--BODY-->
+<div class="container" align="left">
+<h3 align="left">Clean Code - Thanks Uncle Bob!</h3>
+<hr>
+<p><a href="{{ asset('storage/assets/cleancode.zip') }}" >Bob's code examples.zip</a></p>
+<p><a href="{{ asset('storage/assets/cleancodecollection.pdf') }}" > The Robert C. Martin Clean Code Collection</a>.</p>
+<p><a href="{{ asset('storage/assets/cleanagilebacktobasics.pdf') }}" > (Robert C. Martin series) Robert C. Martin - Clean agile _ back to basics-Prentice Hall (2020)</a>.</p>
+<p><a href="{{ asset('storage/assets/cleanarchitecture.pdf') }}" > (Robert C. Martin Series) Robert C. Martin - Clean Architecture_ A Craftsman’s Guide to Software Structure and Design-Prentice Hall (2017).pdf</a>.</p>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="auto" data-able-player playsinline loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/1/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E01 - Clean Code </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/2/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E02 - Names </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/3/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E03 - Functions </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/4/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E03a - Testable Html Sequence </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/5/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E03b - Prime Generator Sequence </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/6/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E03c - Video Store Sequence </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/7/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E04 - Function Structure </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/8/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E04a - Stack Kata Screencast </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/9/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E05 - Form </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/11/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E06 - TDD Part </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/12/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E06 - TDD Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/13/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E07 - Architecture, Use Cases, and High Level Design </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/14/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E08 - Foundations of the SOLID principles </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/15/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E09 - The Single Responsibility Principle </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/16/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E10 - The Open-Closed Principle </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/17/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E11 - The Liskov Substitution Principle Part 1 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/18/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E11 - The Liskov Substitution Principle Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/19/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E12 - The Interface Segregation Principle </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/20/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E13 - The Dependency Inversion Principle </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/22/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E14 - Solid Summary (Case Study) </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/23/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E16 - Component Cohesion </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/24/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E17 - Component Coupling </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/21/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E18 - Component Case Study </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/26/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E19 - Advanced TDD - Part 1 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/27/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E19 - Advanced TDD Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/28/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E20 - Clean Tests </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/29/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E21 - Test Design </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/30/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E22 - Test Process </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/31/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E23 - Mocking - Part 1 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/32/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E23 - Mocking - Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/33/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E24 - Transformation Priority Premise - Part 1 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/34/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E24 - Transformation Priority Premise - Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/35/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E25 - Design Patterns </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/36/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E26 - Factories </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/37/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E27 - Strategy and Template Method Patterns </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/38/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E28 - Final State Machines and the State Pattern </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/40/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E29 - SMC Parser </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/41/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E30 - SMC Generator </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/42/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E31 - The Observer Pattern </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/43/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E32 - Pile 'O Patterns </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/44/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E33 - Pattern Roundup </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/45/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E34 - Pattern Apocalypse </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/46/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E35 - Behaviour Driven Development </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/47/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E36 - Behaviour Driven Development Design </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/48/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E37 - Elaborating the Requirements </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/49/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E38 - The Clean Coder </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/50/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E39 - Defects </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/51/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E40 - Proof </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/52/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E41 -Small Releases </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/53/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E42 - Life, the Universe and Everything (Part 1) </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/54/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E42 - Life, the Universe and Everything (Part 2) </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/55/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E43 - Productivity </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/56/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E44 - Estimates </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/57/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E45 - The Programmers Oath </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+<div class="container" align="left">
+<h3 align="left">Clean Code - Thanks Uncle Bob!</h3>
+<hr>
+<p><a href="{{ asset('storage/assets/cleancode.zip') }}" >Bob's code examples.zip</a></p>
+<p><a href="{{ asset('storage/assets/cleancodecollection.pdf') }}" > The Robert C. Martin Clean Code Collection</a>.</p>
+<p><a href="{{ asset('storage/assets/cleanagilebacktobasics.pdf') }}" > (Robert C. Martin series) Robert C. Martin - Clean agile _ back to basics-Prentice Hall (2020)</a>.</p>
+<p><a href="{{ asset('storage/assets/cleanarchitecture.pdf') }}" > (Robert C. Martin Series) Robert C. Martin - Clean Architecture_ A Craftsman’s Guide to Software Structure and Design-Prentice Hall (2017).pdf</a>.</p>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="auto" data-able-player playsinline loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/1/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E01 - Clean Code </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/2/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E02 - Names </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/3/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E03 - Functions </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/4/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E03a - Testable Html Sequence </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/5/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E03b - Prime Generator Sequence </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/6/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E03c - Video Store Sequence </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/7/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E04 - Function Structure </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/8/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E04a - Stack Kata Screencast </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/9/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E05 - Form </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/11/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E06 - TDD Part </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/12/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E06 - TDD Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/13/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E07 - Architecture, Use Cases, and High Level Design </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/14/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E08 - Foundations of the SOLID principles </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/15/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E09 - The Single Responsibility Principle </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/16/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E10 - The Open-Closed Principle </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/17/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E11 - The Liskov Substitution Principle Part 1 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/18/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E11 - The Liskov Substitution Principle Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/19/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E12 - The Interface Segregation Principle </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/20/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E13 - The Dependency Inversion Principle </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/22/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E14 - Solid Summary (Case Study) </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/23/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E16 - Component Cohesion </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/24/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E17 - Component Coupling </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/21/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E18 - Component Case Study </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/26/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E19 - Advanced TDD - Part 1 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/27/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E19 - Advanced TDD Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/28/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E20 - Clean Tests </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/29/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E21 - Test Design </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/30/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E22 - Test Process </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/31/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E23 - Mocking - Part 1 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/32/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E23 - Mocking - Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/33/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E24 - Transformation Priority Premise - Part 1 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/34/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E24 - Transformation Priority Premise - Part 2 </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/35/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E25 - Design Patterns </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/36/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E26 - Factories </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/37/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E27 - Strategy and Template Method Patterns </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/38/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E28 - Final State Machines and the State Pattern </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/40/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E29 - SMC Parser </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/41/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E30 - SMC Generator </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/42/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E31 - The Observer Pattern </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/43/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E32 - Pile 'O Patterns </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/44/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E33 - Pattern Roundup </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/45/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E34 - Pattern Apocalypse </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/46/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E35 - Behaviour Driven Development </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/47/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E36 - Behaviour Driven Development Design </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/48/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E37 - Elaborating the Requirements </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/49/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E38 - The Clean Coder </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/50/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E39 - Defects </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/51/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E40 - Proof </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/52/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E41 -Small Releases </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/53/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E42 - Life, the Universe and Everything (Part 1) </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/54/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E42 - Life, the Universe and Everything (Part 2) </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/55/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E43 - Productivity </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/56/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E44 - Estimates </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/cleancode/57/1.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">E45 - The Programmers Oath </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

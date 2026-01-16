@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Place favicon.ico in the root directory -->
+    {{--   <link rel="apple-touch-icon" href=" {{asset('frontend/assets/img/favicon.png')}} " />--}}
+    {{--   <link rel="shortcut icon" type="image/png" href="{{asset('frontend/assets/img/favicon.png')}}" />--}}
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/animate.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/font-awesome-pro.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/flaticon_gerold.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/nice-select.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/backToTop.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/swiper.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/odometer-theme-default.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/magnific-popup.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}"/>
+{{--    <link rel="stylesheet" href="{{asset('frontend/assets/css/light-mode.css')}}"/>--}}
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+    <style>
+        .btn.tj-btn-primary {
+            position: relative;
+        }
+
+        .btn.tj-btn-primary::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 50%;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn.tj-btn-primary:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .custom-breadcrumbs a {
+            color: white !important;
+        }
+
+        .custom-breadcrumbs a:hover {
+            color: #ccc !important;
+        }
+
+        .custom-breadcrumbs a[href*="{{ Request::url() }}"] {
+            text-decoration: underline;
+        }
+
+        .custom-breadcrumbs .active {
+            text-decoration: underline;
+            text-decoration-color: white;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
+        }
+
+        /* DARK THEME OVERRIDES - Load after light-mode.css */
+        body {
+            background-color: #0f0a1a !important;
+            color: #e0e0e0 !important;
+        }
+
+        .tj-post__content,
+        .tj-post__content * {
+            color: #e0e0e0 !important;
+        }
+
+        h1, h2, h3, h4, h5, h6,
+        .tj-post__title,
+        .widget_title .title {
+            color: #ffffff !important;
+        }
+
+        .sidebar_widget,
+        .tj_main_sidebar {
+            background-color: transparent !important;
+            color: #e0e0e0 !important;
+        }
+
+        .sidebar_widget *,
+        .tj_main_sidebar * {
+            color: #e0e0e0 !important;
+        }
+
+        a {
+            color: #6cb2eb !important;
+        }
+
+        a:hover {
+            color: #4299e1 !important;
+        }
+
+        /* Fix voting component - dark background with visible text */
+        .card, .card-body {
+            background-color: #1a1a2e !important;
+            border-color: #444 !important;
+        }
+
+        .border.rounded {
+            background-color: #2d3748 !important;
+        }
+
+        /* Make vote arrows and numbers more visible */
+        livewire\:blog-post-votes a,
+        [wire\:id] a {
+            color: #ffffff !important;
+        }
+
+        livewire\:blog-post-votes h3,
+        [wire\:id] h3 {
+            color: #ffffff !important;
+        }
+
+        /* Force center pagination */
+        #recent-posts nav {
+            display: block !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+
+        #recent-posts nav > div,
+        #recent-posts nav > span {
+            display: inline-block !important;
+            text-align: center !important;
+        }
+
+        /* Override Tailwind pagination - ALL BUTTONS SAME SIZE */
+        #recent-posts a.relative.inline-flex,
+        #recent-posts a[class*="inline-flex"],
+        #recent-posts span.relative.inline-flex,
+        #recent-posts span[class*="inline-flex"] {
+            background-color: #6c757d !important;
+            background: #6c757d !important;
+            color: #ffffff !important;
+            border-color: #5a6268 !important;
+            font-weight: 700 !important;
+            font-size: 0.9rem !important;
+            min-width: 35px !important;
+            width: 35px !important;
+            height: 35px !important;
+            padding: 0 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin: 2px !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+        }
+
+        #recent-posts a.relative.inline-flex:hover,
+        #recent-posts a[class*="inline-flex"]:hover {
+            background-color: #545b62 !important;
+            color: #ffffff !important;
+            border-color: #4e555b !important;
+        }
+
+        /* Target the ACTIVE/CURRENT page correctly */
+        #recent-posts span[aria-current="page"],
+        #recent-posts span.relative.inline-flex[aria-current="page"] {
+            background-color: #e74c3c !important;
+            color: #ffffff !important;
+            border-color: #e74c3c !important;
+        }
+
+        /* Target all Tailwind utility classes in pagination */
+        #recent-posts [class*="bg-white"],
+        #recent-posts [class*="bg-gray-"] {
+            background-color: #6c757d !important;
+        }
+
+        #recent-posts [class*="text-gray"] {
+            color: #ffffff !important;
+        }
+
+        #recent-posts [class*="dark:bg-gray"] {
+            background-color: #6c757d !important;
+        }
+
+        /* Fix SVG arrows */
+        #recent-posts svg {
+            width: 1em !important;
+            height: 1em !important;
+            color: #ffffff !important;
+            fill: currentColor !important;
+        }
+
+        /* Hide mobile-only Previous/Next buttons that have the sm:hidden class */
+        #recent-posts nav > span[class*="sm:hidden"] {
+            display: none !important;
+        }
+
+        /* Hide elements with specific Tailwind responsive classes */
+        #recent-posts [class*="sm:hidden"],
+        #recent-posts .sm\:hidden {
+            display: none !important;
+        }
+    </style>
+
+<body>
+<x-blog-loading-preloader/>
+
+<main class="site-content" id="content">
+
+    <!-- START: Breadcrumb Area -->
+    <section class="breadcrumb_area" data-bg-image="{{ asset('frontend/assets/img/breadcrumb/breadcrumb-bg.jpg') }}"
+             data-bg-color="#140C1C">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <div class="breadcrumb_content d-inline-flex flex-column align-items-center w-100">
+                        <h2 class="title wow fadeInUp" data-wow-delay=".3s">{{ $post->post_title }}</h2><br><br>
+                        <div class="d-flex justify-content-end w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @php
+        $comments = App\Models\Comment::where('post_id', $post->id)->where('status', 1)->get();
+    @endphp
+
+            <!-- START: Blog Section -->
+    <section class="full-width tj-post-details__area">
+        <div class="container">
+
+            @php
+                $firstPost = App\Models\BlogPost::where('approved', 1)->oldest()->first();
+                $firstPostId = $firstPost->id;
+            @endphp
+            <div class="grid grid-cols-12">
+                <div class="col-start-1 col-span-1 ">
+                    <flux:breadcrumbs>
+                        <div class="custom-breadcrumbs">
+                            <flux:breadcrumbs>
+                                <div class="custom-breadcrumbs">
+                                    <flux:breadcrumbs>
+                                        <flux:breadcrumbs.item class="{{ Request::is('/') ? 'active' : '' }}" href="/"
+                                                               separator="slash">Home
+                                        </flux:breadcrumbs.item>
+                                        <flux:breadcrumbs.item class="{{ Request::is('blog') ? 'active' : '' }}"
+                                                               href="/blog" separator="slash">Blog
+                                        </flux:breadcrumbs.item>
+                                        <flux:breadcrumbs.item
+                                                class="{{ Request::is('post/details/*') ? 'active' : '' }}"
+                                                href="{{ url('/post/details/' . $firstPostId) }}" separator="slash">Posts
+                                        </flux:breadcrumbs.item>
+                                    </flux:breadcrumbs>
+                                </div>
+                            </flux:breadcrumbs>
+                        </div>
+                    </flux:breadcrumbs>
+                </div>
+                <div>
+                </div>
+            </div>
+            <h2></h2>
+            <br><br>
+
+            {{--        <span class="header-button">--}}
+            {{--                    <a href="{{ url('/post/details/' . $firstPostId) }}" class="btn tj-btn-primary">List of Posts</a>--}}
+            {{--                    </span>--}}
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="tj-post-details__container">
+
+
+                        <article class="tj-single__post">
+                            <div class="tj-post__thumb">
+                                {{--                      <img src="{{asset($post->photo)}}" alt="" style="width: 1000px; height:400px;" />--}}
+                                <img src="{{ $post->photo }}" alt="{{ $post->post_title }}" style="width: 100%; height:auto;"/>
+                                {{--                      <a href="#" class="category">Tutorial</a>--}}
+                            </div>
+
+                            <div class="tj-post__content">
+                                <div class="tj-post__meta entry-meta">
+                                    <span><i class="fa-light fa-user"></i> <a href="#">By {{ $post->user->name ?? 'Unknown' }}</a></span>
+                                    <span><i class="fa-light fa-calendar-days"></i> {{ $post->created_at->format('D M, Y') }}</span>
+                                    <span><i class="fa-light fa-comments"></i><a href="#"> ({{ count($comments ?? []) }})</a></span>
+
+                                </div>
+                                <style>
+                                    .compact-vote a i {
+                                        font-size: 1.2rem !important; /* Makes arrows smaller */
+                                    }
+                                    .compact-vote h3 {
+                                        font-size: 1rem !important; /* Makes vote count smaller */
+                                        margin: 5px 0 !important;
+                                    }
+                                </style>
+
+                                <h3 class="tj-post__title entry-title mb-4">{{ $post->post_title }}</h3>
+
+                                <!-- Voting Box -->
+                                <div class="card mb-4 shadow-sm" style="max-width: 500px; border: 2px solid #e0e0e0;">
+                                    <div class="card-body p-3">
+                                        <div class="row align-items-center">
+                                            <!-- Vote Counter Box (Left Side) -->
+                                            <div class="col-auto">
+                                                <div class="border rounded p-2 text-center" style="min-width: 80px; background-color: #f8f9fa;">
+                                                    <livewire:blog-post-votes
+                                                            :blogPost="$post"
+                                                            designTemplate="bootstrap"
+                                                            :key="'post-votes-'.$post->id" />
+                                                </div>
+                                            </div>
+
+                                            <!-- Instructions (Right Side) -->
+                                            <div class="col">
+                                                <h5 class="mb-1 fw-bold">
+                                                    <i class="fa fa-thumbs-up text-primary"></i> Vote for this post
+                                                </h5>
+                                                <p class="mb-0 text-muted" style="font-size: 0.95rem;">
+                                                    Click the arrows to vote • 1 vote per logged in user
+                                                    @guest
+                                                        <br><a href="{{ route('login') }}" class="btn btn-sm btn-outline-primary mt-1">
+                                                            <i class="fa fa-sign-in"></i> Login to Vote
+                                                        </a>
+                                                    @endguest
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Dark Mode Support -->
+                                <style>
+                                    /* Force dark mode for cards (override light mode defaults) */
+                                    .card {
+                                        background-color: #1a1a2e !important;
+                                        border-color: #444 !important;
+                                    }
+
+                                    .card .border {
+                                        background-color: #2d3748 !important;
+                                        border-color: #495057 !important;
+                                    }
+
+                                    .text-muted {
+                                        color: #adb5bd !important;
+                                    }
+
+                                    .card h5 {
+                                        color: #f8f9fa !important;
+                                    }
+
+                                    /* Make vote icons slightly smaller and more compact */
+                                    .card .fa-sort-asc,
+                                    .card .fa-sort-desc {
+                                        font-size: 1.5rem;
+                                        color: #ffffff !important;
+                                    }
+
+                                    .card h3 {
+                                        font-size: 1.5rem;
+                                        font-weight: bold;
+                                        color: #ffffff !important;
+                                    }
+                                </style>
+
+                                <div class="tj-post__content">
+                                    {!! $post->post_description !!}
+                                </div>
+                            </div>
+                        </article>
+
+                        @php
+                            $tags = explode(',', $post->post_tags)
+                        @endphp
+
+                                <!-- post tags & social share -->
+                        <div class="single-post_tag_share">
+                            <!-- post tags -->
+                            <div class="tj_tag">
+                                <h4 class="tag__title">Tags:</h4>
+                                <div class="tagcloud">
+                                    @foreach ($tags as $tag)
+                                        <a href="#"> {{ $tag }} </a>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="share_link">
+                                <a href="#"  class="facebook" title="Share this on Facebook"><i
+                                            class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="twitter" title="Share this on Twitter" ><i
+                                            class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="linkedin" title="Share this on Linkedin" ><i
+                                            class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="pinterest" title="Pin this Post" ><i
+                                            class="fa-brands fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- comments area -->
+                        <div class="tj-comments__container">
+                            <div class="tj-comments__wrap">
+                                <div class="tj-comment__title">
+                                    <h3>{{ count($comments) }} Comments</h3>
+                                </div>
+
+                                <div class="tj-latest__comments">
+                                    <ul>
+                                        @unless (count($comments) < 1)
+                                            @foreach ($comments as $comment)
+                                                <li class="tj__comment">
+                                                    <div class="tj-comment__wrap">
+                                                        <div class="comment__avatar">
+                                                            <img alt="" src="{{asset('uploads/no-img-avatar.png')}}"/>
+                                                        </div>
+                                                        <div class="comment__text">
+                                                            <div class="avatar__name">
+                                                                <h5><a href="#"> {{ $comment->user_name }} </a></h5>
+                                                                <span>{{ $comment->created_at->format('M D, Y') }}</span>
+                                                            </div>
+                                                            <p>
+                                                                {{ $comment->comment }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            @endforeach
+                                        @else
+                                            <p>No Comment(s) found!! 😌😌</p>
+                                        @endunless
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="comment-respond">
+                                <h3 class="comment-reply-title">
+                                    <span class="tj-comment__title">Leave a Comment</span>
+                                </h3>
+
+                                <form method="POST" action="{{ route('store.comment') }}" class="tj-post-comment__form">
+                                    @csrf
+                                    <input type="hidden" name="post_id" value="{{ $post->id }}">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form_group">
+                                                <input placeholder="Enter Name" id="author" name="name" type="text"
+                                                       aria-required="true"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form_group">
+                                                <input placeholder="Enter Email" id="email" name="user_email"
+                                                       type="email"
+                                                       aria-required="true"/>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form_group">
+                                  <textarea class="msg-box" placeholder="Enter Your Comments" id="comment"
+                                            name="comment" cols="45" rows="8"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <button class="tj-btn-primary submit" type="submit">Post Comment</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="tj_main_sidebar">
+                        <!--Two ways of searching:  Livewire-->
+
+                        <div class="sidebar_widget widget_search wow fadeInUp" data-wow-delay=".3s">
+                            <div class="tj-widget__search form_group">
+                                <p>List of search results:</p>
+                                @livewire('lwsearch')
+                            </div>
+                        </div>
+                        @php
+                            $rposts = App\Models\BlogPost::where('approved', 1)->latest()->paginate(10);
+                        @endphp
+
+                                <!--Two ways of searching:  Traditional came with blog-->
+                        @auth
+                            <div class="sidebar_widget widget_search wow fadeInUp" data-wow-delay=".3s">
+                                <p>Cards of search results:</p>
+                                <div class="tj-widget__search form_group">
+
+                                    <form class="search-form" action="{{ route('usersearch') }}" method="get">
+                                        <input type="search" id="search" name="search" placeholder="Search..."
+                                               value="{{ request()->input('search') }}"/>
+                                        <button class="search-btn" type="submit"><i
+                                                    class="fa-light fa-magnifying-glass"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        @endauth
+
+                        <div id="recent-posts" class="sidebar_widget tj_recent_posts wow fadeInUp" data-wow-delay=".3s">
+                            <div class="widget_title">
+                                <h3 class="title">Recent posts</h3>
+                            </div>
+                            <ul>
+                                {{ $rposts->fragment('recent-posts')->links() }}
+
+                                <br>
+                                @foreach ($rposts as $rpost)
+                                    @php $comments = App\Models\Comment::where('post_id', $rpost->id)->where('status', 1)->get(); @endphp
+                                    <li>
+                                        <div class="recent-post_thumb">
+                                            <a href="/post/details/{{ $rpost->id }}">
+                                                <img src="{{ $rpost->photo }}" alt="{{ $rpost->post_title }}"/>
+                                            </a>
+                                        </div>
+                                        <div class="recent-post_content">
+                                            <div class="tj-post__meta entry-meta">
+                                                <span><i class="fa-light fa-calendar-days"></i> {{ $rpost->created_at->format('M, Y') }} </span>
+                                                <span><i class="fa-light fa-comments"></i><a href="#"> ({{ count($comments) }})</a></span>
+                                            </div>
+                                            <h4 class="recent-post_title">
+                                                <a href="/post/details/{{ $rpost->id }}">{{ Str::limit($rpost->post_title, 30) }}</a>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                @endforeach
+                                {{ $rposts->fragment('recent-posts')->links() }}
+
+                            </ul>
+                        </div>
+                        <div class="sidebar_widget widget_tag_cloud wow fadeInUp" data-wow-delay=".3s">
+                            <div class="widget_title">
+                                <h3 class="title">Popular tag</h3>
+                            </div>
+                            <div class="tagcloud">
+                                @php $tags = explode(',', $post->post_tags) @endphp
+                                @foreach ($tags as $tag)
+                                    <a href="#"> {{ $tag }} </a>
+                                @endforeach
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @if (isset($posts))
+                        <div class="row">
+                            @if ($posts->isNotEmpty())
+                                @foreach ($posts as $post)
+                                    @php $comments = App\Models\Comment::where('post_id', $post->id)->where('status', 1)->get(); @endphp
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="blog-item wow fadeInUp" data-wow-delay=".5s">
+                                            <div class="blog-thumb">
+                                                <a href="/post/details/{{ $post->id }}">
+                                                    <img src="{{ $post->photo }}" alt="{{ $post->post_title }}"/>
+                                                </a>
+                                            </div>
+                                            <div class="blog-content">
+                                                <div class="blog-meta">
+                                                    <ul class="ul-reset">
+                                                        <li>
+                                                            <i class="fa-light fa-calendar-days"></i> {{ $post->created_at->format('D M, Y') }}
+                                                        </li>
+                                                        <li><i class="fa-light fa-comments"></i> <a href="#">Comment
+                                                                ({{ count($comments ?? []) }})</a></li>
+                                                    </ul>
+                                                </div>
+                                                <h3 class="blog-title">
+                                                    href="/post/details/{{ $post->id }}">{{ Str::limit($post->post_title, 40) }}</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                                {{--                           {{ $posts->links() }}--}}
+                            @else
+                                <p>No Post found!! </p>
+                            @endif
+                        </div>
+                    @endif
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Spacing Before Most Voted Section -->
+        <div class="mt-5 pt-4"></div>
+
+        <hr class="my-4">
+
+        <!-- Most Voted Posts Section -->
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <!-- Full width container that respects 2-11 columns -->
+                <div class="col-12 col-lg-10 offset-lg-1 px-3 px-lg-4">
+
+                    <!-- Section Header -->
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold  mb-2">
+                            <i class="fa fa-trophy text-warning fa-lg"></i>
+                            Top Rated Posts
+                        </h2>
+                        <br>
+                        <p class="lead text-white-50  mb-0">
+                            Discover the community's favorite blog posts
+                        </p>
+                    </div>
+
+                    <!-- Most Voted Component (FULL WIDTH) -->
+                    <livewire:most-voted-posts
+                            :limit="10"
+                            designTemplate="bootstrap" />
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Spacing -->
+        <div class="mb-5 pb-4"></div>
+
+        <style>
+            /* Dark mode */
+            [data-bs-theme="dark"] h2,
+            [data-bs-theme="dark"] .lead {
+                color: #f8f9fa !important;
+            }
+
+            [data-bs-theme="dark"] .text-muted {
+                color: #adb5bd !important;
+            }
+
+            [data-bs-theme="dark"] hr {
+                border-color: #495057;
+                opacity: 0.5;
+            }
+        </style>
+
+    </section>
+    <!-- END: Blog Section -->
+
+
+</main>
+
+<!-- FOOTER AREA START -->
+<x-footer/>
+<!-- FOOTER AREA END -->
+
+<!-- CSS here -->
+<script src="{{asset('frontend/assets/js/jquery.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/nice-select.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/backToTop.js')}}"></script>
+<script src="{{asset('frontend/assets/js/smooth-scroll.js')}}"></script>
+<script src="{{asset('frontend/assets/js/appear.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/wow.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/gsap.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/one-page-nav.js')}}"></script>
+<script src="{{asset('frontend/assets/js/lightcase.js')}}"></script>
+<script src="{{asset('frontend/assets/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/swiper.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/imagesloaded-pkgd.js')}}"></script>
+<script src="{{asset('frontend/assets/js/isotope.pkgd.min.j')}}s"></script>
+<script src="{{asset('frontend/assets/js/odometer.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/magnific-popup.js')}}"></script>
+<script src="{{asset('frontend/assets/js/validate.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/main.js')}}"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+    @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type','info') }}"
+    switch (type) {
+        case 'info':
+            toastr.info(" {{ Session::get('message') }} ");
+            break;
+
+        case 'success':
+            toastr.success(" {{ Session::get('message') }} ");
+            break;
+
+        case 'warning':
+            toastr.warning(" {{ Session::get('message') }} ");
+            break;
+
+        case 'error':
+            toastr.error(" {{ Session::get('message') }} ");
+            break;
+    }
+    @endif
+</script>
+</body>
+</html>

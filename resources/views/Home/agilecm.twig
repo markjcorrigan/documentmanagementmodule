@@ -1,0 +1,36 @@
+{% extends 'simplemedia.twig' %}
+{% block title %}{% if not user %}PMWay{% else %}Agile CM Milestones Sprint Burndown{% endif %}{% endblock %}
+{% block body %}
+    {% if user %}
+        <div class="container">
+            <h3>Agile Capability Maturity improvements (high level milestones)</h3>
+            <hr>
+            <img alt="Agile CM Milestones" class="img-fluid" src="{{ asset('storage/images/agilesuperficialmechanicalcompetentenlightened.png') }}"><br><br>
+
+            <p>The image above comes from the end of the Scrum vs Kanban video below.<br>
+                I struggle to understand how Kanban can be compared to Scrum as a viable project methodology as it does not have <a href="/pmway/?slide=5" >formal requirements gathering, planning and monitoring and control processes (REQM, PP and PMC)</a> and is focused on operations (Business As Usual [BAU]).<br>
+                That said, the video is worth a watch if interested.</p>
+            <br><br>
+
+            <div class="d-flex">
+                <div class="p-2 flex-fill"></div>
+                <div class="p-1 flex-fill"></div>
+                <div class="p-5 flex-fill">
+                    <video id="video1" data-able-player="true" preload="auto" data-speed-icons="true" width="480" height="360" poster="/" playsinline="true">
+                        <source type="video/mp4" src="/ablelvids/scrumvskanban/scrumvskanban.mp4">
+                    </video>
+                </div>
+                <div class="p-4 flex-fill"></div>
+            </div>
+            <div align="center"><br><br></div>
+        </div>
+    {% endif %}
+
+    {% if not user %}
+        <div class="container" align="left">
+            <h3 align="left">Please log in to access the content on this page</h3>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Scrum{% endblock %}
+
+{% block body %}
+<div class="container">
+<h3>Scrum and Managing Impediments</h3>
+
+<p>You've trained your new Scrum troops, and they're ready for their first mission. The team is pumped, and the project is up and running. Things are going well; the daily scrums are happening, the continuous integration server is humming along, tasks are moving across the board, so life is pretty sweet. Then, from out of nowhere, the bullets start flying, the mines start exploding, and your troops are no longer moving forward. This is it, ScrumMaster 
+- time to step up!</p>
+<p>Okay, so perhaps in reality, it isn't a spray of enemy fire impeding your team. Instead,it might be a constantly breaking build, an interfering project sponsor, or perhaps the loss of a key team member. The bottom line is that anything impeding your team's progress becomes the number-one priority for the ScrumMaster to tackle.</p>
+<h3>Defining Impediments</h3>
+<p>Let's start by defining what an impediment is. Here is the definition I choose to use:</p>
+<div class="colored_box silver">
+<div class="colored_box_content">
+<p><strong>An event that impedes any of the developers from working to their anticipated sprint capacity.</strong></p>
+</div>
+</div>
+<p>It isn't wise to allocate a full-time developer a sprint capacity of 8 hours a day (for a typical 8-hour working day). Why not? you ask. Well, you have to be realistic: there is no way that people are going to spend every second of their operational time working on their sprint tasks. We must take into account the various meetings that will pop up, other extended collaboration time, unplanned company events, and important head-clearing breaks, just to name a few. Now don't get me wrong: on some days, some team members will be able to maintain strong focus on their sprint tasks and will max out or even exceed the 8 hours. However, on other days, constant interruptions may make it difficult to maintain even a couple of hours of sprint-focused work.</p>
+<h3>Many Shapes and Sizes</h3>
+<p>Impediments come in all shapes and sizes. Following is a small sample of indicative impediments (both operational and systemic) to keep a careful eye on:</p>
+<ul>
+<li><strong>Meetings of large magnitude:</strong> Scrum projects really should have no need for these extraneous, long-winded bad boys, so when they pop up, they are typically triggered by other areas of the business or by unforeseen issues.</li>
+<li><strong> Illness:</strong> Illness can strike unannounced at any time. Not much you can do about it, but I highly recommend you avoid a culture of "toughing it out" when sick. That expectation is just stupid. Work quality suffers, germs spread very quickly in an open Scrum environment, and it just annoys everyone.</li>
+<li><strong>Broken builds:</strong> Without a healthy build, development cannot continue. If a build is broken, it must be the top priority of every team member to fix it.</li>
+<li><strong>Issues with the tools of the trade:</strong> Whether it is a hardware malfunction, software problem, or network connectivity issues, any problems with the working environment can seriously hamper progress and lead to immense frustration.</li>
+<li><strong>Unreliable supplier:</strong> This is possibly one of the most frustrating impediments due to the lack of control that the ScrumMaster and team might have in dealing with an overburdened supplier. Poorly supported components or add-ons can lead to black holes that can seriously suck time from your sprints.</li>
+<li><strong>Unrefined product backlog:</strong> A sprint should never start without the product owner knowing exactly what requirements should make their way into the sprint backlog. Further, these requirements should include enough detail for the development team get their teeth into. If these requirements are not ready for the sprint planning session then the sprint will not start smoothly at all.</li>
+<li><strong>Absent or unempowered product owner holding up key decisions:</strong> Product owners should be available throughout the sprint to field specific questions about the sprint backlog. If they are regularly absent or constantly having to seek approval from elsewhere, the development team might find itself paralyzed with uncertainty.</li>
+<li><strong>Incentive schemes focused on the individual:</strong> Many organizations maintain performance reviews (and associated incentive schemes) that are based entirely on individual performance. Hopefully by now you've absorbed the fact that there is no "I" in "Scrum team," so unless reviews also incorporate a significant focus on team collaboration, the organization will be sending a contradictory message to the team members.</li>
+</ul>
+<h3>Impediment ConTROL</h3>
+<p>I like to run through the following five-step approach when dealing with impediments: confirm, triage, remove, outline, learn <strong>(ConTROL)</strong>.</p>
+<ul>
+<li><strong>Confirm:</strong> Obviously it is necessary to confirm what the impediment is. Typically, impediments are raised in the daily scrum, but urgent impediments should be raised in real time rather than waiting for the daily scrum. The sprint retrospective can uncover further impediments that may have slipped through the cracks during the actual sprint. All impediments should be tracked and monitored until they are resolved.</li>
+<li><strong>Triage:</strong> If you are bombarded with simultaneous impediments, then unless you are Superman (being obsessed with super heroes doesn't automatically give you their special powers), you will be able to tackle only one or two at a time. An impact and urgency assessment may be needed to help you determine where to start.</li>
+<li><strong>Remove:</strong> Ideally, the Scrum team can remove any impediment that gets<br />
+thrown its way, but it isn't always the reality. To avoid delays, it is 
+important to know when to seek further help from other groups to get things back 
+on track.</li>
+<li><strong>Outline:</strong> Both the Scrum team and stakeholders should be made aware of any impediments as they come up. You especially want to avoid surprises for product owners (and project sponsors) when it comes to any scuttled plans so that they have as much time as possible to iron out any cascade effects.</li>
+<li><strong>Learn:</strong> The sprint retrospective is the main session during which impediments are analyzed. It is important to learn from these issues to avoid their recurrence and/or capture how they were dealt with so that if they strike again, the impact is less pronounced.</li>
+</ul>
+<h3>Blocks versus Impediments</h3>
+<p>Many teams use the terms block and impediment interchangeably, but I like to differentiate between the two (see Figure 1). I do so to clearly identify an obstruction that has stopped progress on a particular task but hasn't necessarily slowed down overall progress (a block) versus an obstruction that is slowing down the team's sprint progress (an impediment).</p>
+<p>A typical block occurs when a task has a dependency that has been held up for some reason. A short, temporary block is a reasonably common occurrence and nothing to get too concerned about, because in most cases, other work can be taken on while the dependency is being taken care of. The important thing to note is that you want clear visibility of all blocked tasks, irrespective of how temporary the block may be. The way I like to track blocked tasks is to simply spin the corresponding sticky-note 45 degrees so that it looks like a diamond and stands out on the task board. This is a clear signal and allows you to immediately jump into detective mode to ensure that the block is removed as quickly as possible.</p>
+<div id="attachment_2189" style="max-width: 520px" class="wp-caption aligncenter"><img class="img-fluid" src="/images/block-vs-impediment-axisagile.jpg" class="" alt="Figure 1 - A block affects only a single task, whereas an impediment acts like a parachute, slowing down overall progress" ><p class="wp-caption-text">Figure 1 &#8211; A block affects only a single task, whereas an impediment acts like a parachute, slowing down overall progress</p></div>
+<h3>Understand the Terrain</h3>
+<p>If you're like me, you will be stunned when you think back to all of the impediments that occurred throughout a project. It is often only when you reflect on the compiled list of tracked impediments that you can really appreciate the difficult terrain your Scrum troops have had to negotiate.</p>
+<p>This impediment list can also prove invaluable if ever you must defend the team should it fall under an uncomfortable spotlight due to incremental delays that have started to impact release dates. I certainly found that if you carefully ConTROL impediments when they decide to rear their ugly heads, these uncomfortable situations will be few and far between.</p> 
+	<br>
+	<br>
+
+	
+</div>			
+		
+
+{% endblock %}

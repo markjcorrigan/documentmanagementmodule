@@ -1,0 +1,312 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+ST{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL ST Service Asset and Configuration Management</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=22') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description">ITIL <i>Service Asset and Configuration Management</i> aims to maintain information about Configuration Items (CIs) required to deliver an IT service, including their relationships.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Configuration Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>The activities and process objectives of ITIL Configuration Management are broadly identical in ITIL V3 and V2. Configuration Management according to ITIL V3 introduces the Configuration Management System (CMS) as a logical data model, encompassing several Configuration Management Databases (CMDB). </p>
+  <p><i><b>ITIL 2011</b></i> requires additional interfaces in <a class="mw-selflink selflink">Configuration Management</a>, in line with the new structure of Service Transition processes. The process overview of <a href="/images/itilstseven.jpg"  title="Service-asset-and-configuration-management.jpg">ITIL Configuration Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Configuration Management sub-processes:">These are the <strong class="selflink">ITIL Configuration Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Configuration_Management_Identification" itemprop="itemListElement">Configuration Identification</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define and maintain the underlying structure of the CMS (the Configuration Model), so that it is able to hold all information on Configuration Items (CIs). This includes specifying the attributes describing CI types and their sub-components, as well as determining their interrelationships. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Configuration_Management_Control" itemprop="itemListElement">Configuration Control</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To ensure that no Configuration Items are added or modified without the required authorization, and that such modifications are adequately recorded in the CMS. </li>
+      <li><i>Note</i>: ITIL Configuration Control is mainly concerned with reviewing modifications to the Configuration Management System (CMS), to make sure the information stored in the CMS is complete and the modification was done by an authorized party. Other processes also support the objectives of Configuration Control: Configuration Identification defines who is authorized to make certain changes to the CMS. In a broader sense, Change Management and Release Management with their defined procedures also help to ensure that no unauthorized changes occur. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Configuration_Management_Audit" itemprop="itemListElement">Configuration Verification and Audit</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To perform regular checks, ensuring that the information contained in the CMS is an exact representation of the Configuration Items (CIs) actually installed in the live production environment. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Configuration Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Change_Request_to_CMS_Structure" itemprop="itemListElement">Change Request to CMS Structure</span></b> </p>
+    <ul>
+      <li itemprop="description">A request from a Service Management process to change the CMS structure. This request is sent to <strong class="selflink">Configuration Management</strong> if new CIs or attributes must be recorded but the CMS's structure is not adequate for holding the new data. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="CMS_CMDB" itemprop="itemListElement">CMS/ CMDB</span></b> </p>
+    <ul>
+      <li itemprop="description">The <i>Configuration Management System (CMS)</i> is a set of tools and data that is used for collecting, storing, managing, updating, analyzing and presenting data about all configuration items and their relationships. A CMS may manage more than one physical <i>Configuration Management Databases (CMDBs)</i>. Its underlying structure is defined by the Configuration Model, a logical model of the IT organization's service assets. (NB: ITIL Checklist CMS - CMDB). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="CMS_Change_Policy" itemprop="itemListElement">CMS Change Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of rules defining who is authorized to modify the structure and contents of the CMS. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Configuration_Audit_Report" itemprop="itemListElement">Configuration Audit Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A report summarizing the results of a CMS audit, highlighting revealed differences between CMS records and actually installed CIs. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="CI" itemprop="itemListElement">Configuration Item (CI)</span></b> </p>
+    <ul>
+      <li itemprop="description">Configuration Items (CIs) can be of various types: the CMS almost always covers services and IT infrastructure, but might also cover other item types like policies, project documentation, employees, suppliers, ... Configuration Items are characterized by their attributes (recorded in the CI's Configuration Record) and their relationships to other CIs. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="DML" itemprop="itemListElement">Definitive Media Library (DML)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Definitive Media Library (DML) is the secure logical library in which the definitive authorized versions of all media CIs are stored and protected. The DML typically consists of one or more software file-storage areas, as well as physical stores holding, for example, master copies on CD/DVD. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Transition#ITIL_KPIs_Service_Asset_and_Configuration_Management" title="ITIL KPIs Configuration Management">Key Performance Indicators (KPIs) Service Asset and Configuration Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL-Checklists#Configuration_Management">Configuration Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_CMS_CMDB" title="CMS template - CMDB template">Checklist CMS - CMDB</a>, and</li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_CMDB_Audit_Protocol" title="CMDB Audit Protocol">CMDB Audit Protocol</a></li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Configuration_Manager">Configuration Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Configuration Manager is responsible for maintaining information about <a href="/index.php/Service_Asset_and_Configuration_Management#CI" title="Service Asset and Configuration Management">Configuration Items</a> required to deliver IT services.</li>
+    <li>To this end he maintains a logical model, containing the components of the IT infrastructure (CIs) and their associations.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b><span id="RACI-Matrix-Configuration-Management">Responsibility Matrix: ITIL Configuration Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 60%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Configuration Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Configuration_Management_Identification">Configuration Identification</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Configuration_Management_Control">Configuration Control</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Configuration_Management_Audit">Configuration Verification and Audit</a></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Service Asset and Configuration Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Configuration Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL ST Service Asset and Configuration Management</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=22') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description">ITIL <i>Service Asset and Configuration Management</i> aims to maintain information about Configuration Items (CIs) required to deliver an IT service, including their relationships.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Configuration Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>The activities and process objectives of ITIL Configuration Management are broadly identical in ITIL V3 and V2. Configuration Management according to ITIL V3 introduces the Configuration Management System (CMS) as a logical data model, encompassing several Configuration Management Databases (CMDB). </p>
+  <p><i><b>ITIL 2011</b></i> requires additional interfaces in <a class="mw-selflink selflink">Configuration Management</a>, in line with the new structure of Service Transition processes. The process overview of <a href="/images/itilstseven.jpg"  title="Service-asset-and-configuration-management.jpg">ITIL Configuration Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Configuration Management sub-processes:">These are the <strong class="selflink">ITIL Configuration Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Configuration_Management_Identification" itemprop="itemListElement">Configuration Identification</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define and maintain the underlying structure of the CMS (the Configuration Model), so that it is able to hold all information on Configuration Items (CIs). This includes specifying the attributes describing CI types and their sub-components, as well as determining their interrelationships. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Configuration_Management_Control" itemprop="itemListElement">Configuration Control</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To ensure that no Configuration Items are added or modified without the required authorization, and that such modifications are adequately recorded in the CMS. </li>
+      <li><i>Note</i>: ITIL Configuration Control is mainly concerned with reviewing modifications to the Configuration Management System (CMS), to make sure the information stored in the CMS is complete and the modification was done by an authorized party. Other processes also support the objectives of Configuration Control: Configuration Identification defines who is authorized to make certain changes to the CMS. In a broader sense, Change Management and Release Management with their defined procedures also help to ensure that no unauthorized changes occur. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Configuration_Management_Audit" itemprop="itemListElement">Configuration Verification and Audit</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To perform regular checks, ensuring that the information contained in the CMS is an exact representation of the Configuration Items (CIs) actually installed in the live production environment. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Configuration Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Change_Request_to_CMS_Structure" itemprop="itemListElement">Change Request to CMS Structure</span></b> </p>
+    <ul>
+      <li itemprop="description">A request from a Service Management process to change the CMS structure. This request is sent to <strong class="selflink">Configuration Management</strong> if new CIs or attributes must be recorded but the CMS's structure is not adequate for holding the new data. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="CMS_CMDB" itemprop="itemListElement">CMS/ CMDB</span></b> </p>
+    <ul>
+      <li itemprop="description">The <i>Configuration Management System (CMS)</i> is a set of tools and data that is used for collecting, storing, managing, updating, analyzing and presenting data about all configuration items and their relationships. A CMS may manage more than one physical <i>Configuration Management Databases (CMDBs)</i>. Its underlying structure is defined by the Configuration Model, a logical model of the IT organization's service assets. (NB: ITIL Checklist CMS - CMDB). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="CMS_Change_Policy" itemprop="itemListElement">CMS Change Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of rules defining who is authorized to modify the structure and contents of the CMS. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Configuration_Audit_Report" itemprop="itemListElement">Configuration Audit Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A report summarizing the results of a CMS audit, highlighting revealed differences between CMS records and actually installed CIs. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="CI" itemprop="itemListElement">Configuration Item (CI)</span></b> </p>
+    <ul>
+      <li itemprop="description">Configuration Items (CIs) can be of various types: the CMS almost always covers services and IT infrastructure, but might also cover other item types like policies, project documentation, employees, suppliers, ... Configuration Items are characterized by their attributes (recorded in the CI's Configuration Record) and their relationships to other CIs. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="DML" itemprop="itemListElement">Definitive Media Library (DML)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Definitive Media Library (DML) is the secure logical library in which the definitive authorized versions of all media CIs are stored and protected. The DML typically consists of one or more software file-storage areas, as well as physical stores holding, for example, master copies on CD/DVD. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Transition#ITIL_KPIs_Service_Asset_and_Configuration_Management" title="ITIL KPIs Configuration Management">Key Performance Indicators (KPIs) Service Asset and Configuration Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL-Checklists#Configuration_Management">Configuration Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_CMS_CMDB" title="CMS template - CMDB template">Checklist CMS - CMDB</a>, and</li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_CMDB_Audit_Protocol" title="CMDB Audit Protocol">CMDB Audit Protocol</a></li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Configuration_Manager">Configuration Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Configuration Manager is responsible for maintaining information about <a href="/index.php/Service_Asset_and_Configuration_Management#CI" title="Service Asset and Configuration Management">Configuration Items</a> required to deliver IT services.</li>
+    <li>To this end he maintains a logical model, containing the components of the IT infrastructure (CIs) and their associations.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b><span id="RACI-Matrix-Configuration-Management">Responsibility Matrix: ITIL Configuration Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 60%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Configuration Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Configuration_Management_Identification">Configuration Identification</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Configuration_Management_Control">Configuration Control</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Configuration_Management_Audit">Configuration Verification and Audit</a></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Service Asset and Configuration Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Configuration Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

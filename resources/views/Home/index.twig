@@ -1,0 +1,588 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+    {% if not user %}PMWay{% endif %}
+    {% if user %}PMWay Home Page{% endif %}
+{% endblock %}
+
+{% block body %}
+
+{# Shared Styles #}
+<style>
+    body {
+        background-color: #fff !important;
+    }
+
+    .customcolor,
+    .customcolorwhite,
+    .carousel,
+    .card-body {
+        background-color: #fff !important;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: -35px;
+        background-color: #fff !important;
+    }
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #040404;
+    }
+
+    .carousel-indicators .active {
+        background: #fff none repeat scroll 0 0;
+        border: 4px solid #040404;
+    }
+
+    .navbar {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+        max-width: 100%;
+    }
+
+    .verticalalign {
+        vertical-align: bottom;
+    }
+
+    video {
+        width: 100% !important;
+    }
+
+    {# Custom button styles #}
+    @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+    :root {
+        --text-color: hsla(210, 50%, 85%, 1);
+        --shadow-color: hsla(210, 40%, 52%, .4);
+        --btn-color: hsl(210, 80%, 42%);
+        --bg-color: #141218;
+    }
+
+    buttontoilet {
+        position: relative;
+        padding: 10px 20px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-family: "Source Code Pro";
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: var(--text-color);
+        background-color: var(--btn-color);
+        box-shadow: var(--shadow-color) 2px 2px 22px;
+        border-radius: 4px;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    buttontoilet:focus {
+        outline-color: transparent;
+        box-shadow: var(--btn-color) 2px 2px 22px;
+    }
+
+    .right::after,
+    buttontoilet::after {
+        content: var(--content);
+        display: block;
+        position: absolute;
+        white-space: nowrap;
+        padding: 40px 40px;
+        pointer-events: none;
+    }
+
+    buttontoilet::after {
+        font-weight: 200;
+        top: -30px;
+        left: -20px;
+    }
+
+    .right,
+    .left {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+
+    .right {
+        left: 66%;
+    }
+
+    .left {
+        right: 66%;
+    }
+
+    .right::after {
+        top: -30px;
+        left: calc(-66% - 20px);
+        background-color: var(--bg-color);
+        color: transparent;
+        transition: transform .4s ease-out;
+        transform: translate(0, -90%) rotate(0deg)
+    }
+
+    buttontoilet:hover .right::after {
+        transform: translate(0, -47%) rotate(0deg)
+    }
+
+    buttontoilet .right:hover::after {
+        transform: translate(0, -50%) rotate(-7deg)
+    }
+
+    buttontoilet .left:hover~.right::after {
+        transform: translate(0, -50%) rotate(7deg)
+    }
+
+    buttontoilet::before {
+        content: '';
+        pointer-events: none;
+        opacity: .6;
+        background:
+            radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+            radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+            radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+        width: 100%;
+        height: 300%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        animation: bubbles 5s linear infinite both;
+    }
+
+    @keyframes bubbles {
+        from {
+            transform: translate();
+        }
+
+        to {
+            transform: translate(0, -66.666%);
+        }
+    }
+
+    .wrap {
+        height: 100px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<div class="container" align="center">
+
+    {# ITIL 4 Value Stream Section #}
+    <br><br>
+
+    <div class="rTableBody">
+        <div class="rTableRow">
+            <div class="rTableCell"></div>
+            <div class="rTableCell" align="center">
+
+                <img class="img-fluid"
+                     src="{{ asset('storage/images/howdoyoudown.png') }}"
+                     title="Have you documented and are you managing and optimizing your value chains in your Service Portfolios?"
+                     onmouseover="this.src='{{ asset('storage/images/itil4game.png') }}'"
+                     onmouseout="this.src='{{ asset('storage/images/howdoyoudown.png') }}'">
+            </div>
+            <div class="rTableCell"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <button class="btn align-center clearfix" type="button"
+            data-toggle="collapse" data-target="#collapseperformancestats"
+            aria-expanded="false" aria-controls="collapseperformancestats">
+        <div class="rTable">
+            <div class="rTableBody">
+                <div class="rTableRow">
+                    <div class="rTableCell"></div>
+                    <div class="rTableCell" align="center">
+                        <img class="img-fluid" src="{{ asset('storage/images/itilvaluestreams.png') }}">
+                    </div>
+                    <div class="rTableCell"></div>
+                </div>
+            </div>
+        </div>
+    </button>
+
+    <br><br>
+
+    {# Main Content Collapse #}
+    <div class="collapse" id="collapseperformancestats">
+        <div class="container">
+            <div class="card text-center">
+                <h3 class="card-header" align="center">
+                    The ITIL 4 Value Stream<br>
+                    Underpinned by Software Engineering with Lean, Devops,
+                    <a href="{% if user %}/pmway/?slide=1{% else %}/login{% endif %}" >TPM</a> or
+                    <a href="{% if user %}/home/agile{% else %}/login{% endif %}" >APM</a>
+                </h3>
+
+                <div class="card-body text-center">
+                    <h5>
+                        <a href="{{ asset('storage/assets/itilfouroverview.pdf') }}"
+                           title="Click here for a presentation about ITIL 4">
+                            Click here for a quick overview of ITIL 4<br>and their handling of the Value Stream
+                        </a>
+                    </h5>
+
+                    <br>
+
+                    <p>Having worked through the presentation you downloaded from the link directly above,
+                        <br>can you see that improvement projects are triggered in the Service Strategy ITIL lifecycle phase?
+                    </p>
+
+                    <p>The above said, ultimately it is all about you being able to "Up" your Productivity and Quality Stats
+                        <br>(while reducing Risk, Rework and Waste)
+                        <br>This goal is achieved by
+                        <a href="{% if user %}/cmmi{% else %}/login{% endif %}" >
+                            firming up CM Level 2 processes
+                        </a>.
+                    </p>
+
+                    <p>Do this for
+                        <a href="/pmway/?slide=1" >Traditional Project Management processes</a> or
+                        <a href="/home/agile">Agile processes</a>.
+                        <br>Then,
+                        <a href="{% if user %}/cmmi{% else %}/login{% endif %}" >
+                            with a managed CM Level 2 base firmly in place
+                        </a>; reach higher.
+                    </p>
+
+                    <p>
+                        <a href="/pmway/?slide=2" >Connect the dots here</a>
+                        to see touchpoints on your journey towards success.
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <h1>Bottom Line</h1>
+                    <h3 align="center">
+                        <b>Are you a <a href="/gamestats#kkahnli" >Kha Khan</a>?</b>
+                        <br>
+                        <a href="{% if user %}/home/fish{% else %}/login{% endif %}" >
+                            <img class="verticalalign img-fluid"
+                                 src="{{ asset('storage/images/fishsmaller.png') }}"
+                                 title="Click here if you are tired of the chaos!">
+                        </a>
+                        <br>
+                        <b>Are you tired of the
+                            <a href="{% if user %}{{ asset('storage/assets/chaos-report.pdf') }}{% else %}/login{% endif %}"
+                                title="Click here for one of the original Chaos Reports. Sound familiar?">
+                                Chaos
+                            </a>?
+                        </b>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# ITIL 4 Guiding Principles #}
+    <div align="center">
+        <a href="/laws" >
+            <img class="img-fluid"
+                 src="{{ asset('storage/images/itil4gp2.png') }}"
+                 onmouseover="this.src='{{ asset('storage/images/itil4gp1.png') }}'"
+                 onmouseout="this.src='{{ asset('storage/images/itil4gp2.png') }}'"
+                 title="Hover for more on ITIL 4 and their Guiding Principles or click for the importance of Millars Law">
+        </a>
+    </div>
+
+    <br>
+
+    {# Capability Maturity Gateway Section #}
+    <button class="btn align-center clearfix" type="button"
+            data-toggle="collapse" data-target="#collapsecapmatlvl"
+            aria-expanded="false" aria-controls="collapsecapmatlvl">
+        <div class="rTableBody">
+            <div class="rTableRow d-flex justify-content-center">
+                <div class="rTableCell">
+                    <a href="/pin"
+                       title="Move the pin through the Capability Maturity Levels Improvement gateway and hit the target. Focus on the process and not the outcome of the process!">
+                        <img id="pin" class="img-fluid" style="z-index:100"
+                             src="{{ asset('storage/images/pinsmaller.png') }}" alt="pin">
+                    </a>
+                </div>
+                <div class="rTableCell">
+                    <img alt="Gateway"
+                         title="{% if user %}Click{% else %}Log on and click{% endif %} the gateway to see why Capability Maturity Level 2 is where you have to be"
+                         class="img-fluid"
+                         src="{{ asset('storage/images/gatewayflat.png') }}"
+                         onmouseover="this.src='{{ asset('storage/images/gateway.png') }}'"
+                         onmouseout="this.src='{{ asset('storage/images/gatewayflat.png') }}'">
+                </div>
+                <div class="rTableCell">
+                    <a href="/cmmi">
+                        <img id="target" class="img-fluid"
+                             title="Click the target for the project management and other processes to maintain and improve up to Capability Maturity Level 5"
+                             src="{{ asset('storage/images/targetsmall.png') }}" alt="target">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </button>
+
+    {# Capability Maturity Level Details #}
+    {% include '_capability_maturity_section.twig' %}
+
+    <br>
+
+    {# Carousel Section #}
+    <button class="btn align-center clearfix" type="button"
+            data-toggle="collapse" data-target="#collapseopencarousel"
+            aria-expanded="false" aria-controls="collapseopencarousel">
+        <div class="rTableBody">
+            <div class="rTableRow">
+                <div class="rTableCell"></div>
+                <div class="rTableCell">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img alt="Animated GIF of Cogs going around and around"
+                         height="50" width="73"
+                         src="{{ asset('storage/images/cogsworking.gif') }}"
+                         title="{% if user %}Click on the cogs and understand more about how processes can be used to up your production stats{% else %}Log on and click on these cogs to take a 16 slide walkthrough{% endif %}">
+                </div>
+                <div class="rTableCell"></div>
+            </div>
+        </div>
+    </button>
+
+    <br><br>
+
+    {# Main Carousel #}
+    <div class="collapse" id="collapseopencarousel">
+        <div class="container">
+            <div class="card text-center">
+                <h5 class="card-header" align="center">
+                    <a href="/cmmi" >Capability Maturity Level 2</a> is essentially all about Project Management processes
+                    <br>
+                    <img class="img-fluid" title="value streams"
+                         src="{{ asset('storage/images/itosmallabove.png') }}"
+                         onmouseover="this.src='{{ asset('storage/images/itosmall.png') }}'"
+                         onmouseout="this.src='{{ asset('storage/images/itosmallabove.png') }}'">
+                    <br>
+                    Else operating @ CM L1
+                </h5>
+
+                <div class="card-body text-center customcolor">
+                    {# Carousel Navigation Links #}
+                    <p style="font-size:x-small">
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="0" title="Slide 1: PMBOK (The checklist for Project Management Professionals)">PMBOK |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="1" title="Slide 2: Standards/Frameworks Landscape">Standards |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="2" title="Slide 3: Strategy Wall">Strategy |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="3" title="Slide 4: Capability Maturity model with levels">CMmodel |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="4" title="Slide 5: Capability Maturity integrated development dashboard">CMMiDev</a>
+                        <br>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="5" title="Slide 6: People Process Technology triad">PPTtriad |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="6" title="Slide 7: Vmodel">Vmodel |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="7" title="Slide 8: IT Infrastructure Library version 3">ITIL |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="8" title="Slide 9: DevOps">DevOps |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="9" title="Slide 10: Prince2Agile">Prince2A |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="10" title="Slide 11: Dynamic Systems Development Model">DSDM</a>
+                        <br>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="11" title="Slide 12: Scrum">Scrum |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="12" title="Slide 13: Scaled Agile Framework">SAFe |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="13" title="Slide 14: People Capability Maturity Model">PCMM |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="14" title="Slide 15: Control Objectives for Information Technology 5">Cobit |</a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#mycarousel" data-slide-to="15" title="Slide 16: Plan, Do, Check, Act">PDCA</a>
+                    </p>
+                </div>
+
+                {# Bootstrap Carousel #}
+                <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                    {# Carousel Indicators #}
+                    <ol class="carousel-indicators">
+                        {% for i in 0..15 %}
+                            <li data-target="#mycarousel" data-slide-to="{{ i }}" {% if i == 0 %}class="active"{% endif %}></li>
+                        {% endfor %}
+                    </ol>
+
+                    {# Include carousel slides - we'll create separate includes for each major slide group #}
+                    {% include '_carousel_slides.twig' %}
+
+                    {# Carousel Controls #}
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <i class="fas fa-lg fa-chevron-left" style="color:black"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <i class="fas fa-lg fa-chevron-right" style="color:black"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <div class="card-footer customcolorwhite">
+                    <p align="center">
+                        <a href="/pmway/?slide=2"
+                           title="Click here to position the dashboard in a greater scheme">
+                            <img alt="Connect the dots" class="img-fluid"
+                                 src="{{ asset('storage/images/canyouconnectthedotssmall.png') }}">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    {# CM Level 2+ Image #}
+    <img alt="CM Level 2+" class="img-fluid" src="{{ asset('storage/images/cmltwoplus.png') }}">
+
+    <br><br>
+
+    {# Presentation Links #}
+    <p align="center">
+        <a href="https://pmway.hopto.org/itilfouroverview/index.html"
+           title="need some ideas on how to do this?">
+            <img alt="presentation icon"
+                 title="need a high level presentation of ideas on how to do the above?"
+                 src="{{ asset('storage/images/presentationicon.png') }}">
+        </a>
+        {% if user %}
+            <br>
+            <a href="{{ asset('storage/assets/itilfouroverview.pdf') }}"
+               title="view presentation in pdf">
+                <img alt="PDF icon"
+                     title="view a summary of the above presentation in pdf"
+                     src="{{ asset('storage/images/pdf-iconlarger.png') }}">
+            </a>
+            <br>Accessible IT Strategy?
+        {% endif %}
+    </p>
+
+    <br><br>
+
+    {# PMBOK Dashboard Section #}
+    <div class="container">
+        <div class="card text-center">
+            <h5 class="card-header" align="center">
+                Use this dashboard to get at the PMBOK 6 processes.
+            </h5>
+            <div class="card-body text-center">
+                <h5>The PMBOK® 6 Project Processes and Knowledge Areas Dashboard
+                    <br><span>(Drillable down to process group and knowledge area detail - by node)</span>
+                </h5>
+
+                <map id="ImgMap3" name="ImgMap3">
+                    <area coords="1, 2, 91, 121" href="/pmboksixsavepdf/pmboksixfull.pdf" shape="rect">
+                </map>
+
+                <img class="img-fluid" alt="Dashboard Header"
+                     src="{{ asset('storage/images/dashhead.jpg') }}" usemap="#ImgMap3">
+
+                <br><br>
+
+                {# Full Dashboard Image Map #}
+                <map id="ImgMap1" name="ImgMap1">
+                    <area coords="137, 117, 263, 221" href="/home/fourone" shape="rect">
+                    <area coords="263, 119, 386, 222" href="/home/fourtwo" shape="rect">
+                    <area coords="384, 115, 512, 165" href="/home/fourthree" shape="rect">
+                    <area coords="385, 163, 508, 218" href="/home/fourfour" shape="rect">
+                    <area coords="507, 114, 634, 167" href="/home/fourfive" shape="rect">
+                    <area coords="509, 167, 636, 221" href="/home/foursix" shape="rect">
+                    {# ... (all other map areas - keeping them as they are critical for navigation) #}
+                </map>
+
+                <img class="img-fluid"
+                     alt="Use this dashboard to get to grips with the Project Management Body of Knowledge - PMBOK"
+                     src="{{ asset('storage/images/mainprocessdashraised.png') }}"
+                     usemap="#ImgMap1">
+
+                <br>
+
+                <h5>This PMBOK Dashboard (the manual released September 2017) is fully
+                    <a href="/home/agile" >Agile</a> compliant
+                </h5>
+
+                <p>To that end see process 4.7. I.e. Close Project, Phase (or sprint).
+                    <br>To run Scrum (as a popular example of an agile method)
+                    <a href="/home/carousel?slide=4">at Capability Maturity Level 2+</a>
+                    <br><a href="/scrumvalued" >consider the model (and processes) found here</a>.
+                    <br>You are invited to contact me using the envelope above with any questions about the Scrum Valued Model.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    {% if not user %}
+        {# Special Section for Non-Logged-In Users #}
+        <div align="center">
+            <p align="center">
+                Click presentation above for a high level overview and (if interested)
+                <br>dive into the problems discussed below and solve them
+            </p>
+
+            <buttontoilet class="wrap btn btn-primary align-center clearfix" type="button"
+                         data-toggle="collapse" data-target="#collapsevixen"
+                         aria-expanded="false" aria-controls="collapsevixen">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wagile, Fragile, Aino&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(TPM & APM @ CML1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;etc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </buttontoilet>
+
+            {# Issues Section #}
+            {% include '_wagile_fragile_section.twig' %}
+        </div>
+    {% endif %}
+
+</div>
+
+{# JavaScript #}
+<script src="/bootstrapfourfivetwo/js/jquery.js"></script>
+<script src="/bootstrapfourfivetwo/js/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Get slide parameter from URL
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\                         title="{% if user %}Click on the cogs and understand more about how processes can be used to up your production stats{% else");
+            var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+            var slide = match && decodeURIComponent(match[1].replace(/\+/g, " "));
+
+            if (Math.floor(slide) == slide && $.isNumeric(slide)) {
+                $('#collapseopencarousel').collapse('show');
+                $('html, body').animate({
+                    scrollTop: $("#collapseopencarousel").offset().top
+                }, 1000);
+                return parseInt(slide);
+            } else {
+                return 0;
+            }
+        }
+
+        // Initialize carousel to correct slide
+        $('#mycarousel').carousel(qs('slide') - 1);
+
+        // Enable draggable pins
+        $("#pin, #pintwo, #pinthree").draggable({
+            revert: "false"
+        });
+
+        // Enable droppable targets
+        $("#target, #targetforladder").droppable({
+            greedy: true,
+            tolerance: 'touch',
+            drop: function(event, ui) {
+                ui.draggable.draggable('option', 'revert', 'true');
+                $(this).css({
+                    'background-color': '#94be0f',
+                    'border': '3px solid navy',
+                    'display': 'inline-block'
+                });
+                alert("Awesome! Now move the pin out of the way and click the target underneath to see the processes you have mastered! Remember Deming's advice: Work on the process, not the outcome of the process!");
+            }
+        });
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,106 @@
+@php
+    use Spatie\Permission\Models\Role;
+    use Illuminate\Support\Facades\Auth;
+
+    $admin = Role::findByName('super admin')->users->first();
+@endphp
+
+<nav class="navbar" style="background-color: #1e1e20 !important; border-bottom: 1px solid #37373a !important;">
+    <a href="#" class="sidebar-toggler" style="color: #f0f0f0 !important;">
+        <i data-feather="menu" style="color: #f0f0f0 !important;"></i>
+    </a>
+    <div class="navbar-content" style="background-color: #1e1e20 !important;">
+
+        <ul class="navbar-nav" style="background-color: #1e1e20 !important;">
+
+            <li class="nav-item dropdown" style="background-color: #1e1e20 !important;">
+                <!-- Message dropdown commented out -->
+            </li>
+            <li class="nav-item dropdown" style="background-color: #1e1e20 !important;">
+                <!-- Notification dropdown commented out -->
+            </li>
+            <li class="nav-item dropdown" style="background-color: #1e1e20 !important;">
+                <!-- Profile image commented out -->
+                <div class="dropdown-menu p-0" aria-labelledby="profileDropdown" style="background-color: #2a2a2d !important; border-color: #37373a !important;">
+                    <div class="d-flex flex-column align-items-center border-bottom px-5 py-3" style="border-bottom-color: #37373a !important; background-color: #2a2a2d !important;">
+                        <div class="text-center">
+                            <p class="tx-16 fw-bolder" style="color: #f0f0f0 !important;"> {{ $admin->name }} </p>
+                            <p class="tx-12" style="color: #a0a0a5 !important;">{{ $admin->email }}</p>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled p-1" style="background-color: #2a2a2d !important;">
+                        <li class="dropdown-item py-2" style="background-color: #2a2a2d !important;">
+                            <a href="{{ route('dashboard') }}" class="text-body ms-0" style="color: #d0d0d5 !important;">
+                                <i class="me-2 icon-md" data-feather="user" style="color: #a0a0a5 !important;"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <!-- Other menu items commented out -->
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    /* Additional CSS for better styling */
+    .navbar,
+    .navbar * {
+        background-color: #1e1e20 !important;
+    }
+
+    .navbar .dropdown-menu {
+        background-color: #2a2a2d !important;
+        border: 1px solid #37373a !important;
+    }
+
+    .navbar .dropdown-item {
+        background-color: #2a2a2d !important;
+        color: #d0d0d5 !important;
+    }
+
+    .navbar .dropdown-item:hover {
+        background-color: #3a3a3e !important;
+        color: #ffffff !important;
+    }
+
+    .navbar .text-body {
+        color: #d0d0d5 !important;
+    }
+
+    .navbar .text-body:hover {
+        color: #ffffff !important;
+    }
+
+    .navbar .sidebar-toggler {
+        color: #f0f0f0 !important;
+    }
+
+    .navbar .sidebar-toggler:hover {
+        color: #ffffff !important;
+    }
+
+    .navbar .tx-12 {
+        color: #a0a0a5 !important;
+    }
+
+    .navbar .tx-16 {
+        color: #f0f0f0 !important;
+    }
+
+    /* Ensure icons are visible */
+    .navbar [data-feather] {
+        color: #a0a0a5 !important;
+    }
+
+    .navbar [data-feather]:hover {
+        color: #ffffff !important;
+    }
+
+    /* Style for any active links */
+    .navbar .active {
+        background-color: #3a3a3e !important;
+        color: #ffffff !important;
+    }
+</style>

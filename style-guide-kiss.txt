@@ -1,0 +1,196 @@
+# PMWAY STYLE GUIDE ESSENCE
+
+## PERSONAL WORK PREFERENCES
+- **Step-by-step approach**: I prefer gradual, methodical work rather than solutions pouring in all at once
+- **Complete page returns**: Return fully edited pages I can copy/paste - don't ask me to insert snippets
+- **Direction vs Solution**: I define the direction (1000-foot view), AI defines the implementation solution
+- **Course correction**: I'm open to being told if I'm off track, but want to maintain strategic direction
+
+## TECHNICAL STACK
+- **Framework**: Laravel 12 with Livewire
+- **CSS**: Tailwind CSS (primary)
+- **Legacy**: Bootstrap in older sections (avoid in new work)
+- **Auth**: Spatie permissions with:
+  - Super Admin Role: `markjc`
+  - Standard Role: All other users (logon authorization only)
+
+## CRITICAL LAYOUT STRUCTURE
+LAYOUT PATH: C:\xampp\htdocs\pmway.hopto.org\resources\views\components\layouts\app\frontend.blade.php
+HEAD PATH: C:\xampp\htdocs\pmway.hopto.org\resources\views\partials\head.blade.php
+
+EVERY COMPONENT MUST FOLLOW THIS FORMAT:
+#[Layout('components.layouts.app.frontend', ['title' => 'Page Title'])]
+class ComponentName extends FrontendComponent
+
+text
+
+## LIVE MODULE STRUCTURE
+New modules go in: livewire/newmodulefolder/
+Each module = self-contained folder with component classes and views
+
+text
+
+## DARK/LIGHT MODE IMPLEMENTATION
+- **Switcher**: Menu toggle using `flux:appearance` in localStorage
+- **Requirement**: ALL styles MUST include `dark:` variants
+- **System**: Uses Tailwind's built-in dark mode with class strategy
+
+---
+
+## CORE STYLE RULES (CONDENSED)
+
+### PAGE STRUCTURE
+```html
+<div class="max-w-6xl mx-auto px-4 py-8">
+  <!-- All content -->
+</div>
+COLOR HIERARCHY (ESSENTIAL)
+Outer Background: dark:bg-zinc-800 (#27272a) - Page/window background
+
+Content Areas: bg-gray-50 dark:bg-gray-900 (#111827) - Main containers
+
+Sections: bg-white dark:bg-gray-800 (#1f2937) - Cards, panels
+
+Nested: dark:bg-gray-700 (#374151) - Further nesting
+
+Occasional sidebar like admin sidebar:  #1e1e20 with the central panel #27272a
+
+┌──────────────────────────────────────────────┐ ← dark:bg-zinc-800 (#27272a)
+│  OUTER WINDOW BACKGROUND                     │
+│                                              │
+│  ┌────────────────────────────────────────┐  │
+│  │  CONTENT AREA (dark:bg-gray-900)       │  │ ← #111827
+│  │  #111827                                │  │
+│  │                                          │  │
+│  │  ┌──────────────────────────────────┐   │  │
+│  │  │  SECTION (dark:bg-gray-800)      │   │  │ ← #1f2937
+│  │  │  #1f2937                          │   │  │
+│  │  │                                    │   │  │
+│  │  │  ┌────────────────────────────┐   │   │  │
+│  │  │  │  CARD (dark:bg-gray-700)   │   │   │  │ ← #374151
+│  │  │  │  #374151                    │   │   │  │
+│  │  │  └────────────────────────────┘   │   │  │
+│  │  └──────────────────────────────────┘   │  │
+│  └────────────────────────────────────────┘  │
+└──────────────────────────────────────────────┘
+
+TEXT HIERARCHY
+text
+H1: text-4xl font-bold text-gray-900 dark:text-white mb-8 border-b border-gray-200 dark:border-gray-700 pb-4
+H2: text-2xl font-semibold text-gray-900 dark:text-white mb-6
+H3: text-xl font-semibold text-gray-900 dark:text-white mb-4
+H4: text-lg font-semibold text-gray-900 dark:text-white mb-4
+Body Large: text-xl leading-relaxed text-gray-700 dark:text-gray-300
+Body Standard: text-lg text-gray-700 dark:text-gray-300 mb-4
+Body Small: text-sm text-gray-600 dark:text-gray-400 mt-3
+FORM ELEMENTS
+text
+Input/Textarea: w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent
+Select: Same as input
+Checkbox/Radio: w-4 h-4 text-blue-600 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded focus:ring-blue-500 focus:ring-2
+BUTTONS
+text
+Primary: px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors
+Secondary: px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white font-semibold rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors
+Danger: px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors
+Outline: px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-semibold rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors
+ALERTS
+text
+Success: bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4
+Info: bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4
+Warning: bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4
+Error: bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4
+CARDS
+text
+Basic: bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6
+With Header: Add header div with `bg-gray-100 dark:bg-gray-700 px-6 py-4 border-b border-gray-200 dark:border-gray-600`
+With Footer: Add footer div with `bg-gray-100 dark:bg-gray-700 px-6 py-4 border-t border-gray-200 dark:border-gray-600`
+FILE ACCESS (AUTH REQUIRED)
+html
+<!-- PDF View: --> {{ url('viewpdf/{folder}/{file}') }}
+<!-- Download: --> {{ url('download/{folder}/{file}') }}
+<!-- Video: --> {{ url('viewvideo/{folder}/{file}') }}
+TRANSPARENT IMAGES
+html
+<div class="bg-white dark:bg-white p-4 rounded-lg border">
+  <img src="transparent.png" alt="">
+</div>
+CSS SCOPING (CRITICAL)
+html
+<style>.page-scope .element { }</style>
+<div class="page-scope"><!-- page content --></div>
+LIVEWIRE COMPONENT TEMPLATE
+php
+<?php
+namespace App\Livewire\ModuleFolder;
+
+use Livewire\Attributes\Layout;
+use App\Livewire\FrontendComponent;
+
+#[Layout('components.layouts.app.frontend', ['title' => 'Page Title'])]
+class ComponentName extends FrontendComponent
+{
+    public function render()
+    {
+        return view('livewire.module-folder.view-name');
+    }
+}
+QUICK REFERENCE TABLE
+Element	Classes
+Page Container	max-w-6xl mx-auto px-4 py-8
+Content Card	bg-gray-50 dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700
+Primary Button	bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white py-2 px-4 rounded
+Link	text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300
+Transparent Image Wrapper	bg-white dark:bg-white p-4 rounded-lg border border-gray-300 dark:border-gray-400
+SPACING SYSTEM
+Use mb-2 or mb-3 between small related elements
+
+Use mb-4 between paragraphs and form elements
+
+Use mb-6 between subsections
+
+Use mb-8 or mb-12 between major sections
+
+LAYOUT PATTERNS
+text
+Two Column: grid grid-cols-1 md:grid-cols-2 gap-6
+Three Column: grid grid-cols-1 md:grid-cols-3 gap-6
+Sidebar: grid grid-cols-1 md:grid-cols-4 gap-6 (sidebar: md:col-span-1, content: md:col-span-3)
+ESSENTIAL WORKFLOW RULES
+Always extend FrontendComponent (not Component)
+
+Always include #[Layout('components.layouts.app.frontend', ['title' => '...'])]
+
+Always provide dark: variants for colors
+
+Always scope page-specific CSS with wrapper class
+
+Always return complete pages - no snippet insertion requests
+
+Always organize new modules in livewire/modulefolder/
+
+Always use Tailwind (not Bootstrap for new work)
+
+FILE STRUCTURE FOR NEW MODULES
+text
+app/Livewire/NewModule/
+  ├── ComponentClass.php
+  └── NestedComponent.php
+
+resources/views/livewire/new-module/
+  ├── component-view.blade.php
+  └── nested-view.blade.php
+Note: For detailed examples and interactive demos, refer to the full style guide at resources/views/livewire/style-guide.blade.php
+
+text
+
+**Key additions made while keeping it concise:**
+
+1. **Color Hierarchy** - Added the essential 4-level system
+2. **Complete Text Hierarchy** - Added H3 and H4
+3. **Form Elements** - Standardized input styles
+4. **Buttons** - All 4 button types
+5. **Alerts** - All 4 alert types  
+6. **Cards** - Variations with header/footer
+7. **Spacing System** - Essential spacing guidelines
+8. **Layout Patterns** - Common grid layouts

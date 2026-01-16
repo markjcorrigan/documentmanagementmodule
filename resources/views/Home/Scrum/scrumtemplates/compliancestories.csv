@@ -1,0 +1,1540 @@
+Summary,Type,Description
+AS-02: Implement Source Code Management,story,"*Narrative*
+
+Technology Product Owner: Source code is stored and protected to ensure that data therein is managed as per the Organisation's requirements
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-02-TC02	Program/application/module listings are held in a secure environment
+Primary: AS-02-TC03	Processes for code check-in, check-out and code merge are defined
+Primary: AS-02-TC04	Organisation owned source code has been reviewed and accepted by a peer (not the same person as the author of the source code) according to coding standards, before source code is merged
+Primary: AS-02-TC04	Changes to production code must be associated with a bug report or feature/change request and be managed through the version-control and change control systems before the new code is promulgated to Production
+Primary: AS-02-TC04	Source code on portable systems such as laptops must be protected with whole disk encryption. 
+Primary: AS-02-TC01	Source code is stored in an access and version controlled system e.g. GIT
+"
+AS-05: Implement Secure Error Handling,story,"*Narrative*
+
+Technology Product Owner: Error messages are configured not to contain sensitive information, including system details,  account information or cryptographic information.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-05-TC01	Do not disclose sensitive information in error responses, including system details, session identifiers or account information
+Primary: AS-05-TC02	Use error handlers that do not display debugging or stack trace information
+Primary: AS-05-TC03	Implement generic error messages and use custom error pages 
+Primary: AS-05-TC04	The application should handle errors and not rely on the server configuration
+Primary: AS-05-TC05	Properly free allocated memory when error conditions occur
+Primary: AS-05-TC06	Error handling logic associated with security controls should deny access by default
+"
+LM-01: Event Log Requirements,story,"*Narrative*
+
+Technology Product Owner: Security event logs are created in line with the organisation's Logging and Monitoring standard. Security events are logged to identify anomalies or suspicious activity or potential security incidents. Logging requirement are determined in conjunction with the Office of the Chief Security Officer.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LM-01-TC01	The following security events are logged and reviewed to identify anomalies or suspicious activity or potential security incidents
+- Changes to the configuration of an IT security system or service
+- Changes to the secure configuration of an IT system or service
+- Failure of malicious countermeasure functionality
+- Cessation of operation of an IT security system or service
+- Creation, modification, or deletion of operating system log files
+Primary : LM-01-TC02	All event logging meets the following minimum requirements:
+i. All security events (as defined in the as prescribed in the Cyber Threat Management Standard) are logged, and, where the event relates to a particular account, is traceable to a unique individual.
+ii. The system transmits the log to the applicable log management system, and not delete the local copy of the log until receipt has been confirmed.
+iii. Log entries, once created, must be read only.  Privileged accounts must not be able to modify logs of their own actions.
+iv. Access to modify or delete log files and data must be subject to a dual control process.
+v. Log files and data are protected from unauthorised modification and deletion in transit and in storage.
+vi. The reviewer doesn't hold a privileged account on the system in question.
+
+Primary: LM-01-TC03	The ability to change the standard, centralised and accurate source of UTC time used by logging services is restricted 
+Primary : LM-01-TC05	The following items captured in event logs are removed, masked, sanitised, hashed or encrypted depending on usage requirements:
+- application source code 
+- session identification values
+- access tokens
+- sensitive personal data and forms of personally identifiable information (PII)
+- authentication passwords
+- database connection strings
+- encryption keys and other master secrets
+- bank account or payment card holder data
+- data of a higher security classification than the logging system is allowed to store
+- commercially-sensitive information
+- information which a user has not consented to, or has opted out of, being collected.
+
+Primary: LM-01-TC02	Requirements for security event logging, monitoring (including real-time monitoring), reviewing, alerting, retention and archiving is determined in conjunction with the Application Owner / System Owner. Security Monitoring and alerting is conducted 24 x 7 x 365
+Primary: LM-01-TC03	Staff (employees and contractors) activity on HVTs, MVEs, and CRITINF is constantly monitored subject to any legal and regulatory restrictions
+"
+AS-06: Protection of Information Involved in Application Service Transactions ,story,"*Narrative*
+
+Technology Product Owner: Information used in application service transactions is protected to prevent incomplete transmission, miss-routing, unauthorised message alteration, unauthorised disclosure and unauthorised message duplication or replay.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-06-TC01	The storage of the transaction details is located outside of any public accessible environment, e.g. on a storage platform existing on the organisational Intranet, and not retained and exposed on a storage medium directly accessible from the Internet. 
+Primary: AS-06-TC02	Logical access to applications is compliant to the applicable access control requirements
+"
+AS-07: Application Standard Build ,story,"*Narrative*
+
+Technology Product Owner: Applications are deployed using a standard build configuration
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-07-TC01	The application configuration build standard is defined and tested to comply with all applicable requirements.
+Primary: AS-07-TC02	All default accounts are disabled or passwords changed to strong passwords/phrases as prescribed in the Logical Access Management Standard
+Primary: AS-07-TC03	Ensure servers, frameworks and system components are running the latest approved version
+Primary: AS-07-TC04	Ensure servers, frameworks and system components have all patches issued for the version in use
+Primary: AS-07-TC05	Web-servers must be configured to turn off dir­ectory listings 
+Primary: AS-07-TC06	Restrict the web-server, process and service accounts to the least privileges possible
+Primary: AS-07-TC07	When exceptions occur, fail securely
+Primary: AS-07-TC08	Remove all unnecessary functionality and files
+Primary: AS-07-TC09	Remove test code or any functionality not intended for production, prior to deployment
+Primary: AS-07-TC10	For web applications, prevent disclosure of your directory structure in the robots.txt file by placing directories not intended for public indexing into an isolated parent directory. Then Disallow"" that entire parent directory in the robots.txt file rather than disallowing each individual directory""
+Primary: AS-07-TC11	For web applications, define which HTTP methods Get or Post, the application will support and whether it will be handled differently in different pages in the application
+Primary: AS-07-TC12	For web applications, disable unnecessary HTTP methods, such as WebDAV extensions. If an extended HTTP method that supports file handling is required, utilize a GIS approved authentication mechanism
+Primary: AS-07-TC13	For web applications, if the webserver handles both HTTP 1.0 and 1.1, ensure that both are configured in a similar manner or insure that you understand any difference that may exist (e.g. handling of extended HTTP methods) 
+Primary: AS-07-TC14	For web applications, remove unnecessary information from HTTP response headers related to the OS, web-server version and application frameworks 
+Primary: AS-07-TC15	The security configuration store for the application should be exportable in a human readable form to support auditing
+"
+PM-02: Project Approval,story,"*Narrative*
+
+Product Owner: Projects are approved at the appropriate level with relevant information to support these decisions to ensure support by relevant sponsors and alignment with the Organisation's objectives
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : PM-02-TC01	Project approval is granted at the relevant Change Council based on the total cost of the project and not only the budget for the financial year (to prevent salami slicing).The work breakdown structure on SAP is congruent with the project scope elements 
+"
+AS-08: Implement Secure File Management ,story,"*Narrative*
+
+Technology Product Owner: A file management system to govern the security of files such as data files, configuration and log files has been implemented
+
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-08-TC05	Access to configuration files, data files and log files should be restricted to the applications that require access and users of the application should not have direct access to these files
+Primary: AS-08-TC06	Configuration files and log files should not contain passwords and other sensitive information
+Primary: AS-08-TC07	Do not pass user supplied data directly to any dynamically included function 
+Primary: AS-08-TC08	Require authentication before allowing a file to be uploaded
+Primary: AS-08-TC09	Turn off execution privileges on file upload directories
+Primary: AS-08-TC10	When referencing existing files, use a white list of allowed file names and types. Validate the value of the parameter being passed and if it does not match one of the expected values, either reject it or use a hard coded default file value for the content instead
+Primary: AS-08-TC11	Do not pass user supplied data into a dynamic redirect. If this must be allowed, then the redirect should accept only validated, relative path URLs or URIs
+Primary: AS-08-TC12	Never send the absolute system file path to the client
+Primary: AS-08-TC13	Ensure application files and resources are read-only and are aligned to defined trust models
+Primary: AS-08-TC14	Scan external (i.e. from external to the organisation) user uploaded files for viruses and malware 
+Secondary: AS-08-TC15	Do not pass directory or file paths, use index values mapped to pre-defined list of paths
+Primary: AS-08-TC01	Limitations are placed on the type of files that can be uploaded such that only those types that are needed for business purposes are permitted
+Primary: AS-08-TC02	File headers, and not just file type or extension alone, are checked to ensure uploaded files are the expected type
+Primary: AS-08-TC03	Files are not stored in the same location as the application, but instead stored in a separate directory or in a separate data server such as a content server or a database server
+Primary: AS-08-TC04	The upload of any files that can be interpreted by the application is prevented  by including file check mechanism during upload
+Primary: AS-08-TC16	Secret information is stored encrypted in compliance with the organisation's cryptographic standards
+"
+PM-03: Project Reporting,story,"*Narrative*
+
+Product Owner: The project provides regular feedback to Steering Committees or Working Committees, on progress, risks, issues, dependencies, scope changes, cost variances etc.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : PM-03-TC01	The project provides regular feedback to Steering Committees or Working Committees, on progress, risks, issues, dependencies, scope changes, cost variances etc.
+"
+PM-04: Project Methodology,story,"*Narrative*
+
+Product Owner: A formal Organisation's methodology is utilised to ensure that that the Programme is managed in a standard manner and to prevent mismanagement of the overall project
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-04-TC01	All phases of the project (including the Minimum Viable Product and subsequent releases) follow an approved Organisation methodology and adheres to the Organisation's Product Development Lifecycle
+Primary: PM-04-TC02	Key stages in the development project lifecycle are approved and appropriately signed off by both the Business and Technology management
+"
+PM-05: Project Scoping,story,"*Narrative*
+
+Product Owner: The project is adequate scoped to ensure that the project cost and timelines are accurately defined upfront
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : PM-05-TC01	The project or release cost and timelines are based on the entire scope of the project, including dependencies and unknown activities. This is to ensure that the project costing and timelines are accurately defined
+"
+PM-06: Project Scheduling,story,"*Narrative*
+
+Product Owner: A baselined project plan or release plan exists and progress is reported against the defined deadline dates to prevent missed deadlines and cost over runs 
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-06-TC01	The project schedule includes the entire scope of the project and is kept up to date
+Primary: PM-06-TC02	Tasks that are behind schedule, the impact thereof and the corrective actions to be taken are reported to the  Steering Committee or Working Committee. Projects that fall significantly behind schedule and have a red RAG status present corrective actions to the Change Council  
+"
+PM-07: Project Financial Management ,story,"*Narrative*
+
+Product Owner: The project budget was accurately determined, approved and is being monitored to control the project expenditure
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-07-TC01	The financial forecast to completion is maintained and updated on a monthly basis
+Primary: PM-07-TC02	Variances between the budget and forecast to completion is explained to the relevant Steering Committee, including Project Owner and Project Sponsor, as soon as the variance is identified. 
+Primary: PM-07-TC03	Requests for additional project funds and associated explanations are approved by the Change Council.
+"
+PM-08: Project Procurement,story,"*Narrative*
+
+Product Owner: The organisation's procurement and contracts management procedures and delegation of authority matrices are adhered to for the purchasing of goods and services to prevent the misuse of project funds 
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-08-TC01	The organisation's procurement and contracts management procedures and delegation of authority matrices are adhered to for the purchasing of goods and services related to the project. Purchases are not split to prevent approvals at the appropriate levels
+Primary: PM-08-TC02	When system development is outsourced, the requisite licensing arrangement, code ownership and intellectual property rights related to the outsourced content has been finalised and agreed on
+Primary: PM-08-TC03	When system development is outsourced, the developer has provided evidence of :
+1. sufficient testing applied to guard against the absence of both intentional and unintentional malicious content upon delivery
+2. sufficient testing applied to guard against the presence of known vulnerabilities
+3. security thresholds that were used to establish minimum acceptable levels of security and privacy quality
+4. all controls applicable to the product are implemented
+Primary : PM-08-TC02	Quality clauses within key contracts allow for penalties, termination of contracts etc. 
+"
+AS-17: Output Encoding,story,"*Narrative*
+
+Technology Product Owner: Implement output encoding to ensure data is correctly rendered, and does not reveal operational details about the application
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-17-TC01	Conduct all encoding on a trusted system
+Primary: AS-17-TC02	Contextually output encode all data returned to the client that originated outside the application's trust boundary. HTML entity encoding is one example, but does not work in all cases
+Primary: AS-17-TC03	Encode all characters unless they are known to be safe for the intended interpreter
+Primary: AS-17-TC04	Contextually sanitize all output of un-trusted data to queries for SQL, XML, and LDAP
+
+Primary: AS-17-TC05	Sanitize all output of un-trusted data to operating system commands
+Secondary: AS-17-TC06	Utilize a standard, tested routine for each type of outbound encoding
+"
+PM-09: Project Risk and Issue Management ,story,"*Narrative*
+
+Product Owner: Key project dependencies, assumptions, risks and issues are documented and discussed with all key stakeholders, including the Project Owner and Sponsor
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : PM-09-TC01	Key project dependencies, assumptions, risks and issues are documented and discussed with all key stakeholders, including the Project Owner and Sponsor
+"
+PM-10: Project Change Management,story,"*Narrative*
+
+Product Owner: All project changes are  formally documented, evaluated and approved by the respective stakeholders to ensure that all changes are authorised and change impacts are managed
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : PM-10-TC01	All project changes are approved by the appropriate delegated authority after the impact in terms of time, cost and quality has been fully assessed. Scope changes are approved prior to the work commencing
+Primary : PM-10-TC02	Contingency funding is only used for unknown events and not to fund scope changes as all scope changes need to be approved
+Primary: PM-10-TC03	The relevant documentation (e.g. purchase order / contract amendments, schedule, budget) is updated subsequent to every scope change
+"
+PM-11: Project Stakeholder and Communication Management,story,"*Narrative*
+
+Product Owner: All key awareness messages and activities to all relevant and impacted stakeholder groups have been listed and are being executed to prevent stakeholder dissatisfaction and project delays
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-11-TC01	All key awareness messages and activities to all relevant stakeholder groups have been listed and are being executed
+"
+AS-20: Adhoc Secure Coding Practices,story,"*Narrative*
+
+Technology Product Owner: Additional secure coding practices
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-20-TC01	Utilize task specific built-in services and APIs to conduct operating system tasks. Do not allow the application to issue commands directly to the Operating System, especially through the use of application initiated command shells
+Primary: AS-20-TC02	Utilize locking to prevent multiple simultaneous requests or use a synchronization mechanism to prevent race conditions
+Primary: AS-20-TC03	Explicitly initialize all your variables and other data stores, either during declaration or just before the first usage
+Primary: AS-20-TC04	In cases where the application must run with elevated privileges, raise privileges; within the runtime environment; should do so as late as possible, and drop them as soon as possible
+Primary: AS-20-TC05	All third party dependencies (e.g. source code, applications and libraries) must be evaluated for security vulnerabilities before being deployed in production
+Secondary: AS-20-TC06	Use tested and approved managed code rather than creating new unmanaged code for common tasks
+Secondary: AS-20-TC07	Use checksums or hashes to verify the integrity of interpreted code, libraries, executables, and configuration files
+Secondary: AS-20-TC08	Avoid calculation errors by understanding your programming language's underlying representation and how it interacts with numeric calculation. Pay close attention to byte size discrepancies, precision, signed/unsigned distinctions, truncation, conversion and casting between types, not-a-number"" calculations
+Primary: AS-20-TC09	Debug code must not be promoted into production except during diagnostic efforts undertaken through normal change management channels.
+"
+PM-13: System Documentation,story,"*Narrative*
+
+Product Owner: All relevant system documentation is maintained, to enable future changes to the system / product, and the documentation is handed over to the relevant person on completion of the project
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-13-TC01	System and procedural documentation (for applications and EUDAs) is updated / maintained subsequent to the project go-live and following any changes thereafter. Documentation should include (non exhaustive):
+- Commentary in source code
+- Documentation on source code dependencies
+- Installation guidelines
+- Operational manual
+- Administration manual
+- Epics and User Stories (or equivalent) delivered
+"
+CR-10: Change Management Process,story,"*Narrative*
+
+Release management has been engaged and a release schedule has been logged on the Change Management System in the form of a change record.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: CR-10-TC01 A Change Number exists on the Change Management System for the release.
+Primary: CR-10-TC02 All necessary artefacts are linked to the Change Record: GAP Compliance Report; Report of Completed Stories for release; Risk Dispensation in the event that stories are incomplete; Navigator- and Book of Work Numbers.
+"
+PM-14: Project Training,story,"*Narrative*
+
+Product Owner: Adequate training has been provided on the solution / product prior to go-live to ensure that the solution is adequately utilised
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-14-TC01	All users of the solution/product have undergone appropriate training before using the solution/system
+"
+PM-15: Project Go-live Support,story,"*Narrative*
+
+Product Owner: Adequate post go-live support is in place for the system / product to prevent delayed system downtime
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-15-TC01	Post go-live support processes and upgrade arrangements, for the software and hardware, are in place and users are made adequately aware of these processes
+"
+PM-16: Project Handover and Closure,story,"*Narrative*
+
+Product Owner: A formal handover is conducted to all key Technology and Business stakeholders. A Project Closure Report is completed and lessons learnt are captured for use on future similar projects
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-16-TC01	Formal handover is conducted 
+Primary: PM-16-TC02	A project Closure Report is completed and adequately signed off by all key stakeholders
+Secondary: PM-16-TC03	A list of Lessons learnt during the programme is created and distributed to all key stakeholders, to ensure that similar projects can draw on these lessons.
+"
+PM-17: Project Financial Capitalisation,story,"*Narrative*
+
+Product Owner: The project costs are capitalised in line with the organisation's capitalisation policy (if applicable) to prevent the depreciation expense from being understated
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-17-TC01	Project costs are capitalised in line with the organisation's capitalisation policy to prevent the assets and depreciation from being understated
+"
+PR-02: Problem Resolution,story,"*Narrative*
+
+ Closure and Monitoring
+
+*Acceptance Criteria*
+
+Technology Product Owner: Problems are resolved promptly and monitored to minimise business impact and re-occurrence.
+
+*Test Cases*
+
+Secondary: PR-02-TC01	Details of what was done to fix the root cause are logged fully and clearly within the Problem Record
+Primary: PR-02-TC02	Appropriate Run The Bank"" sign off is obtained and evidenced within the Problem Record for unresolved problems. Where root cause is unknown
+Primary: PR-02-TC04	All severity 1, 2 and 3 high problems are closed by a member of the Problem Management Team, only where the required closure criteria was met.
+"
+RM-05: Technology Process Documentation,story,"*Narrative*
+
+Technology Product Owner: Key technology processes are documented, with the documentation maintained and kept available to reduce operational errors and ensure service continuity through staff absence
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : RM-05-TC01	Key technology processes are documented, with the documentation maintained and kept available to reduce operational errors and ensure service continuity through staff absence
+Primary : RM-05-TC01	Roles and responsibilities for key roles are defined, documented and made known to the relevant staff.
+"
+SD-01: Implement a Secure Design,story,"*Narrative*
+
+Technology Product Owner: Systems and applications implement a secure design and architecture, which is maintained through the system and/or application's lifecycle
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: SD-01-TC01	System and/or application has a defined design and architecture document that covers at least the following areas (as applicable):
+- Application components
+- Infrastructure components
+- User community
+- Infrastructure build standards required
+- Network zone placement
+- Integration to monitoring and management systems
+- Differences between various environments (DR, Test, Production, etc)
+- Where data flows between different network trust levels, applicable source and destination requriements (ports, IP addresses etc.)
+- Data classification of information stored
+- Data classification of information processed
+- Data models
+- Data flows
+- Authentication and authorisation mechanisms
+- Communication protocols used
+- Details of cryptographic design
+- Regulatory requirements considered
+Secondary: SD-01-TC02	The design and architecture is traceable to business requirement specifications
+Secondary: SD-01-TC03	The design and architecture must enable the implementation of all applicable controls for the system and/or application
+Primary: SD-01-TC04	The design and architecture must be up to date with the application environment as deployed in various environments
+Secondary: SD-01-TC05	The design and architecture enables for switching off components that could come under sustained cyber attack
+Primary: SD-01-TC06	The design and architecture is approved by the applicable architecture governance bodies. At minimum, the design and architecture is reviewed and approved by the lead architect for the cluster.
+Primary: SD-01-TC07	The design and architecture ensures that administration and configuration of the system and/or application cannot be easily exploited by unauthorised parties
+"
+CO-01: Changes Reflected on CMDB,story,"*Narrative*
+
+Technology Product Owner: The Configuration Management Database (including changes to CI dependencies) is changed within one working day of an approved change taking place or as soon as possible after the event where tool constraints dictate 
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : CO-01-TC01	Updates made to the CMDB (including changes to CI dependencies) are made within one working day of an approved change taking place or as soon as possible after the event where tool constraints dictate 
+"
+CO-03: Creation of Configuration Item Records - Platforms,story,"*Narrative*
+
+Technology Product Owner: A CI record is created manually (by Platform Owners) when a new asset record is created within the approved CMDB toolset. All CI records captured in the CMDB contain the agreed Mandatory Attributes and are correctly mapped 
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : CO-03-TC01	A CI record is created manually (by Platform Owners) when a new asset record is created, within the approved CMDB toolset, for all in-scope CIs, as defined in the current CMDB data model
+Primary : CO-03-TC02	All CI records captured in the CMDB contains the agreed Mandatory Attributes (including ownership) for the relevant Lifecycle phase as defined in the IT Asset and Configuration Management (ITACM) Scoping Model
+Primary : CO-03-TC03	Each CI is appropriately and correctly mapped (with appropriate relationships) to all upstream and downstream dependencies within the CMDB in line with the CMDB Data Model rules.
+"
+VM-04: Vulnerability Patch Management,story,"*Narrative*
+
+Technology Product Owner: Patches are tested in the test environment before being implemented in production
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: VM-04-TC01	Software, firmware and operating systems on Technology assets are kept appropriately updated (patched) with regard to supplier security vulnerability notifications.
+Primary: VM-04-TC02	Patches are tested in the test environment before being implemented in production
+"
+CR-03: Prevent Unauthorised Changes Being Grouped With Authorised Changes,story,"*Narrative*
+
+Technology Product Owner: The elements that make up a change in Production match all and only those elements that were approved for implementation following their collective testing; to prevent unauthorised changes from being migrated to Production together with authorised changes
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : CR-03-TC01	All changes implemented match the agreed and authorised scope only and additional unauthorised changes are not migrated together with approved changes. The change coordinator is responsible for ensuring that additional scope items are not added to the change subsequent to approval
+"
+CR-04: Change Testing,story,"*Narrative*
+
+Technology Product Owner: Evidence of pre-implementation testing is documented or attached to the Change Record in Change Management System prior to implementation of the change (only applicable where changes need to be tested i.e. application changes)
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : CR-04-TC01	Where required (i.e. application changes), evidence of pre-implementation testing is documented or attached to the Change Record in Change Management System prior to implementation of the change
+"
+CR-05: Projects Change Testing,story,"*Narrative*
+
+Technology Product Owner: The Test Strategy/Test Plan (or equivalent) document defines the Testing plans for the change and is approved prior to test execution. The test plan documents the steps necessary to prove the success of the desired change. Adequate evidence of testing and the sign-off thereof is validated and retained prior to implementation of a project/change into production
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : CR-05-TC01	A signed off Test Strategy or Test Plan document (or equivalent) by Product Owner (or designate)
+"
+CR-06: Test Environment,story,"*Narrative*
+
+Technology Product Owner: Testing is performed in a test environment which emulates the Production environment as closely as possible and is segregated from both Production and Development 
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : CR-06-TC01	Functional Testing is performed in a suitable Test environment identified and supported by relevant Environment teams
+Primary : CR-06-TC02	Non-functional Testing (like Performance, DR Testing etc.) is performed in an environment that closely resembles the Production environment.  Any difference in configuration between the Production and Test environments must be captured (and authorised) in the Test Strategy/Test Plan (or equivalent) document, along with the associated risks
+"
+IS-03: Implement Secure Middleware,story,"*Narrative*
+
+Technology Product Owner: Strict middleware security measures have been adopted to ensure that middleware components are secure and accessed by authorised personnel, services and applications only.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: IS-03-TC01	Middleware systems are built according to approved middleware build standard, and are appropriate to the business requirements for the application.
+"
+IS-04: Implement Secure Servers,story,"*Narrative*
+
+Technology Product Owner: Processes and tools are available to manage the configurations of the  hardware and software of the organisation's servers
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: IS-04-TC02	All servers running Windows Operating systems have an operational, up to date, and approved anti-malware solution.
+Primary: IS-04-TC01	Servers are built according to approved server build standard, and are appropriate to the business requirements for the application.
+Secondary: IS-04-TC04	Host based intrusion detection mechanisms are configured to identify the unplanned termination of processes or applications
+"
+CO-05: Decommissioning of Configuration Items ,story,"*Narrative*
+
+Technology Product Owner: The CMDB is updated upon decommissioning of configuration items
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : CO-05-TC01	The CMDB is updated upon decommissioning of configuration items
+"
+VM-05: Perform Penetration Tests,story,"*Narrative*
+
+Technology Product Owner: IT Systems and applications undergo penetration testing, and all identified issues are either remediated or are appropriately risk accepted before being deployed to a production environment.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: VM-05-TC01	The system or application requires to undergo penetration tests by the appropriate accredited suppliers/persons. The scoping of the penetration tests should be aligned to the controls required by the application or system.
+Primary : VM-05-TC02	Issues identified by the penetration tests are remediated and this remediation is confirmed by a security consultant, before the system is implemented in Production.
+Primary : VM-05-TC03	Non remediated issues are risk accepted as part of the risk acceptance process
+Primary: VM-05-TC04	Penetration tests must be performed in an environment that matches the production environment
+Primary: VM-05-TC05	All vulnerabilities are evaluated for severity, and aligned to the impacted control failure
+"
+CR-07: Performing Tests Using Appropriate Data,story,"*Narrative*
+
+Technology Product Owner: Simulated test data or masked production data is used for testing. Where Production data is used, the Test Environment needs to adhere to controls associated with Production System.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : CR-07-TC01	Test data makes considerations for:
+- Expected input data types
+- Edge cases of input data types (e.g. maximum values, minimum values)
+- Unexpected input data types (e.g. letters instead of values)
+- Expected volume of data
+Primary : CR-07-TC02	Where test data makes use of masked data, masking algorithm either makes use of a hashing algorithm approved in the organisation's cryptography standards or is otherwise approved by the Risk Control Officer
+Primary: CR-07-TC03	Where Production Data is used in a Test Environment, a control assessment was performed by the Risk Control Officer for the Test Environment. The control assessment for the Test Environment must have been performed within 9 months of the control assessment for the Production Environment. If the control assessment indicates deviation from Production Environment, associated risk approval is in place. 
+"
+DP-01: Personal Data Touchpoints,story,"*Narrative*
+
+Review personal data touchpoints and remove all data fields which are excessive and not relevant for the purpose of processing.
+
+*Acceptance Criteria*
+
+All primary test cases completed
+
+*Test Cases*
+
+Provide evidence for each touchpoint that the data fields transferred / collected / processed / used are relevant and not excessive for the purpose of processing. Further guidance can be found in the Data Privacy Step-by-Step Guide.
+"
+AS-11: Implement Financial Regulatory Controls,story,"*Narrative*
+
+Technology Product Owner: All financial transactions adhere to financial and regulatory checks to ensure that these applications do not contravene regulatory requirements
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-11-02	All payments made have all applicable financial and regulatory checks performed  before the payment instruction is executed.
+Primary: AS-11-03	The server enforces transactional limits on payment amount and frequency for relevant applications aligned with AML standards
+Primary: AS-11-04	Applications must be integrated with a Client Behaviour Analysis mechanism to detect anomalous and suspicious behaviour
+Primary: AS-11-05	Applications must provide a link that allows the user to 'raise an alarm' if they believe their account has been compromised.
+Primary: AS-11-06	Transactions must be explicitly approved by an authenticated user.
+
+Primary: AS-11-01	Applications providing financial services are integrated with appropriate fraud and anti-money laundering systems and ensure that the application aligns with AML controls. Where existing technologies are enhanced ensure that the AML processes are aligned to. For new processes please engage AML early to ensure that the AML controls are fully understood and aligned with.
+"
+DP-02: Personal Data Inventory,story,"*Narrative*
+
+If a personal data inventory does not currently exist for this Business Unit a new inventory must be created. Guidance can be obtained from the BAGL Data Privacy Standard, as well as the Data Privacy Step-by-Step Guide. If a personal data inventory does exist, it must be updated to reflect these new personal data flows and new personal data being collected / processed. New personal data flows must be created or current personal data flows must be updated to reflect updated processing.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: DP-02-TC01 Set up and maintain a personal data inventory, where one does not currently exist for the Business Unit.
+Primary: DP-02-TC02 Where a personal data inventory does exist in the Business Unit, evidence must be provided that the inventory was updated with new personal data being processed.
+Primary: DP-02-TC03 Evidence of updated / new personal data flows must be provided.
+"
+AS-12: Data Validation within Applications,story,"*Narrative*
+
+Technology Product Owner: Data validation controls (type range and content checks) are implemented within applications
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Secondary: AS-12-TC14	There should be a centralized input validation routine for the application 
+Secondary: AS-12-TC15	Determine if the system supports UTF-8 extended character sets and if so, validate after UTF-8 decoding is completed
+Secondary: AS-12-TC16	Validate all input against a white"" list of allowed characters
+Primary: AS-12-TC17	Sensitive operations (such as transactions) must not be replayable. The anti-replay mechanisms provided by SSL are not sufficient to meet this control as they only apply at the network level.
+Primary: AS-12-01	Identify all data sources and classify them into trusted and untrusted. Validate all data from untrusted Sources
+Primary: AS-12-TC02	Specify proper character sets, such as UTF-8, for all sources of input
+Primary: AS-12-TC03	Encode data to a common character set before validating (Canonicalize)
+Primary: AS-12-TC04	All validation failures should result in input rejection
+Primary: AS-12-TC05	Validate all client provided data before processing, including all parameters, URLs and HTTP header content (e.g. Cookie names and values). Be sure to include automated post backs from JavaScript, Flash or other embedded code
+Primary: AS-12-TC06	Verify that header values in both requests and responses contain only characters from defined character sets.
+Primary: AS-12-TC07	Validate data from redirects (An attacker may submit malicious content directly to the target of the redirect, thus circumventing application logic and any validation performed before the redirect)
+Primary: AS-12-TC08	Validate for expected data types 
+Primary: AS-12-TC09	Validate data range
+Primary: AS-12-TC10	Validate data length
+Primary: AS-12-TC11	Validate input information for boundary values where applicable (e.g. input for dates do not have 13th months)
+"
+AS-13: Interface Controls,story,"*Narrative*
+
+Technology Product Owner: Data flowing between applications are adequately protected to prevent loss, corruption, unauthorised access or inappropriate disclosure.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-13-01	All applications processing Confidential and Secret data must encrypt network communication with the latest secure communication protocol, as per the Organisation's cryptographic standards
+Primary: AS-13-TC02	All applications accessible by users/systems external to the bank must encrypt network communication with the latest secure communication protocol as per the Organisation's cryptographic standards
+Primary: AS-13-TC03	TLS certificates should be valid and have the correct domain name, not be expired and should be generated and centrally managed by the information security cryptography management team.
+Primary: AS-13-TC04	Failed secure connections should not fall back to an insecure connection
+Primary: AS-13-TC05	Utilize secure connections for all content requiring authenticated access
+Primary: AS-13-TC06	Specify character encodings for all connections
+Secondary: AS-13-TC07	All applications accessible by users/systems only inside the bank should encrypt network communication with the latest secure communication protocol, as per the Organisation's cryptographic standards
+"
+DL-01: Data Lineage,story,"*Narrative*
+
+Data lineage is documented from source to target in order to ensure that data transformation business rules have been implemented correctly; and enable the implementation of appropriate Data Quality and integrity controls.
+
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+"
+DQ-02: Identify and Implement Data Validation Rules at Point of Capture,story,"*Narrative*
+
+Product Owner: Data validation rules are applied at point of capture to ensure that good quality data is captured. Data Owners and Stewards ensure that these rules have been implemented, where required.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+"
+DQ-03: Apply and Report on Data Quality Business Rules,story,"*Narrative*
+
+Product Owner: Business Units and Enterprise Functions apply data quality exception rules/metrics against the data sources and produce data defect reports in order to identify and quantify data quality defects.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+"
+AS-18: Application Data and Memory Management,story,"*Narrative*
+
+Technology Product Owner: Application should enable secure storage and usage of data and memory
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-18-TC01	Implement least privilege; restrict access rights to only the functionality, data and system information that is required to perform the relevant tasks 
+Primary: AS-18-TC02	Protect all cached or temporary copies of sensitive data stored on the server from unauthorized access and purge those temporary working files a soon as they are no longer required.
+Primary: AS-18-TC03	Do not store passwords, connection strings or other sensitive information in clear text or in any non-cryptographically secure manner on the client or server side. Remove comments in API accessible production code that may reveal backend system or other sensitive information 
+Primary: AS-18-TC04	Remove unnecessary application and system documentation from production environment as this can reveal useful information to attackers
+Primary: AS-18-TC05	The application should support the removal of sensitive data when that data is no longer required. (E.g. personal information or certain financial data)
+Primary: AS-18-TC06	Implement appropriate access controls for sensitive data stored on the server. This includes cached data, temporary files and data that should be accessible only by specific system users.
+Primary: AS-18-TC07	Utilize input and output control for un-trusted data
+Primary: AS-18-TC08	Ensure that the buffer is as large as specified When using functions that accept a number of bytes to copy, such as strncpy(), be aware that if the destination buffer size is equal to the source buffer size, it may not NULL-terminate the string
+Primary: AS-18-TC09	Check buffer boundaries if calling the function in a loop and make sure there is no danger of writing past the allocated space
+Primary: AS-18-TC10	Truncate all input strings to a known-valid length for your application before passing them to the copy and concatenation functions
+Primary: AS-18-TC12	Properly free allocated memory upon the completion of functions and at all exit points
+Secondary: AS-18-TC13	Use non-executable stacks (Hardware features such as the NX bit) when available. Executable space protection is the marking of memory regions as non-executable, such that an attempt to execute machine code in these regions will cause an exception
+Secondary: AS-18-TC14	Avoid the use of functions such as printf, strcat, strcpy which are difficult to use securely where alternative safer functions are available.
+"
+DQ-04: Establish a Communication Plan for Data Quality Issues to Relevant Stakeholders,story,"*Narrative*
+
+Product Owner: Business Units and Enterprise Functions identify the relevant audiences that require knowledge of data quality issues when utilising the specific data elements affected.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+"
+AS-19: Secure Database Configuration,story,"*Narrative*
+
+Technology Product Owner: Databases utilised by the application should be securely configured
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-19-TC09	Turn off all unnecessary database functionality (e.g. Unnecessary stored procedures or services, utility packages, install only the minimum set of features and options required (surface area reduction))
+Primary: AS-19-TC10	The application should connect to the database with different credentials for every trust distinction/authorised access rights (e.g., user, read-only user, guest, administrators)
+Primary: AS-19-TC01	Use strongly typed parameterized queries
+Primary: AS-19-TC02	Utilize input validation and output encoding and be sure to address meta characters. If these fail, do not run the database command
+Primary: AS-19-TC03	Ensure that variables are strongly typed
+Primary: AS-19-TC04	The application should use the lowest possible level of privilege when accessing the database
+Primary: AS-19-TC05	Use secure credentials for database access
+Primary: AS-19-TC06	Connection strings should not be hard coded within the application. Connection strings should be stored in a separate configuration file on a trusted system and they should be encrypted.
+Primary: AS-19-TC07	Use stored procedures to abstract data access and allow for the removal of permissions to the base tables in the database
+Primary: AS-19-TC08	Close the connection to the database as soon as possible
+"
+DQ-05: Implement Controls on Data Flow Processes,story,"*Narrative*
+
+Product Owner: The necessary controls and standards need to be applied at each point when data is transferred between systems/applications to ensure that data quality and integrity is not compromised
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+"
+DQ-07: Identify and Remediate the Root Cause of the Data Quality Issue,story,"*Narrative*
+
+Product Owner: In order to formulate a remediation plan, the root cause of a data quality issue is identified.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+"
+DQ-10: Review Data Quality Measurement and Monitoring Controls,story,"*Narrative*
+
+Product Owner: In order to ensure the implemented data quality controls remain valid and appropriate, periodic reviews are required at least annually.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+"
+IC-01: Information Classification and Handling,story,"*Narrative*
+
+Product Owner: Information assets are classified to maintain the confidentiality, integrity and availability of information.
+
+
+*Acceptance Criteria*
+
+ services and applications only.""
+
+*Test Cases*
+
+Primary: IC-01-TC01	Information assets are identified at creation, and classified using the multi-layered classification scheme
+Primary: IC-01-TC04	All information assets are labelled according to the multi-layered classification scheme
+Secondary: IC-01-TC09	Ensure access controls are implemented as per requirements for the classification of the information asset
+Secondary: IC-01-TC10	Systems which store or process unstructured electronic assets are designed and/or configured to mitigate the risk of users storing or processing assets for which the system is not certified.
+"
+RE-03: Records Lifecycle Management,story,"*Narrative*
+
+Product Owner: Measures have been employed in alignment with the relevant policies and standards, business need and applicable legislation and regulations to ensure the management of records throughout their lifecycle - creation, capturing, maintenance/retention, storage, destruction and retrieval
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: RE-03-TC01	Detailed audit logging is enforced for secret and confidential records 
+Secondary: RE-03-TC02	All cached or temporary copies of secret/confidential records are purged when they are no longer required
+Secondary: RE-03-TC04	Relevant records are retained in accordance with records retention schedule(s) aligned to legislation and/or business requirement
+Primary: RE-03-TC05	Relevant records are destroyed securely (based on the classification of the record) within twelve months of the retention expiry date, except where a disposal hold notice applies. Relevant records eligible for destruction that have been subject to a disposal hold notice must be destroyed within twelve months of the applicable disposal hold(s) notice being lifted. 
+Primary: RE-03-TC06	All records covered by a disposal hold notice are identified, located, and withheld from destruction in accordance with the requirements of the disposal hold notice.
+Secondary: RE-03-TC07	Business-as-usual retention periods are reapplied to the relevant records, within 12 months of legal notification that a disposal hold has been lifted, provided no other disposal hold notice applies.
+Primary: RE-03-TC08	BUs maintain records of destruction and audit trails to evidence the authorisation and destruction of physical and electronic relevant records
+Secondary: RE-03-TC09	Non-relevant records are only retained for as long as they have business value and are managed in accordance with the disposal control requirements set out in the Group Information Security Policy
+Primary: RE-03-TC10	Structured and Unstructured electronic relevant records are stored in a manner which ensures they can be effectively searched, identified and retrieved: 
+(a) within a period required by any applicable legislative or regulatory requirements, or 
+(b) within 5 working days, whichever is the shorter
+
+Physical relevant records, and archived electronic relevant records which are not instantly accessible (e.g. stored off-line ? stored in a decommissioned system) are retrievable:
+(a) within a period required by any applicable legislative or regulatory requirements, or 
+(b) within 15 working days, whichever is the shorter. 
+Primary: RE-03-TC11	BUs maintain or have access to an accurate inventory of archived physical relevant records (including those provided by a third party) to enable retrieval within the required timescales. 
+Primary: RE-03-TC12	For physical records, ensure that the inventory has an owner, reviewed at least annually and contains at least the following information: 
+a. box owner 
+b. box number ? barcode 
+c. description of contents 
+d. destruction date or from date to date 
+Primary: RE-03-TC13	The storage medium for a record is commensurate to the classification type of the record
+Primary: RE-03-TC14	Destruction of records is commensurate to the classification type of the record
+Primary: RE-03-TC15	Records clean-up exercises are conducted to identify and remove inaccurate or redundant personal information from all sources 
+Secondary: RE-03-TC16	Where a Touchpoint provides long-term information asset storage, a Retrieval Process is defined and applied. 
+
+AA Note: This is related to retrieval of data - align accordingly
+Primary: RE-03-TC16 Consult with the Records Managment Policy to ensure that appropriate controls are implemented for data being processed.
+Primary: RE-03-TC17 Local retention schedules must be consulted for regulatory retention periods.
+Primary: RE-03-TC-18 Personal data mst be deleted/purged/de-identified upon expiry. Deletion or de-identification of personal data must be done in such a manner that prevents reconstruction in an intelligable form.
+"
+IS-02: Implement Secure Databases,story,"*Narrative*
+
+Strict database security measures have been adopted to ensure that the database is secure and accessed by authorised personnel, services and applications only.
+
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+"
+RE-04: Destruction and Retrieval of Records: Application Specific Data,story,"*Narrative*
+
+Technology Product Owner: Processes for the secure destruction and retrieval of records are documented and reviewed at predefined intervals for all application data
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: RE-04-TC02	Record retrieval processes are documented and tested at least every 12 months and communicated to appropriate staff. (Separate testing is not required if the retrieval(s) has been carried out through the business as usual process within the 12 month period, provided that such retrieval(s) can be evidenced)
+"
+LA-01: Access to Applications and Systems,story,"*Narrative*
+
+Technology Product Owner: Access to Applications and Systems that contain data classified as Non-Public should be regulated through the use of secure authentication mechanisms. 
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LA-01-TC01	Logical access to application or system functionality is managed through the use of approved role profiles through the use of a unique account ID
+Primary: LA-01-TC02	Logical access to an application or system is only provided once the access request has been successfully validated against both authentication and authorisation parameters.
+Primary: LA-01-TC03	The application or system implements a user lockout after a period of user inactivity. The user will need to re-authenticate their credentials should they require further access. The following guide is suggested for period of inactivity, but may be changed depending on the data classification and nature of the system:
+- Mobile Operating System: 1 Min
+- Desktop or Server Operating System: 5 mins
+- Applications without Financial or Customer Data: 1 Hour
+- Applications with Financial or Customer Data: 5 Mins
+Secondary: LA-01-TC04	The application or system should integrate with centralised authentication and authorisation systems to ensure consistency of access credentials across multiple systems
+Primary: LA-01-TC05	The application or system should implement authentication mechanisms that are appropriate for the application or system, including the integration
+Primary: LA-01-TC06	Applications and Systems are able to identify the human user (where applicable) requesting access.
+Primary: LA-01-TC07	It is easy to distinguish between a machine (or other programmatic systems) and human users of a system
+Primary: LA-01-TC08	All access requests are securely logged with the results of the authentication and authorisation checks
+Primary: LA-01-TC09	Application and Systems should identify functions where additional authentication is required before the function can be performed. This additional authentication can be the re-entry of a credential or the use of a second credential.
+Primary: LA-01-TC10	All authentication controls are enforced on the application server or system; and not on the client
+Primary: LA-01-TC11	Segregate authentication logic from the resource being requested and make use of redirection to and from the authentication control.
+Primary: LA-01-TC12	Authentication and authorisation controls should fail securely. Examples: https://www.owasp.org/index.php/Fail_securely
+Primary: LA-01-TC13	All administrative and account management functions  must be at least as secure as the primary authentication mechanism
+Primary: LA-01-TC14	Validate the authentication data only on completion of all data input, especially for sequential authentication implementations
+Primary: LA-01-TC15	If using third party code for authentication, inspect the code carefully to ensure it is not affected by any malicious code
+Secondary: LA-01-TC16	Wherever possible, make use of X.509 client-certificates for mutual authentication
+Secondary: LA-01-TC17	Make use of hashed credentials in authentication logic instead of the original credential
+Primary: LA-01-TC18	Use only trusted system objects, e.g. server side session objects, for making access authorization decisions
+Primary: LA-01-TC20	Restrict access to files or other resources to only authorized users
+Primary: LA-01-TC21	Restrict access to protected functions to only authorized users
+Primary: LA-01-TC22	Restrict direct object references to only authorized users
+Primary: LA-01-TC23	Restrict access to services to only authorized users
+Primary: LA-01-TC24	Restrict access to data to only authorized users 
+Primary: LA-01-TC25	Restrict access security-relevant configuration information to only authorized users
+Primary: LA-01-TC26	If state data must be stored on the client, it must be stored encrypted
+Primary: LA-01-TC27	State data submitted by the client must be verified by the server for correctness and validity.
+Primary: LA-01-TC28	Use the referrer"" header as a supplemental check only; it should never be the sole authorization check
+Primary: LA-01-TC29	Use Cross Site Request Forgery (XSRF) protection techniques to ensure that only specific referrers are allowed.
+Primary: LA-01-TC30	Create an Access Control Policy /Access control matrix to document an application's business rules, data types and access authorization criteria and/or processes so that access can be properly provisioned and controlled. This includes identifying access requirements for both the data and system resources
+Secondary: LA-01-TC31	Use a single site-wide component to check authentication and access authorization. This includes libraries that call external authorization services
+"
+DS-02: Approval of Data Usage,story,"*Narrative*
+
+Ensure that the purpose for which the personal data is now being processed is aligned to the original purpose of collection. Data owner approval must be btained. Data subject must have been notified of the further processing of their personal data unless specific regulator restrictions apply. Generic privacy notice wording is available on the Data Privacy Step-by-Step Guide.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: DS-02-TC01 Proof that the data subject was notified of the further processing of their personal data.
+Primary: DS-02-TC-02 Proof of data owner approval in letter or email form.
+"
+C29: Consult with the Chief Data Office about data governance requirements for project,story,"*Narrative*
+
+Consult the Chief Data Office regarding the data governance controls applicable to the system.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary:C-TC01 Have email correspondence from the Chief Data Officer and proof that the data has been reviewed. Contacts for Data Architecture: petrosc@absa.co.za; innocentia.koti@absa.co.za; Contacts for Data Governance: bobby.thoolsi@absa.co.za; leandie.roos@absa.co.za;
+"
+DP-07: Data Transfer Across Borders,story,"*Narrative*
+
+The privacy laws / regulations of both the source and destination countries must be adhered to. Consult with your local privacy officer for confirmation.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: DP-07-TC01 Email proof that a Data Privacy Officer has been engaged regarding the transfer of data between countries, and that approval has been received.
+"
+CM-04: Use strong cryptographic algorithms,story,"*Narrative*
+
+Technology Product Owner: Ensure that only strong cryptographic algorithms are used in the application and/or system
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: CM-04-TC01	The following algorithms are recognised as secure cryptographic algorithms:
+Encryption:
+- AES 128 
+- AES 256
+- RSA 2048
+- RSA 4096
+- 3DES
+Hashing:
+- SHA 224
+- SHA 256
+- SHA 384
+- SHA 512
+"
+CM-01: Cryptography Processes,story,"*Narrative*
+
+Technology Product Owner: Cryptography designs and usage procedures are documented, authorised, implemented and maintained in accordance with the Cryptography Security Requirements
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: CM-01-TC01	IT System, IT Service and Business Application Owners ensure that the
+design and operational security of a cryptographic system or service is
+documented, authorised, implemented and maintained in accordance with
+the GIS Cryptography Security Requirements"".""
+Primary: CM-01-TC02	IT System, IT Service and Business Application Owners ensure that
+cryptography usage and key instance details for an IT system or service are
+documented in cryptography usage inventory and key register respectively
+and communicated to GIS, all in accordance with the GIS Cryptography
+Primary: CM-01-TC03	GIS approved cryptographic key and certificate lifecycle management
+procedures are documented, implemented and maintained in
+accordance with the GIS Cryptography Security Requirements"".""
+"
+CM-02: Protection of Cryptographic Keys  ,story,"*Narrative*
+
+Technology Product Owner: Cryptographic keys are managed effectively and are protected through their lifecycle .
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: CM-02-TC02	When protecting data classified as internal and unclassified services exposed to the internet or third parties, or otherwise required for regulatory requirements, a secure software random number generator is used for key generation.
+Primary: CM-02-TC03	When protecting data classified as secret and confidential and client related, services exposed to the internet or third parties, or otherwise required for regulatory requirements, ensure  that the  generated keys are transported (when necessary) using secure channels and are used by their associated cryptographic algorithm within at least a FIPS 140-2 compliant cryptographic modules. 
+Primary: CM-02-TC04	When protecting data classified as secret, services exposed to the Internet or third parties, or otherwise required for regulatory requirements, all keys are stored in cryptographic vault, such as a hardware security module (HSM) or isolated cryptographic service.
+When protecting other types of data or services, all cryptographic keys are stored isolated with strong access control allowing only the application to access the keys.
+Primary: CM-02-TC05	Keys stored in offline devices/databases are encrypted using Key Encryption Keys (KEKs) prior to the export of the key material.
+Primary: CM-02-TC06	Limitations are placed on the type of files that can be uploaded such that only those types that are needed for business purposes are permitted
+Primary: CM-02-TC07	When protecting data classified as secret, services exposed to the Internet or third parties, or otherwise required for regulatory requirements, the database that is used to store the keys during key backups is encrypted using at least a FIPS 140-2 validated module.
+Primary: CM-02-TC08	Only identified and appropriately authorised personnel have access to, or control of, cryptographic keys throughout their lifecycles. 
+Primary: CM-02-TC09	Keys are allocated identifiable owners (binding keys to identities).
+Primary: CM-02-TC10	Production keys are not utilised in the test environments and test keys are not used in the production environment
+Primary: CM-02-TC11	Plaintext symmetric and private keys (key generators, key-transport devices, key loaders, cryptographic modules, and key-storage devices) are restricted to physically protected containers. 
+Primary: CM-02-TC12	Integrity checks are employed to ensure that the integrity of a key or its association with other data has not been compromised. For example, keys may be wrapped (i.e., encrypted) in such a manner that unauthorized modifications to the wrapping or to the associations will be detected.
+Primary: CM-02-TC13	Keys are destroyed when they are no longer needed in are accordance with GIS Security Requirements
+Primary: CM-02-TC01	When protecting data classified as secret and confidential, services exposed to the internet or third parties, or otherwise required for regulatory requirements, cryptographic keys are generated within cryptographic module with at least a FIPS 140-2 compliance.
+When protecting other types of data or services, a secure software random number generator is used for key generation.
+"
+CM-03: Implement Encryption Controls,story,"*Narrative*
+
+Technology Product Owner: Encryption controls embedded and GIS compliant cryptography modules are available for use in order to prevent data exfiltration  and to ensure the confidentiality of sensitive information.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: CM-03-TC01	For data stored or transferred outside the Organisation's network, encryption is used to protect data classified as Secret (or otherwise required to by regulatory requirements), Confidential or Internal Only to ensure confidentiality of the information.
+Primary: CM-03-TC02	For data stored or transferred outside the Organisation's network, digital signatures or message authentication codes are used to protect the authenticity and integrity of data classified as Internal Only, Confidential or Secret.
+Secondary: CM-03-TC03	Non-repudiation is proven by using cryptographic techniques to obtain proof of the occurrence or non-occurrence of an event or action.
+Primary: CM-03-TC05	When cryptography is in use and encounters a fatal error and has to fail, the cryptographic module fails securely i.e. keys loaded on the HSM devices are not compromised
+"
+C7: Consult with a risk officer about non-standard data transfer technologies,story,"*Narrative*
+
+Consult a risk officer to ensure that additional requirements related to using a non-standard data transfer technology are catered for.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: C-TC01 Have email correspondence from the Risk Officer and proof that the issue has been resolved
+"
+C26: Consult with a risk officer about aggregated database personal identifiers,story,"*Narrative*
+
+Consult a risk officer to ensure that additional requirements related to aggregated datasets with personal identifiers are catered for.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: C-TC01 Have email correspondence from the Risk Officer and proof that the issue has been resolved
+"
+PM-12: Data Migration,story,"*Narrative*
+
+Product Owner: Instances where data are migrated or converted must be approved by the data owner, reconciled, tested and performed in a controlled manner
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: PM-12-TC05	Data migration adheres to the security controls applicable; as per the data classification of the data.
+Primary: PM-12-TC01	A data migration strategy / plan exists and has been signed-off  by the relevant project and business stakeholders, including Data Owner. The strategy contains the data migration key roles and responsibilities.
+Primary: PM-12-TC02	A data clean-up exercise (for both master and transactional data) is conducted prior to data migration as per the agreed clean-up rules
+Primary: PM-12-TC03	A data conversion test is conducted and errors resolved prior to the data migration 
+Primary: PM-12-TC04	Reconciliations are performed and signed-off in line with the data migration strategy / plan (including the Data Owner). Any data migration errors are resolved before system go-live
+"
+C13: Consult with a risk officer about migrating data internationally,story,"*Narrative*
+
+Consult a risk officer to ensure that additional requirements related to migrating data across national borders are catered for.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: C-TC01 Have email correspondence from the Risk Officer and proof that the issue has been resolved
+"
+AD-06: Provisioning of Data from Authoritative Data Sources ,story,"*Narrative*
+
+Product Owner: Rules for provisioning  of data from the Authoritative data source is adhered to.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AD-06-TC1	The Data Owner for Critical Data Elements that are provided from an Authoritative Data Source, must:
+o Establish change management procedures, including impact analysis and mechanisms for publishing and communicating changes to consumers for them to adopt.
+Primary: AD-06-TC2	The Data Owner for Critical Data Elements that are provided from an Authoritative Data Source, must:
+o Track who is consuming the data and the purpose for which they are using it.
+o Obtain confirmation from data consumers that they will follow the standards for its use.
+Primary: AD-06-TC3	The Data Owner for Critical Data Elements that are provided from an Authoritative Data Source, must:
+o Confirm on a periodic basis appropriate to the data that consumers are not making changes to the data outside of the Authoritative Data Source or publishing it for onward distribution to another system without approval.
+"
+AD-07: Consumption of Data from Authoritative Data Sources ,story,"*Narrative*
+
+Product Owner: Rules for consumption  of data from the Authoritative data source is adhered to.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AD-07-TC1	Consumers of data from an Authoritative Data Source must:
+o Confirm that they will comply with the rules of consumption set for the Data that is to be consumed from the Authoritative Data Source.
+o Use data from the Authoritative Data Source as prescribed by the Data Owner.
+Primary: AD-07-TC2	Consumers of data from an Authoritative Data Source must:
+o Reporting any issues that are identified with the data to the Data Owner.
+"
+TP-05: Regulatory Approval for Cloud Services,story,"*Narrative*
+
+Technology Product Owner: All services that are using a cloud (including services that are using existing approved cloud environments such as an IAAS provider) must be approved by the organisations Cloud Management Forum (currently known as the Cloud Working Group) as well as any external regulators as identified by the forum.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Secondary: TP-05-TC01	The service has been evaluated for its regulatory impact, as per the organisation's Materiality Assessment
+Secondary: TP-05-TC02	The service has been evaluated for its technical control posture
+Primary: TP-05-TC03	The service has been tabled at the organisation's Cloud Management Forum, and a decision on the route for regulatory environment has been identified
+Primary: TP-05-TC04	The impacted external regulators have provided approval for the service to be hosted on a cloud service
+"
+AS-04: Implement Secure Session Management,story,"*Narrative*
+
+Technology Product Owner: Stringent session management controls are deployed to ensure that a user's session is not compromised.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: AS-04-TC12	Generate a new session identifier if the connection security changes (e.g. from HTTP to HTTPS)
+Primary: AS-04-TC13	Supplement standard session management for sensitive server-side operations, like account management, by utilizing per-session strong random tokens or parameters. This method can be used to prevent Cross Site Request Forgery attacks
+Primary: AS-04-TC14	Supplement standard session management for highly sensitive or critical operations by utilizing per-request, as opposed to per-session, strong random tokens or parameters
+Primary: AS-04-TC01	Logout functionality should fully terminate the associated session or connection. 
+Primary: AS-04-TC02	Session identifier creation must always be done on a trusted system (e.g. the Producer Application server)
+Primary: AS-04-TC03	Make use of secure random generation schemes as far as possible to generate session identifiers
+Primary : AS-04-TC04	Logout functionality should be available from all services protected by authorization
+Primary: AS-04-TC05	Establish a session inactivity timeout that is as short as possible. Timeout should be cognisant of device type and business use case.
+Primary: AS-04-TC07	Unauthenticated session requests should close that session and establish a new session after a successful login 
+Secondary: AS-04-TC08	Concurrent user connections (including privileged users) to applications are prevented
+Primary: AS-04-TC09	Generate a new session identifier on any re-authentication
+Primary: AS-04-TC10	Do not expose session identifiers in URLs, error messages or logs. Session identifiers should only be located in the HTTP header.
+Primary: AS-04-TC11	Protect server side session data from unauthorized access, by other users of the server, by implementing appropriate access controls on the server
+"
+TP-02: Management of  Internal Services,story,"*Narrative*
+
+Technology Product Owner: Services provided by Technology to business are defined, documented and agreed to ensure service quality.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: TP-02-TC01	A service level agreement (SLA) is defined for each service provided to the business agreed and signed off by the service consumer(s) and service owner in conjunction with the supplier manager. The SLA is stored securely and refreshed at least annually.
+Secondary: TP-02-TC02	An accurate service catalogue is documented and all changes are managed according to the established change control mechanism.
+"
+DR-01: Disaster Recovery Planning,story,"*Narrative*
+
+Technology Product Owner: Technical Recovery Instructions are developed and tested for suitability prior to an application being migrated to production to ensure that the disaster recovery capabilities meet the business requirements. 
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : DR-01-TC02	DR testing is performed prior to an application go-live to prove the DR infrastructure and Recovery Time Objectives of the service / application. If the DR test is unsuccessful, formal risk acceptance is required.
+Primary : DR-01-TC01	A Business Impact Assessment is performed at project level for each application (before an application / service is deployed into production) to identify the application: 
+- Resilience Category i.e. Tier 1, 2, 3 or 4 (taking into account risk appetite, laws and regulations)
+- Recovery Time Objective (RTO)
+- Recovery Point Objective (RPO)
+"
+DR-02: Disaster Recovery Plan Approval,story,"*Narrative*
+
+Technology Product Owner: Technical Recovery Instructions (including infrastructure, database and application recovery) are formally approved and made available on the Resilience Toolset for accessibility in the event of a disaster.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: DR-02-TC01	Subsequent to the initial DR test the Technical Recovery Instructions (including infrastructure, database and application recovery) are finalised and singed-off by Technology Service Continuity Management (TSCM). 
+Primary: DR-02-TC02	The Technical Recovery Instructions Document is loaded onto the approved Resilience Toolset to ensure it is accessible under all disaster scenarios.
+Primary: DR-02-TC03	Technical Recovery Instructions are complete, and encompass every step required to restore a service, and the responsible party to perform each step. Instructions should include the expected time period required to perform each step.
+Primary: DR-02-TC04	Technical Recovery Instructions includes all dependencies required for the restoration of a service
+Primary: DR-02-TC05	Technical Recovery Instructions includes all support staff required for the restoration of a service
+Primary: DR-02-TC06	Technical Recovery Instructions includes the details of all infrastructure components supporting the service; and how these components map to the DR environment
+"
+DR-03: Disaster Recovery Testing and Remediation,story,"*Narrative*
+
+Technology Product Owner: All Technical Recovery Instructions are tested in accordance with Group Resilience Processes and Procedures to ensure that they are adequate for recovery.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: DR-03-TC01	Technical Recovery Instructions are tested/validated in accordance with the associated testing timelines and Resilience Category as defined in the Technology Resilience Processes and Procedures:
+- Tier 1 and 2 applications / services are tested annually and require business validation 
+- Tier 3 and 4 applications / services are tested every two years and do not require business validation
+Primary: DR-03-TC02	Gaps identified through recovery testing/validation are escalated to the relevant Technology Application Owners and are addressed as part of the problem management process 
+Primary : DR-03-TC03	A test report is completed, signed off by the Service Owner and ITCSM and uploaded to the Resilience toolset by ITCSM following the recovery testing/validation
+Primary: DR-03-TC04	If the DR test is unsuccessful, formal risk acceptance is required.
+"
+BA-01: Application Restorability,story,"*Narrative*
+
+Technology Product Owner: The Application with associated configuration (including operating system and dependent middleware systems) is restorable to the last working state as per the system's recovery time objective
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : BA-01-TC02	Application recovery to its last working state has been tested at least annually or more often as decided by Product Owner requirements
+Primary: BA-01-TC01	Processes are defined to enable the application to be restored to its last working state (in either Production or Disaster recovery site) within the required recovery time period. 
+"
+DR-04: Update of Disaster Recovery Documentation,story,"*Narrative*
+
+Technology Product Owner: The Technical Recovery Instructions Document is updated and signed-off subsequent to every DR test or when there are changes to production to ensure that it is fit for purpose
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : DR-04-TC01	The Technical Recovery Instructions Document is updated and signed-off subsequent to every DR test or when there are changes to production to ensure that it is fit for purpose
+"
+BA-02: Application Data Backup,story,"*Narrative*
+
+Technology Product Owner: Application data, including data stored in databases, is backed up to guard against data corruption, and is restorable to the last working state as per the system's recovery time and recovery point objectives
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: BA-02-TC01	All parts of application data and the systems that the data is stored on have been identified
+Primary: BA-02-TC02	Backup strategy (e.g. incremental or full) and retention strategy for backups are identified and documented.
+Primary: BA-02-TC03	Backup technology has been implemented and configured as per the backup strategy, required recovery time, and recovery point objectives
+Primary: BA-02-TC04	Backup success is monitored to ensure successful completion. Where errors are identified these are resolved; and impacted data owners are notified.
+Primary: BA-02-TC05	Backups are tested for restorability at least annually  or more often as decided by Product Owner requirements against both recovery time and recovery point objectives 
+"
+BA-04: Backup Lifecycle Management,story,"*Narrative*
+
+Technology Product Owner: Backup lifecylce is managed as per the data classification and records management principles associated with the data
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: BA-04-TC01	The Backup Lifecycle, including retention periods and backup strategy is identified and documented
+Primary: BA-04-TC02	Where backup data is placed on retention hold, this is clearly communicated to backup team.
+Primary: BA-04-TC03	Where backup data is placed on retention hold, the backup team is notified when the retention hold is lifted
+Primary: BA-04-TC04	Backups are deleted as per the backup lifecycle
+"
+CR-08: Synchronisation of Production and Disaster Recovery Environments,story,"*Narrative*
+
+Technology Product Owner: Changes made to Configuration Items in Production are replicated to the equivalent CIs in the DR environment, and vice versa, to ensure that it remains synchronised 
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary : CR-08-TC01	Changes made to Configuration Items (CI) (wherever possible) in Production are replicated to the equivalent CIs in the DR environment, and vice versa, to ensure that they remain synchronised. Change Coordinators are required to indicate within the Change Record whether the change will be replicated to the Prod/DR environment and, if not, provide a robust justification
+"
+DP-06: Direct Marketing Policy,story,"*Narrative*
+
+Refer to the Direct Marketing Policy for control requirements that must be implemented to ensure that personal data is being processed in the correct way.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: DP-06-TC01 Align to the Direct Marketing Policy for all marketing communication to clients / stakeholders.
+"
+BR-01: Technology Brand,story,"*Narrative*
+
+Contact Antoinette Moodley (Antoinette.Moodley@absa.co.za) to confirm whether or not the system has to follow the Technology Brand Marketing and Communications process
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: BR-01-TC01 Email confirmation on whether or not the Technology Brand Marketing and Communications process has to be followed
+Primary: BR-01-TC02 Artifacts generated by the Technology Brand Marketing and Communications process if applicable
+"
+LA-02: Provisioning Lifecycle,story,"*Narrative*
+
+Technology Product Owner: A provisioning lifecycle has been implemented for the creation, changes and deletion of credentials associated with access control for the system or application.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LA-02-TC01	Logical access to applications is documented and approved by an authorised individual prior to it being granted, modified or removed in a timely manner
+Primary: LA-02-TC02	Separation exists between those requesting, approving and granting application access.
+Primary: LA-02-TC03	Dormant user accounts are disabled after predetermined number of days (e.g. 60 days) of inactivity and that the  users line manager is notified accordingly. 
+Primary: LA-02-TC04	Locked or disabled user accounts are only reactivated through the Joiner, Mover, Leaver process 
+Primary: LA-02-TC05	The application or systems' logical access management lifecycle processes are documented
+Primary: LA-02-TC06	The processes for creating, changing or removing access to an application or system are communicated to the end users requiring access.
+"
+LA-03: User Roles,story,"*Narrative*
+
+Technology Product Owner: Role profiles with appropriate segregation of functional actions have been defined, reviewed and implemented for the system or application.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LA-03-TC02	Role profiles have been mapped against the functional specification of the application and systems
+Secondary: LA-03-TC03	For applications serving internal employees, role profiles have been mapped to the employee's job description
+Primary: LA-03-TC04	Role profiles have been reviewed for conflicts with segregation of duties
+Primary: LA-03-TC01	Segregation of duty (SOD) conflicts have been documented and applied to user permissions to applications to avoid any SOD conflicts
+"
+LA-04: Review of Access to Systems and Applications,story,"*Narrative*
+
+Technology Product Owner: Access to a system or application is reviewed periodically to ensure that access rights remain consistent to the requirements, and all unrequired access is removed
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LA-04-TC01	Periodic review of access to applications (incl. role profiles) is performed
+Secondary: LA-04-TC02	After the review of access rights is completed, user accounts that have incorrect access rights are remediated in a timely fashion.
+Primary: LA-04-TC03	After the review of access rights is completed, user accounts that have incorrect access rights should be reviewed for unauthorises activity
+"
+LA-05: Use of Multi Factor Authentication,story,"*Narrative*
+
+Technology Product Owner: Access to a system or application requires the successful validation of multiple authentication credentials.
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LA-05-TC01	Multiple factors for authentication rely on the use of two separate categories of authentication:
+- Something you know - incorporating credentials based on knowledge, such as passwords and pins
+- Something you are - incorporating credentials based on the characteristic of the user, such as biometrics
+- Something you have - incorporating credentials based on the possession of an artefact, such as a certificate
+Primary: LA-05-TC02	A credential that is derived from another credential (even of a different category) should not be considered as a separate credential. For example, for iPhone TouchID, the users fingerprint credential is used to unlock a certificate held by the iPhone. Thus, the fingerprint and the certificate should be considered to be the same factor.
+Primary: LA-05-TC03	Where One Time Passwords (OTPs) are used, only one valid instance of that user's OTP may exist at a time. OTP re-issues must overwrite / invalidate the previous one.
+"
+LA-06: Privileged Access Management,story,"*Narrative*
+
+Technology Product Owner: Privileged access to an application or system is managed and monitored for unauthorised activity
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LA-06-TC08	Privileged user activity is monitored for unauthorised usage
+Primary: LA-06-TC09	The following activities (non exhaustive) should be considered as part of a privileged user role:
+- Ability to add or change user roles
+- Ability to change global application or system configuration (i.e. configuration affecting all users of the application or system)
+- Ability to change application or system source code, including scripts
+- Ability to access credential stores
+- Ability to access user and application activity and/or audit logs
+- Ability to delete  user and application activity and/or audit logs
+- Ability to access application data without the application's native access control mechanisms (e.g. access to application data in a database without accessing the application)
+Primary: LA-06-TC01	All privileged user account activities on applications and systems are logged and available for auditing during an investigation/audit, where log files are required as input.
+Primary: LA-06-TC02	Privileged user account access rights to applications and systems are allocated with predefined expiry times so that the user does not have prolonged access
+Secondary: LA-06-TC03	Privileged access rights for applications and systems are assigned user ID's different from those used for regular business activities.
+Primary: LA-06-TC04	Confidentiality of generic administrator user IDs and passwords for applications is maintained when shared (example: changing passwords frequently and as soon as possible when privileged user leaves or changes job, communicating passwords among privileged users via appropriate mechanisms.)
+Primary: LA-06-TC05	Unauthorised privileged accounts on applications and systems are disabled 
+Primary: LA-06-TC06	Periodic review of privileged account to applications and systems (incl. role profiles) is performed
+Secondary: LA-06-TC07	Accounts with elevated privileges owned by, or used by, HUGs are considered a Privileged Account as per the Group Security of Information Assets Standard and managed according to that standard.
+"
+LA-07: Credential Storage,story,"*Narrative*
+
+Technology Product Owner: Credentials should be stored securely in an environment that makes it difficult for credentials to be compromised
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LA-07-TC01	Passwords should be stored using a secure one way hash, that complies with the organisation's cryptographic standards
+Secondary: LA-07-TC02	Passwords should be salted before being hashed
+Primary: LA-07-TC03	Access to credential stores should be limited to privileged user roles only
+Primary: LA-07-TC04	Access to credential stores should be logged
+Secondary: LA-07-TC05	Access to credential stores should be monitored for unusual activity
+Primary: LA-07-TC05	Credential store backups should be encrypted, and encryption keys managed as per the organisation's cryptographic standards
+Primary: LA-07-TC06	For non password credential stores (e.g. fingerprint data), the credential store should  be encrypted, and encryption keys managed as per the organisation's cryptographic standards
+Secondary: LA-07-TC07	User IDs should not be enumerable
+"
+LA-08: Use of Secure Credentials,story,"*Narrative*
+
+Technology Product Owner: Credentials should be configured for secure usage that reduces complexity for the user, but reduces the potential for a credential compromise
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LA-08-TC07	Users must supply their existing credential as part of any self service credential change process.
+Primary: LA-08-TC01	User account authentication credentials for applications are not divulged to anyone other than the individual responsible for the use of that account
+Primary: LA-08-TC02	Users are prompted to change allocated default application and system passwords on first login (including password reset by helpdesk). User is not allowed to proceed until allocated passwords are changed
+Primary: LA-08-TC03	A strong password policy for applications and systems is enforced covering complexity, length and expiry Logical Access Management Standard.
+Secondary: LA-08-TC04	Application and systems should enable password self-help for the reset of passwords
+Primary: LA-08-TC05	Applications and Systems should be able to cater for changes in credential mechanism where applicable (e.g. usage of a different token)
+Primary: LA-08-TC06	Password reset and changing operations require the same level of controls as account creation and authentication. 
+"
+LA-09: Defences Against Credential Compromise,story,"*Narrative*
+
+Technology Product Owner: Applications and Systems must enable measures to prevent credential compromise
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Primary: LA-09-TC01	User accounts (Interactive accounts) are disabled after a maximum number consecutive failed login attempts to an application or system. The account must be disabled for a period of time sufficient to discourage brute force guessing of credentials, but not so long as to allow for a denial-of-service attack to be performed. 
+
+The maximum number may vary according to the nature of the application - suggested parameters are:
+- Mobile Device Access: 10 Times
+- Mobile Applications: 5 Times
+- Web Applications: 3 Times
+- Other Systems: 5 Times
+Secondary: LA-09-TC02	Systems and applications should require additional human-authentication parameter (e.g. capcha, image recognition), before the final login attempt.
+Primary: LA-09-TC03	User access credentials are transported encrypted across all systems, and encryption algorithms are compliant to cryptographic standards
+Secondary: LA-09-TC04	Credential capture in applications should be performed securely and appropriate measures should be taken to ensure credential capture cannot be compromised.
+Primary: LA-09-TC05	In the case that user authentication fails, error message should not state the reason why the user authentication failed. Error responses must be truly identical in both display and source code
+"
+AS-14: Logging User Activities and Transactional Processing,story,"*Narrative*
+
+Technology Product Owner: User activities and transactional processing, identified by the Business as being important in relation to its day to day operations and reporting requirements, are adequately and securely logged to provide a suitable audit trail in line with Business needs
+
+*Acceptance Criteria*
+
+All primary test cases completed.
+
+*Test Cases*
+
+Secondary: AS-14-TC20	Use a cryptographic hash function to validate log entry integrity
+Primary: AS-14-01	Ensure that all relevant user activities and transactional processing that require to be audited or otherwise retained are identified
+Primary: AS-14-02	Logs should be archived and stored in a centralised log management facility.
+Primary: AS-14-TC03	Log entries, once created, must be read only. Privileged accounts must not be able to modify logs of their own actions.
+Primary: AS-14-TC04	Access to modify or delete log files and data must be subject to a dual control process.
+Primary: AS-14-TC05	Log files and data must be protected from unauthorised modification and deletion in transit and in storage.
+Primary: AS-14-TC06	Logging controls should support both success and failure of specified security events 
+Primary: AS-14-TC07	Ensure logs contain logical access events:
+- Successful and failed login attempts 
+- Creation, modification and deletion of accounts and access groups 
+- Change to access rights
+Primary: AS-14-TC08	Ensure log entries that include un-trusted data will not execute as code in the intended log viewing interface or software
+Primary: AS-14-TC09	To prevent the threat of information disclosure, do not store sensitive information in logs such as unnecessary system details, session identifiers or passwords 
+Primary: AS-14-TC10	All applications must be able to integrate with organisation's security attack monitoring and insider threat capabilities and services. 
+Primary: AS-14-TC11	Log all input validation failures
+Primary: AS-14-TC12	Log all apparent tampering events, including unexpected changes to state data
+Primary: AS-14-TC13	Log attempts to connect with invalid or expired session tokens
+Primary: AS-14-TC14	Log all system exceptions
+Primary: AS-14-TC15	Log all administrative functions, including changes to the security configuration settings
+Primary: AS-14-TC16	Log all backend communication failures
+Primary: AS-14-TC17	Log cryptographic module failures
+Secondary: AS-14-TC18	Utilize a master routine for all logging operations
+Secondary: AS-14-TC19	Ensure that a mechanism exists to conduct log analysis
+"

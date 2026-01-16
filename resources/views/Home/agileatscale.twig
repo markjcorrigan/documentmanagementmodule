@@ -1,0 +1,43 @@
+{% extends 'simplemedia.twig' %}
+{% block title %}{% if not user %}PMWay{% else %}Agile@Scale{% endif %}{% endblock %}
+{% block body %}
+    {% if user %}
+        <div class="container">
+            <h3>Agile @ Scale Does Not Work</h3>
+            <hr>
+            <a href="/home/safeisunsafe" >SAFe is unsafe</a><br><br>
+
+            <p><a href="#playlist">PLAYLIST</a></p>
+
+            <div id="player" align="center">
+                <!-- video source and track elements will be populated from playlist -->
+                <video id="video1" preload="false" data-able-player playsinline loop></video>
+            </div>
+
+            <div id="playlist">
+                <h2><a name="playlist"></a>Playlist</h2>
+                <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+                <!-- The value of data-player must match the id of the media element -->
+                <!-- see documentation for additional details -->
+                <ul class="able-playlist" data-player="video1">
+                    <li data-poster="{{ asset('storage/images/agileatscale.png') }}" data-width="480" data-height="360">
+                        <span class="able-source" data-type="video/mp4" data-src="/ablelvids/agileatscale/agileatscale.mp4"></span>
+                        <button type="button">
+                            <img src="{{ asset('storage/images/agileatscale.png') }}" alt="Agile at Scale">Agile @ Scale Does Not Work
+                        </button>
+                    </li>
+                </ul>
+                <br><br>
+            </div>
+        </div>
+        <br><br>
+    {% endif %}
+
+    {% if not user %}
+        <div class="container" align="left">
+            <h3 align="left">Please log in to access the content on this page</h3>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    {% endif %}
+
+{% endblock %}

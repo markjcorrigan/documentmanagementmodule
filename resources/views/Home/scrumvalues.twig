@@ -1,0 +1,131 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Scrum Values{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<div class="container">
+<h3>There&#8217;s value in the Scrum&nbsp;Values</h3>
+<hr>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+      <li data-poster="{{ asset('storage/images/scrumvaluesposter.png') }}" data-width="480" data-height="360">
+    <span class="able-source"
+          data-type="video/mp4"
+          data-src="/ablelvids/scrumvalues/scrumvalues.mp4">
+    </span>
+          <button type="button">
+              <img src="{{ asset('storage/images/scrumvalues.png') }}" alt="">The Scrum Values
+          </button>
+      </li>
+  </ul>
+  <br>
+  <br>
+  <div align="left">
+    <p>Scrum is not a methodology. Scrum is a process, but of a non-repeatable kind. Scrum is a framework of rules, roles and principles. The framework helps people and organizations discover what works best for them. Their real process emerges, and is specific and fitting to their time and context. Scrum can wrap existing product development practices or render them superfluous. The benefits of Scrum are greater when complemented by improved or revised engineering, product management, people and organizational practices. The prescriptions of Scrum have been limited to the essence. Every element of Scrum has a goal. Changing the core design of Scrum, leaving out elements, not playing the game by its base rules, covers up problems and limits the benefit of Scrum and any additions on Scrum, up to the level of making it utterly useless.</p>
+    <p>Less known than the process of Scrum and probably under-highlighted, but therefore not less important, are the core <strong>Scrum Values</strong> upon which the framework is based: Commitment &#8211; Focus &#8211; Openness &#8211; Respect &#8211; Courage. These values relate to the ethics of Scrum, thereby -from a social point of view- turning Scrum into a <em>value system</em>.</p>
+    <div align="center"><img class="img-fluid" src="{{ asset('storage/images/scrumvalues.png') }}" ></div>
+    <br>
+    <p>Although not invented as a part of Scrum, or exclusive to Scrum, these <em>values</em> give direction to our work, our behavior and our actions. In a Scrum context the decisions we take, the steps we take, the way we play Scrum, the practices we add to Scrum, the activities we surround Scrum with should re-enforce these values, not diminish or undermine them.</p>
+    <p>I have found it very useful to bring these more out in the open, as a way to assess the desirability our actions and activities. It&#8217;s even a great help in thinking about applying the Scrum framework itself. It is possible to do Scrum as if it was a methodology; organize the meetings, direct all players on every possible detail for every possible action within the framework. But is the framework then being used for what it&#8217;s designed for? Won&#8217;t it leave the individual, the team and the organization with limited improvements?</p>
+    <blockquote>
+      <p>A good illustration is how I&#8217;ve observed some teams doing their Daily Scrum. Everybody answers the 3 questions (<em>Done? Planned? Impediments?</em>), in a slightly spontaneous way or -worst case- when asked for by a Scrum Master-pretend. But does the team use the meeting to share information, to collaborate in re-planning their work for that day, making sure they don&#8217;t get out of line with one another for more than 24 hours, to get the most out of the Sprint, in moving forward to the Sprint goal? Or do they talk to the board instead of to each other? Do they only use the meeting to make sure that the board holds all their micro-tasks so their work is logged?</p>
+    </blockquote>
+    <h4>Here&#8217;s some detailed view on the values, and how they can guide our actions and behavior in a Scrum context:</h4>
+    <h2 align="center">Commitment</h2>
+    <p>There is a widely spread misinterpretation of the word <em>commitment</em> in a Scrum context. This originates mainly from the past expectation of Scrum for teams to &#8216;commit&#8217; to the Sprint and the selected Product Backlog items. Upon the old, industrial thinking (that ruled software development for too many years) this was wrongly turned into the expectation that all scope would be delivered, <em>no matter</em>. &#8216;Commitment&#8217; was wrongly turned into a hard-coded contract although it was always intended as an indication that the team would do the maximum possible effort in the Sprint and be completely transparent about progress. And in the complex, creative and highly unpredictable world of software development a commitment on scope is impossible anyhow.</p>
+    <p>And the definition of the word, according to Oxford Dictionaries, describes exactly how it was originally intended in Scrum:</p>
+    <div align="left"><img class="img-fluid" src="{{ asset('storage/images/definition-of-commitment.png') }}" ></div>
+    <br>
+    <p>So,<em> commitment</em> is about <strong>dedication</strong> and applies to the actions, the effort, not the final result.</p>
+    <p>Yet, in the Scrum Guide we replaced commitment as a result of the Sprint Planning with <em>forecast</em>. Because of the relationship with scope it helps getting explicitly rid of the wrong interpretation. And fortunately &#8216;forecast&#8217; greatly aligns with the empirical nature of Scrum too.</p>
+    <p>Still, commitment is and remains a core value of Scrum.</p>
+    <p>We commit to the team. Commit to quality. Commit to collaborate. Commit to learn. Commit to do the best we can, every day again. Commit to the Sprint Goal. Commit to be professional. Commit to self-organize. Commit to excellence. Commit to the agile principles. Commit to create working software. Commit to look for improvements. Commit to the Definition of Done. Commit to the Scrum framework. Commit to focus on Value. Commit to finish work. Commit to inspect &amp; adapt. Commit to transparency. Commit to challenge the status-quo.</p>
+    <h2 align="center">Focus</h2>
+    <p>An iterative-incremental approach like Scrum and the time-boxing of Scrum allow us to focus. We focus on what's most important now without being bothered by considerations of what at some point in time might stand a chance to become important. We focus on what we know now and YAGNI (You Ain?t Gonna Need It) helps retaining that focus. We focus on what's most nearby in time as the future is highly uncertain and we want to learn from the present to gain experience for future work. We focus on the work to get things done. We focus on the simplest thing that might possibly work.</p>
+    <h2 align="center">Openness</h2>
+    <p>The empiricism of Scrum requires transparency, openness. We want to inspect reality in order to make sensible adaptations. We are open about our work, our progress, our learning and our problems. But we are also open for people, and working with people; acknowledging people to be people, and not resources, robots or replaceable pieces of machinery as software development -after all- is still the work of humans. We are open to collaborate across disciplines and skills. We are open to collaborate with stakeholders and the wider environment. Open in sharing feedback and learn from one another. Open for change as the organization and the world it operates in change unpredictably, unexpectedly and constantly.</p>
+    <h2 align="center">Respect</h2>
+    <p>We show respect for people, their experience and their personal background. We respect diversity (it makes us stronger). We respect different opinions (we might learn from it). We show respect for our sponsors by not building features that nobody will use. We show respect by not wasting money on things that are not valuable or might never being implemented or used. We show respect for users by fixing their problems. We respect the Scrum framework. We respect our wider environment by not behaving as an isolated island in the world. We respect each other&#8217;s skills, expertise and insights. We respect the accountabilities of the Scrum roles.</p>
+    <h2 align="center">Courage</h2>
+    <p>We show courage in not building stuff that nobody wants. Courage in admitting requirements will never be perfect and that no plan can capture reality and complexity. Courage to consider change as a source of inspiration and innovation. Courage to not deliver undone software. Courage in sharing all possible information (transparency) that might help the team and the organization. Courage in admitting that nobody is perfect. Courage to change direction. Courage to share risks and benefits. Courage to promote Scrum and empiricism to deal with complexity. Courage to let go of the feint certainties of the past. We show courage to support the Scrum Values.</p>
+    <br>
+    <br>
+    <p align="left">Thanks to guntherverheyen.com</p>
+    <br>
+    <br>
+  </div>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+<h3>There&#8217;s value in the Scrum&nbsp;Values</h3>
+<hr>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/scrumvalues.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumvalues/scrumvalues.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/scrumvalues.png') }}" alt="">The Scrum Values </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+  <div align="left">
+    <p>Scrum is not a methodology. Scrum is a process, but of a non-repeatable kind. Scrum is a framework of rules, roles and principles. The framework helps people and organizations discover what works best for them. Their real process emerges, and is specific and fitting to their time and context. Scrum can wrap existing product development practices or render them superfluous. The benefits of Scrum are greater when complemented by improved or revised engineering, product management, people and organizational practices. The prescriptions of Scrum have been limited to the essence. Every element of Scrum has a goal. Changing the core design of Scrum, leaving out elements, not playing the game by its base rules, covers up problems and limits the benefit of Scrum and any additions on Scrum, up to the level of making it utterly useless.</p>
+    <p>Less known than the process of Scrum and probably under-highlighted, but therefore not less important, are the core <strong>Scrum Values</strong> upon which the framework is based: Commitment &#8211; Focus &#8211; Openness &#8211; Respect &#8211; Courage. These values relate to the ethics of Scrum, thereby -from a social point of view- turning Scrum into a <em>value system</em>.</p>
+    <div align="center"><img class="img-fluid" src="{{ asset('storage/images/scrumvalues.png') }}" ></div>
+    <br>
+    <p>Although not invented as a part of Scrum, or exclusive to Scrum, these <em>values</em> give direction to our work, our behavior and our actions. In a Scrum context the decisions we take, the steps we take, the way we play Scrum, the practices we add to Scrum, the activities we surround Scrum with should re-enforce these values, not diminish or undermine them.</p>
+    <p>I have found it very useful to bring these more out in the open, as a way to assess the desirability our actions and activities. It&#8217;s even a great help in thinking about applying the Scrum framework itself. It is possible to do Scrum as if it was a methodology; organize the meetings, direct all players on every possible detail for every possible action within the framework. But is the framework then being used for what it&#8217;s designed for? Won&#8217;t it leave the individual, the team and the organization with limited improvements?</p>
+    <blockquote>
+      <p>A good illustration is how I&#8217;ve observed some teams doing their Daily Scrum. Everybody answers the 3 questions (<em>Done? Planned? Impediments?</em>), in a slightly spontaneous way or -worst case- when asked for by a Scrum Master-pretend. But does the team use the meeting to share information, to collaborate in re-planning their work for that day, making sure they don&#8217;t get out of line with one another for more than 24 hours, to get the most out of the Sprint, in moving forward to the Sprint goal? Or do they talk to the board instead of to each other? Do they only use the meeting to make sure that the board holds all their micro-tasks so their work is logged?</p>
+    </blockquote>
+    <h4>Here&#8217;s some detailed view on the values, and how they can guide our actions and behavior in a Scrum context:</h4>
+    <h2 align="center">Commitment</h2>
+    <p>There is a widely spread misinterpretation of the word <em>commitment</em> in a Scrum context. This originates mainly from the past expectation of Scrum for teams to &#8216;commit&#8217; to the Sprint and the selected Product Backlog items. Upon the old, industrial thinking (that ruled software development for too many years) this was wrongly turned into the expectation that all scope would be delivered, <em>no matter</em>. &#8216;Commitment&#8217; was wrongly turned into a hard-coded contract although it was always intended as an indication that the team would do the maximum possible effort in the Sprint and be completely transparent about progress. And in the complex, creative and highly unpredictable world of software development a commitment on scope is impossible anyhow.</p>
+    <p>And the definition of the word, according to Oxford Dictionaries, describes exactly how it was originally intended in Scrum:</p>
+    <div align="left"><img class="img-fluid" src="{{ asset('storage/images/definition-of-commitment.png') }}" ></div>
+    <br>
+    <p>So,<em> commitment</em> is about <strong>dedication</strong> and applies to the actions, the effort, not the final result.</p>
+    <p>Yet, in the Scrum Guide we replaced commitment as a result of the Sprint Planning with <em>forecast</em>. Because of the relationship with scope it helps getting explicitly rid of the wrong interpretation. And fortunately &#8216;forecast&#8217; greatly aligns with the empirical nature of Scrum too.</p>
+    <p>Still, commitment is and remains a core value of Scrum.</p>
+    <p>We commit to the team. Commit to quality. Commit to collaborate. Commit to learn. Commit to do the best we can, every day again. Commit to the Sprint Goal. Commit to be professional. Commit to self-organize. Commit to excellence. Commit to the agile principles. Commit to create working software. Commit to look for improvements. Commit to the Definition of Done. Commit to the Scrum framework. Commit to focus on Value. Commit to finish work. Commit to inspect &amp; adapt. Commit to transparency. Commit to challenge the status-quo.</p>
+    <h2 align="center">Focus</h2>
+    <p>An iterative-incremental approach like Scrum and the time-boxing of Scrum allow us to focus. We focus on what's most important now without being bothered by considerations of what at some point in time might stand a chance to become important. We focus on what we know now and YAGNI (You Ain?t Gonna Need It) helps retaining that focus. We focus on what's most nearby in time as the future is highly uncertain and we want to learn from the present to gain experience for future work. We focus on the work to get things done. We focus on the simplest thing that might possibly work.</p>
+    <h2 align="center">Openness</h2>
+    <p>The empiricism of Scrum requires transparency, openness. We want to inspect reality in order to make sensible adaptations. We are open about our work, our progress, our learning and our problems. But we are also open for people, and working with people; acknowledging people to be people, and not resources, robots or replaceable pieces of machinery as software development -after all- is still the work of humans. We are open to collaborate across disciplines and skills. We are open to collaborate with stakeholders and the wider environment. Open in sharing feedback and learn from one another. Open for change as the organization and the world it operates in change unpredictably, unexpectedly and constantly.</p>
+    <h2 align="center">Respect</h2>
+    <p>We show respect for people, their experience and their personal background. We respect diversity (it makes us stronger). We respect different opinions (we might learn from it). We show respect for our sponsors by not building features that nobody will use. We show respect by not wasting money on things that are not valuable or might never being implemented or used. We show respect for users by fixing their problems. We respect the Scrum framework. We respect our wider environment by not behaving as an isolated island in the world. We respect each other&#8217;s skills, expertise and insights. We respect the accountabilities of the Scrum roles.</p>
+    <h2 align="center">Courage</h2>
+    <p>We show courage in not building stuff that nobody wants. Courage in admitting requirements will never be perfect and that no plan can capture reality and complexity. Courage to consider change as a source of inspiration and innovation. Courage to not deliver undone software. Courage in sharing all possible information (transparency) that might help the team and the organization. Courage in admitting that nobody is perfect. Courage to change direction. Courage to share risks and benefits. Courage to promote Scrum and empiricism to deal with complexity. Courage to let go of the feint certainties of the past. We show courage to support the Scrum Values.</p>
+    <br>
+    <br>
+    <p align="left">Thanks to guntherverheyen.com</p>
+    <br>
+    <br>
+  </div>
+</div>
+{% endif %}
+
+
+
+{% endblock %}

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "cmmidev"
+AuthUserFile "/home/f3608940/.htpasswds/public_html/cmmidev/passwd"
+require valid-user

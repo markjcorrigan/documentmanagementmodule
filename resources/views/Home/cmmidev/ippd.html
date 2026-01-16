@@ -1,0 +1,320 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>IPPD</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	 
+<table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="3%"><p><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="52%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+<!-- #BeginEditable "content" -->
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td><span class="auto-style2"><strong>Integrated Project 
+					Management + IPPD (IPM + IPPD)</strong><br />
+					<br />
+					</span></td></tr>
+				</table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+<tr><td>
+		<center><p class="ctr">Integrated Project Management +IPPD (IPM + IPPD)
+<br>
+<br>
+</center>
+<p>CMMi has four process areas concerning projects that appear similar:-</p>
+<li>Project Planning (PP)
+</li><li>Project Monitoring and Control (PMC)
+</li><li>Quantitative Project Management (QPM)
+</li><li>Integrated Project Management +IPPD (IPM + IPPD)
+<br>
+<br>
+What does this mean for the CMMi easy button:-
+<br>
+<br>
+First we look at the obvious in terms of these definitions, that is can any of the above process areas, related to project, be defined in a useful way to those people who are somewhat familiar with the common term ‘project’.
+<br>
+<br>
+Having defined the essential project activities that we all agree must be done we look at what process areas, for projects, remain and then figure out what is the point and if there is an easy way.
+<br>
+<br>
+Here is a brief definition the four main project areas that clarify the relationship and usefulness of each; followed by a more in depth look into the Integrated Project Management +IPPD (IPM + IPPD) process area.
+<br>
+<br>
+<b>Project Planning (PP)</b>
+<br>
+<br>
+This is the easiest process area to understand (in terms of scope) as it can be summed up with:-
+<br>
+<br>
+<i>Produce and maintain the project plan.</i>
+<br>
+<br>
+<b>Project Monitoring and Control (PMC)</b>
+<br>
+<br>
+Given a project plan this follows, it terms of easy to understand definitions:
+<br>
+<br>
+<i>Actual performance and progress of the project are monitored against the project plan.</i>
+<br>
+<br> 
+<b>Quantitative Project Management (QPM)</b>
+<br>
+<br>
+This process area is a software improvement process but just focused on projects.  
+<br>
+<br>
+You will need to read the CMMi easy button for QPM but, for our scope, this process area deals with measuring the performance of the project, for example percentage of defects removed by testing activities. This area does not deal with the typical definition of Project Management. The combination of Project Planning and Project Monitoring constitute what the average person would think of as Project management.
+<br>
+<br>
+<b>Integrated Project Management +IPPD (IPM + IPPD)</b>
+<br>
+<br>
+We now arrive at the Integrated Project Management process area and we know it is:-
+<br>
+<br>
+</li><li>Not Project Management (PP and PMC are Project Management).
+</li><li>Not measuring the performance of the project (QPM does this).
+<br>
+<br>
+What is possibly left, I hear you ask.
+<br>
+<br>
+Well it turns out that just as QPM is a mini quality control ecosystem just for projects; IPM is a mini process definition and control ecosystem just for projects.
+<br>
+<br>
+The easiest way to look at this is to consider the SDLC. The SDLC in this case does not imply a waterfall model, could be a prototype model, but instead refers to the set of processes that will be followed during the software project. This implies that all projects do not follow the same process and some decisions are needed upfront in terms of what will be used.
+<br>
+<br>
+Within the IPM the appropriate SDLC is selected from the “organizational process assets”. This means you establish, as a prerequisite for IPM, a set of standard procedures for developing software and put them in a library, which is called the Process Asset Library (PAL). IPM selects, from the PAL, the appropriate life cycle or processes for delivering the software on this project. This is why CMMi could be applied to Agile type models as well as traditional water fall models as in the IPM process area the ‘Appropriate models’ are selected for utilization in the project.
+<br>
+<br>
+As a note (and these dependencies are explicitly stated in the CMMi easy button) it is the Organizational Process Definition (OPD) process area sets up the Process Asset Library.
+<br>
+<br>
+OK so we have the idea of processes that relate to projects and selecting them, but the IPM area is more than this.
+<br>
+<br>
+The management aspect of IPM is concerned with managing the project using the projects specific processes, which have been selected from the processes already defined in the process asset library.
+ <br>
+<br>
+<b>How is this different from project planning and project control?</b>
+<br>
+<br>
+Well this process area (IPM) is concerned with <b>How the project is managed</b> rather than specific goals of a project and delivery of those project goals.
+<br>
+<br>
+So within IPM we define the ‘project activities’ and guess what, the Project Planning and Project Monitoring are themselves activities that are defined in IPM.
+<br>
+<br>
+This implies that the organization has multiple ways to do Project Planning and Project monitoring. You get the idea that we are configuring everything concerned with the project.
+<br>
+<br>
+The following activities are also defined (selected from the Process Asset Library):-
+<br>
+<br>
+</li><li>Requirements development
+</li><li>Requirements management
+</li><li>Configuration management….
+<br>
+<br>
+Basically a tailored SDLC (including traditional Project Management) is put together and assembled just for a given project.
+<br>
+<br>
+All of the components (Project activities) are assembled from the pre-defined PAL to come up with an orchestration of activities that satisfy the project goals.
+<br>
+<br>
+This implies that the organization has a number of variations of SDLC and selects the ‘appropriate’ combination for each individual project. Selection of the appropriate SDLC looks at risk, and other variables such as whether a user interface is involved (then select usability design techniques) etc.
+<br>
+<br>
+In essence the IPM is concerned with How are we going to manage this project in terms of process (SDLC) and environment. This is distinct from project Planning which is concerned with the more traditional view of Project Management.
+<br>
+<br>
+The message of IPM is that;-
+<br>
+<br>
+Not one size fits all and this includes the appropriate Project Planning processes as well as the other SDLC processes of Requirements development, Configuration management etc. Given that a customized approach to every project is needed we a have process area that addresses project customization and that process area is called the Integrated Project Management
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left">&nbsp;</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

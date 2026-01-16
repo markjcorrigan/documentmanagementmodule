@@ -1,0 +1,843 @@
+{% extends 'basepmboksix.html' %}
+{% block title %}PMWayDash{% endblock %}
+{% block body %}
+ {% if user %}
+<!--BODY-- including div class container down to final div -->
+
+<style type="text/css">
+
+.dash {
+    border-style: ridge;
+    border-width: 1px;
+    border-color: navy;
+}
+</style>
+<div class="container" align="center"> <a name="dash"></a>
+  <hr />
+  <h5><img alt="" height="62" src="{{ asset('storage/images/sandpit.png') }}" width="90" class="shakeimage" onmouseover="init(this);rattleimage()" onmouseout="stoprattle(this);top.focus()" onclick="top.focus()" style="left: 0px; top: 0px;">&nbsp; Key Concepts
+    Sandbox:&nbsp; Project, Process, Quality, Governance,
+    Strategy et al.&nbsp;&nbsp;&nbsp;</h5>
+  <hr>
+  <p class="ctr">This is the 'PMWay ideas' sandbox.<br />
+    <br />
+    <!--<img alt="Switch on your lateral thinking cap!" height="389" src="{{ asset('storage/images/ideas.jpg') }}" width="800"> -->
+
+    <!--<img alt="Switch on your lateral thinking cap!" height="515" src="{{ asset('storage/images/sandpit.jpg') }}" width="850">-->
+
+    <img alt="" class="img-fluid" height="542" src="{{ asset('storage/images/sandpit1.png') }}" width="880"><br />
+    <br />
+    The Key Concepts below leverage off the solid base that is the PMBoK Guide, but with the goal of looking at
+    Project Management Process (PRINCE2 Methodology etc.), Strategy, Governance et
+    al. <strong>for the achievement of CMMi Level 2+</strong> from fresh, fun and lateral
+    thinking perspectives. <br>
+    Thinking of this area as a <strong>'spaghetti junction'</strong> of consolidated practical knowledge with <strong>powerful tips to achieve CMMi Level 2+</strong> may also be useful as many hyperlinks are used between the Key Concepts, interconnecting them - to give you the 'big picture.' <br>
+    <br>
+    <strong>Have fun playing around and diving into the many interconnected concepts
+    found here!</strong></p>
+  <div class="row w3-padding-16 bg-light" >
+    <div class="col-sm dash"><a href="/home/intwomins" title="This is the 'drillable down to the official PMBOK Guide' Dashboard to help you run successful projects">A PMWay overview in 2 minutes</a></div>
+    <div class="col-sm dash"><a href="/pmway" title="This gives you a quick overview of what this web site (PMWay) is all about.">The Project Management Body of Knowledge Dashboard</a></div>
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+  </div>
+  <div class="row w3-padding-16 bg-light" >
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+    <div class="col-sm dash">col-sm</div>
+  </div>
+</div>
+
+<!--
+&nbsp;<div style=
+ "float: left; width:4cm; padding: 15px; border-style: none; position: relative; z-index: 7;">
+ <a name="go"></a><ul id="menu0">
+
+  <li><a href="/in2mins.php" target="_newtab" title="PMWay in 2 minutes">A PMWay overview in 2 minutes<br>
+  </a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">This gives you a quick overview of what this web site (PMWay) is all about.</span></a></li>
+  <li><a href="/index.php#pmbokdash" target="_newtab" title="Project Management Body of Knowledge Dashboard">The Project Management Body of Knowledge Dashboard<br>
+  </a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">This is the 'drillable down to the official PMBOK Guide' Dashboard (control panel) to help you navigate and run successful projects!</span></a></li>
+
+ <li><a href="/processesdash/pmbokdashnutshell.php" target="_newtab" title="How to use the Project Management Body of Knowledge Dashboard">How to use the Project Management Body of Knowledge Dashboard<br>
+  </a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">This quickly shows you how to use the 'drillable down to the official PMBOK Guide' Dashboard (control panel) to help you navigate and run successful projects!</span></a></li>
+<li><a href="pmwaymodel.php" target="_newtab" title="The PM Way Models">PMWay's
+ Project Management Models</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The PM Way Models give a quick
+ overview of our project management process. Use this to pin down
+ where projects are within your system and understand about
+ managing the GAP and Gates so you don't fall into the GAP!</span></a></li>
+ <li><a href="/processesdash/pmbokdashnutshell.php#qatour" target="_newtab" title="The PMWay Quality Tour">The PMWay Quality Tour<br>
+  </a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">This Quality Tour shows you how to use the PMBOK Dashboard for quality while running successful projects!</span></a></li>
+
+
+
+ <li><a href="/stats.php" target="_newtab" title="5 minute tour">The 5 minute PMWay Vision<br>
+ tour</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">I'm in a rush. Tell me what
+ PMWay can do for me! Show me your Vision!</span></a></li>
+ <li><a href="stats.php" target="_newtab" title="Up your game stats">Up Your Game
+ STATS</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">This is the essence of the
+ PMWay. I.e. The absolute essence of Project Management /
+ Projectization (with CMMi) - The PMWay. Can you get it! Can you up
+ your game and do it!</span></a></li>
+ <li><a href="essence.php" target="_newtab" title=
+ "In 3 lines here is the essence of PMWay">3 word essence of PMWay</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">This is the essence of the
+ PMWay expanded from the above discussion into 3 short words. As
+ our goal is to keep it sweet and simple (KISS) these 3 words are
+ the absolute essence of Project Management / Projectization (with
+ CMMi) - The PMWay. &nbsp;&nbsp; &nbsp;All the other links on this page will add
+ more detail and depth to this.</span></a></li>
+ <li><a href="pdca.php" target="_newtab" title="PDCA / Sliding Window">PDCA /
+ Sliding Window</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Plan Do Check Act reconciling
+ against your sliding window managed on the EPMS. QED!</span></a></li>
+ <li><a href="project.php" target="_newtab" title="What is a Project?">What is a
+ Project?</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">It is very important to
+ understand exactly what a project is and what it is not!</span></a></li>
+ <li><a href="projectized.php" target="_newtab" title="Projectization in a nutshell">
+ What is Projectization</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Projectization, like CMMi
+ Level 2+ is a lofty goal! Check it out!</span></a></li>
+
+  <li><a href="typesofpmo.php#rogue" target="_newtab" title="The 3 Types of PMO">The 3 Types of PMO</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Project Management Offices can operate (set standards / controls / governance) loose (advisory) or tight (controlling).</span></a></li>
+
+
+
+ <li><a href="wbs.php" target="_newtab" title="Your WBS Needs You!">Your WBS Needs
+ You!</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The absolute basics about a
+ Project Plan - that very few really get!</span></a></li>
+ <li><a href="etc.php" target="_newtab" title="ETC">ETC</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">ETC or Estimated to Complete is TAsking (CMMi Level 2) and not Asking (CMMi Level 1).</span></a></li>
+
+
+
+ <li><a href="evm.php" target="_newtab" title="EVM to hit the target">EVM to hit the target</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Earned Value Management is the way to hit the IRON TRIANGLE and the TCPI (To Complete Performance Indicator) is the one key number you need to manage project performance - If (that is) you can pin down and manage Who, Does What, By When and BY THE HOUR!</span></a></li>
+
+ <li><a href="epms.php" target="_newtab" title="The EPMS">The EPMS</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Remember: Minding the Gap is
+ project management off a managed baseline! Minding the Gap, in all
+ seriousness, cannot be done efficiently and effectively without an
+ established Project Office running off an EPMS!</span></a></li>
+ <li><a href="feather.php" target="_newtab" title="EPMS Lite or HEAVY">EPMS Lite or
+ HEAVY</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Remember: The EPMS, like an
+ Accounting System, is a Project Control System. With consideration
+ of CMMi an EPMS must be run lite at first moving to tighter and
+ tighter controls as you move up CMMi process maturity levels.</span></a></li>
+
+ <li><a href="spiral.php" target="_newtab" title=
+ "Getting your head around PMWay and how it caters for the traditional Waterfall model as well as Spiral models and prototyping">
+ Waterfalls &amp;&nbsp; Spirals</a> <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">? <span style=
+ "position: relative; left: -230px;">While PMWay may look to the
+ uninitiated like a one way waterfall model (lacking agility) it is
+ not. Remember every waterfall spins and spirals as it flows
+ forward along its course, often creating eddies, iterating round
+ and round. To ensure the eddy does not become stagnant PMP process
+ will always drive the project forward and onward towards its
+ conclusion. Its all about the way the planning is done! Spiral
+ Methodology and CMMi (and with other inputs) can all be used to
+ ensure that the correct planning (project plans) are created with
+ as many iterations as are required. If these are carefully
+ monitored and controlled the project manager will achieve the
+ desired objectives that the project plan has been created to
+ achieve.</span></a></li>
+
+ <li><a href="radar.php" target="_newtab" title="The PMO's Radar">The PMO's Radar</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">EPM's Radar is what we can see
+ within our EPMS. Projects not on EPM Radar fall outside our orbit
+ of control.</span></a></li>
+ <li><a href="radar.php#rogue" target="_newtab" title="What is a Rogue">What is a
+ Rogue?</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Projects that are not on our
+ Radar are considered Rogue's. Read here why we are scared of them.</span></a></li>
+
+
+
+
+
+
+ <li><a href="princepmbok.php" target="_newtab" title=
+ "The top Project Management methodologies Project?">Project Method
+ Front runners</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Top Project Management
+ methodologies are compared: Prince2 (Projects in Controlled
+ Environments, PMBOK (Project Management Body of Knowledge), RUP
+ and MSF are seen by me and my friend Josh Milane as the front
+ runners. See if you agree.</span></a></li>
+
+ <li><a href="chefnotcook.php" target="_newtab" title="The Scope Triangle (Agile) - or PMBOK as loose as a goose">The Scope Triangle (Agile) - or PMBOK as loose as a goose</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Click here for Dr Wysocki's Adaptive Complex Project Framework where the Iron Triangle can become as loose as a goose!  I.e. all of the above assumes the IRON TRIANGLE while this (and some of the STANDARDS FRAMEWORKS DASHBOARD below) takes you into Agile.</span></a></li>
+
+
+ <li><a href="methodindex.php" target="_newtab" title=
+ "Standards Frameworks Dashboard">STANDARDS FRAMEWORKS DASHBOARD</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Click here for a dashboard for
+ some of the other (i.e. not PMBOK) Standards / Frameworks / Methodologies etc.</span></a></li>
+
+  <li><a href="prince.php" target="_newtab" title="PRINCE2">PRINCE2</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">If PMBOK are the ingredients then PRINCE2 is a recipe that, if followed, works!</span></a></li>
+
+
+  <li><a href="board.php" target="_newtab" title="Project Management Board">PRINCE2 Project
+ Management Board</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">As a Project Manager (with
+ project team), if you click help is it helpful!?</span></a></li>
+
+ <li><a href="sponsor.php" target="_newtab" title="Project Sponsor">PRINCE2 Project Sponsor</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">As a Project Manager (with
+ project team), if you click help is it helpful!?</span></a></li>
+
+  <li><a href="pid.php" target="_newtab" title="The PID">PRINCE2&nbsp; PID</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">There is a lot to be said for
+ PRINCE2! Their creation of the PMB and sponsor to sign off a PID
+ means PRojects are managed IN a Controlled Environment! Not only
+ are you authorised to take the journey but you can now also
+ clearly lock down WHO, WHAT, WHERE, WHEN and HOW - the key
+ requirements when initiating quality projects.</span></a></li>
+
+
+
+
+
+
+
+
+
+
+
+ </ul>
+ </div>
+ <div style=
+ "float: left; width:4cm; padding: 15px; border-style: none; position: relative; z-index: 6;">
+ <ul id="menu1">
+ <li><a href="pmp.php" target="_newtab" title=
+ "What is it to ba a Project Management Professional (PMP)?">PMBOK
+ Professional Mindset</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The Project Management
+ Professional (PMP) certification is offered by the Project
+ Management Institute (PMI). This teaches the project professional
+ how achieve excellence when managing large projects. Having a
+ shared reality of what comprises the PMBok means that as project
+ managers we are all on the same page.</span></a></li>
+
+  <li><a href="scope.php" target="_newtab" title="A Project's Scope">The Project's&nbsp;
+ Scope</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The scope of a project is what
+ the project must deliver. Take a look at the classic scope picture
+ at the top of the page you click to. Gathering accurate customer
+ requirements (and pinning down a projects scope) is an extremely
+ important part of project management.</span></a></li>
+
+ <li><a href="irontriangle.php" target="_newtab" title="The IRON Triangle">The IRON
+ TRIANGLE</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The IRON Triangle is a key
+ concept in project management.</span></a></li>
+
+
+
+ <li><a href="baseline.php" target="_newtab" title="Baseline the GAP">MIND THE
+ Baselined GAP</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">A project baseline is used to
+ lock down scope. Essentially the GAP (Execute, Stabilise and Close
+ Phase) is the project scope we have locked down to help us
+ correctly gauge what is required in the project. The &quot;gap&quot; is what
+ we want to successfully jump across. If the gap is widened
+ (unmanaged change of scope / scope creep) while jumping, our
+ chances of getting across the gap succesfully are lowered.</span></a></li>
+
+
+
+
+
+
+
+
+   <li><a href="creeping.php" target="_newtab" title="Creep">Scope Creep &amp; Change
+ Controls</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The concept (and danger) of
+ creeping scope is explained here. To be successful at project
+ management you must manage the IRON TRIANGLE = Time/Quality/Budget
+ = Scope.</span></a></li>
+
+
+
+
+ <li><a href="gate.php" target="_newtab" title="Gates">Stage Gates</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The efficient use of
+ &quot;quality/go no go&quot; gates (heeding them as you would a traffic
+ light) can really make a difference. See if you agree.</span></a></li>
+
+  <li><a href="supplylines.php" target="_newtab" title="Supply Lines">Supply Lines</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Outstrip your supply lines at
+ your own peril!</span></a></li>
+
+
+ <li><a href="ria.php" target="_newtab" title="Risks, Issues (the essence)">
+ An Issue is a Risk happening!</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">An Issue is a Risk happening!</span></a></li>
+
+
+
+
+
+ <li><a href="riadetail.php" target="_newtab" title="Risks, Issues and Actions (KISS)">
+ Risks, Issues & Actions (KISS)</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Let's all agree on what a
+ <strong>Risk</strong> is, what an <strong>Issue</strong> is and
+ what an
+ <strong>Action</strong> is. This is a very important area that many project managers do not understand.  Therefore initially, lets KISS!</span></a></li>
+
+
+ <li><a href="risksiac.php" target="_newtab" title="Risks, Issues and Actions">
+ Risks, Issues, Actions &amp; Controls</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Let's all agree on what a
+ <strong>Risk</strong> is, what an <strong>Issue</strong> is and
+ what an
+ <strong>Action</strong> is. Also how RISKS and CONTROLS and AUDITS
+ work. Project Office and project minutes that are tightly managed
+ can help you to manage all of these key activities and really make
+ a difference, boosting project success! Remember also: Managing
+ risk is one of the best ways to manage Cost and Time in your
+ project.</span></a></li>
+
+ <li><a href="audit.php" target="_newtab" title="Auditing is the check in control check.">Auditing</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Auditing is the check in control check.</span></a></li>
+  <li><a href="diary.php" target="_newtab" title="How to run audit trails">Happy
+ 'audit' Trails</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Running and maintaining audit
+ trails on your project and especially the risks and issues associated with the project is a strategic driver for success.</span></a></li>
+
+ <li><a href="tips.php" target="_newtab" title="21 Tips for Success">21 Tips for
+ Success</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">In addition to this page,
+ PMWay is full of tips for success. After you have read the ESSENCE
+ of PMWAY, also click the EPMS link to see why the EPMS, and how to
+ put it to work as explained in the CMMi TIPS page, is your SILVER
+ BULLET!</span></a></li>
+
+
+  <li><a href="fail.php" target="_newtab" title="Why Projects Fail">Why Projects
+ Fail</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Find out why it is that
+ projects fail. The best way to improve your project
+ professionalism is to work back from project failures and
+ understand why these occurred, ensuring you have covered all the
+ bases in your own project to make sure that they never happen to
+ you! As they say: The secret of avoiding a trap is knowing of its
+ existence!</span></a></li>
+
+<li><a href="tolerance.php" target="_newtab" title="Toleration">Toleration</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">What deviations will the
+ stakeholders tolerate?</span></a></li>
+
+ <li><a href="lemmings.php" target="_newtab" title="Creep">Unblock the blockers</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The concept of unblocking is explained here. To be successful at project
+ management you must manage the IRON TRIANGLE = Time/Quality/Budget
+ = Scope and unblocking is the way you do this.</span></a></li>
+
+
+
+ <li><a href="rag.php" target="_newtab" title="RAG Status">RAG Status</a><a href="#nogo"
+ style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Focus on progress and
+ prioritise issues quickly with Red, Amber, Green</span></a></li>
+  <li><a href="slipslidingaway.php" target="_newtab" title="Slip sliding away!">Slip sliding away...</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The single image here says it all!</span></a></li>
+
+ <li><a href="sloshing.php" target="_newtab" title="Sloshing... Stuck!">Sloshing...
+ Stuck!</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">If it starts to slosh -
+ stabilize. If it gets stuck - do what is needed to get it unstuck!</span></a></li><li><a href="opcost.php" target="_newtab" title="Opportunity Cost">Opportunity
+ Cost</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The cost of choice when faced
+ with scarcity</span></a></li>
+
+
+ <li><a href="resourceallocationsyndrome.php" target="_newtab" title=
+ "Resource Allocation Syndrome">Resource Allocation Syndrome</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The Resource Allocation
+ Syndrome is not an indication of poor project management. Rather
+ it is an indication of poor business processes and must be
+ addressed by the Executive!</span></a></li>
+ <li><a href="service.php" target="_newtab" title=
+ "Serivces Management &amp; Projects">Services Management and
+ Projects</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The difference between
+ Services Management and Project Management. There is one! See if
+ you can see why a project manager needs to understand this!</span></a></li>
+ <li><a href="org.php" target="_newtab" title="Project Organisational Structures">
+ Project Org. Structures</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The PMBOK organisational
+ structures are detailed here. It is important to know how these
+ organisational structures can either promote or constrain project
+ management.</span></a></li>
+ <li><a href="portprogsimple.php" target="_newtab" title=
+ "Portfolio, Program, Project">Project / Program &amp; Portfolio</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The difference between
+ Portfolio, Program and Project Management is explained here.</span></a></li>
+
+ <li><a href="pmbokdocs.php" target="_newtab" title=
+ "PMBok 4th Edition Project Control Documents">PMBOK Project Docs</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Project management is about
+ Planning, Executing, Stabilising and Closing (while all the time
+ Monitoring and Controlling). It is relatively easy to FORMULATE a
+ plan. The skill comes in the ability to successfully IMPLEMENT the
+ plan and you do this through the Monitoring of key Controls. These
+ controls are obtained from a range of project control documents
+ which must be compiled and then closely monitored through the
+ duration of the project lifecycle.</span></a></li>
+
+
+
+ <li><a href="charter.php" target="_newtab" title=
+ "The importance of the Project Charter">The Project Charter</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The Project Charter is a very
+ important project control document. This document is our official
+ ticket to ride as Project Managers (without this in place our role
+ is not official!). Also the Charter should be used to bind
+ together all key documents (signed, scanned and saved and secured
+ in the Enterprise Project Management System Document Repository)
+ that define and pin down the project's scope! Not only are you
+ authorised to take the journey but you can now also clearly lock
+ down WHO, WHAT, WHERE, WHEN and HOW - the key requirements when
+ delivering quality projects.</span></a></li>
+
+
+
+ <li><a href="document%20dashboard.php" target="_newtab" title=
+ "Essential Documents for Project Management">Essential ProjDocs
+ Dash</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">To KISS and to manage document
+ glut here are a selection of the key project documents by STAGE
+ that you will need.</span></a></li>
+
+
+ </ul>
+ </div>
+ <div style=
+ "float: left; width:4cm; padding: 15px; border-style: none; position: relative; z-index: 5;">
+ <ul id="menu2">
+ <li><a href="client.php" target="_newtab" title="The Valued Client">The Valued
+ Client</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Why we firmly ADVOCATE a
+ CLIENT focus!</span></a></li>
+ <li><a href="transparency.php" target="_newtab" title="Transparency">Transparency
+ Accountability &amp; Sustainability</a> <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Why we firmly ADVOCATE
+ transparency and the role of the EPMS!</span></a></li>
+ <li><a href="governance.php" target="_newtab" title="Governance">Governance</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Corporate Governance,
+ Corporate Social Social Responsibility and Corporate Citizenship
+ are very important concepts needed for Wealth Maximization in our
+ modern economies.</span></a></li>
+
+ <li><a href="/booklets/ethics.php" target="_newtab" title="The low down on Ethics">The low down on Ethics</a><a href= "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Doing the right thing because you have the spiritual awareness to know how to.</span></a></li>
+
+
+ <li><a href="stake.php" target="_newtab" title="Stakeholders">Stakeholders</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">What are stakeholders?</span></a></li>
+ <li><a href="team.php" target="_newtab" title="TEAM">Teams &amp; Synergy</a><a href="#nogo"
+ style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Working together we can
+ achieve more success synergistically.</span></a></li>
+  <li><a href="triplethreatpm.php" target="_newtab" title="Triple Threat PM">Triple Threat PM</a><a href="#nogo"
+ style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Broaden your horizon.</span></a></li>
+
+ <li><a href="goodpm.php" target="_newtab" title="PM Qualities">PM Qualities</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">What are the qualities that
+ make a good Project Manager?</span></a></li>
+ <li><a href="manstyles.php" target="_newtab" title="Management Styles">Leadership
+ Styles/Types</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">These are some of the types of
+ Project Managers that you will come across in your career. Here
+ are also some of the typical styles of leadership (or lack
+ thereof) that you may encounter.</span></a></li>
+ <li><a href="ei.php" target="_newtab" title="Emotional Intelligence">Emotional
+ Intelligence to Authentic Leadership</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Positive Organizational
+ Behavior, The Big 5 Traits, MBTI, Emotional Intelligence, Self
+ Efficacy, OCB's and Authentic Leadership .</span></a></li>
+ <li><a href="arc.php" target="_newtab" title="Communication">Communication &amp; Understanding Skills</a>
+ <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Improve your communication
+ skills with this neat communication tool: ARC.</span></a></li>
+
+
+ <li><a href="ta.php" target="_newtab" title="Transactional Analysis">Transactional Analysis</a>
+ <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">TA is very powerful. Check it out.  Like the ARC triangle above this theory will be invaluable to you.</span></a></li>
+
+
+
+ <li><a href="ubuntu10pts.php" target="_newtab" title="Connection Points">Connection Points</a>
+ <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Learn how to connect with people for success.</span></a></li>
+ <li><a href="smart.php" target="_newtab" title="SMART goal (task) setting">SMART
+ goal (task) setting</a> <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Find out how to set SMART
+ goals / KPI's / define SMART project tasks.</span></a></li>
+ <li><a href="mm.php" target="_newtab" title="The One Minute Manager">Monkey
+ Management</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The One Minute Manager and the
+ monkey management technique will help you to manage all those
+ project deliverables and the many actions and to do lists you need
+ to keep on top of.</span></a></li>
+
+  <li><a href="personalkanban.php" target="_newtab" title="Personal KanBan">Personal KanBan</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">This short lecture on the use of KanBan to achieve personal goals is an excellent introduction to KanBan.</span></a></li>
+
+
+ <li><a href="neg.php" target="_newtab" title="Conflict Resolution">Conflict
+ Resolution</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Resolve conflict with these
+ few neat concepts.</span></a></li>
+ <li><a href="stress.php" target="_newtab" title="Organizational Stress">
+ Organizational Stress</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Learn about (and how to
+ handle) stress here with these few neat concepts.</span></a></li>
+ <li><a href="star.php" target="_newtab" title="STARS">Pin STAR/AR's</a> <a href="#nogo"
+ style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">STARS and STAR/AR'S can really
+ help a team. Check out how it works.</span></a></li>
+ <li><a href="efficient.php" target="_newtab" title=
+ "Efficiency and Effectiveness">Efficiency and Effectiveness</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Efficiency and Effectiveness
+ must be kept in balance to achieve success!</span></a></li>
+ <li><a href="continuity.php" target="_newtab" title="Continuity">Consistency &amp;
+ Continuity</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Consistency is a key
+ ingredient for success. So is continuity. I.e. these concepts need
+ to be fully understood and consistent or upwards stats maintained
+ for success.</span></a></li>
+ <li><a href="freedoms.php" target="_newtab" title=
+ "Freedoms, Barriers &amp; Goals">Freedoms, Barriers and Goals</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Freedoms, Barriers and Goals
+ must be kept in balance to achieve success!</span></a></li>
+ <li><a href="culture.php" target="_newtab" title="Culture">Corporate Culture</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">This is how we do things
+ around here!</span></a></li>
+
+ <li><a href="redbeads.php" target="_newtab" title="Keep it sweet and simple">
+ Demings Red Beads Experiment</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The Read Beads Experiment move
+ us towards the 14 obligations of Management!</span></a></li>
+
+
+ <li><a href="4typesofwork.php" target="_newtab" title="A start on the Theory of Constraints">
+ A Start on the Theory of Constraints</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The 4 types of Work from the Phoenix Project as a start on the Theory of Constraints</span></a></li>
+
+
+
+ <li><a href="kiss.php" target="_newtab" title="Keep it sweet and simple">KISS
+ Principle</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Keep it simple, stupid!</span></a></li>
+ </ul>
+ </div>
+ <div style=
+ "float: left; width:4cm; padding: 15px; border-style: none; position: relative; z-index: 4;">
+ <ul id="menu3" style="width: 205px">
+ <li><a href="strategy.php" target="_newtab" title=
+ "What is Strategic and Project planning">Strategy &amp; Planning</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Without a plan any road will
+ take you there. I.e. anywhere. Click here to dig into the
+ fascinating world of Strategic Planning. From this will emerge our
+ business opportunities and also project plans.</span></a></li>
+ <li><a href="barrierssi.php" target="_newtab" title=
+ "Barriers to Strategy Implementation">&nbsp;Barriers to implementing<br>Strategy</a></li>
+ <li><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">These barriers explain why it
+ is difficult to implement formulated plans.</span></a></li>
+
+
+
+  <li><a href="/war4thrusts.php" target="_newtab" title=
+ "The 4 Thrusts in War">&nbsp;The 4 Thrusts in War</a></li>
+  <li><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">There are 4 key thrusts required to win any war.  Or succeed with any project!</span></a></li>
+
+<li><a href="/38strat.php" target="_newtab" title=
+ "The dubious Art of Being Right">&nbsp;The dubious Art of Being Right</a></li>
+  <li><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The Art of Being Right - Schopenhauers 38 Strategems.  Or how to succeed with any argument! Note:  PMWay, from an ethics perspective, does not support these strategems.  An awareness of them, to understand and deflect them towards higher levels of quality of logic in dicsussion and argument, is the goal.</span></a></li>
+
+
+
+
+<li><a href="/charioteer.php" target="_newtab" title=
+ "Truth and Genuine Rationality">&nbsp;Truth and Genuine Rationality</a></li>
+  <li><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Argument comes with an ethic.
+The best that mere rhetoric can offer is mere winning.
+Truth and genuine rationality demand a far higher standard than that.</span></a></li>
+
+<li><a href="/square.php" target="_newtab" title=
+ "The Square of Opposition">&nbsp;The Square of Opposition</a></li>
+  <li><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The Square of Opposition towards higher levels of quality of logic in dicsussion and argument.</span></a></li>
+
+
+
+
+<li><a href="/bogusarguments.php" target="_newtab" title=
+ "Fielding the fallacies with logical argument">&nbsp;Fielding the fallacies with logical argument</a></li>
+  <li><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The fallacies are a list of bogus arguments that defy logical argument.  An awareness of them, to understand and deflect them towards higher levels of quality of logic in dicsussion and argument, is the goal.</span></a></li>
+
+
+
+
+
+
+
+  <li><a href="tactics.php" target="_newtab" title=
+ "Team tactics and Techniques">&nbsp;Team tactics and Techniques</a></li>
+  <li><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Tactics are how its done on the field of play.  I.e. play by play towards achieving the goal!</span></a></li>
+
+
+
+ <li><a href="tscurve.php" target="_newtab" title="TRIZ">Innovation and TRIZ</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">It is not easy to innovate.
+ TRIZ is one approach into this fascinating subject.</span></a></li>
+ </ul>
+ </div>
+ <div style=
+ "float: left; width:4cm; padding: 15px; border-style: none; position: relative; z-index: 3;">
+ <ul id="menu4">
+<li><a href="uml.php" target="_newtab" title="UML">Process Design with UML</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Process Design is key for
+ CMMi. USE UML to start pinning down processes!</span></a></li>
+
+ <li><a href="aris.php" target="_newtab" title="UML">Process Design with ARIS</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Process Design is key for
+ CMMi. Gartner recommends the industry standard ARIS for a platform to pull together everything from LOVEME and UML above to totally dust company processes!</span></a></li>
+
+
+
+  <li><a href="lovem.php" target="_newtab" title="LOVEM">LOVEM<br>
+ Client focused Process Design</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Process Design is key for
+ CMMi. USE UML to start pinning down processes!</span></a></li>
+
+ <li><a href="verval.php" target="_newtab" title="Validation and Verification">
+ Verification and Validation</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Validation and Verification
+ must be done to ensure we jump the gap and achieve success!</span></a></li>
+ <li><a href="test.php" target="_newtab" title="Bug me correctly">Bug me correctly</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Please bug me correctly.</span></a></li>
+
+ <li><a href="swstandards.php" target="_newtab" title="SW Standards Dashboard">SW ENG STANDARDS DASHBOARD</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The World of Software Engineering Standards</span></a></li>
+
+ <li><a href="sqaindex.php" target="_newtab" title="SQA Dashboard">SQA DASHBOARD</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">The World of Software Quality
+ Assurance</span></a></li>  <li><a href="thelaws.php" target="_newtab" title="The IT Laws">
+  The IT Laws&nbsp;</a> <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Here are the key IT Laws.</span></a></li>
+
+ <li><a href="close.php" target="_newtab" title="Close the Loop">Close the Loop</a><a href=
+ "#nogo" style="width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Closing the Loop is what it is
+ all about. I.e. Start, Change, STOP! Client Happy to sign off!
+ Well done!</span></a></li>
+ </ul>
+ </div>
+ <div style=
+ "float: left; width:4cm; padding: 15px; border-style: none; position: relative; z-index: 2;">
+ <ul id="menu5">
+
+
+ <li><a href="cmmiareas.php" target="_newtab" title="Capability Maturity">CMM &amp;
+ CMMi DASHBOARD</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Find out why CMM and CMMi is
+ so highly regarded and an essential requirement to ensure ongoing
+ success with projectization!</span></a></li>
+
+  <li><a href="dunkruger.php" target="_newtab" title="Dunning Kruger Effect">The Dunning-Kruger Effect</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">There is a tight link between the Capability Maturity Model and the Dunning Kruger Effect.  Can you see it?</span></a></li>
+
+
+
+ <li><a href="itil.php" target="_newtab" title="ITIL">
+ ITIL</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">ITIL</span></a></li>
+
+ <li><a href="cobit.php" target="_newtab" title="Cobit 5">
+Cobit 5</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">Cobit 5</span></a></li>
+
+
+ <li><a href="af.php" target="_newtab" title="American Football - CMMi in Action">
+ American Football - CMMi in Action</a><a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">American Football - CMMi in
+ Action! Why? Because it is played on a &quot;ruler!&quot; Remember if you
+ can't measure it you can't improve it!</span></a></li>
+
+
+<li><a href="tarpit.php" target="_newtab" title="Silver bullets in the Tarpit">
+ Silver bullets for the Tarpit&nbsp;</a> <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">I believe these (the key
+ concepts on this page and especially those listed here) are the essential (clip) of silver bullets that are needed to survive the tarpit. Let me know if you agree or not and why. I would love
+ to hear your comments.</span></a></li>
+
+
+ <li><a href="realstoryatcmmil1.php" target="_newtab" title="CMMi L1 PM Rules">
+ For Fun:<br>CMMi L1 PM Rules&nbsp;</a> <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">For fun here are some rules you may need to understand or follow if there is an insistance where you work on playing the game (JUST DO IT!) at CMMi Level 1.</span></a></li>
+  <li><a href="crocodile.php" target="_newtab" title="a lesson in bureaucratic stupidity">
+ For Fun:<br>How to catch a crocodile&nbsp;</a> <a href="#nogo" style=
+ "width: 0.8em; height: 17px; color:#8EC1DC">?<span style=
+ "position: relative; left: -230px;">You will be amazed how stupid
+ and bureaucratic some processes and organizations can become. Take
+ a look again at the KISS tab. Remember Complex Rules and
+ Regulations give rise to Simple Stupid Behaviour!</span></a></li>
+ </ul>
+ </div>
+
+
+-->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+
+
+    {% endif %}
+
+
+{% endblock %}

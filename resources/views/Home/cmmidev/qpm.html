@@ -1,0 +1,1221 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>QPM</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header"><table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="3%"><p><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="52%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+</div>
+<!-- #BeginEditable "content" -->
+
+
+	<div id="contentWrapper">
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong>Quantitative Project 
+					Management (QPM)</strong><br />
+					<br />
+					</td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>Quantitative Project Management (QPM) is distinct from Integrated Project Management +IPPD (IPM+IPPD) and the other Project Management process areas in that QPM focuses on quantifiable measurable attributes in order to statistically manage the selected processes/subprocesses.
+
+The key word here is Quantitative which applies to measures and analytic techniques that are useful for Project Control. 
+ 
+</p>
+
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Quantitative Project Management (QPM)<br />A Project Management Process Area at Maturity Level 4</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Quantitative Project Management (QPM) is to quantitatively manage the project’s defined process to achieve the project’s established quality and process-performance objectives.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+<br>
+<br>
+The Quantitative Project Management process area involves the following:
+<br>
+<br>
+<li>Establishing and maintaining the project’s quality and process-performance objectives
+</li><li>Identifying suitable subprocesses that compose the project’s defined process based on historical stability and capability data found in process-performance baselines or models
+</li><li>Selecting the subprocesses of the project’s defined process to be statistically managed
+</li><li>Monitoring the project to determine whether the project’s objectives for quality and process performance are being satisfied, and identifying appropriate corrective action
+</li><li>Selecting the measures and analytic techniques to be used in statistically managing the selected subprocesses
+</li><li>Establishing and maintaining an understanding of the variation of the selected subprocesses using the selected measures and analytic techniques
+</li><li>Monitoring the performance of the selected subprocesses to determine whether they are capable of satisfying their quality and process-performance objectives, and identifying corrective action
+</li><li>Recording statistical and quality management data in the organization’s measurement repository
+<br>
+<br>
+The quality and process-performance objectives, measures, and baselines identified here are developed as described in the Organizational Process Performance process area. Subsequently, the results of performing the processes associated with the Quantitative Project Management process area (e.g., measurement definitions and measurement data) become part of the organizational process assets referred to in the Organizational Process Performance process area.
+<br>
+<br>
+To effectively address the specific practices in this process area, the organization should have already established a set of standard processes and related organizational process assets, such as the organization’s measurement repository and the organization’s process asset library for use by each project in establishing its defined process. The project’s defined process is a set of subprocesses that form an integrated and coherent lifecycle for the project. It is established, in part, through selecting and tailoring processes from the organization’s set of standard processes. (See the definition of “defined process” in the glossary.)
+<br>
+<br>
+The project should also ensure that the measurements and progress of the supplier’s efforts are made available. Establishment of effective relationships with suppliers is necessary for the successful implementation of this process area’s specific practices.
+<br>
+<br>
+Process performance is a measure of the actual process results achieved. Process performance is characterized by both process measures (e.g., effort, cycle time, and defect removal efficiency) and product measures (e.g., reliability, defect density, and response time).
+<br>
+<br>
+Subprocesses are defined components of a larger defined process. For example, a typical organization’s development process may be defined in terms of subprocesses such as requirements development, design, build, test, and peer review. The subprocesses themselves may be further decomposed as necessary into other subprocesses and process elements.
+<br>
+<br>
+One essential element of quantitative management is having confidence in estimates (i.e., being able to predict the extent to which the project can fulfill its quality and process-performance objectives). The subprocesses that will be statistically managed are chosen based on identified needs for predictable performance. (See the definitions of “statistically managed process,” “quality and process-performance objective,” and “quantitatively managed process” in the glossary.)
+<br>
+<br>
+Another essential element of quantitative management is understanding the nature and extent of the variation experienced in process performance, and recognizing when the project’s actual performance may not be adequate to achieve the project’s quality and process-performance objectives.
+<br>
+<br>
+Statistical management involves statistical thinking and the correct use of a variety of statistical techniques, such as run charts, control charts, confidence intervals, prediction intervals, and tests of hypotheses. Quantitative management uses data from statistical management to help the project predict whether it will be able to achieve its quality and process-performance objectives and identify what corrective action should be taken.
+<br>
+<br>
+This process area applies to managing a project, but the concepts found here also apply to managing other groups and functions. Applying these concepts to managing other groups and functions may not necessarily contribute to achieving the organization’s business objectives, but may help these groups and functions control their own processes.
+<br>
+<br>
+Examples of other groups and functions include the following:
+<br>
+<br>
+</li><li>Quality assurance
+</li><li>Process definition and improvement
+</li><li>Effort reporting
+</li><li>Customer complaint handling
+</li><li>Problem tracking and reporting
+<br>
+<br>
+Related Process Areas
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about monitoring and controlling the project and taking corrective action.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about establishing measurable objectives, specifying the measures and analyses to be performed, obtaining and analyzing measures, and providing results.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about the organization’s quality and process-performance objectives, process-performance analyses, process-performance baselines, and process-performance models.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about the organizational process assets, including the organization’s measurement repository.
+<br>
+<br>
+Refer to the Integrated Project Management process area for more information about establishing and maintaining the project’s defined process.
+<br>
+<br>
+Refer to the Causal Analysis and Resolution process area for more information about how to identify the causes of defects and other problems, and taking action to prevent them from occurring in the future.
+<br>
+<br>
+Refer to the Organizational Innovation and Deployment process area for more information about selecting and deploying improvements that support the organization’s quality and process-performance objectives. 
+<br>
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1 Quantitatively Manage the Project</b>
+<br>
+<br>
+The project is quantitatively managed using quality and process-performance objectives.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<a name="sp11"></a>
+<b>SP 1.1 Establish the Project’s Objectives</b>
+<br>
+<br>
+Establish and maintain the project’s quality and process-performance objectives.
+<br>
+<br>
+When establishing the project’s quality and process-performance objectives, it is often useful to think ahead about which processes from the organization’s set of standard processes will be included in the project’s defined process, and what the historical data indicates regarding their process performance. These considerations will help in establishing realistic objectives for the project. Later, as the project’s actual performance becomes known and more predictable, the objectives may need to be revised.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>The project’s quality and process-performance objectives
+<br>
+<br>
+Subpractice 1: Review the organization's objectives for quality and process performance.
+<br>
+<br>
+The intent of this review is to ensure that the project understands the broader business context in which the project will need to operate. The project’s objectives for quality and process performance are developed in the context of these overarching organizational objectives.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about the organization’s quality and process-performance objectives.
+<br>
+<br>
+Subpractice 2: Identify the quality and process performance needs and priorities of the customer, suppliers, end users, and other relevant stakeholders.
+<br>
+<br>
+Examples of quality and process-performance attributes for which needs and priorities might be identified include the following:
+<br>
+<br>
+</li><li>Functionality
+</li><li>Reliability
+</li><li>Maintainability
+</li><li>Usability
+</li><li>Duration
+</li><li>Predictability
+</li><li>Timeliness
+</li><li>Accuracy
+<br>
+<br>
+Subpractice 3: Identify how process performance is to be measured.
+<br>
+<br>
+Consider whether the measures established by the organization are adequate for assessing progress in fulfilling customer, end-user, and other stakeholder needs and priorities. It may be necessary to supplement these with additional measures.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about defining measures.
+<br>
+<br>
+Subpractice 4: Define and document measurable quality and process-performance objectives for the project.
+<br>
+<br>
+Defining and documenting objectives for the project involve the following:
+<br>
+<br>
+</li><li>Incorporating the organization’s quality and process-performance objectives
+</li><li>Writing objectives that reflect the quality and process-performance needs and priorities of the customer, end users, and other stakeholders, and the way these objectives should be measured
+<br>
+<br>
+Examples of quality attributes for which objectives might be written include the following:
+<br>
+<br>
+</li><li>Mean time between failures
+</li><li>Critical resource utilization
+</li><li>Number and severity of defects in the released product
+</li><li>Number and severity of customer complaints concerning the provided service
+<br>
+<br>
+Examples of process-performance attributes for which objectives might be written include the following:
+<br>
+<br>
+</li><li>Percentage of defects removed by product verification activities (perhaps by type of verification, such as peer reviews and testing)
+</li><li>Defect escape rates
+</li><li>Number and density of defects (by severity) found during the first year following product delivery (or start of service)
+</li><li>Cycle time
+</li><li>Percentage of rework time
+<br>
+<br>
+Subpractice 5: Derive interim objectives for each lifecycle phase, as appropriate, to monitor progress toward achieving the project’s objectives.
+<br>
+<br>
+An example of a method to predict future results of a process is the use of process-performance models to predict the latent defects in the delivered product using interim measures of defects identified during product verification activities (e.g., peer reviews and testing).
+<br>
+<br>
+Subpractice 6: Resolve conflicts among the project’s quality and process-performance objectives (e.g., if one objective cannot be achieved without compromising another objective).
+<br>
+<br>
+Resolving conflicts involves the following:
+<br>
+<br>
+</li><li>Setting relative priorities for the objectives
+</li><li>Considering alternative objectives in light of long-term business strategies as well as short-term needs
+</li><li>Involving the customer, end users, senior management, project management, and other relevant stakeholders in the tradeoff decisions
+</li><li>Revising the objectives as necessary to reflect the results of the conflict resolution
+<br>
+<br>
+Subpractice 7: Establish traceability to the project’s quality and process-performance objectives from their sources.
+<br>
+<br>
+Examples of sources for objectives include the following:
+<br>
+<br>
+</li><li>Requirements
+</li><li>Organization’s quality and process-performance objectives
+</li><li>Customer’s quality and process-performance objectives
+</li><li>Business objectives
+</li><li>Discussions with customers and potential customers
+</li><li>Market surveys
+<br>
+<br>
+An example of a method to identify and trace these needs and priorities is Quality Function Deployment (QFD).
+<br>
+<br>
+Subpractice 8: Define and negotiate quality and process-performance objectives for suppliers.
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about establishing and maintaining agreements with suppliers.
+<br>
+<br>
+Subpractice 9: Revise the project’s quality and process-performance objectives as necessary.
+<br>
+<br>
+<a name="sp12"></a> 
+<b>SP 1.2 Compose the Defined Process</b>
+<br>
+<br>
+Select the subprocesses that compose the project’s defined process based on historical stability and capability data.
+<br>
+<br>
+Refer to the Integrated Project Management process area for more information about establishing and maintaining the project’s defined process.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about the organization’s process asset library, which might include a process element of known and needed capability.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about the organization’s process-performance baselines and process-performance models.
+<br>
+<br>
+Subprocesses are identified from the process elements in the organization’s set of standard processes and the process artifacts in the organization’s process asset library.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Criteria used in identifying which subprocesses are valid candidates for inclusion in the project’s defined process
+</li><li>Candidate subprocesses for inclusion in the project’s defined process
+</li><li>Subprocesses to be included in the project’s defined process
+</li><li>Identified risks when selected subprocesses lack a process-performance history
+<br>
+<br>
+Subpractice 1: Establish the criteria to use in identifying which subprocesses are valid candidates for use.
+<br>
+<br>
+Identification may be based on the following:
+<br>
+<br>
+</li><li>Quality and process-performance objectives
+</li><li>Existence of process-performance data
+</li><li>Product line standards
+</li><li>Project lifecycle models
+</li><li>Customer requirements
+</li><li>Laws and regulations
+<br>
+<br>
+Subpractice 2: Determine whether the subprocesses that are to be statistically managed, and that were obtained from the organizational process assets, are suitable for statistical management.
+<br>
+<br>
+A subprocess may be more suitable for statistical management if it has a history of the following:
+<br>
+<br>
+</li><li>Stable performance in previous comparable instances
+</li><li>Process-performance data that satisfies the project’s quality and process-performance objectives
+<br>
+<br>
+Historical data are primarily obtained from the organization’s process-performance baselines. However, these data may not be available for all subprocesses.
+<br>
+<br>
+Subpractice 3: Analyze the interaction of subprocesses to understand the relationships among the subprocesses and the measured attributes of the subprocesses.
+<br>
+<br>
+Examples of analysis techniques include system dynamics models and simulations.
+<br>
+<br>
+Subpractice 4: Identify the risk when no subprocess is available that is known to be capable of satisfying the quality and process-performance objectives (i.e., no capable subprocess is available or the capability of the subprocess is not known).
+<br>
+<br>
+Even when a subprocess has not been selected to be statistically managed, historical data and process-performance models may indicate that the subprocess is not capable of satisfying the quality and process-performance objectives.
+<br>
+<br>
+Refer to the Risk Management process area for more information about risk identification and analysis.
+<br>
+<br>
+<a name="sp13"></a> 
+<b>SP 1.3 Select the Subprocesses that Will Be Statistically Managed</b>
+<br>
+<br>
+Select the subprocesses of the project's defined process that will be statistically managed.
+<br>
+<br>
+Selecting the subprocesses to be statistically managed is often a concurrent and iterative process of identifying applicable project and organization quality and process-performance objectives, selecting the subprocesses, and identifying the process and product attributes to measure and control. Often the selection of a process, quality and process-performance objective, or measurable attribute will constrain the selection of the other two. For example, if a particular process is selected, the measurable attributes and quality and process-performance objectives may be constrained by that process.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Quality and process-performance objectives that will be addressed by statistical management
+</li><li>Criteria used in selecting which subprocesses will be statistically managed
+</li><li>Subprocesses that will be statistically managed
+</li><li>Identified process and product attributes of the selected subprocesses that should be measured and controlled
+<br>
+<br>
+Subpractice 1: Identify which of the quality and process-performance objectives of the project will be statistically managed.
+<br>
+<br>
+Subpractice 2: Identify the criteria to be used in selecting the subprocesses that are the main contributors to achieving the identified quality and process-performance objectives and for which predictable performance is important.
+<br>
+<br>
+Examples of sources for criteria used in selecting subprocesses include the following:
+<br>
+<br>
+</li><li>Customer requirements related to quality and process performance
+</li><li>Quality and process-performance objectives established by the customer
+</li><li>Quality and process-performance objectives established by the organization
+</li><li>Organization’s performance baselines and models
+</li><li>Stable performance of the subprocess on other projects
+</li><li>Laws and regulations
+<br>
+<br>
+Subpractice 3: Select the subprocesses that will be statistically managed using the selection criteria.
+<br>
+<br>
+It may not be possible to statistically manage some subprocesses (e.g., where new subprocesses and technologies are being piloted). In other cases, it may not be economically justifiable to apply statistical techniques to certain subprocesses.
+<br>
+<br>
+Subpractice 4: Identify the product and process attributes of the selected subprocesses that will be measured and controlled.
+<br>
+<br>
+Examples of product and process attributes include the following:
+<br>
+<br>
+</li><li>Defect density
+</li><li>Cycle time
+</li><li>Test coverage
+<br>
+<br>
+Typical Work Products
+</li><li>Project lifecycle phases
+<br>
+<br>
+<a name="sp14"></a> 
+<b>SP 1.4 Manage Project Performance</b>
+<br>
+<br>
+Monitor the project to determine whether the project’s objectives for quality and process performance will be satisfied, and identify corrective action as appropriate.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about analyzing and using measures.
+<br>
+<br>
+A prerequisite for such a comparison is that the selected subprocesses of the project’s defined process are being statistically managed and their process capability is understood. The specific practices of specific goal 2 provide detail on statistically managing the selected subprocesses.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Estimates (predictions) of the achievement of the project’s quality and process-performance objectives
+</li><li>Documentation of the risks in achieving the project’s quality and process-performance objectives
+</li><li>Documentation of actions needed to address the deficiencies in achieving the project’s objectives
+<br>
+<br>
+Subpractice 1: Periodically review the performance of each subprocess and the capability of each subprocess selected to be statistically managed to appraise progress toward achieving the project’s quality and process-performance objectives.
+<br>
+<br>
+The process capability of each selected subprocess is determined with respect to that subprocess’ established quality and process-performance objectives. These objectives are derived from the project’s quality and process-performance objectives, which are for the project as a whole.
+<br>
+<br>
+Subpractice 2: Periodically review the actual results achieved against established interim objectives for each phase of the project lifecycle to appraise progress toward achieving the project’s quality and process-performance objectives.
+<br>
+<br>
+Subpractice 3: Track suppliers’ results for achieving their quality and process-performance objectives.
+<br>
+<br>
+Subpractice 4: Use process-performance models calibrated with obtained measures of critical attributes to estimate progress toward achieving the project’s quality and process-performance objectives.
+<br>
+<br>
+Process-performance models are used to estimate progress toward achieving objectives that cannot be measured until a future phase in the project lifecycle. An example is the use of process-performance models to predict the latent defects in the delivered product using interim measures of defects identified during peer reviews.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about process-performance models.
+<br>
+<br>
+The calibration is based on the results obtained from performing the previous subpractices.
+<br>
+<br>
+Subpractice 5: Identify and manage the risks associated with achieving the project’s quality and process-performance objectives.
+<br>
+<br>
+Refer to the Risk Management process area for more information about identifying and managing risks.
+<br>
+<br>
+Example sources of the risks include the following:
+<br>
+<br>
+</li><li>Inadequate stability and capability data in the organization’s measurement repository
+</li><li>Subprocesses having inadequate performance or capability
+</li><li>Suppliers not achieving their quality and process-performance objectives
+</li><li>Lack of visibility into supplier capability
+</li><li>Inaccuracies in the organization’s process-performance models for predicting future performance
+</li><li>Deficiencies in predicted process performance (estimated progress)
+</li><li>Other identified risks associated with identified deficiencies
+<br>
+<br>
+Subpractice 7: Determine and document actions needed to address the deficiencies in achieving the project’s quality and process-performance objectives.
+<br>
+<br>
+The intent of these actions is to plan and deploy the right set of activities, resources, and schedule to place the project back on track as much as possible to meet its objectives.
+<br>
+<br>
+Examples of actions that can be taken to address deficiencies in achieving the project’s objectives include the following:
+<br>
+<br>
+</li><li>Changing quality or process-performance objectives so that they are within the expected range of the project’s defined process
+</li><li>Improving the implementation of the project’s defined process so as to reduce its normal variability (reducing variability may bring the project’s performance within the objectives without having to move the mean)
+</li><li>Adopting new subprocesses and technologies that have the potential for satisfying the objectives and managing the associated risks
+</li><li>Identifying the risk and risk mitigation strategies for the deficiencies
+</li><li>Terminating the project
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about taking corrective action.
+<br>
+<br>
+<a name="sg2"></a>  
+<b>SG 2 Statistically Manage Subprocess Performance</b>
+<br>
+<br>
+The performance of selected subprocesses within the project's defined process is statistically managed.
+<br>
+<br>
+This specific goal describes an activity critical to achieving the Quantitatively Manage the Project specific goal of this process area. The specific practices under this specific goal describe how to statistically manage the subprocesses whose selection was described in the specific practices under the first specific goal. When the selected subprocesses are statistically managed, their capability to achieve their objectives can be determined. By these means, it will be possible to predict whether the project will be able to achieve its objectives, which is key to quantitatively managing the project.
+<br>
+<br>
+<a name="sp21"></a>
+<b>SP 2.1 Select Measures and Analytic Techniques</b>
+<br>
+<br>
+Select the measures and analytic techniques to be used in statistically managing the selected subprocesses.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about establishing measurable objectives; on defining, collecting, and analyzing measures; and on revising measures and statistical analysis techniques.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Definitions of the measures and analytic techniques to be used in (or proposed for) statistically managing the subprocesses
+</li><li>Operational definitions of the measures, their collection points in the subprocesses, and how the integrity of the measures will be determined
+</li><li>Traceability of measures back to the project’s quality and process-performance objectives
+</li><li>Instrumented organizational support environment to support automatic data collection
+<br>
+<br>
+Subpractice 1: Identify common measures from the organizational process assets that support statistical management.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about common measures.
+<br>
+<br>
+Product lines or other stratification criteria may categorize common measures.
+<br>
+<br>
+Subpractice 2: Identify additional measures that may be needed for this instance to cover critical product and process attributes of the selected subprocesses.
+<br>
+<br>
+In some cases, measures may be research oriented. Such measures should be explicitly identified.
+<br>
+<br>
+Subpractice 1: Identify the measures that are appropriate for statistical management.
+<br>
+<br>
+Critical criteria for selecting statistical management measures include the following:
+<br>
+<br>
+</li><li>Controllable (e.g., can a measure’s values be changed by changing how the subprocess is implemented?)
+</li><li>Adequate performance indicator (e.g., is the measure a good indicator of how well the subprocess is performing relative to the objectives of interest?)
+<br>
+<br>
+Examples of subprocess measures include the following:
+<br>
+<br>
+</li><li>Requirements volatility
+</li><li>Ratios of estimated to measured values of the planning parameters (e.g., size, cost, and schedule)
+</li><li>Coverage and efficiency of peer reviews
+</li><li>Test coverage and efficiency
+</li><li>Effectiveness of training (e.g., percent of planned training completed and test scores)
+</li><li>Reliability
+</li><li>Percentage of the total defects inserted or found in the different phases of the project lifecycle
+</li><li>Percentage of the total effort expended in the different phases of the project lifecycle
+<br>
+<br>
+Subpractice 4: Specify the operational definitions of the measures, their collection points in the subprocesses, and how the integrity of the measures will be determined.
+<br>
+<br>
+Operational definitions are stated in precise and unambiguous terms. They address two important criteria as follows:
+<br>
+<br>
+</li><li>Communication: What has been measured, how it was measured, what the units of measure are, and what has been included or excluded
+</li><li>Repeatability: Whether the measurement can be repeated, given the same definition, to get the same results
+<br>
+<br>
+Subpractice 5: Analyze the relationship of the identified measures to the organization’s and project’s objectives, and derive objectives that state specific target measures or ranges to be met for each measured attribute of each selected subprocess.
+<br>
+<br>
+Subpractice 6: Instrument the organizational support environment to support collection, derivation, and analysis of statistical measures.
+<br>
+<br>
+The instrumentation is based on the following:
+<br>
+<br>
+</li><li>Description of the organization’s set of standard processes
+</li><li>Description of the project’s defined process
+</li><li>Capabilities of the organizational support environment
+<br>
+<br>
+Subpractice 7: Identify the appropriate statistical analysis techniques that are expected to be useful in statistically managing the selected subprocesses.
+<br>
+<br>
+The concept of “one size does not fit all” applies to statistical analysis techniques. What makes a particular technique appropriate is not just the type of measures, but more important, how the measures will be used and whether the situation warrants applying that technique. The appropriateness of the selection may need to be investigated from time to time.
+<br>
+<br>
+Examples of statistical analysis techniques are given in the next specific practice.
+<br>
+<br>
+Subpractice 8: Revise the measures and statistical analysis techniques as necessary.
+<br>
+<br>
+<a name="sp22"></a>
+<b>SP 2.2 Apply Statistical Methods to Understand Variation</b>
+<br>
+<br>
+Establish and maintain an understanding of the variation of the selected subprocesses using the selected measures and analytic techniques.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about collecting, analyzing, and using measurement results.
+<br>
+<br>
+Understanding variation is achieved, in part, by collecting and analyzing process and product measures so that special causes of variation can be identified and addressed to achieve predictable performance.
+<br>
+<br>
+A special cause of process variation is characterized by an unexpected change in process performance. Special causes are also known as “assignable causes” because they can be identified, analyzed, and addressed to prevent recurrence.
+<br>
+<br>
+The identification of special causes of variation is based on departures from the system of common causes of variation. These departures can be identified by the presence of extreme values, or other identifiable patterns in the data collected from the subprocess or associated work products. Knowledge of variation and insight about potential sources of anomalous patterns are typically needed to detect special causes of variation.
+<br>
+<br>
+Sources of anomalous patterns of variation may include the following:
+<br>
+<br>
+</li><li>Lack of process compliance
+</li><li>Undistinguished influences of multiple underlying subprocesses on the data
+</li><li>Ordering or timing of activities within the subprocess
+</li><li>Uncontrolled inputs to the subprocess
+</li><li>Environmental changes during subprocess execution
+</li><li>Schedule pressure
+</li><li>Inappropriate sampling or grouping of data
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Collected measures
+</li><li>Natural bounds of process performance for each measured attribute of each selected subprocess
+</li><li>Process performance compared to the natural bounds of process performance for each measured attribute of each selected subprocess
+<br>
+<br>
+Subpractice 1: Establish trial natural bounds for subprocesses having suitable historical performance data.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about organizational process-performance baselines.
+<br>
+<br>
+Natural bounds of an attribute are the range within which variation normally occurs. All processes will show some variation in process and product measures each time they are executed. The issue is whether this variation is due to common causes of variation in the normal performance of the process or to some special cause that can and should be identified and removed.
+<br>
+<br>
+When a subprocess is initially executed, suitable data for establishing trial natural bounds are sometimes available from prior instances of the subprocess or comparable subprocesses, process-performance baselines, or process-performance models. These data are typically contained in the organization’s measurement repository. As the subprocess is executed, data specific to that instance are collected and used to update and replace the trial natural bounds. However, if the subprocess in question has been materially tailored, or if the conditions are materially different from those in previous instantiations, the data in the repository may not be relevant and should not be used.
+<br>
+<br>
+In some cases, there may be no historical comparable data (e.g., when introducing a new subprocess, when entering a new application domain, or when significant changes have been made to the subprocess). In such cases, trial natural bounds will have to be made from early process data of this subprocess. These trial natural bounds must then be refined and updated as subprocess execution continues.
+<br>
+<br>
+Examples of criteria for determining whether data are comparable include the following:
+<br>
+<br>
+</li><li>Product lines
+</li><li>Application domain
+</li><li>Work product and task attributes (e.g., size of product)
+</li><li>Size of project
+<br>
+<br>
+Subpractice 2: Collect data, as defined by the selected measures, on the subprocesses as they execute.
+<br>
+<br>
+Subpractice 3: Calculate the natural bounds of process performance for each measured attribute.
+<br>
+<br>
+Examples of where the natural bounds are calculated include the following:
+<br>
+<br>
+</li><li>Control charts
+</li><li>Confidence intervals (for parameters of distributions)
+</li><li>Prediction intervals (for future outcomes)
+<br>
+<br>
+Subpractice 4: Identify special causes of variation.
+<br>
+<br>
+An example of a criterion for detecting a special cause of process variation in a control chart is a data point that falls outside of the 3-sigma control limits.
+<br>
+<br>
+The criteria for detecting special causes of variation are based on statistical theory and experience and depend on economic justification. As criteria are added, special causes are more likely to be identified if present, but the likelihood of false alarms also increases.
+<br>
+<br>
+Subpractice 5: Analyze the special cause of process variation to determine the reasons the anomaly occurred.
+<br>
+<br>
+Examples of techniques for analyzing the reasons for special causes of variation include the following:
+<br>
+<br>
+</li><li>Cause-and-effect (fishbone) diagrams
+</li><li>Designed experiments
+</li><li>Control charts (applied to subprocess inputs or to lower level subprocesses)
+</li><li>Subgrouping (analyzing the same data segregated into smaller groups based on an understanding of how the subprocess was implemented facilitates isolation of special causes)
+<br>
+<br>
+Some anomalies may simply be extremes of the underlying distribution rather than problems. The people implementing a subprocess are usually the ones best able to analyze and understand special causes of variation.
+<br>
+<br>
+Subpractice 6: Determine what corrective action should be taken when special causes of variation are identified.
+<br>
+<br>
+Removing a special cause of process variation does not change the underlying subprocess. It addresses an error in the way the subprocess is being executed.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about taking corrective action.
+<br>
+<br>
+Subpractice 7: Recalculate the natural bounds for each measured attribute of the selected subprocesses as necessary.
+<br>
+<br>
+Recalculating the (statistically estimated) natural bounds is based on measured values that signify that the subprocess has changed, not on expectations or arbitrary decisions.
+<br>
+<br>
+Examples of when the natural bounds may need to be recalculated include the following:
+<br>
+<br>
+</li><li>There are incremental improvements to the subprocess
+</li><li>New tools are deployed for the subprocess
+</li><li>A new subprocess is deployed
+</li><li>The collected measures suggest that the subprocess mean has permanently shifted or the subprocess variation has permanently changed
+<br>
+<br>
+<a name="sp23"></a>
+<b>SP 2.3 Monitor Performance of the Selected Subprocesses</b>
+<br>
+<br>
+Monitor the performance of the selected subprocesses to determine their capability to satisfy their quality and process-performance objectives, and identify corrective action as necessary.
+<br>
+<br>
+The intent of this specific practice is to do the following:
+<br>
+<br>
+</li><li>Determine statistically the process behavior expected from the subprocess
+</li><li>Appraise the probability that the process will meet its quality and process-performance objectives
+</li><li>Identify the corrective action to be taken, based on a statistical analysis of the process-performance data
+<br>
+<br>
+Corrective action may include renegotiating the affected project objectives, identifying and implementing alternative subprocesses, or identifying and measuring lower level subprocesses to achieve greater detail in the performance data. Any or all of these actions are intended to help the project use a more capable process. (See the definition of “capable process” in the glossary.)
+<br>
+<br>
+A prerequisite for comparing the capability of a selected subprocess against its quality and process-performance objectives is that the performance of the subprocess is stable and predictable with respect to its measured attributes.
+<br>
+<br>
+Process capability is analyzed for those subprocesses and those measured attributes for which (derived) objectives have been established. Not all subprocesses or measured attributes that are statistically managed are analyzed regarding process capability.
+<br>
+<br>
+The historical data may be inadequate for initially determining whether the subprocess is capable. It also is possible that the estimated natural bounds for subprocess performance may shift away from the quality and process-performance objectives. In either case, statistical control implies monitoring capability as well as stability.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Natural bounds of process performance for each selected subprocess compared to its established (derived) objectives
+</li><li>For each subprocess, its process capability
+</li><li>For each subprocess, the actions needed to address deficiencies in its process capability
+<br>
+<br>
+Subpractice 1: Compare the quality and process-performance objectives to the natural bounds of the measured attribute.
+<br>
+<br>
+This comparison provides an appraisal of the process capability for each measured attribute of a subprocess. These comparisons can be displayed graphically, in ways that relate the estimated natural bounds to the objectives or as process capability indices, which summarize the relationship of the objectives to the natural bounds.
+<br>
+<br>
+Subpractice 2: Monitor changes in quality and process-performance objectives and selected subprocess’ process capability.
+<br>
+<br>
+Subpractice 3: Identify and document subprocess capability deficiencies.
+<br>
+<br>
+Subpractice 4: Determine and document actions needed to address subprocess capability deficiencies.
+<br>
+<br>
+Examples of actions that can be taken when a selected subprocess’s performance does not satisfy its objectives include the following:
+<br>
+<br>
+</li><li>Changing quality and process-performance objectives so that they are within the subprocess’ process capability
+</li><li>Improving the implementation of the existing subprocess so as to reduce its normal variability (reducing variability may bring the natural bounds within the objectives without having to move the mean)
+</li><li>Adopting new process elements and subprocesses and technologies that have the potential for satisfying the objectives and managing the associated risks
+</li><li>Identifying risks and risk mitigation strategies for each subprocess’s process capability deficiency
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about taking corrective action.
+<br>
+<br>
+<a name="sp24"></a>
+<b>SP 2.4 Record Statistical Management Data</b>
+<br>
+<br>
+Record statistical and quality management data in the organization’s measurement repository.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about managing and storing data, measurement definitions, and results.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about the organization’s measurement repository.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Statistical and quality management data recorded in the organization’s measurement repository
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the quantitative project management process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the quantitative project management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for quantitatively managing the project using quality and process-performance objectives, and statistically managing selected subprocesses within the project’s defined process.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the quantitative project management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the quantitative project management process can be included in (or referenced by) the project plan, which is described in the Project Planning process area.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the quantitative project management process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Special expertise in statistics and statistical process control may be needed to define the techniques for statistical management of selected subprocesses, but staff will use the tools and techniques to perform the statistical management. Special expertise in statistics may also be needed for analyzing and interpreting the measures resulting from statistical management.
+<br>
+<br>
+Examples of other resources provided include the following tools:
+<br>
+<br>
+</li><li>System dynamics models
+</li><li>Automated test-coverage analyzers
+</li><li>Statistical process and quality control packages
+</li><li>Statistical analysis packages
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the quantitative project management process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the quantitative project management process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Process modeling and analysis
+</li><li>Process measurement data selection, definition, and collection
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the quantitative project management process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Subprocesses to be included in the project’s defined process
+</li><li>Operational definitions of the measures, their collection points in the subprocesses, and how the integrity of the measures will be determined
+</li><li>Collected measures
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the quantitative project management process as planned.
+Elaboration:
+Examples of activities for stakeholder involvement include the following:
+</li><li>Establishing project objectives
+</li><li>Resolving issues among the project’s quality and process-performance objectives
+</li><li>Appraising performance of the selected subprocesses
+</li><li>Identifying and managing the risks in achieving the project’s quality and process-performance objectives
+</li><li>Identifying what corrective action should be taken
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the quantitative project management process against the plan for performing the process and take appropriate corrective action.
+Elaboration:
+Examples of measures and work products used in monitoring and controlling include the following:
+</li><li>Profile of subprocesses under statistical management (e.g., number planned to be under statistical management, number currently being statistically managed, and number that are statistically stable)
+</li><li>Number of special causes of variation identified
+</li><li>Schedule of data collection, analysis, and reporting activities in a measurement and analysis cycle as it relates to quantitative management activities
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the quantitative project management process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Quantitatively managing the project using quality and process-performance objectives
+</li><li>Statistically managing selected subprocesses within the project’s defined process
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Subprocesses to be included in the project’s defined process
+</li><li>Operational definitions of the measures
+</li><li>Collected measures
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the quantitative project management process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+This generic goal's appearance here reflects its location in the continuous representation.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined quantitative project management process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the quantitative project management process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Records of statistical and quality management data from the project, including results from the periodic review of the actual performance of the statistically managed subprocesses against established interim objectives of the project
+</li><li>Process and product quality assurance report that identifies inconsistent but compliant implementations of subprocesses being considered for statistical management
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the quantitative project management process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the quantitative project management process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the quantitative project management process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the quantitative project management process.
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+
+

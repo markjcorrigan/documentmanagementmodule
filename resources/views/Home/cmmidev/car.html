@@ -1,0 +1,811 @@
+{% extends 'base.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}CAR{% endif %}  {% endblock %}
+{% block body %}
+{% if current_user %}
+<div class="container">
+<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong><a href="/home/cmmidevdash">Causal Analysis and 
+					Resolution (CAR)</a></strong><br />
+					<br />
+					</td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+				<tr>
+					<td><p>Causal analysis and resolution is one of the center pillars 
+					of Software Process Improvement. Without tracing defects to 
+					their root cause there is no opportunity to reduce (or 
+					eliminate) those defects. Key to Causal Analysis is Product 
+					Quality Assurance (Software Quality Assurance) which 
+					establishes process descriptions, standards, and procedures 
+					and then checks for <i>noncompliance</i> issues against 
+					those documented standards and procedures. Identification of 
+					defects provides initial input to Casual analysis as does an 
+					ongoing
+					<a href="http://www.sqa.net/softwarequalitymetrics.php">
+					Software Metrics</a> (measurements) program, implemented as 
+					Measurement and Analysis (MA) under CMMi. <br />
+					<br />
+					Under CMMi for Software Development the following 3 Process 
+					Areas form the backbone for a Software Process Improvement 
+					framework:</p> 
+					<ul>
+					<li>Process and Product Quality Assurance (PPQA) </li>
+					<li>Measurement and Analysis (MA) </li>
+					<li>Causal Analysis and Resolution (CAR) </li></ul>
+					<p><b>Causal analysis is, however, a science and an art</b>. 
+					There is an old saying that is applicable to Casual Analysis 
+					and it goes:- <br />
+					<br />
+					<b>It ain't what you don't know that hurts you, it is what 
+					you know that ain't so.</b> <br />
+					<br />
+					Basically Causal Analysis is the result of deep analytical 
+					(and possibly experimental) research which is often 
+					initiated by hunches or experience. <br />
+					Casual Analysis can be broken into two phases: </p>
+					<ul>
+					<li>Macro problem identification. </li>
+					<li>Micro problem identification. </li>
+					</ul>
+					<p>
+					<b>Macro problem identification</b> uses tools such as
+					<a href="http://quality.enr.state.nc.us/tools/fishbone.htm">
+					Cause-and-effect (fishbone) diagrams</a>, this tool will 
+					scope the cause to a number of possibilities. This tool, and 
+					other similar tools, are only identifying <i>possibilities</i> 
+					and typically look at: </p>
+					<ul>
+					
+					<li>The 4 M's - Methods, Machines, Materials, Manpower. </li>
+					<li>The 4 P's - Place, Procedure, People, Policies . </li>
+					<li>The 4 S's - Surroundings, Suppliers, Systems, Skills.</li>
+					</ul>
+					<p>
+					Once <b>possibilities</b> have been identified (and this is 
+					usually based on experience and hunches) then the <b>Micro 
+					problem identification</b> can begin. <br />
+					Micro problem identification attempts to pin point the 
+					cause, or at least one cause, to a level that can be 
+					addressed. <br />
+					<br />
+					For this stage of problem identification a <i>Hypothesis</i> 
+					or assumption is formed and then tested. <br />
+					For example Software Supportability can be measured by <i>
+					mean time to repair MTTR</i>, one cause on high MTTR would 
+					be code that is difficult to read. Since code complexity 
+					itself can be measured (see
+					<a href="http://en.wikipedia.org/wiki/cyclomatic_complexity">
+					Cyclomatic complexity</a>) it is possible to test the 
+					assumption (lower code complexity will yield lower MTTR) of 
+					the cause for high Support costs. <br />
+					In this way coding standards could be introduced and their 
+					effects measured to verify a cause for high MTTR. <br />
+					<br />
+					In the above example <i>experiments</i> could also be 
+					conducted using sample code (containing defects). In this 
+					way two sets of programmers would be shown either structured 
+					(less complicated) code or unstructured (more complicated) 
+					code containing the same defect. Then the time taken to find 
+					the defect could be determined. This information could prove 
+					the assumption being tested, to identify a cause of the 
+					problem. <br />
+					<br />
+					Such experiments may or may not 
+					be practical in all situations but they underline the points 
+					of:</p> 
+					<ul>
+					<li>Proving an assumption via experimentation, to pin point 
+					a cause of a given defect. </li>
+					<li>Identifying the correct metric (measurement) that 
+					quantifies the presence of the defect. </li>
+					<li>Only examining one variable, on the cause of the defect, 
+					at a time. </li>
+					</ul>
+					<p>It is noted that all CMMI Process Areas are subjected to 
+					Root Cause Analysis, in order to achieve capability rating 
+					of level 5. <br />
+					Also Root Cause Analysis is the foundation of any Software 
+					Process Improvement framework (not just CMMi). <br />
+					</td>
+				</tr>
+			</table>
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr>
+					<td align="left"><font size="2"><b>Causal Analysis and Resolution (CAR)<br />A Support Process Area at Maturity Level 5</b> <br />
+					<br />
+					<b>Purpose</b> <br />
+					<br />
+					The purpose of Causal Analysis and Resolution (CAR) is to 
+					identify causes of defects and other problems and take 
+					action to prevent them from occurring in the future. <br />
+					<br />
+					<b>Introductory Notes </b><br>The Causal 
+					Analysis and Resolution process area involves the following:
+					<br />
+					<br />
+					<li>Identifying and analyzing causes of defects and other 
+					problems </li>
+					<li>Taking specific actions to remove the causes and prevent 
+					the occurrence of those types of defects and problems in the 
+					future <br />
+					<br />
+					Causal analysis and resolution improves quality and 
+					productivity by preventing the introduction of defects into 
+					a product. Reliance on detecting defects after they have 
+					been introduced is not cost effective. It is more effective 
+					to prevent defects from being introduced by integrating 
+					causal analysis and resolution activities into each phase of 
+					the project. Since defects and problems may have been 
+					previously encountered on other projects or in earlier 
+					phases or tasks of the current project, causal analysis and 
+					resolution activities are a mechanism for communicating 
+					lessons learned among projects. The types of defects and 
+					other problems encountered are analyzed to identify any 
+					trends. Based on an understanding of the defined process and 
+					how it is implemented, the root causes of the defects and 
+					the future implications of the defects are determined. 
+					Causal analysis may also be performed on problems unrelated 
+					to defects. For example, causal analysis may be used to 
+					improve quality attributes such as cycle time. Improvement 
+					proposals, simulations, dynamic systems models, engineering 
+					analyses, new business directives, or other items may 
+					initiate such analysis. When it is impractical to perform 
+					causal analysis on all defects, defect targets are selected 
+					by tradeoffs on estimated investments and estimated returns 
+					of quality, productivity and cycle time. A measurement 
+					process should already be in place. The defined measures can 
+					be used, though in some instances new measures may be needed 
+					to analyze the effects of the process change. Refer to the 
+					Measurement and Analysis process area for more information 
+					about establishing objectives for measurement and analysis, 
+					specifying the measures and analyses to be performed, 
+					obtaining and analyzing measures, and reporting results. 
+					Causal Analysis and Resolution activities provide a 
+					mechanism for projects to evaluate their processes at the 
+					local level and look for improvements that can be 
+					implemented. When improvements are judged to be effective, 
+					the information is extended to the organizational level. 
+					Refer to the Organizational Innovation and Deployment 
+					process area for more information about improving 
+					organizational level processes through proposed improvements 
+					and action proposals. The informative material in this 
+					process area is written with the assumption that the 
+					specific practices are applied to a quantitatively managed 
+					process. The specific practices of this process area may be 
+					applicable, but with reduced value, if this assumption is 
+					not met. See the definitions of â€œstable processâ€ and â€œcommon 
+					cause of process variationâ€ in the glossary. <br />
+					<br />
+					<b>Related Process Areas.</b> <br />
+					<br />
+					Refer to the Quantitative Project Management process area 
+					for more information about the analysis of process 
+					performance and the creation of process capability measures 
+					for selected project processes. <br />
+					<br />
+					Refer to the Organizational Innovation and Deployment 
+					process area for more information about the selection and 
+					deployment of improvements to organizational processes and 
+					technologies. <br />
+					<br />
+					Refer to the Measurement and Analysis process area for more 
+					information about establishing objectives for measurement 
+					and analysis, specifying the measures and analyses to be 
+					performed, obtaining and analyzing measures, and reporting 
+					results. <br />
+					<br />
+					<a name="sgp"></a><b>Specific Practices by Goal</b> <br />
+					<br />
+					<a name="sgone"></a><b>SG 1 Determine Causes of Defects</b>
+					<br />
+					Root causes of defects and other problems are systematically 
+					determined. <br />
+					A root cause is a source of a defect such that, if it is 
+					removed, the defect is decreased or removed. <br />
+					<br />
+					<a name="sponeone"></a><b>SP 1.1 Select Defect Data for 
+					Analysis</b> <br />
+					Select the defects and other problems for analysis. <br />
+					Typical Work Products <br />
+					<br />
+					Defect and problem data selected for further analysis <br />
+					<br />
+					Subpractice 1: Gather relevant defect or problem data. <br />
+					Examples of relevant defect data may include the following:
+					<br />
+					<br />
+					</li>
+					<li>Defects reported by the customer </li>
+					<li>Defects found in peer reviews </li>
+					<li>Defects found in testing <br />
+					<br />
+					Examples of relevant problem data may include the following:
+					<br />
+					<br />
+					</li>
+					<li>Project management problem reports requiring corrective 
+					action </li>
+					<li>Process capability problems </li>
+					<li>Process duration measurements </li>
+					<li>Earned value measurements by process (e.g., cost 
+					performance index) </li>
+					<li>Resource throughput, utilization, or response time 
+					measurements <br />
+					<br />
+					<i>Refer to the Verification process area for more 
+					information about work product verification. <br />
+					Refer to the Quantitative Project Management process area 
+					for more information about statistical management. </i>
+					<br />
+					<br />
+					Subpractice 2: Determine which defects and other problems 
+					will be analyzed further. <br />
+					When determining which defects to analyze further, consider 
+					the impact of the defects, their frequency of occurrence, 
+					the similarity between defects, the cost of analysis, the 
+					time and resources needed, the safety considerations, etc.
+					<br />
+					<br />
+					Examples of methods for selecting defects and other problems 
+					include the following: <br />
+					<br />
+					</li>
+					<li>Pareto analysis </li>
+					<li>Histograms </li>
+					<li>Process capability analysis <br />
+					<br />
+					<center>
+<SCRIPT type=text/javascript><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT>
+					</center><a name="sponetwo"></a><b>SP 1.2 Analyze Causes</b>
+					<br />
+					<br />
+					Perform causal analysis of selected defects and other 
+					problems and propose actions to address them. <br />
+					<br />
+					The purpose of this analysis is to develop solutions to the 
+					identified problems by analyzing the relevant data and 
+					producing action proposals for implementation. <br />
+					Typical Work Products <br />
+					Action proposal <br />
+					<br />
+					Subpractice 1: Conduct causal analysis with the people who 
+					are responsible for performing the task. <br />
+					<br />
+					Causal analysis is performed, typically in meetings, with 
+					those people who have an understanding of the selected 
+					defect or problem under study. The people who have the best 
+					understanding of the selected defect are typically those 
+					responsible for performing the task. <br />
+					<br />
+					Examples of when to perform causal analysis include the 
+					following: <br />
+					<br />
+					</li>
+					<li>When a stable process does not meet its specified 
+					quality and process-performance objectives </li>
+					<li>During the task, if and when problems warrant a causal 
+					analysis meeting </li>
+					<li>When a work product exhibits an unexpected deviation 
+					from its requirements <br />
+					<br />
+					<i>Refer to the Quantitative Project Management process area 
+					for more information about achieving the projectâ€™s quality 
+					and process-performance objectives. </i><br />
+					<br />
+					Subpractice 2: Analyze selected defects and other problems 
+					to determine their root causes. <br />
+					<br />
+					Depending on the type and number of defects, it may make 
+					sense to first group the defects before identifying their 
+					root causes. <br />
+					<br />
+					Examples of methods to determine root causes include the 
+					following: </li>
+					<li>Cause-and-effect (fishbone) diagrams </li>
+					<li>Check sheets <br />
+					<br />
+					Subpractice 3: Group the selected defects and other problems 
+					based on their root causes. <br />
+					<br />
+					Examples of cause groups, or categories, include the 
+					following: <br />
+					<br />
+					</li>
+					<li>Inadequate training </li>
+					<li>Breakdown of communications </li>
+					<li>Not accounting for all details of a task </li>
+					<li>Making mistakes in manual procedures (e.g., typing) </li>
+					<li>Process deficiency <br />
+					<br />
+					Subpractice 4: Propose and document actions that need to be 
+					taken to prevent the future occurrence of similar defects or 
+					other problems. <br />
+					<br />
+					Examples of proposed actions include changes to the 
+					following: <br />
+					<br />
+					</li>
+					<li>The process in question </li>
+					<li>Training </li>
+					<li>Tools </li>
+					<li>Methods </li>
+					<li>Communications </li>
+					<li>Work products <br />
+					<br />
+					Examples of specific actions include the following: <br />
+					<br />
+					</li>
+					<li>Providing training in common problems and techniques for 
+					preventing them </li>
+					<li>Changing a process so that error-prone steps do not 
+					occur </li>
+					<li>Automating all or part of a process </li>
+					<li>Reordering process activities </li>
+					<li>Adding process steps to prevent defects, such as task 
+					kickoff meetings to review common defects and actions to 
+					prevent them <br />
+					<br />
+					An action proposal usually documents the following: <br />
+					<br />
+					</li>
+					<li>Originator of the action proposal </li>
+					<li>Description of the problem </li>
+					<li>Description of the defect cause </li>
+					<li>Defect cause category </li>
+					<li>Phase when the problem was introduced </li>
+					<li>Phase when the defect was identified </li>
+					<li>Description of the action proposal </li>
+					<li>Action proposal category <br />
+					<br />
+					<a name="sgtwo"></a><b>SG 2 Address Causes of Defects</b>
+					<br />
+					Root causes of defects and other problems are systematically 
+					addressed to prevent their future occurrence. <br />
+					<br />
+					Projects operating according to a well-defined process will 
+					systematically analyze the operation where problems still 
+					occur and implement process changes to eliminate root causes 
+					of selected problems. <br />
+					<br />
+					<a name="sptwoone"></a><b>SP 2.1 Implement the Action Proposals</b>
+					<br />
+					<br />
+					Implement the selected action proposals that were developed 
+					in causal analysis. <br />
+					<br />
+					Action proposals describe the tasks necessary to remove the 
+					root causes of the analyzed defects or problems and avoid 
+					their reoccurrence. <br />
+					<br />
+					Only changes that prove to be of value should be considered 
+					for broad implementation. <br />
+					Typical Work Products <br />
+					</li>
+					<li>Action proposals selected for implementation </li>
+					<li>Improvement proposals <br />
+					<br />
+					Subpractice 1: Analyze the action proposals and determine 
+					their priorities. <br />
+					<br />
+					Criteria for prioritizing action proposals include the 
+					following: <br />
+					<br />
+					</li>
+					<li>Implications of not addressing the defects </li>
+					<li>Cost to implement process improvements to prevent the 
+					defects </li>
+					<li>Expected impact on quality <br />
+					<br />
+					Subpractice 2: Select the action proposals that will be 
+					implemented. <br />
+					<br />
+					Subpractice 3: Create action items for implementing the 
+					action proposals. <br />
+					<br />
+					Examples of information provided in an action item include 
+					the following: <br />
+					<br />
+					</li>
+					<li>Person responsible for implementing it </li>
+					<li>Description of the areas affected by it </li>
+					<li>People who are to be kept informed of its status </li>
+					<li>Next date that status will be reviewed </li>
+					<li>Rationale for key decisions </li>
+					<li>Description of implementation actions </li>
+					<li>Time and cost for identifying the defect and correcting 
+					it </li>
+					<li>Estimated cost of not fixing the problem <br />
+					<br />
+					To implement the action proposals, the following tasks must 
+					be done: <br />
+					<br />
+					</li>
+					<li>Make assignments </li>
+					<li>Coordinate the persons doing the work </li>
+					<li>Review the results </li>
+					<li>Track the action items to closure <br />
+					<br />
+					Experiments may be conducted for particularly complex 
+					changes. <br />
+					<br />
+					Examples of experiments include the following: <br />
+					<br />
+					</li>
+					<li>Using a temporarily modified process </li>
+					<li>Using a new tool <br />
+					<br />
+					Action items may be assigned to members of the causal 
+					analysis team, members of the project team, or other members 
+					of the organization. <br />
+					<br />
+					Subpractice 4: Identify and remove similar defects that may 
+					exist in other processes and work products. <br />
+					<br />
+					Subpractice 5: Identify and document improvement proposals 
+					for the organizationâ€™s set of standard processes. <br />
+					<br />
+					Refer to the Organizational Innovation and Deployment 
+					process area for more information about the selection and 
+					deployment of improvement proposals for the organizationâ€™s 
+					set of standard processes. <br />
+					<br />
+					<a name="sptwotwo"></a><b>SP 2.2 Evaluate the Effect of Changes</b>
+					<br />
+					<br />
+					Evaluate the effect of changes on process performance. <br />
+					<br />
+					Refer to the Quantitative Project Management process area 
+					for more information about analyzing process performance and 
+					creating process capability measures for selected processes.
+					<br />
+					<br />
+					Once the changed process is deployed across the project, the 
+					effect of the changes must be checked to gather evidence 
+					that the process change has corrected the problem and 
+					improved performance. <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Measures of performance and performance change <br />
+					<br />
+					Subpractices 1: Measure the change in the performance of the 
+					project's defined process as appropriate. <br />
+					<br />
+					This subpractice determines whether the selected change has 
+					positively influenced the process performance and by how 
+					much. <br />
+					<br />
+					An example of a change in the performance of the projectâ€™s 
+					defined design process would be the change in the defect 
+					density of the design documentation, as statistically 
+					measured through peer reviews before and after the 
+					improvement has been made. On a statistical process control 
+					chart, this would be represented by a change in the mean.
+					<br />
+					<br />
+					Subpractices 2: Measure the capability of the project's 
+					defined process as appropriate. <br />
+					<br />
+					This subpractice determines whether the selected change has 
+					positively influenced the ability of the process to meet its 
+					quality and process-performance objectives, as determined by 
+					relevant stakeholders. <br />
+					<br />
+					An example of a change in the capability of the projectâ€™s 
+					defined design process would be a change in the ability of 
+					the process to stay within its process-specification 
+					boundaries. This can be statistically measured by 
+					calculating the range of the defect density of design 
+					documentation, as collected in peer reviews before and after 
+					the improvement has been made. On a statistical process 
+					control chart, this would be represented by lowered control 
+					limits. <br />
+					<br />
+					<a name="sptwothree"></a><b>SP 2.3 Record Data</b> <br />
+					<br />
+					Record causal analysis and resolution data for use across 
+					the project and organization. <br />
+					<br />
+					Data are recorded so that other projects and organizations 
+					can make appropriate process changes and achieve similar 
+					results. <br />
+					<br />
+					Record the following: <br />
+					<br />
+					</li>
+					<li>Data on defects and other problems that were analyzed
+					</li>
+					<li>Rationale for decisions </li>
+					<li>Action proposals from causal analysis meetings </li>
+					<li>Action items resulting from action proposals </li>
+					<li>Cost of the analysis and resolution activities </li>
+					<li>Measures of changes to the performance of the defined 
+					process resulting from resolutions <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Causal analysis and resolution records <br />
+					<br />
+					<a name="ggp"></a><b>Generic Practices by Goal</b> <br />
+					<br />
+					<a name="gg1"></a><b>GG 1 Achieve Specific Goals</b> <br />
+					<br />
+					The process supports and enables achievement of the specific 
+					goals of the process area by transforming identifiable input 
+					work products to produce identifiable output work products.
+					<br />
+					<br />
+					<a name="gp11"></a><b>GP 1.1 Perform Specific Practices</b>
+					<br />
+					<br />
+					Perform the specific practices of the causal analysis and 
+					resolution process to develop work products and provide 
+					services to achieve the specific goals of the process area.
+					<br />
+					<br />
+					<a name="gg2"></a><b>GG 2 Institutionalize a Managed Process</b>
+					<br />
+					<br />
+					The process is institutionalized as a managed process. <br />
+					<br />
+					<a name="gp21"></a><b>GP 2.1 Establish an Organizational 
+					Policy</b> <br />
+					<br />
+					Establish and maintain an organizational policy for planning 
+					and performing the causal analysis and resolution process.
+					<br />
+					<br />
+					Elaboration: <br />
+					<br />
+					This policy establishes organizational expectations for 
+					identifying and systematically addressing root causes of 
+					defects and other problems. <br />
+					<br />
+					<a name="gp22"></a><b>GP 2.2 Plan the Process</b> <br />
+					<br />
+					Establish and maintain the plan for performing the causal 
+					analysis and resolution process. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					This plan for performing the causal analysis and resolution 
+					process can be included in (or referenced by) the project 
+					plan, which is described in the Project Planning process 
+					area. This plan differs from the action proposals and 
+					associated action items described in several specific 
+					practices in this process area. The plan called for in this 
+					generic practice would address the projectâ€™s overall causal 
+					analysis and resolution process (perhaps tailored from a 
+					standard process maintained by the organization). In 
+					contrast, the process action proposals and associated action 
+					items address the activities needed to remove a specific 
+					root cause under study. <br />
+					<br />
+					<a name="gp23"></a><b>GP 2.3 Provide Resources</b> <br />
+					<br />
+					Provide adequate resources for performing the causal 
+					analysis and resolution process, developing the work 
+					products, and providing the services of the process. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of resources provided include the following tools:
+					<br />
+					<br />
+					</li>
+					<li>Database systems </li>
+					<li>Process modeling tools </li>
+					<li>Statistical analysis packages </li>
+					<li>Tools, methods, and analysis techniques (e.g., Ishikawa 
+					or fishbone diagram, Pareto analysis, histograms, process 
+					capability studies, or control charts) <br />
+					<br />
+					<a name="gp24"></a><b>GP 2.4 Assign Responsibility</b> <br />
+					<br />
+					Assign responsibility and authority for performing the 
+					process, developing the work products, and providing the 
+					services of the causal analysis and resolution process.
+					<br />
+					<br />
+					<a name="gp25"></a><b>GP 2.5 Train People</b> <br />
+					<br />
+					Train the people performing or supporting the causal 
+					analysis and resolution process as needed. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of training topics include the following: <br />
+					<br />
+					</li>
+					<li>Quality management methods (e.g., root cause analysis)
+					<br />
+					<br />
+					<a name="gp26"></a><b>GP 2.6 Manage Configurations</b> <br />
+					<br />
+					Place designated work products of the causal analysis and 
+					resolution process under appropriate levels of control.
+					<br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of work products placed under control include the 
+					following: <br />
+					<br />
+					</li>
+					<li>Action proposals </li>
+					<li>Action proposals selected for implementation </li>
+					<li>Causal analysis and resolution records <br />
+					<br />
+					<a name="gp27"></a><b>GP 2.7 Identify and Involve Relevant 
+					Stakeholders</b> <br />
+					<br />
+					Identify and involve the relevant stakeholders of the causal 
+					analysis and resolution process as planned. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of activities for stakeholder involvement include 
+					the following: <br />
+					<br />
+					</li>
+					<li>Conducting causal analysis </li>
+					<li>Assessing the action proposals <br />
+					<br />
+					<a name="gp28"></a><b>GP 2.8 Monitor and Control the Process</b>
+					<br />
+					<br />
+					Monitor and control the causal analysis and resolution 
+					process against the plan for performing the process and take 
+					appropriate corrective action. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of measures and work products used in monitoring 
+					and controlling include the following: <br />
+					<br />
+					</li>
+					<li>Number of root causes removed </li>
+					<li>Change in quality or process performance per instance of 
+					the causal analysis and resolution process <br />
+					<br />
+					</li>
+					<li>Schedule of activities for implementing a selected 
+					action proposal <br />
+					<br />
+					<a name="gp29"></a><b>GP 2.9 Objectively Evaluate Adherence</b>
+					<br />
+					<br />
+					Objectively evaluate adherence of the causal analysis and 
+					resolution process against its process description, 
+					standards, and procedures, and address noncompliance. <br />
+					<br />
+					Elaboration: Examples of activities reviewed include the 
+					following: <br />
+					<br />
+					</li>
+					<li>Determining causes of defects </li>
+					<li>Addressing causes of defects <br />
+					<br />
+					Examples of work products reviewed include the following:
+					<br />
+					<br />
+					</li>
+					<li>Action proposals selected for implementation </li>
+					<li>Causal analysis and resolution records <br />
+					<br />
+					<a name="gp210"></a><b>GP 2.10 Review Status with Higher 
+					Level Management</b> <br />
+					<br />
+					Review the activities, status, and results of the causal 
+					analysis and resolution process with higher level management 
+					and resolve issues. <br />
+					<br />
+					<a name="gg3"></a><b>GG 3 Institutionalize a Defined Process</b>
+					<br />
+					<br />
+					The process is institutionalized as a defined process. <br />
+					This generic goal's appearance here reflects its location in 
+					the continuous representation. <br />
+					<br />
+					<a name="gp31"></a><b>GP 3.1 Establish a Defined Process</b>
+					<br />
+					<br />
+					Establish and maintain the description of a defined causal 
+					analysis and resolution process. <br />
+					<br />
+					<a name="gp32"></a><b>GP 3.2 Collect Improvement Information</b>
+					<br />
+					<br />
+					Collect work products, measures, measurement results, and 
+					improvement information derived from planning and performing 
+					the causal analysis and resolution process to support the 
+					future use and improvement of the organizationâ€™s processes 
+					and process assets. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of work products, measures, measurement results, 
+					and improvement information include the following: <br />
+					<br />
+					</li>
+					<li>Action proposals </li>
+					<li>Number of action proposals that are open and for how 
+					long </li>
+					<li>Action proposal status reports <br />
+					<br />
+					<a name="gg4"></a><b>GG 4 Institutionalize a Quantitatively 
+					Managed Process</b> <br />
+					<br />
+					The process is institutionalized as a quantitatively managed 
+					process. <br />
+					<br />
+					<a name="gp41"></a><b>GP 4.1 Establish Quantitative 
+					Objectives for the Process</b> <br />
+					<br />
+					Establish and maintain quantitative objectives for the 
+					causal analysis and resolution process, which address 
+					quality and process performance, based on customer needs and 
+					business objectives. <br />
+					<br />
+					<a name="gp42"></a><b>GP 4.2 Stabilize Subprocess 
+					Performance</b> <br />
+					<br />
+					Stabilize the performance of one or more subprocesses to 
+					determine the ability of the causal analysis and resolution 
+					process to achieve the established quantitative quality and 
+					process-performance objectives. <br />
+					<br />
+					<a name="gg5"></a><b>GG 5 Institutionalize an Optimizing 
+					Process</b> <br />
+					<br />
+					The process is institutionalized as an optimizing process.
+					<br />
+					<br />
+					<a name="gp51"></a><b>GP 5.1 Ensure Continuous Process 
+					Improvement</b> <br />
+					<br />
+					Ensure continuous improvement of the causal analysis and 
+					resolution process in fulfilling the relevant business 
+					objectives of the organization. <br />
+					<br />
+					<a name="gp52"></a><b>GP 5.2 Correct Root Causes of Problems</b>
+					<br />
+					<br />
+					Identify and correct the root causes of defects and other 
+					problems in the causal analysis and resolution process.
+									
+					</center></li>
+					</font></td>
+				</tr>
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	</div>
+{% endif %}
+{% endblock %}

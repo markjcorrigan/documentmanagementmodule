@@ -1,0 +1,2504 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}SAFe 5.1 Scrum Master{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+
+
+<style>
+
+/* a:link {color:#00FF00} */
+/* a:visited {color:#00FF00} */
+/* a:hover {color:#FF00FF} */
+a:focus {background: yellow;
+  color: navy; } /* this one! */
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) {
+   .carousel-indicators {
+
+    bottom: -35px;
+
+
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+   .carousel-indicators {
+    position: relative;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+     .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+
+  small {
+    font-size:8pt;
+}
+
+
+</style>
+
+
+<div class="container-fluid" align="center" >
+  <h5><a href="https://www.scaledagileframework.com/" target=_blank">SAFe 5.1</a> Scrum Master (SSM) <br><a href="/home/sasm" >SASM</a>, <a href="/home/spo" >SPO</a>, <a href="/home/sdp" >SDP</a></h5>
+  <p><i><small>NB: <u>Underlined links</u> show where User Stories are referred to in the BOK. I.e. do not fool yourself that Features are not based on Quality User Stories!</u></small></i></p>
+  <p><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="0"
+      title=""><small>Agile Economics</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="1"
+      title=""><small>Deliver Value Incrementally</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="2"
+      title=""><small>NOT MVP</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="3"
+      title=""><small>MVP ASAP</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="4"
+      title=""><small><u>Agile Frameworks</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="5"
+      title=""><small>AM</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="6"
+	  title=""><small>Scrum Roots</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="7"
+	  title=""><small>Scrum Values</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="8"
+	  title=""><small>SAFe Terminology</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="9"
+	  title=""><small><u>Scrum Loop</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="10"
+	  title=""><small><u>Iteration</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="11"
+	  title=""><small><u>Team Backlog</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="12"
+	  title=""><small><u>Story Sliced</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="13"
+	  title=""><small>SOS Core Values</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="14"
+	  title=""><small>LA Principles</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="15"
+	  title=""><small>ATeamInSafe</small></a>|<br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="16"
+	  title=""><small>CrossF Teams</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="17"
+	  title=""><small><u>Team Responsibilities</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="18"
+	  title=""><small><u>PO SM Roles</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="19"
+	  title=""><small>ART</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="20"
+	  title=""><small>ART Events (System Demo I & A)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="21"
+	  title=""><small>SM Focus</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="22"
+	  title=""><small><u>SM in SAFe</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="23"
+	  title=""><small>SM as SL</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="24"
+	  title=""><small>High Performing Teams</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="25"
+	  title=""><small>HPT Stages</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="26"
+	  title=""><small>Team Events</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="27"
+	  title=""><small>Meetings</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="28"
+	  title=""><small>Powerful Questions</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="29"
+	  title=""><small>SM Shift</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="30"
+	  title=""><small>Collab</small></a>|<br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="31"
+	  title=""><small>ART Sync</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="32"
+	  title=""><small>Team Productivity</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="33"
+	  title=""><small>Team Dysfunctions</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="34"
+	  title=""><small>Working Agreements</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="35"
+	  title=""><small><u>PI Planning</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="36"
+	  title=""><small>PI Process</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="37"
+	  title=""><small><u>Stories imp Features</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="38"
+	  title=""><small><u>Stories HowTo</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="39"
+	  title=""><small><u>INVEST</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="40"
+	  title=""><small><u>3Cs</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="41"
+	  title=""><small><u>Behaviour DD</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="42"
+	  title=""><small><u>Acceptance Criteria</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="43"
+	  title=""><small><u>Enabler Stories</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="44"
+	  title=""><small><u>Refactors Spikes</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="45"
+	  title=""><small><u>Story Points</u></small></a>|<br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="46"
+	  title=""><small><u>Estimating Poker</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="47"
+	  title=""><small><u>SM in Estimating</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="48"
+	  title=""><small><u>Team Velocity (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="49"
+	  title=""><small><u>Capacity Calc</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="50"
+	  title=""><small><u>PI Team Breakout SM Role (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="51"
+	  title=""><small>PI D1 Man review</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="52"
+	  title=""><small>PI D2 Plan Adj</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="53"
+	  title=""><small>PI Prog Board</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="54"
+	  title=""><small>PI Final Plan</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="55"
+	  title=""><small>ROAM</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="56"
+	  title=""><small>Fist of 5</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="57"
+	  title=""><small>PI Retro</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="58"
+	  title=""><small>PI RTE Takeaway</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="59"
+	  title=""><small>PI SM Role (AP)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="60"
+	  title=""><small><u>Iteration Planning</u></small></a>|<br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="61"
+	  title=""><small><u>IP SM Role (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="62"
+	  title=""><small><u>DSU (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="63"
+	  title=""><small><u>Burn Up / BD</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="64"
+	  title=""><small>IP tracking SM Role (AP)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="65"
+	  title=""><small><u>Backlog R (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="66"
+	  title=""><small><u>Iteration Review (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="67"
+	  title=""><small><u>Iteration Retro (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="68"
+	  title=""><small>DevOps CALMR</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="69"
+	  title=""><small><u>Innov & Plan Iteration (without)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="70"
+	  title=""><small>Inspect Adapt and Prob Solve Workshop and System Demo (AP)</small></a>
+
+
+
+
+
+
+
+
+
+
+  </p>
+</div>
+
+<div id="i" class="carousel slide" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#i" data-slide-to="0" title="Agile Economics" class="active"></li>
+		 <li data-target="#i" data-slide-to="1" title="Deliver Value Incrementally"></li>
+	    <li data-target="#i" data-slide-to="2" title="NOT MVP"></li>
+    <li data-target="#i" data-slide-to="3" title="MVP ASAP"></li>
+ <li data-target="#i" data-slide-to="4" title="Agile Frameworks"></li>
+    <li data-target="#i" data-slide-to="5" title="AM"></li>
+	 <li data-target="#i" data-slide-to="6" title="Scrum Roots"></li>
+	 	    <li data-target="#i" data-slide-to="7" title="Scrum Values"></li>
+	     <li data-target="#i" data-slide-to="8" title="Scrum and SAFe Terminology"></li>
+	     <li data-target="#i" data-slide-to="9" title="Scrum Loop"></li>
+    <li data-target="#i" data-slide-to="10" title="Scrum Iteration"></li>
+	  <li data-target="#i" data-slide-to="11" title="Team Backlog"></li>
+	  	  <li data-target="#i" data-slide-to="12" title="Story Sliced"></li>
+		  	  <li data-target="#i" data-slide-to="13" title="SOS Core Values"></li>
+			    <li data-target="#i" data-slide-to="14" title="Principles"></li>
+				<li data-target="#i" data-slide-to="15" title="Team Positioned"></li>
+				<li data-target="#i" data-slide-to="16" title="Cross Functional Teams"></li>
+					<li data-target="#i" data-slide-to="17" title="Teams Responsibilities"></li>
+						<li data-target="#i" data-slide-to="18" title="Teams PO and SM Roles"></li>
+								<li data-target="#i" data-slide-to="19" title="ART"></li>
+									<li data-target="#i" data-slide-to="20" title="ART Events"></li>
+												<li data-target="#i" data-slide-to="21" title="SM focus"></li>
+														<li data-target="#i" data-slide-to="22" title="SM in SAFe"></li>
+																	<li data-target="#i" data-slide-to="23" title="SM as SL"></li>
+																		<li data-target="#i" data-slide-to="24" title="High Performing Teams"></li>
+																			<li data-target="#i" data-slide-to="25" title="Storming"></li>
+																				<li data-target="#i" data-slide-to="26" title="Team Events"></li>
+																						<li data-target="#i" data-slide-to="27" title="Meetings"></li>
+<li data-target="#i" data-slide-to="28" title="Powerful Questions"></li>
+	<li data-target="#i" data-slide-to="29" title="SM Shift"></li>
+		<li data-target="#i" data-slide-to="30" title="Collab"></li>
+				<li data-target="#i" data-slide-to="31" title="ART Sync"></li>
+					<li data-target="#i" data-slide-to="32" title="TeamProdBy"></li>
+						<li data-target="#i" data-slide-to="33" title="Team Dysfunctions"></li>
+										<li data-target="#i" data-slide-to="34" title="Working Agreements"></li>
+										<li data-target="#i" data-slide-to="35" title="What is PI planning"></li>
+											<li data-target="#i" data-slide-to="36" title="PI process"></li>
+											<li data-target="#i" data-slide-to="37" title="StoriesImpFeatures"></li>
+												<li data-target="#i" data-slide-to="38" title="Stories How2"></li>
+													<li data-target="#i" data-slide-to="39" title="INVEST"></li>
+														<li data-target="#i" data-slide-to="40" title="3cs"></li>
+															<li data-target="#i" data-slide-to="41" title="BDD"></li>
+																<li data-target="#i" data-slide-to="42" title="AC"></li>
+																	<li data-target="#i" data-slide-to="43" title="Enabler Stories"></li>
+																			<li data-target="#i" data-slide-to="44" title="Refactors and Spikes"></li>
+																							<li data-target="#i" data-slide-to="45" title="Story Points"></li>
+																								<li data-target="#i" data-slide-to="46" title="Estimating Poker"></li>
+																								<li data-target="#i" data-slide-to="47" title="SM role in Estimating"></li>
+																									<li data-target="#i" data-slide-to="48" title="Velocity"></li>
+																											<li data-target="#i" data-slide-to="49" title="Capacity Calc"></li>
+																												<li data-target="#i" data-slide-to="50" title="PI Team Breakout SM Role"></li>
+																												<li data-target="#i" data-slide-to="51" title="Man Review PID1"></li>
+																													<li data-target="#i" data-slide-to="52" title="Plan Adj PID2"></li>
+																													<li data-target="#i" data-slide-to="53" title="PI Prog Board"></li>
+																													<li data-target="#i" data-slide-to="54" title="PI Final Plan"></li>
+																														<li data-target="#i" data-slide-to="55" title="ROAM"></li>
+																															<li data-target="#i" data-slide-to="56" title="FistO5"></li>
+																																<li data-target="#i" data-slide-to="57" title="PI Retro"></li>
+																																	<li data-target="#i" data-slide-to="58" title="PI RTE Takeaway"></li>
+																																	<li data-target="#i" data-slide-to="59" title="PI SM Role"></li>
+																																			<li data-target="#i" data-slide-to="60" title="Iteration Planning"></li>
+																																				<li data-target="#i" data-slide-to="61" title="IP SM Role"></li>
+																																				<li data-target="#i" data-slide-to="62" title="DSU"></li>
+																																				<li data-target="#i" data-slide-to="63" title="BUBD"></li>
+																																				<li data-target="#i" data-slide-to="64" title="IPSMRole"></li>
+																																					<li data-target="#i" data-slide-to="65" title="Backlog Refinement"></li>
+																																					<li data-target="#i" data-slide-to="66" title="Iteration Review"></li>
+																																					<li data-target="#i" data-slide-to="67" title="Iteration Retro"></li>
+																																						<li data-target="#i" data-slide-to="68" title="DevOps CALMR"></li>
+					<li data-target="#i" data-slide-to="69" title="Innov and P Iteration"></li>
+	<li data-target="#i" data-slide-to="70" title="Inspect Adapt"></li>
+
+
+
+
+
+
+  </ol>
+
+
+
+
+
+
+
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active" align="center">
+
+      <div class="container" style="max-width:70%">
+      <h5>Agile Economics</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/11AgileEconomics.JPG') }}"><br><br>
+      </div>
+    </div>
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Deliver Value Incrementally</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/12deliverincrementally.JPG') }}"><br><br>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Not MVP</h5>
+
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/notmvp.png') }}"></p>
+
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>MVP ASAP</h5>
+
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/incrementaldeliveryofvalue.gif') }}"></p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Agile Frameworks</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveAgileFrameworks13.JPG') }}"><br><br>
+
+
+      </div>
+    </div>
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Agile Manifesto</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/am1.jpg') }}"></p>
+	<br><br><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/am2.jpg') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/am3.jpg') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/am4.jpg') }}"></p>
+      </div>
+
+
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum Roots</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFEFiveScrumRoots.JPG') }}"></p>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum Values</h5>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveScrumValues.JPG') }}"><br><br>
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum and SAFe Terminology</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTerminology.JPG') }}"><br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum Loop</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveScrumLoop.JPG') }}"><br><br>
+   </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Scrum Iteration</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIteration.JPG') }}"><br><br>
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Backlog</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamBacklog.JPG') }}"><br><br>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Story Sliced</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveStorySlice.JPG') }}"><br><br>
+<br>
+	 <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe SOS Core Values</h5>
+	<p align="centere">   <a href="https://www.scaledagileframework.com/" ><img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSafeFiveSOSCoreValues.JPG') }}"></a><br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Lean Agile Principles</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveLeanAgilePrinciples.JPG') }}"><br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Scrum Team Positioned</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamPositioned.JPG') }}"><br><br>
+      </div>
+    </div>
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Cross Functional Teams</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeAgileCrossFTeams.JPG') }}"><br><br>
+      </div>
+    </div>
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Responsibilities</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamResponsibilities.JPG') }}"><br><br>
+      </div>
+    </div>
+			    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Core Roles PO and SM</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePOSMRoles.JPG') }}"><br><br>
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ART</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveART.JPG') }}"><br><br>
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ART Events</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveARTEvents.JPG') }}"><br>
+
+	<p><a href="{{ asset('storage/assets/SAFeSystemDemo.pdf') }}" >SAFe System Demo</a></p>
+
+	 <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+
+	<br><br>
+      </div>
+    </div>
+
+
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>How SM supports the team</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMFocus.JPG') }}">
+
+	<br>
+	 <p><a href="{{ asset('storage/assets/SAFeScrumMaster.pdf') }}" >SAFe Scrum Master role</a></p>
+	<br><br>
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SM in SAFe</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMinSAFe.JPG') }}"><br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Servant Leader</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSL1.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSL2.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSL3.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSL4.JPG') }}"></p>
+      </div>
+    </div>
+
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>High Performing Teams</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveHighPerformingTeams.JPG') }}"><br><br>
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Forming Storming etc.</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveStorming.JPG') }}"><br><br>
+      </div>
+    </div>
+
+						    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum Team Events</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamEvents.JPG') }}"><br><br>
+      </div>
+    </div>
+
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Meetings</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveMeet1.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveMeet2.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveMeet3.JPG') }}"></p>
+
+      </div>
+    </div>
+
+							    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Powerful Questions</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePowerfulQuestions.JPG') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePowerfulQuestions1.JPG') }}"></p>
+      </div>
+    </div>
+
+
+							    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SM Shift</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMShift.JPG') }}"><br><br>
+      </div>
+    </div>
+
+								    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Collaboration with other teams</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveCollab.JPG') }}"><br><br>
+      </div>
+    </div>
+
+									    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>The ART Sync</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveARTSync.JPG') }}"><br><br>
+      </div>
+    </div>
+
+										    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Production</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamResults.JPG') }}"><br><br>
+      </div>
+    </div>
+
+			    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Dysfunctions</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDysf.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDysf1.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDysf2.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDysf3.JPG') }}"></p>
+<p>AND</p>
+<p align="centere"><a href="/scrumrca" >Click here for the 7 Scrum Team Dysfunctions (NB not from SAFe)</a></p>
+<br><br>
+
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Working Agreements</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveWorkingAgreements.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveWorkingAgreements1.JPG') }}"></p>
+
+
+<br><br>
+
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>What is PI planning</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveWhatIsPIPlanning.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveWhatIsPIPlanning1.JPG') }}"></p>
+<br>
+    <p><a href="{{ asset('storage/assets/SAFePIPlanning.pdf') }}" >SAFe PI Planning</a></p>
+
+<br><br>
+
+      </div>
+    </div>
+
+						    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Process</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePIProcess.JPG') }}"></p>
+
+
+<br><br>
+
+      </div>
+    </div>
+
+	  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>User Stories Implement Features</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveStoriesImpFeatures.JPG') }}"></p>
+<br><br>
+    </div>
+    </div>
+
+		  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Stories How To</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveUserStories1.JPG') }}"></p>
+	      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveUserStories2.JPG') }}"></p>
+		  <br>
+		  <p><a href="/userstories" target=_blank">Mike Cohn's Amazing Video on User Stories</a></p>
+<br><br>
+    </div>
+    </div>
+
+
+			  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>INVEST</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveInvest.JPG') }}"></p>
+
+<br><br>
+    </div>
+    </div>
+
+				  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>3 c's</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFive3cs.JPG') }}"></p>
+
+<br><br>
+    </div>
+    </div>
+
+					  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>BDD</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBDD.JPG') }}"></p>
+
+<br><br>
+    </div>
+    </div>
+
+						  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Acceptance Criteria</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveAC.JPG') }}"></p>
+
+<br><br>
+    </div>
+    </div>
+
+							  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Enabler Stories</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveEnablerStories.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+								  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Refactors and Spikes</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRefactorSpike.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+								  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Story Points</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveUSPoints.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+									  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Estimating Poker</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveEstPoker.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+										  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SM Role in Estimating</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMRoleinEstimating.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+											  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Velocity</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveVelocity.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+
+										  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Capacity Calculation</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveCapacityCalc.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+									  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Team Breakout SM role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMPITeamBreakout.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+										  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Day 1 Management Review</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePIDAy1ManReview.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+											  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Day 2 Planning Adjustments</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePID2PlanningAdjustments.JPG') }}"></p>
+	   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePID2PlanningAdjustments1.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+	<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Program Board</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveProgBoard.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+		<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Final Plan</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveFinalPlan.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+			<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ROAM</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveROAM.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Confidence Vote / Fist of Five</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveConfidence.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Planning Retro</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePIRetro.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Planning RTE Takeaway</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRTEPITakeaway.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Planning SM Role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMrolePI.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Planning</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP1.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP2.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP3.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP4.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP5.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP6.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP7.JPG') }}"></p>
+
+	 <br>
+	  <p><a href="{{ asset('storage/assets/SAFeIterations.pdf') }}" >SAFe Iterations:  Plan, Execution, Review, Retrospect</a></p>
+	 <br>
+	 <p><a href="{{ asset('storage/assets/Whysprintgoalsarenotcool.pdf') }}" >Find out from Mike Cohn Why sprint goals are not cool</a></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+					<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>IP SM Role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPSMRole.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+						<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Daily Standupper</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDSU1.JPG') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDSU2.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+						<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>To Burn Up or Burn Down</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBUBD1.JPG') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBUBD2.JPG') }}"></p>
+<p>As we do not advocate tasks in SAFe? I have a serious problem with this.  Possibly I do not see what SAFe are on about here.  Tasks are the very essence of developers on top of their game, being able to tick off their delivery (step by step).  Tasks can also be used as a walkthrough (Agenda) of work completed in the Scrum Demonstrate and Validate process.</p>
+	  <br><br>
+    </div>
+    </div>
+
+							<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Planning SM Role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPSMRole1.JPG') }}"></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Backlog Refinement and SM Role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBLR1.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBLR2.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBLR3.JPG') }}"></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+
+
+					<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Review</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIReview.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIReview2.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIReview3.JPG') }}"></p>
+	 	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIReview4.JPG') }}"></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+
+						<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Relentless Improvement, the Speedboat and the Iteration Retro</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp2.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp3.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp4.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp5.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp6.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp7.JPG') }}"></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+
+							<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>DevOps and CALMR</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDEvOps1.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDEvOps2.JPG') }}"></p>
+<p><a href="/pmway" >DevOps Expertise is all about ITIL.  My presentation at bottom of this link explains.</a></p>
+<br>
+	 <p><a href="{{ asset('storage/assets/SAFeDevOps.pdf') }}" >SAFe DevOps</a></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Innovation and Planning Iteration</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPIteration1.JPG') }}"></p>
+	   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPIteration2.JPG') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPIteration3.JPG') }}"></p>
+<br>
+
+	   <p><a href="{{ asset('storage/assets/SAFeInnovationandPlanningIteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+
+
+
+	  <br><br>
+    </div>
+    </div>
+
+									<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Inspect and Adapt</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA1.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA2.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA3.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA4.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA5.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA6.JPG') }}"></p>
+
+<br>
+
+  <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+	</div>
+</div>
+
+
+
+
+
+<a class="carousel-control-prev" href="#i" role="button" data-slide="prev">
+  <i class="fas fa-lg fa-chevron-left" style="color:black"></i>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#i" role="button" data-slide="next">
+  <i class="fas fa-lg fa-chevron-right" style="color:black"></i>
+
+  <span class="sr-only">Next</span>
+</a>
+<br><br>
+<hr>
+<h5 align="center"><small><b>Bottom Line:</b> Increment by increment can your team run with and demo <b>Quality User Stories</b> per the SAFe Scrum processes in the image below?<br>I.e. per the <a href="/scrumrca" >"Snowflake Scrum dysfunction" and others</a> <i><b>You either do Scrum or you don't do Scrum</b></i>.<br>Modifying Scrum does not fix the problems.  Modifying Scrum will likely hide your problems for a little while.  When the problems are hidden, it may feel better, but those problems are still there.<br>Ultimately, they will manifest as a lack of business agility and dysfunction.</small></h5>
+<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/mvp.jpg') }}"></p><br>
+<div align="center">
+	<p><a href="{{ asset('storage/assets/SAFeSystemDemo.pdf') }}" >SAFe System Demo</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeScrumMaster.pdf') }}" >SAFe Scrum Master role</a></p>
+	  <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+	    <p><a href="{{ asset('storage/assets/SAFeRequirementsModel.pdf') }}" >SAFe Requirements Model</a></p>
+
+
+		  <p><a href="{{ asset('storage/assets/SAFeIterations.pdf') }}" >SAFe Iterations:  Plan, Execution, Review, Retrospect</a><br>
+		 <small>Note: in the article above on page 4 find this essential truth for Scrum success: "<b><a href="images/scrumvaluemodelessence.jpg" ><u>The Product Owner defines the ‘WHAT (and WHEN)’; the team defines ‘HOW’ and ‘HOW MUCH’</b></u></a>."</small></p>
+
+
+	   <p><a href="{{ asset('storage/assets/SAFeInnovationandPlanningIteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+
+ <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+  <p><a href="{{ asset('storage/assets/SAFeEssentialSafe.pdf') }}" >Essential SAFe and Core Competencies</a></p>
+    <p><a href="{{ asset('storage/assets/SAFePIPlanning.pdf') }}" >SAFe PI Planning</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeDevOps.pdf') }}" >SAFe DevOps</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeContinuousDeliveryPipeline.pdf') }}" >SAFe Continuous Delivery Pipeline</a></p>
+	 	  <p><a href="{{ asset('storage/assets/SAFeReleaseonDemand.pdf') }}" >SAFe Release on Demand</a></p>
+		  		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		   <p><a href="{{ asset('storage/assets/SAFeART.pdf') }}" >SAFe ART</a></p>
+		    <p><a href="{{ asset('storage/assets/SAFeBusinessOwners.pdf') }}" >SAFe Business Owners</a></p>
+			  <p><a href="{{ asset('storage/assets/SAFeContinuousIntegration.pdf') }}" >SAFe Continuous Integration</a></p>
+			   <p><a href="{{ asset('storage/assets/SAFEFeaturesCapabilities.pdf') }}" >SAFe Features and Capabilities</a></p>
+			     <p><a href="{{ asset('storage/assets/SAFeLeanPortfolioManagement.pdf') }}" >SAFe Lean Portfolio Management</a></p>
+				   <p><a href="{{ asset('storage/assets/SAFeNonfunctionalRequirements.pdf') }}" >SAFe Non Functional Requirements</a></p>
+				    <p><a href="{{ asset('storage/assets/SAFeProgramIncrement.pdf') }}" >SAFe Program Increment</a></p>
+					 <p><a href="{{ asset('storage/assets/SAFeSolution.pdf') }}" >SAFe Solution</a></p>
+	<p><a href="/pmway/?slide=4" >Tie the logic above to the Capability Maturity model for operations above CM L1</a></p>
+	<p> <p><a href="/safeviewpdf/resources/SAFe Scrum Master Digital Workbook.pdf" >SAFe SSM Manual</a></p>
+	<br>
+						<p>Per the <a href="/agile?slide=12" >Agile Manifesto</a> acceptance is based on working software (improvements) / business value that can be released.  <br>A Product Owner approved Demo Deck (as key project artifact [Tying together PMC with PP (at User Story level)]) from each iteration review is (in PMWay's experience and opinion) best way to run Scrum at CM L2+.</p>
+						<p>From the article "SAFe User Story" above the image below is essential to appreciate and adopt if Professional scrum of  scrums at scale within SAFe is the goal.</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid"  src="{{ asset('storage/images/safestoryfeature.png') }}"></p>
+						<p>and then extending this into the SAFe environment for Capabilities and Epics</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/saferequirementsmodel.png') }}"></p>
+						<p>Clearly the Product Owner's role is essential.  But always remember that the Scrum Master's role to reinforce Scrum Process (balance the make it so! / and deliver what by when!? forces) for team sanity and health is just as essential!</p>
+						<p>With the above in mind why not <a href="/pin"  >take the pin test to pin down</a> where you believe you are operating at.</p><br>
+
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepmboksixtwo" aria-expanded="false" aria-controls=
+        "collapsepmboksixtwo">PMWay Opinion about SAFe
+</button>
+
+<div class="collapse" id="collapsepmboksixtwo">
+    <div class="container">
+        <div class="card text-center">
+<h5 class="card-header" align="center"></h5>
+            <div class="card-body text-center">
+
+<p>It is the considerecd opinion of PMWay that with teams that (and are forced to) operate at <a href="/pmway/?slide=4" target=_blank">Capability Maturity Level 1</a><br>([Features from PI from Executive Pressure that force down on and kill agility found in User Stories (Teams not bothering - what's the use? - to compile User Stories)] and [<a href="/redbeads" >Deming's red bead experiment</a>] without PP and PMC at the level of the professional User Story)  <a href="/home/safeisunsafe"  > etc.<br>then SAFe is definitely UNSAFe</a>.</p>
+	<p>I.e. From the SAFe is unsafe article link above</p> <div align="center">
+Ken Schwaber, co-developer of srcum <a href="https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/" ><u>expressed serious concerns about SAFe</u></a> as early as 2013.<br>
+Nicholas M. Chaillan, U.S. Air Force Chief Software Officer, <a href="https://twitter.com/lukadotnet/status/1203751211817742336?s=20" ><u>discourages</u></a> “using rigid, presrciptive frameworks such as the Scaled Agile Framework (SAFe).”<br>
+Forbes contributor Steve Denning <a href="https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/#316e49034bbe" ><u>calls out</u></a> SAFe for being “ particularly worrying” in his article on how to spot fake Agile.<br>
+Marty Cagan of the Silicon Valley Product Group <a href="https://svpg.com/revenge-of-the-pmo/" ><u>explains</u></a> how SAFe is antithetical to the mindset of Silicon Valley companies.
+</div><br><img alt="SAFe should be (like a loaded gun) kept locked up in a safe" class="img-fluid"  src="{{ asset('storage/images/safefive/safelylockedup.png') }}" title="Like a loaded gun with children best to keep it locked up in a SAFe before someone gets really hurt"><img alt="Due to the heroics and pressure to push features down on developers your human resources will ... runaway!" class="img-fluid"  src="{{ asset('storage/images/safefive/runaway.png') }}" title="Why can we not keep our good people"><br><img alt="fast path to mediocracy" class="img-fluid"  src="{{ asset('storage/images/safefive/mediocracy.png') }}" title="Classic ignorance of the wisdom of Deming and a total lack of understanding of scrum.  The Mike Cohn video on YouTube about User Stories explains the problem and how to solve it"></p>
+
+
+
+
+
+
+
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+ </div>
+</div>
+
+
+    <script src="/bootstrapfourfivetwo/js/jquery.js"></script>
+    <script src="/bootstrapfourfivetwo/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/bootstrapfourfivetwo/css/jquery-ui.css"></link>
+<script>
+  $(document).ready(function () {
+    function qs(key) {
+      key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+      var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+      var slide = match && decodeURIComponent(match[1].replace(/\+/g, " "));
+      if (Math.floor(slide) == slide && $.isNumeric(slide))
+        return parseInt(slide);
+      else
+        return 0;
+    }
+    $('#i').carousel((qs('slide')) - 1);
+  });
+</script>
+<br>
+<br>
+<br>
+<br>
+
+{% endif %}
+
+
+{% if not user %}
+  {# <div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %} #}
+<style>
+
+
+
+
+/* a:link {color:#00FF00} */
+/* a:visited {color:#00FF00} */
+/* a:hover {color:#FF00FF} */
+a:focus {background: yellow;
+  color: navy; } /* this one! */
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) {
+   .carousel-indicators {
+
+    bottom: -35px;
+
+
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+   .carousel-indicators {
+    position: relative;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+     .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+
+  small {
+    font-size:8pt;
+}
+
+
+</style>
+
+
+<div class="container-fluid" align="center" >
+  <h5><a href="https://www.scaledagileframework.com/" target=_blank">SAFe 5.1</a> Scrum Master (SSM) <br><a href="/home/sasm" >SASM</a>, <a href="/home/spo" >SPO</a>, <a href="/home/sdp" >SDP</a></h5>
+  <p><i><small>NB: <u>Underlined links</u> show where User Stories are referred to in the BOK. I.e. do not fool yourself that Features are not based on Quality User Stories!</u></small></i></p>
+  <p><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="0"
+      title=""><small>Agile Economics</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="1"
+      title=""><small>Deliver Value Incrementally</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="2"
+      title=""><small>NOT MVP</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="3"
+      title=""><small>MVP ASAP</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="4"
+      title=""><small><u>Agile Frameworks</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="5"
+      title=""><small>AM</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="6"
+	  title=""><small>Scrum Roots</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="7"
+	  title=""><small>Scrum Values</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="8"
+	  title=""><small>SAFe Terminology</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="9"
+	  title=""><small><u>Scrum Loop</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="10"
+	  title=""><small><u>Iteration</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="11"
+	  title=""><small><u>Team Backlog</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="12"
+	  title=""><small><u>Story Sliced</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="13"
+	  title=""><small>SOS Core Values</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="14"
+	  title=""><small>LA Principles</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="15"
+	  title=""><small>ATeamInSafe</small></a>|<br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="16"
+	  title=""><small>CrossF Teams</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="17"
+	  title=""><small><u>Team Responsibilities</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="18"
+	  title=""><small><u>PO SM Roles</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="19"
+	  title=""><small>ART</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="20"
+	  title=""><small>ART Events (System Demo I & A)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="21"
+	  title=""><small>SM Focus</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="22"
+	  title=""><small><u>SM in SAFe</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="23"
+	  title=""><small>SM as SL</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="24"
+	  title=""><small>High Performing Teams</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="25"
+	  title=""><small>HPT Stages</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="26"
+	  title=""><small>Team Events</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="27"
+	  title=""><small>Meetings</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="28"
+	  title=""><small>Powerful Questions</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="29"
+	  title=""><small>SM Shift</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="30"
+	  title=""><small>Collab</small></a>|<br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="31"
+	  title=""><small>ART Sync</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="32"
+	  title=""><small>Team Productivity</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="33"
+	  title=""><small>Team Dysfunctions</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="34"
+	  title=""><small>Working Agreements</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="35"
+	  title=""><small><u>PI Planning</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="36"
+	  title=""><small>PI Process</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="37"
+	  title=""><small><u>Stories imp Features</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="38"
+	  title=""><small><u>Stories HowTo</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="39"
+	  title=""><small><u>INVEST</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="40"
+	  title=""><small><u>3Cs</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="41"
+	  title=""><small><u>Behaviour DD</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="42"
+	  title=""><small><u>Acceptance Criteria</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="43"
+	  title=""><small><u>Enabler Stories</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="44"
+	  title=""><small><u>Refactors Spikes</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="45"
+	  title=""><small><u>Story Points</u></small></a>|<br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="46"
+	  title=""><small><u>Estimating Poker</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="47"
+	  title=""><small><u>SM in Estimating</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="48"
+	  title=""><small><u>Team Velocity (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="49"
+	  title=""><small><u>Capacity Calc</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="50"
+	  title=""><small><u>PI Team Breakout SM Role (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="51"
+	  title=""><small>PI D1 Man review</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="52"
+	  title=""><small>PI D2 Plan Adj</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="53"
+	  title=""><small>PI Prog Board</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="54"
+	  title=""><small>PI Final Plan</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="55"
+	  title=""><small>ROAM</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="56"
+	  title=""><small>Fist of 5</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="57"
+	  title=""><small>PI Retro</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="58"
+	  title=""><small>PI RTE Takeaway</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="59"
+	  title=""><small>PI SM Role (AP)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="60"
+	  title=""><small><u>Iteration Planning</u></small></a>|<br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="61"
+	  title=""><small><u>IP SM Role (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="62"
+	  title=""><small><u>DSU (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="63"
+	  title=""><small><u>Burn Up / BD</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="64"
+	  title=""><small>IP tracking SM Role (AP)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="65"
+	  title=""><small><u>Backlog R (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="66"
+	  title=""><small><u>Iteration Review (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="67"
+	  title=""><small><u>Iteration Retro (AP)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="68"
+	  title=""><small>DevOps CALMR</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="69"
+	  title=""><small><u>Innov & Plan Iteration (without)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="70"
+	  title=""><small>Inspect Adapt and Prob Solve Workshop and System Demo (AP)</small></a>
+
+
+
+
+
+
+
+
+
+
+  </p>
+</div>
+
+<div id="i" class="carousel slide" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#i" data-slide-to="0" title="Agile Economics" class="active"></li>
+		 <li data-target="#i" data-slide-to="1" title="Deliver Value Incrementally"></li>
+	    <li data-target="#i" data-slide-to="2" title="NOT MVP"></li>
+    <li data-target="#i" data-slide-to="3" title="MVP ASAP"></li>
+ <li data-target="#i" data-slide-to="4" title="Agile Frameworks"></li>
+    <li data-target="#i" data-slide-to="5" title="AM"></li>
+	 <li data-target="#i" data-slide-to="6" title="Scrum Roots"></li>
+	 	    <li data-target="#i" data-slide-to="7" title="Scrum Values"></li>
+	     <li data-target="#i" data-slide-to="8" title="Scrum and SAFe Terminology"></li>
+	     <li data-target="#i" data-slide-to="9" title="Scrum Loop"></li>
+    <li data-target="#i" data-slide-to="10" title="Scrum Iteration"></li>
+	  <li data-target="#i" data-slide-to="11" title="Team Backlog"></li>
+	  	  <li data-target="#i" data-slide-to="12" title="Story Sliced"></li>
+		  	  <li data-target="#i" data-slide-to="13" title="SOS Core Values"></li>
+			    <li data-target="#i" data-slide-to="14" title="Principles"></li>
+				<li data-target="#i" data-slide-to="15" title="Team Positioned"></li>
+				<li data-target="#i" data-slide-to="16" title="Cross Functional Teams"></li>
+					<li data-target="#i" data-slide-to="17" title="Teams Responsibilities"></li>
+						<li data-target="#i" data-slide-to="18" title="Teams PO and SM Roles"></li>
+								<li data-target="#i" data-slide-to="19" title="ART"></li>
+									<li data-target="#i" data-slide-to="20" title="ART Events"></li>
+												<li data-target="#i" data-slide-to="21" title="SM focus"></li>
+														<li data-target="#i" data-slide-to="22" title="SM in SAFe"></li>
+																	<li data-target="#i" data-slide-to="23" title="SM as SL"></li>
+																		<li data-target="#i" data-slide-to="24" title="High Performing Teams"></li>
+																			<li data-target="#i" data-slide-to="25" title="Storming"></li>
+																				<li data-target="#i" data-slide-to="26" title="Team Events"></li>
+																						<li data-target="#i" data-slide-to="27" title="Meetings"></li>
+<li data-target="#i" data-slide-to="28" title="Powerful Questions"></li>
+	<li data-target="#i" data-slide-to="29" title="SM Shift"></li>
+		<li data-target="#i" data-slide-to="30" title="Collab"></li>
+				<li data-target="#i" data-slide-to="31" title="ART Sync"></li>
+					<li data-target="#i" data-slide-to="32" title="TeamProdBy"></li>
+						<li data-target="#i" data-slide-to="33" title="Team Dysfunctions"></li>
+									<li data-target="#i" data-slide-to="34" title="Working Agreements"></li>
+										<li data-target="#i" data-slide-to="35" title="What is PI planning"></li>
+											<li data-target="#i" data-slide-to="36" title="PI process"></li>
+											<li data-target="#i" data-slide-to="37" title="StoriesImpFeatures"></li>
+												<li data-target="#i" data-slide-to="38" title="Stories How2"></li>
+													<li data-target="#i" data-slide-to="39" title="INVEST"></li>
+														<li data-target="#i" data-slide-to="40" title="3cs"></li>
+															<li data-target="#i" data-slide-to="41" title="BDD"></li>
+																<li data-target="#i" data-slide-to="42" title="AC"></li>
+																	<li data-target="#i" data-slide-to="43" title="Enabler Stories"></li>
+																			<li data-target="#i" data-slide-to="44" title="Refactors and Spikes"></li>
+																							<li data-target="#i" data-slide-to="45" title="Story Points"></li>
+																								<li data-target="#i" data-slide-to="46" title="Estimating Poker"></li>
+																								<li data-target="#i" data-slide-to="47" title="SM role in Estimating"></li>
+																									<li data-target="#i" data-slide-to="48" title="Velocity"></li>
+																											<li data-target="#i" data-slide-to="49" title="Capacity Calc"></li>
+																												<li data-target="#i" data-slide-to="50" title="PI Team Breakout SM Role"></li>
+																												<li data-target="#i" data-slide-to="51" title="Man Review PID1"></li>
+																													<li data-target="#i" data-slide-to="52" title="Plan Adj PID2"></li>
+																													<li data-target="#i" data-slide-to="53" title="PI Prog Board"></li>
+																													<li data-target="#i" data-slide-to="54" title="PI Final Plan"></li>
+																														<li data-target="#i" data-slide-to="55" title="ROAM"></li>
+																															<li data-target="#i" data-slide-to="56" title="FistO5"></li>
+																																<li data-target="#i" data-slide-to="57" title="PI Retro"></li>
+																																	<li data-target="#i" data-slide-to="58" title="PI RTE Takeaway"></li>
+																																	<li data-target="#i" data-slide-to="59" title="PI SM Role"></li>
+																																			<li data-target="#i" data-slide-to="60" title="Iteration Planning"></li>
+																																				<li data-target="#i" data-slide-to="61" title="IP SM Role"></li>
+																																				<li data-target="#i" data-slide-to="62" title="DSU"></li>
+																																				<li data-target="#i" data-slide-to="63" title="BUBD"></li>
+																																				<li data-target="#i" data-slide-to="64" title="IPSMRole"></li>
+																																					<li data-target="#i" data-slide-to="65" title="Backlog Refinement"></li>
+																																					<li data-target="#i" data-slide-to="66" title="Iteration Review"></li>
+																																					<li data-target="#i" data-slide-to="67" title="Iteration Retro"></li>
+																																						<li data-target="#i" data-slide-to="68" title="DevOps CALMR"></li>
+					<li data-target="#i" data-slide-to="69" title="Innov and P Iteration"></li>
+	<li data-target="#i" data-slide-to="70" title="Inspect Adapt"></li>
+
+
+
+
+
+
+  </ol>
+
+
+
+
+
+
+
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active" align="center">
+
+      <div class="container" style="max-width:70%">
+      <h5>Agile Economics</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/11AgileEconomics.JPG') }}"><br><br>
+      </div>
+    </div>
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Deliver Value Incrementally</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/12deliverincrementally.JPG') }}"><br><br>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Not MVP</h5>
+
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/notmvp.png') }}"></p>
+
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>MVP ASAP</h5>
+
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/incrementaldeliveryofvalue.gif') }}"></p>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Agile Frameworks</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveAgileFrameworks13.JPG') }}"><br><br>
+
+
+      </div>
+    </div>
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Agile Manifesto</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/am1.jpg') }}"></p>
+	<br><br><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/am2.jpg') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/am3.jpg') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/am4.jpg') }}"></p>
+      </div>
+
+
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum Roots</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFEFiveScrumRoots.JPG') }}"></p>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum Values</h5>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveScrumValues.JPG') }}"><br><br>
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum and SAFe Terminology</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTerminology.JPG') }}"><br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum Loop</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveScrumLoop.JPG') }}"><br><br>
+   </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Scrum Iteration</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIteration.JPG') }}"><br><br>
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Backlog</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamBacklog.JPG') }}"><br><br>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Story Sliced</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveStorySlice.JPG') }}"><br><br>
+<br>
+	 <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe SOS Core Values</h5>
+	<p align="centere">   <a href="https://www.scaledagileframework.com/" ><img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSafeFiveSOSCoreValues.JPG') }}"></a><br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Lean Agile Principles</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveLeanAgilePrinciples.JPG') }}"><br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Scrum Team Positioned</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamPositioned.JPG') }}"><br><br>
+      </div>
+    </div>
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Cross Functional Teams</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeAgileCrossFTeams.JPG') }}"><br><br>
+      </div>
+    </div>
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Responsibilities</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamResponsibilities.JPG') }}"><br><br>
+      </div>
+    </div>
+			    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Core Roles PO and SM</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePOSMRoles.JPG') }}"><br><br>
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ART</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveART.JPG') }}"><br><br>
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ART Events</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveARTEvents.JPG') }}"><br>
+
+	<p><a href="{{ asset('storage/assets/SAFeSystemDemo.pdf') }}" >SAFe System Demo</a></p>
+
+	 <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+
+	<br><br>
+      </div>
+    </div>
+
+
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>How SM supports the team</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMFocus.JPG') }}">
+
+	<br>
+	 <p><a href="{{ asset('storage/assets/SAFeScrumMaster.pdf') }}" >SAFe Scrum Master role</a></p>
+	<br><br>
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SM in SAFe</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMinSAFe.JPG') }}"><br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Servant Leader</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSL1.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSL2.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSL3.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSL4.JPG') }}"></p>
+      </div>
+    </div>
+
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>High Performing Teams</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveHighPerformingTeams.JPG') }}"><br><br>
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Forming Storming etc.</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveStorming.JPG') }}"><br><br>
+      </div>
+    </div>
+
+						    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Scrum Team Events</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamEvents.JPG') }}"><br><br>
+      </div>
+    </div>
+
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Meetings</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveMeet1.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveMeet2.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveMeet3.JPG') }}"></p>
+
+      </div>
+    </div>
+
+							    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Powerful Questions</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePowerfulQuestions.JPG') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePowerfulQuestions1.JPG') }}"></p>
+      </div>
+    </div>
+
+
+							    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SM Shift</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMShift.JPG') }}"><br><br>
+      </div>
+    </div>
+
+								    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Collaboration with other teams</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveCollab.JPG') }}"><br><br>
+      </div>
+    </div>
+
+									    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>The ART Sync</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveARTSync.JPG') }}"><br><br>
+      </div>
+    </div>
+
+										    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Production</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveTeamResults.JPG') }}"><br><br>
+      </div>
+    </div>
+
+			    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Dysfunctions</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDysf.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDysf1.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDysf2.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDysf3.JPG') }}"></p>
+<p>AND</p>
+<p align="centere"><a href="/scrumrca" >Click here for the 7 Scrum Team Dysfunctions (NB not from SAFe)</a></p>
+<br><br>
+
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Working Agreements</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveWorkingAgreements.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveWorkingAgreements1.JPG') }}"></p>
+
+
+<br><br>
+
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>What is PI planning</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveWhatIsPIPlanning.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveWhatIsPIPlanning1.JPG') }}"></p>
+<br>
+    <p><a href="{{ asset('storage/assets/SAFePIPlanning.pdf') }}" >SAFe PI Planning</a></p>
+
+<br><br>
+
+      </div>
+    </div>
+
+						    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Process</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePIProcess.JPG') }}"></p>
+
+
+<br><br>
+
+      </div>
+    </div>
+
+	  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>User Stories Implement Features</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveStoriesImpFeatures.JPG') }}"></p>
+<br><br>
+    </div>
+    </div>
+
+		  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Stories How To</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveUserStories1.JPG') }}"></p>
+	      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveUserStories2.JPG') }}"></p>
+		  <br>
+		  <p><a href="/userstories" target=_blank">Mike Cohn's Amazing Video on User Stories</a></p>
+<br><br>
+    </div>
+    </div>
+
+
+			  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>INVEST</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveInvest.JPG') }}"></p>
+
+<br><br>
+    </div>
+    </div>
+
+				  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>3 c's</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFive3cs.JPG') }}"></p>
+
+<br><br>
+    </div>
+    </div>
+
+					  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>BDD</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBDD.JPG') }}"></p>
+
+<br><br>
+    </div>
+    </div>
+
+						  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Acceptance Criteria</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveAC.JPG') }}"></p>
+
+<br><br>
+    </div>
+    </div>
+
+							  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Enabler Stories</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveEnablerStories.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+								  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Refactors and Spikes</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRefactorSpike.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+								  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Story Points</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveUSPoints.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+									  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Estimating Poker</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveEstPoker.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+										  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SM Role in Estimating</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMRoleinEstimating.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+											  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Velocity</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveVelocity.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+
+										  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Capacity Calculation</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveCapacityCalc.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+									  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Team Breakout SM role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMPITeamBreakout.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+										  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Day 1 Management Review</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePIDAy1ManReview.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+											  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Day 2 Planning Adjustments</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePID2PlanningAdjustments.JPG') }}"></p>
+	   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePID2PlanningAdjustments1.JPG') }}"></p>
+	  <br><br>
+    </div>
+    </div>
+
+	<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Program Board</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveProgBoard.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+		<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Final Plan</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveFinalPlan.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+			<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ROAM</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveROAM.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Confidence Vote / Fist of Five</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveConfidence.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Planning Retro</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFivePIRetro.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Planning RTE Takeaway</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRTEPITakeaway.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Planning SM Role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveSMrolePI.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Planning</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP1.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP2.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP3.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP4.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP5.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP6.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIP7.JPG') }}"></p>
+
+	 <br>
+	  <p><a href="{{ asset('storage/assets/SAFeIterations.pdf') }}" >SAFe Iterations:  Plan, Execution, Review, Retrospect</a></p>
+	 <br>
+	 <p><a href="{{ asset('storage/assets/Whysprintgoalsarenotcool.pdf') }}" >Find out from Mike Cohn Why sprint goals are not cool</a></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+					<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>IP SM Role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPSMRole.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+						<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Daily Standupper</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDSU1.JPG') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDSU2.JPG') }}"></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+						<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>To Burn Up or Burn Down</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBUBD1.JPG') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBUBD2.JPG') }}"></p>
+<p>As we do not advocate tasks in SAFe? I have a serious problem with this.  Possibly I do not see what SAFe are on about here.  Tasks are the very essence of developers on top of their game, being able to tick off their delivery (step by step).  Tasks can also be used as a walkthrough (Agenda) of work completed in the Scrum Demonstrate and Validate process.</p>
+	  <br><br>
+    </div>
+    </div>
+
+							<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Planning SM Role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPSMRole1.JPG') }}"></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+
+				<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Backlog Refinement and SM Role</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBLR1.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBLR2.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveBLR3.JPG') }}"></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+
+
+					<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Review</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIReview.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIReview2.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIReview3.JPG') }}"></p>
+	 	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIReview4.JPG') }}"></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+
+						<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Relentless Improvement, the Speedboat and the Iteration Retro</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp2.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp3.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp4.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp5.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp6.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveRelImp7.JPG') }}"></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+
+							<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>DevOps and CALMR</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDEvOps1.JPG') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveDEvOps2.JPG') }}"></p>
+<p><a href="/pmway" >DevOps Expertise is all about ITIL.  My presentation at bottom of this link explains.</a></p>
+<br>
+	 <p><a href="{{ asset('storage/assets/SAFeDevOps.pdf') }}" >SAFe DevOps</a></p>
+
+	  <br><br>
+    </div>
+    </div>
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Innovation and Planning Iteration</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPIteration1.JPG') }}"></p>
+	   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPIteration2.JPG') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIPIteration3.JPG') }}"></p>
+<br>
+
+	   <p><a href="{{ asset('storage/assets/SAFeInnovationandPlanningIteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+
+
+
+	  <br><br>
+    </div>
+    </div>
+
+									<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Inspect and Adapt</h5>
+     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA1.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA2.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA3.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA4.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA5.JPG') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/safefive/NBSAFeFiveIA6.JPG') }}"></p>
+
+<br>
+
+  <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+
+
+	  <br><br>
+    </div>
+    </div>
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+	</div>
+</div>
+
+
+
+
+
+<a class="carousel-control-prev" href="#i" role="button" data-slide="prev">
+  <i class="fas fa-lg fa-chevron-left" style="color:black"></i>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#i" role="button" data-slide="next">
+  <i class="fas fa-lg fa-chevron-right" style="color:black"></i>
+
+  <span class="sr-only">Next</span>
+</a>
+<br><br>
+<hr>
+<h5 align="center"><small><b>Bottom Line:</b>  Increment by increment can your team run with and demo <b>Quality User Stories</b> per the SAFe Scrum processes in the image below?<br>I.e. per the <a href="/scrumrca" >"Snowflake Scrum dysfunction" and others</a> <i><b>You either do Scrum or you don't do Scrum</b></i>.<br>Modifying Scrum does not fix the problems.  Modifying Scrum will likely hide your problems for a little while.  When the problems are hidden, it may feel better, but those problems are still there.<br>Ultimately, they will manifest as a lack of business agility and dysfunction.</small></h5>
+<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/mvp.jpg') }}"></p><br>
+<div align="center">
+	<p><a href="{{ asset('storage/assets/SAFeSystemDemo.pdf') }}" >SAFe System Demo</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeScrumMaster.pdf') }}" >SAFe Scrum Master role</a></p>
+	  <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+	   <p><a href="{{ asset('storage/assets/SAFeRequirementsModel.pdf') }}" >SAFe Requirements Model</a></p>
+
+
+  <p><a href="{{ asset('storage/assets/SAFeIterations.pdf') }}" >SAFe Iterations:  Plan, Execution, Review, Retrospect</a><br>
+			 <small>Note: in the article above on page 4 find this essential truth for Scrum success: "<b><a href="images/scrumvaluemodelessence.jpg" ><u>The Product Owner defines the ‘WHAT (and WHEN)’; the team defines ‘HOW’ and ‘HOW MUCH’</b></u></a>."</small></p>  	   <p><a href="{{ asset('storage/assets/SAFeInnovationandPlanningIteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+
+ <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+  <p><a href="{{ asset('storage/assets/SAFeEssentialSafe.pdf') }}" >Essential SAFe and Core Competencies</a></p>
+    <p><a href="{{ asset('storage/assets/SAFePIPlanning.pdf') }}" >SAFe PI Planning</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeDevOps.pdf') }}" >SAFe DevOps</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeContinuousDeliveryPipeline.pdf') }}" >SAFe Continuous Delivery Pipeline</a></p>
+	 	  <p><a href="{{ asset('storage/assets/SAFeReleaseonDemand.pdf') }}" >SAFe Release on Demand</a></p>
+
+		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		   <p><a href="{{ asset('storage/assets/SAFeART.pdf') }}" >SAFe ART</a></p>
+		    <p><a href="{{ asset('storage/assets/SAFeBusinessOwners.pdf') }}" >SAFe Business Owners</a></p>
+			  <p><a href="{{ asset('storage/assets/SAFeContinuousIntegration.pdf') }}" >SAFe Continuous Integration</a></p>
+			   <p><a href="{{ asset('storage/assets/SAFEFeaturesCapabilities.pdf') }}" >SAFe Features and Capabilities</a></p>
+			     <p><a href="{{ asset('storage/assets/SAFeLeanPortfolioManagement.pdf') }}" >SAFe Lean Portfolio Management</a></p>
+				   <p><a href="{{ asset('storage/assets/SAFeNonfunctionalRequirements.pdf') }}" >SAFe Non Functional Requirements</a></p>
+				    <p><a href="{{ asset('storage/assets/SAFeProgramIncrement.pdf') }}" >SAFe Program Increment</a></p>
+					 <p><a href="{{ asset('storage/assets/SAFeSolution.pdf') }}" >SAFe Solution</a></p>
+
+
+
+
+
+
+
+	<p><a href="/pmway/?slide=4" >Tie the logic above to the Capability Maturity model for operations above CM L1</a></p>
+		<br>
+						<p>Per the <a href="/agile?slide=12" >Agile Manifesto</a> acceptance is based on working software (improvements) / business value that can be released.  <br>A Product Owner approved Demo Deck (as key project artifact [Tying together PMC with PP (at User Story level)]) from each iteration review is (in PMWay's experience and opinion) best way to run Scrum at CM L2+.</p>
+						<p>From the article "SAFe User Story" above the image below is essential to appreciate and adopt if Professional scrum of  scrums at scale within SAFe is the goal.</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/safestoryfeature.png') }}"></p>
+						<p>and then extending this into the SAFe environment for Capabilities and Epics</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/saferequirementsmodel.png') }}"></p>
+						<p>Clearly the Product Owner's role is essential.  But always remember that the Scrum Master's role to reinforce Scrum Process (balance the make it so! / and deliver what by when!? forces) for team sanity and health is just as essential!</p>
+						<p>With the above in mind why not <a href="/pin"  >take the pin test to pin down</a> where you believe you are operating at.</p>
+
+
+
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepmboksixone" aria-expanded="false" aria-controls=
+        "collapsepmboksixone">PMWay Opinion about SAFe
+</button>
+
+<div class="collapse" id="collapsepmboksixone">
+    <div class="container">
+        <div class="card text-center">
+<h5 class="card-header" align="center"></h5>
+            <div class="card-body text-center">
+
+<p>It is the considerecd opinion of PMWay that with teams that (and are forced to) operate at <a href="/pmway/?slide=4" target=_blank">Capability Maturity Level 1</a><br>([Features from PI from Executive Pressure that force down on and kill agility found in User Stories (Teams not bothering - what's the use? - to compile User Stories)] and [<a href="/redbeads" >Deming's red bead experiment</a>] without PP and PMC at the level of the professional User Story)  <a href="/home/safeisunsafe"  > etc.<br>then SAFe is definitely UNSAFe</a>.</p>
+	<p>I.e. From the SAFe is unsafe article link above</p> <div align="center">
+Ken Schwaber, co-developer of srcum <a href="https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/" ><u>expressed serious concerns about SAFe</u></a> as early as 2013.<br>
+Nicholas M. Chaillan, U.S. Air Force Chief Software Officer, <a href="https://twitter.com/lukadotnet/status/1203751211817742336?s=20" ><u>discourages</u></a> “using rigid, presrciptive frameworks such as the Scaled Agile Framework (SAFe).”<br>
+Forbes contributor Steve Denning <a href="https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/#316e49034bbe" ><u>calls out</u></a> SAFe for being “ particularly worrying” in his article on how to spot fake Agile.<br>
+Marty Cagan of the Silicon Valley Product Group <a href="https://svpg.com/revenge-of-the-pmo/" ><u>explains</u></a> how SAFe is antithetical to the mindset of Silicon Valley companies.
+</div><br><img alt="SAFe should be (like a loaded gun) kept locked up in a safe" class="img-fluid"  src="{{ asset('storage/images/safefive/safelylockedup.png') }}" title="Like a loaded gun with children best to keep it locked up in a SAFe before someone gets really hurt"><img alt="Due to the heroics and pressure to push features down on developers your human resources will ... runaway!" class="img-fluid"  src="{{ asset('storage/images/safefive/runaway.png') }}" title="Why can we not keep our good people"><br><img alt="fast path to mediocracy" class="img-fluid"  src="{{ asset('storage/images/safefive/mediocracy.png') }}" title="Classic ignorance of the wisdom of Deming and a total lack of understanding of scrum.  The Mike Cohn video on YouTube about User Stories explains the problem and how to solve it"></p>
+
+
+
+
+
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+ </div>
+</div>
+
+
+    <script src="/bootstrapfourfivetwo/js/jquery.js"></script>
+    <script src="/bootstrapfourfivetwo/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/bootstrapfourfivetwo/css/jquery-ui.css"></link>
+<script>
+  $(document).ready(function () {
+    function qs(key) {
+      key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+      var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+      var slide = match && decodeURIComponent(match[1].replace(/\+/g, " "));
+      if (Math.floor(slide) == slide && $.isNumeric(slide))
+        return parseInt(slide);
+      else
+        return 0;
+    }
+    $('#i').carousel((qs('slide')) - 1);
+  });
+</script>
+<br>
+<br>
+<br>
+<br>
+
+
+
+{% endif %}
+
+
+{% endblock %}
+
+
+

@@ -1,0 +1,41 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Head Banging{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+
+  <h3 align="center">
+ Head Banging</h3>
+ <br><br>
+
+<p align="center"><img alt="head banging" src="{{ asset('storage/images/headbanging.gif') }}" width="300"></p>
+ <br><br>
+</div>
+<br>
+<br>
+<br>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}
+<!--BODY-->
+<div class="container" align="left">
+
+  <h3 align="center">
+ Head Banging</h3>
+ <br><br>
+
+<p align="center"><img alt="head banging" src="{{ asset('storage/images/headbanging.gif') }}" width="300"></p>
+ <br><br>
+</div>
+<br>
+<br>
+<br>
+<!-- Content Container ends here -->
+{% endif %}
+
+
+{% endblock %}

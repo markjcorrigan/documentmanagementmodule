@@ -1,0 +1,13 @@
+--- itilfourpracticeslive.blade.php.original
++++ itilfourpracticeslive.blade.php.scoped
+@@ -1,8 +1,10 @@
++<div class="itilfour-practices-content">
+ <div class="max-w-6xl mx-auto px-4 py-8">
+ 
+     <!-- Your existing content remains exactly the same -->
+     
+ </div>
++</div>
+ 
+ <!-- If you have styles, remember to prefix them:
+ .itilfour-practices-content .your-class { }

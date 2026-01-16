@@ -1,0 +1,93 @@
+{% extends 'base.twig' %}
+{% block title %}SCRUM Working Software{% endblock %}
+{% block body %}
+
+
+
+
+
+
+
+	{% if user %}
+<div class="container" align="center">
+  <h5 align="left">Agile and Scrum and the importance of building "Working Software"</h5>
+  <hr>
+  <h5 align="left">Test your understanding of what comprises working
+    software.<br>
+    Which "Scenario" below would you say represents working software?</h5>
+  <hr>
+  <img alt="" class="img-fluid" src="{{ asset('storage/images/workingsoftware.png') }}" > <br>
+  <br>
+  <br>
+  <hr>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseworkingsw" aria-expanded="false" aria-controls=
+        "collapseworkingsw">Click here for the answer </button>
+  <div class="collapse" id="collapseworkingsw">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">Working Software is the absolute essence of Agile and the Agile Manifesto.</h5>
+        <div class="card-body text-center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/workingsoftwarespec.png') }}" > <br>
+          <br>
+          <h3>And pertaining to this part of the Agile Manifesto</h3>
+          <img alt="" class="img-fluid" src="{{ asset('storage/images/working.png') }}" > </div>
+        <div class="card-footer"> If you are not building working software and demonstrating it you are NOT doing AGILE! </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <p><a href="/images/workingsoftware.pdf" >Click here for the
+    pdf about working software</a><br>
+  </p>
+  <p><a href="/home/productincrement" >Click here for information about the "product increment."  Use this to stay "in gradient."</a><br>
+  </p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="center">
+  <h5 align="left">Agile and Scrum and the importance of building "Working Software"</h5>
+  <hr>
+  <h5 align="left">Test your understanding of what comprises working
+    software.<br>
+    Which "Scenario" below would you say represents working software?</h5>
+  <hr>
+  <img alt="" class="img-fluid" src="{{ asset('storage/images/workingsoftware.png') }}" > <br>
+  <br>
+  <br>
+  <hr>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseworkingsw" aria-expanded="false" aria-controls=
+        "collapseworkingsw">Click here for the answer </button>
+  <div class="collapse" id="collapseworkingsw">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">Working Software is the absolute essence of Agile and the Agile Manifesto.</h5>
+        <div class="card-body text-center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/workingsoftwarespec.png') }}" > <br>
+          <br>
+          <h3>And pertaining to this part of the Agile Manifesto</h3>
+          <img alt="" class="img-fluid" src="{{ asset('storage/images/working.png') }}" > </div>
+        <div class="card-footer"> If you are not building working software and demonstrating it you are NOT doing AGILE! </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <p><a href="/images/workingsoftware.pdf" >Click here for the
+    pdf about working software</a><br>
+  </p>
+  <p><a href="/home/productincrement" >Click here for information about the "product increment."  Use this to stay "in gradient."</a><br>
+  </p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

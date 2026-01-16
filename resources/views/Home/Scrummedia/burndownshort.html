@@ -1,0 +1,66 @@
+{% extends 'simplemedia.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}Sprint 
+Burndown{% endif %}  {% endblock %}
+{% block body %}
+{% if current_user %}
+<!--BODY--> 
+<div class="container" align="left">
+<br>
+<h3>The Sprint Burndown Chart - Keeping it Sweet and Simple!</h3>
+<hr>
+
+
+<br>
+<video id="video1" align="left" data-able-player="true" preload="auto" data-speed-icons="true" width="480" height="360" poster="/"  playsinline="true">
+<source type="video/mp4" src="/ablelvids/burndownshort/burndownshort.mp4">
+</video>
+
+<br>
+<br>
+<p>The goal is to ski down the baseline!  Dusting as you go!</p>
+<div align="center">
+	<img alt="" class="img-fluid" src="/images/skiingdownbaseline.jpg"  >
+</div>
+<br>
+<br>
+
+
+
+
+
+</div> 
+  
+
+
+<!--ENDBODY-->
+{% else %}
+
+<div class="container" align="center">
+<br>
+<h3 align="left">The Sprint Burndown Chart - Keeping it Sweet and Simple!</h3>
+<hr>
+
+
+<br>
+<div align="center">
+<video id="video1" align="left" data-able-player="true" preload="auto" data-speed-icons="true" width="480" height="360" poster="/"  playsinline="true">
+<source type="video/mp4" src="/ablelvids/burndownshort/burndownshort.mp4">
+</video>
+
+</div>
+
+<br>
+<br>
+<p>The goal is to ski down the baseline!  Dusting as you go!</p>
+<div align="center">
+	<img alt="" class="img-fluid" src="/images/skiingdownbaseline.jpg"  >
+</div>
+
+<br>
+<br>
+
+</div>
+
+
+{% endif %}
+{% endblock %}

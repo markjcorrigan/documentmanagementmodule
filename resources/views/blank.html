@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<title>{% block title %}{% endblock %}</title>
+			<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+			<link rel="stylesheet" href="/bootstrapfouroneone/bootstrapableplay.css" >
+			<link rel="stylesheet" href="/bootstrapfouroneone/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+			<link href="/css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+			<link rel="stylesheet" href="/ableaudio/build/ableplayer.min.css" type="text/css">
+
+
+
+
+
+				</head>
+				<body>
+					<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+<!--						<a class="navbar-brand" href="https://www.google.co.za">Google</a>-->
+						<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="navbar-nav ml-auto">
+
+    		 {% if not user %}
+
+
+
+    			 				<!--NB trying to get Contact and Blog to work
+    								<li class="nav-item">
+												<a class="nav-link" href="/blog/contactpmway.php">
+													<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact
+												</a>
+											</li class="nav-item">-->
+
+                   			<!--	<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                &nbsp;Contact | Blog
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                              <a class="dropdown-item" href="/contact"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact</a>
+                              <a class="dropdown-item" href="/blog/index.php"><i class="fab fa-blogger" aria-hidden="true"></i>&nbsp;Blog</a>-->
+
+								<!--<li class="nav-item">
+									<a class="nav-link" href="/contact">
+										<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact
+									</a>
+								</li class="nav-item">  ---NB trying to get Contact and Blog working-->
+								<!--<li class="nav-item">
+									<a class="nav-link" href="/register" id="register">
+										<i class="fa fa-user" aria-hidden="true"></i>&nbsp;Register
+									</a>
+								</li class="nav-item">
+								<li class="nav-item">
+									<a class="nav-link" href="/login" id="login">
+										<i class="fa fa-unlock" aria-hidden="true"></i>&nbsp;Login
+									</a>
+								</li class="nav-item"> -->
+
+
+
+    			 				<!--NB trying to get Contact and Blog to work-->
+    							<!--	<li class="nav-item">
+												<a class="nav-link" href="/blog/contactpmway.php">
+													<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact
+												</a>
+											</li class="nav-item">-->
+
+                   			<!--	<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                &nbsp;Contact | Blog
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                              <a class="dropdown-item" href="/contact"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact</a>
+                              <a class="dropdown-item" href="/blog/index.php"><i class="fab fa-blogger" aria-hidden="true"></i>&nbsp;Blog</a>-->
+
+								<!--<li class="nav-item">
+									<a class="nav-link" href="/contact">
+										<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact
+									</a>
+								</li class="nav-item">  ---NB trying to get Contact and Blog working-->
+								<!--<li class="nav-item">
+									<a class="nav-link" href="/register" id="register">
+										<i class="fa fa-user" aria-hidden="true"></i>&nbsp;Register
+									</a>
+								</li class="nav-item">
+								<li class="nav-item">
+									<a class="nav-link" href="/login" id="login">
+										<i class="fa fa-unlock" aria-hidden="true"></i>&nbsp;Login
+									</a>
+								</li class="nav-item"> -->
+
+
+
+                   {% endif %}
+
+         {% if user %}
+         	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>-->
+
+                  		  <!--<ul class="navbar-nav ml-auto">
+
+                  <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                &nbsp;Contact | <!--Blog |--> <!--Search
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                              <a class="dropdown-item" href="/blog/contact.php"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact</a>
+                              <!--<a class="dropdown-item" href="/blog/index.php"><i class="fab fa-blogger" aria-hidden="true"></i>&nbsp;Blog</a>-->
+                              <!--<a class="dropdown-item" href="/search/search"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Search</a>
+                              <!--<a class="dropdown-item" href="/search/ajax"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Add (admin only)</a>-->
+
+                              </div>
+
+    		<!--
+                   				<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                &nbsp;Scrum Foundation
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                              <a class="dropdown-item" href="/scrum/sfone/index">&nbsp;SFOne</a>
+
+                              </div>
+                              </li class="nav-item">-->
+								<!--	<li class="nav-item">
+									<a class="nav-link" href="/home/pmbokprocessnutshell"><i class="fa fa-cogs"></i>&nbsp;How To
+									</a>-->
+
+
+
+              <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-cogs"></i>&nbsp;PMWays
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="/home/pmbokprocessnutshell"><i class="fa fa-cogs"></i>&nbsp;PMBOK Dashboard "How To"</a>
+              <a class="dropdown-item" href="/home/intwomins"><i class="fa fa-info" aria-hidden="true"></i>&nbsp;PMWay (in2minutes)</a>
+               <a class="dropdown-item" href="/home/intenmins"><i class="fa fa-info" aria-hidden="true"></i>&nbsp;PMWay (in10minutes)</a>  -->
+
+										<!--<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarNav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-lock"></i>&nbsp;Logout
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+										<a class="dropdown-item" href="/logout">
+											<i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Logout
+										</a>
+											<a class="dropdown-item" href="/logoutb">
+											<i class="fa fa-unlock" aria-hidden="true"></i>&nbsp;ticked
+											<br>remember?
+											</a>-->
+											<!--<li class="nav-item"><a class="nav-link" href="/home/pmbokprocessnutshell"><i class="fa fa-info" aria-hidden="true"></i>&nbsp;PMBOK 'How To'</a>
+												</li class="nav-item">-->
+
+									<!--<li class="nav-item">
+									<a class="nav-link" href="/profile/show">
+										<i class="fa fa-user" aria-hidden="true"></i>&nbsp;Profile
+									</a>
+								</li class="nav-item">
+								<li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Log out</a></li class="nav-item">	-->
+
+
+                    {% endif %}
+
+										</div>
+									</nav>
+
+
+
+
+
+        {% for message in flash_messages %}
+
+									<div style="text-align:center" class="alert alert-{{ message.type }}">
+                {{ message.body }}
+            </div>
+        {% endfor %}
+
+
+        {% block body %}
+
+									<div class="container" style="text-align:center">
+
+
+
+
+
+
+        {% endblock %}
+
+									</div>
+
+									<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+									<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>-->
+									<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+
+									<!--<script src="https://use.fontawesome.com/2f08d8400c.js"></script>-->
+
+
+									<!--<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>-->
+									<script src="/bootstrapfouroneone/jquery/jquery.js"></script>
+									<!--<script src="/bootstrapfouroneone/js/popper.min.js"></script>-->
+									<script src="/bootstrapfouroneone/js/bootstrap.js"></script>
+
+<script src="/ableaudio/build/ableplayer.js"></script>
+<script src="/ableaudio/thirdparty/modernizr.custom.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<script src="/ableaudio/thirdparty/js.cookie.js"></script>
+
+
+
+
+
+									<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+									<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+									-->
+
+
+
+
+{% block footer %}
+{% if user %}
+
+  {% endif %}
+{% endblock %}
+</body>
+</html>
+
+

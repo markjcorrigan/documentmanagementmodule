@@ -1,0 +1,428 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SD Supplier Management</h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=25') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description">The objective of <i>Supplier Management</i> is to ensure that all contracts with suppliers support the needs of the business. This ITIL process is also responsible for making sure that all suppliers meet their contractual commitments.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Supplier Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>In ITIL V3, Supplier Management is part of the Service Design process to allow for a better integration into the Service Lifecycle - Supplier Management was covered within "ICT Infrastructure Management" in the previous ITIL version. </p>
+  <p>Following the introduction of Design Coordination in <i><b>ITIL 2011</b></i> the information flows have been adapted slightly. The process overview of ITIL Supplier Management (.JPG) shows the key information flows. </p>
+  <p>All suppliers and contracts are managed through the Supplier and Contract Management Information System (SCMIS), which in ITIL V3 was known as the <i>Supplier &amp; Contract Database (SCD)</i>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Supplier Management sub-processes:">These are the <strong class="selflink">ITIL Supplier Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Supplier_Management_Framework" itemprop="itemListElement">Providing the Supplier Management Framework</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide guidance and standards for the procurement of services and products. This includes the provision of the Supplier Strategy and the preparation of standard Terms and Conditions. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Management_Evaluation" itemprop="itemListElement">Evaluation of new Suppliers and Contracts</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To evaluate prospective suppliers in accordance with the Supplier Strategy, and to select the most suitable supplier. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Vendor_Management_Contracts" itemprop="itemListElement">Establishing new Suppliers and Contracts</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To negotiate and sign a binding contract with a supplier. This process is mainly applied for significant investments, either in externally provided services or in technology. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Supplier_Management_Orders" itemprop="itemListElement">Processing of Standard Orders</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To process orders for commodity products and services, and to order pre-defined items within the boundaries of existing contract frameworks. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_and_Contract_Review" itemprop="itemListElement">Supplier and Contract Review</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To verify if the contractually agreed performance is actually delivered, and to define improvement measures if required (see "Supplier and Contract Review") </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Vendor_Management_Renewal" itemprop="itemListElement">Contract Renewal or Termination</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To carry out regular renewals of contracts, to assess if those contracts are still relevant, and to terminate contracts which are no longer needed. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Supplier Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Purchase_Order" itemprop="itemListElement">Purchase Order</span></b> </p>
+    <ul>
+      <li itemprop="description">An order for purchasing items from a supplier. If the order is for an externally supplied Supporting Service it is accompanied by an Underpinning Contract defining service level targets. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Purchase_Request" itemprop="itemListElement">Purchase Request</span></b> </p>
+    <ul>
+      <li itemprop="description">A request to purchase a service or a product from an external supplier, issued for example from Release Management during Service Build. Processing of a Purchase Request will generally proceed only if the requester also holds an approved budget for the purchase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Standard_Terms_and_Conditions" itemprop="itemListElement">Standard Terms and Conditions</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of terms and conditions which are routinely attached to contracts and orders when procuring services or products. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="SCMIS" itemprop="itemListElement">Supplier and Contract Management Information System (SCMIS)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Supplier and Contract Management Information System is database or structured document used to manage suppliers and contracts throughout their lifecycle. The SCMIS contains key attributes of all contracts with suppliers, and should be part of the Service Knowledge Management System. </li>
+      <li><i>Remark:</i> In ITIL V3 (2007) the Supplier and Contract Management Information System was referred to as the <i>Supplier &amp; Contract Database (SCD)</i>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Contract_Review_Meeting" itemprop="itemListElement">Supplier and Contract Review Meeting Minutes</span></b> </p>
+    <ul>
+      <li itemprop="description">The Supplier and Contract Review Meeting Minutes document achieved vs. agreed supplier performance. They also contain any identified supplier weaknesses and problems, as well as suggestions on how the situation could be improved. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Evaluation" itemprop="itemListElement">Supplier Evaluation</span></b> </p>
+    <ul>
+      <li itemprop="description">The resulting document from the Supplier Evaluation process, describing in detail the criteria used for evaluating and selecting a suitable supplier. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Service_Level_Report" itemprop="itemListElement">Supplier Service Level Report</span></b> </p>
+    <ul>
+      <li itemprop="description">The Supplier Service Level Report gives insight into a service provider's external supplier's ability to deliver the agreed service quality. To this purpose, it compares the agreed and actually achieved service levels, and also includes information on the usage of services, ongoing measures for service improvement, and any exceptional events. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Strategy" itemprop="itemListElement">Supplier Strategy</span></b> </p>
+    <ul>
+      <li itemprop="description">The Supplier Strategy sets guidelines for the procurement of services and goods. It typically includes criteria for the selection of suitable suppliers and a list of preferred suppliers. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="UC" itemprop="itemListElement">Underpinning Contract (UC)</span></b> </p>
+    <ul>
+      <li itemprop="description">A contract between an IT service provider and a third party. The third party provides supporting services that enable the service provider to deliver a service to a customer. Therefore, Underpinning Contracts must be aligned with the customer-facing Service Level Agreements (see also: ITIL Checklist Underpinning Contract - UC). </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Design#ITIL_KPIs_Supplier_Management" title="ITIL KPIs Supplier Management">Key Performance Indicators (KPIs) Supplier Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Underpinning_Contract_(UC)" title="Underpinning Contract template">Underpinning Contract (UC template)</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Supplier_Manager">Supplier Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Supplier Manager is responsible for ensuring that value for money is obtained from all suppliers.</li>
+    <li>He makes sure that contracts with suppliers support the needs of the business, and that all suppliers meet their contractual commitments.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="4"><b><span id="RACI-Matrix-Supplier-Management">Responsibility Matrix: ITIL Supplier Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Supplier Manager </th>
+        <th style="background:#ffffee;">Applications Analyst </th>
+        <th style="background:#ffffee;">Technical Analyst </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Supplier_Management_Framework">Providing the Supplier Management Framework</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Supplier_Management_Evaluation">Evaluation of New Suppliers and Contracts</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Vendor_Management_Contracts">Establishing New Suppliers and Contracts</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Supplier_Management_Orders">Processing of Standard Orders</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Supplier_and_Contract_Review">Supplier and Contract Review</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Vendor_Management_Renewal">Contract Renewal or Termination</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Supplier Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Supplier Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SD Supplier Management</h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=25') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description">The objective of <i>Supplier Management</i> is to ensure that all contracts with suppliers support the needs of the business. This ITIL process is also responsible for making sure that all suppliers meet their contractual commitments.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Supplier Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>In ITIL V3, Supplier Management is part of the Service Design process to allow for a better integration into the Service Lifecycle - Supplier Management was covered within "ICT Infrastructure Management" in the previous ITIL version. </p>
+  <p>Following the introduction of Design Coordination in <i><b>ITIL 2011</b></i> the information flows have been adapted slightly. The process overview of ITIL Supplier Management (.JPG) shows the key information flows. </p>
+  <p>All suppliers and contracts are managed through the Supplier and Contract Management Information System (SCMIS), which in ITIL V3 was known as the <i>Supplier &amp; Contract Database (SCD)</i>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Supplier Management sub-processes:">These are the <strong class="selflink">ITIL Supplier Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Supplier_Management_Framework" itemprop="itemListElement">Providing the Supplier Management Framework</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide guidance and standards for the procurement of services and products. This includes the provision of the Supplier Strategy and the preparation of standard Terms and Conditions. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Management_Evaluation" itemprop="itemListElement">Evaluation of new Suppliers and Contracts</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To evaluate prospective suppliers in accordance with the Supplier Strategy, and to select the most suitable supplier. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Vendor_Management_Contracts" itemprop="itemListElement">Establishing new Suppliers and Contracts</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To negotiate and sign a binding contract with a supplier. This process is mainly applied for significant investments, either in externally provided services or in technology. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Supplier_Management_Orders" itemprop="itemListElement">Processing of Standard Orders</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To process orders for commodity products and services, and to order pre-defined items within the boundaries of existing contract frameworks. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_and_Contract_Review" itemprop="itemListElement">Supplier and Contract Review</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To verify if the contractually agreed performance is actually delivered, and to define improvement measures if required (see "Supplier and Contract Review") </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Vendor_Management_Renewal" itemprop="itemListElement">Contract Renewal or Termination</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To carry out regular renewals of contracts, to assess if those contracts are still relevant, and to terminate contracts which are no longer needed. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Supplier Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Purchase_Order" itemprop="itemListElement">Purchase Order</span></b> </p>
+    <ul>
+      <li itemprop="description">An order for purchasing items from a supplier. If the order is for an externally supplied Supporting Service it is accompanied by an Underpinning Contract defining service level targets. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Purchase_Request" itemprop="itemListElement">Purchase Request</span></b> </p>
+    <ul>
+      <li itemprop="description">A request to purchase a service or a product from an external supplier, issued for example from Release Management during Service Build. Processing of a Purchase Request will generally proceed only if the requester also holds an approved budget for the purchase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Standard_Terms_and_Conditions" itemprop="itemListElement">Standard Terms and Conditions</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of terms and conditions which are routinely attached to contracts and orders when procuring services or products. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="SCMIS" itemprop="itemListElement">Supplier and Contract Management Information System (SCMIS)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Supplier and Contract Management Information System is database or structured document used to manage suppliers and contracts throughout their lifecycle. The SCMIS contains key attributes of all contracts with suppliers, and should be part of the Service Knowledge Management System. </li>
+      <li><i>Remark:</i> In ITIL V3 (2007) the Supplier and Contract Management Information System was referred to as the <i>Supplier &amp; Contract Database (SCD)</i>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Contract_Review_Meeting" itemprop="itemListElement">Supplier and Contract Review Meeting Minutes</span></b> </p>
+    <ul>
+      <li itemprop="description">The Supplier and Contract Review Meeting Minutes document achieved vs. agreed supplier performance. They also contain any identified supplier weaknesses and problems, as well as suggestions on how the situation could be improved. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Evaluation" itemprop="itemListElement">Supplier Evaluation</span></b> </p>
+    <ul>
+      <li itemprop="description">The resulting document from the Supplier Evaluation process, describing in detail the criteria used for evaluating and selecting a suitable supplier. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Service_Level_Report" itemprop="itemListElement">Supplier Service Level Report</span></b> </p>
+    <ul>
+      <li itemprop="description">The Supplier Service Level Report gives insight into a service provider's external supplier's ability to deliver the agreed service quality. To this purpose, it compares the agreed and actually achieved service levels, and also includes information on the usage of services, ongoing measures for service improvement, and any exceptional events. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Supplier_Strategy" itemprop="itemListElement">Supplier Strategy</span></b> </p>
+    <ul>
+      <li itemprop="description">The Supplier Strategy sets guidelines for the procurement of services and goods. It typically includes criteria for the selection of suitable suppliers and a list of preferred suppliers. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="UC" itemprop="itemListElement">Underpinning Contract (UC)</span></b> </p>
+    <ul>
+      <li itemprop="description">A contract between an IT service provider and a third party. The third party provides supporting services that enable the service provider to deliver a service to a customer. Therefore, Underpinning Contracts must be aligned with the customer-facing Service Level Agreements (see also: ITIL Checklist Underpinning Contract - UC). </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Design#ITIL_KPIs_Supplier_Management" title="ITIL KPIs Supplier Management">Key Performance Indicators (KPIs) Supplier Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Underpinning_Contract_(UC)" title="Underpinning Contract template">Underpinning Contract (UC template)</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Supplier_Manager">Supplier Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Supplier Manager is responsible for ensuring that value for money is obtained from all suppliers.</li>
+    <li>He makes sure that contracts with suppliers support the needs of the business, and that all suppliers meet their contractual commitments.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="4"><b><span id="RACI-Matrix-Supplier-Management">Responsibility Matrix: ITIL Supplier Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Supplier Manager </th>
+        <th style="background:#ffffee;">Applications Analyst </th>
+        <th style="background:#ffffee;">Technical Analyst </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Supplier_Management_Framework">Providing the Supplier Management Framework</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Supplier_Management_Evaluation">Evaluation of New Suppliers and Contracts</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Vendor_Management_Contracts">Establishing New Suppliers and Contracts</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Supplier_Management_Orders">Processing of Standard Orders</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Supplier_and_Contract_Review">Supplier and Contract Review</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Vendor_Management_Renewal">Contract Renewal or Termination</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Supplier Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Supplier Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

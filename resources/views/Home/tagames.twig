@@ -1,0 +1,265 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Transactional Analysis - Games Overview{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container">
+  <h3>The Games People Play from TA</h3>
+  <hr>
+  <p><a href="#playlist">PLAYLIST</a></p>
+  <div id="player" align="center">
+    <!-- video source and track elements will be populated from playlist -->
+    <video id="video1" preload="false" data-able-player playsinline loop></video>
+  </div>
+  <div id="playlist">
+    <h2><a name="playlist"></a>Playlist</h2>
+    <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+    <!-- The value of data-player must match the id of the media element -->
+    <!-- see documentation for additional details -->
+    <ul class="able-playlist" data-player="video1">
+      <li  data-poster="/images/ta.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/thegames/thegames.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/ta.jpg') }}" alt="">The Games from TA </button>
+      </li>
+      <li  data-poster="/images/ta.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/thegames/debtor.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/ta.jpg') }}" alt="">The Debtor </button>
+      </li>
+      <li  data-poster="/images/ta.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/thegames/alcoholic.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/ta.jpg') }}" alt="">The Alcoholic </button>
+      </li>
+    </ul>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  <h5 align="left">4:38  Fundamentals</h5>
+  <h5 align="left">6:12  Stroke Economy (Fuzzies or Prickles)</h5>
+  <h5 align="left">24:23  Pastimes  (Martini and Flirt games)</h5>
+  <h5 align="left">30:45  Ceremonies and Rituals</h5>
+  <h5 align="left">33:40  Games People Play + Levels of Game Intensity</h5>
+  <h5 align="left">37:50  GAME:  If It Wern't For You</h5>
+  <h5 align="left">40:05  GAME:  Yes But... </h5>
+  <h5 align="left">40:05  GAME:  Karpmans Triangle</h5>
+  <h5 align="left">41:40  GAME:  Schlemiel (Schlemaizel [who it done to])</h5>
+  <h5 align="left">44:10  GAME:  Let's Pull A Fast One On Joey</h5>
+  <h5 align="left">50:18  GAME:  Busmans Holiday</h5>
+  <h5 align="left">51:28  GAME:  Cavalier</h5>
+  <h5 align="left">53:22  GAME:  They'll Be Glad They Knew Me</h5>
+  <h5 align="left">55:54  Bad Scripts and Dangerous Games</h5>
+  <h5 align="left">100.02  Making a Productive Work Environment</h5>
+  <br>
+  <br>
+  <br>
+  <h5 align="left">Notes on the video above</h5>
+  <br>
+  <p align="left">Stroke Economies.  I.e. we all like to be stroked.  Strokes can be tallied and there is often a drive to keep them balanced.</p>
+  <p align="left">Warm Fuzzies & Cold Pricklies.  Or mixed communications with Cold Fuzzies and Warm Pricklies.
+  <p align="left">PASSTIME:  Martini (i.e. just trading strokes.  simple art of conversation with no payoffs except mostly natural child to natural child (or adult - sharing information)</p>
+  <p align="left">PASSTIME:  Flirts is gentle flirting but if 3rd party then can become a dangerous game.</p>
+  <p align="left">RITUALS & CEROMONIES:  Formulaic interactions with rules and roles.  If (giving away the bride / or getting an award etc.) is not handled correctly then can never get moment back and can leave lasting damage.</p>
+  <p align="left">3 Levels of games:  1.  Socially acceptable (open).  2.  More covert but no permanent damage?  3.  Dangerous game where players play for keeps.  And where players can end up in surgery, courtroom or in the morgue.</p>
+  <p align="left">Levels of game player:  Nurturing Parent (NP), Critical Parent (CP) (Head of Snowman) Adult (A) (Body of Snowman) Rebellious Child (RC), Compliant Child (CC) and Natural Child (NC)</p>
+  <p align="left">If there are games there will always be a payoff.  Find out who benefits and you will see the game.  Seeing the game is the start of being able to manage if you want to be involved in it or not.  Remember that if you approach people with NC and A you will be able to move for Win Win or I am ok and you are ok.</p>
+  <p align="left">GAME:  If it wern't for you (IIWFY): <br>
+    Player 1 blames Player 2 for somethine they are probably scared to undertake. <br>
+    Payoff:  can procrasticate and avoid the hard decision to "enter the <a href="/studymethods" >dark woods</a>". <br>
+    P2 looks down on and says right.  Payoff:  feels powerful.<br>
+    Way to end the game.  P1 enters the dark woods.  P2 agrees P1 can totally do whatever they want.  Or withdraws from the game.</p>
+  <p align="left">GAME:  Yes But... (YB):<br>
+    P1 I want to go to University.  P2 So do it.<br>
+    P1 Yes but bla bla bla P2 but try this.<br>
+    P1 Yes but bla etc.  Keeps throwing up road blocks!  P2 but try something else.<br>
+    <br>
+    Payoff:  P2 can avoid going into the <a href="/studymethods" >dark woods</a> because scared of what the committment will take and the possibility of failure. <br>
+    P2 feels powerful.<br>
+    Ending the game:  P1 Goes into and through the dark woods. P2 agrees P1 can totally do whatever they want.  Or withdraws from the game.</p>
+  <p align="left">GAME:  Schlemiel. <br>
+    A Yiddish saying explains that "a schlemiel is somebody who often spills his soup and a schlimazel is the person it lands on". The schlemiel is similar to the schmuck but, as stated in a 2010 essay in The Forward, a schmuck can improve himself while a schlemiel is "irredeemably what they are".<br>
+    P1 Schelemiel keeps damaging or messing up around P2 (hurting P2).<br>
+    Payoff:  P1 is using damage as way to hurt P2.   Possibly jealousy.  Possibly as overt motivator sequence / to get withhold or overts pulled? (<a href="/scientologydict/contents.htm" >More on these Scientology terms here if interested</a>).<br>
+    Ending the Game:  P1 realizes it and stops.  P2 Stops P1 or unplugs. </p>
+  <p align="left">GAME:  Lets pull a fast one on Joey (LPAFOOJ):<br>
+    P1, P2 and P3.  P1 has an affair with P2 at work.  P1 is married to P3 and organises for P3 to find out about affair.<br>
+    Payoff:  P1 feels desirable.  P1 is admired and loved to 2 people. P1 is hurting P2 due to overt motivator sequence / to get withhold or overts pulled (third party law)? (scientology).<br>
+    Payoff:  P3 gets to feel powerful pulling P1 back into marriage (arangement again).<br>
+    Ending the Game:  P3 puts in ethics (scientology).  Divorces P1. <br>
+    P2 stops affair.<br>
+    P2 realises the damage their unethical actions are causing and stops the affair.<br>
+    NB Dangerous Game (Level 3).<br>
+  </p>
+  <p align="left">GAME: Karpmans Triangle (KT)<br>
+    Players:  P1, P2 and P3. <br>
+    Example.  P2 (Mother) to daughter (p1).  Go and clean your room. I have told you a 1000 times etc.<br>
+    P3 (Father steps in to chastise mother for being hard on daughter.<br>
+    Daughter then sides with mother against father.  happens regularly and different modes but same game i.e. "rollercoaster (scientology)?"<br>
+    Payoff:  All can communicate (even if down tone - scientology).  All can get attention.  All can vent, or purge frustrations and let off steam.<br>
+    Ending the Game:  Prevent Karpmans Triangle by limiting game to only 2 players.  Decide not to play.<br>
+  </p>
+  <p align="left">GAME:  Busmans Holiday (BH)<br>
+    Example:  Someone suddenly goes off and does something totally different.  I.e. rich successful entrepreneur suddently starts to serve food at a food kitchen for the poor etc.<br>
+    Payoff:  Permission to be someone else for a while.  But free to return to old life at any time.</p>
+  <p align="left">GAME:  Cavalier (C)<br>
+    Example:  Someone keeps trying to make others lives better.
+    Payoff:  Made to feel powerful.  Form of human gardening.</p>
+  <p align="left">GAME:  They will be glad they knew me (TWBGTNM)<br>
+    Varient of I'll show them game.<br>
+    P1 is fired from a job but keeps telling people that if it wasnt for this he would not be where he is today.<br>
+    I am glad they let me go.  i.e. bordering on the edge of getting even.</p>
+  <p align="left">SCRIPS [Repeat Patterns of Behaviour that are learned before we know (learn) how dangerous and toxic they are (like drugs).<br>
+    Repeating bad or dangerous patterns of behaviour for many decades. Can take 30 to 40 years (stupid safari) to delete a script you were exposed to as a child. <br>
+    I.e. my father could not give up alcohol so I will not be able to! </p>
+  <br>
+  <br>
+  <p align="left"><a href="{{ asset('storage/assets/ericbernegamespeopleplayseventythree.pdf') }}" >Click here for Eric Berne's Games People Play 1973</a></p>
+  <br>
+  <br>
+  <p align="left"><a href="{{ asset('storage/assets/tagamesessence.pdf') }}" >Click here for JUST THE LIST of the list of all games </a></p>
+  <br>
+  <br>
+  <p align="left"><a href="{{ asset('storage/assets/tagames.pdf') }}" >Click here for the list of all games (page 86) accessible via clickable links downloaded from Eric Berne's Web Page </a></p>
+  <br>
+  <br>
+</div>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+<h3>The Games People Play from TA</h3>
+<hr>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/ta.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/thegames/thegames.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/ta.jpg') }}" alt="">The Games from TA </button>
+    </li>
+    <li  data-poster="/images/ta.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/thegames/debtor.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/ta.jpg') }}" alt="">The Debtor </button>
+    </li>
+    <li  data-poster="/images/ta.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/thegames/alcoholic.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/ta.jpg') }}" alt="">The Alcoholic </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+  <h5 align="left">4:38  Fundamentals</h5>
+  <h5 align="left">6:12  Stroke Economy (Fuzzies or Prickles)</h5>
+  <h5 align="left">24:23  Pastimes  (Martini and Flirt games)</h5>
+  <h5 align="left">30:45  Ceremonies and Rituals</h5>
+  <h5 align="left">33:40  Games People Play + Levels of Game Intensity</h5>
+  <h5 align="left">37:50  GAME:  If It Wern't For You</h5>
+  <h5 align="left">40:05  GAME:  Yes But... </h5>
+  <h5 align="left">40:05  GAME:  Karpmans Triangle</h5>
+  <h5 align="left">41:40  GAME:  Schlemiel (Schlemaizel [who it done to])</h5>
+  <h5 align="left">44:10  GAME:  Let's Pull A Fast One On Joey</h5>
+  <h5 align="left">50:18  GAME:  Busmans Holiday</h5>
+  <h5 align="left">51:28  GAME:  Cavalier</h5>
+  <h5 align="left">53:22  GAME:  They'll Be Glad They Knew Me</h5>
+  <h5 align="left">55:54  Bad Scripts and Dangerous Games</h5>
+  <h5 align="left">100.02  Making a Productive Work Environment</h5>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h5 align="left">Notes on the video above</h5>
+  <br>
+  <p align="left">Stroke Economies.  I.e. we all like to be stroked.  Strokes can be tallied and there is often a drive to keep them balanced.</p>
+  <p align="left">Warm Fuzzies & Cold Pricklies.  Or mixed communications with Cold Fuzzies and Warm Pricklies.
+  <p align="left">PASSTIME:  Martini (i.e. just trading strokes.  simple art of conversation with no payoffs except mostly natural child to natural child (or adult - sharing information)</p>
+  <p align="left">PASSTIME:  Flirts is gentle flirting but if 3rd party then can become a dangerous game.</p>
+  <p align="left">RITUALS & CEROMONIES:  Formulaic interactions with rules and roles.  If (giving away the bride / or getting an award etc.) is not handled correctly then can never get moment back and can leave lasting damage.</p>
+  <p align="left">3 Levels of games:  1.  Socially acceptable (open).  2.  More covert but no permanent damage?  3.  Dangerous game where players play for keeps.  And where players can end up in surgery, courtroom or in the morgue.</p>
+  <p align="left">Levels of game player:  Nurturing Parent (NP), Critical Parent (CP) (Head of Snowman) Adult (A) (Body of Snowman) Rebellious Child (RC), Compliant Child (CC) and Natural Child (NC)</p>
+  <p align="left">If there are games there will always be a payoff.  Find out who benefits and you will see the game.  Seeing the game is the start of being able to manage if you want to be involved in it or not.  Remember that if you approach people with NC and A you will be able to move for Win Win or I am ok and you are ok.</p>
+  <p align="left">GAME:  If it wern't for you (IIWFY): <br>
+    Player 1 blames Player 2 for somethine they are probably scared to undertake. <br>
+    Payoff:  can procrasticate and avoid the hard decision to "enter the <a href="/studymethods" >dark woods</a>". <br>
+    P2 looks down on and says right.  Payoff:  feels powerful.<br>
+    Way to end the game.  P1 enters the dark woods.  P2 agrees P1 can totally do whatever they want.  Or withdraws from the game.</p>
+  <p align="left">GAME:  Yes But... (YB):<br>
+    P1 I want to go to University.  P2 So do it.<br>
+    P1 Yes but bla bla bla P2 but try this.<br>
+    P1 Yes but bla etc.  Keeps throwing up road blocks!  P2 but try something else.<br>
+    <br>
+    Payoff:  P2 can avoid going into the <a href="/studymethods" >dark woods</a> because scared of what the committment will take and the possibility of failure. <br>
+    P2 feels powerful.<br>
+    Ending the game:  P1 Goes into and through the dark woods. P2 agrees P1 can totally do whatever they want.  Or withdraws from the game.</p>
+  <p align="left">GAME:  Schlemiel. <br>
+    A Yiddish saying explains that "a schlemiel is somebody who often spills his soup and a schlimazel is the person it lands on". The schlemiel is similar to the schmuck but, as stated in a 2010 essay in The Forward, a schmuck can improve himself while a schlemiel is "irredeemably what they are".<br>
+    P1 Schelemiel keeps damaging or messing up around P2 (hurting P2).<br>
+    Payoff:  P1 is using damage as way to hurt P2.   Possibly jealousy.  Possibly as overt motivator sequence / to get withhold or overts pulled? (<a href="/scientologydict/contents.htm" >More on these Scientology terms here if interested</a>).<br>
+    Ending the Game:  P1 realizes it and stops.  P2 Stops P1 or unplugs. </p>
+  <p align="left">GAME:  Lets pull a fast one on Joey (LPAFOOJ):<br>
+    P1, P2 and P3.  P1 has an affair with P2 at work.  P1 is married to P3 and organises for P3 to find out about affair.<br>
+    Payoff:  P1 feels desirable.  P1 is admired and loved to 2 people. P1 is hurting P2 due to overt motivator sequence / to get withhold or overts pulled (third party law)? (scientology).<br>
+    Payoff:  P3 gets to feel powerful pulling P1 back into marriage (arangement again).<br>
+    Ending the Game:  P3 puts in ethics (scientology).  Divorces P1. <br>
+    P2 stops affair.<br>
+    P2 realises the damage their unethical actions are causing and stops the affair.<br>
+    NB Dangerous Game (Level 3).<br>
+  </p>
+  <p align="left">GAME: Karpmans Triangle (KT)<br>
+    Players:  P1, P2 and P3. <br>
+    Example.  P2 (Mother) to daughter (p1).  Go and clean your room. I have told you a 1000 times etc.<br>
+    P3 (Father steps in to chastise mother for being hard on daughter.<br>
+    Daughter then sides with mother against father.  happens regularly and different modes but same game i.e. "rollercoaster (scientology)?"<br>
+    Payoff:  All can communicate (even if down tone - scientology).  All can get attention.  All can vent, or purge frustrations and let off steam.<br>
+    Ending the Game:  Prevent Karpmans Triangle by limiting game to only 2 players.  Decide not to play.<br>
+  </p>
+  <p align="left">GAME:  Busmans Holiday (BH)<br>
+    Example:  Someone suddenly goes off and does something totally different.  I.e. rich successful entrepreneur suddently starts to serve food at a food kitchen for the poor etc.<br>
+    Payoff:  Permission to be someone else for a while.  But free to return to old life at any time.</p>
+  <p align="left">GAME:  Cavalier (C)<br>
+    Example:  Someone keeps trying to make others lives better.
+    Payoff:  Made to feel powerful.  Form of human gardening.</p>
+  <p align="left">GAME:  They will be glad they knew me (TWBGTNM)<br>
+    Varient of I'll show them game.<br>
+    P1 is fired from a job but keeps telling people that if it wasnt for this he would not be where he is today.<br>
+    I am glad they let me go.  i.e. bordering on the edge of getting even.</p>
+  <p align="left">SCRIPS [Repeat Patterns of Behaviour that are learned before we know (learn) how dangerous and toxic they are (like drugs).<br>
+    Repeating bad or dangerous patterns of behaviour for many decades. Can take 30 to 40 years (stupid safari) to delete a script you were exposed to as a child. <br>
+    I.e. my father could not give up alcohol so I will not be able to! </p>
+  <br>
+  <br>
+  <p align="left"><a href="{{ asset('storage/assets/ericbernegamespeopleplayseventythree.pdf') }}" >Click here for Eric Berne's Games People Play 1973</a></p>
+  <br>
+  <br>
+  <p align="left"><a href="{{ asset('storage/assets/tagamesessence.pdf') }}" >Click here for JUST THE LIST of the list of all games </a></p>
+  <br>
+  <br>
+  <p align="left"><a href="{{ asset('storage/assets/tagames.pdf') }}" >Click here for the list of all games (page 86) accessible via clickable links downloaded from Eric Berne's Web Page </a></p>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+<!--ENDBODY-->
+
+{% endif %}
+{% endblock %}

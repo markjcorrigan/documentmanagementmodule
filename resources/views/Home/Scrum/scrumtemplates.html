@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}Scrum Templates{% endif %}{% endblock %}
+{% block body %}
+{% if current_user %}
+<!--BODY-->
+<div class="container">
+<h1 id="F1F">Index</h1>
+<table>
+<thead>
+<tr><td class="col-file">File:</td><td class="col-date">
+	&nbsp;</td></tr>
+</thead>
+
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/kanbancharts.zip">Kanban / Scrum control spreadsheets.zip</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/burndownchart.xlsx">Burndown-Chart.xlsx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/communicationplan.docx">Communication-Plan.docx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/dailyscrumorstandup.docx">Daily-Scrum-or-Stand-Up.docx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/deploymentplan.docx">Deployment-Plan.docx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/endprojectassessment.docx">End-Project-Assessment.docx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/exceptionreport.docx">Exception-Report.docx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/prioritizedrequirementslist.xlsx">Prioritized-Requirements-List.xlsx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/productbacklog.xlsx">Product-Backlog.xlsx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/termsofreference.docx">Terms-of-Reference.docx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/timeboxreview.docx">Timebox-Review.docx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/userstorytemplate.xlsx">User Story Template.docx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/userstoryexamplessmaller.pdf">User Story Examples.pdf</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/userstory.docx">User-Story.docx</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/openimpedimentslist.docx">Open Impediments List.docx</a></td></tr>
+
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/scrumimpedimentslog.xlsm">Scrum Impediments Log.xlsm</a></td></tr>
+
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/risksandissues.xls">Risks and Issues Log.xls</a></td></tr>
+
+
+
+
+
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/sprintplanningchecklist.docx">Sprint Planning Checklist.docx</a></td></tr>
+
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/sprintplanningchecklist.pdf">Sprint Planning Checklist.pdf</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/twoweeksprintsamplecalendar.pdf">2 Week Sprint - Sample Calendar.pdf</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/scrumtermworksheet.pdf">Scrum Team Worksheet.pdf</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/scrumtermworksheet.docx">Scrum Team Worksheet.docs</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/scrumtermworksheetanswerkey.pdf">Scrum Team Worksheet Answer Key.pdf</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/productincrement.jpg">Scrum Product Increment.jpg</a></td></tr>
+
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/compliancestories.csv">Scrum Compliance Stories.csv</a></td></tr>
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/compliancestories.zip">Scrum Compliance Stories.zip</a></td></tr>
+
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/kanbansetupchecklist.pdf">Kanban Setup Checklist.pdf</a></td></tr>
+
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/agiletermscrossword.pdf">Agile Crossword.pdf</a></td></tr>
+
+<tr><td class="file"><a href="../scrumsave/scrumtemplates/roadmap.pptx">S Shaped Roadmap for project.pptx</a></td></tr>
+</table>
+
+<br><br><br><br>
+
+
+
+</div> 
+<!--BODY ENDS HERE-->
+{% endif %}
+   
+
+{% endblock %}

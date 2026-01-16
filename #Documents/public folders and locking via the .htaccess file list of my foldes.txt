@@ -1,0 +1,143 @@
+agilepinciples  priniples.html
+booksummaries    index.html      lock
+cbandmetercourses index.html     lock
+cmiitraining      index.html   and index.php   lock
+
+
+booklets                              lock    may be duplicated  lock and test
+emetercourse  index.html              lock  done
+
+booksummaries  index.html             lock  done
+flipacp        index.html              lock done
+flipdsdm       index.html             lock  done
+flippmbokfive  index.html          lock      done
+flippmp         index.html        lock       done
+fliprince2     index.html         lock       done
+flipprince2a   index.html        lock       done
+flipprince22015  index.html    lock           done
+shsb  Scientology  index.html  lock  NB great stuff here  done
+
+techdic index.html  lock  done
+
+lrh index.html              lock       done                       nb studyreadaudio
+
+standardtechcourse  index.html  lock  done
+
+
+freezonecourses     index.html   lock  done
+
+lrhbooks         index.html    lock  done
+
+scrum  index.html  lock  store  done
+
+silverbullet  index.html  store can be deleted?
+
+macroecon   econ.html   and index.html  done
+
+madmoment  index.html  done  
+
+strategystuff  index.html  storage  nb strategy unisa manual
+
+scrummanual  index.html  scrum 4
+
+sitapmo index.html  nb docs for pmo  done
+
+helpme na.html   do not lock nb na and also excalibut harmonypdf hp na peterscomworkshop the pilot                          posts trom   pool and train and who modev my cheese mht  done
+
+change study manual to studymanual index.html  done  
+
+summitid index.html  old tech  done
+
+tao  index.html
+
+
+
+
+
+
+
+
+apology         index.html            locked  done
+atecdic         index.html            locked  done
+scientologydict index.html   locked  ?        done
+
+
+goodcheapfast   index.html    do not lock
+biases           index.html           do not lock
+fallacies        index.html           do not lock
+breath           index.html           do not lock
+complexprince    index.html           do not lock
+conditions       index.html           do not lock
+cv               index.html           do not lock
+dsdmmanual  index.html
+dsdmwhitepapers index.html
+
+pcmm index.html  store
+
+philosopherstoolkit  index.html   dig around cool stuffs
+
+philosophy  plato7I.html  plate7epistle.html
+
+
+pmbok5 index.html
+pmbok6 index.html
+pmboksixmanual   index.html  store
+pmi2015  index.html
+prince2agile  index.html
+prince2mm  index.html
+prince2procs  index.html  store
+processdash  index.html  store
+
+cmmidev    store leave
+cmmidelevlopment store leave
+cmmimodels store leave
+dsdm store leave
+includesub  leave  this feeds cv
+lovemstuffs  store  lovempdf
+movies   store  index.html
+phoenixlecturespics  store  index.html  downloads tifs and 1 png
+PMWayLanding store  nb leave this alone needed by new web site to serve legacy adjusted.
+itilfouroverview  index.html
+itilfouroverviewsimple  index.html
+itilfourstudyguide  itilguide.html  itilfourstudyguide.html
+
+latin  index.html
+
+
+
+recharges index.html store  zips
+robertsrulesoforder index.html
+
+
+
+images    not sure leave alone
+imgmap could be a program to map an image  will need to check
+
+
+cmm steps delete  done
+cmmi1 delete      done
+books delete      done
+bakjobs delete    done 
+designpatterns   delete  done
+imagesv6 delete  done
+imgman delete    done
+prod delete      done
+
+road to clear changed to roadtoclear index.html  done
+
+technical dictionary   store   index.html  problem accessing documents
+
+technologydict  index.html  lock  done
+
+thewayaudio  just the mp3 index.html
+
+trscourse  index.html  lock  done
+
+twcsstraining index.html  can be deleted at some time
+
+welcome deleted  
+uploads deleted
+
+zen index.html
+
+    

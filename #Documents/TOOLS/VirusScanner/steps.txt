@@ -1,0 +1,6 @@
+1.  put files or folder in vs
+2.  highlight the folder and put in cmd
+2.  optional  py -m pip install requests
+3   run this command: python malware-scanner.py  (nb pyton.exe in the environment path then reboot)
+4.  when is asks for the api:  f35893975d9b2c568fbf02ce4a9efe500803d24bf8e8533a2c039fe3742093ae
+5.  when it asks for folder put in vs

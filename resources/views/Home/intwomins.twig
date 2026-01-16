@@ -1,0 +1,617 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}In2Mins{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container">
+  <style>
+ /* Make the image fully responsive */
+
+  body {
+  background-color: #c2e8fc !important;
+  }
+  .carousel-indicators {
+position: absolute;
+bottom: -35px;
+}
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+
+.navbar{
+      position:relative;
+      width:100%;
+      z-index:10;
+      max-width:100%;
+}
+
+
+/*carousel indicators */
+.carousel-indicators li, {
+  background: #f00 none repeat scroll 0 0;
+  border: 0 none;
+  border-radius: 50%;
+  height: 30px;
+  margin: 3px;
+  opacity: 0.5;
+  width: 30px;
+}
+/*active slide indicator */
+.carousel-indicators .active {
+  background: #fff none repeat scroll 0 0;
+  border: 4px solid #f00;
+}
+
+  .auto-style1 {
+	border-width: 2px;
+}
+.auto-style2 {
+	border-style: solid;
+	border-width: 2px;
+}
+
+  </style>
+  <div id="i" class="carousel slide" data-ride="carousel" data-interval="false">
+    <ol class="carousel-indicators">
+      <li data-target="#i" data-slide-to="0" class="active"></li>
+      <li data-target="#i" data-slide-to="1"></li>
+      <li data-target="#i" data-slide-to="2"></li>
+      <li data-target="#i" data-slide-to="3"></li>
+      <li data-target="#i" data-slide-to="4"></li>
+      <li data-target="#i" data-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active" align="center">
+        <h5><strong>(Slide 1 of 6)<br>
+          <br>
+          Struggling to create value?<br>
+          Click to the right of this image
+          (from the PMBOK version 6) <br>
+          to see the essence of how its done.<br>
+          </strong></h5>
+        <img class="img-fluid" src="{{ asset('storage/images/orglargebezelled.png') }}"> <br>
+        <br>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsenb" aria-expanded="false" aria-controls=
+        "collapsenb">Why the 6 slides? </button>
+        <div class="collapse" id="collapsenb">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">These 6 slides summarize a proposed value creation approach based on the Carnegie Mellon Capability Maturity Model and other methodologies / frameworks.</h5>
+              <div class="card-body text-center">
+                <p>PMWay understands that Information Technology and Project Management (especially Software Project Management)
+                  can be complicated to understand for those (Executives / Managers etc.) not
+                  fully involved in these areas, or fully up to speed with the
+                  methodologies, frameworks, technologies etc.<br>
+                  This short 6 slide overview
+                  aims to give you an essential overview and to provide the information
+                  needed to envision a better way forward towards sustainable value creation.</p>
+              </div>
+              <div class="card-footer"> Remember that while best practice is always the goal, best practical is better.<br>
+                I.e. tailoring
+                (using the essence from a lean perspective) is key. </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="carousel-item" align="center">
+        <h5 class="ctr"><strong>(Slide 2 of 6)<br>
+          <br>
+          To create value you must jump
+          out of &quot;Just Do It&quot; chaos at Level 1;<br>
+          rising up to the challenge of process
+          driven stability at Capability Maturity Level 2</strong></h5>
+        <map id="ImgMap5" name="ImgMap5">
+          <area alt="" coords="324, 353, 5" href="/cv/index.php" shape="circle">
+        </map>
+        <img alt="" class="img-fluid"  src="{{ asset('storage/images/firstbase.png') }}" usemap="#ImgMap5" ><br>
+        <p> The Capability Maturity Model at Level 2 is not about &quot;Just Do It.&quot; <br>
+          Rather it is about following Project Management processes correctly;<br>
+          be these
+          Traditional, Agile or other methodologies.</p>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseexample" aria-expanded="false" aria-controls=
+        "collapseexample">An example of CM Level 1 behavior </button>
+        <div class="collapse" id="collapseexample">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">This example is one of many deviations from correct process
+                that is possible in a typical project lifecycle or phase / agile sprint.</h5>
+              <div class="card-body text-center">
+                <p> Here is an example:&nbsp; If a program or project is envisaged is there
+                  an approved business case or Project Charter and Assumptions Log in
+                  place.&nbsp; This (clearly shown in Slide 5), from a project process
+                  perspective is an essential output of the Project Management Body of
+                  Knowledge process 4.1:&nbsp; Develop Project Charter.&nbsp; Based on
+                  this deliverable, without it being in place, any talk or pressure from
+                  management to deliver a project is immature and indicates a serious lack
+                  of capability.&nbsp; In Project Management Process the above is an
+                  example of a quality or stage gate being applied as the project (or
+                  project phase / agile sprint etc.) moves through is lifecycle.</p>
+              </div>
+              <div class="card-footer"> Remember that while best practice is always the goal, best practical is better.<br>
+                I.e. tailoring (using the essence from a lean perspective) is key. </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="carousel-item" align="center">
+        <h5 class="ctr"><strong>(Slide 3 of 6)<br>
+          <br>
+          The Problem | Solution: <br>
+          in more detail</strong></h5>
+        <br>
+        <img class="img-fluid" src="{{ asset('storage/images/dunningkrugereffectonprojectprocesseswithpin.png') }}"><br>
+        <p>Note that correct process application<br>
+          FOR ANY PROJECT METHOD<br>
+          starts at the bottom of the ladder.<br>
+          <br>
+          <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepcmm" aria-expanded="false" aria-controls=
+        "collapsepcmm">The automatically <br>
+          &quot;Empowered Workgroup&quot; <br>
+          myth</button>
+
+        <div class="collapse" id="collapsepcmm">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">All Project Management Methods, but especially Agile, require Empowered Workgroups.<br>
+                Can you see where
+                (AND HOW) these
+                are created on the People Capability Maturity Model below?</h5>
+              <div class="card-body text-center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/pcmmoverviewbevelled.png') }}"> </div>
+              <div class="card-footer"> A clear understanding of the rules of the game, and the skills needed to play the game correctly <br>
+                (project management processes correctly applied), <br>
+                is how
+                teams become empowered</div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseppt" aria-expanded="false" aria-controls=
+        "collapseppt">The<br>
+        People, Process
+        and Technology <br>
+        Triad
+        perspective </button>
+        <div class="collapse" id="collapseppt">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">The People, Process
+                and Technology Triad</h5>
+              <div class="card-body text-center">
+                <h5>Improved processes, defined and knitted into your systems (technology), will enable your people <br>
+                  to better service your valued clients.</h5>
+                <p class="medium text-center"><em>Hover your mouse over the image below.</em></p>
+                <img class="img-fluid" src=
+                "/images/ppt.png" onmouseover=
+                                                                         "this.src='{{ asset('storage/images/peopleprocessbottomlineboxedin.png') }}'"
+                                                                         onmouseout=
+                                                                         "this.src='{{ asset('storage/images/ppt.png') }}'"/>
+                <h5>Everyone realizes the importance of having a motivated, quality workforce
+                  but even our finest people cannot perform at their best when the
+                  process is not understood or operating at its best.</h5>
+              </div>
+              <div class="card-footer">&nbsp;The three points
+                (nodes) of this triangle <br>
+                pulled outward (focused upon,
+                utilized correctly, mutually improved), <br>
+                drives the positive change
+                that is needed to create business value.<br>
+                <em>And<br>
+                'Process
+                is the glue that ties the triad together'!</em> </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle="collapse" data-target="#collapsecmtwo" aria-expanded="false" aria-controls="collapsecmtwo"> The systems<br>
+        Configuration Management (CMII) <br>
+        perspective</button>
+        <div class="collapse" id="collapsecmtwo">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">System Configuration Management (CM
+                processes) from Level 2 of the Capability Maturity Model <br>
+                (for Systems
+                Development)</h5>
+              <div class="card-body text-center"> <img alt="cmtwo" class="img-fluid" src="{{ asset('storage/images/cmtwo.png') }}" > </div>
+              <div class="card-footer"> The devil is in the detail with IT systems configuration
+                management. <br>
+                Get this wrong at your peril!<br>
+                ITIL (The IT Infrastructure Library as an easy
+                to use process based dashboard) is available within PMWay. </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseitto" aria-expanded="false" aria-controls=
+        "collapseitto">Transforming the Culture </button>
+        <div class="collapse" id="collapseitto">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">Project Management Process is how you
+                create the stable base needed to transform the culture.</h5>
+              <div class="card-body text-center">
+                <p class="small text-center"><em>Hover your mouse over the image below.</em></p>
+                <img class="img-fluid" src="{{ asset('storage/images/l2nutshell.jpg') }}" onmouseover="this.src='{{ asset('storage/images/l2nutshelltrans.png') }}'" onmouseout="this.src='{{ asset('storage/images/l2nutshell.jpg') }}'"> </div>
+              <div class="card-footer"> The stable base of Project Management Process at Capability Maturity Model
+                level 2 (next two slides)<br>
+                can be used to install other CM
+                processes throughout the CM model. </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="carousel-item" align="center">
+        <h5 class="ctr"><strong>(Slide 4 of 6)<br>
+          <br>
+          The improvement path to
+          Capability Maturity Level 2 (and above) <br>
+          starts with the pinning down (and correct
+          performance of) <br>
+          the Project Management processes found at Capability Maturity Level 2</strong></h5>
+        <p class="small text-center"><em>Hover your mouse over the image below.</em></p>
+        <img class="img-fluid" src="{{ asset('storage/images/cmmproject2plus.png') }}" onmouseover="this.src='{{ asset('storage/images/peopleprocesstechnologygovernanceexecution.png') }}'" onmouseout="this.src='{{ asset('storage/images/cmmproject2plus.png') }}'"> <br>
+        <br>
+        <h5>The Capability Maturity Model (simplified)<br>
+          from Carnegie Mellon University in the USA</h5>
+        <br>
+        <br>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsenotes" aria-expanded="false" aria-controls=
+        "collapsenotes">Some notes on the model </button>
+        <div class="collapse" id="collapsenotes">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">These short notes will quickly orientate
+                your understanding of the essence of the model above.</h5>
+              <div class="card-body text-center">
+                <p align="left">Can you spot the Configuration Management
+                  (CM) process
+                  on the model above at Capability Maturity Level 2?<br>
+                  Configuration
+                  Management ensures that the Project Requirement (REQM) process is moved from a stable
+                  baseline to a new stable baseline.<br>
+                  Now look for the Project Planning (PP) and Project Monitoring and Control
+                  (PMC) processes at Level 2.<br>
+                  PP and PMC bolster Project Execution and are at
+                  the heart of the PMBOK Dashboard
+                  found on the next page!<br>
+                  These processes (and others) form the essence of the
+                  Edward W. Deming's Plan, Do, Check and Act quality improvement cycle, <br>
+                  his "Red Bead
+                  Experiment" and his 14 Observations
+                  for Management. </p>
+              </div>
+              <div class="card-footer"> </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="carousel-item" align="center">
+        <h5><strong>(Slide 5 of 6)<br>
+          </strong></h5>
+        <img class="img-fluid" alt="" height="122" src="{{ asset('storage/images/dashhead.jpg') }}" width="605" usemap="#ImgMap3"><br>
+        <br>
+        <map id="ImgMap1" name="ImgMap1">
+          <area coords="137, 117, 263, 221" href="/home/fourone" shape="rect">
+          <area coords="263, 119, 386, 222" href="/home/fourtwo" shape="rect" >
+          <area coords="384, 115, 512, 165" href="/home/fourthree" shape="rect" >
+          <area coords="385, 163, 508, 218" href="/home/fourfour" shape="rect" >
+          <area coords="507, 114, 634, 167" href="/home/fourfive" shape="rect" >
+          <area coords="509, 167, 636, 221" href="/home/foursix" shape="rect">
+          <area coords="262, 220, 388, 255" href="/home/fiveone" shape="rect" >
+          <area coords="261, 254, 388, 286" href="/home/fivetwo" shape="rect" >
+          <area coords="261, 284, 388, 302" href="/home/fivethree" shape="rect" >
+          <area coords="262, 301, 388, 320" href="/home/fivefour" shape="rect" >
+          <area coords="510, 221, 633, 242" href="/home/fivefive" shape="rect" >
+          <area coords="509, 240, 633, 259" href="/home/fivesix" shape="rect" >
+          <area coords="262, 321, 385, 357" href="/home/sixone" shape="rect" >
+          <area coords="262, 357, 386, 386" href="/home/sixtwo" shape="rect" >
+          <area coords="262, 384, 384, 417" href="/home/sixthree" shape="rect" >
+          <area coords="261, 416, 386, 446" href="/home/sixfour" shape="rect" >
+          <area coords="261, 446, 384, 479" href="/home/sixfive" shape="rect" >
+          <area coords="507, 321, 633, 479" href="/home/sixsix" shape="rect" >
+          <area coords="262, 480, 385, 516" href="/home/sevenone" shape="rect" >
+          <area coords="260, 515, 385, 535" href="/home/seventwo" shape="rect" >
+          <area coords="260, 531, 385, 569" href="/home/seventhree" shape="rect" >
+          <area coords="508, 481, 634, 513" href="/home/sevenfour" shape="rect" >
+          <area coords="261, 567, 385, 630" href="/home/eightone" shape="rect" >
+          <area coords="386, 568, 512, 631" href="/home/eighttwo" shape="rect" >
+          <area coords="508, 569, 633, 631" href="/home/eightthree" shape="rect" >
+          <area coords="262, 629, 386, 665" href="/home/nineone" shape="rect" >
+          <area coords="260, 662, 380, 699" href="/home/ninetwo" shape="rect" >
+          <area coords="385, 632, 508, 662" href="/home/ninethree" shape="rect" >
+          <area coords="385, 659, 508, 681" href="/home/ninefour" shape="rect" >
+          <area coords="262, 700, 387, 763" href="/home/tenone" shape="rect" >
+          <area coords="385, 700, 508, 763" href="/home/tentwo" shape="rect" >
+          <area coords="508, 700, 634, 760" href="/home/tenthree" shape="rect" >
+          <area coords="260, 763, 388, 798" href="/home/elevenone" shape="rect" >
+          <area coords="260, 797, 387, 816" href="/home/eleventwo" shape="rect" >
+          <area coords="261, 812, 386, 859" href="/home/eleventhree" shape="rect" >
+          <area coords="261, 857, 386, 905" href="/home/elevenfour" shape="rect" >
+          <area coords="259, 901, 387, 937" href="/home/elevenfive" shape="rect" >
+          <area coords="387, 763, 512, 935" href="/home/elevensix" shape="rect" >
+          <area coords="260, 935, 387, 1000" href="/home/twelveone" shape="rect" >
+          <area coords="385, 997, 509, 1060" href="/home/thirteenthree" shape="rect" >
+          <area coords="513, 936, 635, 999" href="/home/twelvethree" shape="rect" >
+          <area coords="140, 999, 262, 1058" href="/home/thirteenone" shape="rect" >
+          <area coords="262, 999, 388, 1057" href="/home/thirteentwo" shape="rect" >
+          <area coords="510, 998, 633, 1057" href="/home/thirteenfour" shape="rect" >
+          <area coords="634, 115, 756, 218" href="/home/fourseven" shape="rect" >
+          <area coords="383, 680, 509, 701" href="/home/ninefive" shape="rect" >
+          <area coords="508, 630, 633, 703" href="/home/ninesix" shape="rect" >
+          <area coords="510, 762, 632, 937" href="/home/elevenseven" shape="rect" >
+          <area alt="" coords="385, 938, 511, 1000" href="/home/twelvetwo" shape="rect" >
+        </map>
+        <p><em>Note:  If you click on this dashboard you will stop the slide show and start to drill down into the PMBOK</em></p>
+        <img class="img-fluid" alt="Use this dashboard to get to grips with the Project Management Body of Knowledge -  PMBOK" height="1061" src="{{ asset('storage/images/mainprocessdashraised.png') }}" width="757" usemap="#ImgMap1" ><br>
+        <map id="ImgMap2" name="ImgMap2">
+          <area coords="0, 4, 14, 16" href="/home/one.pdf" shape="rect" >
+          <area coords="16, 5, 29, 18" href="/home/two.pdf" shape="rect" >
+          <area coords="31, 5, 45, 16" href="/home/three.pdf" shape="rect" >
+        </map>
+        <img alt="" height="19" src="/home/images/123.png" title="Chapter 1, 2 and 3 of the guide." usemap="#ImgMap2" > <br>
+        <p>The new PMBOK Dashboard&nbsp; (released September 2017) is a detailed &quot;how to&quot; checklist <br>
+          to achieve
+          Capability Maturity Level 2!</p>
+        <p>The new PMBOK dashboard <strong>being fully <a href="/home/agileoverview" >Agile</a> compliant</strong> <br>
+          can
+          be used to check correct project implementation of all the project
+          management <br>
+          (and other) methods
+          mentioned below.</p>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsestability" aria-expanded="false" aria-controls=
+        "collapsestability">Traditional,<br>
+        Agile <br>
+        and other methods </button>
+        <div class="collapse" id="collapsestability">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">Agility with Stability</h5>
+              <div class="card-body text-center">
+                <p align="left">PMWay web forms the backbone for a Masters Thesis investigating Traditional and Agile project methodology, process improvement and the Project Management Information System as enabler. <a href="/cv/mastersdissertationmodel.pdf" >The research model here explains this research and approach</a>.</p>
+                <p align="left">To undertake this research PMWay has investigated many project methods (standards / frameworks) and approaches. <br>
+                  In doing this PMWay understands that Project Management Process application lies in a continuum from Traditional
+                  &lt;IRON TRIANGLE&gt; on the right, moving along to Agile &lt;SCOPE TRIANGLE&gt; on the left. <br>
+                  <br>
+                  I.e. <strong>&lt;SCOPE TRIANGLE&gt;</strong> XP, SCRUM, DSDM(AgilePM), PRINCE2 Agile and <a href="/home/agileoverview" >etc</a>., PRINCE2 and PMBOK <strong>&lt;IRON TRIANGLE&gt;</strong>&nbsp;&nbsp; <br>
+                  <br>
+                  The concept of DDUF (Detailed Documentation Up Front), (Enough) EDUF and (Little to None) NDUF can help to explain this: <br>
+                  (<a href="/home/agileoverview" >I.e. click here to the Agile Manifesto and hover you mouse over the manifesto image to understand this</a>).&nbsp; <br>
+                  <br>
+                  It is also important to understand that the <strong>&lt;IRON TRIANGLE&gt; </strong>which deals
+                  with the dimensions of COST, SCOPE and TIME is only a small subset of
+                  the many constraints that a project will have to consider.&nbsp; The
+                  Knowledge Areas on the left hand side of the PMBOK dashboard above
+                  expand the <strong>&lt;IRON TRIANGLE&gt;</strong> for increased coverage.&nbsp; <br>
+                  The <strong>&lt;SCOPE TRIANGLE&gt;</strong> removing many of these constraints must, by
+                  the release of constraints management, be introducing greater risk.
+                <p>Here are the
+                  two types of triangles: <br>
+                  (Agile / Adaptive Complex Project Management on the
+                  left and Traditional Project Management on the right)</p>
+                <img alt="" class="img-fluid" src="{{ asset('storage/images/scope%20triangle.png') }}" >&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" class="img-fluid" src="{{ asset('storage/images/irontrianlgemusic.png') }}" ><br>
+                <br>
+                <p align="left">The Capability Maturity Model, ITIL, Cobit, CMII etc., all support correct governance for process use towards the goal of improved excellence.<br>
+                  I.e. Governance - from the Latin <span style="color: rgb(85, 85, 85); font-family: Georgia; font-size: 16px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 252, 242); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"> gubernare</span>: means "to take the reins" (of a cart with horse or from the saddle) and to steer these for safety.<br>
+                  While lean, agility and tailoring is desired
+                  in all project types, a balance needs to exist between flexibility and stability for agility.<br>
+                  Agile, for example, says that true agility is the ability to balance
+                  flexibility with stability.&nbsp; Agile also claims its strengths are being adaptive to change, flexible and able to cope with change. <br>
+                  <br>
+                  While the Agile Manifesto clearly states value of people over process, <a href="/scrum2p.pdf" >the SCRUM method for example</a>&nbsp; has clearly defined 19 core
+                  processes within its methodology, each (as with the PMBOK Dashboard
+                  above) with essential Inputs, Tools and Outputs. These, if correctly followed (contrary to a culture of &quot;Just Do It&quot;) will ensure the correct application of PP and PMC
+                  and compliancy with the Capability Maturity Model at Level 2.</p>
+                <img alt="out of control" class="img-fluid" src="{{ asset('storage/images/horse.png') }}" >
+                <h5>I.e. if your agile (or other project method)&nbsp;is being managed like this <br>
+                  <strong>then there is definitely something going wrong!</strong></h5>
+              </div>
+              <div class="card-footer"> </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsejustdoit" aria-expanded="false" aria-controls=
+        "collapsejustdoit">The No PP PMC Myth in Agile </button>
+        <div class="collapse" id="collapsejustdoit">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">Correct Project Initiation, Planning and Monitoring and Control are even more essential for Agile</h5>
+              <div class="card-body text-center">
+                <h5 align="left">Putting Agile into perspective from a software complexity
+                  and project management safety perspective - especially where mission critical software project management is involved.&nbsp;&nbsp; I.e. in terms of the dreaded Tar Pit.</h5>
+                <p align="left"> PMWay loves agile!&nbsp; DSDM, SCRUM and other method detail is found
+                  within this web.&nbsp; However (when discussing agility without software
+                  engineering savvy), software design, development and deployment
+                  of technology are complex undertakings and according to Brooks "can be regarded
+                  as being one of the most difficult undertakings". In Brooks' Anniversary
+                  Edition, some 20 years after the original publication of the Essays on Software
+                  Engineering, he again emphasized project complexity and why software development
+                  projects, to create "programming systems products" can, if not carefully managed, often
+                  become mired in ever-increasing difficulties he called the tar pit of failed software projects.
+                  [The La Brea Tar Pits are one of the world's best repositories for fossilized vertebrates.
+                  Animals would wander on top of a tar pit (which was hidden through dust,
+                  leaves, or other such detritus), and become trapped. Predators, attracted by the struggles
+                  of a trapped animal become trapped themselves. Hence, fossilized vertebrates in the Tar Pit is a metaphor for failed software projects blundering blindly into serious danger
+                  from which they cannot escape.]</p>
+                <h5>And if you think that Project Planning (PP) and Project Monitoring and
+                  Control (PMC) <br>
+                  does not matter for Agile - YOU ARE WRONG!</h5>
+                <p align="left">The image of the SCRUM method below shows clearly how and where PP and PMC happens.<br>
+                  It is the &quot;BOLSTERING&quot; by PP and PMC of Project Execution that creates the
+                  dynamic tension for &quot;hyper productivity&quot; within Empowered Teams which
+                  happens at People CMM
+                  Level 4.<br>
+                  Take another look at the PMBOK Dashboard at the top of this page.&nbsp;
+                  Can you see why the PMBOK Dashboard can be used as an effective checklist for
+                  any type of project.&nbsp; I.e. Starting at its Process Groups has the project
+                  been correctly INITIATED or are we JUST DO'ING IT?&nbsp; What about the PLANNING
+                  and MONITORING and CONTROL processes.&nbsp; Are these working to &quot;squeeze out
+                  production&quot;?&nbsp; What about the KNOWLEDGE AREAS along the left hand side of
+                  the PMBOK Dashboard. I.e. have be started to &quot;Agile,&quot; producing stuff but have
+                  not yet obtained the budget sign off?&nbsp; etc.</p>
+                <h5 align="center">The SCRUM Agile Method to illustrate how PP and PMC is used</h5>
+                <p> <img alt="sprint with PP and PMC" class="img-fluid" src="{{ asset('storage/images/sprintmethodwithpppmc.jpg') }}" ></p>
+                <h5 align="center">The SCRUM Agile Method Processes and ITO's to illustrate how PP and PMC is used</h5>
+                <p> <img alt="scrum processes" class="img-fluid" src="{{ asset('storage/images/scrumprocessespppmc.jpg') }}" ></p>
+                <p align="left">While all projects are risky business, agile projects are very risky business!<br>
+                  <br>
+                  The project selection matrix from Dr. Robert. K. Wysocki  (below) shows one how to decide
+                  what project method best suites the type of project.&nbsp;
+                  This is based on the criteria of clarity or lack of clarity of the project goal or solution
+                  under consideration.&nbsp; <br>
+                  <br>
+                  PMWay's recommended approach is using <a href="/home/agileoverview" >PRINCE2 Agile</a> as the recipe you follow; and
+                  PMBOK version 6 for the ingredients.  The mandatory use of the PRINCE2 Agile Board (who have the relevant training, experience, ability, agility and power) is the strategic driver for success for the PRINCE2 Agile method.&nbsp; PMWay
+                  promotes PRINCE2 Agile based on personal experience of the method's
+                  successful use
+                  in the Public and Private Sector where he has worked.&nbsp; <br>
+                  While PRINCE2 Agile is not shown in the diagram below, being a blend of the two,
+                  it would straddle
+                  across TPM and APM. <br>
+                </p>
+                <div style="text-align:center"> <a name="projselect"></a> <img alt="project selection matrix" class="img-fluid" height="276"
+                                             src="{{ asset('storage/images/projselectmatrix.png') }}" width="421"> <br>
+                  <p align="left">PMWay has said this
+                    before (Slide 3 of 6) but as it is
+                    crucial to get this - here it is
+                    again:<br>
+                    It is also important to understand that for Agile to be successful Empowered Workgroups are needed.<br>
+                    This, at Level 4 "Predictable," as the People Capability Model below illustrates, is not easy to achieve.<br>
+                    I.e. Agile requires training, process knowledge, abilities of quality staffed teams to work well together and many other skills, management support etc.</p>
+                  <p> <img alt="" class="img-fluid"  src="{{ asset('storage/images/pcmmoverviewshaded.png') }}"  >
+                </div>
+              </div>
+              <div class="card-footer"> If you think Agile is "Just Do It" you will be sorry! </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsebest" aria-expanded="false" aria-controls=
+        "collapsebest">One doghouse? <br>
+        A skyscraper of doghouses? </button>
+        <div class="collapse" id="collapsebest">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">PMWay's Agile Assertion | Suggestion is to match Project Type
+                with suitable Project Method!&nbsp; <br>
+                I.e. is the Requirement (REQM from the
+                CM Model) a doghouse or a skyscraper?</h5>
+              <div class="card-body text-center">
+                <p align="left"> To appreciate why many software professionals have expressed doubts about agile processes within the context of medium- and
+                  especially large-scale software products [Reifer, Maurer, and Erdogmus, 2003], consider the following analogy by Grady Booch
+                  [2000]. <br>
+                  <br>
+                  <img alt="doghouse plans" height="123" src="{{ asset('storage/images/doghouse.jpg') }}" width="112" /> One doghouse.  A skyscraper of doghouses.... <br>
+                  <br>
+                  Anyone can successfully hammer together a few planks to build a doghouse, but it would be foolhardy to build a
+                  three-bedroom home without detailed plans. In addition, skills in plumbing, wiring, and roofing are needed to build a
+                  three-bedroom home, and inspections are essential. (That is, being able to build small-scale software products does not
+                  necessarily mean that one has the skills for building medium-scale software products.) <br>
+                  <br>
+                  Furthermore, the fact that a skyscraper is the height of 1000 doghouses does not mean that one can build a skyscraper by
+                  piling 1000 doghouses on top of one another. In other words, building large-scale software products requires even more
+                  specialized and sophisticated skills than those needed to cobble together small-scale software products. <br>
+                  <br>
+                  A key determinant in deciding whether agile processes are indeed a major breakthrough in software engineering will be the
+                  cost of future post-delivery maintenance. That is, if the use of agile processes results in a reduction in the cost of
+                  post-delivery maintenance, XP and other agile processes will become widely adopted. <br>
+                  <br>
+                  On the other hand, refactoring is an
+                  intrinsic component of agile processes. As previously explained, the product is not designed as a whole; instead, the design is
+                  developed incrementally, and the code is reorganized whenever the current design is unsatisfactory for any reason. This refactoring then continues during post-delivery maintenance. If
+                  the design of a product when it passes its acceptance test is open-ended and flexible, then perfective maintenance should be easy
+                  to achieve at a low cost. <br>
+                  <br>
+                  However, if the design has to be refactored whenever additional functionality is added, then the cost
+                  of post-delivery maintenance of that product will be unacceptably high. As a consequence of the newness of the approach, there
+                  are still essentially no data on the maintenance of software developed using agile processes. However, preliminary maintenance
+                  data indicate that refactoring can consume a large percentage of the overall cost [Li and Alshayeb, 2002].</p>
+              </div>
+              <div class="card-footer"> </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="carousel-item" align="center">
+        <h5><strong>(Slide 6 of 6)<br>
+          <br>
+          Can you now see the goal at Capability Maturity Level 2 and above? <br>
+          Its all about countering the cost of wasteful and risky behavior <br>
+          and using processes correctly to
+          produce value!</strong></h5>
+        <img class="img-fluid" src="{{ asset('storage/images/orglargebezelled.png') }}"> <br>
+        <br>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsevmodel" aria-expanded="false" aria-controls=
+        "collapsevmodel">The V Model <br>
+        illustrating traceability </button>
+        <div class="collapse" id="collapsevmodel">
+          <div class="container">
+            <div class="card text-center">
+              <h5 class="card-header" align="center">The V Model to get at Capability Maturity Level
+                2 &amp; 3 processes</h5>
+              <div class="card-body text-center">
+                <p align="left">Let PMWay quickly explain how the above works from a PMBOK dashboard and Capability Maturity Level 2+ perspective, using the image below. <br>
+                  You know that Project Management Process (Project Planning [PP] in the Capability Maturity Model]) and Project Monitoring and Control [PMC] and Configuration Management [CM] to name a few of the Capability Maturity processes) in system engineering aims to move a business or system baseline forward, under control, towards next stable baseline. <br>
+                  Requirements Management (REQM), Verification (VER), Validation (VAL) and others are all processes from the Capability Maturity Level 2 and 3 Process, Engineering, Project and Service Categories.&nbsp; Bi-directional traceability is a specific practice of REQM.  I.e. REQM - Specific Practice (SP) 1.4
+                  &quot;Maintain Bidirectional Traceability of Requirements facilitates track and trace to ensure that requirements are installed correctly and that these serve their intended purpose (to realize value).</p>
+                <img alt=""  class="img-fluid" src="{{ asset('storage/images/vmodelconfigurationbaselinebezelled.png') }}" > <br>
+                <br>
+              </div>
+              <div class="card-footer"> The goal is to improve carefully from one Stable Baseline to the new Stable
+                Baseline</div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <a class="carousel-control-prev" href="#i" role="button" data-slide="prev"> <i class="fas fa-chevron-left" style="color:black"></i> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#i" role="button" data-slide="next"> <i class="fas fa-chevron-right" style="color:black"></i> <span class="sr-only">Next</span> </a> </div>
+
+<!--Container-->
+
+<!--ENDBODY-->
+
+{% else %}
+
+
+    {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,137 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Capability Maturity Model{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="center">
+  <h5 align="center">Achieve Business Value through Productivity and Quality
+    Improvements<br>
+    off the stable base of Project Process Management <br>
+    (<a href="/home/waterfallvsagile">Traditional or Agile</a>) <br>
+    at Capability Maturity Model Level 2 (and above)</h5>
+  <img class="img-fluid" src="{{ asset('storage/images/cmmproject2plus.png') }}" onmouseover="this.src='{{ asset('storage/images/cmmproject2plusshadedbezelled.png') }}'" onmouseout="this.src='{{ asset('storage/images/cmmproject2plus.png') }}'" title="Register with PMWay and let me help you find your way">
+  <h5>PMWay is all about ideas to improve your
+    game</h5>
+  <p>Figure out the idea below and your Productivity and Quality will
+    improve!</p>
+  <img alt="blue arrow down" class="img-fluid" src="{{ asset('storage/images/bluearrowdown.png') }}" >
+  <p align="left"><img alt="problem" class="img-fluid" src="{{ asset('storage/images/problem.png') }}" ><br>
+    <i>As with the 12 steps of AA and the recognition that a problem exists being the first step to recovery: </i></p>
+    <h3 style="color:blue" align="center"> The first step in moving your "<a href="gamestats"><u>game stats</u></a>"</h3>
+  <h5 style="color:blue" align="center"> from &quot;Hero&quot; to &quot;Managed Processes Pro&quot;
+    is to&nbsp;take the "pin test&quot; </h5>
+  <p> <a href="/pin" title="Use your mouse to drag me around for fun.  Then click me if you want to get serious and Pin down your Capability Maturity level now!"> <img alt="" id="pin"height="144" src="{{ asset('storage/images/pinlarge.png') }}" width="152"></a><img alt="" class="img-fluid" src="{{ asset('storage/images/gatewayflat.png') }}" onmouseover="this.src='{{ asset('storage/images/gateway.png') }}'" onmouseout="this.src='{{ asset('storage/images/gatewayflat.png') }}'" >
+  <p align="center"><i> For fun use your mouse and drag the pin around!&nbsp; <br>
+    Ready to take the test! <br>
+    Click the pin image above now!</i></p>
+  <br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseemperor" aria-expanded="false" aria-controls=
+        "collapseemperor">CM Level 1?<br>
+  What's it look like? </button>
+  <div class="collapse" id="collapseemperor">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center"></h5>
+        <div class="card-body text-center"><img alt="" class="img-fluid" src="{{ asset('storage/images/cml1.png') }}" ><br> <img alt="" class="img-fluid" src="{{ asset('storage/images/noito.png') }}" ><br>
+          <img alt="" class="img-fluid" src="{{ asset('storage/images/emperorbare.png') }}" ><br>
+            <br><p><a href="/realstory"><u>Click here for the Real Story at CM Level 1</u></a></p>
+          <br>
+        </div>
+        <div class="card-footer"> Anything less (Capability Maturity Level 1 or below) is the Emperor, proud of his new clothes! </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <script src="/bootstrapfouroneone/jquery/jquery.js"></script>
+  <script src="/bootstrapfouroneone/jqueryui/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/bootstrapfouroneone/jqueryui/jquery-ui.css">
+  <script>
+  $(document).ready(function () {
+    $("#pin").draggable({revert:"invalid"});
+    $("#target").droppable({
+      greedy: true,
+      tolerance: 'pointer',
+      drop: function (event, ui) {
+        ui.draggable.draggable('option', 'revert', 'true');
+        $(this).css('background-color','lightyellow')
+        alert("Awesome! Click the target to see the processes your team have mastered!");
+
+      }
+    });
+
+
+
+
+  });
+
+</script>
+</div>
+{% endif %}
+
+
+
+
+{% if not user %}
+
+<div class="container" align="center">
+  <h5 align="center">Achieve Business Value through Productivity and Quality
+    Improvements<br>
+    off the stable base of Project Process Management <br>
+    (<a href="/pmway/?slide=1">Traditional</a> or <a href="/home/agile"> Agile</a>) <br>
+    at Capability Maturity Model Level 2 (and above)</h5>
+  <img class="img-fluid" src="{{ asset('storage/images/cmmproject2plus.png') }}" onmouseover="this.src='{{ asset('storage/images/cmmproject2plusshadedbezelled.png') }}'" onmouseout="this.src='{{ asset('storage/images/cmmproject2plus.png') }}'" title="Register with PMWay and let me help you find your way">
+  <h6>PMWay is all about ideas to improve your <a href="/home/gamestats">game stats</a>.<br>
+  If you are using a mouse then click on and drag the big red pin onto the model above.  <br>Where would you say you are operating at?<br>
+  Or, if interested, you can take the <a href="/pin" >pin test</a> by clicking the pin now?</h6>
+    <a href="/pin"  title="Where is your game at. Click the pin to take the test"><img alt="" id="pin" height="144" src="{{ asset('storage/images/pinlarge.png') }}" width="152"></a>&nbsp;&nbsp;
+ <br><br>
+  <!--<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseemperor" aria-expanded="false" aria-controls=
+        "collapseemperor">CM Level 1?<br>
+  What's it look like? </button>
+  <div class="collapse" id="collapseemperor">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center"></h5>
+        <div class="card-body text-center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/noito.png') }}" ><br>
+          <img alt="" class="img-fluid" src="{{ asset('storage/images/emperorbare.png') }}" ><br>
+          <br>
+          <br>
+        </div>
+        <div class="card-footer"> Anything less (Capability Maturity Level 1 or below) is the Emperor, proud
+          of his
+          new clothes! </div>
+      </div>
+    </div>
+  </div>-->
+  <br>
+  <br>
+  <script src="/bootstrapfouroneone/jquery/jquery.js"></script>
+  <script src="/bootstrapfouroneone/jqueryui/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/bootstrapfouroneone/jqueryui/jquery-ui.css">
+  <script>
+  $(document).ready(function () {
+    $("#pin").draggable();
+    $("#target").droppable({
+      greddy: true,
+      tolerance: 'touch',
+      drop: function (event, ui) {
+        ui.draggable.draggable('option', 'revert', 'true');
+        alert("OK Knowing where you are is the first step to improvement!");
+
+      }
+    });
+
+
+
+
+  });
+
+</script>
+</div>
+{% endif %}
+
+
+{% endblock %}

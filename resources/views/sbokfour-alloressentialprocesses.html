@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBOK Guide - Scrum Processes Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .filter-controls {
+            padding: 20px;
+        }
+
+        .image-buttons-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .filter-buttons-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .middle-buttons-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .filter-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .filter-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .filter-btn.active {
+            background: #e74c3c;
+            box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+        }
+
+        .image-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-btn:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .drill-btn {
+            background: #f39c12;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .drill-btn:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: #e74c3c;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .processes-section {
+            flex: 1.5;
+            min-width: 500px;
+            padding: 20px;
+        }
+
+        .phase {
+            margin-bottom: 30px;
+        }
+
+        .phase-title {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .process-box {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .process-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(52, 152, 219, 0.3);
+            border-color: #2980b9;
+        }
+
+        .process-box.active {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            border-color: #2c3e50;
+        }
+
+        .process-number {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+
+        .process-box.active .process-number {
+            color: white;
+            opacity: 0.9;
+        }
+
+        .process-name {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .details-section {
+            flex: 1;
+            min-width: 400px;
+            padding: 20px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: sticky;
+            top: 20px;
+        }
+
+        .process-detail {
+            background: #f8f9fa;
+            border-left: 5px solid #3498db;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            display: none;
+        }
+
+        .process-detail.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .process-title {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .process-info {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .process-info strong {
+            color: #3498db;
+        }
+
+        .no-selection {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .category {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .category-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .item-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .item-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .item-list li:last-child {
+            border-bottom: none;
+        }
+
+        .important {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .important::after {
+            content: " *";
+            color: #e74c3c;
+        }
+
+        .normal-item {
+            transition: opacity 0.3s ease;
+        }
+
+        .show-important-only .normal-item {
+            display: none;
+        }
+
+        .show-important-only .important {
+            opacity: 1;
+        }
+
+        .show-all .normal-item {
+            opacity: 1;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .legend {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .legend strong {
+            color: #856404;
+        }
+
+        @media (max-width: 1200px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .processes-section,
+            .details-section {
+                min-width: 100%;
+            }
+
+            .details-section {
+                position: static;
+                max-height: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-buttons-row,
+            .middle-buttons-row,
+            .filter-buttons-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-btn,
+            .image-btn,
+            .drill-btn {
+                width: 90%;
+            }
+
+            .modal-close {
+                top: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>SBOK Guide - Scrum Processes Map</h1>
+        <p class="subtitle">Click on any process to view its detailed inputs, tools, and outputs</p>
+    </header>
+
+    <div class="legend">
+        <strong>Note:</strong> Items marked with <span style="color: #e74c3c; font-weight: bold;">*</span> are particularly important and represent key areas that must be followed in the Scrum process.
+    </div>
+
+    <div class="filter-controls">
+        <div class="image-buttons-row">
+            <button class="image-btn" id="viewProcessDiagramBtn">View Process Diagram</button>
+            <button class="image-btn" id="viewProcessFlowBtn">View Process Flow</button>
+            <button class="image-btn" id="viewBacklogsFlowBtn">View Backlogs Flow</button>
+        </div>
+        <div class="middle-buttons-row">
+            <button class="image-btn" id="viewTeamInteractionsBtn">View Team Interactions</button>
+            <a href="/scrum-landing"  class="drill-btn">Drill Baby Drill</a>
+        </div>
+        <div class="filter-buttons-row">
+            <button class="filter-btn active" id="showAllBtn">Show All Items</button>
+            <button class="filter-btn" id="showImportantBtn">Show Only Important Items (*)</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="processes-section">
+            <!-- INITIATE PHASE -->
+            <div class="phase">
+                <div class="phase-title">Chapter 8: Initiate</div>
+                <div class="process-grid">
+                    <div class="process-box" data-process="8.1">
+                        <div class="process-number">Process 8.1</div>
+                        <div class="process-name">Create Project Vision</div>
+                    </div>
+                    <div class="process-box" data-process="8.2">
+                        <div class="process-number">Process 8.2</div>
+                        <div class="process-name">Identify Scrum Master and Stakeholder(s)</div>
+                    </div>
+                    <div class="process-box" data-process="8.3">
+                        <div class="process-number">Process 8.3</div>
+                        <div class="process-name">Form Scrum Team</div>
+                    </div>
+                    <div class="process-box" data-process="8.4">
+                        <div class="process-number">Process 8.4</div>
+                        <div class="process-name">Develop Epic(s)</div>
+                    </div>
+                    <div class="process-box" data-process="8.5">
+                        <div class="process-number">Process 8.5</div>
+                        <div class="process-name">Create Prioritized Product Backlog</div>
+                    </div>
+                    <div class="process-box" data-process="8.6">
+                        <div class="process-number">Process 8.6</div>
+                        <div class="process-name">Conduct Release Planning</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLAN AND ESTIMATE PHASE -->
+            <div class="phase">
+                <div class="phase-title">Chapter 9: Plan and Estimate</div>
+                <div class="process-grid">
+                    <div class="process-box" data-process="9.1">
+                        <div class="process-number">Process 9.1</div>
+                        <div class="process-name">Create User Stories</div>
+                    </div>
+                    <div class="process-box" data-process="9.2">
+                        <div class="process-number">Process 9.2</div>
+                        <div class="process-name">Approve, Estimate, and Commit User Stories</div>
+                    </div>
+                    <div class="process-box" data-process="9.3">
+                        <div class="process-number">Process 9.3</div>
+                        <div class="process-name">Create Tasks</div>
+                    </div>
+                    <div class="process-box" data-process="9.4">
+                        <div class="process-number">Process 9.4</div>
+                        <div class="process-name">Estimate Tasks</div>
+                    </div>
+                    <div class="process-box" data-process="9.5">
+                        <div class="process-number">Process 9.5</div>
+                        <div class="process-name">Create Sprint Backlog</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMPLEMENT PHASE -->
+            <div class="phase">
+                <div class="phase-title">Chapter 10: Implement</div>
+                <div class="process-grid">
+                    <div class="process-box" data-process="10.1">
+                        <div class="process-number">Process 10.1</div>
+                        <div class="process-name">Create Deliverables</div>
+                    </div>
+                    <div class="process-box" data-process="10.2">
+                        <div class="process-number">Process 10.2</div>
+                        <div class="process-name">Conduct Daily Standup</div>
+                    </div>
+                    <div class="process-box" data-process="10.3">
+                        <div class="process-number">Process 10.3</div>
+                        <div class="process-name">Groom Prioritized Product Backlog</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REVIEW AND RETROSPECT PHASE -->
+            <div class="phase">
+                <div class="phase-title">Chapter 11: Review and Retrospect</div>
+                <div class="process-grid">
+                    <div class="process-box" data-process="11.1">
+                        <div class="process-number">Process 11.1</div>
+                        <div class="process-name">Demonstrate and Validate Sprint</div>
+                    </div>
+                    <div class="process-box" data-process="11.2">
+                        <div class="process-number">Process 11.2</div>
+                        <div class="process-name">Retrospect Sprint</div>
+                    </div>
+                    <div class="process-box" data-process="11.3">
+                        <div class="process-number">Process 11.3</div>
+                        <div class="process-name">Document Sprint Lessons Learned</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RELEASE PHASE -->
+            <div class="phase">
+                <div class="phase-title">Chapter 12: Release</div>
+                <div class="process-grid">
+                    <div class="process-box" data-process="12.1">
+                        <div class="process-number">Process 12.1</div>
+                        <div class="process-name">Ship Deliverables</div>
+                    </div>
+                    <div class="process-box" data-process="12.2">
+                        <div class="process-number">Process 12.2</div>
+                        <div class="process-name">Retrospect Project</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="details-section">
+            <div class="no-selection" id="default-message">
+                <h3>Select a Process</h3>
+                <p>Click on any process box to view its detailed inputs, tools, and outputs.</p>
+                <p style="margin-top: 15px;">Use the filter buttons above to toggle between:</p>
+                <ul style="text-align: left; display: inline-block; margin-top: 10px;">
+                    <li><strong>Show All Items:</strong> Displays all inputs, tools, and outputs</li>
+                    <li><strong>Show Only Important Items (*):</strong> Shows only the critical elements that must be followed</li>
+                </ul>
+            </div>
+
+            <!-- All process details will be dynamically loaded here -->
+            <div id="processDetails"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>SBOK Guide - Scrum Processes Interactive Map | Based on SBOK Framework</p>
+        <p style="margin-top: 5px; font-size: 0.85rem;">19 Processes across 5 Process Groups</p>
+    </footer>
+</div>
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Process Diagram">
+</div>
+
+<script>
+    // Process data from the PHP array
+    const processData = {
+        '8.1': {
+            process: 'Create Project Vision',
+            group: 'Initiate (Chapter 8)',
+            inputs: ['Project Business Case*', 'Trial Project', 'Proof of Concept', 'Company Vision', 'Company Mission', 'Market Study', 'Scrum Guidance Body Recommendations'],
+            tools: ['Project Vision Meeting*', 'JAD Sessions', 'SWOT Analysis', 'Gap Analysis'],
+            outputs: ['Identified Product Owner*', 'Project Vision Statement*', 'Project Charter', 'Project Budget']
+        },
+        '8.2': {
+            process: 'Identify Scrum Master and Business Stakeholder(s)',
+            group: 'Initiate (Chapter 8)',
+            inputs: ['Product Owner*', 'Project Vision Statement*', 'People Requirements', 'People Availability and Commitment', 'Organizational Resource Matrix', 'Skills Requirement Matrix', 'Scrum Guidance Body Recommendations'],
+            tools: ['Selection Criteria*', 'Expert Advice from HR', 'Training', 'Resource Costing'],
+            outputs: ['Identified Scrum Master*', 'Identified Business Stakeholder(s)*']
+        },
+        '8.3': {
+            process: 'Form Scrum Team',
+            group: 'Initiate (Chapter 8)',
+            inputs: ['Product Owner', 'Scrum Master', 'Project Vision Statement', 'People Requirements', 'People Availability and Commitment', 'Organizational Resource Matrix', 'Skills Requirement Matrix', 'Resource Requirements', 'Scrum Guidance Body Recommendations'],
+            tools: ['Scrum Team Selection Criteria*', 'Expert Advice from HR', 'People Costs', 'Training', 'Resource Costing', 'Scrum Project Tool'],
+            outputs: ['Identified Scrum Team*', 'Back-ups', 'Collaboration Plan', 'Team Building Plan']
+        },
+        '8.4': {
+            process: 'Develop Epic(s)',
+            group: 'Initiate (Chapter 8)',
+            inputs: ['Scrum Core Team*', 'Project Vision Statement*', 'Business Stakeholder(s)*', 'Approved Change Requests', 'Unapproved Change Requests', 'Laws and Regulations', 'Applicable Contracts', 'Previous Project Information', 'Scrum Guidance Body Recommendations'],
+            tools: ['User Group Meetings*', 'User Story Workshops', 'Focus Group Meetings', 'User or Customer Interviews', 'Questionnaires', 'Risk Identification Techniques', 'Scrum Guidance Body Expertise', 'Scrum Project Tool'],
+            outputs: ['Epic(s)*', 'Personas*', 'Approved Changes', 'Identified Risks']
+        },
+        '8.5': {
+            process: 'Create Prioritized Product Backlog',
+            group: 'Initiate (Chapter 8)',
+            inputs: ['Scrum Core Team*', 'Epic(s)*', 'Personas*', 'Business Stakeholder(s)', 'Project Vision Statement', 'Business Requirements', 'Approved Change Requests', 'Identified Risks', 'Applicable Contracts', 'Scrum Guidance Body Recommendations'],
+            tools: ['Prioritization Methods*', 'User Story Workshops', 'Risk Assessment Techniques', 'Project Value Estimation', 'Estimation Methods', 'Dependency Determination', 'Scrum Guidance Body Expertise', 'Scrum Project Tool'],
+            outputs: ['Prioritized Product Backlog*', 'Done Criteria*', 'Definition of Ready*', 'High-Level Estimates for Epics']
+        },
+        '8.6': {
+            process: 'Conduct Release Planning',
+            group: 'Initiate (Chapter 8)',
+            inputs: ['Scrum Core Team*', 'Business Stakeholder(s)*', 'Project Vision Statement*', 'Prioritized Product Backlog*', 'Done Criteria*', 'Business Requirements', 'Holiday Calendar', 'Scrum Guidance Body Recommendations', 'High-Level Estimates for Epics'],
+            tools: ['Release Planning Sessions*', 'Release Prioritization Methods*', 'Scrum Project Tool'],
+            outputs: ['Release Planning Schedule*', 'Length of Sprint*', 'Target Customers for Release', 'Refined Prioritized Product Backlog']
+        },
+        '9.1': {
+            process: 'Create User Stories',
+            group: 'Plan and Estimate (Chapter 9)',
+            inputs: ['Scrum Core Team*', 'Prioritized Product Backlog*', 'Done Criteria*', 'Personas*', 'Definition of Ready*', 'Business Stakeholder(s)', 'Epic(s)', 'Business Requirements', 'Laws and Regulations', 'Applicable Contracts', 'Scrum Guidance Body Recommendations'],
+            tools: ['User Story Writing Expertise*', 'User Story Workshops', 'User Group Meetings', 'Focus Group Meetings', 'Customer or User Interviews', 'Questionnaires', 'Scrum Guidance Body Expertise', 'Scrum Project Tool'],
+            outputs: ['User Stories*', 'User Story Acceptance Criteria*', 'Updated Prioritized Product Backlog', 'Updated or Refined Personas']
+        },
+        '9.2': {
+            process: 'Approve, Estimate, and Commit User Stories',
+            group: 'Plan and Estimate (Chapter 9)',
+            inputs: ['Scrum Core Team*', 'User Stories*', 'User Story Acceptance Criteria*', 'Definition of Ready', 'Scrum Guidance Body Recommendations', 'Pre-existing Estimates for User Stories'],
+            tools: ['Estimation Methods*', 'Sprint Planning Meetings', 'Prioritized Product Backlog Review Meetings', 'Scrum Project Tool'],
+            outputs: ['Estimated User Stories*', 'Updated Prioritized Product Backlog']
+        },
+        '9.3': {
+            process: 'Create Tasks',
+            group: 'Plan and Estimate (Chapter 9)',
+            inputs: ['Scrum Core Team*', 'Estimated User Stories*', 'Length of Sprint*', 'Previous Sprint Velocity', 'Scrum Guidance Body Recommendations'],
+            tools: ['Sprint Planning Meetings*', 'Scrum Project Tool'],
+            outputs: ['Committed User Stories*', 'Sprint Backlog*', 'Scrumboard*']
+        },
+        '9.4': {
+            process: 'Estimate Tasks',
+            group: 'Plan and Estimate (Chapter 9)',
+            inputs: ['Scrum Core Team', 'Task List', 'User Story Acceptance Criteria', 'Dependencies', 'Identified Risks', 'Scrum Guidance Body Recommendations'],
+            tools: ['Task Estimation Meetings', 'Estimation Criteria', 'Planning Poker', 'Point of Five', 'Other Task Estimation Techniques'],
+            outputs: ['Effort Estimated Task List', 'Updated Task List']
+        },
+        '9.5': {
+            process: 'Create Sprint Backlog',
+            group: 'Plan and Estimate (Chapter 9)',
+            inputs: ['Scrum Core Team', 'Effort Estimated Task List', 'Length of Sprint', 'Previous Sprint Velocity', 'Dependencies', 'Team Calendar'],
+            tools: ['Sprint Planning Meetings', 'Sprint Tracking Tools', 'Sprint Tracking Metrics'],
+            outputs: ['Sprint Backlog', 'Sprint Burndown Chart']
+        },
+        '10.1': {
+            process: 'Create Deliverables',
+            group: 'Implement (Chapter 10)',
+            inputs: ['Scrum Core Team*', 'Sprint Backlog*', 'Scrumboard*', 'Impediment Log*', 'Release Planning Schedule', 'Dependencies', 'Scrum Guidance Body Recommendations'],
+            tools: ['Team Expertise*', 'Other Development Tools', 'Scrum Guidance Body Expertise', 'Scrum Project Tool'],
+            outputs: ['Sprint Deliverables*', 'Updated Scrumboard*', 'Updated Impediment Log*', 'Unapproved Change Requests', 'Identified Risks', 'Mitigated Risks', 'Updated Dependencies']
+        },
+        '10.2': {
+            process: 'Conduct Daily Standup',
+            group: 'Implement (Chapter 10)',
+            inputs: ['Scrum Team*', 'Scrum Master*', 'Scrumboard*', 'Impediment Log*', 'Sprint Burndown or Burnup Chart', 'Product Owner', 'Previous Work Day Experience', 'Dependencies'],
+            tools: ['Daily Standup Meeting*', 'Three Daily Questions*', 'War Room', 'Video Conferencing', 'Scrum Project Tool'],
+            outputs: ['Updated Scrumboard*', 'Updated Impediment Log*', 'Updated Sprint Burndown or Burnup Chart*', 'Motivated Scrum Team', 'Unapproved Change Requests', 'Identified Risks', 'Mitigated Risks', 'Updated Dependencies']
+        },
+        '10.3': {
+            process: 'Groom Prioritized Product Backlog',
+            group: 'Implement (Chapter 10)',
+            inputs: ['Scrum Core Team*', 'Prioritized Product Backlog*', 'Business Stakeholders*', 'Rejected User Stories', 'Approved Change Requests', 'Unapproved Change Requests', 'Identified Risks', 'Retrospect Sprint Log(s)', 'Dependencies', 'Release Planning Schedule', 'Scrum Guidance Body Recommendations'],
+            tools: ['Prioritized Product Backlog Review Meetings*', 'Communication Techniques', 'Other Prioritized Product Backlog Refining Techniques', 'Scrum Project Tool'],
+            outputs: ['Updated Prioritized Product Backlog*', 'Updated Release Planning Schedule']
+        },
+        '11.1': {
+            process: 'Demonstrate and Validate Sprint',
+            group: 'Review and Retrospect (Chapter 11)',
+            inputs: ['Scrum Core Team*', 'Sprint Deliverables*', 'Sprint Backlog*', 'Done Criteria*', 'User Story Acceptance Criteria*', 'Business Stakeholder(s)', 'Release Planning Schedule', 'Identified Risks', 'Dependencies', 'Scrum Guidance Body Recommendations'],
+            tools: ['User Story Acceptance/Rejection*', 'Sprint Review Meetings*', 'Earned Value Analysis', 'Scrum Guidance Body Expertise', 'Scrum Project Tool'],
+            outputs: ['Accepted User Stories*', 'Rejected User Stories', 'Updated Risks', 'Earned Value Analysis Results', 'Updated Release Planning Schedule']
+        },
+        '11.2': {
+            process: 'Retrospect Sprint',
+            group: 'Review and Retrospect (Chapter 11)',
+            inputs: ['Scrum Core Team', 'Sprint Deliverables', 'Sprint Review Meeting Outcomes', 'Stakeholder(s)', 'Scrum Guidance Body Recommendations'],
+            tools: ['Retrospective Meeting', 'Brainstorming Techniques', 'Continuous Improvement Techniques'],
+            outputs: ['Agreed Adjustments', 'Updated Scrum Process', 'Lessons Learned']
+        },
+        '11.3': {
+            process: 'Document Sprint Lessons Learned',
+            group: 'Review and Retrospect (Chapter 11)',
+            inputs: ['Scrum Core Team', 'Sprint Deliverables', 'Sprint Review Meeting Outcomes', 'Retrospect Sprint Outcomes', 'Stakeholder(s)', 'Scrum Guidance Body Recommendations'],
+            tools: ['Documentation Techniques', 'Lessons Learned Repository'],
+            outputs: ['Documented Sprint Lessons Learned', 'Updated Lessons Learned Repository']
+        },
+        '12.1': {
+            process: 'Ship Deliverables',
+            group: 'Release (Chapter 12)',
+            inputs: ['Product Owner*', 'Business Stakeholder(s)*', 'Accepted Deliverables*', 'Release Planning Schedule*', 'Scrum Master', 'Scrum Team', 'User Story Acceptance Criteria', 'Pilot Plan', 'Scrum Guidance Body Recommendations'],
+            tools: ['Organizational Deployment Methods*', 'Communications Planning', 'Scrum Project Tool'],
+            outputs: ['Working Deliverables Agreement*', 'Working Deliverables*', 'Product Releases*', 'Communications Plan']
+        },
+        '12.2': {
+            process: 'Retrospect Project',
+            group: 'Release (Chapter 12)',
+            inputs: ['Scrum Core Team(s)*', 'Chief Scrum Master', 'Chief Product Owner', 'Business Stakeholder(s)', 'Scrum Guidance Body Recommendations'],
+            tools: ['Retrospect Release Meeting*', 'Other Tools for Retrospect Release', 'Scrum Guidance Body Expertise', 'Scrum Project Tool'],
+            outputs: ['Agreed Actionable Improvements*', 'Assigned Action Items and Due Dates*', 'Proposed Non-Functional Items for Program Product Backlog and Prioritized Product Backlog', 'Updated Scrum Guidance Body Recommendations']
+        }
+    };
+
+    // Helper function to create item HTML
+    function createItemHTML(item) {
+        const isImportant = item.endsWith('*');
+        const text = item.replace('*', '');
+        const className = isImportant ? 'important' : 'normal-item';
+        return `<li class="${className}">${isImportant ? '<span class="important">' + text + '</span>' : text}</li>`;
+    }
+
+    // Function to render process details
+    function renderProcessDetails(processId) {
+        const data = processData[processId];
+        if (!data) return;
+
+        const detailsContainer = document.getElementById('processDetails');
+
+        const inputsHTML = data.inputs.map(createItemHTML).join('');
+        const toolsHTML = data.tools.map(createItemHTML).join('');
+        const outputsHTML = data.outputs.map(createItemHTML).join('');
+
+        detailsContainer.innerHTML = `
+                <div class="process-detail active">
+                    <h3 class="process-title">${processId} ${data.process}</h3>
+                    <div class="process-info"><strong>Process Group:</strong> ${data.group}</div>
+
+                    <div class="category">
+                        <div class="category-title">Inputs</div>
+                        <ul class="item-list">${inputsHTML}</ul>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">Tools</div>
+                        <ul class="item-list">${toolsHTML}</ul>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">Outputs</div>
+                        <ul class="item-list">${outputsHTML}</ul>
+                    </div>
+                </div>
+            `;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const showAllBtn = document.getElementById('showAllBtn');
+        const showImportantBtn = document.getElementById('showImportantBtn');
+        const defaultMessage = document.getElementById('default-message');
+        const processBoxes = document.querySelectorAll('.process-box');
+        const viewProcessDiagramBtn = document.getElementById('viewProcessDiagramBtn');
+        const viewProcessFlowBtn = document.getElementById('viewProcessFlowBtn');
+        const viewBacklogsFlowBtn = document.getElementById('viewBacklogsFlowBtn');
+        const viewTeamInteractionsBtn = document.getElementById('viewTeamInteractionsBtn');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.getElementById('modalClose');
+
+        // Set initial state
+        document.body.classList.add('show-all');
+
+        // Image button event handlers
+        viewProcessDiagramBtn.addEventListener('click', function() {
+            modalImage.src = '/storage/images/processes.jpg';
+            imageModal.classList.add('active');
+        });
+
+        viewProcessFlowBtn.addEventListener('click', function() {
+            modalImage.src = '/storage/images/blogpostimage_scrumprocessespppmc.jpg';
+            imageModal.classList.add('active');
+        });
+
+        viewBacklogsFlowBtn.addEventListener('click', function() {
+            modalImage.src = '/storage/images/blogpostimage_scrumframework.jpg';
+            imageModal.classList.add('active');
+        });
+
+        viewTeamInteractionsBtn.addEventListener('click', function() {
+            modalImage.src = '/storage/images/pppmcperscrumedited.png';
+            imageModal.classList.add('active');
+        });
+
+        // Modal close handlers
+        modalClose.addEventListener('click', function() {
+            imageModal.classList.remove('active');
+        });
+
+        imageModal.addEventListener('click', function(e) {
+            if (e.target === imageModal) {
+                imageModal.classList.remove('active');
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                imageModal.classList.remove('active');
+            }
+        });
+
+        // Filter button event handlers
+        showAllBtn.addEventListener('click', function() {
+            document.body.classList.remove('show-important-only');
+            document.body.classList.add('show-all');
+            showAllBtn.classList.add('active');
+            showImportantBtn.classList.remove('active');
+        });
+
+        showImportantBtn.addEventListener('click', function() {
+            document.body.classList.remove('show-all');
+            document.body.classList.add('show-important-only');
+            showImportantBtn.classList.add('active');
+            showAllBtn.classList.remove('active');
+        });
+
+        // Process box click handlers
+        processBoxes.forEach(box => {
+            box.addEventListener('click', function() {
+                const processId = this.getAttribute('data-process');
+
+                // Remove active class from all boxes
+                processBoxes.forEach(b => b.classList.remove('active'));
+
+                // Add active class to clicked box
+                this.classList.add('active');
+
+                // Hide default message
+                defaultMessage.style.display = 'none';
+
+                // Render process details
+                renderProcessDetails(processId);
+
+                // Scroll details section to top
+                document.querySelector('.details-section').scrollTop = 0;
+            });
+        });
+    });
+</script>
+</body>
+</html>

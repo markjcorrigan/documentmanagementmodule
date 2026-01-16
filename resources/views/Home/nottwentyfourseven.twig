@@ -1,0 +1,117 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}PMWay NOT 27/7{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+<div class="container" align="center">
+			<p align="center"><img alt="" src="{{ asset('storage/images/not247large.png') }}" onmouseover="this.src='{{ asset('storage/images/portal.png') }}'" onmouseout="this.src='{{ asset('storage/images/not247large.png') }}'"></p>
+	<h5 align="center">By design this web portal<br> is not open 24/7/365<br><br></h5>
+	<br><br><div align="center"><p align="center"><small>This web <img class="img-fluid" alt="" src="{{ asset('storage/images/yellowsubmarine.png') }}">  pops up to the surface randomly on the whim of the web master</small><br>
+
+<img class="img-fluid" title="Surface Dark and Deep Webs" src="{{ asset('storage/images/webtypescut.png') }}" onmouseover="this.src='{{ asset('storage/images/webtypesone.png') }}'" onmouseout="this.src='{{ asset('storage/images/webtypes.png') }}'" ></p></div>
+	<br>
+<br>
+
+	<!--
+<div align="center"><button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseyellowsub" aria-expanded="false" aria-controls=
+        "collapseyellowsub">More info on this?
+</button>
+
+<div class="collapse" id="collapseyellowsub">
+    <div class="container">
+        <div class="card text-center">
+<h5 class="card-header" align="center"></h5>
+            <div class="card-body text-center">
+<p align="left">This web master is not concerned with visitors and this web was built fundamentally as a non profit (non advert based) "ideas sandbox," simply to investigate or play with concepts (ideas) and to use the web site as a resources repository (i.e. video's, books etc.).<br>If you happened upon this web in your internet travels (possilby I popped the link onto a forum) then know that this web has popped up temporarily from the deep web and is available on the surface of the surface web, but only for a short time.  I.e. if you found me then welcome (leave a message or if interested in what I have to say then register and dig around).<br>
+
+This mode of operation may not make sense to an internet audience that requires 24/7/365 uptime, but for me (with a large web site full of resources that I need to access via the internet when I require it), operating in a deep web way (visible when I want the site to pop up to the surface web to use as a portal, and invisible when I dive back down into the deep) works for me.</p>
+
+
+<p align="left">You are welcome to email me direct (markjc@mweb.co.za) if you need more information on PMWay web,<br>or you want me to bring my site online (if it is down) for you to peruse.<br><br>
+
+Keep well.</p>
+
+
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+-->
+</div>
+
+<br>
+<br>
+
+<!------------------------------------------------
+<h5 align="center">Bottom Line...</h5>
+<p align="center"> <img class="img-fluid" src="{{ asset('storage/images/wall and resources.jpg') }}"></p>
+-------------------------------------------------------------------->
+
+
+
+            </div>
+
+
+
+
+
+{% endif %}
+
+
+{% if not user %}
+
+
+<div class="container" align="center">
+			<p align="center"><img alt="" src="{{ asset('storage/images/not247large.png') }}" onmouseover="this.src='{{ asset('storage/images/portal.png') }}'" onmouseout="this.src='{{ asset('storage/images/not247large.png') }}'"></p>
+	<h5 align="center">By design this web portal<br> is not open 24/7/365<br><br></h5>
+
+
+	<br><br><div align="center"><p align="center"><small>This web <img class="img-fluid" alt="" src="{{ asset('storage/images/yellowsubmarine.png') }}">  pops up to the surface randomly on the whim of the web master</small><br>
+
+<img class="img-fluid" title="Surface Dark and Deep Webs" src="{{ asset('storage/images/webtypescut.png') }}" onmouseover="this.src='{{ asset('storage/images/webtypesone.png') }}'" onmouseout="this.src='{{ asset('storage/images/webtypes.png') }}'" ></p></div>
+	<br>
+<br>
+	<!--
+<div align="center"><button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseyellowsub" aria-expanded="false" aria-controls=
+        "collapseyellowsub">More info on this?
+</button>
+
+<div class="collapse" id="collapseyellowsub">
+    <div class="container">
+        <div class="card text-center">
+<h5 class="card-header" align="center"></h5>
+            <div class="card-body text-center">
+<p align="left">This web master is not concerned with visitors and this web was built fundamentally as a non profit (non advert based) "ideas sandbox," simply to investigate or play with concepts (ideas) and to use the web site as a resources repository (i.e. video's, books etc.).<br>If you happened upon this web in your internet travels (possilby I popped the link onto a forum) then know that this web has popped up temporarily from the deep web and is available on the surface of the surface web, but only for a short time.  I.e. if you found me then welcome (leave a message or if interested in what I have to say then register and dig around).<br>
+
+This mode of operation may not make sense to an internet audience that requires 24/7/365 uptime, but for me (with a large web site full of resources that I need to access via the internet when I require it), operating in a deep web way (visible when I want the site to pop up to the surface web to use as a portal, and invisible when I dive back down into the deep) works for me.</p>
+
+
+<p align="left">You are welcome to email me direct (markjc@mweb.co.za) if you need more information on PMWay web,<br>or you want me to bring my site online (if it is down) for you to peruse.<br><br>
+
+Keep well.</p>
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+-->
+</div>
+
+<br>
+<br>
+
+
+            </div>
+         {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,362 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="left">
+  <h3 align="left">10 Key Changes in ITIL 4 </h3>
+  <hr>
+  <p>Thanks to Joe the IT Guy March 6, 2019</p>
+  <p>Note:  Where PMWay has added opinion to Joe's post it is between { curly brackets } and in italic.</p>
+  <p>You might have noticed that something changed with the Force, sorry ITIL, last month - with the ITIL 4 update releasing its first publication, the "ITIL Foundation ITIL 4 Edition" (yes, I know that seems a lot of ITILs in a single book title). <br>
+    This
+    was in time for the <a href="https://www.sysaid.com/blog/entry/great-balls-of-fire-sysaids-heading-to-pink19"  rel="noopener">Pink19 event</a> and it preceded a formal ITIL 4 launch on the 28th February 2019. You might be thinking,
+    "A new ITIL, what have they tweaked?" Well, trust me, it's more than a <i>tweak</i>. <b>It's so much more than a tweak.</b></p>
+  <p>I'll try to quickly cover off ten key changes between ITIL v3 (2011 Edition) and ITIL 4. It's certainly not everything that has changed with ITIL, but you probably don't what to read a blog that's nearly as long as the Foundation book itself (and that's
+    212 pages  (BTW {<i>by the way</i>}), well at least for the Kindle version).</p>
+  <br>
+  <h4>Change #1 - the ITIL v3 processes are now ITIL 4 practices</h4>
+  <p>I think many of us had already moved on from talking in "process" terms to talk about capabilities. It seems that the term "capabilities" was considered for ITIL 4, but it didn't translate well in some regions. Hence, we have the very-similar ITIL 4 "practices"
+    instead of ITIL processes.  {<i>the Practice, PMWay believes, is an awesome word as it requires people to improve their use of processes (thorugh practice) which aligns to Carnegie Mellon University Capability Maturity Model.</i>}</p>
+  <p>Personally, I think this is great in that - and it's not rocket science - processes alone might achieve very little (because even automated processes require people along with the technology). {<i>PMWay's application of the <a href="/pmway/?slide=4" >Capability Maturity Levels</a> means that while some processes are said to be applied, often they are their importance is ignored (through immature understanding or behaviour) which means that overall improvement and therefore capability is not possible</i>)</p>
+  <h4>Change #2 - the ITIL service lifecycle has been replaced with the ITIL service value system (SVS) and the service value chain within it</h4>
+  <p>Visually, and who doesn't love pretty pictures, this is a move from the ITIL v3 service lifecycle "lollipop":</p>
+  <div align="center"><img class="img-fluid" src="{{ asset('storage/images/ITIL-service-lifecycle-.png') }}" alt="ITIL service lifecycle ">
+    <p class="wp-caption-text">Source: AXELOS, ITIL v3 (2011)</p>
+  </div>
+  <p>To this:</p>
+  <div align="center"><img class="img-fluid" src="{{ asset('storage/images/ITIL-SVS-.png') }}" alt="ITIL SVS ">
+    <p class="wp-caption-text">Source: AXELOS, ITIL Foundation ITIL 4 Edition (2019)</p>
+  </div>
+  <p>And the service value chain with it:</p>
+  <div align="center"><img class="img-fluid" src="{{ asset('storage/images/ITIL-service-value-chain.png') }}" alt="ITIL service value chain">
+    <p class="wp-caption-text">Source: AXELOS, ITIL Foundation ITIL 4 Edition (2019)</p>
+  </div>
+  <p>With ITIL 4 stating that:</p>
+  <blockquote>
+    <p><i>"The ITIL SVS represents how the various components and activities of the organization work together to facilitate value creation through IT-enabled services."</i></p>
+  </blockquote>
+  <p>As shown above, the center of the SVS is the service value chain, which is a set of loosely connected activities that a service provider will undertake at some point.</p>
+  <p>ITIL 4 also introduces the concept of a value stream, which is a journey weaving through, and even {<i>if required double</i> back {<i>through</i>these activities. The service lifecycle - which was the core ITIL v3 areas (and publications) of service strategy, service design, service
+    transition, and service operation along with continual service improvement (CSI) - can be now be represented with a value stream which would roughly be:</p>
+  <p>Engage - Plan - Design &amp; Transition - Obtain/Build - Design &amp; Transition - Deliver &amp; Support - Improve</p>
+  <p>In terms of my thoughts on this, I don't think anyone could argue about the new focus on value and the use of value streams, chains, or systems. But while trainers and consultants might see this as a big step forward, I worry about the ITSM practitioners who have been taking the ITIL service lifecycle as "ITSM gospel" for the last however many years and whether they've the capacity (on multiple levels) to change their approach. Thankfully, the fact that service operation and service transition have
+    been the parts of ITIL v3 adopted far more than the others, it might not be as big a change as it first appears.</p>
+  <h4>Change #3 - there's now a focus on the "co-creation of value"</h4>
+  <p>There's also a new definition of what a service is in ITIL 4 - which really needs pointing out if you're involved in something called IT <i>service</i> management.</p>
+  <p>What was defined by ITIL v3 as:</p>
+  <blockquote>
+    <p><i>"A means of delivering value to customers by facilitating outcomes customers want to achieve without the ownership of specific costs and risks."</i></p>
+  </blockquote>
+  <p>Is now defined by ITIL 4 as:</p>
+  <blockquote>
+    <p><i>"A means of enabling </i><b><i>value</i></b><i> co-creation by facilitating </i><b><i>outcomes</i></b><i> that customers want to achieve, without the customer having to manage specific </i><b><i>costs</i></b><i> and </i><b><i>risks</i></b><i>."</i></p>
+  </blockquote>
+  <p>So, we've moved on from delivering value to co-creating value. I like it, but - and it's a big but - quantifying value, or even determining what it is, from within the IT organization still seems a very tough nut to crack.</p>
+  <p>Finally, well at least for this change, it's definitely important to pin down what a <i>service</i> is; and I'm reminded of the pointy-fingered <a href="https://twitter.com/gamingpaul"  rel="noopener">Paul Wilkinson</a>'s many "How many
+    people can tell me what a service is?" questions when he presents at ITSM events. I don't know how many years Paul has asked this, but he usually only gets a couple of hands raised in a room of 100+ people. Surely, we aren't a shy bunch?</p>
+  <h4>Change #4 - the nine guiding principles of ITIL Practitioner are now seven</h4>
+  <p>Do you remember the ITIL Practitioner Guidance publication? It was, and still is, a great piece of writing (by some great people) delivered in 2016</p>
+  <p>The Practitioner book offered nine guiding principles (for ITSM):</p>
+  <ol>
+    <li> Focus on value</li>
+    <li> Design for experience</li>
+    <li> Start where you are</li>
+    <li> Work holistically</li>
+    <li> Progress iteratively</li>
+    <li> Observe directly</li>
+    <li> Be transparent</li>
+    <li> Collaborate</li>
+    <li> Keep it simple.</li>
+  </ol>
+  <p>These have now been chopped and changed, and added to, for what are now the seven ITIL guiding principles:</p>
+  <ol>
+    <li> Focus on value</li>
+    <li> Start where you are</li>
+    <li> Progress iteratively with feedback</li>
+    <li> Collaborate and promote visibility</li>
+    <li> Think and work holistically</li>
+    <li> Keep it simple and practical</li>
+    <li> Optimize and automate</li>
+  </ol>
+  <p>It's great to see these reflected in the SVS above, rather than being something trapped at the edge of the stage. It's also great to see the addition of "automate" to what was already a great list (of guiding principles) - more on this in a later change.</p>
+  <h4>Change #5 - hmm, there are now even more ITIL 4 practices than there were ITIL v3 processes</h4>
+  <p>My gut feel was that ITIL 4 would return us to the much-loved ITIL v2's fewer processes - where less is more. Particularly given the low adoption levels of ITIL v3 processes outside of the top 6-10 most commonly-adopted.</p>
+  <p>However, there are now more ITIL 4 practices (34) than there were ITIL v3 processes (26) - plus the four "functions" - with these 34 split between general management, service management, and technical management practices as follows:</p>
+  <p><em>General management practices</em></p>
+  <ol>
+    <li> Architecture management</li>
+    <li> Continual improvement</li>
+    <li> Information security management</li>
+    <li> Knowledge management</li>
+    <li> Measurement and reporting</li>
+    <li> Organizational change management</li>
+    <li> Portfolio management</li>
+    <li> Project management</li>
+    <li> Relationship management</li>
+    <li> Risk management</li>
+    <li> Service financial management</li>
+    <li> Strategy management</li>
+    <li> Supplier management</li>
+    <li> Workforce and talent management</li>
+  </ol>
+  <p><em>Service management practices</em></p>
+  <ol start="15">
+    <li> Availability management</li>
+    <li> Business analysis</li>
+    <li> Capacity and performance management</li>
+    <li> Change control</li>
+    <li> Incident management</li>
+    <li> IT asset management</li>
+    <li> Monitoring and event management</li>
+    <li> Problem management</li>
+    <li> Release management</li>
+    <li> Service catalogue management</li>
+    <li> Service configuration management</li>
+    <li> Service continuity management</li>
+    <li> Service design</li>
+    <li> Service desk</li>
+    <li> Service level management</li>
+    <li> Service request management</li>
+    <li> Service validation and testing</li>
+  </ol>
+  <p><em>Technical management practices</em></p>
+  <ol start="32">
+    <li> Deployment management</li>
+    <li> Infrastructure and platform management</li>
+    <li> Software development and management</li>
+  </ol>
+  <p>So, one could argue that the real "ITSM scope" comparison between ITIL 4 and ITIL v3 could be made to just the 17 service management practices - which is closer to the level of ITIL v2 than v3. However, a quick scan through the general management practices highlights many more of the ITIL v3 processes (but now practices of course).</p>
+  <p>The astute among you will have also noticed that the term service management is used here - rather than ITSM - and there's more on this later when I talk to enterprise service management.</p>
+  <p>There are also some interesting changes in the service management practices too, with that interest likely to be linked to your role. For me, these are that change management is now "change control" plus the two new areas of business analysis and IT asset management (ITAM).</p>
+  <p>In terms of the change change (can I get away with this?), if nothing else it will make it easier to talk about (or to Google for) IT-related change activities versus "organizational change management" (which is itself a general management practice).
+    Plus, I'm super-excited about the addition of ITAM - ITSM and ITAM both work so much better when considered and operated together.</p>
+  <h4>Change #6 - the 4 Ps of service management are now the 4 dimensions of service management</h4>
+  <p>"The 4 Ps you say?"</p>
+  <p>Depending on when you learned about ITIL, you might remember this as "people, process, and technology" which then became "people, process, product, and partners." If you didn't know this, then it's not a problem because it's now the following four dimensions:</p>
+  <ol>
+    <li> Organizations and <b><a href="/pmway/?slide=6" >people</a></b></li>
+    <li> Value streams and <b><a href="/pmway/?slide=6" >processes</a></b></li>
+    <li> Information and <b><a href="/pmway/?slide=6" >technology</a></b></li>
+    <li> Partners and suppliers</li>
+  </ol>
+  <p>Which looks like a sexier version on the 4Ps to me.</p>
+  <p>It's interesting that the term "processes" still remains in here.</p>
+  <h4>Change #7 - CSI has changed</h4>
+  <p>Sometimes in life, you feel as though you've stumbled upon a "best-kept secret" - something that far more people should know about and benefit from. CSI often seems like ITIL's <a href="https://www.sysaid.com/blog/entry/the-help-you-need-to-adopt-continual-service-improvement"
+         rel="noopener">best-kept secret</a> - although there's no way it could be a secret with it being one of the five ITIL v3 books. So, maybe it has to-date been more like "most-ignored guidance."</p>
+  <p>Anyway, putting my soapbox away, it's interesting to see that ITIL 4 has updated its CSI model (slightly) - there's an extra "<b>Take action</b>" step/box that you might miss if not comparing the ITIL v3 and ITIL 4 figures next to each other (yes, I did this).
+    And, importantly, it's now called "continual improvement" - to reflect more than the improvement of services. I'll miss the CSI acronym and sadly CI is already taken.</p>
+  <p>Let's see if the ITIL SVS and the greater focus on value (co-creation) are enough to kickstart continual improvement for people and their organizations.</p>
+  <h4>Change #8 - governance now has a proper seat at the ITIL table</h4>
+  <p>I normally like to joke that if you ask ten people what governance is, then you'll get eleven different answers. Then we can often see confusion between governance and management practices. {<i><a href="/pmway/?slide=2" >Click here for PMWay's take on what Governance is</a>.</i>}</p>
+  <p>So, it's great to see governance sitting so prominently in the ITIL 4 SVS and a full chapter (4.4) on it in the Foundation book, although this is less than one page of text. I imagine that we'll see much more in later ITIL 4 publications and other resources.</p>
+  <h4>Change #9 - a brighter light has been shone on automation</h4>
+  <p>We work in IT, so most of us will already know that "automation is our friend." With it helping both individuals and teams to work in a "better, faster, and cheaper" way.</p>
+  <p>I know my product management colleagues are very big on the power of automation to make the lives of IT pros simpler, and the service and support that's offered more in line with end-user or customer expectations.</p>
+  <p>Thus, the inclusion of the new "optimize and automate" guiding principle that I mentioned above is a great realization that the pressures on IT service desks, in particular, are such that failing to benefit from technology-based assistance is a big opportunity missed.</p>
+  <p>In fact, the explanation of this new guiding principle in the ITIL 4 Foundation book sells the opportunity very nicely:</p>
+  <blockquote>
+    <p><i>"Resources of all types, particularly human resources, should be used to their best effect. Eliminate anything that is truly wasteful and use technology to achieve whatever it is capable of. Human intervention should only happen where it really contributes value."</i></p>
+  </blockquote>
+  <p>The phrase "use technology to achieve whatever it is capable of" is also interesting to note - with a tech-head like me reading this as a discreet way of talking to the opportunities of <a href="https://www.joetheitguy.com/2018/10/24/the-a-z-of-artificial-intelligence-ai/"
+         rel="noopener">artificial intelligence</a> (AI) without needing to open up a potential can of worms related to what it is, how it can help, how best to approach it, etc.</p>
+  <p>Hopefully, future ITIL 4 publications and other resources will share practical advice on what works and what doesn't to further help ITSM practitioners seeking help on the adoption and exploitation of automation (and AI).</p>
+  <h4>Change #10 - enterprise service management is and isn't mentioned</h4>
+  <p>This is a funny one to talk/write about without spending the time to read the ITIL 4 Foundation book from cover to cover.</p>
+  <p>When reading the book's text (in a flicking-through way), there are various phrases that potentially confuse the reader (I'm sure Stuart will explain it to me in simple terms later). For instance, ITIL 4 is described as a "service management framework" - which is fine as the guidance is applicable outside IT as much as inside IT.</p>
+  <p>But then other text that I picked up on includes:</p>
+  <ul>
+    <li>"Service management is evolving, and so is ITIL, the most widely adopted guidance on IT service management (ITSM)"</li>
+    <li>"A comprehensive and versatile toolset for ITSM practitioners"</li>
+    <li>"Key concepts of service management."</li>
+  </ul>
+  <p>Plus, from what I've seen so far, there aren't that many mentions of ITSM in the book, with "service management" the preferred terminology unless "ITSM" is needed. I have no issue with this given the growth in <a href="https://www.joetheitguy.com/2018/06/06/the-a-z-of-enterprise-service-management/"
+         rel="noopener">enterprise service management</a> interest and adoption - we can talk in service management rather than ITSM terms.</p>
+  <p>But, and it's another big but, there's no mention of "enterprise service management" in the book! Or of "outside IT" or "outside of IT" for that matter. To me, this seems odd given that ITIL 4 is obviously written for non-IT use but there's no recognition
+    of the industry's most commonly-used terminology for the use of ITSM outside of IT.</p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+  <h3 align="left">10 Key Changes in ITIL 4 </h3>
+  <hr>
+  <p>Thanks to Joe the IT Guy March 6, 2019</p>
+  <p>Note:  Where PMWay has added opinion to Joe's post it is between { curly brackets } and in italic.</p>
+  <p>You might have noticed that something changed with the Force, sorry ITIL, last month - with the ITIL 4 update releasing its first publication, the "ITIL Foundation ITIL 4 Edition" (yes, I know that seems a lot of ITILs in a single book title). <br>
+    This
+    was in time for the <a href="https://www.sysaid.com/blog/entry/great-balls-of-fire-sysaids-heading-to-pink19"  rel="noopener">Pink19 event</a> and it preceded a formal ITIL 4 launch on the 28th February 2019. You might be thinking,
+    "A new ITIL, what have they tweaked?" Well, trust me, it's more than a <i>tweak</i>. <b>It's so much more than a tweak.</b></p>
+  <p>I'll try to quickly cover off ten key changes between ITIL v3 (2011 Edition) and ITIL 4. It's certainly not everything that has changed with ITIL, but you probably don't what to read a blog that's nearly as long as the Foundation book itself (and that's
+    212 pages  (BTW {<i>by the way</i>}), well at least for the Kindle version).</p>
+  <br>
+  <h4>Change #1 - the ITIL v3 processes are now ITIL 4 practices</h4>
+  <p>I think many of us had already moved on from talking in "process" terms to talk about capabilities. It seems that the term "capabilities" was considered for ITIL 4, but it didn't translate well in some regions. Hence, we have the very-similar ITIL 4 "practices"
+    instead of ITIL processes.  {<i>the Practice, PMWay believes, is an awesome word as it requires people to improve their use of processes (thorugh practice) which aligns to Carnegie Mellon University Capability Maturity Model.</i>}</p>
+  <p>Personally, I think this is great in that - and it's not rocket science - processes alone might achieve very little (because even automated processes require people along with the technology). {<i>PMWay's application of the <a href="/pmway/?slide=4" >Capability Maturity Levels</a> means that while some processes are said to be applied, often they are their importance is ignored (through immature understanding or behaviour) which means that overall improvement and therefore capability is not possible</i>)</p>
+  <h4>Change #2 - the ITIL service lifecycle has been replaced with the ITIL service value system (SVS) and the service value chain within it</h4>
+  <p>Visually, and who doesn't love pretty pictures, this is a move from the ITIL v3 service lifecycle "lollipop":</p>
+  <div align="center"><img class="img-fluid" src="{{ asset('storage/images/ITIL-service-lifecycle-.png') }}" alt="ITIL service lifecycle ">
+    <p class="wp-caption-text">Source: AXELOS, ITIL v3 (2011)</p>
+  </div>
+  <p>To this:</p>
+  <div align="center"><img class="img-fluid" src="{{ asset('storage/images/ITIL-SVS-.png') }}" alt="ITIL SVS ">
+    <p class="wp-caption-text">Source: AXELOS, ITIL Foundation ITIL 4 Edition (2019)</p>
+  </div>
+  <p>And the service value chain with it:</p>
+  <div align="center"><img class="img-fluid" src="{{ asset('storage/images/ITIL-service-value-chain.png') }}" alt="ITIL service value chain">
+    <p class="wp-caption-text">Source: AXELOS, ITIL Foundation ITIL 4 Edition (2019)</p>
+  </div>
+  <p>With ITIL 4 stating that:</p>
+  <blockquote>
+    <p><i>"The ITIL SVS represents how the various components and activities of the organization work together to facilitate value creation through IT-enabled services."</i></p>
+  </blockquote>
+  <p>As shown above, the center of the SVS is the service value chain, which is a set of loosely connected activities that a service provider will undertake at some point.</p>
+  <p>ITIL 4 also introduces the concept of a value stream, which is a journey weaving through, and even {<i>if required double</i> back {<i>through</i>these activities. The service lifecycle - which was the core ITIL v3 areas (and publications) of service strategy, service design, service
+    transition, and service operation along with continual service improvement (CSI) - can be now be represented with a value stream which would roughly be:</p>
+  <p>Engage - Plan - Design &amp; Transition - Obtain/Build - Design &amp; Transition - Deliver &amp; Support - Improve</p>
+  <p>In terms of my thoughts on this, I don't think anyone could argue about the new focus on value and the use of value streams, chains, or systems. But while trainers and consultants might see this as a big step forward, I worry about the ITSM practitioners who have been taking the ITIL service lifecycle as "ITSM gospel" for the last however many years and whether they've the capacity (on multiple levels) to change their approach. Thankfully, the fact that service operation and service transition have
+    been the parts of ITIL v3 adopted far more than the others, it might not be as big a change as it first appears.</p>
+  <h4>Change #3 - there's now a focus on the "co-creation of value"</h4>
+  <p>There's also a new definition of what a service is in ITIL 4 - which really needs pointing out if you're involved in something called IT <i>service</i> management.</p>
+  <p>What was defined by ITIL v3 as:</p>
+  <blockquote>
+    <p><i>"A means of delivering value to customers by facilitating outcomes customers want to achieve without the ownership of specific costs and risks."</i></p>
+  </blockquote>
+  <p>Is now defined by ITIL 4 as:</p>
+  <blockquote>
+    <p><i>"A means of enabling </i><b><i>value</i></b><i> co-creation by facilitating </i><b><i>outcomes</i></b><i> that customers want to achieve, without the customer having to manage specific </i><b><i>costs</i></b><i> and </i><b><i>risks</i></b><i>."</i></p>
+  </blockquote>
+  <p>So, we've moved on from delivering value to co-creating value. I like it, but - and it's a big but - quantifying value, or even determining what it is, from within the IT organization still seems a very tough nut to crack.</p>
+  <p>Finally, well at least for this change, it's definitely important to pin down what a <i>service</i> is; and I'm reminded of the pointy-fingered <a href="https://twitter.com/gamingpaul"  rel="noopener">Paul Wilkinson</a>'s many "How many
+    people can tell me what a service is?" questions when he presents at ITSM events. I don't know how many years Paul has asked this, but he usually only gets a couple of hands raised in a room of 100+ people. Surely, we aren't a shy bunch?</p>
+  <h4>Change #4 - the nine guiding principles of ITIL Practitioner are now seven</h4>
+  <p>Do you remember the ITIL Practitioner Guidance publication? It was, and still is, a great piece of writing (by some great people) delivered in 2016</p>
+  <p>The Practitioner book offered nine guiding principles (for ITSM):</p>
+  <ol>
+    <li> Focus on value</li>
+    <li> Design for experience</li>
+    <li> Start where you are</li>
+    <li> Work holistically</li>
+    <li> Progress iteratively</li>
+    <li> Observe directly</li>
+    <li> Be transparent</li>
+    <li> Collaborate</li>
+    <li> Keep it simple.</li>
+  </ol>
+  <p>These have now been chopped and changed, and added to, for what are now the seven ITIL guiding principles:</p>
+  <ol>
+    <li> Focus on value</li>
+    <li> Start where you are</li>
+    <li> Progress iteratively with feedback</li>
+    <li> Collaborate and promote visibility</li>
+    <li> Think and work holistically</li>
+    <li> Keep it simple and practical</li>
+    <li> Optimize and automate</li>
+  </ol>
+  <p>It's great to see these reflected in the SVS above, rather than being something trapped at the edge of the stage. It's also great to see the addition of "automate" to what was already a great list (of guiding principles) - more on this in a later change.</p>
+  <h4>Change #5 - hmm, there are now even more ITIL 4 practices than there were ITIL v3 processes</h4>
+  <p>My gut feel was that ITIL 4 would return us to the much-loved ITIL v2's fewer processes - where less is more. Particularly given the low adoption levels of ITIL v3 processes outside of the top 6-10 most commonly-adopted.</p>
+  <p>However, there are now more ITIL 4 practices (34) than there were ITIL v3 processes (26) - plus the four "functions" - with these 34 split between general management, service management, and technical management practices as follows:</p>
+  <p><em>General management practices</em></p>
+  <ol>
+    <li> Architecture management</li>
+    <li> Continual improvement</li>
+    <li> Information security management</li>
+    <li> Knowledge management</li>
+    <li> Measurement and reporting</li>
+    <li> Organizational change management</li>
+    <li> Portfolio management</li>
+    <li> Project management</li>
+    <li> Relationship management</li>
+    <li> Risk management</li>
+    <li> Service financial management</li>
+    <li> Strategy management</li>
+    <li> Supplier management</li>
+    <li> Workforce and talent management</li>
+  </ol>
+  <p><em>Service management practices</em></p>
+  <ol start="15">
+    <li> Availability management</li>
+    <li> Business analysis</li>
+    <li> Capacity and performance management</li>
+    <li> Change control</li>
+    <li> Incident management</li>
+    <li> IT asset management</li>
+    <li> Monitoring and event management</li>
+    <li> Problem management</li>
+    <li> Release management</li>
+    <li> Service catalogue management</li>
+    <li> Service configuration management</li>
+    <li> Service continuity management</li>
+    <li> Service design</li>
+    <li> Service desk</li>
+    <li> Service level management</li>
+    <li> Service request management</li>
+    <li> Service validation and testing</li>
+  </ol>
+  <p><em>Technical management practices</em></p>
+  <ol start="32">
+    <li> Deployment management</li>
+    <li> Infrastructure and platform management</li>
+    <li> Software development and management</li>
+  </ol>
+  <p>So, one could argue that the real "ITSM scope" comparison between ITIL 4 and ITIL v3 could be made to just the 17 service management practices - which is closer to the level of ITIL v2 than v3. However, a quick scan through the general management practices highlights many more of the ITIL v3 processes (but now practices of course).</p>
+  <p>The astute among you will have also noticed that the term service management is used here - rather than ITSM - and there's more on this later when I talk to enterprise service management.</p>
+  <p>There are also some interesting changes in the service management practices too, with that interest likely to be linked to your role. For me, these are that change management is now "change control" plus the two new areas of business analysis and IT asset management (ITAM).</p>
+  <p>In terms of the change change (can I get away with this?), if nothing else it will make it easier to talk about (or to Google for) IT-related change activities versus "organizational change management" (which is itself a general management practice).
+    Plus, I'm super-excited about the addition of ITAM - ITSM and ITAM both work so much better when considered and operated together.</p>
+  <h4>Change #6 - the 4 Ps of service management are now the 4 dimensions of service management</h4>
+  <p>"The 4 Ps you say?"</p>
+  <p>Depending on when you learned about ITIL, you might remember this as "people, process, and technology" which then became "people, process, product, and partners." If you didn't know this, then it's not a problem because it's now the following four dimensions:</p>
+  <ol>
+    <li> Organizations and <b><a href="/pmway/?slide=6" >people</a></b></li>
+    <li> Value streams and <b><a href="/pmway/?slide=6" >processes</a></b></li>
+    <li> Information and <b><a href="/pmway/?slide=6" >technology</a></b></li>
+    <li> Partners and suppliers</li>
+  </ol>
+  <p>Which looks like a sexier version on the 4Ps to me.</p>
+  <p>It's interesting that the term "processes" still remains in here.</p>
+  <h4>Change #7 - CSI has changed</h4>
+  <p>Sometimes in life, you feel as though you've stumbled upon a "best-kept secret" - something that far more people should know about and benefit from. CSI often seems like ITIL's <a href="https://www.sysaid.com/blog/entry/the-help-you-need-to-adopt-continual-service-improvement"
+         rel="noopener">best-kept secret</a> - although there's no way it could be a secret with it being one of the five ITIL v3 books. So, maybe it has to-date been more like "most-ignored guidance."</p>
+  <p>Anyway, putting my soapbox away, it's interesting to see that ITIL 4 has updated its CSI model (slightly) - there's an extra "<b>Take action</b>" step/box that you might miss if not comparing the ITIL v3 and ITIL 4 figures next to each other (yes, I did this).
+    And, importantly, it's now called "continual improvement" - to reflect more than the improvement of services. I'll miss the CSI acronym and sadly CI is already taken.</p>
+  <p>Let's see if the ITIL SVS and the greater focus on value (co-creation) are enough to kickstart continual improvement for people and their organizations.</p>
+  <h4>Change #8 - governance now has a proper seat at the ITIL table</h4>
+  <p>I normally like to joke that if you ask ten people what governance is, then you'll get eleven different answers. Then we can often see confusion between governance and management practices. {<i><a href="/pmway/?slide=2" >Click here for PMWay's take on what Governance is</a>.</i>}</p>
+  <p>So, it's great to see governance sitting so prominently in the ITIL 4 SVS and a full chapter (4.4) on it in the Foundation book, although this is less than one page of text. I imagine that we'll see much more in later ITIL 4 publications and other resources.</p>
+  <h4>Change #9 - a brighter light has been shone on automation</h4>
+  <p>We work in IT, so most of us will already know that "automation is our friend." With it helping both individuals and teams to work in a "better, faster, and cheaper" way.</p>
+  <p>I know my product management colleagues are very big on the power of automation to make the lives of IT pros simpler, and the service and support that's offered more in line with end-user or customer expectations.</p>
+  <p>Thus, the inclusion of the new "optimize and automate" guiding principle that I mentioned above is a great realization that the pressures on IT service desks, in particular, are such that failing to benefit from technology-based assistance is a big opportunity missed.</p>
+  <p>In fact, the explanation of this new guiding principle in the ITIL 4 Foundation book sells the opportunity very nicely:</p>
+  <blockquote>
+    <p><i>"Resources of all types, particularly human resources, should be used to their best effect. Eliminate anything that is truly wasteful and use technology to achieve whatever it is capable of. Human intervention should only happen where it really contributes value."</i></p>
+  </blockquote>
+  <p>The phrase "use technology to achieve whatever it is capable of" is also interesting to note - with a tech-head like me reading this as a discreet way of talking to the opportunities of <a href="https://www.joetheitguy.com/2018/10/24/the-a-z-of-artificial-intelligence-ai/"
+         rel="noopener">artificial intelligence</a> (AI) without needing to open up a potential can of worms related to what it is, how it can help, how best to approach it, etc.</p>
+  <p>Hopefully, future ITIL 4 publications and other resources will share practical advice on what works and what doesn't to further help ITSM practitioners seeking help on the adoption and exploitation of automation (and AI).</p>
+  <h4>Change #10 - enterprise service management is and isn't mentioned</h4>
+  <p>This is a funny one to talk/write about without spending the time to read the ITIL 4 Foundation book from cover to cover.</p>
+  <p>When reading the book's text (in a flicking-through way), there are various phrases that potentially confuse the reader (I'm sure Stuart will explain it to me in simple terms later). For instance, ITIL 4 is described as a "service management framework" - which is fine as the guidance is applicable outside IT as much as inside IT.</p>
+  <p>But then other text that I picked up on includes:</p>
+  <ul>
+    <li>"Service management is evolving, and so is ITIL, the most widely adopted guidance on IT service management (ITSM)"</li>
+    <li>"A comprehensive and versatile toolset for ITSM practitioners"</li>
+    <li>"Key concepts of service management."</li>
+  </ul>
+  <p>Plus, from what I've seen so far, there aren't that many mentions of ITSM in the book, with "service management" the preferred terminology unless "ITSM" is needed. I have no issue with this given the growth in <a href="https://www.joetheitguy.com/2018/06/06/the-a-z-of-enterprise-service-management/"
+         rel="noopener">enterprise service management</a> interest and adoption - we can talk in service management rather than ITSM terms.</p>
+  <p>But, and it's another big but, there's no mention of "enterprise service management" in the book! Or of "outside IT" or "outside of IT" for that matter. To me, this seems odd given that ITIL 4 is obviously written for non-IT use but there's no recognition
+    of the industry's most commonly-used terminology for the use of ITSM outside of IT.</p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

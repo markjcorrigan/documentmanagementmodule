@@ -1,0 +1,208 @@
+{% extends 'wheelbase.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}L1 Selector{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<!--
+<script type="text/javascript">
+var radious= 240;//Change the Radious of circle
+var speed = -20000;//Change the Speed
+var duration=20;
+var offsetX = $("#wobble").offset().left;
+var offsetY = $("#wobble").offset().top;
+function rotate(r1){
+var sine,coss,nwidth,nheight;
+for(var i=0;i<total;i++){
+	q = ((360/cnt)*i+deg)*Math.PI/180;
+	sine	= Math.sin(q);
+	coss = Math.cos(q);
+	q = (0.6+eSin*0.4);
+	nwidth	= q*dim.width;
+	nheight	= q*dim.height;
+     $('#wooble').css({
+	  top: centerY+15*sine,
+	  left		: centerX+200*eCos,
+	 opacity		: 0.8+sine*0.2,
+	 marginLeft	: -nwidth/2,
+	 zIndex		: Math.round(80+sine*20)
+ 	}).width(nwidth).height(nheight);
+
+}
+}
+rotate(radious);
+$("#wobble").hover(function() {	$(this).css({'z-index' : '10'});	$(this).find('img').addClass("hover").stop()
+		.animate({marginTop: '-110px',	marginLeft: '-140px',	top: '50%',	left: '50%',width: '160px',		height: '160px',
+			padding: '15px'
+		},100);
+	$(this).next().css({'z-index' : '30'}); $(this).next().find('img').addClass("hover").stop().animate({	marginTop: '-130px',
+			marginLeft: '-120px',
+			top: '50%',
+			left: '50%',
+			width: '120px',
+			height: '120px',
+			padding: '15px'
+		}, 200);
+  $(this).prev().css({'z-index' : '30'});
+  $(this).prev().find('img').addClass("hover").stop()
+		.animate({
+			marginTop: '-130px',
+			marginLeft: '-120px',
+			top: '50%',
+			left: '50%',
+			width: '120px',
+			height: '120px',
+			padding: '15px'
+		},100);
+
+
+  } , function() {
+	$(this).css({'z-index' : '0'});
+	$(this).find('img').removeClass("hover").stop()
+		.animate({
+			marginTop: '0',
+			marginLeft: '0',
+			top: '0',
+			left: '0',
+			width: '100px',
+			height: '100px',
+			padding: '10px'
+		}, 100);
+
+$(this).next().css({'z-index' : '0'});
+$(this).next().find('img').removeClass("hover").stop()
+	.animate({
+			marginTop: '0',
+			marginLeft: '0',
+			top: '0',
+			left: '0',
+			width: '100px',
+			height: '100px',
+			padding: '10px'
+		}, 100);
+$(this).prev().css({'z-index' : '0'});
+$(this).prev().find('img').removeClass("hover").stop()
+	.animate({
+			marginTop: '0',
+			marginLeft: '0',
+			top: '0',
+			left: '0',
+			width: '100px',
+			height: '100px',
+			padding: '5px'
+		}, 100);
+
+});
+</script>
+
+	<style type="text/css" media="screen">
+#wobble{
+    width:100px;
+    height:100px;
+    margin:0 auto;
+    top:20px;
+    position: relative;
+    color: #000080;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	font-weight: bold;
+	font-size:1em;
+}
+ul{
+	list-style-type: none;
+}
+	</style>-->
+
+<div class="container" align="center"> <br>
+  <br>
+  <br>
+  <br>
+  <h3> &nbsp;PMBOK&reg; 6 Process Selector Wheel for devices with small
+    screens. </h3>
+  <br>
+  <br>
+  <img alt="" src="{{ asset('storage/images/drivewheel.png') }}" height="45" width="200"><br>
+  <p><em>If wheel spins too fast reload page</em></p>
+  <br>
+  <h3>Process Selection Wheel for Level 1</h3>
+  <br>
+  <br>
+  <br>
+  <div id="wobble">
+    <ul>
+      <li><a href="fourone" title="Develop Project Charter">4.1</a></li>
+      <li><a href="fourtwo" title="Develop Project Management Plan">4.2</a></li>
+      <li><a href="fourthree" title="Direct and Manage Project Work">4.3</a></li>
+      <li><a href="fourfour" title="Manage Project Knowledge">4.4</a></li>
+      <li><a href="fourfive" title="Monitor and Control Project Work">4.5</a></li>
+      <li><a href="foursix" title="Perform Integrated Change Control">4.6</a></li>
+      <li><a href="fourseven" title="Close Project or Phase">4.7</a></li>
+      <li><a href="fiveone" title="Plan Scope Management">5.1</a></li>
+      <li><a href="fivetwo" title="Collect Requirements">5.2</a></li>
+      <li><a href="fivethree" title="Define Scope">5.3</a></li>
+      <li><a href="fivefour" title="Create WBS">5.4</a></li>
+      <li><a href="fivefive" title="Validate Scope">5.5</a></li>
+      <li><a href="fivesix" title="Control Scope">5.6</a></li>
+      <li><a href="sixone" title="Plan Schedule Management">6.1</a></li>
+      <li><a href="sixtwo" title="Define Activities">6.2</a></li>
+      <li><a href="sixthree" title="Sequence Activities">6.3</a></li>
+      <li><a href="sixfour" title="Estimate Activity Durations">6.4</a></li>
+      <li><a href="sixfive" title="Develop Schedule">6.5</a></li>
+      <li><a href="sixsix" title="Control Schedule">6.6</a></li>
+      <li><a href="sevenone" title="Plan Cost Management">7.1</a></li>
+      <li><a href="seventwo" title="Estimate Costs">7.2</a></li>
+      <li><a href="seventhree" title="Determine Budget">7.3</a></li>
+      <li><a href="sevenfour" title="Control Costs">7.4</a></li>
+      <li><a href="eightone" title="Plan Quality Management">8.1</a></li>
+      <li><a href="eighttwo" title="Manage Quality">8.2</a></li>
+      <li><a href="eightthree" title="Control Quality">8.3</a></li>
+      <li><a href="nineone" title="Plan Resource Management">9.1</a></li>
+      <li><a href="ninetwo" title="Estimate Activity Resources">9.2</a></li>
+      <li><a href="ninethree" title="Acquire Resources">9.3</a></li>
+      <li><a href="ninefour" title="Develop Team">9.4</a></li>
+      <li><a href="ninefive" title="Manage Team">9.5</a></li>
+      <li><a href="ninesix" title="Control Resources">9.6</a></li>
+      <li><a href="tenone" title="Plan Communications Management">10.1</a></li>
+      <li><a href="tentwo" title="Manage Communications">10.2</a></li>
+      <li><a href="tenthree" title="Monitor Communications">10.3</a></li>
+      <li><a href="elevenone" title="Plan Risk Management">11.1</a></li>
+      <li><a href="eleventwo" title="Identify Risks">11.2</a></li>
+      <li><a href="eleventhree" title="Perform Qualitative Risk Analysis">11.3</a></li>
+      <li><a href="elevenfour" title="Perform Quantitative Risk Analysis">11.4</a></li>
+      <li><a href="elevenfive" title="Plan Risk Responses">11.5</a></li>
+      <li><a href="elevensix" title="Implement Risk Responses">11.6</a></li>
+      <li><a href="elevenseven" title="Monitor Risks">11.7</a></li>
+      <li><a href="twelveone" title="Plan Procurement Management">12.1</a></li>
+      <li><a href="twelvetwo" title="Conduct Procurement">12.2</a></li>
+      <li><a href="twelvethree" title="Control Procurements">12.3</a></li>
+      <li><a href="thirteenone" title="Identify Stakeholders">13.1</a></li>
+      <li><a href="thirteentwo" title="Plan Stakeholder Engagement">13.2</a></li>
+      <li><a href="thirteenthree" title="Manage Stakeholder Engagement">13.3</a></li>
+      <li><a href="thirteenfour" title="Monitor Stakeholder Engagement">13.4</a></li>
+    </ul>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container" align="center"> <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h1 align="center"><a href="/home/leveltwowheel">Level 2
+      Process Selection Wheel</a></h1>
+    <br>
+    <br>
+    &nbsp; <br>
+    <br>
+  </div>
+</div>
+<!--ENDBODY-->
+
+{% else %}
+
+
+    {% endif %}
+
+
+{% endblock %}

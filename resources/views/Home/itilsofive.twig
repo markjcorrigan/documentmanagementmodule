@@ -1,0 +1,298 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SO Access Management</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=35') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Access Management</i> aims to grant authorized users the right to use a service, while preventing access to non-authorized users. This ITIL process essentially executes policies defined in Information Security Management. Access Management is sometimes also referred to as 'Rights Management' or 'Identity Management'.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: Access Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Access Management has been added as a new process to ITIL V3. The decision to include this dedicated process was motivated by Information security reasons, as granting access to IT services and applications only to authorized users is of high importance from an Information Security viewpoint. </p>
+  <p>In ITIL 2011 an interface between Access Management and Event Management has been added, to emphasize that (some) Event filtering and correlation rules should be designed by Access Management to support the detection of unauthorized access to services. The process overview of <a href="/images/itilsofour.jpg"  title="Access-management-itil.jpg">ITIL Access Management</a> shows the key information flows. </p>
+  <p>A specific activity has been added to revoke access rights if required, to make this point clearer. </p>
+  <p>In ITIL 2011 it has been made clearer in the Request Fulfilment and Incident Management processes that the requester's authorization must be checked. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Access Management sub-processes:">These are the <strong class="selflink">ITIL Access Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Access_Management_Catalogue" itemprop="itemListElement">Maintenance of Catalogue of User Roles and Access Profiles</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To make sure that the catalogue of User Roles and Access Profiles is still appropriate for the services offered to customers, and to prevent unwanted accumulation of access rights. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Access_Management_Requests" itemprop="itemListElement">Processing of User Access Requests</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To process requests to add, change or revoke access rights, and to make sure that only authorized users are granted the right to use a service. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the Access Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Access_Rights" itemprop="itemListElement">Access Rights</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of data defining what services a user is allowed to access. This definition is achieved by assigning the user, identified by his User Identity, to one or more User Roles. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_for_Access_Rights" itemprop="itemListElement">Request for Access Rights</span></b> </p>
+    <ul>
+      <li itemprop="description">A request to grant, change or revoke the right to use a particular service or access certain assets. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Identity_Record" itemprop="itemListElement">User Identity Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of data with all the details identifying a user or person. It is used to grant rights to that user or person. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Identity_Request" itemprop="itemListElement">User Identity Request</span></b> </p>
+    <ul>
+      <li itemprop="description">A request to create, modify or delete a User Identity. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Role" itemprop="itemListElement">User Role</span></b> </p>
+    <ul>
+      <li itemprop="description">A role as part of a catalogue or hierarchy of all the roles (types of users) in the organization. Access rights are based on the roles that individual users have as part of an organization. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Role_Access_Profile" itemprop="itemListElement">User Role Access Profile</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of data defining the level of access to a service or group of services for a certain type of user (User Role). User Role Access Profiles help to protect the confidentiality, integrity and availability of assets by defining what information computer users can utilize, the programs that they can run, and the modifications that they can make. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Role_Requirements" itemprop="itemListElement">User Role Requirements</span></b> </p>
+    <ul>
+      <li itemprop="description">Requirements from the business side for the catalogue or hierarchy of user roles (types of users) in the organization. Access rights are based on the roles that individual users have as part of an organization. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Access_Manager">Access Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Access Manager grants authorized users the right to use a service, while preventing access to non-authorized users.</li>
+    <li>The Access Manager essentially executes policies defined in Information Security Management.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="1st_Level_Support">1st Level Support</span></b> </p>
+  <ul>
+    <li>The responsibility of 1st Level Support is to register and classify received Incidents and to undertake an immediate effort in order to restore a failed IT service as quickly as possible. If no ad-hoc solution can be achieved, 1st Level Support will transfer the Incident to expert technical support groups (2nd Level Support). 1st Level Support also processes Service Requests and keeps users informed about their Incidents' status at agreed intervals.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b>Responsibility Matrix: ITIL Access Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 60%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Access Manager </th>
+        <th style="background:#ffffee;">1st Level Support </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Access_Management_Catalogue">Maintenance of Catalogue of User Roles and Access Profile</a></td>
+        <td>AR </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Access_Management_Requests">Processing of User Access Requests</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Access Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Access Management.</span> </p>
+  <p><span id="Responsible-delegated">[3] According to ITIL, it is quite common for the service desk / 1st level support <i>to be delegated responsibility</i> for providing access to simple services.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SO Access Management</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=35') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Access Management</i> aims to grant authorized users the right to use a service, while preventing access to non-authorized users. This ITIL process essentially executes policies defined in Information Security Management. Access Management is sometimes also referred to as 'Rights Management' or 'Identity Management'.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: Access Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Access Management has been added as a new process to ITIL V3. The decision to include this dedicated process was motivated by Information security reasons, as granting access to IT services and applications only to authorized users is of high importance from an Information Security viewpoint. </p>
+  <p>In ITIL 2011 an interface between Access Management and Event Management has been added, to emphasize that (some) Event filtering and correlation rules should be designed by Access Management to support the detection of unauthorized access to services. The process overview of <a href="/images/itilsofour.jpg"  title="Access-management-itil.jpg">ITIL Access Management</a> shows the key information flows. </p>
+  <p>A specific activity has been added to revoke access rights if required, to make this point clearer. </p>
+  <p>In ITIL 2011 it has been made clearer in the Request Fulfilment and Incident Management processes that the requester's authorization must be checked. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Access Management sub-processes:">These are the <strong class="selflink">ITIL Access Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Access_Management_Catalogue" itemprop="itemListElement">Maintenance of Catalogue of User Roles and Access Profiles</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To make sure that the catalogue of User Roles and Access Profiles is still appropriate for the services offered to customers, and to prevent unwanted accumulation of access rights. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Access_Management_Requests" itemprop="itemListElement">Processing of User Access Requests</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To process requests to add, change or revoke access rights, and to make sure that only authorized users are granted the right to use a service. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the Access Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Access_Rights" itemprop="itemListElement">Access Rights</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of data defining what services a user is allowed to access. This definition is achieved by assigning the user, identified by his User Identity, to one or more User Roles. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_for_Access_Rights" itemprop="itemListElement">Request for Access Rights</span></b> </p>
+    <ul>
+      <li itemprop="description">A request to grant, change or revoke the right to use a particular service or access certain assets. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Identity_Record" itemprop="itemListElement">User Identity Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of data with all the details identifying a user or person. It is used to grant rights to that user or person. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Identity_Request" itemprop="itemListElement">User Identity Request</span></b> </p>
+    <ul>
+      <li itemprop="description">A request to create, modify or delete a User Identity. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Role" itemprop="itemListElement">User Role</span></b> </p>
+    <ul>
+      <li itemprop="description">A role as part of a catalogue or hierarchy of all the roles (types of users) in the organization. Access rights are based on the roles that individual users have as part of an organization. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Role_Access_Profile" itemprop="itemListElement">User Role Access Profile</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of data defining the level of access to a service or group of services for a certain type of user (User Role). User Role Access Profiles help to protect the confidentiality, integrity and availability of assets by defining what information computer users can utilize, the programs that they can run, and the modifications that they can make. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User_Role_Requirements" itemprop="itemListElement">User Role Requirements</span></b> </p>
+    <ul>
+      <li itemprop="description">Requirements from the business side for the catalogue or hierarchy of user roles (types of users) in the organization. Access rights are based on the roles that individual users have as part of an organization. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Access_Manager">Access Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Access Manager grants authorized users the right to use a service, while preventing access to non-authorized users.</li>
+    <li>The Access Manager essentially executes policies defined in Information Security Management.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="1st_Level_Support">1st Level Support</span></b> </p>
+  <ul>
+    <li>The responsibility of 1st Level Support is to register and classify received Incidents and to undertake an immediate effort in order to restore a failed IT service as quickly as possible. If no ad-hoc solution can be achieved, 1st Level Support will transfer the Incident to expert technical support groups (2nd Level Support). 1st Level Support also processes Service Requests and keeps users informed about their Incidents' status at agreed intervals.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b>Responsibility Matrix: ITIL Access Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 60%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Access Manager </th>
+        <th style="background:#ffffee;">1st Level Support </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Access_Management_Catalogue">Maintenance of Catalogue of User Roles and Access Profile</a></td>
+        <td>AR </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Access_Management_Requests">Processing of User Access Requests</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Access Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Access Management.</span> </p>
+  <p><span id="Responsible-delegated">[3] According to ITIL, it is quite common for the service desk / 1st level support <i>to be delegated responsibility</i> for providing access to simple services.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

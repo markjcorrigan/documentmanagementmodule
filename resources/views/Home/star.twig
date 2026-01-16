@@ -1,0 +1,139 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}STAR AR{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container">
+  <h3>STAR/AR </h3>
+  <!--<a href="/sandpit.php#go">
+	<img alt="Back" height="30" src="{{ asset('storage/images/arrow_left.png') }}" width="30"></a>-->
+  <hr>
+  <div align="right">
+    <script language="javascript" type="text/javascript">
+                    //<![CDATA[
+
+                    if (window.print) {
+                    document.write('<form><input type=button name=print value="Print out this page" onClick="window.print()"><\/form>');
+                    }
+                    //]]>
+                    </script>
+  </div>
+  <h5>&#39;Pin on Stars&#39; when you catch people doing things right!</h5>
+  <img alt="" class="img-fluid" src="{{ asset('storage/images/star.png') }}" >
+  <p>A neat concept I came across was STAR/AR</p>
+  <p><strong>STARS</strong> are &quot;visible proof&quot; of catching people doing
+    things right!<br>
+    Essentially you give your colleagues STARS if you catch them doing
+    something right / doing well in their jobs that is above the norm and deserves notice and acknowledgement.&nbsp;
+    And especially &#39;pin on stars&#39; when a good service has been rendered either
+    to external (or internal) <a href="/client.php" >clients</a>!</p>
+  <p><strong>STAR/AR&#39;s</strong> are a way to show people how to do things
+    right!<br />
+    A STAR/AR is used to inform them of an alternative way to approach
+    something.&nbsp; <br />
+    While not a reprimand, a STAR/AR is a "redirector"
+    recommending an alternative course of action, with you motivating why you
+    suggest this.&nbsp;</p>
+  <p>The STAR/AR system works really well, creating immediate
+    improvements and synergies within the workplace as you catch people using
+    their initiative, skills and talents to do things right!&nbsp; If people do not do the right
+    things STAR/AR can be used to assist to create awareness, for training, and as a way towards process definition and <a href="/home/gamestats" >improvements in production
+    efficiencies and statistics</a>.&nbsp;
+    This fuel&#39;s a positive upward spiral within the individual and the <a href="/team.php" >TEAM</a> and
+    also between staff and <a href="/client.php" >valued clients</a>.&nbsp;
+    &nbsp;</p>
+  <p>The usefulness within a project team should also be obvious.</p>
+  <p>Here it is presented in the detail that could be used to market the
+    concept to your staff.</p>
+  <p><img alt="" class="img-fluid" src="{{ asset('storage/images/star-ar.png') }}" ></p>
+  <p>The above image could head up a STAR/AR form.</p>
+  <p>I.e. The form must follow structure of the image above.</p>
+  <p> 1.  A place to write the Situation or Task, then the Action and the Result. <br />
+    Note Information describing the STAR/AR must include detail in the 5WH format:  Who, What, When, Where, Why, How.</p>
+  <p>2.  The STAR/AR (redirector) follows after completing the above detail and should show the recommended alternate 'Action' and 'Result' that could have been followed.</p>
+  <p>Once completed the form must be photocopied and a copy sent to the manager, a copy to Human Resources for the staff members file and the original given to the staff member.&nbsp;
+    At the time that a staff member receives a review, the STARS and STAR/AR&#39;s
+    (in their personnel files)&nbsp; can be taken into consideration by the
+    manger / the company supporting the review.&nbsp; <br />
+    I.e. At review time a collection of STAR forms in a personnel file can be used by the staff member to motivate a higher score / bonus etc.<br />
+    <strong>I would not consider introducing the <a href="/balanced.php" >Balanced
+    Scorecard</a> without the STAR/AR initiative and process fully defined and
+    in place. </strong></p>
+  <p> <a href="/Documentssave/resources/starar.zip" >An official form and defined STAR/AR process is always best</a></p>
+  <p>Here is <a href="/Documentsviewpdf/resources/stararfeedbackmodel.pdf" >the STAR/AR feedback model</a>.</p>
+  <p> <a href="{{ asset('storage/assets/thenewoneminutemanager.zip') }}" > <img alt="" class="img-fluid" src="{{ asset('storage/images/risingstar.png') }}" ></a></p>
+  <br>
+  <br>
+  <br>
+</div>
+<!--BODY ENDS HERE-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+<h3>STAR/AR </h3>
+<!--<a href="/sandpit.php#go">
+	<img alt="Back" height="30" src="{{ asset('storage/images/arrow_left.png') }}" width="30"></a>-->
+<hr>
+<div align="right">
+  <script language="javascript" type="text/javascript">
+                    //<![CDATA[
+
+                    if (window.print) {
+                    document.write('<form><input type=button name=print value="Print out this page" onClick="window.print()"><\/form>');
+                    }
+                    //]]>
+                    </script>
+</div>
+<h5>&#39;Pin on Stars&#39; when you catch people doing things right!</h5>
+<img alt="" class="img-fluid" src="{{ asset('storage/images/star.png') }}" >
+<p>A neat concept I came across was STAR/AR</p>
+<p><strong>STARS</strong> are &quot;visible proof&quot; of catching people doing
+  things right!<br>
+  Essentially you give your colleagues STARS if you catch them doing
+  something right / doing well in their jobs that is above the norm and deserves notice and acknowledgement.&nbsp;
+  And especially &#39;pin on stars&#39; when a good service has been rendered either
+  to external (or internal) <a href="/client.php" >clients</a>!</p>
+<p><strong>STAR/AR&#39;s</strong> are a way to show people how to do things
+  right!<br />
+  A STAR/AR is used to inform them of an alternative way to approach
+  something.&nbsp; <br />
+  While not a reprimand, a STAR/AR is a "redirector"
+  recommending an alternative course of action, with you motivating why you
+  suggest this.&nbsp;</p>
+<p>The STAR/AR system works really well, creating immediate
+  improvements and synergies within the workplace as you catch people using
+  their initiative, skills and talents to do things right!&nbsp; If people do not do the right
+  things STAR/AR can be used to assist to create awareness, for training, and as a way towards process definition and <a href="/home/gamestats" >improvements in production
+  efficiencies and statistics</a>.&nbsp;
+  This fuel&#39;s a positive upward spiral within the individual and the <a href="/team.php" >TEAM</a> and
+  also between staff and <a href="/client.php" >valued clients</a>.&nbsp;
+  &nbsp;</p>
+<p>The usefulness within a project team should also be obvious.</p>
+<p>Here it is presented in the detail that could be used to market the
+  concept to your staff.</p>
+<p><img alt="" class="img-fluid" src="{{ asset('storage/images/star-ar.png') }}" ></p>
+<p>The above image could head up a STAR/AR form.</p>
+<p>I.e. The form must follow structure of the image above.</p>
+<p> 1.  A place to write the Situation or Task, then the Action and the Result. <br />
+  Note Information describing the STAR/AR must include detail in the 5WH format:  Who, What, When, Where, Why, How.</p>
+<p>2.  The STAR/AR (redirector) follows after completing the above detail and should show the recommended alternate 'Action' and 'Result' that could have been followed.</p>
+<p>Once completed the form must be photocopied and a copy sent to the manager, a copy to Human Resources for the staff members file and the original given to the staff member.&nbsp;
+  At the time that a staff member receives a review, the STARS and STAR/AR&#39;s
+  (in their personnel files)&nbsp; can be taken into consideration by the
+  manger / the company supporting the review.&nbsp; <br />
+  I.e. At review time a collection of STAR forms in a personnel file can be used by the staff member to motivate a higher score / bonus etc.<br />
+  <strong>I would not consider introducing the <a href="/balanced.php" >Balanced
+  Scorecard</a> without the STAR/AR initiative and process fully defined and
+  in place. </strong></p>
+<p> <a href="/Documentssave/resources/starar.zip" >An official form and defined STAR/AR process is always best</a></p>
+<p>Here is <a href="/Documentsviewpdf/resources/stararfeedbackmodel.pdf" >the STAR/AR feedback model</a>.</p>
+<p> <a href="{{ asset('storage/assets/thenewoneminutemanager.zip') }}" > <img alt="" class="img-fluid" src="{{ asset('storage/images/risingstar.png') }}" ></a></p>
+<br>
+<br>
+<br>
+{% endif %}
+
+
+{% endblock %}

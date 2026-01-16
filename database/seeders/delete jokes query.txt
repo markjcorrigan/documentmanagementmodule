@@ -1,0 +1,30 @@
+DELETE FROM jokes
+WHERE (LENGTH(description) - LENGTH(REPLACE(description, ' ', '')) + 1) < 30;
+
+
+
+UPDATE jokes 
+SET description = REGEXP_REPLACE(
+    REGEXP_REPLACE(
+        REGEXP_REPLACE(
+            REGEXP_REPLACE(
+                REGEXP_REPLACE(
+                    description,
+                    ';\\?', '?'
+                ),
+                '([?!.:,;])([A-Za-z])', '\\1 \\2'
+            ),
+            ' +([.!?,;:])', '\\1'
+        ),
+        '([a-z]),([a-z])', '\\1, \\2'
+    ),
+    '  +', ' '
+)
+WHERE description REGEXP '[?!.:,;][A-Za-z]|  | [.!?,;:]|;\\?|[a-z],[a-z]';
+
+to fix this problem.  I seem to have run into an issue.  can you apply a fix  and give me a way to apply others if i find them.  i.e. doctor$1 $2ohn: Is he feeling better now$1 $2ack: No, he has a broken $1. $2ohn:
+
+UPDATE jokes 
+SET description = REPLACE(description, '$1 $2', '')
+WHERE description LIKE '%$1 $2%';
+

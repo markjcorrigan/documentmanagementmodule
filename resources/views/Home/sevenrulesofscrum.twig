@@ -1,0 +1,92 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Seven Rules of Scrum{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="left">
+  <h3>Don't Break the Seven Rules of Scrum</h3>
+  <hr>
+  <p align="left"><img alt="" class="img-fluid" src="{{ asset('storage/images/dontbreak.jpg') }}" ></p>
+  <p>Is your organization undermining the benefits of Scrum without even knowing it? As an agile coach, I find that many of my clients today are trying to improve on their use of Scrum. Scrum is a simple agile framework that can be difficult to implement. For some, it is difficult because people continue to do things the same way with Scrum as they had done previously. Or they misunderstand or disregard the rules of Scrum that they don't feel are important. And when they keep doing things the same way and disregard the rules, they don't realize the benefits of Scrum and agile.</p>
+  <p>What follows is my take on the seven most commonly missed or abused rules of Scrum. These rules are based on the&nbsp;<a href="http://www.scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-US.pdf"  rel="nofollow noopener">Scrum Guide</a>, which is the definitive guide for Scrum published by the creators, Jeff Sutherland and Ken Schwaber.</p>
+  <p><strong>1. The team is self-organizing.&nbsp;</strong>The Scrum Guide is
+    pretty clear on this, stating that &quot;No one (not even the ScrumMaster) tells
+    the Development Team...&quot; how to get work done. The team is comprised of motivated individuals and is intended to be empowered and trusted by the organization.</p>
+  <p>What I frequently find happening is that someone outside the team tells the team what to do.&nbsp;&nbsp;Frequently it is the Scrum Master; sometimes it is the development manager or another functional manager.&nbsp;Either way, the team is not trusted or set up to operate without being told what to do. And this lack of autonomy undermines team member commitment, motivation and productivity.</p>
+  <p><strong>2. The Scrum Master is a Servant Leader Who Teaches the Team Scrum How to Self-organize</strong></p>
+  <p>The role of the Scrum Master is widely misunderstood. As the name implies, the Scrum Master is supposed to <em><strong>master scrum. </strong></em>They are not a project manager, task manager or driver for the team. Rather, they are an enabler, a&nbsp;servant that teaches everyone Scrum and&nbsp;coaches&nbsp;the team to self-organize. Done well, the Scrum Master should be working their way out of a job as the team matures.</p>
+  <p>I frequently see Scrum Masters who don't know Scrum.&nbsp;Seriously.&nbsp;The "masters" of Scrum don't understand Scrum themselves and find themselves hard pressed to teach or coach others to use Scrum.&nbsp;They also don't understand how to be a servant leader or how to help teams self-organize. They are often coming from other roles and they carry baggage from those roles. They frequently feel compelled to make decisions and tell the team what to do. Rather than make the team self-organizing, these Scrum Masters make themselves indispensable.</p>
+  <p><strong>3. The Scrum Master Doesn't Have to Attend the Daily Scrum</strong></p>
+  <p>This is an interesting rule that aligns to the previous rule.&nbsp;Traditional thinking is that one person - typically the project manager - hosts and directs status meeting. This is not how things work in Scrum.</p>
+  <p>The Daily Scrum is not a status meeting, it is a meeting for the team members to coordinate their work and make sure they are on track to achieve their sprint goal. The reason it is OK for the Scrum Master to miss the meeting is because they aren't needed at the meeting. New or unskillful Scrum Masters can actually do more harm than good by attending.</p>
+  <p>The Scrum Master is responsible to make sure the daily Scrum Meeting happens, that it is effective and that it is kept within the 15-minute time box.&nbsp;They can certainly attend but the team should have the meeting whether the Scrum Master is there or not.</p>
+  <p><strong>4. Scrum Teams Should Work Cross-Functionally without Handoffs</strong></p>
+  <p>Traditional teams work as a relay race with specialist team members handing off work in one phase to different specialists in the next phase.&nbsp;The handoffs between the silos are usually the biggest area of risk and information loss.</p>
+  <p>Scrum teams are expected to collaborate and to work cross-functionally on one or a few items at a time.&nbsp;Within the Scrum team, you should not hear team members talking about the "front end team" or the "QA team".&nbsp;&nbsp;The Scrum team should be operating as one team.</p>
+  <p><strong>5. Hold Scrum Events at the Same Time and Place</strong></p>
+  <p>Scrum events should be on the calendar and held at the same time and place each sprint. This practice helps to create consistency and avoid the waste associated with rescheduling meetings or double-booking people and rooms.</p>
+  <p>What I see occurring is that meetings are re-scheduled, held out of sequence, or simply cancelled. Many organizations operate in a continuous cycle of firefighting and don't see that adherence to a framework like Scrum would help them to minimize those fires.&nbsp;It goes back to a lack of understanding of the Scrum framework.</p>
+  <p>And please,&nbsp;have the meetings in the right sequence, the way it was designed. I recently observed a retrospective meeting that was held in the middle of the sprint. Team members had already forgotten what happened in the previous sprint and were not able to incorporate improvements into the next.</p>
+  <p><strong>6. The Product Owner is the Sole Source of Work for the Team</strong></p>
+  <p>The point of this rule is to have one decision maker who prioritizes work for the team. No one else is allowed to tell the team what to do and the team shouldn't act on what anyone else says. The Product Owner owns the backlog and all work is reflected in the backlog.</p>
+  <p>There are a few ways that organizations break this rule.&nbsp;Some don't assign a Product Owner.&nbsp;Some have a Product Owner but don't let that Product Owner actually own and prioritize the backlog - the Scrum Master, project manager or functional manager does. Sometimes there is a Product Owner prioritizing work but team members are still directed to work on other items.</p>
+  <p><strong>7. There are no Titles on the Scrum Team besides Developer</strong></p>
+  <p>The reason for this rule is to encourage cross-functional behavior, avoid sub-teams, and foster team ownership. Scrum seeks to avoid the inefficiencies of team leaders and specialty sub-teams within the team. Each team member is responsible to participate fully in the team. Scrum teams work like Rugby teams with a single goal of moving the ball downfield.</p>
+  <p>What I see in practice is that Scrum teams operate with team leads, onshore/offshore coordinators, QA leaders, or other specialties. They allow handoffs and hierarchies that undermine the team's self-organization and full engagement. In those environments, team members sit back and wait to be told what to do, rather than take initiative and ownership.&nbsp;There is no clear sense of team.</p>
+  <p><strong>Do This Instead</strong></p>
+  <p>To succeed with Scrum, first we need to follow the framework and the rules. Scrum is simple, but difficult because it requires change from old ways of operating. Strive for a solid understanding of Scrum.&nbsp;Get training from a Certified Scrum Trainer or Professional Scrum Trainer.&nbsp;Read and fully digest the <a href="http://www.scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-US.pdf"  rel="nofollow noopener">Scrum Guide</a>; it&nbsp;is an excellent reference and it is only 17 pages long. Another resource I found useful is this video, <a href="http://www.youtube.com/watch?v=TYCeGy69mLE" >Scrum by the book by Per Beining</a>. (You can email PMWay to downloady our own copy of this video)</p>
+  <p>Second, look underneath why the rules are broken.&nbsp;Sometimes it's not just about education, sometimes it is a resistance to change or lack of desire to adopt Scrum.&nbsp;Consider whether you have the right people in the right roles.&nbsp;Have you cast a vision for the change and the commitment to use Scrum?</p>
+  <p>Third, consider hiring a good Scrum or Agile Coach.&nbsp;If you have the right people in the right roles, perhaps they just need some coaching to adopt new ways of working and thinking.&nbsp;Coaching in real time is needed to break old habits.</p>
+  <br>
+  <p>Thanks Anthony Mersino - published 2017</p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+  <h3>Don't Break the Seven Rules of Scrum</h3>
+  <hr>
+  <p align="left"><img alt="" class="img-fluid" src="{{ asset('storage/images/dontbreak.jpg') }}" ></p>
+  <p>Is your organization undermining the benefits of Scrum without even knowing it? As an agile coach, I find that many of my clients today are trying to improve on their use of Scrum. Scrum is a simple agile framework that can be difficult to implement. For some, it is difficult because people continue to do things the same way with Scrum as they had done previously. Or they misunderstand or disregard the rules of Scrum that they don't feel are important. And when they keep doing things the same way and disregard the rules, they don't realize the benefits of Scrum and agile.</p>
+  <p>What follows is my take on the seven most commonly missed or abused rules of Scrum. These rules are based on the&nbsp;<a href="http://www.scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-US.pdf"  rel="nofollow noopener">Scrum Guide</a>, which is the definitive guide for Scrum published by the creators, Jeff Sutherland and Ken Schwaber.</p>
+  <p><strong>1. The team is self-organizing.&nbsp;</strong>The Scrum Guide is
+    pretty clear on this, stating that &quot;No one (not even the ScrumMaster) tells
+    the Development Team...&quot; how to get work done. The team is comprised of motivated individuals and is intended to be empowered and trusted by the organization.</p>
+  <p>What I frequently find happening is that someone outside the team tells the team what to do.&nbsp;&nbsp;Frequently it is the Scrum Master; sometimes it is the development manager or another functional manager.&nbsp;Either way, the team is not trusted or set up to operate without being told what to do. And this lack of autonomy undermines team member commitment, motivation and productivity.</p>
+  <p><strong>2. The Scrum Master is a Servant Leader Who Teaches the Team Scrum How to Self-organize</strong></p>
+  <p>The role of the Scrum Master is widely misunderstood. As the name implies, the Scrum Master is supposed to <em><strong>master scrum. </strong></em>They are not a project manager, task manager or driver for the team. Rather, they are an enabler, a&nbsp;servant that teaches everyone Scrum and&nbsp;coaches&nbsp;the team to self-organize. Done well, the Scrum Master should be working their way out of a job as the team matures.</p>
+  <p>I frequently see Scrum Masters who don't know Scrum.&nbsp;Seriously.&nbsp;The "masters" of Scrum don't understand Scrum themselves and find themselves hard pressed to teach or coach others to use Scrum.&nbsp;They also don't understand how to be a servant leader or how to help teams self-organize. They are often coming from other roles and they carry baggage from those roles. They frequently feel compelled to make decisions and tell the team what to do. Rather than make the team self-organizing, these Scrum Masters make themselves indispensable.</p>
+  <p><strong>3. The Scrum Master Doesn't Have to Attend the Daily Scrum</strong></p>
+  <p>This is an interesting rule that aligns to the previous rule.&nbsp;Traditional thinking is that one person - typically the project manager - hosts and directs status meeting. This is not how things work in Scrum.</p>
+  <p>The Daily Scrum is not a status meeting, it is a meeting for the team members to coordinate their work and make sure they are on track to achieve their sprint goal. The reason it is OK for the Scrum Master to miss the meeting is because they aren't needed at the meeting. New or unskillful Scrum Masters can actually do more harm than good by attending.</p>
+  <p>The Scrum Master is responsible to make sure the daily Scrum Meeting happens, that it is effective and that it is kept within the 15-minute time box.&nbsp;They can certainly attend but the team should have the meeting whether the Scrum Master is there or not.</p>
+  <p><strong>4. Scrum Teams Should Work Cross-Functionally without Handoffs</strong></p>
+  <p>Traditional teams work as a relay race with specialist team members handing off work in one phase to different specialists in the next phase.&nbsp;The handoffs between the silos are usually the biggest area of risk and information loss.</p>
+  <p>Scrum teams are expected to collaborate and to work cross-functionally on one or a few items at a time.&nbsp;Within the Scrum team, you should not hear team members talking about the "front end team" or the "QA team".&nbsp;&nbsp;The Scrum team should be operating as one team.</p>
+  <p><strong>5. Hold Scrum Events at the Same Time and Place</strong></p>
+  <p>Scrum events should be on the calendar and held at the same time and place each sprint. This practice helps to create consistency and avoid the waste associated with rescheduling meetings or double-booking people and rooms.</p>
+  <p>What I see occurring is that meetings are re-scheduled, held out of sequence, or simply cancelled. Many organizations operate in a continuous cycle of firefighting and don't see that adherence to a framework like Scrum would help them to minimize those fires.&nbsp;It goes back to a lack of understanding of the Scrum framework.</p>
+  <p>And please,&nbsp;have the meetings in the right sequence, the way it was designed. I recently observed a retrospective meeting that was held in the middle of the sprint. Team members had already forgotten what happened in the previous sprint and were not able to incorporate improvements into the next.</p>
+  <p><strong>6. The Product Owner is the Sole Source of Work for the Team</strong></p>
+  <p>The point of this rule is to have one decision maker who prioritizes work for the team. No one else is allowed to tell the team what to do and the team shouldn't act on what anyone else says. The Product Owner owns the backlog and all work is reflected in the backlog.</p>
+  <p>There are a few ways that organizations break this rule.&nbsp;Some don't assign a Product Owner.&nbsp;Some have a Product Owner but don't let that Product Owner actually own and prioritize the backlog - the Scrum Master, project manager or functional manager does. Sometimes there is a Product Owner prioritizing work but team members are still directed to work on other items.</p>
+  <p><strong>7. There are no Titles on the Scrum Team besides Developer</strong></p>
+  <p>The reason for this rule is to encourage cross-functional behavior, avoid sub-teams, and foster team ownership. Scrum seeks to avoid the inefficiencies of team leaders and specialty sub-teams within the team. Each team member is responsible to participate fully in the team. Scrum teams work like Rugby teams with a single goal of moving the ball downfield.</p>
+  <p>What I see in practice is that Scrum teams operate with team leads, onshore/offshore coordinators, QA leaders, or other specialties. They allow handoffs and hierarchies that undermine the team's self-organization and full engagement. In those environments, team members sit back and wait to be told what to do, rather than take initiative and ownership.&nbsp;There is no clear sense of team.</p>
+  <p><strong>Do This Instead</strong></p>
+  <p>To succeed with Scrum, first we need to follow the framework and the rules. Scrum is simple, but difficult because it requires change from old ways of operating. Strive for a solid understanding of Scrum.&nbsp;Get training from a Certified Scrum Trainer or Professional Scrum Trainer.&nbsp;Read and fully digest the <a href="http://www.scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-US.pdf"  rel="nofollow noopener">Scrum Guide</a>; it&nbsp;is an excellent reference and it is only 17 pages long. Another resource I found useful is this video, <a href="http://www.youtube.com/watch?v=TYCeGy69mLE" >Scrum by the book by Per Beining</a>. (You can email PMWay to downloady our own copy of this video)</p>
+  <p>Second, look underneath why the rules are broken.&nbsp;Sometimes it's not just about education, sometimes it is a resistance to change or lack of desire to adopt Scrum.&nbsp;Consider whether you have the right people in the right roles.&nbsp;Have you cast a vision for the change and the commitment to use Scrum?</p>
+  <p>Third, consider hiring a good Scrum or Agile Coach.&nbsp;If you have the right people in the right roles, perhaps they just need some coaching to adopt new ways of working and thinking.&nbsp;Coaching in real time is needed to break old habits.</p>
+  <br>
+  <p>Thanks Anthony Mersino - published 2017</p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

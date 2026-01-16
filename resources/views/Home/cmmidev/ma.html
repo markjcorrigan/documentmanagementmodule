@@ -1,0 +1,964 @@
+{% extends 'base.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}CAR{% endif %}  {% endblock %}
+{% block body %}
+{% if current_user %}
+<div class="container">			
+
+<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2" style="height: 50px"><strong>
+					<a href="/home/cmmidevdash">Measurement and Analysis 
+					(MA)</a></strong><br />
+					<br />
+					</td></tr>
+				</table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+</tr><td><p>Measurement and Analysis attempts to quantify aspects of a product or process. The goals of this process (MA) include management, technical, project, product, or process implementation needs.
+A good internet resource covering various Measurements (metrics) and the goals of those measurements is <a href="http://www.sqa.net/softwarequalitymetrics.php">here</a>.</p
+<br>
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Measurement and Analysis (MA)<br />A Support Process Area at Maturity Level 2</b>
+<br>
+<br>
+<b>Purpose</b>
+<br>
+<br>
+The purpose of Measurement and Analysis (MA) is to develop and sustain a measurement capability that is used to support management information needs.
+<br>
+<br>
+<b>
+Introductory Notes
+</b>
+<br>
+<br>
+The Measurement and Analysis process area involves the following:
+<br>
+<br>
+<li>Specifying the objectives of measurement and analysis such that they are aligned with identified information needs and objectives
+</li><li>Specifying the measures, analysis techniques, and mechanism for data collection, data storage, reporting, and feedback
+</li><li>Implementing the collection, storage, analysis, and reporting of the data
+</li><li>Providing objective results that can be used in making informed decisions, and taking appropriate corrective actions
+<br>
+<br>
+The integration of measurement and analysis activities into the processes of the project supports the following:
+<br>
+<br>
+</li><li>Objective planning and estimating
+</li><li>Tracking actual performance against established plans and objectives
+</li><li>Identifying and resolving process-related issues
+</li><li>Providing a basis for incorporating measurement into additional processes in the future
+<br>
+<br>
+The staff required to implement a measurement capability may or may not be employed in a separate organization-wide program. Measurement capability may be integrated into individual projects or other organizational functions (e.g., quality assurance).
+<br>
+<br>
+The initial focus for measurement activities is at the project level. However, a measurement capability may prove useful for addressing organization- and/or enterprise-wide information needs. To support this capability, the measurement activities should support information needs at multiple levels including the business, organizational unit, and project to minimize re-work as the organization matures.
+<br>
+<br>
+Projects may choose to store project-specific data and results in a project-specific repository. When data are shared more widely across projects, the data may reside in the organization’s measurement repository.
+<br>
+<br>
+Measurement and analysis of the product components provided by suppliers is essential for effective management of the quality and costs of the project. It is possible, with careful management of supplier agreements, to provide insight into the data that support supplier-performance analysis.
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Project Planning process area for more information about estimating project attributes and other planning information needs.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about monitoring project performance information needs.
+<br>
+<br>
+Refer to the Configuration Management process area for more information about managing measurement work products.
+<br>
+<br>
+Refer to the Requirements Development process area for more information about meeting customer requirements and related information needs.
+<br>
+<br>
+Refer to the Requirements Management process area for more information about maintaining requirements traceability and related information needs.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about establishing the organization’s measurement repository.
+<br>
+<br>
+Refer to the Quantitative Project Management process area for more information about understanding variation and the appropriate use of statistical analysis techniques.
+<br>
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1 Align Measurement and Analysis Activities</b>
+<br>
+<br>
+Measurement objectives and activities are aligned with identified information needs and objectives.
+<br>
+<br>
+The specific practices covered under this specific goal may be addressed concurrently or in any order:
+</li><li>When establishing measurement objectives, experts often think ahead about necessary criteria for specifying measures and analysis procedures. They also think concurrently about the constraints imposed by data collection and storage procedures.
+</li><li>It often is important to specify the essential analyses that will be conducted before attending to details of measurement specification, data collection, or storage.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<a name="sp1.1"></a>
+<b>SP 1.1 Establish Measurement Objectives</b>
+<br>
+<br>
+Establish and maintain measurement objectives that are derived from identified information needs and objectives.
+<br>
+<br>
+Measurement objectives document the purposes for which measurement and analysis are done, and specify the kinds of actions that may be taken based on the results of data analyses.
+<br>
+<br>
+The sources for measurement objectives may be management, technical, project, product, or process implementation needs.
+<br>
+<br>
+The measurement objectives may be constrained by existing processes, available resources, or other measurement considerations. Judgments may need to be made about whether the value of the results will be commensurate with the resources devoted to doing the work.
+<br>
+<br>
+Modifications to identified information needs and objectives may, in turn, be indicated as a consequence of the process and results of measurement and analysis.
+<br>
+<br>
+Sources of information needs and objectives may include the following:
+<br>
+<br>
+</li><li>Project plans
+</li><li>Monitoring of project performance
+</li><li>Interviews with managers and others who have information needs
+</li><li>Established management objectives
+</li><li>Strategic plans
+</li><li>Business plans
+</li><li>Formal requirements or contractual obligations
+</li><li>Recurring or other troublesome management or technical problems
+</li><li>Experiences of other projects or organizational entities
+</li><li>External industry benchmarks
+</li><li>Process improvement plans
+<br>
+<br>
+Example measurement objectives include the following:
+<br>
+<br>
+</li><li>Reduce time to delivery
+</li><li>Reduce total lifecycle cost
+</li><li>Deliver specified functionality completely
+</li><li>Improve prior levels of quality
+</li><li>Improve prior customer satisfaction ratings
+</li><li>Maintain and improve the acquirer/supplier relationships
+<br>
+<br>
+Refer to the Project Planning process area for more information about estimating project attributes and other planning information needs.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about project performance information needs.
+<br>
+<br>
+Refer to the Requirements Development process area for more information about meeting customer requirements and related information needs.
+<br>
+<br>
+Refer to the Requirements Management process area for more information about maintaining requirements traceability and related information needs.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Measurement objectives
+<br>
+<br>
+Subpractice 1: Document information needs and objectives.
+<br>
+<br>
+Information needs and objectives are documented to allow traceability to subsequent measurement and analysis activities.
+<br>
+<br>
+Subpractice 2: Prioritize information needs and objectives.
+<br>
+<br>
+It may be neither possible nor desirable to subject all initially identified information needs to measurement and analysis. Priorities may also need to be set within the limits of available resources.
+<br>
+<br>
+Subpractice 3: Document, review, and update measurement objectives.
+<br>
+<br>
+It is important to carefully consider the purposes and intended uses of measurement and analysis.
+<br>
+<br>
+The measurement objectives are documented, reviewed by management and other relevant stakeholders, and updated as necessary. Doing so enables traceability to subsequent measurement and analysis activities, and helps ensure that the analyses will properly address identified information needs and objectives.
+<br>
+<br>
+It is important that users of measurement and analysis results be involved in setting measurement objectives and deciding on plans of action. It may also be appropriate to involve those who provide the measurement data.
+<br>
+<br>
+Subpractice 4: Provide feedback for refining and clarifying information needs and objectives as necessary.
+<br>
+<br>
+Identified information needs and objectives may need to be refined and clarified as a result of setting measurement objectives. Initial descriptions of information needs may be unclear or ambiguous. Conflicts may arise between existing needs and objectives. Precise targets on an already existing measure may be unrealistic.
+<br>
+<br>
+Subpractice 5: Maintain traceability of the measurement objectives to the identified information needs and objectives.
+<br>
+<br>
+There must always be a good answer to the question, “Why are we measuring this?”
+<br>
+<br>
+Of course, the measurement objectives may also change to reflect evolving information needs and objectives.
+<br>
+<br>
+<a name="sp1.2"></a> 
+<b>SP 1.2 Specify Measures</b>
+<br>
+<br>
+Specify measures to address the measurement objectives.
+<br>
+<br>
+Measurement objectives are refined into precise, quantifiable measures.
+<br>
+<br>
+Measures may be either “base” or “derived.” Data for base measures are obtained by direct measurement. Data for derived measures come from other data, typically by combining two or more base measures.
+<br>
+<br>
+Examples of commonly used base measures include the following:
+</li><li>Estimates and actual measures of work product size (e.g., number of pages)
+</li><li>Estimates and actual measures of effort and cost (e.g., number of person hours)
+</li><li>Quality measures (e.g., number of defects by severity)
+<br>
+<br>
+Examples of commonly used derived measures include the following:
+<br>
+<br>
+</li><li>Earned Value
+</li><li>Schedule Performance Index
+</li><li>Defect density
+</li><li>Peer review coverage
+</li><li>Test or verification coverage
+</li><li>Reliability measures (e.g., mean time to failure)
+</li><li>Quality measures (e.g., number of defects by severity/total number of defects)
+<br>
+<br>
+Derived measures typically are expressed as ratios, composite indices, or other aggregate summary measures. They are often more quantitatively reliable and meaningfully interpretable than the base measures used to generate them.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Specifications of base and derived measures
+<br>
+<br>
+Subpractice 1: Identify candidate measures based on documented measurement objectives.
+<br>
+<br>
+The measurement objectives are refined into specific measures. The identified candidate measures are categorized and specified by name and unit of measure.
+<br>
+<br>
+Subpractice 2: Identify existing measures that already address the measurement objectives.
+<br>
+<br>
+Specifications for measures may already exist, perhaps established for other purposes earlier or elsewhere in the organization.
+<br>
+<br>
+Subpractice 3: Specify operational definitions for the measures.
+<br>
+<br>
+Operational definitions are stated in precise and unambiguous terms. They address two important criteria as follows:
+<br>
+<br>
+</li><li>Communication: What has been measured, how was it measured, what are the units of measure, and what has been included or excluded?
+</li><li>Repeatability: Can the measurement be repeated, given the same definition, to get the same results?
+<br>
+<br>
+Subpractice 4: Prioritize, review, and update measures.
+<br>
+<br>
+Proposed specifications of the measures are reviewed for their appropriateness with potential end users and other relevant stakeholders. Priorities are set or changed, and specifications of the measures are updated as necessary.
+<br>
+<br>
+<a name="sp1.3"></a> 
+<b>SP 1.3 Specify Data Collection and Storage Procedures</b>
+<br>
+<br>
+Specify how measurement data will be obtained and stored.
+<br>
+<br>
+Explicit specification of collection methods helps ensure that the right data are collected properly. It may also aid in further clarifying information needs and measurement objectives.
+<br>
+<br>
+Proper attention to storage and retrieval procedures helps ensure that data are available and accessible for future use.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Data collection and storage procedures
+</li><li>Data collection tools
+<br>
+<br>
+Subpractice 1: Identify existing sources of data that are generated from current work products, processes, or transactions.
+<br>
+<br>
+Existing sources of data may already have been identified when specifying the measures. Appropriate collection mechanisms may exist whether or not pertinent data have already been collected.
+<br>
+<br>
+Subpractice 2: Identify measures for which data are needed, but are not currently available.
+<br>
+<br>
+Subpractice 3: Specify how to collect and store the data for each required measure.
+<br>
+<br>
+Explicit specifications are made of how, where, and when the data will be collected. Procedures for collecting valid data are specified. The data are stored in an accessible manner for analysis, and it is determined whether they will be saved for possible reanalysis or documentation purposes.
+<br>
+<br>
+Questions to be considered typically include the following:
+<br>
+<br>
+</li><li>Have the frequency of collection and the points in the process where measurements will be made been determined?
+</li><li>Has the timeline that is required to move measurement results from the points of collection to repositories, other databases, or end users been established?
+</li><li>Who is responsible for obtaining the data?
+</li><li>Who is responsible for data storage, retrieval, and security?
+</li><li>Have necessary supporting tools been developed or acquired?
+<br>
+<br>
+Subpractice 4: Create data collection mechanisms and process guidance.
+<br>
+<br>
+Data collection and storage mechanisms are well integrated with other normal work processes. Data collection mechanisms may include manual or automated forms and templates. Clear, concise guidance on correct procedures is available to those responsible for doing the work. Training is provided as necessary to clarify the processes necessary for collection of complete and accurate data and to minimize the burden on those who must provide and record the data.
+<br>
+<br>
+Subpractice 5: Support automatic collection of the data where appropriate and feasible.
+<br>
+<br>
+Automated support can aid in collecting more complete and accurate data.
+<br>
+<br>
+Examples of such automated support include the following:
+</li><li>Time stamped activity logs
+</li><li>Static or dynamic analyses of artifacts
+<br>
+<br>
+However, some data cannot be collected without human intervention (e.g., customer satisfaction or other human judgments), and setting up the necessary infrastructure for other automation may be costly.
+<br>
+<br>
+Subpractice 6: Prioritize, review, and update data collection and storage procedures.
+<br>
+<br>
+Proposed procedures are reviewed for their appropriateness and feasibility with those who are responsible for providing, collecting, and storing the data. They also may have useful insights about how to improve existing processes, or be able to suggest other useful measures or analyses.
+<br>
+<br>
+Subpractice 7: Update measures and measurement objectives as necessary.
+<br>
+<br>
+Priorities may need to be reset based on the following:
+<br>
+<br>
+</li><li>The importance of the measures
+</li><li>The amount of effort required to obtain the data
+<br>
+<br>
+Considerations include whether new forms, tools, or training would be required to obtain the data.
+<br>
+<br>
+<a name="sp1.4"></a> 
+<b>SP 1.4 Specify Analysis Procedures</b>
+<br>
+<br>
+Specify how measurement data will be analyzed and reported.
+<br>
+<br>
+Specifying the analysis procedures in advance ensures that appropriate analyses will be conducted and reported to address the documented measurement objectives (and thereby the information needs and objectives on which they are based). This approach also provides a check that the necessary data will in fact be collected.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Analysis specifications and procedures
+</li><li>Data analysis tools
+<br>
+<br>
+Subpractice 1: Specify and prioritize the analyses that will be conducted and the reports that will be prepared.
+<br>
+<br>
+Early attention should be paid to the analyses that will be conducted and to the manner in which the results will be reported. These should meet the following criteria:
+<br>
+<br>
+</li><li>The analyses explicitly address the documented measurement objectives
+</li><li>Presentation of the results is clearly understandable by the audiences to whom the results are addressed
+<br>
+<br>
+Priorities may have to be set within available resources.
+<br>
+<br>
+Subpractice 2: Select appropriate data analysis methods and tools.
+<br>
+<br>
+Refer to the Select Measures and Analytic Techniques and Apply Statistical Methods to Understand Variation specific practices of the Quantitative Project Management process area for more information about the appropriate use of statistical analysis techniques and understanding variation, respectively.
+<br>
+<br>
+Issues to be considered typically include the following:
+<br>
+<br>
+</li><li>Choice of visual display and other presentation techniques (e.g., pie charts, bar charts, histograms, radar charts, line graphs, scatter plots, or tables)
+</li><li>Choice of appropriate descriptive statistics (e.g., arithmetic mean, median, or mode)
+</li><li>Decisions about statistical sampling criteria when it is impossible or unnecessary to examine every data element
+</li><li>Decisions about how to handle analysis in the presence of missing data elements
+</li><li>Selection of appropriate analysis tools
+<br>
+<br>
+Descriptive statistics are typically used in data analysis to do the following:
+<br>
+<br>
+</li><li>Examine distributions on the specified measures (e.g., central tendency, extent of variation, or data points exhibiting unusual variation)
+</li><li>Examine the interrelationships among the specified measures (e.g., comparisons of defects by phase of the product’s lifecycle or by product component)
+</li><li>Display changes over time
+<br>
+<br>
+Subpractice 3: Specify administrative procedures for analyzing the data and communicating the results.
+<br>
+<br> 
+Issues to be considered typically include the following:
+<br>
+<br>
+</li><li>Identifying the persons and groups responsible for analyzing the data and presenting the results
+</li><li>Determining the timeline to analyze the data and present the results
+</li><li>Determining the venues for communicating the results (e.g., progress reports, transmittal memos, written reports, or staff meetings)
+<br>
+<br>
+Subpractice 4: Review and update the proposed content and format of the specified analyses and reports.
+<br>
+<br>
+All of the proposed content and format are subject to review and revision, including analytic methods and tools, administrative procedures, and priorities. The relevant stakeholders consulted should include intended end users, sponsors, data analysts, and data providers.
+<br>
+<br>
+Subpractice 5: Update measures and measurement objectives as necessary.
+<br>
+<br>
+Just as measurement needs drive data analysis, clarification of analysis criteria can affect measurement. Specifications for some measures may be refined further based on the specifications established for data analysis procedures. Other measures may prove to be unnecessary, or a need for additional measures may be recognized.
+<br>
+<br>
+The exercise of specifying how measures will be analyzed and reported may also suggest the need for refining the measurement objectives themselves.
+<br>
+<br>
+Subpractice 6: Specify criteria for evaluating the utility of the analysis results and for evaluating the conduct of the measurement and analysis activities.
+<br>
+<br>
+Criteria for evaluating the utility of the analysis might address the extent to which the following apply:
+<br>
+<br>
+</li><li>The results are (1) provided on a timely basis, (2) understandable, and (3) used for decision making.
+</li><li>The work does not cost more to perform than is justified by the benefits that it provides.
+<br>
+<br>
+Criteria for evaluating the conduct of the measurement and analysis might include the extent to which the following apply:
+<br>
+<br>
+</li><li>The amount of missing data or the number of flagged inconsistencies is beyond specified thresholds.
+</li><li>There is selection bias in sampling (e.g., only satisfied end users are surveyed to evaluate end-user satisfaction, or only unsuccessful projects are evaluated to determine overall productivity).
+</li><li>The measurement data are repeatable (e.g., statistically reliable).
+</li><li>Statistical assumptions have been satisfied (e.g., about the distribution of data or about appropriate measurement scales).
+<br>
+<br>
+<a name="sg2"></a>  
+<b>SG 2 Provide Measurement Results</b>
+<br>
+<br>
+Measurement results, which address identified information needs and objectives, are provided.
+<br>
+<br>
+The primary reason for doing measurement and analysis is to address identified information needs and objectives. Measurement results based on objective evidence can help to monitor performance, fulfill contractual obligations, make informed management and technical decisions, and enable corrective actions to be taken.
+<br>
+<br>
+<a name="sp2.1"></a> 
+<b>SP 2.1 Collect Measurement Data</b>
+<br>
+<br>
+Obtain specified measurement data.
+<br>
+<br>
+The data necessary for analysis are obtained and checked for completeness and integrity.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Results of data integrity tests
+<br>
+<br>
+Subpractice 1: Obtain the data for base measures.
+<br>
+<br>
+Data are collected as necessary for previously used as well as for newly specified base measures. Existing data are gathered from project records or from elsewhere in the organization.
+<br>
+<br>
+Note that data that were collected earlier may no longer be available for reuse in existing databases, paper records, or formal repositories.
+<br>
+<br>
+Subpractice 2: Generate the data for derived measures.
+<br>
+<br>
+Values are newly calculated for all derived measures.
+<br>
+<br>
+Subpractice 3: Perform data integrity checks as close to the source of the data as possible.
+<br>
+<br>
+All measurements are subject to error in specifying or recording data. It is always better to identify such errors and to identify sources of missing data early in the measurement and analysis cycle.
+<br>
+<br> 
+Checks can include scans for missing data, out-of-bounds data values, and unusual patterns and correlation across measures. It is particularly important to do the following:
+<br>
+<br>
+</li><li>Test and correct for inconsistency of classifications made by human judgment (i.e., to determine how frequently people make differing classification decisions based on the same information, otherwise known as “inter-coder reliability”).
+</li><li>Empirically examine the relationships among the measures that are used to calculate additional derived measures. Doing so can ensure that important distinctions are not overlooked and that the derived measures convey their intended meanings (otherwise known as “criterion validity”).
+<br>
+<br>
+<a name="sp2.2"></a> 
+<b>SP 2.2 Analyze Measurement Data</b>
+<br>
+<br>
+Analyze and interpret measurement data.
+<br>
+<br>
+The measurement data are analyzed as planned, additional analyses are conducted as necessary, results are reviewed with relevant stakeholders, and necessary revisions for future analyses are noted.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Analysis results and draft reports
+<br>
+<br>
+Subpractice 1: Conduct initial analyses, interpret the results, and draw preliminary conclusions.
+<br>
+<br>
+The results of data analyses are rarely self-evident. Criteria for interpreting the results and drawing conclusions should be stated explicitly.
+<br>
+<br>
+Subpractice 1:Conduct additional measurement and analysis as necessary, and prepare results for presentation.
+<br>
+<br>
+The results of planned analyses may suggest (or require) additional, unanticipated analyses. In addition, they may identify needs to refine existing measures, to calculate additional derived measures, or even to collect data for additional base measures to properly complete the planned analysis. Similarly, preparing the initial results for presentation may identify the need for additional, unanticipated analyses.
+<br>
+<br>
+Subpractice 1:Review the initial results with relevant stakeholders.
+<br>
+<br>
+It may be appropriate to review initial interpretations of the results and the way in which they are presented before disseminating and communicating them more widely.
+<br>
+<br>
+Reviewing the initial results before their release may prevent needless misunderstandings and lead to improvements in the data analysis and presentation.
+<br>
+<br>
+Relevant stakeholders with whom reviews may be conducted include intended end users and sponsors, as well as data analysts and data providers.
+<br>
+<br>
+Subpractice 1:Refine criteria for future analyses.
+<br>
+<br>
+Valuable lessons that can improve future efforts are often learned from conducting data analyses and preparing results. Similarly, ways to improve measurement specifications and data collection procedures may become apparent, as may ideas for refining identified information needs and objectives.
+<br>
+<br>
+<a name="sp2.3"></a>
+<b>SP 2.3 Store Data and Results</b>
+<br>
+<br>
+Manage and store measurement data, measurement specifications, and analysis results.
+<br>
+<br>
+Storing measurement-related information enables the timely and cost-effective future use of historical data and results. The information also is needed to provide sufficient context for interpretation of the data, measurement criteria, and analysis results.
+<br>
+<br>
+Information stored typically includes the following:
+<br>
+<br>
+</li><li>Measurement plans
+</li><li>Specifications of measures
+</li><li>Sets of data that have been collected
+</li><li>Analysis reports and presentations
+<br>
+<br>
+The stored information contains or references the information needed to understand and interpret the measures and to assess them for reasonableness and applicability (e.g., measurement specifications used on different projects when comparing across projects).
+<br>
+<br>
+Data sets for derived measures typically can be recalculated and need not be stored. However, it may be appropriate to store summaries based on derived measures (e.g., charts, tables of results, or report prose).
+<br>
+<br>
+Interim analysis results need not be stored separately if they can be efficiently reconstructed.
+<br>
+<br>
+Projects may choose to store project-specific data and results in a project-specific repository. When data are shared more widely across projects, the data may reside in the organization’s measurement repository.
+<br>
+<br>
+Refer to the Establish the Organization’s Measurement Repository specific practice of the Organizational Process Definition process area for more information about establishing the organization’s measurement repository.
+<br>
+<br>
+Refer to the Configuration Management process area for information about managing measurement work products.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Stored data inventory
+<br>
+<br>
+Subpractice 1:Review the data to ensure their completeness, integrity, accuracy, and currency.
+<br>
+<br>
+Subpractice 2:Store the data according to the data storage procedures.
+<br>
+<br>
+Subpractice 3:Make the stored contents available for use only by appropriate groups and personnel.
+<br>
+<br>
+Subpractice 4:Prevent the stored information from being used inappropriately.
+<br>
+<br>
+Examples of ways to prevent inappropriate use of the data and related information include controlling access to data and educating people on the appropriate use of data.
+<br>
+<br>
+Examples of inappropriate use include the following:
+<br>
+<br>
+</li><li>Disclosure of information that was provided in confidence
+</li><li>Faulty interpretations based on incomplete, out-of-context, or otherwise misleading information
+</li><li>Measures used to improperly evaluate the performance of people or to rank projects
+</li><li>Impugning the integrity of specific individuals
+<br>
+<br>
+<a name="sp2.4"></a>
+<b>SP 2.4	Communicate Results</b>
+<br>
+<br>
+Report results of measurement and analysis activities to all relevant stakeholders.
+<br>
+<br>
+The results of the measurement and analysis process are communicated to relevant stakeholders in a timely and usable fashion to support decision making and assist in taking corrective action.
+<br>
+<br>
+Relevant stakeholders include intended users, sponsors, data analysts, and data providers.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Delivered reports and related analysis results
+</li><li>Contextual information or guidance to aid in the interpretation of analysis results
+<br>
+<br>
+Subpractice 1: Keep relevant stakeholders apprised of measurement results on a timely basis.
+<br>
+<br>
+Measurement results are communicated in time to be used for their intended purposes. Reports are unlikely to be used if they are distributed with little effort to follow up with those who need to know the results.
+<br>
+<br>
+To the extent possible and as part of the normal way they do business, users of measurement results are kept personally involved in setting objectives and deciding on plans of action for measurement and analysis. The users are regularly kept apprised of progress and interim results.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about the use of measurement results.
+<br>
+<br>
+Subpractice 2: Assist relevant stakeholders in understanding the results.
+<br>
+<br>
+Results are reported in a clear and concise manner appropriate to the methodological sophistication of the relevant stakeholders. They are understandable, easily interpretable, and clearly tied to identified information needs and objectives.
+<br>
+<br>
+The data are often not self-evident to practitioners who are not measurement experts. Measurement choices should be explicitly clear about the following:
+<br>
+<br>
+</li><li>How and why the base and derived measures were specified
+</li><li>How the data were obtained
+</li><li>How to interpret the results based on the data analysis methods that were used
+</li><li>How the results address information needs
+<br>
+<br>
+Examples of actions to assist in understanding of results include the following:
+</li><li>Discussing the results with the relevant stakeholders
+</li><li>Providing a transmittal memo that provides background and explanation
+</li><li>Briefing users on the results
+</li><li>Providing training on the appropriate use and understanding of measurement results
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp1.1"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the measurement and analysis process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp2.1"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the measurement and analysis process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for aligning measurement objectives and activities with identified information needs and objectives and for providing measurement results.
+<br>
+<br>
+<a name="gp2.2"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the measurement and analysis process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the measurement and analysis process can be included in (or referenced by) the project plan, which is described in the Project Planning process area.
+<br>
+<br>
+<a name="gp2.3"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the measurement and analysis process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Measurement personnel may be employed full time or part time. A measurement group may or may not exist to support measurement activities across multiple projects.
+<br>
+<br>
+Examples of other resources provided include the following tools:
+<br>
+<br>
+</li><li>Statistical packages
+</li><li><br>
+<br>
+<a name="gp2.4"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the measurement and analysis process.
+<br>
+<br>
+<a name="gp2.5"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the measurement and analysis process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+</li><li>Statistical techniques
+</li><li>Data collection, analysis, and reporting processes
+</li><li>Development of goal-related measurements (e.g., Goal Question Metric)
+<br>
+<br>
+<a name="gp2.6"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the measurement and analysis process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Specifications of base and derived measures
+</li><li>Data collection and storage procedures
+</li><li>Base and derived measurement data sets
+</li><li>Analysis results and draft reports
+</li><li>Data analysis tools
+<br>
+<br>
+<a name="gp2.7"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the measurement and analysis process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+</li><li>Establishing measurement objectives and procedures
+</li><li>Assessing measurement data
+</li><li>Providing meaningful feedback to those responsible for providing the raw data on which the analysis and results depend
+<br>
+<br>
+<a name="gp2.8"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the measurement and analysis process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Percentage of projects using progress and performance measures
+</li><li>Percentage of measurement objectives addressed
+</li><li>Schedule for collection and review of measurement data
+<br>
+<br>
+<a name="gp2.9"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the measurement and analysis process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Aligning measurement and analysis activities
+</li><li>Providing measurement results
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Specifications of base and derived measures
+</li><li>Data collection and storage procedures
+</li><li>Analysis results and draft reports
+<br>
+<br>
+<a name="gp2.10"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the measurement and analysis process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+This generic goal's appearance here reflects its location in the continuous representation.
+<br>
+<br>
+<a name="gp3.1"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined measurement and analysis process.
+<br>
+<br>
+<a name="gp3.2"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the measurement and analysis process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+</li><li>Data currency status
+</li><li>Results of data integrity tests
+</li><li>Data analysis reports
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp4.1"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the configuration management process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp4.2"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the measurement and analysis process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp5.1"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the measurement and analysis process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp5.2"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the measurement and analysis process.
+</b>
+					<br >
+					
+			</table>
+	
+
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,36 @@
+Python 3 installed (check with python --version)
+Run pip install requests if you get an import error
+Malware scanner
+PY 
+so how do i run it?
+
+9:42 PM
+
+Orchestrated step-by-step Python execution instructions for multiple platforms.
+
+
+Step by step:
+
+Download the file (malware-scanner.py) and save it somewhere (like your Desktop)
+Open Terminal/Command Prompt:
+Windows: Press Windows key, type "cmd", press Enter
+Mac: Press Cmd+Space, type "terminal", press Enter
+Linux: Press Ctrl+Alt+T
+Navigate to where you saved the file:
+   cd Desktop
+(or wherever you saved it)
+
+Install the requests library (only need to do this once):
+   pip install requests
+Run the scanner:
+   python malware-scanner.py
+Follow the prompts:
+Enter your VirusTotal API key
+Choose option 1 (single file) or 2 (folder)
+Type the full path to the file/folder you want to scan
+Example paths:
+
+Windows: C:\Users\YourName\Downloads\suspicious-file.exe
+Mac/Linux: /Users/YourName/Downloads/suspicious-file.exe
+That's it!
+

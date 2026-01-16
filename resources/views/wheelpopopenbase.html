@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+<style type="text/css">
+
+.navbar-default {
+  background-color: #343a40 !important;
+}
+
+
+.navbar a {
+  color: white !important;
+}
+
+/*
+    .navbar-default .navbar-nav, navbar a > li > a:hover,
+    .navbar-default .navbar-nav, navbar a > li > a:focus {
+      color: grey !important;
+      text-decoration: none !important;
+    }
+
+    /*
+
+.navbar-default {
+  background-color: #343a40 !important;
+}
+
+.navbar a {
+  color: white !important;
+
+ }
+
+a:hover {
+  background-color: #808080 !important;
+  text-decoration: none !important;
+}
+/*.nav .navbar-nav li a:hover {
+     color: #808080 !important;
+ } */
+
+
+</style>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+
+<script>
+		$(document).ready(function() {
+		  $('.nav-toggle').click(function(){
+			//get collapse content selector
+			var collapse_content_selector = $(this).attr('href');
+
+			//make the collapse content to be shown or hide
+			var toggle_switch = $(this);
+			$(collapse_content_selector).toggle(function(){
+			  if($(this).css('display')=='none'){
+                                //change the button label to be 'Show'
+				toggle_switch.html('Show');
+			  }else{
+                                //change the button label to be 'Hide'
+				toggle_switch.html('Hide');
+			  }
+			});
+		  });
+
+		});
+		</script>
+		<style>
+		.round-border {
+			border: 1px solid #eee;
+			border: 1px solid rgba(0, 0, 0, 0.05);
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+			padding: 10px;
+			margin-bottom: 5px;
+		}
+		</style>
+
+
+
+
+     <style>
+.shakeimage{
+position:relative
+}
+	 </style>
+
+
+
+<script language="JavaScript1.2">
+
+/*
+Shake image script (onMouseover)-
+&copy; Dynamic Drive (www.dynamicdrive.com)
+For full source code, usage terms, and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+
+//configure shake degree (where larger # equals greater shake)
+var rector=3
+
+///////DONE EDITTING///////////
+var stopit=0
+var a=1
+
+function init(which){
+stopit=0
+shake=which
+shake.style.left=0
+shake.style.top=0
+}
+
+function rattleimage(){
+if ((!document.all&&!document.getElementById)||stopit==1)
+return
+if (a==1){
+shake.style.top=parseInt(shake.style.top)+rector+"px"
+}
+else if (a==2){
+shake.style.left=parseInt(shake.style.left)+rector+"px"
+}
+else if (a==3){
+shake.style.top=parseInt(shake.style.top)-rector+"px"
+}
+else{
+shake.style.left=parseInt(shake.style.left)-rector+"px"
+}
+if (a<4)
+a++
+else
+a=1
+setTimeout("rattleimage()",50)
+}
+
+function stoprattle(which){
+stopit=1
+which.style.left=0
+which.style.top=0
+}
+
+</script>
+
+<script>
+$('#add').click(function() {
+     $.post('your url',
+         function(data) {
+             var links = $('#links');
+             // update your links with 'remove' button, etc
+         }
+     );
+});
+
+</script>
+
+
+
+
+
+</style>
+
+<script type="text/javascript">
+var radious= 200;//Change the Radious of circle
+var speed = 10000;//Change the Speed
+var duration=20;
+var offsetX = $("#wobble").offset().left;
+var offsetY = $("#wobble").offset().top;
+function rotate(r1){
+var sine,coss,nwidth,nheight;
+for(var i=0;i<total;i++){
+	q = ((360/cnt)*i+deg)*Math.PI/180;
+	sine	= Math.sin(q);
+	coss = Math.cos(q);
+	q = (0.6+eSin*0.4);
+	nwidth	= q*dim.width;
+	nheight	= q*dim.height;
+     $('#wooble').css({
+	  top: centerY+15*sine,
+	  left		: centerX+200*eCos,
+	 opacity		: 0.8+sine*0.2,
+	 marginLeft	: -nwidth/2,
+	 zIndex		: Math.round(80+sine*20)
+ 	}).width(nwidth).height(nheight);
+
+}
+}
+rotate(radious);
+$("#wobble").hover(function() {	$(this).css({'z-index' : '10'});	$(this).find('img').addClass("hover").stop()
+		.animate({marginTop: '-110px',	marginLeft: '-140px',	top: '50%',	left: '50%',width: '160px',		height: '160px',
+			padding: '15px'
+		},100);
+	$(this).next().css({'z-index' : '30'}); $(this).next().find('img').addClass("hover").stop().animate({	marginTop: '-130px',
+			marginLeft: '-120px',
+			top: '50%',
+			left: '50%',
+			width: '120px',
+			height: '120px',
+			padding: '15px'
+		}, 200);
+  $(this).prev().css({'z-index' : '30'});
+  $(this).prev().find('img').addClass("hover").stop()
+		.animate({
+			marginTop: '-130px',
+			marginLeft: '-120px',
+			top: '50%',
+			left: '50%',
+			width: '120px',
+			height: '120px',
+			padding: '15px'
+		},100);
+
+
+  } , function() {
+	$(this).css({'z-index' : '0'});
+	$(this).find('img').removeClass("hover").stop()
+		.animate({
+			marginTop: '0',
+			marginLeft: '0',
+			top: '0',
+			left: '0',
+			width: '100px',
+			height: '100px',
+			padding: '10px'
+		}, 100);
+
+$(this).next().css({'z-index' : '0'});
+$(this).next().find('img').removeClass("hover").stop()
+	.animate({
+			marginTop: '0',
+			marginLeft: '0',
+			top: '0',
+			left: '0',
+			width: '100px',
+			height: '100px',
+			padding: '10px'
+		}, 100);
+$(this).prev().css({'z-index' : '0'});
+$(this).prev().find('img').removeClass("hover").stop()
+	.animate({
+			marginTop: '0',
+			marginLeft: '0',
+			top: '0',
+			left: '0',
+			width: '100px',
+			height: '100px',
+			padding: '5px'
+		}, 100);
+
+});
+</script>
+
+	<style type="text/css" media="screen">
+#wobble{
+    width:100px;
+    height:100px;
+    margin:0 auto;
+    top:20px;
+    position: relative;
+    color: #000080;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	font-weight: bold;
+	font-size:1em;
+}
+ul{
+	list-style-type: none;
+}
+	</style>
+
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+	<div class="container">
+
+
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+         <a class="navbar-brand" href="/"><p class="seacolor">PMWay</p></a>
+			</div>
+                <ul class="nav navbar-nav">
+                  {% if user %}
+                        <!--<li><a href="/stowage/index">Stowage</a></li>-->
+                    {% endif %}
+
+
+
+             </ul>
+
+            </div>
+        </nav>
+
+        {% for message in flash_messages %}
+            <div class="alert alert-{{ message.type }}">
+                {{ message.body }}
+            </div>
+        {% endfor %}
+
+        {% block body %}
+        {% endblock %}
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/js/wheeljs/jquery.js"></script>
+    {% block footer %}
+    {% endblock %}
+</body>
+</html>

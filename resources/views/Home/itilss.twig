@@ -1,0 +1,106 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SS{% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SS</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/sssummary.pdf') }}" >Awesome Summary of SS</a></p>
+  <hr>
+  <dl>
+    <dt><span id="ITIL_Service_Strategy_Management"><a href="/home/itilssone" title="ITIL Strategy Management" itemprop="itemListElement"><u>(Process 1 of 26): Strategy Management for IT Services</u></a></span> </dt>
+    <dd itemprop="description">Process Objective: To assess the service provider's offerings, capabilities, competitors as well as current and potential market spaces in order to develop a strategy to serve customers. Once the strategy has been defined, Strategy Management for IT Services is also responsible for ensuring the implementation of the strategy. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsstwo" title="Service Portfolio Management" itemprop="itemListElement"><u>(Process 2 of 26): Service Portfolio Management</u></a> </dt>
+    <dd itemprop="description">Process Objective: To manage the service portfolio
+      (CSI Register). <br>
+      Service Portfolio Management ensures that the service provider has the right mix of services to meet required business outcomes at an appropriate level of investment. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilssthree" title="Financial Management" itemprop="itemListElement"><u>(Process 3 of 26): Financial Management for IT Services</u></a> </dt>
+    <dd itemprop="description">Process Objective: To manage the service provider's budgeting, accounting and charging requirements. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilssfour" title="ITIL Demand Management" itemprop="itemListElement"><u>(Process 4 of 26): Demand Management</u></a> </dt>
+    <dd itemprop="description">Process Objective: To understand, anticipate and influence customer demand for services. Demand Management works with Capacity Management to ensure that the service provider has sufficient capacity to meet the required demand. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilssfive" title="Business Relationship Management" itemprop="itemListElement"><u>(Process 5 of 26): Business Relationship Management</u></a> </dt>
+    <dd itemprop="description">Process Objective: To maintain a positive relationship with customers. Business Relationship Management identifies the needs of existing and potential customers and ensures that appropriate services are developed to meet those needs. </dd>
+  </dl>
+  <p align="center">
+    <map id="ImgMap0" name="ImgMap0">
+      <area alt="" coords="56, 172, 154, 238" href="/home/itilssone" shape="rect">
+      <area alt="" coords="175, 68, 272, 136" href="/home/itilssfive" shape="rect">
+      <area coords="57, 277, 154, 344" href="/home/itilsstwo" shape="rect">
+      <area coords="168, 346, 268, 412" href="/home/itilssfour" shape="rect">
+      <area coords="298, 414, 394, 478" href="/home/itilssthree" shape="rect">
+    </map>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/Overview_service_strategy_itilv3.jpg') }}" usemap="#ImgMap0" > </p>
+  <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Sevice_Strategy"  >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SS</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/sssummary.pdf') }}" >Awesome Summary of SS</a></p>
+  <hr>
+  <dl>
+    <dt><span id="ITIL_Service_Strategy_Management"><a href="/home/itilssone" title="ITIL Strategy Management" itemprop="itemListElement"><u>(Process 1 of 26): Strategy Management for IT Services</u></a></span> </dt>
+    <dd itemprop="description">Process Objective: To assess the service provider's offerings, capabilities, competitors as well as current and potential market spaces in order to develop a strategy to serve customers. Once the strategy has been defined, Strategy Management for IT Services is also responsible for ensuring the implementation of the strategy. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsstwo" title="Service Portfolio Management" itemprop="itemListElement"><u>(Process 2 of 26): Service Portfolio Management</u></a> </dt>
+    <dd itemprop="description">Process Objective: To manage the service portfolio
+      (CSI Register). <br>
+      Service Portfolio Management ensures that the service provider has the right mix of services to meet required business outcomes at an appropriate level of investment. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilssthree" title="Financial Management" itemprop="itemListElement"><u>(Process 3 of 26): Financial Management for IT Services</u></a> </dt>
+    <dd itemprop="description">Process Objective: To manage the service provider's budgeting, accounting and charging requirements. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilssfour" title="ITIL Demand Management" itemprop="itemListElement"><u>(Process 4 of 26): Demand Management</u></a> </dt>
+    <dd itemprop="description">Process Objective: To understand, anticipate and influence customer demand for services. Demand Management works with Capacity Management to ensure that the service provider has sufficient capacity to meet the required demand. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilssfive" title="Business Relationship Management" itemprop="itemListElement"><u>(Process 5 of 26): Business Relationship Management</u></a> </dt>
+    <dd itemprop="description">Process Objective: To maintain a positive relationship with customers. Business Relationship Management identifies the needs of existing and potential customers and ensures that appropriate services are developed to meet those needs. </dd>
+  </dl>
+  <p align="center">
+    <map id="ImgMap0" name="ImgMap0">
+      <area alt="" coords="56, 172, 154, 238" href="/home/itilssone" shape="rect">
+      <area alt="" coords="175, 68, 272, 136" href="/home/itilssfive" shape="rect">
+      <area coords="57, 277, 154, 344" href="/home/itilsstwo" shape="rect">
+      <area coords="168, 346, 268, 412" href="/home/itilssfour" shape="rect">
+      <area coords="298, 414, 394, 478" href="/home/itilssthree" shape="rect">
+    </map>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/Overview_service_strategy_itilv3.jpg') }}" usemap="#ImgMap0" > </p>
+  <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Sevice_Strategy"  >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

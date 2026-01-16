@@ -1,0 +1,180 @@
+{# Capability Maturity Level Details Section #}
+<div class="collapse" id="collapsecapmatlvl">
+    <div class="container">
+        <div class="card text-center">
+            <h5 class="card-header" align="center"></h5>
+            <div class="card-body text-center">
+                <h5 align="center">
+                    Achieve Business Value through Productivity and Quality Improvements
+                    <br>off the stable base of Project Process Management
+                    <br>(<a href="/pmway/?slide=1">Traditional</a> or <a href="/home/agile">Agile</a>)
+                    <br>at Capability Maturity Model Level 2
+                    <br>(+ Software Engineering (Dev), Services and Acquisition processes above CM L2)
+                </h5>
+
+                <button class="btn btn-primary align-center clearfix" type="button"
+                        data-toggle="collapse" data-target="#collapsepractice"
+                        aria-expanded="false" aria-controls="collapsepractice">
+                    Process Focus
+                    <br><img class="img-fluid" src="{{ asset('storage/images/unlock.png') }}"
+                             title="Read the quotes from Dr Deming here to understand that a focus on processes is the only sure way to escape Capability Maturity Level 1">
+                    <br>Productivity & Quality
+                </button>
+
+                <br><br>
+
+                {# Process Focus Section #}
+                <div class="collapse" id="collapsepractice">
+                    <div class="container">
+                        <div class="card text-center">
+                            <h5 class="card-header" align="center"></h5>
+                            <div class="card-body text-center">
+                                <div class="rTable">
+                                    <div class="rTableBody">
+                                        <div class="rTableRow">
+                                            <div class="rTableCell"></div>
+                                            <div class="rTableCell">
+                                                {% if user %}
+                                                    <a href="/home/processnotoutcome" >
+                                                        <img class="img-fluid"
+                                                             title="Click here to understand the zen of why it is a good idea to focus on process than outcomes"
+                                                             src="{{ asset('storage/images/demingone.jpg') }}"
+                                                             onmouseover="this.src='{{ asset('storage/images/demingtwo.jpg') }}'"
+                                                             onmouseout="this.src='{{ asset('storage/images/demingthree.jpg') }}'">
+                                                    </a>
+                                                {% else %}
+                                                    <img class="img-fluid"
+                                                         src="{{ asset('storage/images/demingone.jpg') }}"
+                                                         onmouseover="this.src='{{ asset('storage/images/demingtwo.jpg') }}'"
+                                                         onmouseout="this.src='{{ asset('storage/images/demingthree.jpg') }}'">
+                                                {% endif %}
+                                            </div>
+                                            <div class="rTableCell">
+                                                <p>
+                                                    {% if user %}
+                                                        <i><b>Hover your mouse over the Deming image to the left</b>.</i>
+                                                    {% endif %}
+                                                </p>
+                                                <p align="{% if user %}left{% else %}center{% endif %}">
+                                                    {% if user %}
+                                                        <a href="/cmmi" >CM Level 2+,</a>
+                                                        differentiated from CM L1 per the CM table below, is all about Process Focus
+                                                        for Productivity and Quality improvements; as opposed to "just do it now" - heroics.
+                                                        Deming's philosophy is the wisdom behind much of the
+                                                        <a href="/pmway/?slide=5">Capability Maturity Model integrated from Carnegie Mellon University</a>.
+                                                    {% else %}
+                                                        It (<a href="/cmmi" >CM Level 2+</a> as differentiated from CM L1 and below)
+                                                        <br>is all about Process Focus and thereby Productivity & Quality improvements
+                                                        <br>(quality outputs from the processes)
+                                                        <br><br><i>Hover your mouse over the images
+                                                        <br>or click them to find out more about why process focus is really important for success.</i>
+                                                    {% endif %}
+                                                </p>
+                                                <p>
+                                                    <a href="{% if user %}/home/redbeads{% else %}/redbeads{% endif %}" >
+                                                        Click here for Dr. Deming's Red Bead Experiment
+                                                    </a>.
+                                                    <br>This is an essential concept to learn if you aim for higher levels of
+                                                    <a href="/gamestats" >Productivity</a> and Quality and to be agile and lean.
+                                                </p>
+                                                <h3>Remember (per Deming's Red Bead Experiment) a process can be stable, in control
+                                                    and be producing defective items 100% of the time!
+                                                </h3>
+                                            </div>
+                                            <div class="rTableCell"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {# Game Stats and CM Model #}
+                <h5>PMWay is all about ideas to improve your <a href="/home/gamestats">game stats</a></h5>
+
+                <img class="img-fluid"
+                     src="{{ asset('storage/images/cmmproject2plus.png') }}"
+                     onmouseover="this.src='{{ asset('storage/images/cmmproject2plusshadedbezelled.png') }}'"
+                     onmouseout="this.src='{{ asset('storage/images/cmmproject2plus.png') }}'"
+                     title="Register with PMWay and let me help you find your way">
+
+                <p align="left">
+                    <a href="/pin"
+                       title="Where is your game at. Drag the pin with your mouse upwards to the Capability Maturity model or click the pin to take the test">
+                        <img alt="Pin" id="pin" height="144" width="152"
+                             src="{{ asset('storage/images/pinlarge.png') }}">
+                    </a>
+                    I.e. can you pin down where your game is currently at?
+                </p>
+
+                <br>
+
+                <h5 align="center">
+                    If you think the game has changed from Traditional Project Management to Agile Project Management
+                    <br>I suggest you are wrong!
+                </h5>
+
+                <p>At 1000 feet up, looking down, all projects follow the same essential approach illustrated below</p>
+
+                <p><small>
+                    Remember that a project, stage, phase or iteration should all qualify to fall under this definition:
+                    A temporary endeavor undertaken to create a unique product, service or result. A project is temporary
+                    in that it has a defined beginning and end in time, and therefore defined scope and resources.
+                    ELSE, not monitoring controls, you are out of control!
+                </small></p>
+
+                <br>
+
+                <img class="img-fluid" alt="Mind the game with TPM and APM"
+                     src="{{ asset('storage/images/tpmapmgap.png') }}">
+
+                <img class="img-fluid" alt="Mind the game with TPM and APM"
+                     src="{{ asset('storage/images/thegamelarger.jpg') }}">
+
+                <p align="left">
+                    In Agile (Scrum project method for example) the goal is to produce working software regularly each sprint
+                    that meets the user requirement (<a href="/productincrement" ><i><u>the art of slicing sprint delivery / product increment production</u></i></a>).
+                    Requirements are accepted by the team as user stories into the current sprint.
+                    Therefore the gap in Scrum typically, is a 2 week sprint!
+                    <br><br>
+                    <b>Here are some important questions you may want to consider, if your aim is to operate with agility at Capability Maturity Level 2+:</b>
+                </p>
+
+                <ul align="left">
+                    <li>
+                        Can the team mind the gap releasing user stories as working software at the end of each sprint?
+                        <br>I.e. <a href="/home/agile?slide=12" ><u>From the Agile Manifesto's two key principles which state:</u></a>
+                        <ul>
+                            <li>"Our highest priority is to satisfy the customer through early and continuous delivery of valuable software"</li>
+                            <li>"Deliver working software frequently, from a couple of weeks to a couple of months, with a preference on the shorter timescale"</li>
+                        </ul>
+                        <br>
+                        <i>Note: As the Scrum method can be used for all types of projects (not just software projects)
+                        <a href="/home/snowbird" ><u>Per the last 10 minutes of the discussion here</u></a>
+                        it is suggested that the word "software" can easily be swopped out for the word "value"</i>
+                    </li>
+                    <li>Essentially, are the team a <a href="/images/doneandundone.jpg" >done or undone</a> Scrum team?</li>
+                    <li>If an undone Scrum team, are they dealing with more and more <a href="/images/undonescrum.jpg" >undone work</a> piling up sprint after sprint?</li>
+                    <li>What is this doing to the project's budget from an <a href="/images/tcpi.jpg" >Earned Value well managed</a> perspective?</li>
+                    <li>If the above points (and more) are not appreciated then Agile will be "Fragile" and "AINO" (Agile In Name Only) and (there is a very good probability that) the team will be operating heroically at Capability Maturity Level 1!</li>
+                </ul>
+
+                {% if user %}
+                    <p><a href="{{ asset('storage/assets/scrumsafelyfordownload.pdf') }}" >
+                        Also click here for Scrum SAFely pdf
+                    </a></p>
+                {% else %}
+                    <br>
+                    <h5 align="left">
+                        The short answer you are looking for is to look at the CMM model above and find PP and PMC at CM Level 2.
+                        These core processes and more are still required for success in Traditional Project Management and especially in Agile Project Management.
+                    </h5>
+                    <p><a href="{{ asset('storage/assets/scrumsafelyfordownload.pdf') }}" >
+                        Also click here for Scrum SAFely pdf
+                    </a></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

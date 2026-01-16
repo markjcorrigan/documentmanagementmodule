@@ -1,0 +1,1053 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>SAM</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	<table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="10%"><p class="auto-style53"><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="40%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+</div>
+<!-- #BeginEditable "content" -->
+
+
+	<div id="contentWrapper">
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong>Supplier Agreement (SAM)</strong><br />
+					<br />
+					</td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>Supplier Agreement Management (SAM) is essential in a componenet based architecture. Supplier QA, which is what SAM is all about, is set up to make sure that 
+what is delivered from outside meets the reqirements. 
+ 
+</p>
+
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b><strong>Supplier Agreement (SAM)<br />
+					</strong>A Project Management Process Area at Maturity Level 2</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Supplier Agreement Management (SAM) is to manage the acquisition of products from suppliers.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+The Supplier Agreement Management process area involves the following:
+<br>
+<br>
+<li>Determining the type of acquisition that will be used for the products to be acquired
+</li><li>Selecting suppliers
+</li><li>Establishing and maintaining agreements with suppliers
+</li><li>Executing the supplier agreement
+</li><li>Monitoring selected supplier processes
+</li><li>Evaluating selected supplier work products
+</li><li>Accepting delivery of acquired products
+</li><li>Transitioning acquired products to the project
+<br>
+<br>
+This process area primarily addresses the acquisition of products and product components that are delivered to the project’s customer. Throughout the process areas, where we use the terms product and product component, their intended meanings also encompass services and their components.
+<br>
+<br>
+Examples of products and product components that may be acquired by the project include the following:
+<br>
+<br>
+</li><li>Subsystems (e.g., navigational system on an airplane)
+</li><li>Software
+</li><li>Hardware
+</li><li>Documentation (e.g., installation, operator's, and user's manuals)
+</li><li>Parts and materials (e.g., gauges, switches, wheels, steel, and raw materials)
+<br>
+<br>
+To minimize risks to the project, this process area can also address the acquisition of significant products and product components not delivered to the project’s customer but used to develop and maintain the product or service (for example, development tools and test environments).
+<br>
+<br>
+Typically, the products to be acquired by the project are determined during the early stages of the planning and development of the product. The Technical Solution process area provides practices for determining the products and product components that may be acquired from suppliers.
+<br>
+<br>
+This process area does not directly address arrangements in which the supplier is integrated into the project team and uses the same processes and reports to the same management as the product developers (for example, integrated teams). Typically, these situations are handled by other processes or functions, possibly external to the project, though some of the specific practices of this process area may be useful in managing the formal agreement with such a supplier.
+<br>
+<br>
+Suppliers may take many forms depending on business needs, including in-house vendors (i.e., vendors that are in the same organization but are external to the project), fabrication capabilities and laboratories, and commercial vendors. (See the definition of “supplier” in the glossary.)
+<br>
+<br>
+A formal agreement is established to manage the relationship between the organization and the supplier. A formal agreement is any legal agreement between the organization (representing the project) and the supplier. This agreement may be a contract, license, service level agreement, or memorandum of agreement. The acquired product is delivered to the project from the supplier according to this formal agreement (also known as the “supplier agreement”).
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about monitoring projects and taking corrective action.
+<br>
+<br>
+Refer to the Requirements Development process area for more information about defining requirements.
+<br>
+<br>
+Refer to the Requirements Management process area for more information about managing requirements, including the traceability of requirements for products acquired from suppliers.
+<br>
+<br>
+Refer to the Technical Solution process area for more information about determining the products and product components that may be acquired from suppliers.
+<br> 
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1	Establish Supplier Agreements</b>
+<br>
+<br>
+Agreements with the suppliers are established and maintained.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<a name="sp1.1"></a>
+<b>SP 1.1 Determine Acquisition Type</b>
+<br>
+<br>
+Determine the type of acquisition for each product or product component to be acquired.
+<br>
+<br>
+Refer to the Technical Solution process area for more information about identifying the products and product components to be acquired.
+<br>
+<br>
+There are many different types of acquisition that can be used to acquire products and product components that will be used by the project.
+<br>
+<br>
+Examples of types of acquisition include the following:
+<br>
+<br>
+</li><li>Purchasing commercial off-the-shelf (COTS) products
+</li><li>Obtaining products through a contractual agreement
+</li><li>Obtaining products from an in-house vendor
+</li><li>Obtaining products from the customer
+</li><li>Combining some of the above (e.g., contracting for a modification to a COTS product or having another part of the business enterprise codevelop products with an external supplier)
+<br>
+<br>
+In the event that COTS products are desired, care in evaluating and selecting these products and the vendor may be critical to the project. Things to consider in the selection decision include proprietary issues and the availability of the products.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>List of the acquisition types that will be used for all products and product components to be acquired
+<br>
+<br>
+<a name="sp1.2"></a>
+<b>SP 1.2 Select Suppliers</b>
+<br>
+<br>
+Select suppliers based on an evaluation of their ability to meet the specified requirements and established criteria.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about formal evaluation approaches that can be used to select suppliers.
+<br>
+<br>
+Refer to the Requirements Management process area for more information about specified requirements.
+<br>
+<br>
+Criteria should be established to address factors that are important to the project.
+<br>
+<br>
+Examples of factors include the following:
+<br>
+<br>
+</li><li>Geographical location of the supplier
+</li><li>Supplier’s performance records on similar work
+</li><li>Engineering capabilities
+</li><li>Staff and facilities available to perform the work
+</li><li>Prior experience in similar applications
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Market studies
+</li><li>List of candidate suppliers
+</li><li>Preferred supplier list
+</li><li>Trade study or other record of evaluation criteria, advantages and disadvantages of candidate suppliers, and rationale for selection of suppliers
+</li><li>Solicitation materials and requirements
+<br>
+<br>
+Subpractice 1: Establish and document criteria for evaluating potential suppliers.
+<br>
+<br>
+Subpractice 2: Identify potential suppliers and distribute solicitation material and requirements to them.
+<br>
+<br>
+A proactive manner of performing this activity is to conduct market research to identify potential sources of candidate products to be acquired, including candidates from suppliers of custom-made products and vendors of COTS products.
+<br>
+<br>
+Refer to the Organizational Innovation and Deployment process area for examples of sources of process and technology improvements and how to pilot and evaluate such improvements.
+<br>
+<br>
+Subpractice 3: Evaluate proposals according to evaluation criteria.
+<br>
+<br>
+Subpractice 4: Evaluate risks associated with each proposed supplier.
+<br>
+<br>
+Refer to the Risk Management process area for more information about evaluating project risks.
+<br>
+<br>
+Subpractice 5: Evaluate proposed suppliers' ability to perform the work.
+<br>
+<br>
+Examples of methods to evaluate the proposed supplier’s ability to perform the work include the following:
+<br>
+<br>
+</li><li>Evaluation of prior experience in similar applications
+</li><li>Evaluation of prior performance on similar work
+</li><li>Evaluation of management capabilities
+</li><li>Capability evaluations
+</li><li>Evaluation of staff available to perform the work
+</li><li>Evaluation of available facilities and resources
+</li><li>Evaluation of the project’s ability to work with the proposed supplier
+</li><li>Evaluation of the impact of candidate COTS products on the project's plan and commitments
+<br>
+<br>
+When COTS products are being evaluated consider the following:
+<br>
+<br>
+</li><li>Cost of the COTS products
+</li><li>Cost and effort to incorporate the COTS products into the project
+</li><li>Security requirements
+</li><li>Benefits and impacts that may result from future product releases
+<br>
+<br>
+Future releases of the COTS product may provide additional features that support planned or anticipated enhancements for the project, but may result in the supplier discontinuing support of its current release.
+<br>
+<br>
+Subpractice 6: Select the supplier.
+<br>
+<br>
+<a name="sp1.3"></a>
+<b>SP 1.3 Establish Supplier Agreements</b>
+<br>
+<br>
+Establish and maintain formal agreements with the supplier.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+When integrated teams are formed, team membership should be negotiated with suppliers and incorporated into the agreement. The agreement should identify any integrated decision making, reporting requirements (business and technical), and trade studies requiring supplier involvement. The supplier efforts should be orchestrated to support the IPPD efforts undertaken by the acquirer.
+<br>
+<br>
+A formal agreement is any legal agreement between the organization (representing the project) and the supplier. This agreement may be a contract, license, service level agreement, or memorandum of agreement.
+<br>
+<br>
+The content of the agreement should specify the reviews, monitoring, evaluations, and acceptance tests to be performed, if such activities are appropriate to the acquisition or product being acquired.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Statements of work
+</li><li>Contracts
+</li><li>Memoranda of agreement
+</li><li>Licensing agreement
+<br>
+<br>
+Subpractice 1: Revise the requirements (e.g., product requirements and service level requirements) to be fulfilled by the supplier to reflect negotiations with the supplier when necessary.
+<br>
+<br>
+Refer to the Requirements Development process area for more information about revising requirements.
+<br>
+<br>
+Refer to the Requirements Management process area for more information about managing changes to requirements.
+<br>
+<br>
+Subpractice 2: Document what the project will provide to the supplier.
+<br>
+<br>
+Include the following:
+<br>
+<br>
+</li><li>Project-furnished facilities
+</li><li>Documentation
+</li><li>Services
+<br>
+<br>
+Subpractice 3: Document the supplier agreement.
+<br>
+<br>
+The supplier agreement should include a statement of work, a specification, terms and conditions, a list of deliverables, a schedule, a budget, and a defined acceptance process.
+<br>
+<br>
+This subpractice typically includes the following:
+<br>
+<br>
+</li><li>Establishing the statement of work, specification, terms and conditions, list of deliverables, schedule, budget, and acceptance process
+</li><li>Identifying who from the project and supplier are responsible and authorized to make changes to the supplier agreement
+</li><li>Identifying how requirements changes and changes to the supplier agreement are to be determined, communicated, and addressed
+</li><li>Identifying standards and procedures that will be followed
+</li><li>Identifying critical dependencies between the project and the supplier
+</li><li>Identifying the type and depth of project oversight of the supplier, procedures, and evaluation criteria to be used in monitoring supplier performance including selection of processes to be monitored and work products to be evaluated
+</li><li>Identifying the types of reviews that will be conducted with the supplier
+</li><li>Identifying the supplier’s responsibilities for ongoing maintenance and support of the acquired products
+</li><li>Identifying warranty, ownership, and usage rights for the acquired products
+</li><li>Identifying acceptance criteria
+<br>
+<br>
+In some cases, selection of COTS products may require a supplier agreement in addition to the agreements in the product's license.
+<br>
+<br>
+Examples of what could be covered in an agreement with a COTS supplier include the following:
+<br>
+<br>
+</li><li>Discounts for large quantity purchases
+</li><li>Coverage of relevant stakeholders under the licensing agreement, including project suppliers, team members, and the project's customer
+</li><li>Plans for future enhancements
+</li><li>On-site support, such as responses to queries and problem reports
+</li><li>Additional capabilities that are not in the product
+</li><li>Maintenance support, including support after the product is withdrawn from general availability
+<br>
+<br>
+Subpractice 4: Periodically review the supplier agreement to ensure it accurately reflects the project's relationship with the supplier and current risks and market conditions.
+<br>
+<br>
+Subpractice 5: Ensure that all parties to the agreement understand and agree to all requirements before implementing the agreement or any changes.
+<br>
+<br>
+Subpractice 6: Revise the supplier agreement as necessary to reflect changes to the supplier's processes or work products.
+<br>
+<br>
+Subpractice 7: Revise the project's plans and commitments, including changes to the project's processes or work products, as necessary to reflect the supplier agreement.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about revising the project plan.
+<br>
+<br>
+<a name="sg2"></a> 
+<b>SG 2	Satisfy Supplier Agreements</b>
+<br>
+<br>
+Agreements with the suppliers are satisfied by both the project and the supplier.
+<br>
+<br>
+<a name="sp21"></a> 
+<b>SP 2.1 Execute the Supplier Agreement</b>
+<br>
+<br>
+Perform activities with the supplier as specified in the supplier agreement.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about monitoring projects and taking corrective action.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Supplier progress reports and performance measures
+</li><li>Supplier review materials and reports
+</li><li>Action items tracked to closure
+</li><li>Documentation of product and document deliveries
+<br>
+<br>
+Subpractice 1: Monitor supplier progress and performance (schedule, effort, cost, and technical performance) as defined in the supplier agreement.
+<br>
+<br>
+Subpractice 2: Conduct reviews with the supplier as specified in the supplier agreement.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about conducting reviews.
+<br>
+<br>
+Reviews cover both formal and informal reviews and include the following steps:
+<br>
+<br>
+</li><li>Preparing for the review
+</li><li>Ensuring that relevant stakeholders participate
+</li><li>Conducting the review
+</li><li>Identifying, documenting, and tracking all action items to closure
+</li><li>Preparing and distributing to the relevant stakeholders a summary report of the review
+<br>
+<br>
+Subpractice 3: Conduct technical reviews with the supplier as defined in the supplier agreement.
+<br>
+<br>
+Technical reviews typically include the following:
+<br>
+<br>
+</li><li>Providing the supplier with visibility into the needs and desires of the project’s customers and end users, as appropriate
+</li><li>Reviewing the supplier’s technical activities and verifying that the supplier’s interpretation and implementation of the requirements are consistent with the project’s interpretation
+</li><li>Ensuring that technical commitments are being met and that technical issues are communicated and resolved in a timely manner
+</li><li>Obtaining technical information about the supplier’s products
+</li><li>Providing appropriate technical information and support to the supplier
+<br>
+<br>
+Subpractice 4: Conduct management reviews with the supplier as defined in the supplier agreement.
+<br>
+<br>
+Management reviews typically include the following:
+<br>
+<br>
+</li><li>Reviewing critical dependencies
+</li><li>Reviewing project risks involving the supplier
+</li><li>Reviewing schedule and budget
+<br>
+<br>
+Technical and management reviews may be coordinated and held jointly.
+<br>
+<br>
+Subpractice 5: Use the results of reviews to improve the supplier’s performance and to establish and nurture long-term relationships with preferred suppliers.
+<br>
+<br>
+Subpractice 6: Monitor risks involving the supplier and take corrective action as necessary.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about monitoring project risks.
+<br>
+<br>
+<a name="sp22"></a>
+<b>SP 2.2 Monitor Selected Supplier Processes</b>
+<br>
+<br>
+Select, monitor, and analyze processes used by the supplier.
+<br>
+<br>
+In situations where there must be tight alignment between some of the processes implemented by the supplier and those of the project, monitoring these processes will help prevent interface problems.
+<br>
+<br>
+The selection must consider the impact of the supplier's processes on the project. On larger projects with significant subcontracts for development of critical components, monitoring of key processes is expected. For most vendor agreements where a product is not being developed or for smaller, less critical components, the selection process may determine that monitoring is not appropriate. Between these extremes, the overall risk should be considered in selecting processes to be monitored.
+<br>
+<br>
+The processes selected for monitoring should include engineering, project management (including contracting), and support processes critical to successful project performance.
+<br>
+<br>
+Monitoring, if not performed with adequate care, can at one extreme be invasive and burdensome, or at the other extreme be uninformative and ineffective. There should be sufficient monitoring to detect issues, as early as possible, that may affect the supplier's ability to satisfy the requirements of the supplier agreement.
+<br>
+<br>
+Analyzing selected processes involves taking the data obtained from monitoring selected supplier processes and analyzing it to determine whether there are serious issues.
+<br>
+<br>
+Typical Work Products
+</li><li>List of processes selected for monitoring or rationale for non-selection
+</li><li>Activity reports
+</li><li>Performance reports
+</li><li>Performance curves
+</li><li>Discrepancy reports
+<br>
+<br>
+Subpractice 1: Identify the supplier processes that are critical to the success of the project.
+<br>
+<br>
+Subpractice 2: Monitor the selected supplier's processes for compliance with requirements of the agreement.
+<br>
+<br>
+Subpractice 3: Analyze the results of monitoring the selected processes to detect issues as early as possible that may affect the supplier's ability to satisfy the requirements of the agreement.
+<br>
+<br>
+Trend analysis can rely on internal and external data.
+<br>
+<br>
+Refer to the Verification process area for more information about recording the results of verification and analyses.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about taking corrective action.
+<br>
+<br>
+<a name="sp23"></a>
+<b>SP 2.3 Evaluate Selected Supplier Work Products</b>
+<br>
+<br>
+Select and evaluate work products from the supplier of custom-made products.
+<br>
+<br>
+The scope of this specific practice is limited to suppliers providing the project with custom-made products, particularly those that present some risk to the program due to complexity or criticality. The intent of this specific practice is to evaluate selected work products produced by the supplier to help detect issues as early as possible that may affect the supplier's ability to satisfy the requirements of the agreement. The work products selected for evaluation should include critical products, product components, and work products that provide insight into quality issues as early as possible.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>List of work products selected for monitoring or rationale for non-selection
+</li><li>Activity reports
+</li><li>Discrepancy reports
+<br>
+<br>
+Subpractice 1: Identify those work products that are critical to the success of the project and that should be evaluated to help detect issues early.
+<br>
+<br>
+Examples of work products that may be critical to the success of the project include the following:
+<br>
+<br>
+</li><li>Requirements
+</li><li>Analyses
+</li><li>Architecture
+</li><li>Documentation
+<br>
+<br>
+Subpractice 2: Evaluate the selected work products.
+<br>
+<br>
+Work products are evaluated to ensure the following:
+<br>
+<br>
+</li><li>Derived requirements are traceable to higher level requirements
+</li><li>The architecture is feasible and will satisfy future product growth and reuse needs.
+</li><li>Documentation that will be used to operate and to support the product is adequate.
+</li><li>Work products are consistent with one another.
+</li><li>Products and product components (e.g., custom-made, off-the-shelf, and customer-supplied products) can be integrated.
+<br>
+<br>
+Subpractice 3: Determine and document actions needed to address deficiencies identified in the evaluations.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about taking corrective action.
+<br>
+<br>
+<a name="sp24"></a>
+<b>SP 2.4 Accept the Acquired Product</b>
+<br>
+<br>
+Ensure that the supplier agreement is satisfied before accepting the acquired product.
+<br>
+<br>
+Acceptance reviews and tests and configuration audits should be completed before accepting the product as defined in the supplier agreement.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Acceptance test procedures
+</li><li>Acceptance test results
+</li><li>Discrepancy reports or corrective action plans
+<br>
+<br>
+Subpractice 1: Define the acceptance procedures.
+<br>
+<br>
+Subpractice 2: Review and obtain agreement with relevant stakeholders on the acceptance procedures before the acceptance review or test.
+<br>
+<br>
+Subpractice 3: Verify that the acquired products satisfy their requirements.
+<br>
+<br>
+Refer to the Verification process area for more information about verifying products.
+<br>
+<br>
+Subpractice 4: Confirm that the nontechnical commitments associated with the acquired work product are satisfied.
+<br>
+<br>
+This may include confirming that the appropriate license, warranty, ownership, usage, and support or maintenance agreements are in place and that all supporting materials are received.
+<br>
+<br>
+Subpractice 5: Document the results of the acceptance review or test.
+<br>
+<br>
+Subpractice 6: Establish and obtain supplier agreement on an action plan for any acquired work products that do not pass their acceptance review or test.
+<br>
+<br>
+Subpractice 7: Identify, document, and track action items to closure.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about tracking action items.
+<br>
+<br>
+<a name="sp25"></a>
+<b>SP 2.5 Transition Products</b>
+<br>
+<br>
+Transition the acquired products from the supplier to the project.
+<br>
+<br>
+Before the acquired product is transferred to the project for integration, appropriate planning and evaluation should occur to ensure a smooth transition.
+<br>
+<br>
+Refer to the Product Integration process area for more information about integrating the acquired products.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Transition plans
+</li><li>Training reports
+</li><li>Support and maintenance reports
+<br>
+<br>
+Subpractice 1: Ensure that there are appropriate facilities to receive, store, use, and maintain the acquired products.
+<br>
+<br>
+Subpractice 2: Ensure that appropriate training is provided for those involved in receiving, storing, using, and maintaining the acquired products.
+<br>
+<br>
+Subpractice 3: Ensure that storing, distributing, and using the acquired products are performed according to the terms and conditions specified in the supplier agreement or license.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a>
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the supplier agreement management process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the supplier agreement management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for establishing, maintaining, and satisfying supplier agreements.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the supplier agreement management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Portions of this plan for performing the supplier agreement management process can be part of (or referenced by) the project plan as described in the Project Planning process area. Often, however, some portions of the plan reside outside of the project with an independent group, such as contract management.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the supplier agreement management process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of resources provided include the following tools:
+<br>
+<br>
+</li><li>Preferred supplier lists
+</li><li>Requirements tracking programs
+</li><li>Project management and scheduling programs
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the supplier agreement management process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the supplier agreement management process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Regulations and business practices related to negotiating and working with suppliers
+</li><li>Acquisition planning and preparation
+</li><li>COTS products acquisition
+</li><li>Supplier evaluation and selection
+</li><li>Negotiation and conflict resolution
+</li><li>Supplier management
+</li><li>Testing and transitioning of acquired products
+</li><li>Receiving, storing, using, and maintaining acquired products
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the supplier agreement management process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+</li><li>Statements of work
+</li><li>Supplier agreements
+</li><li>Memoranda of agreement
+</li><li>Subcontracts
+</li><li>Preferred supplier lists
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the supplier agreement management process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Establishing criteria for evaluation of potential suppliers
+</li><li>Reviewing potential suppliers
+</li><li>Establishing supplier agreements
+</li><li>Resolving issues with suppliers
+</li><li>Reviewing supplier performance
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the supplier agreement management process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Number of changes made to the requirements for the supplier
+</li><li>Cost and schedule variance per supplier agreement
+</li><li>Number of supplier work product evaluations completed (planned versus actuals)
+</li><li>Number of supplier process evaluations completed (planned versus actuals)
+</li><li>Schedule for selecting a supplier and establishing an agreement
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the supplier agreement management process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Establishing and maintaining supplier agreements
+</li><li>Satisfying supplier agreements
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Plan for Supplier Agreement Management
+</li><li>Supplier agreements
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the supplier agreement management process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined supplier agreement management process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the supplier agreement management process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Results of supplier reviews
+</li><li>Trade studies used to select suppliers
+</li><li>Revision history of supplier agreements
+</li><li>Supplier performance reports
+</li><li>Results of supplier work product and process evaluations
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the supplier agreement management process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the supplier agreement management process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+<b>The process is institutionalized as an optimizing process.</b>
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the supplier agreement management process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the supplier agreement management process.
+
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

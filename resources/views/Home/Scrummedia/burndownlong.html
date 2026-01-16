@@ -1,0 +1,51 @@
+{% extends 'simplemedia.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}Sprint Burndown{% endif %}  {% endblock %}
+{% block body %}
+{% if current_user %}
+<!--BODY-->
+
+
+
+ <div class="container" align="left">
+
+ <br>
+ <h3>The Sprint Burndown - a little more detail.</h3>
+<hr>
+
+
+<br>
+<video id="video1" align="left" data-able-player="true" preload="auto" data-speed-icons="true" width="480" height="360" poster="/"  playsinline="true">
+
+	<source type="video/mp4" src="/ablelvids/burndownlong/burndownlong.mp4">
+
+  <!--<source type="video/webm" src="../media/wwa.webm"/>-->
+
+	<!--<track kind="captions" src="/ableaudio/media/wwa_captions_en.vtt" srclang="en" label="English captions" >-->
+
+	
+
+	
+
+</video>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+</div> 
+
+            
+  
+
+
+<!--ENDBODY-->
+{% else %}
+{% endif %}
+{% endblock %}

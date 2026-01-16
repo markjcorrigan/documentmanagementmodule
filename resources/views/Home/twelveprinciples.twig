@@ -1,0 +1,250 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}The 12 Agile Principles{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+<div class="container" align="center">
+<h3 align="left">The 12 Agile Principles: What Are They and Do They Still Matter?</h3>
+	<p align="left">Reading time 10 minutes</p>
+	<hr>
+	<p align="left">
+		In 2001, the Agile Manifesto surfaced. It wanted to change the software development process. The manifesto has four central themes, but not many people know that there are also 12 Agile Principles. These offer more concrete examples of how agile software development should take place. Many years later, almost every organization will say they “do agile” but many only provide lip service to the values and principles of the Agile Manifesto. The world of software development has also changed drastically. It’s interesting to revisit the agile principles, see what they mean, and assess whether they still matter.</p>
+
+	<h5 align="left">Early and Continuous Delivery of Valuable Software</h5>
+<p align="left">As the first principle says, “Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.”<br><br>
+
+	We usually develop software on someone else’s time and money to help them in some way. If we wait too long to deliver the product, it will probably not satisfy the customer. This is even truer now than it was in 2001. Not only is it valuable to have early feedback and to have it continuously throughout the project, customers expect fast delivery. And each delivery should add something of value for the customer. For example, the customer doesn’t care that you refactored the login page. She does care that it now allows her to log in with her Google account.</p>
+
+	<h5 align="left">Embrace Change</h5>
+<p align="left">The second principle states, “Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.”<br><br>
+
+In a world that’s constantly changing at a rapid pace, nobody can really predict what the requirements of a piece of software will be. Yet businesses don’t like surprises. But what they like even less is wasting money on a product that’s no longer relevant. If we welcome change, the software could provide the customer with a competitive advantage because it satisfies the current and latest needs, not those of last year.
+<br><br>
+	The fact that the world is constantly changing has been true for decades. Society changes, the market changes, our organizations change, and people change. Instead of trying to stop or slow down this process, we should embrace it and use it to our or our customer’s advantage.</p>
+
+	<h5 align="left">Frequent Delivery</h5>
+<p align="left">The next principle is to “Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.”<br><br>
+
+This principle actually seems like a repetition of the first one and, in a way, it is. However, the first principle points out that we should start delivering valuable software early. This principle goes a little bit more into detail about what delivering continuously means. It recommends delivering a new version of your software within a short timescale. This means smaller releases, and smaller releases mean fewer chances of bugs getting through. More frequent releases also provide more moments of feedback from the client. If you only get feedback about all your changes after several months, you’ll have much more work that can accommodate any remarks.<br><br>
+
+	This is a principle that’s become more radical over the years. We no longer regard a release cycle of “a couple of months” as agile. The industry has evolved to daily or weekly releases.</p>
+
+	<h5 align="left">Business and Developers Together</h5>
+<p align="left">Another principle states, “Business people and developers must work together daily throughout the project.”<br><br>
+
+Developers are often shielded off from business people. Analysts are put between them to “translate” the business language to a language that developers can understand. This agile principle calls upon organizations to remove these barriers and let developers and the business interact with each other daily. This increases mutual understanding and respect.<br><br>
+
+	If you’ve ever played the telephone game as a child, you know that each extra step in communication leads to lost information. Having the business and developers work closely together reduces (but doesn’t eliminate) this risk. Even in the modern world of distributed teams, we should try to work together closely on a daily basis. Catching misunderstandings early and getting regular feedback from each other helps in producing successful outcomes.</p>
+
+	<h5 align="left">Motivated Individuals</h5>
+<p align="left">There’s also “Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.”<br><br>
+
+An agile team is a team that’s mature and responsible enough to produce quality software. This requires a certain amount of trust. But if you can’t trust your developers, why were they hired? With the correct coaching, environment, and tools, motivated developers will feel enabled to do their work professionally.<br><br>
+
+	If you build your projects around people that aren’t motivated or have been demotivated due to a lack of trust or support, your project isn’t likely to succeed. Even worse, smart developers will have no trouble finding better jobs.</p>
+
+	<h5 align="left">Face-to-Face Conversation</h5>
+<p align="left">And there’s also the principle that states, “The most efficient and effective method of information to and within a development is face-to-face conversation.”<br><br>
+
+Technology has increased the number of ways in which humans can communicate. But none of these are as good as a face-to-face talk. Our brains interpret all kinds of signals, not just the sound waves of our voices. Facial expression and body language matter too. It isn’t uncommon for asynchronous communication to cause misunderstandings.<br><br>
+
+The following diagram, from Alistair Cockburn’s book “Agile Software Development,” shows us how effective different forms of communication are:</p>
+
+	<p align="center"><img alt="" src="{{ asset('storage/images/agile_principles_3.png') }}"></p>
+
+
+<p align="left">Since 2001, the way we work has changed drastically. Many organizations have people that work remotely, even in other time zones. Technologies like issue trackers and Slack create ways of communicating asynchronously and tools like Skype and Hangouts allow us to have remote face-to-face talks. It will never be 100% like real-life interaction, but maybe it’s good enough. Teams across the globe are proving that they can still be successful and agile without seeing each other in real life.</p>
+
+	<h5 align="left">Working Software</h5>
+<p align="left">One of the principles says, “Working software is the primary measure of progress.”<br><br>
+
+Software projects can take a long time. So it’s absolutely rational for businesses to measure progress. This agile principle states that the primary way of measuring progress is working software. Finished analysis, complete models, or beautiful mock-ups have little meaning if they aren’t converted into working software. They may be necessary, but if you haven’t put at least a small portion of that into a working product, then you haven’t created value for your customer.<br><br>
+
+	Today, we often go a step further. If the working software hasn’t been shipped, it’s not finished and so no progress has been made. Unreleased software is inventory. And inventory is a cost, not a piece of income or value.</p>
+
+	<h5 align="left">Technical Excellence</h5>
+<p align="left">There’s another saying, “Continuous attention to technical excellence and good design enhances agility.”<br><br>
+
+Many businesses prefer time-to-market over good technical design. And in all fairness, they can’t be blamed. We just mentioned that unreleased software is a cost. The end-user doesn’t care about technical excellence and it doesn’t create income for the business.<br><br>
+
+But if teams neglect a good technical design for too long, their speed and time-to-market will start to slow down. Their ability to change the product as a reaction to a changing market will diminish. They’re losing their agility.<br><br>
+
+This principle is still very relevant. In my experience, both managers and developers aren’t aware (enough) of this principle. In small projects, it may make sense to work fast without an eye for good design. But if the project is big enough, it pays off to pay attention to the technical quality. Martin Fowler created a pseudo-graph to visualize this:</p>
+	<p align="center"><img alt="" src="{{ asset('storage/images/agile_principles_2.png') }}"></p>
+
+
+<p align="left">This doesn’t mean we need big theoretical designs before starting to code. Good designs can emerge as the software evolves. But developers need to get the time and be responsible enough to do so.</p>
+
+	<h5 align="left">Simplicity</h5>
+<p align="left">“Simplicity—the art of maximizing the amount of work not done—is essential,” is yet another principle.<br><br>
+
+Maximizing the amount of work not done can be done in several places: you can remove procedures that are no longer relevant, automate manual work, use existing libraries instead of writing your own, etc. It all saves time and money, giving us room to focus on delivering more value.<br><br>
+
+	This is an ongoing effort for all organizations. But it requires some work to identify where and how we can improve.</p>
+
+	<h5 align="left">Self-Organizing Teams</h5>
+	<p align="left">One of the last principles is that “The best architectures, requirements, and designs emerge from self-organizing teams.”<br><br>
+
+This principle is a combination of some previous principles. If we want the business and developers to communicate with each other regularly and effectively, if we want to measure progress by working software and not theoretical models, and if we work with motivated individuals, then we should have teams producing quality software without too much control from above.<br><br>
+
+Teams should learn to self-organize all aspects of software development: they should gather requirements by communicating with the business, write quality software, organize their work, etc. This leads to better software because the developers will start to “own” the software.<br><br>
+
+Developers are still regarded as factory-line workers that can be fed requirements. But software development is work that requires much more. The team needs to be allowed to organize itself to deliver.<br><br>
+
+		The other side of the story is that agile software developers should take on this responsibility. An agile team requires developers taking on responsibilities beyond just writing code.</p>
+
+	<h5 align="left">Regular Reflection and Adjustment</h5>
+<p align="left">Finally, there’s the last principle that says, “At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.”<br><br>
+
+	At regular intervals, self-organizing teams should take the time to look at the way they work and adjust accordingly. No team runs perfectly. A mature agile team can identify issues with respect for each other and then take action to improve the process.</p>
+	<p align="center"><img alt="" src="{{ asset('storage/images/agile_principles.png') }}"></p>
+
+<p align="left">This principle will always matter. It’s what makes individuals, teams, and the business successful by not accepting the status-quo but always looking to improve the situation.</p>
+
+	<h5 align="left">Conclusion:  They All Still Matter!</h5>
+	<p align="left">You may notice that all the agile principles are still relevant today. That’s because they’re based on economic reality and human nature, two things that don’t really change that much. If anything, some principles have become more radical than they were intended to be. For example, we should deploy weekly or even daily and we can now automate more than we imagined in 2001. On the other hand, some principles have been given a different meaning than we imagined in 2001: individuals no longer need to be in the same room for effective communication for example.</p>
+							    <br>
+							    <br>
+
+<p align="left">Peter MorlionPeter Morlion<br>
+	Peter is a passionate programmer that helps people and companies improve the quality of their code, especially in legacy codebases. He firmly believes that industry best practices are invaluable when working towards this goal, and his specialties include TDD, DI, and SOLID principles. https://www.petermorlion.com/ </p>
+<br>
+<br>
+<!------------------------------------------------
+<h5 align="center">Bottom Line...</h5>
+<p align="center"> <img class="img-fluid" src="{{ asset('storage/images/wall and resources.jpg') }}"></p>
+-------------------------------------------------------------------->
+
+
+
+
+            </div>
+
+
+
+
+{% endif %}
+
+
+{% if not user %}
+<div class="container" align="center">
+<h3 align="left">The 12 Agile Principles: What Are They and Do They Still Matter?</h3>
+	<p align="left">Reading time 10 minutes</p>
+	<hr>
+	<p align="left">
+		In 2001, the Agile Manifesto surfaced. It wanted to change the software development process. The manifesto has four central themes, but not many people know that there are also 12 Agile Principles. These offer more concrete examples of how agile software development should take place. Many years later, almost every organization will say they “do agile” but many only provide lip service to the values and principles of the Agile Manifesto. The world of software development has also changed drastically. It’s interesting to revisit the agile principles, see what they mean, and assess whether they still matter.</p>
+
+	<h5 align="left">Early and Continuous Delivery of Valuable Software</h5>
+<p align="left">As the first principle says, “Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.”<br><br>
+
+	We usually develop software on someone else’s time and money to help them in some way. If we wait too long to deliver the product, it will probably not satisfy the customer. This is even truer now than it was in 2001. Not only is it valuable to have early feedback and to have it continuously throughout the project, customers expect fast delivery. And each delivery should add something of value for the customer. For example, the customer doesn’t care that you refactored the login page. She does care that it now allows her to log in with her Google account.</p>
+
+	<h5 align="left">Embrace Change</h5>
+<p align="left">The second principle states, “Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.”<br><br>
+
+In a world that’s constantly changing at a rapid pace, nobody can really predict what the requirements of a piece of software will be. Yet businesses don’t like surprises. But what they like even less is wasting money on a product that’s no longer relevant. If we welcome change, the software could provide the customer with a competitive advantage because it satisfies the current and latest needs, not those of last year.
+<br><br>
+	The fact that the world is constantly changing has been true for decades. Society changes, the market changes, our organizations change, and people change. Instead of trying to stop or slow down this process, we should embrace it and use it to our or our customer’s advantage.</p>
+
+	<h5 align="left">Frequent Delivery</h5>
+<p align="left">The next principle is to “Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.”<br><br>
+
+This principle actually seems like a repetition of the first one and, in a way, it is. However, the first principle points out that we should start delivering valuable software early. This principle goes a little bit more into detail about what delivering continuously means. It recommends delivering a new version of your software within a short timescale. This means smaller releases, and smaller releases mean fewer chances of bugs getting through. More frequent releases also provide more moments of feedback from the client. If you only get feedback about all your changes after several months, you’ll have much more work that can accommodate any remarks.<br><br>
+
+	This is a principle that’s become more radical over the years. We no longer regard a release cycle of “a couple of months” as agile. The industry has evolved to daily or weekly releases.</p>
+
+	<h5 align="left">Business and Developers Together</h5>
+<p align="left">Another principle states, “Business people and developers must work together daily throughout the project.”<br><br>
+
+Developers are often shielded off from business people. Analysts are put between them to “translate” the business language to a language that developers can understand. This agile principle calls upon organizations to remove these barriers and let developers and the business interact with each other daily. This increases mutual understanding and respect.<br><br>
+
+	If you’ve ever played the telephone game as a child, you know that each extra step in communication leads to lost information. Having the business and developers work closely together reduces (but doesn’t eliminate) this risk. Even in the modern world of distributed teams, we should try to work together closely on a daily basis. Catching misunderstandings early and getting regular feedback from each other helps in producing successful outcomes.</p>
+
+	<h5 align="left">Motivated Individuals</h5>
+<p align="left">There’s also “Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.”<br><br>
+
+An agile team is a team that’s mature and responsible enough to produce quality software. This requires a certain amount of trust. But if you can’t trust your developers, why were they hired? With the correct coaching, environment, and tools, motivated developers will feel enabled to do their work professionally.<br><br>
+
+	If you build your projects around people that aren’t motivated or have been demotivated due to a lack of trust or support, your project isn’t likely to succeed. Even worse, smart developers will have no trouble finding better jobs.</p>
+
+	<h5 align="left">Face-to-Face Conversation</h5>
+<p align="left">And there’s also the principle that states, “The most efficient and effective method of information to and within a development is face-to-face conversation.”<br><br>
+
+Technology has increased the number of ways in which humans can communicate. But none of these are as good as a face-to-face talk. Our brains interpret all kinds of signals, not just the sound waves of our voices. Facial expression and body language matter too. It isn’t uncommon for asynchronous communication to cause misunderstandings.<br><br>
+
+The following diagram, from Alistair Cockburn’s book “Agile Software Development,” shows us how effective different forms of communication are:</p>
+
+	<p align="center"><img alt="" src="{{ asset('storage/images/agile_principles_3.png') }}"></p>
+
+
+<p align="left">Since 2001, the way we work has changed drastically. Many organizations have people that work remotely, even in other time zones. Technologies like issue trackers and Slack create ways of communicating asynchronously and tools like Skype and Hangouts allow us to have remote face-to-face talks. It will never be 100% like real-life interaction, but maybe it’s good enough. Teams across the globe are proving that they can still be successful and agile without seeing each other in real life.</p>
+
+	<h5 align="left">Working Software</h5>
+<p align="left">One of the principles says, “Working software is the primary measure of progress.”<br><br>
+
+Software projects can take a long time. So it’s absolutely rational for businesses to measure progress. This agile principle states that the primary way of measuring progress is working software. Finished analysis, complete models, or beautiful mock-ups have little meaning if they aren’t converted into working software. They may be necessary, but if you haven’t put at least a small portion of that into a working product, then you haven’t created value for your customer.<br><br>
+
+	Today, we often go a step further. If the working software hasn’t been shipped, it’s not finished and so no progress has been made. Unreleased software is inventory. And inventory is a cost, not a piece of income or value.</p>
+
+	<h5 align="left">Technical Excellence</h5>
+<p align="left">There’s another saying, “Continuous attention to technical excellence and good design enhances agility.”<br><br>
+
+Many businesses prefer time-to-market over good technical design. And in all fairness, they can’t be blamed. We just mentioned that unreleased software is a cost. The end-user doesn’t care about technical excellence and it doesn’t create income for the business.<br><br>
+
+But if teams neglect a good technical design for too long, their speed and time-to-market will start to slow down. Their ability to change the product as a reaction to a changing market will diminish. They’re losing their agility.<br><br>
+
+This principle is still very relevant. In my experience, both managers and developers aren’t aware (enough) of this principle. In small projects, it may make sense to work fast without an eye for good design. But if the project is big enough, it pays off to pay attention to the technical quality. Martin Fowler created a pseudo-graph to visualize this:</p>
+	<p align="center"><img alt="" src="{{ asset('storage/images/agile_principles_2.png') }}"></p>
+
+
+<p align="left">This doesn’t mean we need big theoretical designs before starting to code. Good designs can emerge as the software evolves. But developers need to get the time and be responsible enough to do so.</p>
+
+	<h5 align="left">Simplicity</h5>
+<p align="left">“Simplicity—the art of maximizing the amount of work not done—is essential,” is yet another principle.<br><br>
+
+Maximizing the amount of work not done can be done in several places: you can remove procedures that are no longer relevant, automate manual work, use existing libraries instead of writing your own, etc. It all saves time and money, giving us room to focus on delivering more value.<br><br>
+
+	This is an ongoing effort for all organizations. But it requires some work to identify where and how we can improve.</p>
+
+	<h5 align="left">Self-Organizing Teams</h5>
+	<p align="left">One of the last principles is that “The best architectures, requirements, and designs emerge from self-organizing teams.”<br><br>
+
+This principle is a combination of some previous principles. If we want the business and developers to communicate with each other regularly and effectively, if we want to measure progress by working software and not theoretical models, and if we work with motivated individuals, then we should have teams producing quality software without too much control from above.<br><br>
+
+Teams should learn to self-organize all aspects of software development: they should gather requirements by communicating with the business, write quality software, organize their work, etc. This leads to better software because the developers will start to “own” the software.<br><br>
+
+Developers are still regarded as factory-line workers that can be fed requirements. But software development is work that requires much more. The team needs to be allowed to organize itself to deliver.<br><br>
+
+		The other side of the story is that agile software developers should take on this responsibility. An agile team requires developers taking on responsibilities beyond just writing code.</p>
+
+	<h5 align="left">Regular Reflection and Adjustment</h5>
+<p align="left">Finally, there’s the last principle that says, “At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.”<br><br>
+
+	At regular intervals, self-organizing teams should take the time to look at the way they work and adjust accordingly. No team runs perfectly. A mature agile team can identify issues with respect for each other and then take action to improve the process.</p>
+	<p align="center"><img alt="" src="{{ asset('storage/images/agile_principles.png') }}"></p>
+
+<p align="left">This principle will always matter. It’s what makes individuals, teams, and the business successful by not accepting the status-quo but always looking to improve the situation.</p>
+
+	<h5 align="left">Conclusion:  They All Still Matter!</h5>
+	<p align="left">You may notice that all the agile principles are still relevant today. That’s because they’re based on economic reality and human nature, two things that don’t really change that much. If anything, some principles have become more radical than they were intended to be. For example, we should deploy weekly or even daily and we can now automate more than we imagined in 2001. On the other hand, some principles have been given a different meaning than we imagined in 2001: individuals no longer need to be in the same room for effective communication for example.</p>
+							    <br>
+							    <br>
+
+<p align="left">Peter MorlionPeter Morlion<br>
+	Peter is a passionate programmer that helps people and companies improve the quality of their code, especially in legacy codebases. He firmly believes that industry best practices are invaluable when working towards this goal, and his specialties include TDD, DI, and SOLID principles. https://www.petermorlion.com/ </p>
+<br>
+<br>
+<!------------------------------------------------
+<h5 align="center">Bottom Line...</h5>
+<p align="center"> <img class="img-fluid" src="{{ asset('storage/images/wall and resources.jpg') }}"></p>
+-------------------------------------------------------------------->
+
+
+
+
+            </div>
+
+         {% endif %}
+
+
+{% endblock %}

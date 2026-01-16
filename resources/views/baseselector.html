@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+
+	<script type="text/javascript">
+		var radious = 200;//Change the Radious of circle
+		var speed = 10000;//Change the Speed
+		var duration = 20;
+		var offsetX = $("#wobble").offset().left;
+		var offsetY = $("#wobble").offset().top;
+		function rotate(r1) {
+			var sine, coss, nwidth, nheight;
+			for (var i = 0; i < total; i++) {
+				q = ((360 / cnt) * i + deg) * Math.PI / 180;
+				sine = Math.sin(q);
+				coss = Math.cos(q);
+				q = (0.6 + eSin * 0.4);
+				nwidth = q * dim.width;
+				nheight = q * dim.height;
+				$('#wooble').css({
+					top: centerY + 15 * sine,
+					left: centerX + 200 * eCos,
+					opacity: 0.8 + sine * 0.2,
+					marginLeft: -nwidth / 2,
+					zIndex: Math.round(80 + sine * 20)
+				}).width(nwidth).height(nheight);
+
+			}
+		}
+		rotate(radious);
+		$("#wobble").hover(function () {
+			$(this).css({ 'z-index': '10' }); $(this).find('img').addClass("hover").stop()
+				.animate({
+					marginTop: '-110px', marginLeft: '-140px', top: '50%', left: '50%', width: '160px', height: '160px',
+					padding: '15px'
+				}, 100);
+			$(this).next().css({ 'z-index': '30' }); $(this).next().find('img').addClass("hover").stop().animate({
+				marginTop: '-130px',
+				marginLeft: '-120px',
+				top: '50%',
+				left: '50%',
+				width: '120px',
+				height: '120px',
+				padding: '15px'
+			}, 200);
+			$(this).prev().css({ 'z-index': '30' });
+			$(this).prev().find('img').addClass("hover").stop()
+				.animate({
+					marginTop: '-130px',
+					marginLeft: '-120px',
+					top: '50%',
+					left: '50%',
+					width: '120px',
+					height: '120px',
+					padding: '15px'
+				}, 100);
+
+
+		}, function () {
+			$(this).css({ 'z-index': '0' });
+			$(this).find('img').removeClass("hover").stop()
+				.animate({
+					marginTop: '0',
+					marginLeft: '0',
+					top: '0',
+					left: '0',
+					width: '100px',
+					height: '100px',
+					padding: '10px'
+				}, 100);
+
+			$(this).next().css({ 'z-index': '0' });
+			$(this).next().find('img').removeClass("hover").stop()
+				.animate({
+					marginTop: '0',
+					marginLeft: '0',
+					top: '0',
+					left: '0',
+					width: '100px',
+					height: '100px',
+					padding: '10px'
+				}, 100);
+			$(this).prev().css({ 'z-index': '0' });
+			$(this).prev().find('img').removeClass("hover").stop()
+				.animate({
+					marginTop: '0',
+					marginLeft: '0',
+					top: '0',
+					left: '0',
+					width: '100px',
+					height: '100px',
+					padding: '5px'
+				}, 100);
+
+		});
+	</script>
+
+	<style type="text/css" media="screen">
+		#wobble {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			top: 20px;
+			position: relative;
+			color: #000080;
+			font-family: Arial, "MS Trebuchet", sans-serif;
+			font-weight: bold;
+			font-size: 1em;
+		}
+
+		ul {
+			list-style-type: none;
+		}
+	</style>
+
+	<title>{% block title %}{% endblock %}</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+		<a class="navbar-brand" href="/">PMWay</a>
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+
+				{% if not user %}
+
+
+
+				<li class="nav-item">
+					<a class="nav-link" href="/contact">
+						<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact
+					</a>
+					<!-- </li class="nav-item">
+								<li class="nav-item">
+									<a class="nav-link" href="/register" id="register">
+										<i class="fa fa-user" aria-hidden="true"></i>&nbsp;Register
+									</a>
+								</li class="nav-item">
+								<li class="nav-item">
+									<a class="nav-link" href="/login" id="login">
+										<i class="fa fa-unlock" aria-hidden="true"></i>&nbsp;Login
+									</a>
+								</li class="nav-item">  -->
+
+
+
+					{% endif %}
+
+					{% if user %}
+
+				<li class="nav-item">
+					<a class="nav-link" href="/home/intwomins"><i class="fa fa-info"
+							aria-hidden="true"></i>&nbsp;(in2minutes)</a>
+				</li class="nav-item">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-cogs"></i>&nbsp;PMWays
+					</a>
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+						<a class="dropdown-item" href="sitemap.php">&nbsp;PMBOK Dashboard</a>
+						<a class="dropdown-item" href="/home/pmbokdashnutshell">&nbsp;PMBOK (Dashboard with 'Teaching
+							Overlay / How To')</a>
+						<a class="dropdown-item" href="default.php" onclick="return confirm_alert(this);"></a>
+						<!-- <li class="nav-item">
+					<a class="nav-link" href="/profile/show">
+						<i class="fa fa-user" aria-hidden="true"></i>&nbsp;Profile
+					</a>
+				</li class="nav-item">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarNav" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-lock"></i>&nbsp;Logout
+
+					</a>
+					<div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+						<a class="dropdown-item" href="/logout">
+							<i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Logout
+						</a>
+						<a class="dropdown-item" href="/logoutb">
+							<i class="fa fa-unlock" aria-hidden="true"></i>&nbsp;Clicked
+							<br>Remember Me?
+						</a> -->
+				<li class="nav-item">
+					<a class="nav-link" href="/contact">
+						<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact
+					</a>
+				</li class="nav-item">
+				<!--<li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Log out</a></li class="nav-item">-->
+
+
+				{% endif %}
+
+		</div>
+	</nav>
+
+
+
+
+
+	{% for message in flash_messages %}
+
+	<div style="text-align:center" class="alert alert-{{ message.type }}">
+		{{ message.body }}
+	</div>
+	{% endfor %}
+
+	{% block body %}
+
+	<div class="container" style="text-align:center">
+
+
+
+
+
+
+		{% endblock %}
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+	<script src="https://use.fontawesome.com/2f08d8400c.js"></script>
+	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<table style="width: 100%">
+						<tr>
+							<td>
+								<h5 class="modal-title text-sm-left" id="contactModalTitle">
+									<a href="#">Login</a>
+								</h5>
+							</td>
+							<!--<td><h5 class="modal-title text-sm-right align-bottom"><a href="/register" role="button"><small>Register</small></a></h5></td><td><button class="close" data-dismiss="modal"><span>&times;</span></button></td>-->
+						</tr>
+					</table>
+				</div>
+				<div class="modal-body">
+					<form action="/login/create" method="post" role="form" style="display: block; ">
+						<div class="form-group">
+							<input type="text" name="email" id="email" tabindex="1"
+								class="form-control bg-light border border-primary rounded" placeholder="Email"
+								autofocus required>
+						</div>
+						<div class="form-group">
+							<p style="text-align:left">
+								<font color="navy">
+									<input type="password" name="password" id="login-password" tabindex="2"
+										class="form-control bg-light border border-primary rounded"
+										placeholder="Password" required>
+								</font>
+							</p>
+						</div>
+						<div class="form-group text-center">
+							<p style="text-align:left">
+								<font color="navy">
+									<label>
+										<input type="checkbox" name="remember_me" id="remember">
+										<label for="remember"> Remember Me</label>
+								</font>
+							</p>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm-6 col-sm-offset-3">
+									<p style="text-align:left">
+										<font color="navy">
+											<input type="submit" name="login-submit" id="login-submit" tabindex="4"
+												class="form-control text-white btn btn-login bg-primary border border-primary rounded"
+												value="Log In">
+										</font>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="text-center">
+										<p style="text-align:left">
+											<font color="navy">
+												<a href="/password/forgot" tabindex="5" class="forgot-password">Forgot
+													Password?</a>
+											</font>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<p style="text-align:left">
+						<font color="navy">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+						</font>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="contactModalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<table style="width: 100%">
+						<tr>
+							<td>
+								<h5 class="modal-title text-sm-left" id="contactModalTitle">
+									<a href="#">Register</a>
+								</h5>
+							</td>
+							<!--<td><h5 class="modal-title text-sm-right align-bottom"><a href="/login" role="button"><small>Login</small></a></h5></td><td><button class="close" data-dismiss="modal"><span>&times;</span></button></td>-->
+						</tr>
+					</table>
+				</div>
+				<div class="modal-body">
+					<form method="post" action="/signup/create" id="formSignup">
+						<div class="form-group">
+							<p style="text-align:left">
+								<label for="inputName">
+									<font color="navy">Name</font>
+								</label>
+								<input id="inputName" name="name" placeholder="Name" autofocus value="{{ user.name }}"
+									required class="form-control" />
+							</p>
+						</div>
+						<div class="form-group">
+							<p style="text-align:left">
+								<font color="navy">
+									<label for="inputEmail">Email address</label>
+									<input id="inputEmail" name="email" placeholder="email address"
+										value="{{ user.email }}" required type="email" class="form-control" />
+								</font>
+							</p>
+						</div>
+						<div class="form-group">
+							<label for="inputPassword">Password</label>
+							<p style="text-align:left">
+								<font color="navy">
+									<input type="password" id="inputPassword" name="password" placeholder="Password"
+										required class="form-control" />
+								</font>
+							</p>
+						</div>
+						<p style="text-align:left">
+							<font color="navy">
+								<button type="submit" class="btn btn-primary">Sign up</button>
+							</font>
+						</p>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<p style="text-align:left">
+						<font color="navy">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+						</font>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$("a#login").on("click", function (e) {
+			e.preventDefault();
+			$('#contactModal').modal('show');
+		});
+	</script>
+	<script>
+		$("a#register").on("click", function (e) {
+			e.preventDefault();
+			$('#contactModalRegister').modal('show');
+		});
+	</script>
+
+
+	{% block footer %}
+
+
+
+
+	{% endblock %}
+
+</body>
+
+</html>

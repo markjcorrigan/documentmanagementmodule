@@ -1,0 +1,1540 @@
+<?php
+
+
+
+/**
+
+ * ========================================
+
+ * SYSTEM SETUP COMMAND
+
+ * ========================================
+
+ * Run this command to set up the entire system:
+
+ *
+
+ * php artisan system:setup-confidential
+
+ *
+
+ * Options:
+
+ * --skip-protected         Skip old protected storage sync (ProtectedFile model)
+
+ * --skip-guitar            Skip guitar scores sync
+
+ * --skip-protected-storage Skip new protected storage sync (protected_files table)
+
+ *
+
+ * ========================================
+
+ */
+
+
+
+namespace App\Console\Commands;
+
+
+
+use App\Models\Document;
+
+use App\Models\Image;
+
+use App\Models\ProtectedFile;
+
+use App\Models\GuitarScore;
+
+use App\Models\User;
+
+use Illuminate\Console\Command;
+
+use Illuminate\Support\Facades\Artisan;
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File as FileFacade;
+
+use Illuminate\Support\Facades\Storage;
+
+
+
+class SetupSystemConfidential extends Command
+{
+    protected $signature = 'system:setup-confidential {--skip-protected : Skip protected storage sync} {--skip-guitar : Skip guitar scores sync} {--skip-protected-storage : Skip new protected storage files sync}';
+
+    protected $description = 'Complete system setup with migrations, user creation, and data rebuild (non-interactive)';
+
+
+    // ===================================
+
+    // 🔐 HARD-CODED CREDENTIALS
+
+    // ===================================
+
+    private const ADMIN_NAME = 'markjc';
+
+
+    private const ADMIN_EMAIL = 'markjc@mweb.co.za';
+
+
+    private const ADMIN_PASSWORD = 'Qwerpoiu13971@';
+
+
+    private const IS_SUPER_ADMIN = true;
+
+
+    private const ADMIN_AVATAR = 'blogpostnewavatar_marksavatar.jpg';  // Avatar filename in storage/app/public/avatars/
+
+
+    public function handle()
+
+    {
+
+        $this->info('╔══════════════════════════════════════════════════╗');
+
+        $this->info('║     SYSTEM SETUP & INITIALIZATION (AUTOMATED)    ║');
+
+        $this->info('╚══════════════════════════════════════════════════╝');
+
+        $this->newLine();
+
+
+        // ===================================
+
+        // ❓ ASK REBUILD PREFERENCES UPFRONT
+
+        // ===================================
+
+        $this->info('------------------------------');
+
+        $this->info('❓ Setup Configuration');
+
+        $this->info('------------------------------');
+
+        $this->newLine();
+
+
+        $this->warn('⚠️  Note: Fresh database will drop ALL tables and rebuild everything from scratch.');
+
+        $this->warn('   If you want to preserve existing data, choose "no" for fresh setup.');
+
+        $this->newLine();
+
+
+        // AUTO-CONFIGURATION: FULL REBUILD
+        $freshSetup = true;
+        $rebuildDocs = true;
+        $rebuildImages = true;
+        $rebuildProtected = !$this->option('skip-protected');
+        $rebuildGuitarScores = !$this->option('skip-guitar');
+        $rebuildProtectedStorage = !$this->option('skip-protected-storage');
+
+        $this->info('✅ AUTO-REBUILD MODE: Everything will be rebuilt');
+        $this->newLine();
+
+
+        $this->newLine();
+
+
+        // ===================================
+
+        // 🔑 GENERATE APPLICATION KEY (FIRST)
+
+        // ===================================
+
+        $this->info('------------------------------');
+
+        $this->info('🔑 Generating application key...');
+
+        $this->info('------------------------------');
+
+        $this->newLine();
+
+
+        $exitCode = $this->call('key:generate', ['--force' => true]);
+
+
+        if ($exitCode === 0) {
+
+            $this->info('✅ Application key generated successfully.');
+
+        } else {
+
+            $this->error('❌ Failed to generate application key!');
+
+            return Command::FAILURE;
+
+        }
+
+
+        $this->newLine();
+
+
+        // ===================================
+
+        // 🔄 MIGRATE (FRESH OR NORMAL)
+
+        // ===================================
+
+        $this->info('------------------------------');
+
+        if ($freshSetup) {
+
+            $this->info('🔄 Running migrate:fresh...');
+
+        } else {
+
+            $this->info('🔄 Running migrations...');
+
+        }
+
+        $this->info('------------------------------');
+
+        $this->newLine();
+
+
+        if ($freshSetup) {
+
+            // Run migrate:fresh
+
+            $this->call('migrate:fresh', [
+
+                '--force' => true,
+
+                '--no-interaction' => true
+
+            ]);
+
+        } else {
+
+            // Run normal migration
+
+            $this->call('migrate', [
+
+                '--force' => true,
+
+                '--no-interaction' => true
+
+            ]);
+
+        }
+
+
+        $this->newLine();
+
+        $this->info('✅ Database migrations completed.');
+
+        $this->newLine();
+
+
+        // ===================================
+
+        // 👤 CREATE USERS (MUST BE BEFORE SEEDERS)
+
+        // ===================================
+
+        $this->info('------------------------------');
+
+        $this->info('👤 Creating users...');
+
+        $this->info('------------------------------');
+
+        $this->newLine();
+
+
+        $this->createUser();
+
+
+        $this->newLine();
+
+        $this->info('✅ Users created successfully.');
+
+        $this->newLine();
+
+
+        // ===================================
+
+        // 📊 ENSURING VISITOR_LOGS TABLE
+
+        // ===================================
+
+        if ($freshSetup) {
+
+            $this->info('------------------------------');
+
+            $this->info('📊 Ensuring visitor_logs table...');
+
+            $this->info('------------------------------');
+
+            $this->newLine();
+
+
+            if (!\Illuminate\Support\Facades\Schema::hasTable('visitor_logs')) {
+
+                $this->warn('⚠️  visitor_logs table missing after migrate:fresh');
+
+
+                try {
+
+                    $this->call('migrate', [
+
+                        '--path' => 'database/migrations/2025_12_09_204103_create_visitor_logs_table.php',
+
+                        '--force' => true,
+
+                        '--no-interaction' => true
+
+                    ]);
+
+                    $this->info('✅ Visitor logs table migrated.');
+
+                } catch (\Exception $e) {
+
+                    $this->error('❌ Failed to create visitor_logs table: ' . $e->getMessage());
+
+                    $this->info('Creating table directly as fallback...');
+
+
+                    \Illuminate\Support\Facades\Schema::create('visitor_logs', function ($table) {
+
+                        $table->id();
+
+                        $table->string('user_id')->nullable();
+
+                        $table->string('username')->nullable();
+
+                        $table->string('ip_address')->nullable();
+
+                        $table->text('user_agent')->nullable();
+
+                        $table->text('url')->nullable();
+
+                        $table->string('method')->nullable();
+
+                        $table->timestamp('visited_at')->nullable();
+
+                        $table->timestamps();
+
+                    });
+
+
+                    $this->info('✅ Visitor logs table created manually.');
+
+                }
+
+            } else {
+
+                $this->info('✅ Visitor logs table exists.');
+
+            }
+
+
+            $this->newLine();
+
+        }
+
+
+        // ===================================
+
+        // 🌱 RUN SEEDERS
+
+        // ===================================
+
+        $this->info('------------------------------');
+
+        $this->info('🌱 Running database seeders...');
+
+        $this->info('------------------------------');
+
+        $this->newLine();
+
+
+        // Try to seed the database (some seeders might not exist)
+
+        $this->info('📝 Attempting to run seeders...');
+
+
+        // Run available seeders
+
+        $this->safeSeeder('CategorySeeder', 'Categories');
+
+        $this->safeSeeder('BlogPostSeeder', 'Blog Posts');
+
+        $this->safeSeeder('BlogPostImageSeeder', 'Blog Post Images');
+
+        $this->safeSeeder('CommentSeeder', 'Comments');
+
+
+        $this->newLine();
+
+        $this->info('✅ Seeders completed.');
+
+        $this->newLine();
+
+
+        // ===================================
+
+        // 📄 REBUILD DOCUMENTS
+
+        // ===================================
+
+        if ($rebuildDocs) {
+
+            $this->info('------------------------------');
+
+            $this->info('📄 Rebuilding documents...');
+
+            $this->info('------------------------------');
+
+            $this->newLine();
+
+
+            $docStats = $this->rebuildDocuments();
+
+
+            $this->info("✅ Documents rebuilt successfully:");
+
+            $this->info("   Total: {$docStats['total']}");
+
+            $this->newLine();
+
+        }
+
+
+        // ===================================
+
+        // 🖼️ REBUILD IMAGES
+
+        // ===================================
+
+        if ($rebuildImages) {
+
+            $this->info('------------------------------');
+
+            $this->info('🖼️  Rebuilding images...');
+
+            $this->info('------------------------------');
+
+            $this->newLine();
+
+
+            $imageStats = $this->rebuildImages();
+
+
+            $this->info("✅ Images rebuilt successfully:");
+
+            $this->info("   Total: {$imageStats['total']}");
+
+            $this->newLine();
+
+        }
+
+
+        // ===================================
+
+        // 🔒 REBUILD PROTECTED FILES (OLD SYSTEM)
+
+        // ===================================
+
+        if ($rebuildProtected) {
+
+            $this->info('------------------------------');
+
+            $this->info('🔒 Rebuilding protected files (old system)...');
+
+            $this->info('------------------------------');
+
+            $this->newLine();
+
+
+            $protectedStats = $this->rebuildProtectedFiles();
+
+
+            $this->info("✅ Protected files rebuilt successfully:");
+
+            $this->info("   Files: {$protectedStats['files']}");
+
+            $this->info("   Folders: {$protectedStats['folders']}");
+
+            $this->info("   Total: {$protectedStats['total']}");
+
+            $this->newLine();
+
+        }
+
+
+        // ===================================
+
+        // 🎸 SYNC GUITAR SCORES
+
+        // ===================================
+
+        if ($rebuildGuitarScores) {
+
+            $this->info('------------------------------');
+
+            $this->info('🎸 Syncing guitar scores...');
+
+            $this->info('------------------------------');
+
+            $this->newLine();
+
+
+            $guitarStats = $this->syncGuitarScores();
+
+
+            $this->info("✅ Guitar scores synced successfully:");
+
+            $this->info("   Files: {$guitarStats['files']}");
+
+            $this->info("   Folders: {$guitarStats['folders']}");
+
+            $this->info("   Total: {$guitarStats['total']}");
+
+            $this->newLine();
+
+        }
+
+
+        // ===================================
+
+        // 📁 SYNC PROTECTED STORAGE FILES (NEW SYSTEM)
+
+        // ===================================
+
+        if ($rebuildProtectedStorage) {
+
+            $this->info('------------------------------');
+
+            $this->info('📁 Syncing protected storage files (new system)...');
+
+            $this->info('------------------------------');
+
+            $this->newLine();
+
+
+            $protectedStorageStats = $this->syncProtectedStorageFiles();
+
+
+            $this->info("✅ Protected storage files synced successfully:");
+
+            $this->info("   Files: {$protectedStorageStats['files']}");
+
+            $this->info("   Folders: {$protectedStorageStats['folders']}");
+
+            $this->info("   Total: {$protectedStorageStats['total']}");
+
+            $this->newLine();
+
+        }
+
+
+        // ===================================
+
+        // ✅ FINAL SUMMARY
+
+        // ===================================
+
+        $this->info('╔══════════════════════════════════════════════════╗');
+
+        $this->info('║           🎉 SETUP COMPLETE! 🎉                   ║');
+
+        $this->info('╚══════════════════════════════════════════════════╝');
+
+        $this->newLine();
+
+
+        $this->info('📊 System Status:');
+
+        $this->info('   ✅ Database migrated');
+
+        $this->info('   ✅ Users created');
+
+
+        if ($rebuildDocs) {
+
+            $this->info("   ✅ Documents: {$docStats['total']}");
+
+        }
+
+
+        if ($rebuildImages) {
+
+            $this->info("   ✅ Images: {$imageStats['total']}");
+
+        }
+
+
+        if ($rebuildProtected) {
+
+            $this->info("   ✅ Protected Files (old): {$protectedStats['total']}");
+
+        }
+
+
+        if ($rebuildGuitarScores) {
+
+            $this->info("   ✅ Guitar Scores: {$guitarStats['total']}");
+
+        }
+
+
+        if ($rebuildProtectedStorage) {
+
+            $this->info("   ✅ Protected Storage Files (new): {$protectedStorageStats['total']}");
+
+        }
+
+
+        $this->newLine();
+
+        $this->info('🚀 Your system is ready to use!');
+
+        $this->newLine();
+
+
+        return Command::SUCCESS;
+
+    }
+
+
+    /**
+
+     * Rebuild all documents from storage
+
+     */
+
+    private function rebuildDocuments()
+
+    {
+
+        try {
+
+            // Clear existing documents
+
+            Document::truncate();
+
+
+            $disk = Storage::disk('local');
+
+            $files = $disk->allFiles('documents');
+
+
+            $stats = [
+
+                'total' => 0,
+
+            ];
+
+
+            foreach ($files as $file) {
+
+                $filename = basename($file);
+
+                $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+
+                // Skip hidden files and non-document files
+
+                if (str_starts_with($filename, '.') || !in_array($extension, ['pdf', 'doc', 'docx', 'txt'])) {
+
+                    continue;
+
+                }
+
+
+                Document::create([
+
+                    'title' => pathinfo($filename, PATHINFO_FILENAME),
+
+                    'filename' => $filename,
+
+                    'file_path' => $file,
+
+                    'mime_type' => $disk->mimeType($file),
+
+                    'file_size' => $disk->size($file),
+
+                ]);
+
+
+                $stats['total']++;
+
+            }
+
+
+            return $stats;
+
+
+        } catch (\Exception $e) {
+
+            $this->error('❌ Failed to rebuild documents: ' . $e->getMessage());
+
+            return ['total' => 0];
+
+        }
+
+    }
+
+
+    /**
+
+     * Rebuild all images from storage
+
+     */
+
+    private function rebuildImages()
+
+    {
+
+        try {
+
+            // Clear existing images
+
+            Image::truncate();
+
+
+            $disk = Storage::disk('public');
+
+            $files = $disk->allFiles('images');
+
+
+            $stats = [
+
+                'total' => 0,
+
+            ];
+
+
+            foreach ($files as $file) {
+
+                $filename = basename($file);
+
+                $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+
+                // Skip hidden files and non-image files
+
+                if (str_starts_with($filename, '.') || !in_array($extension, ['jpg', 'jpeg', 'png', 'gif', 'webp'])) {
+
+                    continue;
+
+                }
+
+
+                Image::create([
+
+                    'title' => pathinfo($filename, PATHINFO_FILENAME),
+
+                    'filename' => $filename,
+
+                    'path' => $file,
+
+                    'disk' => 'public',
+
+                ]);
+
+
+                $stats['total']++;
+
+            }
+
+
+            return $stats;
+
+
+        } catch (\Exception $e) {
+
+            $this->error('❌ Failed to rebuild images: ' . $e->getMessage());
+
+            return ['total' => 0];
+
+        }
+
+    }
+
+
+    /**
+
+     * Rebuild protected files (old ProtectedFile model system)
+
+     */
+
+    private function rebuildProtectedFiles()
+
+    {
+
+        try {
+
+            // Clear existing records
+
+            ProtectedFile::truncate();
+
+
+            $disk = Storage::disk('protected');
+
+            $files = $disk->allFiles();
+
+            $directories = $disk->allDirectories();
+
+
+            $stats = [
+
+                'files' => 0,
+
+                'folders' => 0,
+
+                'total' => 0,
+
+            ];
+
+
+            // Create folder records
+
+            foreach ($directories as $directory) {
+
+                $name = basename($directory);
+
+                $parentPath = dirname($directory) !== '.' ? dirname($directory) : null;
+
+
+                // Determine resource (top-level folder)
+
+                $pathParts = explode('/', $directory);
+
+                $resource = $pathParts[0] ?? null;
+
+
+                ProtectedFile::create([
+
+                    'name' => $name,
+
+                    'path' => $directory,
+
+                    'parent_path' => $parentPath,
+
+                    'type' => 'folder',
+
+                    'resource' => $resource,
+
+                    'file_modified_at' => now(),
+
+                ]);
+
+
+                $stats['folders']++;
+
+                $stats['total']++;
+
+            }
+
+
+            // Create file records
+
+            foreach ($files as $file) {
+
+                $filename = basename($file);
+
+                $parentPath = dirname($file) !== '.' ? dirname($file) : null;
+
+                $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+
+                // Determine resource (top-level folder)
+
+                $pathParts = explode('/', $file);
+
+                $resource = $pathParts[0] ?? null;
+
+
+                ProtectedFile::create([
+
+                    'name' => $filename,
+
+                    'path' => $file,
+
+                    'parent_path' => $parentPath,
+
+                    'type' => 'file',
+
+                    'extension' => $extension,
+
+                    'mime_type' => $disk->mimeType($file),
+
+                    'size' => $disk->size($file),
+
+                    'resource' => $resource,
+
+                    'file_modified_at' => \Carbon\Carbon::createFromTimestamp($disk->lastModified($file)),
+
+                ]);
+
+
+                $stats['files']++;
+
+                $stats['total']++;
+
+            }
+
+
+            return $stats;
+
+
+        } catch (\Exception $e) {
+
+            $this->error('❌ Failed to rebuild protected files: ' . $e->getMessage());
+
+            return [
+
+                'files' => 0,
+
+                'folders' => 0,
+
+                'total' => 0,
+
+            ];
+
+        }
+
+    }
+
+
+    /**
+
+     * Create admin user
+
+     */
+
+    private function createUser()
+
+    {
+
+        try {
+
+            // Check if user already exists
+
+            $existingUser = User::where('email', self::ADMIN_EMAIL)->first();
+
+
+            if ($existingUser) {
+
+                $this->warn("⚠️  User already exists: " . self::ADMIN_EMAIL);
+
+                $this->info("   Updating user details...");
+
+
+                $existingUser->update([
+
+                    'name' => self::ADMIN_NAME,
+
+                    'password' => bcrypt(self::ADMIN_PASSWORD),
+
+                    'is_super_admin' => self::IS_SUPER_ADMIN,
+
+                    'avatar' => self::ADMIN_AVATAR,
+
+                ]);
+
+
+                $this->info("✅ User updated: " . self::ADMIN_EMAIL);
+
+            } else {
+
+                // Create new user
+
+                User::create([
+
+                    'name' => self::ADMIN_NAME,
+
+                    'email' => self::ADMIN_EMAIL,
+
+                    'password' => bcrypt(self::ADMIN_PASSWORD),
+
+                    'is_super_admin' => self::IS_SUPER_ADMIN,
+
+                    'avatar' => self::ADMIN_AVATAR,
+
+                ]);
+
+
+                $this->info("✅ User created: " . self::ADMIN_EMAIL);
+
+            }
+
+
+            $this->info("   Name: " . self::ADMIN_NAME);
+
+            $this->info("   Email: " . self::ADMIN_EMAIL);
+
+            $this->info("   Super Admin: " . (self::IS_SUPER_ADMIN ? 'Yes' : 'No'));
+
+            $this->info("   Avatar: " . self::ADMIN_AVATAR);
+
+
+
+        } catch (\Exception $e) {
+
+            $this->error('❌ Failed to create users: ' . $e->getMessage());
+
+            $this->error('Stack trace: ' . $e->getTraceAsString());
+
+        }
+
+    }
+
+
+    /**
+     * Safely run a seeder - skip if it doesn't exist
+     */
+
+    private function safeSeeder($seederClass, $description = null)
+
+    {
+
+        $description = $description ?? $seederClass;
+
+
+        try {
+
+            // Check if the seeder class exists
+
+            $fullClassName = "Database\\Seeders\\{$seederClass}";
+
+            if (!class_exists($fullClassName)) {
+
+                $this->warn("⚠️  Seeder not found: {$seederClass} - skipping");
+
+                return false;
+
+            }
+
+
+            $this->call('db:seed', ['--class' => $seederClass, '--force' => true]);
+
+            return true;
+
+        } catch (\Exception $e) {
+
+            $this->error("❌ Failed to run {$seederClass}: " . $e->getMessage());
+
+            $this->warn("Continuing with next seeder...");
+
+            return false;
+
+        }
+    }
+
+
+    /**
+     * Sync Guitar Scores Storage
+     */
+    private function syncGuitarScores()
+    {
+        try {
+            $this->info('🔍 Starting guitar scores sync...');
+
+            // Check if guitar scores directory exists
+            $guitarPath = storage_path('app/protectedGuitar');
+            $this->info("📍 Checking path: {$guitarPath}");
+
+            if (!is_dir($guitarPath)) {
+                $this->warn('⚠️  Guitar scores directory does not exist. Creating it...');
+                FileFacade::makeDirectory($guitarPath, 0755, true);
+                $this->info("✅ Created directory: {$guitarPath}");
+
+                return [
+                    'files' => 0,
+                    'folders' => 0,
+                    'total' => 0,
+                ];
+            }
+
+            $this->info("✅ Directory exists: {$guitarPath}");
+
+            // Clear existing records for fresh sync
+            $existingCount = GuitarScore::count();
+            if ($existingCount > 0) {
+                GuitarScore::truncate();
+                $this->info("🗑️  Cleared {$existingCount} existing guitar score records.");
+            }
+
+            // Check if 'protectedGuitar' disk is configured
+            try {
+                $disk = Storage::disk('protectedGuitar');
+                $this->info('✅ ProtectedGuitar disk configured');
+            } catch (\Exception $e) {
+                $this->error('❌ ProtectedGuitar disk not configured: ' . $e->getMessage());
+                return [
+                    'files' => 0,
+                    'folders' => 0,
+                    'total' => 0,
+                ];
+            }
+
+            // Get all files and directories recursively
+            $this->info('🔎 Scanning for files and directories...');
+
+            $allFiles = $disk->allFiles();
+            $allDirectories = $disk->allDirectories();
+
+            $this->info("📊 Guitar scores scan results:");
+            $this->info("   Files found: " . count($allFiles));
+            $this->info("   Directories found: " . count($allDirectories));
+
+            if (count($allFiles) === 0 && count($allDirectories) === 0) {
+                $this->warn('⚠️  No files or folders found in guitar scores directory.');
+                return [
+                    'files' => 0,
+                    'folders' => 0,
+                    'total' => 0,
+                ];
+            }
+
+            $totalItems = count($allDirectories) + count($allFiles);
+            $this->info("📦 Total items to process: {$totalItems}");
+            $this->newLine();
+
+            $processedDirs = 0;
+            $processedFiles = 0;
+            $errors = [];
+
+            // Process directories in batches
+            $this->info('📁 Processing directories...');
+            $dirBatchSize = 50;
+            $dirBatches = array_chunk($allDirectories, $dirBatchSize);
+
+            foreach ($dirBatches as $batchIndex => $dirBatch) {
+                $batchNum = $batchIndex + 1;
+                $totalBatches = count($dirBatches);
+                $this->info("   Batch {$batchNum}/{$totalBatches} (directories)...");
+
+                foreach ($dirBatch as $directory) {
+                    try {
+                        $this->syncGuitarDirectory($directory, $disk);
+                        $processedDirs++;
+                    } catch (\Exception $e) {
+                        $errors[] = "Directory {$directory}: " . $e->getMessage();
+                    }
+                }
+
+                // Show progress
+                $percent = round(($processedDirs / count($allDirectories)) * 100);
+                $this->info("   Progress: {$processedDirs}/" . count($allDirectories) . " directories ({$percent}%)");
+            }
+
+            $this->newLine();
+            $this->info('📄 Processing files...');
+
+            // Process files in batches
+            $fileBatchSize = 100;
+            $fileBatches = array_chunk($allFiles, $fileBatchSize);
+
+            foreach ($fileBatches as $batchIndex => $fileBatch) {
+                $batchNum = $batchIndex + 1;
+                $totalBatches = count($fileBatches);
+                $this->info("   Batch {$batchNum}/{$totalBatches} (files)...");
+
+                foreach ($fileBatch as $file) {
+                    try {
+                        $this->syncGuitarFile($file, $disk);
+                        $processedFiles++;
+                    } catch (\Exception $e) {
+                        $errors[] = "File {$file}: " . $e->getMessage();
+                    }
+                }
+
+                // Show progress
+                $percent = round(($processedFiles / count($allFiles)) * 100);
+                $this->info("   Progress: {$processedFiles}/" . count($allFiles) . " files ({$percent}%)");
+            }
+
+            $this->newLine();
+
+            // Show any errors
+            if (count($errors) > 0) {
+                $this->warn('⚠️  Some items had errors:');
+                foreach (array_slice($errors, 0, 10) as $error) {
+                    $this->warn("   {$error}");
+                }
+                if (count($errors) > 10) {
+                    $this->warn("   ... and " . (count($errors) - 10) . " more errors");
+                }
+            }
+
+            // Get final counts from database
+            $fileCount = GuitarScore::where('type', 'file')->count();
+            $folderCount = GuitarScore::where('type', 'folder')->count();
+            $totalCount = GuitarScore::count();
+
+            $this->info("✅ Sync summary:");
+            $this->info("   Directories processed: {$processedDirs}");
+            $this->info("   Files processed: {$processedFiles}");
+            $this->info("   Total in database: {$totalCount}");
+
+            return [
+                'files' => $fileCount,
+                'folders' => $folderCount,
+                'total' => $totalCount,
+            ];
+
+        } catch (\Exception $e) {
+            $this->error('❌ Failed to sync guitar scores: ' . $e->getMessage());
+            $this->error('Stack trace: ' . $e->getTraceAsString());
+
+            return [
+                'files' => 0,
+                'folders' => 0,
+                'total' => 0,
+            ];
+        }
+    }
+
+    /**
+     * Sync a guitar directory to the database
+     */
+    private function syncGuitarDirectory($path, $disk)
+    {
+        $name = basename($path);
+        $parentPath = dirname($path);
+
+        // Set parent_path to null only for root-level directories
+        if ($parentPath === '.' || $parentPath === '' || $parentPath === $path) {
+            $parentPath = null;
+        }
+
+        // Use DB::table() to bypass mass assignment protection
+        DB::table('guitar_scores')->insert([
+            'name' => $name,
+            'path' => $path,
+            'parent_path' => $parentPath,
+            'type' => 'folder',
+            'extension' => null,
+            'mime_type' => null,
+            'size' => null,
+            'file_modified_at' => now(),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+    }
+
+    /**
+     * Sync a guitar file to the database
+     */
+    private function syncGuitarFile($path, $disk)
+    {
+        $name = basename($path);
+        $parentPath = dirname($path);
+
+        // Set parent_path to null only for root-level files
+        if ($parentPath === '.' || $parentPath === '' || $parentPath === $path) {
+            $parentPath = null;
+        }
+
+        $extension = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+
+        // Skip non-relevant file types
+        if (!in_array($extension, ['mp3', 'mp4', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'gp'])) {
+            return;
+        }
+
+        $size = $disk->size($path);
+
+        $mimeTypes = [
+            'mp3' => 'audio/mpeg',
+            'mp4' => 'video/mp4',
+            'pdf' => 'application/pdf',
+            'jpg' => 'image/jpeg',
+            'jpeg' => 'image/jpeg',
+            'png' => 'image/png',
+            'gif' => 'image/gif',
+            'gp' => 'application/octet-stream',
+        ];
+
+        $mimeType = $mimeTypes[$extension] ?? 'application/octet-stream';
+
+        // Use DB::table() to bypass mass assignment protection
+        DB::table('guitar_scores')->insert([
+            'name' => $name,
+            'path' => $path,
+            'parent_path' => $parentPath,
+            'type' => 'file',
+            'extension' => $extension,
+            'mime_type' => $mimeType,
+            'size' => $size,
+            'file_modified_at' => \Carbon\Carbon::createFromTimestamp($disk->lastModified($path)),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+    }
+
+    /**
+     * Sync Protected Storage Files (NEW SYSTEM - protected_files table)
+     */
+    private function syncProtectedStorageFiles()
+    {
+        try {
+            $this->info('🔍 Starting protected storage files sync...');
+
+            // Check if protected directory exists
+            $protectedPath = storage_path('app/protected');
+            $this->info("📍 Checking path: {$protectedPath}");
+
+            if (!is_dir($protectedPath)) {
+                $this->warn('⚠️  Protected storage directory does not exist. Creating it...');
+                FileFacade::makeDirectory($protectedPath, 0755, true);
+                $this->info("✅ Created directory: {$protectedPath}");
+
+                return [
+                    'files' => 0,
+                    'folders' => 0,
+                    'total' => 0,
+                ];
+            }
+
+            $this->info("✅ Directory exists: {$protectedPath}");
+
+            // Clear existing records for fresh sync
+            $existingCount = DB::table('protected_files')->count();
+            if ($existingCount > 0) {
+                DB::table('protected_files')->truncate();
+                $this->info("🗑️  Cleared {$existingCount} existing protected file records.");
+            }
+
+            // Check if 'protected' disk is configured
+            try {
+                $disk = Storage::disk('protected');
+                $this->info('✅ Protected disk configured');
+            } catch (\Exception $e) {
+                $this->error('❌ Protected disk not configured: ' . $e->getMessage());
+                return [
+                    'files' => 0,
+                    'folders' => 0,
+                    'total' => 0,
+                ];
+            }
+
+            // Get all files and directories recursively
+            $this->info('🔎 Scanning for files and directories...');
+
+            $allFiles = $disk->allFiles();
+            $allDirectories = $disk->allDirectories();
+
+            $this->info("📊 Protected storage scan results:");
+            $this->info("   Files found: " . count($allFiles));
+            $this->info("   Directories found: " . count($allDirectories));
+
+            if (count($allFiles) === 0 && count($allDirectories) === 0) {
+                $this->warn('⚠️  No files or folders found in protected storage directory.');
+                return [
+                    'files' => 0,
+                    'folders' => 0,
+                    'total' => 0,
+                ];
+            }
+
+            $totalItems = count($allDirectories) + count($allFiles);
+            $this->info("📦 Total items to process: {$totalItems}");
+            $this->newLine();
+
+            $processedDirs = 0;
+            $processedFiles = 0;
+            $errors = [];
+
+            // Process directories in batches
+            $this->info('📁 Processing directories...');
+            $dirBatchSize = 50;
+            $dirBatches = array_chunk($allDirectories, $dirBatchSize);
+
+            foreach ($dirBatches as $batchIndex => $dirBatch) {
+                $batchNum = $batchIndex + 1;
+                $totalBatches = count($dirBatches);
+                $this->info("   Batch {$batchNum}/{$totalBatches} (directories)...");
+
+                foreach ($dirBatch as $directory) {
+                    try {
+                        $this->syncProtectedStorageDirectory($directory, $disk);
+                        $processedDirs++;
+                    } catch (\Exception $e) {
+                        $errors[] = "Directory {$directory}: " . $e->getMessage();
+                    }
+                }
+
+                // Show progress
+                if (count($allDirectories) > 0) {
+                    $percent = round(($processedDirs / count($allDirectories)) * 100);
+                    $this->info("   Progress: {$processedDirs}/" . count($allDirectories) . " directories ({$percent}%)");
+                }
+            }
+
+            $this->newLine();
+            $this->info('📄 Processing files...');
+
+            // Process files in batches
+            $fileBatchSize = 100;
+            $fileBatches = array_chunk($allFiles, $fileBatchSize);
+
+            foreach ($fileBatches as $batchIndex => $fileBatch) {
+                $batchNum = $batchIndex + 1;
+                $totalBatches = count($fileBatches);
+                $this->info("   Batch {$batchNum}/{$totalBatches} (files)...");
+
+                foreach ($fileBatch as $file) {
+                    try {
+                        $this->syncProtectedStorageFile($file, $disk);
+                        $processedFiles++;
+                    } catch (\Exception $e) {
+                        $errors[] = "File {$file}: " . $e->getMessage();
+                    }
+                }
+
+                // Show progress
+                if (count($allFiles) > 0) {
+                    $percent = round(($processedFiles / count($allFiles)) * 100);
+                    $this->info("   Progress: {$processedFiles}/" . count($allFiles) . " files ({$percent}%)");
+                }
+            }
+
+            $this->newLine();
+
+            // Show any errors
+            if (count($errors) > 0) {
+                $this->warn('⚠️  Some items had errors:');
+                foreach (array_slice($errors, 0, 10) as $error) {
+                    $this->warn("   {$error}");
+                }
+                if (count($errors) > 10) {
+                    $this->warn("   ... and " . (count($errors) - 10) . " more errors");
+                }
+            }
+
+            // Get final counts from database
+            $fileCount = DB::table('protected_files')->where('type', 'file')->count();
+            $folderCount = DB::table('protected_files')->where('type', 'folder')->count();
+            $totalCount = DB::table('protected_files')->count();
+
+            $this->info("✅ Sync summary:");
+            $this->info("   Directories processed: {$processedDirs}");
+            $this->info("   Files processed: {$processedFiles}");
+            $this->info("   Total in database: {$totalCount}");
+
+            return [
+                'files' => $fileCount,
+                'folders' => $folderCount,
+                'total' => $totalCount,
+            ];
+
+        } catch (\Exception $e) {
+            $this->error('❌ Failed to sync protected storage files: ' . $e->getMessage());
+            $this->error('Stack trace: ' . $e->getTraceAsString());
+
+            return [
+                'files' => 0,
+                'folders' => 0,
+                'total' => 0,
+            ];
+        }
+    }
+
+    /**
+     * Sync a protected storage directory to the database
+     */
+    private function syncProtectedStorageDirectory($path, $disk)
+    {
+        $name = basename($path);
+        $parentPath = dirname($path);
+
+        // Set parent_path to null only for root-level directories
+        if ($parentPath === '.' || $parentPath === '' || $parentPath === $path) {
+            $parentPath = null;
+        }
+
+        // Extract resource (top-level folder)
+        $resource = null;
+        if (strpos($path, '/') !== false) {
+            $resource = explode('/', $path)[0];
+        } else {
+            $resource = $path;
+        }
+
+        // Use DB::table() to bypass mass assignment protection
+        DB::table('protected_files')->insert([
+            'name' => $name,
+            'path' => $path,
+            'parent_path' => $parentPath,
+            'type' => 'folder',
+            'extension' => null,
+            'mime_type' => null,
+            'size' => 0,
+            'resource' => $resource,
+            'file_modified_at' => now(),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+    }
+
+    /**
+     * Sync a protected storage file to the database
+     */
+    private function syncProtectedStorageFile($path, $disk)
+    {
+        $name = basename($path);
+        $parentPath = dirname($path);
+
+        // Set parent_path to null only for root-level files
+        if ($parentPath === '.' || $parentPath === '' || $parentPath === $path) {
+            $parentPath = null;
+        }
+
+        $extension = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+        $size = $disk->size($path);
+
+        $mimeTypes = [
+            'mp3' => 'audio/mpeg',
+            'mp4' => 'video/mp4',
+            'pdf' => 'application/pdf',
+            'jpg' => 'image/jpeg',
+            'jpeg' => 'image/jpeg',
+            'png' => 'image/png',
+            'gif' => 'image/gif',
+            'doc' => 'application/msword',
+            'docx' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'xls' => 'application/vnd.ms-excel',
+            'xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'ppt' => 'application/vnd.ms-powerpoint',
+            'pptx' => 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+            'txt' => 'text/plain',
+            'csv' => 'text/csv',
+            'zip' => 'application/zip',
+            'rar' => 'application/x-rar-compressed',
+            '7z' => 'application/x-7z-compressed',
+            'html' => 'text/html',
+            'htm' => 'text/html',
+            'xml' => 'application/xml',
+            'json' => 'application/json',
+        ];
+
+        $mimeType = $mimeTypes[$extension] ?? 'application/octet-stream';
+
+        // Extract resource (top-level folder)
+        $resource = null;
+        if (strpos($path, '/') !== false) {
+            $resource = explode('/', $path)[0];
+        }
+
+        // Use DB::table() to bypass mass assignment protection
+        DB::table('protected_files')->insert([
+            'name' => $name,
+            'path' => $path,
+            'parent_path' => $parentPath,
+            'type' => 'file',
+            'extension' => $extension,
+            'mime_type' => $mimeType,
+            'size' => $size,
+            'resource' => $resource,
+            'file_modified_at' => \Carbon\Carbon::createFromTimestamp($disk->lastModified($path)),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+    }
+}

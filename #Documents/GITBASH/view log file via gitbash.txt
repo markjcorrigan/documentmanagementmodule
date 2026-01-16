@@ -1,0 +1,10 @@
+# View the last 50 lines of the log
+tail -n 50 storage/logs/laravel.log
+
+# Or on Windows with Git Bash
+tail -n 50 storage/logs/laravel.log
+
+NB to archive logs and clear them!!!
+
+# Create a backup with timestamp before clearing
+cp storage/logs/laravel.log storage/logs/laravel-$(date +%Y%m%d-%H%M%S).log && > storage/logs/laravel.log

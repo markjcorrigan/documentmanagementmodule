@@ -1,0 +1,293 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SS{% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SS Service Strategy</h3>
+  <p><i><a href="/home/itilss">Back to ITIL SS</a></i></p>
+  <hr>
+  <p><b><span id="Overview">Objective</span></b>: <span id="md-webpage-description" itemprop="description">The objective of <i>Strategy Management for IT Services</i> is to assess the service provider's offerings, capabilities, competitors as well as current and potential market spaces in order to develop a strategy to serve customers. Once the strategy has been defined, this ITIL process is also responsible for ensuring the implementation of the strategy.</span></p>
+  <p><b>Part of</b>: Service Strategy </p>
+  <p><b>Process Owner</b>: Service Strategy Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#KPIs"><span class="tocnumber">4</span> <span class="toctext">KPIs</span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>In the ITIL 2007 edition, strategic assessments and the development of the service strategy were performed under Service Portfolio Management. </p>
+  <p><i><b>ITIL 2011</b></i> has introduced a revised set of strategic processes, including "Strategy Management for IT Services". The process overview of <a href="/images/itilssone.jpg"  title="Strategy-management-itil.jpg">ITIL Strategy Management (.JPG)</a> shows the key information flows. </p>
+  <p>In addition, the new ITIL role of Service Strategy Manager has been introduced to support the IT Steering Group. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Strategy Management for IT Services: sub-processes:">These are the <strong class="selflink">Strategy Management for IT Services</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Strategy_Management_Assessment" itemprop="itemListElement">Strategic Service Assessment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess the present situation of the service provider within its current market spaces. This includes an assessment of current service offerings, customer needs and competing offers from other service providers. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Strategy_Definition" itemprop="itemListElement">Service Strategy Definition</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define the overall goals the service provider should pursue in its development, and to identify what services will be offered to what customers or customer segments, based on the results of the Strategic Service Assessment. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Strategy_Execution" itemprop="itemListElement">Service Strategy Execution</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define and plan strategic initiatives, and ensure the implementation of those initiatives. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in Strategy Management for IT Services to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Business_Planning_Information" itemprop="itemListElement">Business Planning Information</span></b> </p>
+    <ul>
+      <li itemprop="description">Business Planning Information includes important input from clients and external service providers, especially for devising the Service Strategy and looking for ways to improve services. This input will highlight, for example, planned business initiatives like the introduction of new product/ service offerings or the expansion into new markets, as well as information on the future development of business activity, especially expected increases in business transaction volumes. This information helps the service organization understand the businesses it serves and their plans for the future, allowing it to offer and develop the right set of services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Strategy" itemprop="itemListElement">Service Strategy Plan</span></b> </p>
+    <ul>
+      <li itemprop="description">The Service Strategy Plan (at times referred to as the <i>Service Strategy</i>) is about translating a big idea regarding customer needs into a distinctive and cost-effective set of connected capabilities and resources to satisfy those needs. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Strategic_Plan" itemprop="itemListElement">Strategic Action Plan</span></b> </p>
+    <ul>
+      <li itemprop="description">The Strategic Action Plan sets out the steps required to implement the previously defined Service Strategy, defining specific tasks and responsibilities. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Strategic_Service_Assessment" itemprop="itemListElement">Strategic Service Assessment</span></b> </p>
+    <ul>
+      <li itemprop="description">The Strategic Service Assessment is used to gain insight into a service provider's weaknesses, strengths and opportunities prior to developing a Service Strategy. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="KPIs">KPIs</span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Strategy#ITIL_KPIs_Service_Portfolio_Management" title="ITIL KPIs Strategy Management">Key Performance Indicators (KPIs) Strategy Management for IT Services Management</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Service_Strategy_Manager">Service Strategy Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Service Strategy Manager supports the IT Steering Group in producing and maintaining the service provider's strategy. This role is also responsible for communicating and implementing the service strategy.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="IT_Steering_Group">IT Steering Group (ISG)</span></b> </p>
+  <ul>
+    <li>The IT Steering Group (ISG) sets the direction and strategy for IT Services. It includes members of senior management from business and IT. The IT Steering Group reviews the business and IT strategies in order to make sure that they are aligned. It also sets priorities of service development programs/ projects.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b>Responsibility Matrix: ITIL Strategy Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Service Strategy Manager </th>
+        <th style="background:#ffffee;">IT Steering Group </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Strategy_Management_Assessment">Strategic Service Assessment</a></td>
+        <td>AR </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Service_Strategy_Definition">Service Strategy Definition</a></td>
+        <td>AR </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Service_Strategy_Execution">Service Strategy Execution</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Strategy Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Strategy Management for IT Services.</span> </p>
+  <br>
+  <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Strategy_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SS Service Strategy</h3>
+  <p><i><a href="/home/itilss">Back to ITIL SS</a></i></p>
+  <hr>
+  <p><b><span id="Overview">Objective</span></b>: <span id="md-webpage-description" itemprop="description">The objective of <i>Strategy Management for IT Services</i> is to assess the service provider's offerings, capabilities, competitors as well as current and potential market spaces in order to develop a strategy to serve customers. Once the strategy has been defined, this ITIL process is also responsible for ensuring the implementation of the strategy.</span></p>
+  <p><b>Part of</b>: Service Strategy </p>
+  <p><b>Process Owner</b>: Service Strategy Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#KPIs"><span class="tocnumber">4</span> <span class="toctext">KPIs</span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>In the ITIL 2007 edition, strategic assessments and the development of the service strategy were performed under Service Portfolio Management. </p>
+  <p><i><b>ITIL 2011</b></i> has introduced a revised set of strategic processes, including "Strategy Management for IT Services". The process overview of <a href="https://wiki.en.it-processmaps.com/images/4/43/Strategy-management-itil.jpg" class="internal" title="Strategy-management-itil.jpg">ITIL Strategy Management (.JPG)</a> shows the key information flows. </p>
+  <p>In addition, the new ITIL role of Service Strategy Manager has been introduced to support the IT Steering Group. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Strategy Management for IT Services: sub-processes:">These are the <strong class="selflink">Strategy Management for IT Services</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Strategy_Management_Assessment" itemprop="itemListElement">Strategic Service Assessment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess the present situation of the service provider within its current market spaces. This includes an assessment of current service offerings, customer needs and competing offers from other service providers. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Strategy_Definition" itemprop="itemListElement">Service Strategy Definition</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define the overall goals the service provider should pursue in its development, and to identify what services will be offered to what customers or customer segments, based on the results of the Strategic Service Assessment. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Strategy_Execution" itemprop="itemListElement">Service Strategy Execution</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define and plan strategic initiatives, and ensure the implementation of those initiatives. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in Strategy Management for IT Services to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Business_Planning_Information" itemprop="itemListElement">Business Planning Information</span></b> </p>
+    <ul>
+      <li itemprop="description">Business Planning Information includes important input from clients and external service providers, especially for devising the Service Strategy and looking for ways to improve services. This input will highlight, for example, planned business initiatives like the introduction of new product/ service offerings or the expansion into new markets, as well as information on the future development of business activity, especially expected increases in business transaction volumes. This information helps the service organization understand the businesses it serves and their plans for the future, allowing it to offer and develop the right set of services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Strategy" itemprop="itemListElement">Service Strategy Plan</span></b> </p>
+    <ul>
+      <li itemprop="description">The Service Strategy Plan (at times referred to as the <i>Service Strategy</i>) is about translating a big idea regarding customer needs into a distinctive and cost-effective set of connected capabilities and resources to satisfy those needs. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Strategic_Plan" itemprop="itemListElement">Strategic Action Plan</span></b> </p>
+    <ul>
+      <li itemprop="description">The Strategic Action Plan sets out the steps required to implement the previously defined Service Strategy, defining specific tasks and responsibilities. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Strategic_Service_Assessment" itemprop="itemListElement">Strategic Service Assessment</span></b> </p>
+    <ul>
+      <li itemprop="description">The Strategic Service Assessment is used to gain insight into a service provider's weaknesses, strengths and opportunities prior to developing a Service Strategy. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="KPIs">KPIs</span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Strategy#ITIL_KPIs_Service_Portfolio_Management" title="ITIL KPIs Strategy Management">Key Performance Indicators (KPIs) Strategy Management for IT Services Management</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Service_Strategy_Manager">Service Strategy Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Service Strategy Manager supports the IT Steering Group in producing and maintaining the service provider's strategy. This role is also responsible for communicating and implementing the service strategy.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="IT_Steering_Group">IT Steering Group (ISG)</span></b> </p>
+  <ul>
+    <li>The IT Steering Group (ISG) sets the direction and strategy for IT Services. It includes members of senior management from business and IT. The IT Steering Group reviews the business and IT strategies in order to make sure that they are aligned. It also sets priorities of service development programs/ projects.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b>Responsibility Matrix: ITIL Strategy Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Service Strategy Manager </th>
+        <th style="background:#ffffee;">IT Steering Group </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Strategy_Management_Assessment">Strategic Service Assessment</a></td>
+        <td>AR </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Service_Strategy_Definition">Service Strategy Definition</a></td>
+        <td>AR </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Service_Strategy_Execution">Service Strategy Execution</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Strategy Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Strategy Management for IT Services.</span> </p>
+  <br>
+  <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Strategy_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

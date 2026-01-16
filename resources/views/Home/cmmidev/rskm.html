@@ -1,0 +1,997 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>RSKM</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	<table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="10%"><p class="auto-style53"><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="40%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+</div>
+<!-- #BeginEditable "content" -->
+
+
+	<div id="contentWrapper">
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong>Risk Management (RSKM)</strong><br />
+					<br />
+					</td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>Risk Management practices are deeply embedded into most CMMi process areas, for example Project Management. It is, however, the Risk Management process area that describes an evolution of these specific practices to systematically plan, anticipate, and mitigate risks to proactively minimize their impact on the project.
+That is the essence and focus of Risk Management (RSKM) is to understand the nature of software production risks and to mitigate those risks. All risks, under RSKM, are:-
+<br>
+<li>Identified
+</li><li>Characterized, in terms of Likelihood and Consequence
+</li><li>Priortized, for mitigation
+</li><li>Mitigated</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Risk Management (RSKM)<br />A Project Management Process Area at Maturity Level 3</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Risk Management (RSKM) is to identify potential problems before they occur so that risk-handling activities can be planned and invoked as needed across the life of the product or project to mitigate adverse impacts on achieving objectives.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+Risk management is a continuous, forward-looking process that is an important part of management. Risk management should address issues that could endanger achievement of critical objectives. A continuous risk management approach is applied to effectively anticipate and mitigate the risks that may have a critical impact on the project.
+<br>
+<br>
+Effective risk management includes early and aggressive risk identification through the collaboration and involvement of relevant stakeholders, as described in the stakeholder involvement plan addressed in the Project Planning process area. Strong leadership across all relevant stakeholders is needed to establish an environment for the free and open disclosure and discussion of risk.
+<br>
+<br>
+Risk management must consider both internal and external sources for cost, schedule, and performance risk as well as other risks. Early and aggressive detection of risk is important because it is typically easier, less costly, and less disruptive to make changes and correct work efforts during the earlier, rather than the later, phases of the project.
+<br>
+<br>
+Risk management can be divided into three parts: defining a risk management strategy; identifying and analyzing risks; and handling identified risks, including the implementation of risk mitigation plans when needed.
+<br>
+<br>
+As represented in the Project Planning and Project Monitoring and Control process areas, organizations may initially focus simply on risk identification for awareness, and react to the realization of these risks as they occur. The Risk Management process area describes an evolution of these specific practices to systematically plan, anticipate, and mitigate risks to proactively minimize their impact on the project.
+<br>
+<br>
+Although the primary emphasis of the Risk Management process area is on the project, the concepts can also be applied to manage organizational risks.
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Project Planning process area for more information about identification of project risks and planning for involvement of relevant stakeholders.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about monitoring project risks.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about using a formal evaluation process to evaluate alternatives for selection and mitigation of identified risks.
+<br> 
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1	Prepare for Risk Management</b>
+<br>
+<br>
+Preparation for risk management is conducted.
+<br>
+<br>
+Preparation is conducted by establishing and maintaining a strategy for identifying, analyzing, and mitigating risks. This is typically documented in a risk management plan. The risk management strategy addresses the specific actions and management approach used to apply and control the risk management program. This includes identifying the sources of risk; the scheme used to categorize risks; and the parameters used to evaluate, bound, and control risks for effective handling.
+<br>
+<br>
+<a name="sp1.1"></a>
+<b>SP 1.1 Determine Risk Sources and Categories</b>
+<br>
+<br>
+Determine risk sources and categories.
+<br>
+<br>
+Identification of risk sources provides a basis for systematically examining changing situations over time to uncover circumstances that impact the ability of the project to meet its objectives. Risk sources are both internal and external to the project. As the project progresses, additional sources of risk may be identified. Establishing categories for risks provides a mechanism for collecting and organizing risks as well as ensuring appropriate scrutiny and management attention for those risks that can have more serious consequences on meeting project objectives.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+<li>Risk source lists (external and internal)
+</li><li>Risk categories list
+<br>
+<br>
+Subpractice 1: Determine risk sources.
+<br>
+<br>
+Risk sources are the fundamental drivers that cause risks within a project or organization. There are many sources of risks, both internal and external, to a project. Risk sources identify common areas where risks may originate. Typical internal and external risk sources include the following:
+<br>
+<br>
+</li><li>Uncertain requirements
+</li><li>Unprecedented efforts—estimates unavailable
+</li><li>Infeasible design
+</li><li>Unavailable technology
+</li><li>Unrealistic schedule estimates or allocation
+</li><li>Inadequate staffing and skills
+</li><li>Cost or funding issues
+</li><li>Uncertain or inadequate subcontractor capability
+</li><li>Uncertain or inadequate vendor capability
+</li><li>Inadequate communication with actual or potential customers or with their representatives
+</li><li>Disruptions to continuity of operations
+<br>
+<br>
+Many of these sources of risk are often accepted without adequate planning. Early identification of both internal and external sources of risk can lead to early identification of risks. Risk mitigation plans can then be implemented early in the project to preclude occurrence of the risks or reduce the consequences of their occurrence.
+<br>
+<br>
+Subpractice 2: Determine risk categories.
+<br>
+<br>
+Risk categories reflect the “bins” for collecting and organizing risks. A reason for identifying risk categories is to help in the future consolidation of the activities in the risk mitigation plans.
+<br>
+<br>
+The following factors may be considered when determining risk categories:
+<br>
+<br>
+</li><li>The phases of the project’s lifecycle model (e.g., requirements, design, manufacturing, test and evaluation, delivery, and disposal)
+</li><li>The types of processes used
+</li><li>The types of products used
+</li><li>Program management risks (e.g., contract risks, budget/cost risks, schedule risks, resources risks, performance risks, and supportability risks)
+<br>
+<br>
+A risk taxonomy can be used to provide a framework for determining risk sources and categories.
+<br>
+<br>
+<a name="sp1.2"></a>
+<b>SP 1.2 Define Risk Parameters</b>
+<br>
+<br>
+Define the parameters used to analyze and categorize risks, and the parameters used to control the risk management effort.
+<br>
+<br>
+Parameters for evaluating, categorizing, and prioritizing risks include the following:
+<br>
+<br>
+</li><li>Risk likelihood (i.e., probability of risk occurrence)
+</li><li>Risk consequence (i.e., impact and severity of risk occurrence)
+</li><li>Thresholds to trigger management activities
+<br>
+<br>
+Risk parameters are used to provide common and consistent criteria for comparing the various risks to be managed. Without these parameters, it would be very difficult to gauge the severity of the unwanted change caused by the risk and to prioritize the necessary actions required for risk mitigation planning.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Risk evaluation, categorization, and prioritization criteria
+</li><li>Risk management requirements (e.g., control and approval levels, and reassessment intervals)
+<br>
+<br>
+Subpractices 1: Define consistent criteria for evaluating and quantifying risk likelihood and severity levels.
+<br>
+<br>
+Consistently used criteria (e.g., the bounds on the likelihood and severity levels) allow the impacts of different risks to be commonly understood, to receive the appropriate level of scrutiny, and to obtain the management attention warranted. In managing dissimilar risks (e.g., personnel safety versus environmental pollution), it is important to ensure consistency in end result (e.g., a high risk of environmental pollution is as important as a high risk to personnel safety).
+<br>
+<br>
+Subpractices 2: Define thresholds for each risk category.
+<br>
+<br>
+For each risk category, thresholds can be established to determine acceptability or unacceptability of risks, prioritization of risks, or triggers for management action.
+<br>
+<br>
+Examples of thresholds include the following:
+<br>
+<br>
+</li><li>Project-wide thresholds could be established to involve senior management when product costs exceed 10 percent of the target cost or when Cost Performance Indexes (CPIs) fall below 0.95.
+</li><li>Schedule thresholds could be established to involve senior management when Schedule Performance Indexes (SPIs) fall below 0.95.
+</li><li>Performance thresholds could be set to involve senior management when specified key items (e.g., processor utilization or average response times) exceed 125 percent of the intended design.
+<br>
+<br>
+These may be refined later, for each identified risk, to establish points at which more aggressive risk monitoring is employed or to signal the implementation of risk mitigation plans.
+<br>
+<br>
+Subpractices 3: Define bounds on the extent to which thresholds are applied against or within a category.
+<br>
+<br>
+There are few limits to which risks can be assessed in either a quantitative or qualitative fashion. Definition of bounds (or boundary conditions) can be used to help scope the extent of the risk management effort and avoid excessive resource expenditures. Bounds may include exclusion of a risk source from a category. These bounds can also exclude any condition that occurs less than a given frequency.
+<br>
+<br>
+<a name="sp1.3"></a>
+<b>SP 1.3 Establish a Risk Management Strategy</b>
+<br>
+<br>
+Establish and maintain the strategy to be used for risk management.
+<br>
+<br>
+A comprehensive risk management strategy addresses items such as the following:
+<br>
+<br>
+</li><li>The scope of the risk management effort
+</li><li>Methods and tools to be used for risk identification, risk analysis, risk mitigation, risk monitoring, and communication
+</li><li>Project-specific sources of risks
+</li><li>How these risks are to be organized, categorized, compared, and consolidated
+</li><li>Parameters, including likelihood, consequence, and thresholds, for taking action on identified risks
+</li><li>Risk mitigation techniques to be used, such as prototyping, piloting, simulation, alternative designs, or evolutionary development
+</li><li>Definition of risk measures to monitor the status of the risks
+</li><li>Time intervals for risk monitoring or reassessment
+<br>
+<br>
+The risk management strategy should be guided by a common vision of success that describes the desired future project outcomes in terms of the product that is delivered, its cost, and its fitness for the task. The risk management strategy is often documented in an organizational or a project risk management plan. The risk management strategy is reviewed with relevant stakeholders to promote commitment and understanding.
+<br>
+<br>
+Typical Work Products
+</li><li>Project risk management strategy
+<br>
+<br>
+<a name="sg2"></a> 
+<b>SG 2	Identify and Analyze Risks</b>
+<br>
+<br>
+Risks are identified and analyzed to determine their relative importance.
+<br>
+<br>
+The degree of risk impacts the resources assigned to handle an identified risk and the determination of when appropriate management attention is required.
+<br>
+<br>
+Analyzing risks entails identifying risks from the internal and external sources identified and then evaluating each identified risk to determine its likelihood and consequences. Categorization of the risk, based on an evaluation against the established risk categories and criteria developed for the risk management strategy, provides the information needed for risk handling. Related risks may be grouped for efficient handling and effective use of risk management resources.
+<br>
+<br>
+<a name="sp21"></a> 
+<b>SP 2.1 Identify Risks</b>
+<br>
+<br>
+Identify and document the risks.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+The particular risks associated with conducting the project using integrated teams should be considered, such as risks associated with loss of inter-team or intra-team coordination.
+<br>
+<br>
+The identification of potential issues, hazards, threats, and vulnerabilities that could negatively affect work efforts or plans is the basis for sound and successful risk management. Risks must be identified and described in an understandable way before they can be analyzed and managed properly. Risks are documented in a concise statement that includes the context, conditions, and consequences of risk occurrence.
+<br>
+<br>
+Risk identification should be an organized, thorough approach to seek out probable or realistic risks in achieving objectives. To be effective, risk identification should not be an attempt to address every possible event regardless of how highly improbable it may be. Use of the categories and parameters developed in the risk management strategy, along with the identified sources of risk, can provide the discipline and streamlining appropriate to risk identification. The identified risks form a baseline to initiate risk management activities. The list of risks should be reviewed periodically to reexamine possible sources of risk and changing conditions to uncover sources and risks previously overlooked or nonexistent when the risk management strategy was last updated.
+<br>
+<br>
+Risk identification activities focus on the identification of risks, not placement of blame. The results of risk identification activities are not used by management to evaluate the performance of individuals.
+<br>
+<br>
+There are many methods for identifying risks. Typical identification methods include the following:
+<br>
+<br>
+</li><li>Examine each element of the project work breakdown structure to uncover risks.
+</li><li>Conduct a risk assessment using a risk taxonomy.
+</li><li>Interview subject matter experts.
+</li><li>Review risk management efforts from similar products.
+</li><li>Examine lessons-learned documents or databases.
+</li><li>Examine design specifications and agreement requirements.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>List of identified risks, including the context, conditions, and consequences of risk occurrence
+<br>
+<br>
+Subpractice 1: Identify the risks associated with cost, schedule, and performance.
+<br>
+<br>
+Cost, schedule, and performance risks should be examined to the extent that they impact project objectives. There may be potential risks discovered that are outside the scope of the project’s objectives but vital to customer interests. For example, the risks in development costs, product acquisition costs, cost of spare (or replacement) products, and product disposition (or disposal) costs have design implications. The customer may not have considered the full cost of supporting a fielded product or using a delivered service. The customer should be informed of such risks, but actively managing those risks may not be necessary. The mechanisms for making such decisions should be examined at project and organization levels and put in place if deemed appropriate, especially for risks that impact the ability to verify and validate the product.
+<br>
+<br>
+In addition to the cost risks identified above, other cost risks may include those associated with funding levels, funding estimates, and distributed budgets.
+<br>
+<br>
+Schedule risks may include risks associated with planned activities, key events, and milestones.
+<br>
+<br>
+Performance risks may include risks associated with the following:
+<br>
+<br>
+</li><li>Requirements
+</li><li>Analysis and design
+</li><li>Application of new technology
+</li><li>Physical size
+</li><li>Shape
+</li><li>Weight
+</li><li>Manufacturing and fabrication
+</li><li>Functional performance and operation
+</li><li>Verification
+</li><li>Validation
+</li><li>Performance maintenance attributes
+<br>
+<br>
+Performance maintenance attributes are those characteristics that enable an in-use product or service to provide originally required performance, such as maintaining safety and security performance.
+<br>
+<br>
+There are other risks that do not fall into cost, schedule, or performance categories.
+<br>
+<br>
+Examples of these other risks include the following:
+</li><li>Risks associated with strikes
+</li><li>Diminishing sources of supply
+</li><li>Competition
+<br>
+<br>
+Subpractice 2: Review environmental elements that may impact the project.
+<br>
+<br>
+Risks to a project that frequently are missed include those supposedly outside the scope of the project (i.e., the project does not control whether they occur but can mitigate their impact), such as weather, natural or manmade disasters that affect continuity of operations, political changes, and telecommunications failures.
+<br>
+<br>
+Subpractice 3: Review all elements of the work breakdown structure as part of identifying risks to help ensure that all aspects of the work effort have been considered.
+<br>
+<br>
+Subpractice 4: Review all elements of the project plan as part of identifying risks to help ensure that all aspects of the project have been considered.
+<br>
+<br>
+Refer to the Project Planning process area for more information about identifying project risks.
+<br>
+<br>
+Subpractice 5: Document the context, conditions, and potential consequences of the risk.
+<br>
+<br>
+Risks statements are typically documented in a standard format that contains the risk context, conditions, and consequences of occurrence. The risk context provides additional information such that the intent of the risk can be easily understood. In documenting the context of the risk, consider the relative time frame of the risk, the circumstances or conditions surrounding the risk that has brought about the concern, and any doubt or uncertainty.
+<br>
+<br>
+Subpractice 6: Identify the relevant stakeholders associated with each risk.
+<br>
+<br>
+<a name="sp22"></a>
+<b>SP 2.2 Evaluate, Categorize, and Prioritize Risks</b>
+<br>
+<br>
+Evaluate and categorize each identified risk using the defined risk categories and parameters, and determine its relative priority.
+<br>
+<br>
+The evaluation of risks is needed to assign relative importance to each identified risk, and is used in determining when appropriate management attention is required. Often it is useful to aggregate risks based on their interrelationships, and develop options at an aggregate level. When an aggregate risk is formed by a roll up of lower level risks, care must be taken to ensure that important lower level risks are not ignored.
+<br>
+<br>
+Collectively, the activities of risk evaluation, categorization, and prioritization are sometimes called “risk assessment” or “risk analysis.”
+<br>
+<br>
+Typical Work Products
+</li><li>List of risks, with a priority assigned to each risk
+<br>
+<br>
+Subpractice 1: Evaluate the identified risks using the defined risk parameters.
+<br>
+<br>
+Each risk is evaluated and assigned values in accordance with the defined risk parameters, which may include likelihood, consequence (severity, or impact), and thresholds. The assigned risk parameter values can be integrated to produce additional measures, such as risk exposure, which can be used to prioritize risks for handling.
+<br>
+<br>
+Often, a scale with three to five values is used to evaluate both likelihood and consequence. Likelihood, for example, can be categorized as remote, unlikely, likely, highly likely, or a near certainty.
+<br>
+<br>
+Examples for consequences include the following:
+<br>
+<br>
+</li><li>Low
+</li><li>Medium
+</li><li>High
+</li><li>Negligible
+</li><li>Marginal
+</li><li>Significant
+</li><li>Critical
+</li><li>Catastrophic
+<br>
+<br>
+Probability values are frequently used to quantify likelihood. Consequences are generally related to cost, schedule, environmental impact, or human measures (e.g., labor hours lost and severity of injury).
+<br>
+<br>
+This evaluation is often a difficult and time-consuming task. Specific expertise or group techniques may be needed to assess the risks and gain confidence in the prioritization. In addition, priorities may require reevaluation as time progresses.
+<br>
+<br>
+Subpractice 2: Categorize and group risks according to the defined risk categories.
+<br>
+<br>
+Risks are categorized into the defined risk categories, providing a means to look at risks according to their source, taxonomy, or project component. Related or equivalent risks may be grouped for efficient handling. The cause-and-effect relationships between related risks are documented.
+<br>
+<br>
+Subpractice 3: Prioritize risks for mitigation.
+<br>
+<br>
+A relative priority is determined for each risk based on the assigned risk parameters. Clear criteria should be used to determine the risk priority. The intent of prioritization is to determine the most effective areas to which resources for mitigation of risks can be applied with the greatest positive impact to the project.
+<br>
+<br>
+<a name="sg3"></a> 
+<b>SG 3	Mitigate Risks</b>
+<br>
+<br>
+Risks are handled and mitigated, where appropriate, to reduce adverse impacts on achieving objectives.
+<br>
+<br>
+The steps in handling risks include developing risk-handling options, monitoring risks, and performing risk-handling activities when defined thresholds are exceeded. Risk mitigation plans are developed and implemented for selected risks to proactively reduce the potential impact of risk occurrence. This can also include contingency plans to deal with the impact of selected risks that may occur despite attempts to mitigate them. The risk parameters used to trigger risk-handling activities are defined by the risk management strategy.
+<br>
+<br>
+<a name="sp31"></a>
+<b>SP 3.1 Develop Risk Mitigation Plans</b>
+<br>
+<br>
+Develop a risk mitigation plan for the most important risks to the project as defined by the risk management strategy.
+<br>
+<br>
+A critical component of a risk mitigation plan is to develop alternative courses of action, workarounds, and fallback positions, with a recommended course of action for each critical risk. The risk mitigation plan for a given risk includes techniques and methods used to avoid, reduce, and control the probability of occurrence of the risk, the extent of damage incurred should the risk occur (sometimes called a “contingency plan”), or both. Risks are monitored and when they exceed the established thresholds, the risk mitigation plans are deployed to return the impacted effort to an acceptable risk level. If the risk cannot be mitigated, a contingency plan can be invoked. Both risk mitigation and contingency plans are often generated only for selected risks where the consequences of the risks are determined to be high or unacceptable; other risks may be accepted and simply monitored.
+<br>
+<br>
+Options for handling risks typically include alternatives such as the following:
+<br>
+<br>
+</li><li>Risk avoidance: Changing or lowering requirements while still meeting the user’s needs
+</li><li>Risk control: Taking active steps to minimize risks
+</li><li>Risk transfer: Reallocating requirements to lower the risks
+</li><li>Risk monitoring: Watching and periodically reevaluating the risk for changes to the assigned risk parameters
+</li><li>Risk acceptance: Acknowledgment of risk but not taking any action
+<br>
+<br>
+Often, especially for high risks, more than one approach to handling a risk should be generated.
+<br>
+<br>
+For example, in the case of an event that disrupts continuity of operations, approaches to risk management can include the following:
+<br>
+<br>
+</li><li>Resource reserves to respond to disruptive events
+</li><li>Lists of appropriate back-up equipment to be available
+</li><li>Back-up personnel for key personnel
+</li><li>Plans and results of/for testing emergency response systems
+</li><li>Posted procedures for emergencies
+</li><li>Disseminated lists of key contacts and information resources for emergencies
+<br>
+<br>
+In many cases, risks will be accepted or watched. Risk acceptance is usually done when the risk is judged too low for formal mitigation, or when there appears to be no viable way to reduce the risk. If a risk is accepted, the rationale for this decision should be documented. Risks are watched when there is an objectively defined, verifiable, and documented threshold of performance, time, or risk exposure (the combination of likelihood and consequence) that will trigger risk mitigation planning or invoke a contingency plan if it is needed.
+<br>
+<br>
+Adequate consideration should be given early to technology demonstrations, models, simulations, pilots, and prototypes as part of risk mitigation planning.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Documented handling options for each identified risk
+</li><li>Risk mitigation plans
+</li><li>Contingency plans
+</li><li>List of those responsible for tracking and addressing each risk
+<br>
+<br>
+Subpractice 1: Determine the levels and thresholds that define when a risk becomes unacceptable and triggers the execution of a risk mitigation plan or a contingency plan.
+<br>
+<br>
+Risk level (derived using a risk model) is a measure combining the uncertainty of reaching an objective with the consequences of failing to reach the objective.
+<br>
+<br>
+Risk levels and thresholds that bound planned or acceptable performance must be clearly understood and defined to provide a means with which risk can be understood. Proper categorization of risk is essential for ensuring appropriate priority based on severity and the associated management response. There may be multiple thresholds employed to initiate varying levels of management response. Typically, thresholds for the execution of risk mitigation plans are set to engage before the execution of contingency plans.
+<br>
+<br>
+Subpractice 2: Identify the person or group responsible for addressing each risk.
+<br>
+<br>
+Subpractice 3: Determine the cost-to-benefit ratio of implementing the risk mitigation plan for each risk.
+<br>
+<br>
+Risk mitigation activities should be examined for the benefits they provide versus the resources they will expend. Just like any other design activity, alternative plans may need to be developed and the costs and benefits of each alternative assessed. The most appropriate plan is then selected for implementation. At times the risk may be significant and the benefits small, but the risk must be mitigated to reduce the probability of incurring unacceptable consequences.
+<br>
+<br>
+Subpractice 4: Develop an overall risk mitigation plan for the project to orchestrate the implementation of the individual risk mitigation and contingency plans.
+<br>
+<br>
+The complete set of risk mitigation plans may not be affordable. A tradeoff analysis should be performed to prioritize the risk mitigation plans for implementation.
+<br>
+<br>
+Subpractice 5: Develop contingency plans for selected critical risks in the event their impacts are realized.
+<br>
+<br>
+Risk mitigation plans are developed and implemented as needed to proactively reduce risks before they become problems. Despite best efforts, some risks may be unavoidable and will become problems that impact the project. Contingency plans can be developed for critical risks to describe the actions a project may take to deal with the occurrence of this impact. The intent is to define a proactive plan for handling the risk, either to reduce the risk (mitigation) or respond to the risk (contingency), but in either event to manage the risk.
+<br>
+<br>
+Some risk management literature may consider contingency plans a synonym or subset of risk mitigation plans. These plans also may be addressed together as risk-handling or risk action plans.
+<br>
+<br>
+<a name="sp32"></a>
+<b>SP 3.2 Implement Risk Mitigation Plans</b>
+<br>
+<br>
+Monitor the status of each risk periodically and implement the risk mitigation plan as appropriate.
+<br>
+<br>
+To effectively control and manage risks during the work effort, follow a proactive program to regularly monitor risks and the status and results of risk-handling actions. The risk management strategy defines the intervals at which the risk status should be revisited. This activity may result in the discovery of new risks or new risk-handling options that can require replanning and reassessment. In either event, the acceptability thresholds associated with the risk should be compared against the status to determine the need for implementing a risk mitigation plan.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Updated lists of risk status
+</li><li>Updated assessments of risk likelihood, consequence, and thresholds
+</li><li>Updated lists of risk-handling options
+</li><li>Updated list of actions taken to handle risks
+</li><li>Risk mitigation plans
+<br>
+<br>
+Subpractice 1: Monitor risk status.
+<br>
+<br>
+After a risk mitigation plan is initiated, the risk is still monitored. Thresholds are assessed to check for the potential execution of a contingency plan.
+<br>
+<br>
+A periodic mechanism for monitoring should be employed.
+<br>
+<br>
+Subpractice 2: Provide a method for tracking open risk-handling action items to closure.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about tracking action items.
+<br>
+<br>
+Subpractice 3: Invoke selected risk-handling options when monitored risks exceed the defined thresholds.
+<br>
+<br>
+Quite often, risk handling is only performed for those risks judged to be “high” and “medium.” The risk-handling strategy for a given risk may include techniques and methods to avoid, reduce, and control the likelihood of the risk or the extent of damage incurred should the risk (anticipated event or situation) occur or both. In this context, risk handling includes both risk mitigation plans and contingency plans.
+<br>
+<br>
+Risk-handling techniques are developed to avoid, reduce, and control adverse impact to project objectives and to bring about acceptable outcomes in light of probable impacts. Actions generated to handle a risk require proper resource loading and scheduling within plans and baseline schedules. This replanning effort needs to closely consider the effects on adjacent or dependent work initiatives or activities.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about revising the project plan.
+<br>
+<br>
+Subpractice 4: Establish a schedule or period of performance for each risk-handling activity that includes the start date and anticipated completion date.
+<br>
+<br>
+Subpractice 5: Provide continued commitment of resources for each plan to allow successful execution of the risk-handling activities.
+<br>
+<br>
+Subpractice 6: Collect performance measures on the risk-handling activities.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a>
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the risk management process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the risk management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for defining a risk management strategy and identifying, analyzing, and mitigating risks.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the risk management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the risk management process can be included in (or referenced by) the project plan, which is described in the Project Planning process area. The plan called for in this generic practice would address the comprehensive planning for all of the specific practices in this process area. In particular, this plan provides the overall approach for risk mitigation, but is distinct from mitigation plans (including contingency plans) for specific risks. In contrast, the risk mitigation plans called for in the specific practices would address more focused items such as the levels that trigger risk-handling activities.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the risk management process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of resources provided include the following tools:
+<br>
+<br>
+</li><li>Risk management databases
+</li><li>Risk mitigation tools
+</li><li>Prototyping tools
+</li><li>Modeling and simulation
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the risk management process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the risk management process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Risk management concepts and activities (e.g., risk identification, evaluation, monitoring, and mitigation)
+</li><li>Measure selection for risk mitigation
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the risk management process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Risk management strategy
+</li><li>Identified risk items
+</li><li>Risk mitigation plans
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the risk management process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Establishing a collaborative environment for free and open discussion of risk
+</li><li>Reviewing the risk management strategy and risk mitigation plans
+</li><li>Participating in risk identification, analysis, and mitigation activities
+</li><li>Communicating and reporting risk management status
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the risk management process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Number of risks identified, managed, tracked, and controlled
+</li><li>Risk exposure and changes to the risk exposure for each assessed risk, and as a summary percentage of management reserve
+</li><li>Change activity for the risk mitigation plans (e.g., processes, schedule, and funding)
+</li><li>Occurrence of unanticipated risks
+</li><li>Risk categorization volatility
+</li><li>Comparison of estimated versus actual risk mitigation effort and impact
+</li><li>Schedule for risk analysis activities
+</li><li>Schedule of actions for a specific mitigation
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the risk management process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Establishing and maintaining a risk management strategy
+</li><li>Identifying and analyzing risks
+</li><li>Mitigating risks
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Risk management strategy
+</li><li>Risk mitigation plans
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the risk management process with higher level management and resolve issues.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Reviews of the project risk status are held on a periodic and event-driven basis, with appropriate levels of management, to provide visibility into the potential for project risk exposure and appropriate corrective action.
+<br>
+<br>
+Typically, these reviews include a summary of the most critical risks, key risk parameters (such as likelihood and consequence of the risks), and the status of risk mitigation efforts.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined risk management process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the risk management process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Risk parameters
+</li><li>Risk categories
+</li><li>Risk status reports
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the risk management process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the risk management process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process.</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the risk management process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the risk management process.
+					
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+Practices{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="center">
+  <h3 align="left">Information Technology Infrastructure Library
+    (ITIL) Four:&nbsp;Poster</h3>
+  <hr>
+  <p><img alt="ITIL Books" class="img-fluid" src="{{ asset('storage/images/itilfourpostermedium.jpg') }}"></p>
+  <br>
+  <br>
+  <!--<p align="left"><a href="/images/itilfourpostermedium.png" >Click here for the png</a></p>-->
+  <p align="left"><a href="{{ asset('storage/assets/itilfourpostermedium.pdf') }}" >Click here for the poster in pdf</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="center">
+  <h3 align="left">Information Technology Infrastructure Library
+    (ITIL) Four:&nbsp;Poster</h3>
+  <hr>
+  <p><img alt="ITIL Books" class="img-fluid" src="{{ asset('storage/images/itilfourpostermedium.jpg') }}"></p>
+  <br>
+  <br>
+  <!--<p align="left"><a href="/images/itilfourpostermedium.png" >Click here for the png</a></p>-->
+  <p align="left"><a href="{{ asset('storage/assets/itilfourpostermedium.pdf') }}" >Click here for the poster in pdf</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

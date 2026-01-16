@@ -1,0 +1,125 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Empirical
+Process Control{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="left">
+  <!--This is where the main stuff goes-->
+
+  <h3>Empirical Process Control</h3>
+  <p align="left"><img alt="Empirical process control" class="img-fluid" src="{{ asset('storage/images/empiricalprocesscontrol.jpg') }}"></p>
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/principles.png') }}"></p>
+  <hr>
+  <p>In Scrum, decisions are made based on observation and experimentation rather than on detailed upfront planning. <br>
+    Empirical process control relies on the three main ideas of transparency, inspection, and adaptation.</p>
+  <ol>
+    <li><strong>Transparency</strong></li>
+    <p>Transparency allows all facets of any Scrum process to be observed by anyone. This promotes an easy and transparent flow of information throughout the organization and creates an open work culture. In Scrum, transparency is depicted through:</p>
+    <ul style="list-style-type:disc;">
+      <li>Artifacts</li>
+      <ul style="list-style-type:circle">
+        <li>Project Vision Statement</li>
+        <li>Prioritized Product Backlog</li>
+        <li>Release Planning Schedule</li>
+      </ul>
+      <li>Meetings</li>
+      <ul style="list-style-type:circle">
+        <li>Sprint Review Meetings</li>
+        <li>Daily Standup Meetings</li>
+      </ul>
+      <li>Information Radiators</li>
+      <ul style="list-style-type:circle">
+        <li>Burndown Chart</li>
+        <li>Scrumboard</li>
+      </ul>
+    </ul>
+    <li><strong>Inspection</strong></li>
+    <p>Inspection in Scrum is depicted through:</p>
+    <ul>
+      <li> Use of a common Scrumboard and other information radiators </li>
+      <li> Collection of feedback from the customer and other stakeholders during the Develop Epic(s), Create Prioritized Product Backlog , and Conduct Release Planning processes. </li>
+      <li>Inspection and approval of the Deliverables by the Product Owner and the customer in the Demonstrate and Validate Sprint process.</li>
+    </ul>
+    <li><strong>Adaptation</strong></li>
+    <p>Adaptation happens as the Scrum Core Team and Stakeholders learn through transparency and inspection and then adapt by making improvements in the work they are doing. Adaptation in Scrum is depicted through:</p>
+    <ul>
+      <li> Standup Meetings</li>
+      <li>Constant Risk Identification</li>
+      <li>Change Requests</li>
+      <li>Scrum Guidance Body</li>
+      <li>Retrospect Sprint Meeting</li>
+      <li>Retrospect Project Meeting</li>
+    </ul>
+  </ol>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p><a href="https://www.scrumstudy.com/whyscrum/scrum-empirical-process-control" >Thanks to ScrumStudy</a></p>
+</div>
+<br>
+<br>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+  <!--This is where the main stuff goes-->
+
+  <h3>Empirical Process Control</h3>
+  <p align="left"><img alt="Empirical process control" class="img-fluid" src="{{ asset('storage/images/empiricalprocesscontrol.jpg') }}"></p>
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/principles.png') }}"></p>
+  <hr>
+  <p>In Scrum, decisions are made based on observation and experimentation rather than on detailed upfront planning. <br>
+    Empirical process control relies on the three main ideas of transparency, inspection, and adaptation.</p>
+  <ol>
+    <li><strong>Transparency</strong></li>
+    <p>Transparency allows all facets of any Scrum process to be observed by anyone. This promotes an easy and transparent flow of information throughout the organization and creates an open work culture. In Scrum, transparency is depicted through:</p>
+    <ul style="list-style-type:disc;">
+      <li>Artifacts</li>
+      <ul style="list-style-type:circle">
+        <li>Project Vision Statement</li>
+        <li>Prioritized Product Backlog</li>
+        <li>Release Planning Schedule</li>
+      </ul>
+      <li>Meetings</li>
+      <ul style="list-style-type:circle">
+        <li>Sprint Review Meetings</li>
+        <li>Daily Standup Meetings</li>
+      </ul>
+      <li>Information Radiators</li>
+      <ul style="list-style-type:circle">
+        <li>Burndown Chart</li>
+        <li>Scrumboard</li>
+      </ul>
+    </ul>
+    <li><strong>Inspection</strong></li>
+    <p>Inspection in Scrum is depicted through:</p>
+    <ul>
+      <li> Use of a common Scrumboard and other information radiators </li>
+      <li> Collection of feedback from the customer and other stakeholders during the Develop Epic(s), Create Prioritized Product Backlog , and Conduct Release Planning processes. </li>
+      <li>Inspection and approval of the Deliverables by the Product Owner and the customer in the Demonstrate and Validate Sprint process.</li>
+    </ul>
+    <li><strong>Adaptation</strong></li>
+    <p>Adaptation happens as the Scrum Core Team and Stakeholders learn through transparency and inspection and then adapt by making improvements in the work they are doing. Adaptation in Scrum is depicted through:</p>
+    <ul>
+      <li> Standup Meetings</li>
+      <li>Constant Risk Identification</li>
+      <li>Change Requests</li>
+      <li>Scrum Guidance Body</li>
+      <li>Retrospect Sprint Meeting</li>
+      <li>Retrospect Project Meeting</li>
+    </ul>
+  </ol>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p><a href="https://www.scrumstudy.com/whyscrum/scrum-empirical-process-control" >Thanks to ScrumStudy</a></p>
+</div>
+<br>
+<br>
+{% endif %}
+
+
+{% endblock %}

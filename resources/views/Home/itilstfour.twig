@@ -1,0 +1,422 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+ST{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL ST Release and Deployment Management</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=19') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Release and Deployment Management</i> aims to plan, schedule and control the movement of releases to test and live environments. The primary goal of this ITIL process is to ensure that the integrity of the live environment is protected and that the correct components are released.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Release Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>The activities and process objectives of the Release and Deployment Management process in ITIL V3 are mostly identical to Release Management in ITIL V2. ITIL V3 Release Management provides considerably more details in the areas of <i>Release planning and testing</i>; this led to the addition of two dedicated processes which were subsumed under Release Management in the previous ITIL version: Project Management - Transition Planning and Support, and Service Validation and Testing. </p>
+  <p>&#160;</p>
+  <p>In <i><b>ITIL 2011</b></i> <a class="mw-selflink selflink">Release Management</a> is called upon from Project Management to perform the detailed planning of Release build, Release test and Release deployment. </p>
+  <p>Additional interfaces between Release Management and ITIL Project Management have been introduced to ensure that Project Management is kept up-to-date with current planning information. </p>
+  <p>The process overview of <a href="/images/itilstfive.jpg"  title="Release-and-deployment-management-itil.jpg">Release &amp; Deployment Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>The latest ITIL 2011 guidance also specifies that Minor Changes are implemented by Change Management without the involvement of Release Management, so the Minor Release Deployment sub-process has been removed. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Release Management sub-processes:">These are the <strong class="selflink">ITIL Release Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Release_Management_Support" itemprop="itemListElement">Release Management Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide guidelines and support for the deployment of Releases. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Release_Management_Planning" itemprop="itemListElement">Release Planning</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assign authorized Changes to Release Packages and to define the scope and content of Releases. Based on this information, the Release Planning process develops a schedule for building, testing and deploying the Release. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Release_Build" itemprop="itemListElement">Release Build</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To issue all necessary Work Orders and Purchase Requests so that Release components are either bought from outside vendors or developed/ customized in-house. At the end of this process, all required Release components are ready to enter the testing phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Release_Deployment" itemprop="itemListElement">Release Deployment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To deploy the Release components into the live production environment. This process is also responsible for training end-users and operating staff and circulating information/ documentation on the newly deployed Release or the services it supports. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Early_Life_Support" itemprop="itemListElement">Early Life Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To resolve operational issues quickly during an initial period after Release deployment, and to remove any remaining errors or deficiencies. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Release_Closure" itemprop="itemListElement">Release Closure</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To formally close a Release after verifying if activity logs and CMS contents are up to date. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Release Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Development_Work_Order" itemprop="itemListElement">Development Work Order</span></b> </p>
+    <ul>
+      <li itemprop="description">A Work Order for the development or customization of an application or system, typically issued from <strong class="selflink">Release Management</strong>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Installation_Work_Order" itemprop="itemListElement">Installation Work Order</span></b> </p>
+    <ul>
+      <li itemprop="description">A Work Order for the installation of an application, system or infrastructure component, typically issued from <strong class="selflink">Release Management</strong>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Release_Policy" itemprop="itemListElement">Release Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of rules for deploying releases into the live operational environment, defining different approaches for releases depending on their urgency and impact (NB: ITIL Checklist Release Policy). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Release" itemprop="itemListElement">Release</span></b> </p>
+    <ul>
+      <li itemprop="description">A Release (also referred to as a <i>Release Package</i>) consists of a single Release Unit or a structured set of Release Units. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Release_Record" itemprop="itemListElement">Release Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A Release Record contains all details of a Release, documenting the history of the Release from the first planning stages to closure. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Release_Unit" itemprop="itemListElement">Release Unit</span></b> </p>
+    <ul>
+      <li itemprop="description">A Release Unit is a set of new, changed and/or unchanged Configuration Items, which are tested and introduced into the live environment together to implement one or several approved Changes. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Transition#ITIL_KPIs_Release_and_Deployment_Management" title="ITIL KPIs Release Management">Key Performance Indicators (KPIs) Release and Deployment Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL-Checklists#Release_Management">Release Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Release_Policy" title="Release Policy template">Release Policy</a>, and</li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Release_Plan" title="Release Plan">Release Plan</a></li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Release_Manager">Release Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Release Manager is responsible for planning and controlling the movement of Releases to test and live environments. His primary objective is to ensure that the integrity of the live environment is protected and that the correct components are released.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="5"><b><span id="RACI-Matrix-Release-Management">Responsibility Matrix: ITIL Release Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Release Manager </th>
+        <th style="background:#ffffee;">Project Manager </th>
+        <th style="background:#ffffee;">Service Owner </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Management_Support">Release Management Support</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Management_Planning">Release Planning</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Build">Release Build</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Deployment">Release Deployment</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Early_Life_Support">Early Life Support</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Closure">Release Closure</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Release &amp; Deployment process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Release Management.</span> </p>
+  <p><span id="ITIL_Release_Management_Group_1">[3] Process Owner, IT Operator, Facilities Manager (and others, as appropriate)</span> </p>
+  <p><span id="ITIL_Release_Management_Group_2">[4] ... and others, as appropriate.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL ST Release and Deployment Management</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=19') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Release and Deployment Management</i> aims to plan, schedule and control the movement of releases to test and live environments. The primary goal of this ITIL process is to ensure that the integrity of the live environment is protected and that the correct components are released.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Release Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>The activities and process objectives of the Release and Deployment Management process in ITIL V3 are mostly identical to Release Management in ITIL V2. ITIL V3 Release Management provides considerably more details in the areas of <i>Release planning and testing</i>; this led to the addition of two dedicated processes which were subsumed under Release Management in the previous ITIL version: Project Management - Transition Planning and Support, and Service Validation and Testing. </p>
+  <p>&#160;</p>
+  <p>In <i><b>ITIL 2011</b></i> <a class="mw-selflink selflink">Release Management</a> is called upon from Project Management to perform the detailed planning of Release build, Release test and Release deployment. </p>
+  <p>Additional interfaces between Release Management and ITIL Project Management have been introduced to ensure that Project Management is kept up-to-date with current planning information. </p>
+  <p>The process overview of <a href="/images/itilstfive.jpg"  title="Release-and-deployment-management-itil.jpg">Release &amp; Deployment Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>The latest ITIL 2011 guidance also specifies that Minor Changes are implemented by Change Management without the involvement of Release Management, so the Minor Release Deployment sub-process has been removed. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Release Management sub-processes:">These are the <strong class="selflink">ITIL Release Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Release_Management_Support" itemprop="itemListElement">Release Management Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide guidelines and support for the deployment of Releases. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Release_Management_Planning" itemprop="itemListElement">Release Planning</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assign authorized Changes to Release Packages and to define the scope and content of Releases. Based on this information, the Release Planning process develops a schedule for building, testing and deploying the Release. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Release_Build" itemprop="itemListElement">Release Build</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To issue all necessary Work Orders and Purchase Requests so that Release components are either bought from outside vendors or developed/ customized in-house. At the end of this process, all required Release components are ready to enter the testing phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Release_Deployment" itemprop="itemListElement">Release Deployment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To deploy the Release components into the live production environment. This process is also responsible for training end-users and operating staff and circulating information/ documentation on the newly deployed Release or the services it supports. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Early_Life_Support" itemprop="itemListElement">Early Life Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To resolve operational issues quickly during an initial period after Release deployment, and to remove any remaining errors or deficiencies. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Release_Closure" itemprop="itemListElement">Release Closure</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To formally close a Release after verifying if activity logs and CMS contents are up to date. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Release Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Development_Work_Order" itemprop="itemListElement">Development Work Order</span></b> </p>
+    <ul>
+      <li itemprop="description">A Work Order for the development or customization of an application or system, typically issued from <strong class="selflink">Release Management</strong>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Installation_Work_Order" itemprop="itemListElement">Installation Work Order</span></b> </p>
+    <ul>
+      <li itemprop="description">A Work Order for the installation of an application, system or infrastructure component, typically issued from <strong class="selflink">Release Management</strong>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Release_Policy" itemprop="itemListElement">Release Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of rules for deploying releases into the live operational environment, defining different approaches for releases depending on their urgency and impact (NB: ITIL Checklist Release Policy). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Release" itemprop="itemListElement">Release</span></b> </p>
+    <ul>
+      <li itemprop="description">A Release (also referred to as a <i>Release Package</i>) consists of a single Release Unit or a structured set of Release Units. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Release_Record" itemprop="itemListElement">Release Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A Release Record contains all details of a Release, documenting the history of the Release from the first planning stages to closure. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Release_Unit" itemprop="itemListElement">Release Unit</span></b> </p>
+    <ul>
+      <li itemprop="description">A Release Unit is a set of new, changed and/or unchanged Configuration Items, which are tested and introduced into the live environment together to implement one or several approved Changes. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Transition#ITIL_KPIs_Release_and_Deployment_Management" title="ITIL KPIs Release Management">Key Performance Indicators (KPIs) Release and Deployment Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL-Checklists#Release_Management">Release Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Release_Policy" title="Release Policy template">Release Policy</a>, and</li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Release_Plan" title="Release Plan">Release Plan</a></li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Release_Manager">Release Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Release Manager is responsible for planning and controlling the movement of Releases to test and live environments. His primary objective is to ensure that the integrity of the live environment is protected and that the correct components are released.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="5"><b><span id="RACI-Matrix-Release-Management">Responsibility Matrix: ITIL Release Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Release Manager </th>
+        <th style="background:#ffffee;">Project Manager </th>
+        <th style="background:#ffffee;">Service Owner </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Management_Support">Release Management Support</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Management_Planning">Release Planning</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Build">Release Build</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Deployment">Release Deployment</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Early_Life_Support">Early Life Support</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Release_Closure">Release Closure</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Release &amp; Deployment process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Release Management.</span> </p>
+  <p><span id="ITIL_Release_Management_Group_1">[3] Process Owner, IT Operator, Facilities Manager (and others, as appropriate)</span> </p>
+  <p><span id="ITIL_Release_Management_Group_2">[4] ... and others, as appropriate.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

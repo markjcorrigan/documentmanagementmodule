@@ -1,0 +1,406 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SS{% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SS Business Relationship Management</h3>
+  <p><i><a href="/home/itilss">Back to ITIL SS Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/sssummary.pdf#page=17') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Business Relationship Management</i> (BRM) aims to maintain a positive relationship with customers. The ITIL BRM process identifies the needs of existing and potential customers and ensures that appropriate services are developed to meet those needs.</span></p>
+  <p><b>Part of</b>: Service Strategy </p>
+  <p><b>Process Owner</b>: Business Relationship Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#KPIs"><span class="tocnumber">4</span> <span class="toctext">KPIs</span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Business Relationship Management has been introduced as a new process in <i><b>ITIL 2011</b></i>. The process overview of <a href="/images/itilssfive.jpg"  title="Itil-business-relationship-management.jpg">ITIL Business Relationship Management (.JPG)</a> is showing the most important interfaces. </p>
+  <p>The latest guidance places customer satisfaction surveys and the management of complaints within Business Relationship Management. As a result, the corresponding processes have been moved from Continual Service Improvement to Business Relationship Management. </p>
+  <p>The role Business Relationship Manager has been introduced in ITIL 2011 to perform the activities in the Business Relationship Management process. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Business Relationship Management sub-processes:">These are the <strong class="selflink">Business Relationship Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Customer_Relationship" itemprop="itemListElement">Maintain Customer Relationships</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To ensure that the service provider continues to understand the needs of existing customers and establishes relationships with potential new customers. This process is also responsible for maintaining the Customer Portfolio. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Requirements" itemprop="itemListElement">Identify Service Requirements</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To understand and document the desired outcome of a service, and to decide if the customer's need can be fulfilled using an existing service offering or if a new or changed service must be created. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Business_Relationship_Management_Services" itemprop="itemListElement">Sign up Customers to Standard Services</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To capture customer requirements and agree service level targets with customers who request the provision of existing standard services (no modifications to existing Supporting Services are necessary in order to fulfill the customer's needs). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Business_Relationship_Management_Satisfaction" itemprop="itemListElement">Customer Satisfaction Survey</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To plan, carry out and evaluate regular customer satisfaction surveys. The principal aim of this process is to learn about areas where customer expectations are not being met before customers are lost to alternative service providers. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Complaints_Management" itemprop="itemListElement">Handle Customer Complaints</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To record customer complaints and compliments, to assess the complaints and to instigate corrective action if required. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Monitor_ITIL_Complaints" itemprop="itemListElement">Monitor Customer Complaints</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To continuously monitor the processing status of outstanding customer complaints and to take corrective action if required. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Business Relationship Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Complaint_Status" itemprop="itemListElement">Complaint Status Information</span></b> </p>
+    <ul>
+      <li itemprop="description">A message containing the present status of a complaint, typically sent to a customer who earlier made a complaint. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Complaints_Compliments" itemprop="itemListElement">Complaints and Compliments</span></b> </p>
+    <ul>
+      <li itemprop="description">Complaints and compliments from the customer side which are addressed in the Business Relationship Management process. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Complaints_Log" itemprop="itemListElement">Complaints Log</span></b> </p>
+    <ul>
+      <li itemprop="description">The Complaints Log contains the full history of all received customer complaints, complete with activities triggered by those complaints. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Customer_Portfolio" itemprop="itemListElement">Customer Portfolio</span></b> </p>
+    <ul>
+      <li itemprop="description">The Customer Portfolio is used to record all customers of the IT service provider. The Customer Portfolio is the Business Relationship Manager's view of the customers who receive services from the IT service provider. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Customer_Survey_Questionnaire" itemprop="itemListElement">Customer Survey Questionnaire</span></b> </p>
+    <ul>
+      <li itemprop="description">A questionnaire for surveying customer satisfaction, aimed at getting insight into overall customer satisfaction and customers' views on specific (aspects of) services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Customer_Survey_Response" itemprop="itemListElement">Customer Survey Response</span></b> </p>
+    <ul>
+      <li itemprop="description">The response to a service provider's customer survey, typically a completed questionnaire. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Outcomes" itemprop="itemListElement">Desired Service Outcomes</span></b> </p>
+    <ul>
+      <li itemprop="description">The desired outcomes of a service, stated in the language of the customer. Based on this information, more detailed documents are created to specify the requirements in the service provider's language. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Requirements_Outline" itemprop="itemListElement">Outline of Service Requirements</span></b> </p>
+    <ul>
+      <li itemprop="description">The desired outcome of a service, stated in terms of required service functionality (utility) and service levels (warranty). Based on this information, detailed service requirements are specified during the Service Design stage. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="KPIs">KPIs</span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Strategy#ITIL_KPIs_Business_Relationship_Management" title="ITIL KPIs Business Relationship Management">Key Performance Indicators (KPIs) Business Relationship Management</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Business_Relationship_Manager">Business Relationship Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Business Relationship Manager is responsible for maintaining a positive relationship with customers, identifying customer needs and ensuring that the service provider is able to meet these needs with an appropriate catalogue of services. The Business Relationship Manager works closely with the Service Level Manager.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="ITIL_Customer">Customer</span></b> </p>
+  <ul>
+    <li>Someone who buys IT services. The Customer of an IT service provider is the person or group who defines and agrees the service level targets.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b>Responsibility Matrix: Business Relationship Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Business Relationship Manager </th>
+        <th style="background:#ffffee;">1st Level Support </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Customer_Relationship">Maintain Customer Relationships</a></td>
+        <td>AR </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Service_Requirements">Identify Service Requirements</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Business_Relationship_Management_Services">Sign up Customers to Standard Services</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Business_Relationship_Management_Satisfaction">Customer Satisfaction Survey</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Complaints_Management">Handle Customer Complaints</a></td>
+        <td>AR </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Monitor_ITIL_Complaints">Monitor Customer Complaints</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Business Relationship Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Business Relationship Management.</span> <br>
+    <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/Business_Relationship_Management"  >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SS Business Relationship Management</h3>
+  <p><i><a href="/home/itilss">Back to ITIL SS Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/sssummary.pdf#page=17') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Business Relationship Management</i> (BRM) aims to maintain a positive relationship with customers. The ITIL BRM process identifies the needs of existing and potential customers and ensures that appropriate services are developed to meet those needs.</span></p>
+  <p><b>Part of</b>: Service Strategy </p>
+  <p><b>Process Owner</b>: Business Relationship Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#KPIs"><span class="tocnumber">4</span> <span class="toctext">KPIs</span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Business Relationship Management has been introduced as a new process in <i><b>ITIL 2011</b></i>. The process overview of <a href="/images/itilssfive.jpg"  title="Itil-business-relationship-management.jpg">ITIL Business Relationship Management (.JPG)</a> is showing the most important interfaces. </p>
+  <p>The latest guidance places customer satisfaction surveys and the management of complaints within Business Relationship Management. As a result, the corresponding processes have been moved from Continual Service Improvement to Business Relationship Management. </p>
+  <p>The role Business Relationship Manager has been introduced in ITIL 2011 to perform the activities in the Business Relationship Management process. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Business Relationship Management sub-processes:">These are the <strong class="selflink">Business Relationship Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Customer_Relationship" itemprop="itemListElement">Maintain Customer Relationships</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To ensure that the service provider continues to understand the needs of existing customers and establishes relationships with potential new customers. This process is also responsible for maintaining the Customer Portfolio. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Requirements" itemprop="itemListElement">Identify Service Requirements</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To understand and document the desired outcome of a service, and to decide if the customer's need can be fulfilled using an existing service offering or if a new or changed service must be created. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Business_Relationship_Management_Services" itemprop="itemListElement">Sign up Customers to Standard Services</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To capture customer requirements and agree service level targets with customers who request the provision of existing standard services (no modifications to existing Supporting Services are necessary in order to fulfill the customer's needs). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Business_Relationship_Management_Satisfaction" itemprop="itemListElement">Customer Satisfaction Survey</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To plan, carry out and evaluate regular customer satisfaction surveys. The principal aim of this process is to learn about areas where customer expectations are not being met before customers are lost to alternative service providers. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Complaints_Management" itemprop="itemListElement">Handle Customer Complaints</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To record customer complaints and compliments, to assess the complaints and to instigate corrective action if required. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Monitor_ITIL_Complaints" itemprop="itemListElement">Monitor Customer Complaints</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To continuously monitor the processing status of outstanding customer complaints and to take corrective action if required. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Business Relationship Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Complaint_Status" itemprop="itemListElement">Complaint Status Information</span></b> </p>
+    <ul>
+      <li itemprop="description">A message containing the present status of a complaint, typically sent to a customer who earlier made a complaint. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Complaints_Compliments" itemprop="itemListElement">Complaints and Compliments</span></b> </p>
+    <ul>
+      <li itemprop="description">Complaints and compliments from the customer side which are addressed in the Business Relationship Management process. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Complaints_Log" itemprop="itemListElement">Complaints Log</span></b> </p>
+    <ul>
+      <li itemprop="description">The Complaints Log contains the full history of all received customer complaints, complete with activities triggered by those complaints. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Customer_Portfolio" itemprop="itemListElement">Customer Portfolio</span></b> </p>
+    <ul>
+      <li itemprop="description">The Customer Portfolio is used to record all customers of the IT service provider. The Customer Portfolio is the Business Relationship Manager's view of the customers who receive services from the IT service provider. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Customer_Survey_Questionnaire" itemprop="itemListElement">Customer Survey Questionnaire</span></b> </p>
+    <ul>
+      <li itemprop="description">A questionnaire for surveying customer satisfaction, aimed at getting insight into overall customer satisfaction and customers' views on specific (aspects of) services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Customer_Survey_Response" itemprop="itemListElement">Customer Survey Response</span></b> </p>
+    <ul>
+      <li itemprop="description">The response to a service provider's customer survey, typically a completed questionnaire. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Outcomes" itemprop="itemListElement">Desired Service Outcomes</span></b> </p>
+    <ul>
+      <li itemprop="description">The desired outcomes of a service, stated in the language of the customer. Based on this information, more detailed documents are created to specify the requirements in the service provider's language. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Requirements_Outline" itemprop="itemListElement">Outline of Service Requirements</span></b> </p>
+    <ul>
+      <li itemprop="description">The desired outcome of a service, stated in terms of required service functionality (utility) and service levels (warranty). Based on this information, detailed service requirements are specified during the Service Design stage. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="KPIs">KPIs</span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Strategy#ITIL_KPIs_Business_Relationship_Management" title="ITIL KPIs Business Relationship Management">Key Performance Indicators (KPIs) Business Relationship Management</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Business_Relationship_Manager">Business Relationship Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Business Relationship Manager is responsible for maintaining a positive relationship with customers, identifying customer needs and ensuring that the service provider is able to meet these needs with an appropriate catalogue of services. The Business Relationship Manager works closely with the Service Level Manager.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="ITIL_Customer">Customer</span></b> </p>
+  <ul>
+    <li>Someone who buys IT services. The Customer of an IT service provider is the person or group who defines and agrees the service level targets.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b>Responsibility Matrix: Business Relationship Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Business Relationship Manager </th>
+        <th style="background:#ffffee;">1st Level Support </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Customer_Relationship">Maintain Customer Relationships</a></td>
+        <td>AR </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Service_Requirements">Identify Service Requirements</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Business_Relationship_Management_Services">Sign up Customers to Standard Services</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Business_Relationship_Management_Satisfaction">Customer Satisfaction Survey</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Complaints_Management">Handle Customer Complaints</a></td>
+        <td>AR </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Monitor_ITIL_Complaints">Monitor Customer Complaints</a></td>
+        <td>AR </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Business Relationship Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Business Relationship Management.</span> <br>
+    <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/Business_Relationship_Management"  >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

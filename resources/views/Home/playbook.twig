@@ -1,0 +1,372 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Why PMWay{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="center">
+<h3 align="left">PMWay:  The Playbook</h3>
+<br>
+<br>
+<br>
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepin" aria-expanded="false" aria-controls=
+        "collapsepin">Where is your game at?</button>
+<div class="collapse" id="collapsepin">
+  <div class="container">
+    <div class="card text-center">
+      <h5 class="card-header" align="center">Is the Dunning-Kruger effect affecting your
+        production stats?</h5>
+      <div class="card-body text-center"> <img class="img-fluid" src="{{ asset('storage/images/dunningkrugereffectonprojectprocesseswithpin.png') }}"> </div>
+      <div class="card-footer"> While best practice is always the goal, best practical is better.<br>
+        I.e. tailoring processes for lean while preserving quality is key </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsekeyquestions" aria-expanded="false" aria-controls=
+        "collapsekeyquestions">Improvement<br>
+Dimensions</button>
+<div class="collapse" id="collapsekeyquestions">
+  <div class="container">
+    <div class="card text-center">
+      <h5 class="card-header" align="center">Questions for the Capability Maturity
+        Journey</h5>
+      <div class="card-body text-center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/peopleprocesstechnologygovernanceexecution.png') }}"> </div>
+      <div class="card-footer"> </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseplaybook" aria-expanded="false" aria-controls=
+        "collapseplaybook">Playbook</button>
+<div class="collapse" id="collapseplaybook">
+  <div class="container">
+    <div class="card text-center">
+      <h5 class="card-header" align="center">The detailed Capability
+        Maturity Dashboard <br>
+        (for Systems Development
+        Process Improvements)<br>
+        is found below.</h5>
+      <div class="card-body text-center">
+        <hr style="width: 36%">
+        <h5>The Problem:</h5>
+        <p>Lack of process focus at<br>
+          Capability Maturity Level 1<br>
+          <img alt="" class="img-fluid" src="{{ asset('storage/images/justdoit.png') }}" >
+        <hr style="width: 36%">
+        <img alt="" class="img-fluid" src="{{ asset('storage/images/firstbasehomepage.png') }}"><br>
+        Note the shark attack! <br>
+        CM L1 (and below) is where Professional Project Managers and
+        Team Members <br>
+        can
+        become shark bait! </div>
+      <div class="container">
+        <hr style="width: 22%">
+        <h5>The Solution:</h5>
+        <p>Per W.
+          Edward's Deming<br>
+          Capability
+          Maturity Level 2 +<br>
+          &quot;Process Excellence&quot; is driven into place <br>
+          by the Project Sponsor and the Executive</p>
+        <hr style="width: 22%">
+        <br>
+        <p align="left" >The CMMi Development 3.1 Dashboard is found below.
+          The Dashboard forms a synthesis from of a body of work for process improvement
+          in the area of systems development by
+          the Carnegie Mellon University in the USA.<br>
+          CMMi is based in
+          essence on
+          the wisdom of W. Edwards Deming and his Plan, Do, Check, Act
+          cycle, his Red Bead Experiment and his 14 Observations for
+          Management amongst other insights.&nbsp; It has been included here to illustrate the game
+          (process focus) that is needed for success. <br>
+          CMMi Dev 3.1 is one
+          of 4 Dashboards from the CMMi suite which includes process
+          improvement for Development,
+          Services, Acquisition (Procurement) and People. </p>
+        <hr>
+        <p class="small"><em>Click this slide for more
+          detail!</em><br>
+          <img class="img-fluid" src="{{ asset('storage/images/bottomlinehand.jpg') }}"
+                                             onmouseover="this.src='{{ asset('storage/images/procimp.png') }}'"
+                                             onmouseout=
+                                             "this.src='{{ asset('storage/images/bottomlinehand.jpg') }}'"/></p>
+        <hr>
+        <h5>The detailed Capability Maturity Model is found below.</h5>
+        <p>Here again is the simple CM Model<br>
+          but with process focus on Information Technology
+          / Systems Development.<br>
+          (I.e. Technology and Process focus as
+          part of the People, Process Technology triad)</p>
+        <img alt="" class="img-fluid" src="{{ asset('storage/images/cmmproject2plusothercmmi.png') }}" ><br>
+        <br>
+        <p>Below is the more detailed CM Model<br>
+          Let's find out how this works</p>
+        <hr>
+        <h5 align="left"> The more detailed Capability Maturity
+          Model for Development 3.1 dashboard
+          below has some key headings.&nbsp; <br>
+          These are descripted
+          here:</h5>
+        <hr>
+        <p align="left" ><strong>Category:&nbsp; </strong><span class="smltxt">Logical grouping of Process Areas I.e. Project Management, Engineering, Support etc.<span class="auto-style1"><br />
+          </span></span><span class="auto-style1"><span class="auto-style2"> <strong>Process Area or PA:</strong></span>&nbsp; </span> <span class="smltxt"> A Process Area (there are 22 in CMMi Dev 1.3) is a cluster of related practices in an area that, when performed collectively, satisfy a set of goals considered important for making significant improvement in that area. </span><span class="auto-style1"><br />
+          </span><span class="auto-style3"> <strong>ML</strong></span><span class="auto-style1"><strong> or Maturity level:</strong></span><span class="smltxt"> Degree of process improvement across a predefined set of process areas in which all goals within the set are attained.</span><span class="auto-style1"><br />
+          <span class="auto-style2"> <strong>SG</strong></span><strong> or Specific Goal:</strong></span><span class="smltxt"> SG's apply to a process area and address the unique characteristics that describe what must be implemented to satisfy the process area. </span><span class="auto-style1"><br />
+          <span class="auto-style2"> <strong>SP</strong></span><strong> or Specific Practice:</strong></span><span class="smltxt"> SP's are an activity that is considered important in achieving the associated specific goal. The specific practices describe the activities expected to result in achievement of the specific goals of a process area. Specific practices are expected model components.</span></p>
+        <hr>
+      </div>
+      <img alt="CMMi-Dev1.3 dashboard" class="img-fluid"  src="{{ asset('storage/images/cmmi-dev1.png') }}" >
+      <hr>
+      <div class="container">
+        <h5 align="left">If you are interested in finding out how this
+          Capability Maturity Model for Development 3.1
+          Dashboard
+          is put together (and how it can help you immediately to up your
+          game stats),
+          work through these 6 steps:</h5>
+        <hr>
+        <p align="left"><strong>Step 1.</strong>&nbsp;
+          Find the <strong>Process</strong>, <strong>Project</strong>, <strong>Engineering</strong> and <strong>Service Management</strong> <strong>Categories</strong> on the left side of the CMMi Dev Dashboard above! </p>
+        <hr>
+        <p align="left"><strong>Step 2.</strong>&nbsp; Find the <strong>Project Planning</strong> (PP) and <strong>Project Monitoring and Control</strong> (PMC) Process Areas
+          (PA) within the <strong>Project Category</strong>. Can you see
+          that these (PP and PMC) are
+          Capability Maturity (<strong>ML - Maturity Level</strong>) 2 processes. <br>
+          Now can you see that <a href="/home/demo" >PP and PMC bolster the
+          Execution Process Group in the PMBOK 6 Dashboard?</a></p>
+        <a href="/home/demo" ><img alt="" class="img-fluid" src="{{ asset('storage/images/mainprocessdashraisedpppmc.png') }}" align="middle" title="Click here to enlarge the PMBOK version 6 Dashboard"></a>
+        <p align="center"><em>The link opens up <strong>a new tab in your web browser.<br>
+          Click the previous tab</strong> in your browser to return to these steps!</em></p>
+        <h3>Using Agile and SCRUM <br>
+          to show<br>
+          why process focus
+          is crucial for success<br>
+          (I.e. PP and PMC as core processes are
+          equally relevant and important for Agile)</h3>
+        <p>If you have the
+          maturity and capability to run agile at Capability Maturity Level 2 and above</p>
+        <p align="left">Before you throw away the idea of the PMBOK as
+          no longer relevant,
+          can you see that <strong>PP and PMC are also essential in Agile</strong>,
+          clearly illustrated in these images from the
+          SCRUM method below.&nbsp; I.e. the Product Owner as &quot;Big Dog&quot; must define
+          requirements (PP), hand these over to the Scrum Master (and
+          scrum team) and then &quot;Big Dog&quot; checks that quality delivery
+          (working software) did in fact happen during the sprint in the
+          &quot;Demonstrate and Validate Sprint&quot; process (PMC).&nbsp; I.e.
+          Scrum sprints are engines to produce outputs defined by the
+          Product Owner in the Product and Sprint backlogs (ranked for
+          quickest / highest value gain) in the form of working software!</p>
+        <div align="center"> <img alt="sprint with PP and PMC" class="img-fluid" src="{{ asset('storage/images/Scrumprocessswirl.jpg') }}"><br>
+          <br>
+          <br>
+          <img alt="sprint with PP and PMC" class="img-fluid" src="{{ asset('storage/images/sprintmethodwithpppmc.jpg') }}"><br>
+          <br>
+          <br>
+          <br>
+          <img alt="sprint with PP and PMC" class="img-fluid" src="{{ asset('storage/images/pppmcperscrumedited.png') }}"><br>
+          <br>
+          <br>
+          <img alt="" class="img-fluid"  src="{{ asset('storage/images/scrumprocessespppmc.png') }}" ><br>
+          <br>
+          <br>
+        </div>
+        <hr>
+        <p align="left"><strong>Step 3.</strong>&nbsp; Now find the Requirements Management <strong>(REQM) Process Area</strong> within the <strong>Engineering Category</strong>. This is a Level 2 process. These, via ITIL
+          (The IT Infrastructure Library, as best practice dealt with in
+          more detail within PMWay) <strong>Service Catalogues</strong> (for example), will form the process improvements (the glue) that
+          is needed (by each IT system) for competitive success.<br>
+          Per
+          Deming, the People, Process and Technology triad is essential,
+          with process the glue that holds the triad together.&nbsp; Put
+          another way, to expand the triad (to improve towards higher
+          productivity and quality), triangle points must be pulled out
+          in a balanced manner, via process improvements focus.&nbsp;
+          I.e. you need to focus on all the points at the same time for success, but
+          starting with process improvements in how people work.&nbsp; Deming insisted that 85 to 97 percent of problems in an organization are the
+          responsibility of management.&nbsp; Once these hit the factory floor there
+          is very little that your people (EVEN YOUR BEST PEOPLE WITH THE BEST WILL IN THE WORLD) can do
+          from the floor to improve their (or the business) situation.&nbsp; I.e. the
+          most valuable process improvements must be engineered back into your systems
+          (via software projects) so that your people can be empowered to use their
+          (the business) technology to better service your valued clients.&nbsp; This
+          must be an empowering and realistic imperative from the very top of the
+          organization!</p>
+        <h5>The People, Process and Technology Triad</h5>
+        <p>Pulling together CMMi and the above statement in a nutshell<br>
+          Can you see it?</p>
+        <div align="center">
+          <p class="small text-center"><em>Click the image below.</em></p>
+          <img class="img-fluid" src=
+                "/images/ppt.png" onmouseover=
+                                                                         "this.src='{{ asset('storage/images/peopleprocessbottomlineboxedin.png') }}'"
+                                                                         onmouseout=
+                                                                         "this.src='{{ asset('storage/images/ppt.png') }}'"/>
+          <h5>Everyone realizes the importance of having a motivated, quality workforce
+            but even our finest people cannot perform at their best when the
+            process is not understood or operating at its best.</h5>
+          <hr>
+        </div>
+        <p align="left"><strong>Step 4.</strong>&nbsp; Find the Configuration Management (<strong>CM</strong>) Process Area in the <strong>Support Category</strong>. This is a
+          Capability Maturity (<strong>ML</strong>) 2 process. </p>
+        <hr>
+        <p align="left"><strong>Step 5.</strong>&nbsp; <strong>REQM</strong> and <strong>CM</strong> form the essence
+          of the V Model which is shown below.</p>
+        <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/vmodelcb.jpg') }}"></div>
+        <hr>
+        <p class align="left"><strong>Step 6.</strong>&nbsp; Now find Verification (<strong>VER</strong>) and Validation (<strong>VAL</strong>) Process Areas within the Engineering Category. <br>
+          This is at the heart of bi-directional traceability
+          (illustrated in the V Model above) and involves moving the baseline
+          forward (for quality improvement).<br>
+          Can you find
+          bi-directional traceability at <strong>SP 4.1</strong> from the <strong>REQM</strong> process within the <strong>Engineering Category</strong>?&nbsp; <br>
+          If you take a look at
+          an image from the from latest PMBOK 6, this is the
+          essence of everything that has been said above.&nbsp; <br>
+          I.e.
+          careful, systematic movement of systems baselines to create
+          business value!</p>
+        <img class="img-fluid" src="{{ asset('storage/images/orglargebezelled.png') }}" >
+        <hr>
+        <p class align="left"><strong>Bonus Step.</strong>&nbsp; As a
+          bonus step find <strong>RSKM</strong>.&nbsp; This is Risk
+          Management and is a <strong>CM</strong> Level 3 <strong>Project Management
+          Category</strong> process.&nbsp;
+          PMWay suggests that RSKM is crucial if agile (or traditional)
+          project management is going to be attempted at CM Level 1.&nbsp; </p>
+        <hr>
+        <p class align="left"><strong>Bonus Step.</strong>&nbsp; The<strong> MA</strong> process from the <strong>Support Category</strong> will require
+          a Project Management Information System (PMIS) to ensure that
+          TAsking (Time Asking) of a resources time and the production
+          from this time allocation is measured for productivity and quality.&nbsp; Put a
+          PMIS into place and manage it carefully and <strong>MA</strong> is automatically
+          handled.&nbsp; I.e. as an accounting system automatically
+          handles a consolidation of accounting entries to form your book
+          of account and financial reports.</p>
+        <hr>
+        <p class align="left"><strong>Conclusion:&nbsp; </strong>PMWay's advice
+          (for both Traditional and Agile Project Management) is to zero in on <strong>PP</strong> and <strong>PMC</strong> as these CM Level 2 processes are crucial for success.  Then make sure that <strong>RSKM</strong> is working, even if <strong>RSKM</strong> is a CM Level 3 process.
+          On a PMIS RSKM can be handled within the collaborative
+          environment with escalation to project sponsors for stuff that
+          the team cannot deal with!&nbsp; Then make sure that <strong>PP</strong> and <strong>PMC</strong> address <strong>REQM</strong>, <strong>CM</strong> at CM L2 and <strong>VER</strong> and <strong>VAL</strong> at CM L3.&nbsp;  With this in place (and off this firm base) you can start to pull in the other
+          CMMi processes listed above.&nbsp;
+          With a well managed PMIS you will automatically dust <strong>MA</strong>.&nbsp;
+          CMMi core L2 and core parts of L3 installed. <br>
+          Quite Easily Done
+          and Dusted!</p>
+        <hr>
+        <h3>American Football</h3>
+        <h5>The Capability Maturity Model in action.<br>
+          Why?  Because it is played on a field that looks like a ruler!
+          <hr>
+          <br>
+          <br>
+          <img alt="" class="img-fluid" src="{{ asset('storage/images/gg_measure1.png') }}" ><img alt="" class="img-fluid" src="{{ asset('storage/images/football-diagram1.gif') }}" ></h5>
+        <hr>
+        <p align="left">Everyone is talking about SCRUM which, based on the game of
+          Rugby, is an excellent agile approach (<strong><em>if followed correctly</em></strong>).<br>
+          However, PMWay believes that a
+          lot can be learned from the NFL (American National
+          Football League) approach towards creating 'best of the
+          best' professionals with their touchdown scoring
+          culture.&nbsp; How about a Super bowl for
+          the project with the
+          best production stats!</p>
+        <div align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/touchdownwow.png') }}" ><br>
+          <br>
+          <hr>
+          <h5 align="center">Agile<br>
+            from a
+            software complexity and project management safety
+            perspective <br>
+            when complex software
+            project management is involved.&nbsp; </h5>
+          <hr>
+          <p align="left"> PMWay loves agile!&nbsp;
+            PRINCE2 Agile, DSDM, SCRUM, XP and other agile method detail is found
+            within this web.&nbsp; However (when discussing agility without software
+            engineering savvy), software design, development and deployment
+            of technology are complex undertakings!  According to Frederick P. Brooks (an
+            American computer architect, software engineer, and
+            computer scientist) of &quot;No Silver Bullet - Essence
+            and Accident in Software Engineering&quot; fame, these "can be regarded
+            as being one of the most difficult undertakings".&nbsp; <br>
+            <br>
+            In Brooks' Anniversary
+            Edition, some 20 years after the original publication of the Essays on Software
+            Engineering, he again emphasized project complexity and why software development
+            projects, to create "programming systems products" can, if not carefully managed, often
+            become mired in ever-increasing difficulties he called the tar pit of failed software projects.
+            [<strong>The La Brea Tar Pits</strong> are one of the world's best repositories for fossilized vertebrates.
+            Animals would wander on top of a<strong> tar pit</strong> (which was hidden through dust,
+            leaves, or other such detritus), and become trapped. Predators, attracted by the struggles
+            of a trapped animal become trapped themselves.&nbsp; Hence, fossilized vertebrates in the <strong>tar pit</strong> is a metaphor for failed software projects blundering blindly into serious danger
+            from which they cannot escape.]</p>
+          <p align="left">While SCRUM, DSDM and other pure agile
+            methods are awesome; they really do require Empowered
+            Teams of highly skilled IT staff operating at People Capability
+            Maturity Level 4 (Predictable) for success, if software
+            is mission critical and complexity is an issue!</p>
+          <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/pcmmoverviewshaded.png') }}" ></div>
+          <p align="left">For complex IT software projects (<strong>if
+            you don't want your projects to flop</strong>) PMWay
+            recommends <a href="/home/agile" >PRINCE2
+            Agile</a> as the recipe to be followed exactly for
+            success; and using <a href="/home/demo" >PMBOK
+            version 6</a> for the essential ingredients (carefully
+            tailored project processes (inputs, tools, techniques
+            and outputs) excellently and professionally
+            processed)!&nbsp; In this regard the ancient wisdom of
+            Aesop's fable of the tortoise and the hare should be kept
+            in mind.&nbsp; I.e. with complex IT software projects
+            (and <strong>with an understanding of the dangers of the tar pit</strong>) to avoid chaos; systematic process based progress (as a checklist), and not heroic action, is best.<br>
+
+          <div align="center"><img alt="Core and Facilitating functions" class="img-fluid" src="{{ asset('storage/images/corefacilitate1.png') }}"  ></div>
+          Note:&nbsp;
+          For upped &quot;systems development&quot; performance stats (hitting
+          targets) know that the
+          PMBOK, Agile (<a href="/home/agile" >from the Agile Manifesto perspective</a>) and
+          CMMi can all assist towards making better &quot;plays&quot; if used
+          with mutual (inclusive) understanding of the
+          strengths of each.
+          CMMi, COBIT, ITIL and DEVOPS are they way to do this.
+          </p>
+          <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/playtogether.jpg') }}" > <br>
+            <img alt="" class="img-fluid" src="{{ asset('storage/images/acp.jpg') }}"><img alt="" class="img-fluid" src="{{ asset('storage/images/accelerate.jpg') }}"><br>
+            <img alt="" class="img-fluid" src="{{ asset('storage/images/cobit.png') }}"><br>
+            <img alt="" class="img-fluid" src="{{ asset('storage/images/etc.png') }}"><br>
+            <br>
+          </div>
+          <hr style="width: 100%">
+          <div align="center"><img alt="lateral thinking" class="img-fluid" src="{{ asset('storage/images/latthink.png') }}" ><br>
+            <br>
+          </div>
+        </div>
+        <div class="card-footer"> While best practice is always the goal, best
+          practical is better<br>
+          I.e. tailor processes for lean, but preserving the process quality </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+<br>
+<br>
+<br>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+<div class="container" align="center"> </div>
+{% endif %}
+
+
+{% endblock %}

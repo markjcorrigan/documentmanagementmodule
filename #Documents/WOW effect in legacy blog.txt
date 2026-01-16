@@ -1,0 +1,36 @@
+ add the fade-in effect elsewhere, just add these classes to any element:
+
+html
+<div class="wow fadeInUp" data-wow-delay=".2s">
+    Your content here
+</div>
+Available animation classes:
+
+fadeInUp - slides up while fading in
+
+fadeInDown - slides down while fading in
+
+fadeInLeft - slides from left while fading in
+
+fadeInRight - slides from right while fading in
+
+fadeIn - simple fade in
+
+bounceIn - bounce effect
+
+zoomIn - zoom in effect
+
+Delay options:
+
+data-wow-delay=".1s" - 0.1 second delay
+
+data-wow-delay=".3s" - 0.3 second delay
+
+data-wow-delay=".5s" - 0.5 second delay
+
+Example usage:
+
+html
+<h3 class="wow fadeInLeft" data-wow-delay=".3s">Section Title</h3>
+<p class="wow fadeInRight" data-wow-delay=".5s">Section content</p>
+<button class="wow bounceIn" data-wow-delay=".7s">Click me</button>

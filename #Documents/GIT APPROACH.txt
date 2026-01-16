@@ -1,0 +1,158 @@
+What Happened:
+Machine A: git push ✓
+
+Machine B: git push → FAILS! Because Machine B doesn't have Machine A's changes
+
+Machine B tries to force it → creates conflict
+
+How to AVOID This Without Getting Conflicts:
+Option 1: The Safe Way (Before You Get Conflicts)
+On Machine B before you get conflicts:
+
+bash
+# 1. Fetch what's on the server
+git fetch origin
+
+# 2. Rebase your changes on top of server changes
+git rebase origin/main
+
+# 3. Now push
+git push origin main
+Option 2: When You Already Have Conflicts
+If you already tried to push and git said "conflict", DON'T DO git pull (that creates <<<<< HEAD markers). Instead:
+
+bash
+# 1. Stash your current work
+git stash
+
+# 2. Get the latest from server
+git pull origin main
+
+# 3. Get your stashed work back
+git stash pop
+
+# 4. If there are conflicts, git will tell you
+# Fix them manually without <<<<< markers
+Option 3: The "I Messed Up" Recovery
+If you already did git pull and have <<<<< HEAD markers everywhere:
+
+bash
+# 1. Abort the merge
+git merge --abort
+
+# 2. Reset to before the pull
+git reset --hard HEAD@{1}
+
+# 3. Now use Option 1 or 2 above
+Best Practice Workflow to Prevent This:
+ALWAYS Do This Before Coding:
+bash
+git fetch origin
+git rebase origin/main
+ALWAYS Do This Before Pushing:
+bash
+git fetch origin
+git rebase origin/main
+git push origin main
+Why This Happens:
+Git is like a shared Google Doc:
+
+Machine A wrote paragraph 1
+
+Machine B wrote paragraph 2 (but didn't see paragraph 1)
+
+Git says: "Hey, you're both editing at the same time! I need you to coordinate."
+
+The Golden Rule:
+Never work on outdated code. Always git fetch and git rebase before starting work and before pushing.
+
+For Your Specific Situation Now:
+If you already have <<<<< HEAD markers:
+
+Don't panic
+
+Use git merge --abort to undo the bad merge
+
+Stash your changes with git stash
+
+Pull fresh with git pull --rebase
+
+Apply stash with git stash pop
+
+Fix any real conflicts manually (but cleanly, no markers)
+
+This way, you control the conflict resolution instead of git creating messy markers for you.
+
+AND ANOTHER EXPLANATION
+
+About the Git Issue - Here's What Happened:
+The Short Answer:
+Someone (probably you from another session or machine) pushed changes to GitHub BEFORE you tried to push your latest changes. Git forces you to pull first to prevent overwriting their work.
+
+NBNBNB Always work from PROD, pull first, use the rebase command at bottom:
+
+The Workflow:
+YOU (Local Machine):
+- Working on chat files
+- Make changes
+- git push
+
+GITHUB (Remote):
+- Already has NEWER commits you don't have locally
+- Rejects your push
+- Says: "Hey, I have changes you don't know about - pull first!"
+
+YOU:
+- git pull
+- Git tries to merge remote changes with your local changes
+- CONFLICT! Both changed the same files
+- Creates those <<<< HEAD ==== >>>> markers
+- Everything breaks
+Why This Happened:
+Most likely:
+
+You pushed from another machine (like your dev machine before you switched to production-only)
+You pushed earlier and didn't pull on this machine first
+Repository got out of sync somehow
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+How to Avoid This in the Future:
+bash# BEFORE you start working each day:
+git pull
+
+# When ready to commit:
+git add .
+git commit -m "Your message"
+
+# BEFORE pushing - pull again (in case something changed)git 
+git pull
+
+# If no conflicts, push:
+git push
+Better: Use Pull with Rebase (avoids merge commits):
+bash# Instead of: git pull
+# Use this:
+git pull --rebase
+
+# This puts your changes ON TOP of remote changes
+# Cleaner history, fewer conflicts
+Since You're Solo:
+The safest workflow for you:
+
+Always pull before starting work each day
+Commit frequently (small commits are safer)
+Push right after committing (don't let commits pile up)
+Never work on multiple machines without pulling first
+
+If You See "Must Pull First":
+bash# DON'T just blindly pull - check what's different first:
+git fetch
+git log HEAD..origin/main
+
+# This shows what commits are on GitHub that you don't have
+# If they're YOUR commits from earlier - safe to pull
+# If they're mysterious - investigate before pulling!
+The 500 errors you're seeing are likely remnants of the config cache issue. Once you test thoroughly, they should go away. If not, we'll track them down!
+Good luck testing! 👍

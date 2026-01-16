@@ -1,0 +1,141 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}fishoutofwater{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+<!--BODY-->
+<div class="container" align="center">
+  <table id="tabletwo" style="width: 30%">
+    <tr>
+      <td class="alignright" valign="bottom"><a href="/cmmi" title="Click to Pin down your Capability Maturity level now!  Or drag the pin through the gateway and hit the Productivity and Quality improvement target!"><img alt="pin" class="img-fluid" id="pin" src="{{ asset('storage/images/pin40.png') }}"></a></td>
+      <td class="aligncenter"><img alt="" class="img-fluid" src="{{ asset('storage/images/gatewayflat.png') }}" onmouseover="this.src='{{ asset('storage/images/gateway.png') }}'" onmouseout="this.src='{{ asset('storage/images/gatewayflat.png') }}'"></td>
+      <td class="alignleft"><a href="/home/carousel?slide=5"><img alt="target" class="img-fluid" id="target" src="{{ asset('storage/images/targetsmall.png') }}" title="Click the target for the project management and other processes to maintain and improve up to Capability Maturity Level 5"></a></td>
+    </tr>
+  </table>
+  <p align="center"><a href="/pmway/?slide=1" ><img class="img-fluid" src="{{ asset('storage/images/firstfourmedium.png') }}" onmouseover="this.src='{{ asset('storage/images/firstfivemedium.png') }}'" onmouseout="this.src='{{ asset('storage/images/firstfourmedium.png') }}'" title="Connect the dots on the home page if are tired of the chaos?"></a></p>
+  <h5 align="center"><b>Tired of the <a href="{{ asset('storage/assets/chaos-report.pdf') }}"  title="Click here for one of the original Chaos Reports.  Sound familiar?">Chaos</a>?</b></h5>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<script src="/bootstrapfourthreeone/js/jquery.js"></script>
+<script src="/bootstrapfourthreeone/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/bootstrapfourthreeone/css/jquery-ui.css">
+<script>
+     	  $(document).ready(function() {
+
+            function qs(key) {
+                key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+                var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+                var slide = match && decodeURIComponent(match[1].replace(/\+/g, " "));
+
+                if (Math.floor(slide) == slide && $.isNumeric(slide)) {
+
+                	$('#collapseopencarousel').collapse('show');
+                	$('html, body').animate({
+    scrollTop: $("#collapseopencarousel").offset().top
+}, 1000);
+
+
+
+                    return parseInt(slide);
+   				}
+                else
+                    return 0;
+}
+
+
+            $('#mycarousel').carousel((qs('slide')) - 1);
+            $("#pin, #pintwo").draggable({
+                revert: "invalid"
+            });
+            $("#target").droppable({
+                greedy: true,
+                tolerance: 'pointer',
+                drop: function(event, ui) {
+                    ui.draggable.draggable('option', 'revert', 'true');
+                    $(this).css({
+                        'background-color': '#94be0f',
+                        'border': '3px solid navy',
+                        'display': 'inline-block'
+                    })
+                    alert("Awesome! Click the target to see the processes your team have mastered!");
+
+                }
+            });
+
+        });
+    </script>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+<div class="container" align="center">
+  <table id="tabletwo" style="width: 30%">
+    <tr>
+      <td class="alignright" valign="bottom"><a href="/cmmi" title="Click to Pin down your Capability Maturity level now!  Or drag the pin through the gateway and hit the Productivity and Quality improvement target!"><img alt="pin" class="img-fluid" id="pin" src="{{ asset('storage/images/pin40.png') }}"></a></td>
+      <td class="aligncenter"><img alt="" class="img-fluid" src="{{ asset('storage/images/gatewayflat.png') }}" onmouseover="this.src='{{ asset('storage/images/gateway.png') }}'" onmouseout="this.src='{{ asset('storage/images/gatewayflat.png') }}'"></td>
+      <td class="alignleft"><a href="/pmway/?slide=5"><img alt="target" class="img-fluid" id="target" src="{{ asset('storage/images/targetsmall.png') }}" title="Click the target for the project management and other processes to maintain and improve up to Capability Maturity Level 5"></a></td>
+    </tr>
+  </table>
+  <p align="center"><a href="/pmway/?slide=1" ><img class="img-fluid" src="{{ asset('storage/images/firstfourmedium.png') }}" onmouseover="this.src='{{ asset('storage/images/firstfivemedium.png') }}'" onmouseout="this.src='{{ asset('storage/images/firstfourmedium.png') }}'" title="Connect the dots on the home page if are tired of the chaos?"></a></p>
+  <h5 align="center"><b>Tired of the <a href="{{ asset('storage/assets/chaos-report.pdf') }}"  title="Click here for one of the original Chaos Reports.  Sound familiar?">Chaos</a>?</b></h5>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<script src="/bootstrapfourthreeone/js/jquery.js"></script>
+<script src="/bootstrapfourthreeone/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/bootstrapfourthreeone/css/jquery-ui.css">
+<script>
+     	  $(document).ready(function() {
+
+            function qs(key) {
+                key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+                var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+                var slide = match && decodeURIComponent(match[1].replace(/\+/g, " "));
+
+                if (Math.floor(slide) == slide && $.isNumeric(slide)) {
+
+                	$('#collapseopencarousel').collapse('show');
+                	$('html, body').animate({
+    scrollTop: $("#collapseopencarousel").offset().top
+}, 1000);
+
+
+
+                    return parseInt(slide);
+   				}
+                else
+                    return 0;
+}
+
+
+            $('#mycarousel').carousel((qs('slide')) - 1);
+            $("#pin, #pintwo").draggable({
+                revert: "invalid"
+            });
+            $("#target").droppable({
+                greedy: true,
+                tolerance: 'pointer',
+                drop: function(event, ui) {
+                    ui.draggable.draggable('option', 'revert', 'true');
+                    $(this).css({
+                        'background-color': '#94be0f',
+                        'border': '3px solid navy',
+                        'display': 'inline-block'
+                    })
+                    alert("Awesome! Click the target to see the processes your team have mastered!");
+
+                }
+            });
+
+        });
+    </script>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,1071 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>PI</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header"><table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="3%"><p><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="52%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+<!-- #BeginEditable "content" -->
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td><span class="auto-style2"><strong>Product Integration 
+					(PI)</strong><br />
+					<br />
+					</span></td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>Product Integration (PI) is one of the core <i>Engineering Process Areas</i> within CMMi, this process is concerned with assembly of product components to build the finished software product.
+<br>
+<br>
+One major <b>risk area</b> in a component based software architecture is that the components do not talk (or interface) to each other. In today's multi tier Client Server environment (which includes Web Servers, Web Services, Application Servers for business rules and Databases) there are many opportunities for introducing defects due to misaligned interfaces. 
+Product Integration (PI) confirms that each component matches its agreed specification prior to assembly. This activity (conformance) makes use of the Verification (VER) CMMi process area which includes testing (post-assembly) as well as inspection (pre-assembly).</p>
+
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Product Integration (PI)<br />An Engineering Process Area at Maturity Level 3</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Product Integration (PI) is to assemble the product from the product components, ensure that the product, as integrated, functions properly, and deliver the product.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+<br>
+<br>
+This process area addresses the integration of product components into more complex product components or into complete products.
+<br>
+<br>
+The scope of this process area is to achieve complete product integration through progressive assembly of product components, in one stage or in incremental stages, according to a defined integration sequence and procedures. Throughout the process areas, where we use the terms product and product component, their intended meanings also encompass services and their components.
+<br>
+<br>
+A critical aspect of product integration is the management of internal and external interfaces of the products and product components to ensure compatibility among the interfaces. Attention should be paid to interface management throughout the project.
+<br>
+<br>
+Product integration is more than just a one-time assembly of the product components at the conclusion of design and fabrication. Product integration can be conducted incrementally, using an iterative process of assembling product components, evaluating them, and then assembling more product components. This process may begin with analysis and simulations (e.g., threads, rapid prototypes, virtual prototypes, and physical prototypes) and steadily progress through increasingly more realistic incremental functionality until the final product is achieved. In each successive build, prototypes (virtual, rapid, or physical) are constructed, evaluated, improved, and reconstructed based on knowledge gained in the evaluation process. The degree of virtual versus physical prototyping required depends on the functionality of the design tools, the complexity of the product, and its associated risk. There is a high probability that the product, integrated in this manner, will pass product verification and validation. For some products and services, the last integration phase will occur when they are deployed at the intended operational site.
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Requirements Development process area for more information about identifying interface requirements.
+<br>
+<br>
+Refer to the Technical Solution process area for more information about defining the interfaces and the integration environment (when the integration environment needs to be developed).
+<br>
+<br>
+Refer to the Verification process area for more information about verifying the interfaces, the integration environment, and the progressively assembled product components.
+<br>
+<br>
+Refer to the Validation process area for more information about performing validation of the product components and the integrated product.
+<br>
+<br>
+Refer to the Risk Management process area for more information about identifying risks and the use of prototypes in risk mitigation for both interface compatibility and product component integration.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about using a formal evaluation process for selecting the appropriate integration sequence and procedures and for deciding whether the integration environment should be acquired or developed.
+<br>
+<br>
+Refer to the Configuration Management process area for more information about managing changes to interface definitions and about the distribution of information.
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about acquiring product components or parts of the integration environment.
+<br>
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1 Prepare for Product Integration</b>
+<br>
+<br>
+Preparation for product integration is conducted.
+<br>
+<br>
+Preparing for integration of product components involves establishing and maintaining an integration sequence, the environment for performing the integration, and integration procedures. The specific practices of the Prepare for Product Integration specific goal build on each other in the following way. The first specific practice determines the sequence for product and product component integration. The second determines the environment that will be used to carry out the product and product component integration. The third develops procedures and criteria for product and product component integration. Preparation for integration starts early in the project and the integration sequence is developed concurrently with the practices in the Technical Solution process area.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<a name="sp11"></a>
+<b>SP 1.1 Determine Integration Sequence</b>
+<br>
+<br>
+Determine the product component integration sequence.
+<br>
+<br>
+The product components that are integrated may include those that are a part of the product to be delivered along with test equipment, test software, or other integration items such as fixtures. Once you have analyzed alternative test and assembly integration sequences, select the best integration sequence.
+<br>
+<br>
+The product integration sequence can provide for incremental assembly and evaluation of product components that provide a problem-free foundation for incorporation of other product components as they become available, or for prototypes of high-risk product components.
+<br>
+<br>
+The integration sequence should be harmonized with the selection of solutions and the design of product and product components in the Technical Solution process area.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about using a formal evaluation process to select the appropriate product integration sequence.
+<br>
+<br>
+Refer to the Risk Management process area for more information about identifying and handling risks associated with the integration sequence.
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about transitioning acquired product components and the need for handling those product components in the product integration sequence.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+<li>Product integration sequence
+</li><li>Rationale for selecting or rejecting integration sequences
+<br>
+<br>
+Subpractice 1: Identify the product components to be integrated.
+<br>
+<br>
+Subpractice 2: Identify the verifications to be performed during the integration of the product components.
+<br>
+<br>
+Subpractice 3: Identify alternative product component integration sequences.
+<br>
+<br>
+This can include defining the specific tools and test equipment to support the product integration.
+<br>
+<br>
+Subpractice 4: Select the best integration sequence.
+<br>
+<br>
+Subpractice 5: Periodically review the product integration sequence and revise as needed.
+<br>
+<br>
+Assess the product integration sequence to ensure that variations in production and delivery schedules have not had an adverse impact on the sequence or compromised the factors on which earlier decisions were made.
+<br>
+<br>
+Subpractice 6: Record the rationale for decisions made and deferred.
+<br>
+<br>
+<a name="sp12"></a> 
+<b>SP 1.2 Establish the Product Integration Environment</b>
+<br>
+<br>
+Establish and maintain the environment needed to support the integration of the product components.
+<br>
+<br>
+Refer to the Technical Solution process area for more information about make-or-buy decisions.
+<br>
+<br>
+The environment for product integration can either be acquired or developed. To establish an environment, requirements for the purchase or development of equipment, software, or other resources will need to be developed. These requirements are gathered when implementing the processes associated with the Requirements Development process area. The product integration environment may include the reuse of existing organizational resources. The decision to acquire or develop the product integration environment is addressed in the processes associated with the Technical Solution process area.
+<br>
+<br>
+The environment required at each step of the product integration process may include test equipment, simulators (taking the place of unavailable product components), pieces of real equipment, and recording devices.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Verified environment for product integration
+</li><li>Support documentation for the product integration environment
+<br>
+<br>
+Subpractice 1: Identify the requirements for the product integration environment.
+<br>
+<br>
+Subpractice 2: Identify verification criteria and procedures for the product integration environment.
+<br>
+<br>
+Subpractice 3: Decide whether to make or buy the needed product integration environment.
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about acquiring parts of the integration environment.
+<br>
+<br>
+Subpractice 4: Develop an integration environment if a suitable environment cannot be acquired.
+<br>
+<br>
+For unprecedented, complex projects, the product integration environment can be a major development. As such, it would involve project planning, requirements development, technical solutions, verification, validation, and risk management.
+<br>
+<br>
+Subpractice 5: Maintain the product integration environment throughout the project.
+<br>
+<br>
+Subpractice 6: Dispose of those portions of the environment that are no longer useful.
+<br>
+<br>
+<a name="sp13"></a> 
+<b>SP 1.3 Establish Product Integration Procedures and Criteria</b>
+<br>
+<br>
+Establish and maintain procedures and criteria for integration of the product components.
+<br>
+<br>
+Procedures for the integration of the product components can include such things as the number of incremental iterations to be performed and details of the expected tests and other evaluations to be carried out at each stage.
+<br>
+<br>
+Criteria can indicate the readiness of a product component for integration or its acceptability.
+<br>
+<br>
+Procedures and criteria for product integration address the following:
+<br>
+<br>
+</li><li>Level of testing for build components
+</li><li>Verification of interfaces
+</li><li>Thresholds of performance deviation
+</li><li>Derived requirements for the assembly and its external interfaces
+</li><li>Allowable substitutions of components
+</li><li>Testing environment parameters
+</li><li>Limits on cost of testing
+</li><li>Quality/cost tradeoffs for integration operations
+</li><li>Probability of proper functioning
+</li><li>Delivery rate and its variation
+</li><li>Lead time from order to delivery
+</li><li>Personnel availability
+</li><li>Availability of the integration facility/line/environment
+<br>
+<br>
+Criteria can be defined for how the product components are to be verified and the functions they are expected to have. Criteria can be defined for how the assembled product components and final integrated product are to be validated and delivered.
+<br>
+<br>
+Criteria may also constrain the degree of simulation permitted for a product component to pass a test, or may constrain the environment to be used for the integration test.
+<br>
+<br>
+Pertinent parts of the schedule and criteria for assembly should be shared with suppliers of work products to reduce the occurrence of delays and component failure
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about communicating with suppliers
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Product integration procedures
+</li><li>Product integration criteria
+<br>
+<br>
+Subpractice 1: Establish and maintain product integration procedures for the product components.
+<br>
+<br>
+Subpractice 2: Establish and maintain criteria for product component integration and evaluation.
+<br>
+<br>
+Subpractice 3: Establish and maintain criteria for validation and delivery of the integrated product.
+<br>
+<br>
+<a name="sg2"></a>  
+<b>SG 2 Ensure Interface Compatibility</b>
+<br>
+<br>
+The product component interfaces, both internal and external, are compatible.
+<br>
+<br>
+Many product integration problems arise from unknown or uncontrolled aspects of both internal and external interfaces. Effective management of product component interface requirements, specifications, and designs helps ensure that implemented interfaces will be complete and compatible.
+<br>
+<br>
+<a name="sp21"></a>
+<b>SP 2.1 Review Interface Descriptions for Completeness</b>
+<br>
+<br>
+Review interface descriptions for coverage and completeness.
+<br>
+<br>
+The interfaces should include, in addition to product component interfaces, all the interfaces with the product integration environment.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Categories of interfaces
+</li><li>List of interfaces per category
+</li><li>Mapping of the interfaces to the product components and the product integration environment
+<br>
+<br>
+Subpractice 1: Review interface data for completeness and ensure complete coverage of all interfaces.
+<br>
+<br>
+Consider all the product components and prepare a relationship table. Interfaces are usually classified in three main classes: environmental, physical, and functional. Typical categories for these classes include the following: mechanical, fluid, sound, electrical, climatic, electromagnetic, thermal, message, and the human-machine or human interface.
+<br>
+<br>
+Examples of interfaces (e.g., for mechanical or electronic components) that may be classified within these three classes include the following:
+<br>
+<br>
+</li><li>Mechanical interfaces (e.g., weight and size, center of gravity, clearance of parts in operation, space required for maintenance, fixed links, mobile links, and shocks and vibrations received from the bearing structure)
+</li><li>Noise interfaces (e.g., noise transmitted by the structure, noise transmitted in the air, and acoustics)
+</li><li>Climatic interfaces (e.g., temperature, humidity, pressure, and salinity)
+</li><li>Thermal interfaces (e.g., heat dissipation, transmission of heat to the bearing structure, and air conditioning characteristics)
+</li><li>Fluid interfaces (e.g., fresh water inlet/outlet, seawater inlet/outlet for a naval/coastal product, air conditioning, compressed air, nitrogen, fuel, lubricating oil, and exhaust gas outlet)
+</li><li>Electrical interfaces (e.g., power supply consumption by network with transients and peak values; nonsensitive control signal for power supply and communications; sensitive signal [e.g., analog links]; disturbing signal [e.g., microwave]; and grounding signal to comply with the TEMPEST standard)
+</li><li>Electromagnetic interfaces (e.g., magnetic field, radio and radar links, optical band link wave guides, and coaxial and optical fibers)
+</li><li>Human-machine interface (e.g., audio or voice synthesis, audio or voice recognition, display [analog dial, television screen, or liquid-crystal display, indicators' light-emitting diodes], and manual controls [pedal, joystick, ball, keys, push buttons, or touch screen])
+</li><li>Message interfaces (e.g., origination, destination, stimulus, protocols, and data characteristics)
+<br>
+<br>
+Subpractice 2: Ensure that product components and interfaces are marked to ensure easy and correct connection to the joining product component.
+<br>
+<br>
+Subpractice 3: Periodically review the adequacy of interface descriptions.
+<br>
+<br>
+Once established, the interface descriptions must be periodically reviewed to ensure there is no deviation between the existing descriptions and the products being developed, processed, produced, or bought.
+<br>
+<br>
+The interface descriptions for product components should be reviewed with relevant stakeholders to avoid misinterpretations, reduce delays, and prevent the development of interfaces that do not work properly.
+<br>
+<br>
+<a name="sp22"></a>
+<b>SP 2.2 Manage Interfaces</b>
+<br>
+<br>
+Manage internal and external interface definitions, designs, and changes for products and product components.
+<br>
+<br>
+Interface requirements drive the development of the interfaces necessary to integrate product components. Managing product and product component interfaces starts very early in the development of the product. The definitions and designs for interfaces affect not only the product components and external systems, but can also affect the verification and validation environments.
+<br>
+<br>
+Refer to the Requirements Development process area for more information about requirements for interfaces.
+<br>
+<br>
+Refer to the Technical Solution process area for more information about design of interfaces between product components.
+<br>
+<br>
+Refer to the Requirements Management process area for more information about managing the changes to the interface requirements.
+<br>
+<br>
+Refer to the Configuration Management process area for more information about distributing changes to the interface descriptions (specifications) so that everyone can know the current state of the interfaces.
+<br>
+<br>
+Management of the interfaces includes maintenance of the consistency of the interfaces throughout the life of the product, and resolution of conflict, noncompliance, and change issues. The management of interfaces between products acquired from suppliers and other products or product components is critical for success of the project.
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about managing suppliers.
+<br>
+<br>
+The interfaces should include, in addition to product component interfaces, all the interfaces with the environment as well as other environments for verification, validation, operations, and support.
+<br>
+<br>
+The interface changes are documented, maintained, and readily accessible.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Table of relationships among the product components and the external environment (e.g., main power supply, fastening product, and computer bus system)
+</li><li>Table of relationships among the different product components
+</li><li>List of agreed-to interfaces defined for each pair of product components, when applicable
+</li><li>Reports from the interface control working group meetings
+</li><li>Action items for updating interfaces
+</li><li>Application program interface (API)
+</li><li>Updated interface description or agreement
+<br>
+<br>
+Subpractice 1: Ensure the compatibility of the interfaces throughout the life of the product.
+<br>
+<br>
+Subpractice 2: Resolve conflict, noncompliance, and change issues.
+<br>
+<br>
+Subpractice 3: Maintain a repository for interface data accessible to project participants.
+<br>
+<br>
+A common accessible repository for interface data provides a mechanism to ensure that everyone knows where the current interface data resides and can access it for use.
+<br>
+<br>
+<a name="sg3"></a>  
+<b>SG 3 Assemble Product Components and Deliver the Product</b>
+<br>
+<br>
+Verified product components are assembled and the integrated, verified, and validated product is delivered.
+<br>
+<br>
+Integration of product components proceeds according to the product integration sequence and available procedures. Before integration, each product component should be confirmed to be compliant with its interface requirements. Product components are assembled into larger, more complex product components. These assembled product components are checked for correct interoperation. This process continues until product integration is complete. If, during this process, problems are identified, the problem should be documented and a corrective action process initiated.
+<br>
+<br>
+Ensure that the assembly of the product components into larger and more complex product components is conducted according to the product integration sequence and available procedures. The timely receipt of needed product components and the involvement of the right people contribute to the successful integration of the product components that compose the product.
+<br>
+<br>
+<a name="sp31"></a>
+<b>SP 3.1 Confirm Readiness of Product Components for Integration</b>
+<br>
+<br>
+Confirm, prior to assembly, that each product component required to assemble the product has been properly identified, functions according to its description, and that the product component interfaces comply with the interface descriptions.
+<br>
+<br>
+Refer to the Verification process area for more information about verifying product components.
+<br>
+<br>
+Refer to the Technical Solution process area for more information about unit test of product components.
+<br>
+<br>
+The purpose of this specific practice is to ensure that the properly identified product component that meets its description can actually be assembled according to the product integration sequence and available procedures. The product components are checked for quantity, obvious damage, and consistency between the product component and interface descriptions.
+<br>
+<br>
+Those conducting product integration are ultimately responsible for checking to make sure everything is proper with the product components before assembly.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Acceptance documents for the received product components
+</li><li>Delivery receipts
+</li><li>Checked packing lists
+</li><li>Exception reports
+</li><li>Waivers
+<br>
+<br>
+Subpractice 1: Track the status of all product components as soon as they become available for integration.
+<br>
+<br>
+Subpractice 2: Ensure that product components are delivered to the product integration environment in accordance with the product integration sequence and available procedures.
+<br>
+<br>
+Subpractice 3: Confirm the receipt of each properly identified product component.
+<br>
+<br>
+Subpractice 4: Ensure that each received product component meets its description.
+<br>
+<br>
+Subpractice 5: Check the configuration status against the expected configuration.
+<br>
+<br>
+Subpractice 6: Perform a pre-check (e.g., by a visual inspection and using basic measures) of all the physical interfaces before connecting product components together.
+<br>
+<br>
+<a name="sp32"></a>
+<b>SP 3.2 Assemble Product Components</b>
+<br>
+<br>
+Assemble product components according to the product integration sequence and available procedures.
+<br>
+<br>
+The assembly activities of this specific practice and the evaluation activities of the next specific practice are conducted iteratively, from the initial product components, through the interim assemblies of product components, to the product as a whole.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Assembled product or product components
+<br>
+<br>
+Subpractice 1: Ensure the readiness of the product integration environment.
+<br>
+<br>
+Subpractice 2: Ensure that the assembly sequence is properly performed.
+<br>
+<br>
+Record all appropriate information (e.g., configuration status, serial numbers of the product components, types, and calibration date of the meters).
+<br>
+<br>
+Subpractice 3: Revise the product integration sequence and available procedures as appropriate.
+<br>
+<br>
+A common accessible repository for interface data provides a mechanism to ensure that everyone knows where the current interface data resides and can access it for use.
+<br>
+<br>
+<a name="sp33"></a>
+<b>SP 3.3 Evaluate Assembled Product Components</b>
+<br>
+<br>
+Evaluate assembled product components for interface compatibility.
+<br>
+<br>
+Refer to the Verification process area for more information about verifying assembled product components.
+<br>
+<br>
+Refer to the Validation process area for more information about validating assembled product components.
+<br>
+<br>
+This evaluation involves examining and testing assembled product components for performance, suitability, or readiness using the available procedures and environment. It is performed as appropriate for different stages of assembly of product components as identified in the product integration sequence and available procedures. The product integration sequence and available procedures may define a more refined integration and evaluation sequence than might be envisioned just by examining the product architecture. For example, if an assembly of product components is composed of four less complex product components, the integration sequence will not necessarily call for the simultaneous integration and evaluation of the four units as one. Rather, the four less complex units may be integrated progressively, one at a time, with an evaluation after each assembly operation prior to realizing the more complex product component that matched the specification in the product architecture. Alternatively, the product integration sequence and available procedures could have determined that only a final evaluation was the best one to perform.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Exception reports
+</li><li>Interface evaluation reports
+</li><li>Product integration summary reports
+<br>
+<br>
+Subpractice 1: Conduct the evaluation of assembled product components following the product integration sequence and available procedures.
+<br>
+<br>
+Subpractice 2: Record the evaluation results.
+<br>
+<br>
+Example results include the following:
+<br>
+<br>
+</li><li>Any adaptation required to the integration procedure
+</li><li>Any change to the product configuration (spare parts, new release)
+</li><li>Evaluation procedure deviations
+<br>
+<br>
+<a name="sp34"></a>
+<b>SP 3.4 Package and Deliver the Product or Product Component</b>
+<br>
+<br>
+Package the assembled product or product component and deliver it to the appropriate customer.
+<br>
+<br>
+Refer to the Verification process area for more information about verifying the product or an assembly of product components before packaging.
+<br>
+<br>
+Refer to the Validation process area for more information about validating the product or an assembly of product components before packaging.
+<br>
+<br> 
+The packaging requirements for some products can be addressed in their specifications and verification criteria. This is especially important when items are stored and transported by the customer. In such cases, there may be a spectrum of environmental and stress conditions specified for the package. In other circumstances, factors such as the following may become important:
+<br>
+<br>
+</li><li>Economy and ease of transportation (e.g., containerization)
+</li><li>Accountability (e.g., shrink wrapping)
+</li><li>Ease and safety of unpacking (e.g., sharp edges, strength of binding methods, childproofing, environmental friendliness of packing material, and weight)
+<br>
+<br>
+The adjustment required to fit product components together in the factory could be different from the one required to fit product components together when installed on the operational site. In that case, the product’s logbook for the customer should be used to record such specific parameters.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Packaged product or product components
+</li><li>Delivery documentation
+<br>
+<br>
+Subpractice 1: Review the requirements, design, product, verification results, and documentation to ensure that issues affecting the packaging and delivery of the product are identified and resolved.
+<br>
+<br>
+Subpractice 2: Use effective methods to package and deliver the assembled product.
+<br>
+<br>
+For Software Engineering
+<br>
+<br>
+Examples of software packaging and delivery methods include the following:
+<br>
+<br>
+</li><li>Magnetic tape
+</li><li>Diskettes
+</li><li>Hardcopy documents
+</li><li>Compact disks
+</li><li>Other electronic distribution such as the Internet
+<br>
+<br>
+Subpractice 3: Satisfy the applicable requirements and standards for packaging and delivering the product.
+<br>
+<br>
+Examples of requirements and standards include those for safety, the environment, security, transportability, and disposal.
+<br>
+<br>
+For Software Engineering
+<br>
+<br>
+Examples of requirements and standards for packaging and delivering software include the following:
+<br>
+<br>
+</li><li>Type of storage and delivery media
+</li><li>Custodians of the master and backup copies
+</li><li>Required documentation
+</li><li>Copyrights
+</li><li>License provisions
+</li><li>Security of the software
+<br>
+<br>
+Subpractice 4: Prepare the operational site for installation of the product.
+<br>
+<br>
+Preparing the operational site may be the responsibility of the customer or end users.
+<br>
+<br>
+Subpractice 5: Deliver the product and related documentation and confirm receipt.
+<br>
+<br>
+Subpractice 6: Install the product at the operational site and confirm correct operation.
+<br>
+<br>
+Installing the product may be the responsibility of the customer or the end users. In some circumstances, very little may need to be done to confirm correct operation. In other circumstances, final verification of the integrated product occurs at the operational site.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the product integration process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the product integration process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for developing product integration sequences, procedures, and an environment; ensuring interface compatibility among product components; assembling the product components; and delivering the product and product components.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the product integration process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the product integration process addresses the comprehensive planning for all of the specific practices in this process area, from the preparation for product integration all the way through to the delivery of the final product.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the product integration process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Product component interface coordination may be accomplished with an Interface Control Working Group consisting of people who represent external and internal interfaces. Such groups can be used to elicit needs for interface requirements development.
+<br>
+<br>
+Special facilities may be required for assembling and delivering the product. When necessary, the facilities required for the activities in the Product Integration process area are developed or purchased.
+<br>
+<br>
+Examples of other resources provided include the following tools:
+<br>
+<br>
+</li><li>Prototyping tools
+</li><li>Analysis tools
+</li><li>Simulation tools
+</li><li>Interface management tools
+</li><li>Assembly tools (e.g., compilers, make files, joining tools, jigs, and fixtures)
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the product integration process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the product integration process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Application domain
+</li><li>Product integration procedures and criteria
+</li><li>Organization’s facilities for integration and assembly
+</li><li>Assembly methods
+</li><li>Packaging standards
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the product integration process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Acceptance documents for the received product components
+</li><li>Evaluated assembled product and product components
+</li><li>Product integration sequence
+</li><li>Product integration procedures and criteria
+</li><li>Updated interface description or agreement
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the product integration process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Select relevant stakeholders from customers, end users, developers, producers, testers, suppliers, marketers, maintainers, disposal personnel, and others who may be affected by, or may affect, the product as well as the process.
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Reviewing interface descriptions for completeness
+</li><li>Establishing the product integration sequence
+</li><li>Establishing the product integration procedures and criteria
+</li><li>Assembling and delivering the product and product components
+</li><li>Communicating the results after evaluation
+</li><li>Communicating new, effective product integration processes to give affected people the opportunity to improve their performance
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the product integration process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Product component integration profile (e.g., product component assemblies planned and performed, and number of exceptions found)
+</li><li>Integration evaluation problem report trends (e.g., number written and number closed)
+</li><li>Integration evaluation problem report aging (i.e., how long each problem report has been open)
+</li><li>Schedule for conduct of specific integration activities
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the product integration process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Establishing and maintaining a product integration sequence
+</li><li>Ensuring interface compatibility
+</li><li>Assembling product components and delivering the product
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Product integration sequence
+</li><li>Product integration procedures and criteria
+</li><li>Acceptance documents for the received product components
+</li><li>Assembled product and product components
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the product integration process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+This generic goal's appearance here reflects its location in the continuous representation.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined product integration process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the product integration process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Records of the receipt of product components, exception reports, confirmation of configuration status, and results of readiness checking
+</li><li>Percent of total development effort spent in product integration (actual to date plus estimate to complete)
+</li><li>Defects found in the product and test environment during product integration
+</li><li>Problem reports resulting from product integration
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the product integration process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the product integration process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the product integration process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the product integration process.
+					
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

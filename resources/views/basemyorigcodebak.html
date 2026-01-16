@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+
+
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="/home/f3823308/public_html/css/styles.css" />-->
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <style type="text/css">
+        .auto-style1 {
+            border-width: 0px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="/">UpGuitarHill</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+
+                {% if not user %}
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;Contact</a>
+                </li class="nav-item">
+
+                <!--NB taken out of play temporarily-------<li class="nav-item">
+                <a class="nav-link" href="/register"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Register</a>
+						</li class="nav-item">
+				  <li class="nav-item">
+                  <a class="nav-link" href="/login"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Login</a>
+                  </li class="nav-item">  -->
+
+
+
+                {% endif %}
+
+                {% if user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile/show"><i class="fa fa-user" aria-hidden="true"></i>'HowTo'</a>
+                </li class="nav-item">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile/show"><i class="fa fa-user" aria-hidden="true"></i>Folk</a>
+                </li class="nav-item">
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile/show"><i class="fa fa-user" aria-hidden="true"></i>Classical</a>
+                </li class="nav-item">
+
+
+
+                <!-- <li class="nav-item">
+                        <a class="nav-link" href="/profile/show"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                        </li class="nav-item">
+                        <li class="nav-item">
+                        <a class="nav-link" href="/logout"><i class="fa fa-user" aria-hidden="true"></i>Log out</a>
+                          </li class="nav-item"> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact"><i class="fa fa-user" aria-hidden="true"></i>Contact</a>
+                </li class="nav-item">
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div style="text-align:center"><a href="/login">
+                <img alt="step at a time UpGuitarHill" class="auto-style1" height="128"
+                    src="http://www.upguitarhill.com/images/upguitarhillnew.png" width="652" /></a><br>
+            <row><img class="img-fluid" src="http://www.upguitarhill.com/images/folkguitar.png"><img class="img-fluid"
+                    src="http://www.upguitarhill.com/images/classicalguitarbanner.png"></row>
+        </div>
+
+        {% for message in flash_messages %}
+        <div class="alert alert-{{ message.type }}">
+            {{ message.body }}
+        </div>
+        {% endfor %}
+
+        {% block body %}
+        {% endblock %}
+
+    </div>
+    <div class="container">
+        {% if not user %}
+        <div style="text-align:center"><img alt="" class="img-fluid" height="988"
+                src="http://www.upguitarhill.com/images/guitarnormalshadow.png" width="429" /></div>
+        <br>
+        {% endif %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://www.upguitarhill.com/js/wheel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://www.upguitarhill.com/js/wheel.js"></script>
+    {% block footer %}
+    {% endblock %}
+</body>
+
+</html>

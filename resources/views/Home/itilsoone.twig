@@ -1,0 +1,340 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SO{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SO Event Management</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=5') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description">The objective of <i>ITIL Event Management</i> is to make sure Configuration Items (CIs) and services are constantly monitored. The Event Management process  aims to filter and categorize Events in order to decide on appropriate actions if required.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: IT Operations Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>The activities and process objectives of the Event Management process are mostly identical in ITIL V3 and V2 (Event Management was part of ICT Infrastructure Management). </p>
+  <p>Interfaces between Event Management and the other ITIL processes were adjusted in order to reflect the new ITIL process structure in ITIL V3. </p>
+  <p>&#160;</p>
+  <p>In <i><b>ITIL 2011</b></i> Event Management has been updated to reflect the concept of 1st Level Correlation and 2nd Level Correlation. </p>
+  <p>The process flows reflect the more detailed guidance in the ITIL 2011 books. The process overview of <a href="/images/itilsoone.jpg"  title="Event-management-itil.jpg">ITIL Event Management</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Event Management sub-processes:">These are the <strong class="selflink">ITIL Event Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Event_Management_Maintenance" itemprop="itemListElement">Maintenance of Event Monitoring Mechanisms and Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To set up and maintain the mechanisms for generating meaningful Events and effective rules for their filtering and correlating. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Event_1st_Level_Correlation" itemprop="itemListElement">Event Filtering and 1st Level Correlation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To filter out Events which are merely informational and can be ignored, and to communicate any Warning and Exception Events. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Management_2nd_Level_Correlation" itemprop="itemListElement">2nd Level Correlation and Response Selection</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To interpret the meaning of an Event and select a suitable response if required. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Event_Management_Review" itemprop="itemListElement">Event Review and Closure</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To check if Events have been handled appropriately and may be closed. This process also makes sure that Event logs are analyzed in order to identify trends or patterns which suggest corrective action must be taken. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Event Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Event" itemprop="itemListElement">Event</span></b> </p>
+    <ul>
+      <li itemprop="description">&nbsp;Event Record </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Categorization_Scheme" itemprop="itemListElement">Event Categorization Scheme</span></b> </p>
+    <ul>
+      <li itemprop="description">The Categorization Scheme for Events supports a consistent approach to dealing with specific types of Events. Ideally, this scheme should be harmonized with the schemes to categorize CIs, Incidents and Problems. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Filtering_and_Correlation_Rules" itemprop="itemListElement">Event Filtering and Correlation Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">Rules and criteria used to determine if an Event is significant and to decide upon an appropriate response. Event Filtering and Correlation Rules are typically used by Event Monitoring systems. Some of those rules are defined during the Service Design stage, for example to ensure that Events are triggered when the required service availability is endangered. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Record" itemprop="itemListElement">Event Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A record describing a change of state which has significance for the management of a Configuration Item or service. The term <i>Event</i> is also used to mean an alert or notification created by any IT service, Configuration Item or monitoring tool. Events often require IT operations personnel to take actions, and may lead to Incidents being logged. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Trends_and_Patterns" itemprop="itemListElement">Event Trends and Patterns</span></b> </p>
+    <ul>
+      <li itemprop="description">Any trends and patterns identified during analysis of significant Events, which suggest that improvements to the infrastructure are needed. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="IT_Operations_Manager">IT Operations Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>An IT Operations Manager will be needed to take overall responsibility for a number of Service Operation activities. For instance, this role will ensure that all day-to-day operational activities are carried out in a timely and reliable way.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="IT_Operator">IT Operator</span></b> </p>
+  <ul>
+    <li>IT Operators are the staff who perform the day-to-day operational activities.</li>
+    <li>Typical responsibilities include: Performing backups, ensuring that scheduled jobs are performed, installing standard equipment in the data center.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="5"><b>Responsibility Matrix: ITIL Event Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">IT Operations Manager </th>
+        <th style="background:#ffffee;">IT Operator </th>
+        <th style="background:#ffffee;">(Event Monitoring System) </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Event_Management_Maintenance">Maintenance of Event Monitoring Mechanisms and Rules</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Event_1st_Level_Correlation">Event Filtering and 1st Level Correlation</a></td>
+        <td>A </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Event_Management_2nd_Level_Correlation">2nd Level Correlation and Response Selection</a></td>
+        <td>A </td>
+        <td>R </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Event_Management_Review">Event Review and Closure</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Event Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Event Management.</span> </p>
+  <p><span id="Team">[3] In cooperation, as appropriate: IT Operations Manager, Access Manager, Capacity Manager, Availability Manager, IT Service Continuity Manager, Information Security Manager, Applications Analyst and/ or technical Analyst.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SO Event Management</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=5') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description">The objective of <i>ITIL Event Management</i> is to make sure Configuration Items (CIs) and services are constantly monitored. The Event Management process  aims to filter and categorize Events in order to decide on appropriate actions if required.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: IT Operations Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>The activities and process objectives of the Event Management process are mostly identical in ITIL V3 and V2 (Event Management was part of ICT Infrastructure Management). </p>
+  <p>Interfaces between Event Management and the other ITIL processes were adjusted in order to reflect the new ITIL process structure in ITIL V3. </p>
+  <p>&#160;</p>
+  <p>In <i><b>ITIL 2011</b></i> Event Management has been updated to reflect the concept of 1st Level Correlation and 2nd Level Correlation. </p>
+  <p>The process flows reflect the more detailed guidance in the ITIL 2011 books. The process overview of <a href="/images/itilsoone.jpg"  title="Event-management-itil.jpg">ITIL Event Management</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Event Management sub-processes:">These are the <strong class="selflink">ITIL Event Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Event_Management_Maintenance" itemprop="itemListElement">Maintenance of Event Monitoring Mechanisms and Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To set up and maintain the mechanisms for generating meaningful Events and effective rules for their filtering and correlating. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Event_1st_Level_Correlation" itemprop="itemListElement">Event Filtering and 1st Level Correlation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To filter out Events which are merely informational and can be ignored, and to communicate any Warning and Exception Events. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Management_2nd_Level_Correlation" itemprop="itemListElement">2nd Level Correlation and Response Selection</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To interpret the meaning of an Event and select a suitable response if required. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Event_Management_Review" itemprop="itemListElement">Event Review and Closure</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To check if Events have been handled appropriately and may be closed. This process also makes sure that Event logs are analyzed in order to identify trends or patterns which suggest corrective action must be taken. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Event Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Event" itemprop="itemListElement">Event</span></b> </p>
+    <ul>
+      <li itemprop="description">&nbsp;Event Record </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Categorization_Scheme" itemprop="itemListElement">Event Categorization Scheme</span></b> </p>
+    <ul>
+      <li itemprop="description">The Categorization Scheme for Events supports a consistent approach to dealing with specific types of Events. Ideally, this scheme should be harmonized with the schemes to categorize CIs, Incidents and Problems. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Filtering_and_Correlation_Rules" itemprop="itemListElement">Event Filtering and Correlation Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">Rules and criteria used to determine if an Event is significant and to decide upon an appropriate response. Event Filtering and Correlation Rules are typically used by Event Monitoring systems. Some of those rules are defined during the Service Design stage, for example to ensure that Events are triggered when the required service availability is endangered. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Record" itemprop="itemListElement">Event Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A record describing a change of state which has significance for the management of a Configuration Item or service. The term <i>Event</i> is also used to mean an alert or notification created by any IT service, Configuration Item or monitoring tool. Events often require IT operations personnel to take actions, and may lead to Incidents being logged. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Event_Trends_and_Patterns" itemprop="itemListElement">Event Trends and Patterns</span></b> </p>
+    <ul>
+      <li itemprop="description">Any trends and patterns identified during analysis of significant Events, which suggest that improvements to the infrastructure are needed. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="IT_Operations_Manager">IT Operations Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>An IT Operations Manager will be needed to take overall responsibility for a number of Service Operation activities. For instance, this role will ensure that all day-to-day operational activities are carried out in a timely and reliable way.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="IT_Operator">IT Operator</span></b> </p>
+  <ul>
+    <li>IT Operators are the staff who perform the day-to-day operational activities.</li>
+    <li>Typical responsibilities include: Performing backups, ensuring that scheduled jobs are performed, installing standard equipment in the data center.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="5"><b>Responsibility Matrix: ITIL Event Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">IT Operations Manager </th>
+        <th style="background:#ffffee;">IT Operator </th>
+        <th style="background:#ffffee;">(Event Monitoring System) </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Event_Management_Maintenance">Maintenance of Event Monitoring Mechanisms and Rules</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Event_1st_Level_Correlation">Event Filtering and 1st Level Correlation</a></td>
+        <td>A </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Event_Management_2nd_Level_Correlation">2nd Level Correlation and Response Selection</a></td>
+        <td>A </td>
+        <td>R </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Event_Management_Review">Event Review and Closure</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Event Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Event Management.</span> </p>
+  <p><span id="Team">[3] In cooperation, as appropriate: IT Operations Manager, Access Manager, Capacity Manager, Availability Manager, IT Service Continuity Manager, Information Security Manager, Applications Analyst and/ or technical Analyst.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

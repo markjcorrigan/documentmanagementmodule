@@ -1,0 +1,165 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Oxygen{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+  <h3>10 Take-aways from "The Oxygen Advantage"</h3>
+  <hr>
+  <p>Remember this is simply an idea you can use or not, as you feel is right for you<br>
+    That said; As a developer, who is sedentary (in codeworld) for hours and hours, <a href="{{ asset('storage/assets/oxygen.pdf?') }}">the book "The Oxygen Advantage: Simple, Scientifically Proven Breathing Techniques"</a> by Patrick McKeown is possibly a "God Send" for us, to get us feeling better, be and feel more alive, lose weight and improve health.</p>
+  <p>Bottom line from PMWay:</p>
+  <ol>
+    <li>Mouth is for eating and Nose is for breathing!</li>
+    <li>Close mouth and breath in deep through your nose (expand your diaphram - like bellows until lower stomach is fully expanded - filled up with air).</li>
+    <li>Now breath out fully through your nose, compressing your stomach (focusing on the diaphram) until lungs are as empty as possible.</li>
+    <li>Now, with mouth still closed, pinch your nose and hold your breath until the urge to breath is felt (do this gently!) and then breath normally again.</li>
+    <li>Per the advice in the book, also at the bottom of the page, you can train this (routinely perform breath hold exercises (after an exhalation) for progressively longer times during walking or light activity with the goal of moving BOLT from 20 seconds up to 40 seconds).</li>
+  </ol>
+  <p>&nbsp;</p>
+  <h4>Here are the 10 take-aways:</h4>
+  <p>&nbsp;</p>
+  <h5>1. The blood already has enough oxygen.</h5>
+  <ul>
+    <li>During periods of rest the standard breathing volume for a healthy person is between 4 and 6 liters of air per minute, which results in almost complete oxygen saturation of 95 to 99 percent. Therefore, increasing oxygen saturation to 100 percent has no additional benefits.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>2. Taking bigger breaths will do little to increase oxygen in the blood.</h5>
+  <ul>
+    <li>It is physiologically impossible to increase the oxygen saturation of the blood in this way, because the blood is almost always already fully saturated.  It would be like pouring more water into a glass that is already filled to the brim.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>3. Since oxygen is already saturated and breathing does little to affect it, <em>increasing</em> oxygen is not the key to performance, but <em>delivery</em> is.</h5>
+  <ul>
+    <li>The problem is not a lack of oxygen in the blood, but that not enough oxygen is being released from the blood to tissues and organs.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>4. Oxygen release (from blood to tissues and organs) depends on carbon dioxide levels.</h5>
+  <ul>
+    <li>What determines how much of this oxygen your body (muscle, organs, and tissues) can use is actually the amount of carbon dioxide in your blood.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>5. The Bohr Effect.</h5>
+  <ul>
+    <li>This says that carbon dioxide is the key variable that allows the release of oxygen from the red blood cells to be metabolized by the body as it loosens the bond between hemoglobin and oxygen (allowing delivery).</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>6. We affect carbon dioxide levels by <em>how</em> we breathe.</h5>
+  <ul>
+    <li>If we are overbreathing we exhale too much carbon dioxide, leaving our body literally gasping for oxygen.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>7. Breathe lighter to increase carbon dioxide levels in the blood; this improves oxygenation.</h5>
+  <ul>
+    <li>Eliminating overbreathing is the key to harnessing the potential of the CO2 you already have inside you.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>8. The BOLT (Body Oxygen Level Test) Score measures how much carbon dioxide we can accumulate while oxygen concentrations lower.  Testing BOLT Score: After a normal exhalation, hold your breathe until you get the urge to breathe again.  It is not about willpower.  This length of time is your BOLT score.  You should aim for 40 seconds (most people will be around 20 seconds).</h5>
+  <ul>
+    <li>Ways to increase BOLT Score: 1) Stop losses of carbon dioxide, 2) Improve tolerance of carbon dioxide, and 3) Simulate high-altitude training.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>9. We should regularly breathe through the nose, day and night.</h5>
+  <ul>
+    <li>True health and inner peace occurs when breathing is quiet, effortless, soft, through the nose, abdominal, rhythmic, and gently paused on the exhale.</li>
+    <li>Unless you breathe calmly through your nose at night, you have no idea what it feels like to have a great night's sleep. <br>
+      McKeown recommends wearing tape over the mouth.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>10. Breath-hold exercises lead to preferred adaptations to oxygen and carbon dioxide.</h5>
+  <ul>
+    <li>They lead to both a hypoxic (lack of oxygen) and a hypercapnic (high carbon dioxide) response.<br>
+      The body responds with greater endurance, lower sensitivity to carbon dioxide, reduced discomfort from lactic acid buildup, etc.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <p>To learn more about nasal breathing, breath hold exercises, and how to simulate high-altitude training, read the book.</p>
+  <p>The simplest way to benefit from this book is to continually nasal breathe, wear tape over the mouth both at night and during light aerobic training (to ensure nasal breathing), and routinely perform breath hold exercises (after an exhalation) for progressively longer times during walking or light activity.</p>
+  <br>
+  <br>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<!--BODY-->
+<div class="container" align="left">
+  <h3>10 Take-aways from "The Oxygen Advantage"</h3>
+  <hr>
+  <p>Remember this is simply an idea you can use or not, as you feel is right for you<br>
+    That said; As a developer, who is sedentary (in codeworld) for hours and hours, <a href="{{ asset('storage/assets/oxygen.pdf?') }}">the book "The Oxygen Advantage: Simple, Scientifically Proven Breathing Techniques"</a> by Patrick McKeown is possibly a "God Send" for us, to get us feeling better, be and feel more alive, lose weight and improve health.</p>
+  <p>Bottom line from PMWay:</p>
+  <ol>
+    <li>Mouth is for eating and Nose is for breathing!</li>
+    <li>Close mouth and breath in deep through your nose (expand your diaphram - like bellows until lower stomach is fully expanded - filled up with air).</li>
+    <li>Now breath out fully through your nose, compressing your stomach (focusing on the diaphram) until lungs are as empty as possible.</li>
+    <li>Now, with mouth still closed, pinch your nose and hold your breath until the urge to breath is felt (do this gently!) and then breath normally again.</li>
+    <li>Per the advice in the book, also at the bottom of the page, you can train this (routinely perform breath hold exercises (after an exhalation) for progressively longer times during walking or light activity with the goal of moving BOLT from 20 seconds up to 40 seconds).</li>
+  </ol>
+  <p>&nbsp;</p>
+  <h4>Here are the 10 take-aways:</h4>
+  <p>&nbsp;</p>
+  <h5>1. The blood already has enough oxygen.</h5>
+  <ul>
+    <li>During periods of rest the standard breathing volume for a healthy person is between 4 and 6 liters of air per minute, which results in almost complete oxygen saturation of 95 to 99 percent. Therefore, increasing oxygen saturation to 100 percent has no additional benefits.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>2. Taking bigger breaths will do little to increase oxygen in the blood.</h5>
+  <ul>
+    <li>It is physiologically impossible to increase the oxygen saturation of the blood in this way, because the blood is almost always already fully saturated.  It would be like pouring more water into a glass that is already filled to the brim.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>3. Since oxygen is already saturated and breathing does little to affect it, <em>increasing</em> oxygen is not the key to performance, but <em>delivery</em> is.</h5>
+  <ul>
+    <li>The problem is not a lack of oxygen in the blood, but that not enough oxygen is being released from the blood to tissues and organs.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>4. Oxygen release (from blood to tissues and organs) depends on carbon dioxide levels.</h5>
+  <ul>
+    <li>What determines how much of this oxygen your body (muscle, organs, and tissues) can use is actually the amount of carbon dioxide in your blood.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>5. The Bohr Effect.</h5>
+  <ul>
+    <li>This says that carbon dioxide is the key variable that allows the release of oxygen from the red blood cells to be metabolized by the body as it loosens the bond between hemoglobin and oxygen (allowing delivery).</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>6. We affect carbon dioxide levels by <em>how</em> we breathe.</h5>
+  <ul>
+    <li>If we are overbreathing we exhale too much carbon dioxide, leaving our body literally gasping for oxygen.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>7. Breathe lighter to increase carbon dioxide levels in the blood; this improves oxygenation.</h5>
+  <ul>
+    <li>Eliminating overbreathing is the key to harnessing the potential of the CO2 you already have inside you.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>8. The BOLT (Body Oxygen Level Test) Score measures how much carbon dioxide we can accumulate while oxygen concentrations lower.  Testing BOLT Score: After a normal exhalation, hold your breathe until you get the urge to breathe again.  It is not about willpower.  This length of time is your BOLT score.  You should aim for 40 seconds (most people will be around 20 seconds).</h5>
+  <ul>
+    <li>Ways to increase BOLT Score: 1) Stop losses of carbon dioxide, 2) Improve tolerance of carbon dioxide, and 3) Simulate high-altitude training.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>9. We should regularly breathe through the nose, day and night.</h5>
+  <ul>
+    <li>True health and inner peace occurs when breathing is quiet, effortless, soft, through the nose, abdominal, rhythmic, and gently paused on the exhale.</li>
+    <li>Unless you breathe calmly through your nose at night, you have no idea what it feels like to have a great night's sleep. <br>
+      McKeown recommends wearing tape over the mouth.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h5>10. Breath-hold exercises lead to preferred adaptations to oxygen and carbon dioxide.</h5>
+  <ul>
+    <li>They lead to both a hypoxic (lack of oxygen) and a hypercapnic (high carbon dioxide) response.<br>
+      The body responds with greater endurance, lower sensitivity to carbon dioxide, reduced discomfort from lactic acid buildup, etc.</li>
+  </ul>
+  <p>&nbsp;</p>
+  <p>To learn more about nasal breathing, breath hold exercises, and how to simulate high-altitude training, read the book.</p>
+  <p>The simplest way to benefit from this book is to continually nasal breathe, wear tape over the mouth both at night and during light aerobic training (to ensure nasal breathing), and routinely perform breath hold exercises (after an exhalation) for progressively longer times during walking or light activity.</p>
+  <br>
+  <br>
+</div>
+<!-- Content Container ends here -->
+{% endif %}
+
+
+{% endblock %}

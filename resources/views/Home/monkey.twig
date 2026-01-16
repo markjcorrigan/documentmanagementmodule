@@ -1,0 +1,403 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Monkey Man{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+  <h3 align="left">What is Monkey (the next step) Management? </h3>
+  <hr>
+  <div align="left"> <img alt="Monkey Management"
+                     class="img-fluid"
+                     src="{{ asset('storage/images/monkeyman.png') }}"
+                      style="float: left" ></div>
+  <div align="right"> <a href="{{ asset('storage/assets/whosgotthemonkey.pdf') }}" title="Monkey Management from the Harvard Business Review!" > <img alt="" class="img-fluid"
+ src="{{ asset('storage/images/monkeywithbanana.png') }}">&nbsp;&nbsp; <a href="/homeviewvideo/resources/kanban.mp4" title="Try Personal KanBan to manage your monkey's (next steps)" > <img alt="" class="img-fluid" src="{{ asset('storage/images/kanbanboard.png') }}" > </a> </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>Do you sometimes feel like this?</p>
+  <p>If so then read on and learn how to manage all those monkeys
+    (a word used to describe &quot;next moves&quot; that you need to manage)
+    that are running wild and driving you CRAZY!</p>
+  <p>In a wonderful little book called the &quot;One Minute Manager&quot;
+    the concept of monkey management was born.<br>
+    <br>
+    <img alt="One Minute Manager"
+                     class="img-fluid"
+                     src="{{ asset('storage/images/one%20minute%20manager.png') }}"
+                    ><br>
+    <br>
+    Essentially a monkey is the <strong>&quot;next step&quot;</strong> in a
+    series of steps towards a goal!<br>
+    The &quot;next step&quot; is either your responsibility or belongs to
+    someone else.<br>
+    But if the &quot;next step&quot; is not done then the achievement of the
+    goal is delayed or frustrated.<br>
+    <br>
+    Imagine you are a manager and your staff member stops you in
+    the passage, while you are on your way to a meeting. &quot;I have to
+    talk to you!?&quot; &quot;Its urgent!&quot;<br>
+    <br>
+    And before you know it your member of staff has you pinned up
+    against the side of the corridor and when they are finished with
+    you they walk off happily (with a bounce in their step) and you
+    look around and you see the staff member's monkey (problem /
+    next step in an action) sitting happily on your shoulder. </p>
+  <p> <img alt="" class="img-fluid" src="{{ asset('storage/images/monkeyonyourback.png') }}" ></p>
+  <p>They have just made their problem your problem!<br>
+    <br>
+    In life we all have tasks to do.<br>
+    These tasks (jobs) are normally defined in our job description
+    or in our role.<br>
+    <br>
+    These jobs or tasks are our monkeys.<br>
+    It is for us to manage these monkeys. I.e. We need to manage
+    them and control them (as if they were out very own pets I.e.
+    look after them, clean them and feed them) etc.<br>
+    <br>
+    But many people often do not like their own monkeys because
+    they can be difficult to take care of and are hard work.<br>
+    <br>
+    So they develop excellent skills in passing their monkeys off
+    onto other people.<br>
+    Especially Bosses and Project Managers!<br>
+    <br>
+    An effective Boss or Project Manager ensures that monkeys stay
+    on the shoulders of the staff members they have employed to care
+    for these monkeys. An effective manager does not allow a
+    staff member to offload monkeys on other staff members or onto
+    him or herself. If a staff member has difficulties with a monkey
+    then a manager must help the staff member but NEVER take over
+    ownership of the monkey or allow it to jump onto his or her own
+    shoulders.<br>
+    <br>
+    Roles in a marriage can also be seen as monkeys. I.e. a wife
+    who hates to cook is always insisting that her husband take them
+    out to eat and therefore wastes family money. Or a husband who
+    will not manage his monkey of taking out the trash etc. When the
+    wife comes into the kitchen and looks at the bin, there sits his
+    monkey, chattering at her on the trash bin still overflowing
+    with trash!<br>
+    <br>
+    Children can also become expert at creating conditions where
+    their parents feel the need to take over their monkeys.
+    Part of the training for life of a child is ensuring that they
+    learn to be responsible and to manage their own monkeys and not
+    to offload responsibilities which should be theirs, onto others.<br>
+    <br>
+    If you can manage &quot;your own monkeys&quot; well then you will always
+    be assured of a job.<br>
+    Managers love staff who are able to manage their own monkeys!</p>
+  <p> And here is a trick!<br>
+    <br>
+    To effectively manage<strong> 'your own monkeys'</strong> always deal with the
+    most nasty, unpredictable and potentially dangerous ones first!</p>
+  <p> <img alt="Sort me NOW!"
+                     class="img-fluid"
+                     src="{{ asset('storage/images/rabidmonkey2.png') }}"
+                    ></p>
+  <p>In the morning when you look at the many things you have on
+    your &quot;To Do List&quot;. Put the two most dangerous monkeys on the
+    desk in front of you and deal with them first, NOW IMMEDIATELY!
+    Its absolutely OK to procrastinate with the other monkey's on
+    your list I.e. the less nasty and dangerous ones. You can
+    get to them later when you have handled the two most dangerous
+    ones first!<br>
+    <br>
+    After you have summoned up the courage and handled the first
+    two then choose the next in the list from most dangerous to
+    least dangerous.<br>
+    <br>
+    You will be amazed how wonderful you will feel when you have a
+    handle on your monkeys.<br>
+    <br>
+    Try it now! You will not be sorry!</p>
+  <br>
+  <br>
+  <br>
+  <hr>
+  <h3 align="left"><a name="new"></a>The New One Minute (next steps) Manager</h3>
+  <hr>
+  <img alt="" class="img-fluid" src="{{ asset('storage/images/thenewoneminutemanager.jpg') }}" > <br>
+  <br>
+  <p align="left"> <br>
+    The First Secret: One Minute Goals work best when you: <br>
+    - Plan the goals together (Manager and staff / goal setter)
+    to
+    describe them (staff goals) briefly and clearly. <br>
+    Manager must show staff / people who work under them what good performance looks like.<br>
+    - Have people write out their goals with due dates on a
+    single page each.<br>
+    - Each
+    goal only a few paragraphs and must facilitate description in
+    less than a minute)<br>
+    (The staff / goal setter must email the goals to their manager.
+    Initially manager works closely with staff / goal setter. <br>
+    - Both set up feedback statistics mechanisms (posted data
+    etc.
+    that can measure staff / goal setters performance)<br>
+    - Ask staff / goal setter to review their most important goals each day
+    which should take only a few minutes to do<br>
+    - Encourage people to take a look at what they are doing
+    and see if their behavior matches their goals<br>
+    - If it doesn't encourage them to rethink what they are
+    doing so they can realize their goals</p>
+  <p align="left">The Second Secret: One Minute
+    Praising's, when you catch someone doing something right:<br>
+    - Praise people a.s.a.p.! (At performance review
+    time is far too late!)<br>
+    - Let people know what they did right and why it was right. Be specific!<br>
+    - Tell people how good you feel about what they did right
+    and how it helps the team / organizations effort etc.<br>
+    - Pause for a while.., to allow people to feel good about
+    what they have done<br>
+    - Encourage them (staff / goal setter) to do more of the same<br>
+    - Make it clear you have confidence in them (staff / goal
+    setter) and fully support
+    their success</p>
+  <p align="left">The Third Secret: One Minute
+    Redirect, if a person has made a mistake:<br>
+    From the managers perspective first consider (was the goal clear?
+    Achievable etc.) <br>
+    If it
+    was then...<br>
+    - The first half minute (focus on the mistake): The 30
+    second Redirect to get a person back on track a.s.a.p.<br>
+    Confirm the facts first and confirm the mistake together, be
+    specific<br>
+    Express how you feel about the mistake and its impact on
+    results, the team / organization<br>
+    Pause.., to allow people to reflect on how they have done. <br>
+    Ensure you give them time to let them feel concerned about their mistake</p>
+  <p align="left"> - The second half minute (focus on the person): The
+    30 second Reaffirm to:<br>
+    Let them know that they are better than their mistake and you
+    think well of them as a person<br>
+    Remind them that you have confidence and trust in them and
+    want to support their success<br>
+    Realize that when the redirect is over... ITS OVER!<br>
+    (The staff / goal setter can also seek out praise if it has not
+    been given (forgotten etc.)<br>
+    I.e. Attitude of staff / goal setter must be it will be good /
+    bonus if praized, no prob <br>
+    / they will break even if not)</p>
+  <hr>
+  <h3 align="left">From the book...</h3>
+  <p align="left">How would you like to work here the New One Minute Manager asked?
+    You mean work for you!?  He asked enthusiastically.</p>
+  <p align="left">No I mean work for yourself, like the other people on our team.</p>
+  <p align="left">I don't believe anybody really works for anybody else.
+    Deep down people like to work for themselves.
+    The people on our team work as partners and together we look for ways to improve.
+    I do my best to help them work better and in the process we all enjoy our work and
+
+    lives more.  And we are a great benefit to our organization.</p>
+  <p align="left">This was of course was what the young manager had been looking for all along.
+    I would love to work here he said.
+    And so he did.
+    Over time he benefitted greatly from working with such an innovative manager.
+    And eventually the inevitable happened.</p>
+  <h3 align="left">Another New One Minute Manager</h3>
+  <p align="left">He become a New One Minute Manager not because he thought like one or talked like one
+
+    but because he lead and managed like one.</p>
+  <p align="left">He kept things simple.</p>
+  <p align="left">He set one minute goals.</p>
+  <p align="left">He gave one minute praising's.</p>
+  <p align="left">He provided one minute redirects.</p>
+  <p align="left">He asked brief important questions.</p>
+  <p align="left">He spoke the simple truth.</p>
+  <p align="left">He Laughed, worked and enjoyed.</p>
+  <p align="left">And perhaps most important of all, he not only managed, he also led people to be
+
+    creative and do new things.</p>
+  <p align="left">He encouraged those around him to do the same for people they worked with.</p>
+  <p align="left">He even created a pocked sized game plan to make it easier for people to become a New
+
+    One Minute Manager.</p>
+  <p align="left">He gave it as a useful gift to those that can benefit from it.</p>
+  <hr>
+  <h3 align="left">'THE NEW ONE MINUTE MANAGER'S GAME PLAN'</h3>
+  <hr>
+  <h3 align="left">START</h3>
+  <p align="left">Let people know up front what you are going to do to help them win.</p>
+  <h3 align="left">SECRET ONE:  SET ONE MINUTE GOALS</h3>
+  <p align="left">Make it clear what the goals are.</p>
+  <p align="left">Show what good behavior looks like.</p>
+  <p align="left">Put each goal on one page  (only a few paragraphs).</p>
+  <p align="left">Quickly review goals frequently (daily).</p>
+  <p align="left">Encourage people to notice what they are doing and see if it matches their goals.</p>
+  <p align="left">If not urge them to change what they are doing and when.</p>
+  <h3 align="left">IF THE GOALS OR ANY PART OF THE GOALS ARE ACHIEVED YOU WIN</h3>
+  <h3 align="left">SECRET TWO:  GIVE ONE MINUTE PRAISINGS</h3>
+  <p align="left">Catch people doing things right.</p>
+  <p align="left">Praise the behavior.</p>
+  <p align="left">Do it soon.</p>
+  <p align="left">Be specific.</p>
+  <p align="left">Say how good you feel about it.</p>
+  <p align="left"> Pause... to let people feel good too.</p>
+  <p align="left">Encourage them to keep up the good work.</p>
+  <p align="left">Proceed with more success.</p>
+  <h3 align="left">HOWEVER IF GOALS ARE NOT ACHIEVED YOU LOSE</h3>
+  <h3 align="left">SECRET THREE: TO HELP TO WIN GIVE ONE MINUTE REDIRECTS</h3>
+  <p align="left">Clarify and agree on goals.</p>
+  <p align="left">Clarify what happened.</p>
+  <p align="left">Describe the mistake soon.</p>
+  <p align="left">Say how concerned you feel.</p>
+  <p align="left">Pause... to let people feel their own concern.</p>
+  <p align="left">Tell them they are better than the mistake and you value them.</p>
+  <p align="left">When its over, IT'S OVER!</p>
+  <p align="left">Then proceed to a better performance.</p>
+  <h3>Note:</h3>
+  <p align="left">Use The New One Minute Manager and <a href="/epms.php" >Project Server</a> to
+    underpin <a href="/wbs.php" >TAsks</a> (next steps) that comprise the <a href="/balanced.php" >Balanced
+    Scorecard</a>.<br>
+    <br>
+    The New One Minute Manager works really well with <a href="/star.php" >STAR/AR</a> and
+    STAR/AR can be used effectively to empower Balanced Scorecard. <br>
+    <a href="/documentssave/resources/starar.zip" > <br>
+    An official form and defined STAR/AR process is always best</a></p>
+  <p align="left">Here is <a href="/documentsviewpdf/resources/stararfeedbackmodel.pdf" >the STAR/AR feedback model</a>.</p>
+  <p> <a href="/documentssave/resources//thenewoneminutemanager.zip" > <img alt="" align="left" class="img-fluid" src="{{ asset('storage/images/risingstar.png') }}" style="float: left" ></a></p>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+  <h3 align="left">What is Monkey (the next step) Management? </h3>
+  <hr>
+  <div align="left"> <img alt="Monkey Management"
+                     class="img-fluid"
+                     src="{{ asset('storage/images/monkeyman.png') }}"
+                      style="float: left" ></div>
+  <div align="right"> <a href="{{ asset('storage/assets/whosgotthemonkey.pdf') }}" title="Monkey Management from the Harvard Business Review!" > <img alt="" class="img-fluid"
+ src="{{ asset('storage/images/monkeywithbanana.png') }}">&nbsp;&nbsp; <a href="/homeviewvideo/resources/kanban.mp4" title="Try Personal KanBan to manage your monkey's (next steps)" > <img alt="" class="img-fluid" src="{{ asset('storage/images/kanbanboard.png') }}" > </a> </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>Do you sometimes feel like this?</p>
+  <p>If so then read on and learn how to manage all those monkeys
+    (a word used to describe &quot;next moves&quot; that you need to manage)
+    that are running wild and driving you CRAZY!</p>
+  <p>In a wonderful little book called the &quot;One Minute Manager&quot;
+    the concept of monkey management was born.<br>
+    <br>
+    <img alt="One Minute Manager"
+                     class="img-fluid"
+                     src="{{ asset('storage/images/one%20minute%20manager.png') }}"
+                    ><br>
+    <br>
+    Essentially a monkey is the <strong>&quot;next step&quot;</strong> in a
+    series of steps towards a goal!<br>
+    The &quot;next step&quot; is either your responsibility or belongs to
+    someone else.<br>
+    But if the &quot;next step&quot; is not done then the achievement of the
+    goal is delayed or frustrated.<br>
+    <br>
+    Imagine you are a manager and your staff member stops you in
+    the passage, while you are on your way to a meeting. &quot;I have to
+    talk to you!?&quot; &quot;Its urgent!&quot;<br>
+    <br>
+    And before you know it your member of staff has you pinned up
+    against the side of the corridor and when they are finished with
+    you they walk off happily (with a bounce in their step) and you
+    look around and you see the staff member's monkey (problem /
+    next step in an action) sitting happily on your shoulder. </p>
+  <p> <img alt="" class="img-fluid" src="{{ asset('storage/images/monkeyonyourback.png') }}" ></p>
+  <p>They have just made their problem your problem!<br>
+    <br>
+    In life we all have tasks to do.<br>
+    These tasks (jobs) are normally defined in our job description
+    or in our role.<br>
+    <br>
+    These jobs or tasks are our monkeys.<br>
+    It is for us to manage these monkeys. I.e. We need to manage
+    them and control them (as if they were out very own pets I.e.
+    look after them, clean them and feed them) etc.<br>
+    <br>
+    But many people often do not like their own monkeys because
+    they can be difficult to take care of and are hard work.<br>
+    <br>
+    So they develop excellent skills in passing their monkeys off
+    onto other people.<br>
+    Especially Bosses and Project Managers!<br>
+    <br>
+    An effective Boss or Project Manager ensures that monkeys stay
+    on the shoulders of the staff members they have employed to care
+    for these monkeys. An effective manager does not allow a
+    staff member to offload monkeys on other staff members or onto
+    him or herself. If a staff member has difficulties with a monkey
+    then a manager must help the staff member but NEVER take over
+    ownership of the monkey or allow it to jump onto his or her own
+    shoulders.<br>
+    <br>
+    Roles in a marriage can also be seen as monkeys. I.e. a wife
+    who hates to cook is always insisting that her husband take them
+    out to eat and therefore wastes family money. Or a husband who
+    will not manage his monkey of taking out the trash etc. When the
+    wife comes into the kitchen and looks at the bin, there sits his
+    monkey, chattering at her on the trash bin still overflowing
+    with trash!<br>
+    <br>
+    Children can also become expert at creating conditions where
+    their parents feel the need to take over their monkeys.
+    Part of the training for life of a child is ensuring that they
+    learn to be responsible and to manage their own monkeys and not
+    to offload responsibilities which should be theirs, onto others.<br>
+    <br>
+    If you can manage &quot;your own monkeys&quot; well then you will always
+    be assured of a job.<br>
+    Managers love staff who are able to manage their own monkeys!</p>
+  <p> And here is a trick!<br>
+    <br>
+    To effectively manage<strong> 'your own monkeys'</strong> always deal with the
+    most nasty, unpredictable and potentially dangerous ones first!</p>
+  <p> <img alt="Sort me NOW!"
+                     class="img-fluid"
+                     src="{{ asset('storage/images/rabidmonkey2.png') }}"
+                    ></p>
+  <p>In the morning when you look at the many things you have on
+    your &quot;To Do List&quot;. Put the two most dangerous monkeys on the
+    desk in front of you and deal with them first, NOW IMMEDIATELY!
+    Its absolutely OK to procrastinate with the other monkey's on
+    your list I.e. the less nasty and dangerous ones. You can
+    get to them later when you have handled the two most dangerous
+    ones first!<br>
+    <br>
+    After you have summoned up the courage and handled the first
+    two then choose the next in the list from most dangerous to
+    least dangerous.<br>
+    <br>
+    You will be amazed how wonderful you will feel when you have a
+    handle on your monkeys.<br>
+    <br>
+    Try it now! You will not be sorry!</p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

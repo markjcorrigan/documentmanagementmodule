@@ -1,0 +1,1300 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>TS</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header"><table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="3%"><p><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="52%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+</div>
+<!-- #BeginEditable "content" -->
+
+
+	<div id="contentWrapper">
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong>Technical Solution (TS)</strong><br />
+					<br />
+					</td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>The Technical Solution (TS) in CMMi represents the main engineering effort of design, coding and implementation.
+This process area starts with the requirements and produces the final product, which may be purchased (or at least in part) if this satisfies the requirements.
+<br>
+<br>
+At first glance it seems that the main software engineering effort should be in more than 1 of the 22 process areas. However, when consideration is given to the fact that 
+CMMi does not specify a particular implementation method, and the overall objective of CMMi is a software process improvement framework, it makes sense that most of the emphasis of CMMi is concerned with control and management as opposed to 
+prescriptive details on how to design or code the software solution. 
+</p>
+
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Technical Solution (TS)<br />An Engineering Process Area at Maturity Level 3</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Technical Solution (TS) is to design, develop, and implement solutions to requirements. Solutions, designs, and implementations encompass products, product components, and product-related lifecycle processes either singly or in combination as appropriate.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+<br>
+<br>
+The Technical Solution process area is applicable at any level of the product architecture and to every product, product component, and product-related lifecycle process. Throughout the process areas, where we use the terms product and product component, their intended meanings also encompass services and their components.
+<br>
+<br>
+The process area focuses on the following:
+<br>
+<br>
+<li>Evaluating and selecting solutions (sometimes referred to as “design approaches,” “design concepts,” or “preliminary designs”) that potentially satisfy an appropriate set of allocated requirements
+</li><li>Developing detailed designs for the selected solutions (detailed in the context of containing all the information needed to manufacture, code, or otherwise implement the design as a product or product component)
+</li><li>Implementing the designs as a product or product component
+<br>
+<br>
+Typically, these activities interactively support each other. Some level of design, at times fairly detailed, may be needed to select solutions. Prototypes or pilots may be used as a means of gaining sufficient knowledge to develop a technical data package or a complete set of requirements.
+<br>
+<br>
+Technical Solution specific practices apply not only to the product and product components but also to product-related lifecycle processes. The product-related lifecycle processes are developed in concert with the product or product component. Such development may include selecting and adapting existing processes (including standard processes) for use as well as developing new processes.
+<br>
+<br>
+Processes associated with the Technical Solution process area receive the product and product component requirements from the requirements management processes. The requirements management processes place the requirements, which originate in requirements development processes, under appropriate configuration management and maintain their traceability to previous requirements.
+<br>
+<br>
+For a maintenance or sustainment project, the requirements in need of maintenance actions or redesign may be driven by user needs or latent defects in the product components. New requirements may arise from changes in the operating environment. Such requirements can be uncovered during verification of the product(s) where actual performance can be compared against the specified performance and unacceptable degradation can be identified. Processes associated with the Technical Solution process area should be used to perform the maintenance or sustainment design efforts.
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Requirements Development process area for more information about requirements allocations, establishing an operational concept, and interface requirements definition.
+<br>
+<br>
+Refer to the Verification process area for more information about conducting peer reviews and verifying that the product and product components meet requirements.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about formal evaluation.
+<br>
+<br>
+Refer to the Requirements Management process area for more information about managing requirements. The specific practices in the Requirements Management process area are performed interactively with those in the Technical Solution process area.
+<br>
+<br>
+Refer to the Organizational Innovation and Deployment process area for more information about improving the organization’s technology.
+<br> 
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1	Select Product Component Solutions</b>
+<br>
+<br>
+Product or product component solutions are selected from alternative solutions.
+<br>
+<br>
+Alternative solutions and their relative merits are considered in advance of selecting a solution. Key requirements, design issues, and constraints are established for use in alternative solution analysis. Architectural features that provide a foundation for product improvement and evolution are considered. Use of commercial off-the-shelf (COTS) product components are considered relative to cost, schedule, performance, and risk. COTS alternatives may be used with or without modification. Sometimes such items may require modifications to aspects such as interfaces or a customization of some of the features to better achieve product requirements.
+<br>
+<br>
+One indicator of a good design process is that the design was chosen after comparing and evaluating it against alternative solutions. Decisions on architecture, custom development versus off the shelf, and product component modularization are typical of the design choices that are addressed. Some of these decisions may require the use of a formal evaluation process.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about the use of a formal evaluation process.
+<br>
+<br>
+Sometimes the search for solutions examines alternative instances of the same requirements with no allocations needed for lower level product components. Such is the case at the bottom of the product architecture. There are also cases where one or more of the solutions are fixed (e.g., a specific solution is directed or available product components, such as COTS, are investigated for use).
+<br>
+<br>
+In the general case, solutions are defined as a set. That is, when defining the next layer of product components, the solution for each of the product components in the set is established. The alternative solutions are not only different ways of addressing the same requirements, but they also reflect a different allocation of requirements among the product components comprising the solution set. The objective is to optimize the set as a whole and not the individual pieces. There will be significant interaction with processes associated with the Requirements Development process area to support the provisional allocations to product components until a solution set is selected and final allocations are established.
+<br>
+<br>
+Product-related lifecycle processes are among the product component solutions that are selected from alternative solutions. Examples of these product-related lifecycle processes are the manufacturing, delivery, and support processes.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<a name="sp1.1"></a>
+<b>SP 1.1 Develop Alternative Solutions and Selection Criteria</b>
+<br>
+<br>
+Develop alternative solutions and selection criteria.
+<br>
+<br>
+Refer to the Allocate Product Component Requirements specific practice in the Requirements Development process area for more information about obtaining allocations of requirements to solution alternatives for the product components.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about establishing criteria used in making decisions.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+The activity of selecting alternative solutions and issues to be subject to decision analyses and trade studies is accomplished by the involvement of relevant stakeholders. These stakeholders represent both business and technical functions and the concurrent development of the product and the product-related lifecycle processes (e.g., manufacturing, support, training, verification, and disposal). In this way, important issues surface earlier in product development than with traditional serial development and can be addressed before they become costly mistakes.
+<br>
+<br>
+Alternative solutions need to be identified and analyzed to enable the selection of a balanced solution across the life of the product in terms of cost, schedule, and performance. These solutions are based on proposed product architectures that address critical product qualities and span a design space of feasible solutions. Specific practices associated with the Develop the Design specific goal provide more information on developing potential product architectures that can be incorporated into alternative solutions for the product.
+<br>
+<br>
+Alternative solutions frequently encompass alternative requirement allocations to different product components. These alternative solutions can also include the use of COTS solutions in the product architecture. Processes associated with the Requirements Development process area would then be employed to provide a more complete and robust provisional allocation of requirements to the alternative solutions.
+<br>
+<br>
+Alternative solutions span the acceptable range of cost, schedule, and performance. The product component requirements are received and used along with design issues, constraints, and criteria to develop the alternative solutions. Selection criteria would typically address costs (e.g., time, people, and money), benefits (e.g., performance, capability, and effectiveness), and risks (e.g., technical, cost, and schedule). Considerations for alternative solutions and selection criteria include the following:
+<br>
+<br>
+</li><li>Cost of development, manufacturing, procurement, maintenance, and support, etc.
+</li><li>Performance
+</li><li>Complexity of the product component and product-related lifecycle processes
+</li><li>Robustness to product operating and use conditions, operating modes, environments, and variations in product-related lifecycle processes
+</li><li>Product expansion and growth
+</li><li>Technology limitations
+</li><li>Sensitivity to construction methods and materials
+</li><li>Risk
+</li><li>Evolution of requirements and technology
+</li><li>Disposal
+</li><li>Capabilities and limitations of end users and operators
+</li><li>Characteristics of COTS products
+<br>
+<br>
+The considerations listed here are a basic set; organizations should develop screening criteria to narrow down the list of alternatives that are consistent with their business objectives. Product lifecycle cost, while being a desirable parameter to minimize, may be outside the control of development organizations. A customer may not be willing to pay for features that cost more in the short term but ultimately decrease cost over the life of the product. In such cases, customers should at least be advised of any potential for reducing lifecycle costs. The criteria used in selections of final solutions should provide a balanced approach to costs, benefits, and risks.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Alternative solution screening criteria
+</li><li>Evaluation reports of new technologies
+</li><li>Alternative solutions
+</li><li>Selection criteria for final selection
+</li><li>Evaluation reports of COTS products
+<br>
+<br>
+Subpractice 1: Identify screening criteria to select a set of alternative solutions for consideration.
+<br>
+<br>
+Subpractice 2: Identify technologies currently in use and new product technologies for competitive advantage.
+<br>
+<br>
+Refer to the Organizational Innovation and Deployment process area for more information about improving the organization’s technology.
+<br>
+<br>
+The project should identify technologies applied to current products and processes and monitor the progress of currently used technologies throughout the life of the project. The project should identify, select, evaluate, and invest in new technologies to achieve competitive advantage. Alternative solutions could include newly developed technologies, but could also include applying mature technologies in different applications or to maintain current methods.
+<br>
+<br>
+Subpractice 3: Identify candidate COTS products that satisfy the requirements.
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about evaluating suppliers.
+<br>
+<br>
+These requirements include the following:
+<br>
+<br>
+</li><li>Functionality, performance, quality, and reliability
+</li><li>Terms and conditions of warranties for the products
+</li><li>Risk
+</li><li>Suppliers' responsibilities for ongoing maintenance and support of the products
+<br>
+<br>
+Subpractice 4: Generate alternative solutions.
+<br>
+<br>
+Subpractice 5: Obtain a complete requirements allocation for each alternative.
+<br>
+<br>
+Subpractice 6: Develop the criteria for selecting the best alternative solution.
+<br>
+<br>
+Criteria should be included that address design issues for the life of the product, such as provisions for more easily inserting new technologies or the ability to better exploit commercial products. Examples include criteria related to open design or open architecture concepts for the alternatives being evaluated.
+<br>
+<br>
+<a name="sp1.2"></a>
+<b>SP 1.2 Select Product Component Solutions</b>
+<br>
+<br>
+Select the product component solutions that best satisfy the criteria established.
+<br>
+<br>
+Refer to the Allocate Product Component Requirements and Identify Interface Requirements specific practices of the Requirements Development process area for information on establishing the allocated requirements for product components and interface requirements among product components.
+<br>
+<br>
+Selecting product components that best satisfy the criteria establishes the requirement allocations to product components. Lower level requirements are generated from the selected alternative and used to develop the product component design. Interface requirements among product components are described, primarily functionally. Physical interface descriptions are included in the documentation for interfaces to items and activities external to the product.
+<br>
+<br>
+The description of the solutions and the rationale for selection are documented. The documentation evolves throughout development as solutions and detailed designs are developed and those designs are implemented. Maintaining a record of rationale is critical to downstream decision making. Such records keep downstream stakeholders from redoing work and provide insights to apply technology as it becomes available in applicable circumstances.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Product component selection decisions and rationale
+</li><li>Documented relationships between requirements and product components
+</li><li>Documented solutions, evaluations, and rationale
+<br>
+<br>
+Subpractice 1: Evaluate each alternative solution/set of solutions against the selection criteria established in the context of the operating concepts and scenarios.
+<br>
+<br>
+Develop timeline scenarios for product operation and user interaction for each alternative solution.
+<br>
+<br>
+Subpractice 2: Based on the evaluation of alternatives, assess the adequacy of the selection criteria and update these criteria as necessary.
+<br>
+<br>
+Subpractice 3: Identify and resolve issues with the alternative solutions and requirements.
+<br>
+<br>
+Subpractice 4: Select the best set of alternative solutions that satisfy the established selection criteria.
+<br>
+<br>
+Subpractice 5: Establish the requirements associated with the selected set of alternatives as the set of allocated requirements to those product components.
+<br>
+<br>
+Subpractice 6: Identify the product component solutions that will be reused or acquired.
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about acquiring products and product components.
+<br>
+<br>
+Subpractice 7: Establish and maintain the documentation of the solutions, evaluations, and rationale.
+<br>
+<br>
+<a name="sg2"></a> 
+<b>SG 2	Develop the Design</b>
+<br>
+<br>
+Product or product component designs are developed.
+<br>
+<br>
+Product or product component designs must provide the appropriate content not only for implementation, but also for other phases of the product lifecycle such as modification, procurement, maintenance, sustainment, and installation. The design documentation provides a reference to support mutual understanding of the design by relevant stakeholders and supports future changes to the design both during development and in subsequent phases of the product lifecycle. A complete design description is documented in a technical data package that includes a full range of features and parameters including form, fit, function, interface, manufacturing process characteristics, and other parameters. Established organizational or project design standards (e.g., checklists, templates, and object frameworks) form the basis for achieving a high degree of definition and completeness in design documentation.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+The integrated teams develop the designs of the appropriate product-related lifecycle processes concurrently with the design of the product. These processes may be selected without modification from the organization’s set of standard processes, if appropriate.
+<br>
+<br>
+<a name="sp21"></a> 
+<b>SP 2.1 Design the Product or Product Component</b>
+<br>
+<br>
+Develop a design for the product or product component.
+<br>
+<br>
+Product design consists of two broad phases that may overlap in execution: preliminary and detailed design. Preliminary design establishes product capabilities and the product architecture, including product partitions, product component identifications, system states and modes, major intercomponent interfaces, and external product interfaces. Detailed design fully defines the structure and capabilities of the product components.
+<br>
+<br>
+Refer to the Requirements Development process area for more information about developing architecture requirements.
+<br>
+<br>
+Architecture definition is driven from a set of architectural requirements developed during the requirements development processes. These requirements express the qualities and performance points that are critical to the success of the product. The architecture defines structural elements and coordination mechanisms that either directly satisfy requirements or support the achievement of the requirements as the details of the product design are established. Architectures may include standards and design rules governing development of product components and their interfaces as well as guidance to aid product developers. Specific practices in the Select Product Component Solutions specific goal contain more information about using product architectures as a basis for alternative solutions.
+<br>
+<br>
+Architects postulate and develop a model of the product, making judgments about allocation of requirements to product components including hardware and software. Multiple architectures, supporting alternative solutions, may be developed and analyzed to determine the advantages and disadvantages in the context of the architectural requirements.
+<br>
+<br>
+Operational concepts and scenarios are used to generate use cases and quality scenarios that are used to refine the architecture. They are also used as a means to evaluate the suitability of the architecture for its intended purpose during architecture evaluations, which are conducted periodically throughout product design.
+<br>
+<br>
+Refer to the Establish Operational Concepts and Scenarios specific practice of the Requirements Development process area for information about developing operational concepts and scenarios used in architecture evaluation.
+<br>
+<br>
+Examples of architecture definition tasks include the following:
+<br>
+<br>
+</li><li>Establishing the structural relations of partitions and rules regarding interfaces between elements within partitions, and between partitions
+</li><li>Identifying major internal interfaces and all external interfaces
+</li><li>Identifying product components and interfaces between them
+</li><li>Defining coordination mechanisms (e.g., for software and hardware)
+</li><li>Establishing infrastructure capabilities and services
+</li><li>Developing product component templates or classes and frameworks
+</li><li>Establishing design rules and authority for making decisions
+</li><li>Defining a process/thread model
+</li><li>Defining physical deployment of software to hardware
+</li><li>Identifying major reuse approaches and sources
+<br>
+<br>
+During detailed design, the product architecture details are finalized, product components are completely defined, and interfaces are fully characterized. Product component designs may be optimized for certain qualities or performance characteristics. Designers may evaluate the use of legacy or COTS products for the product components. As the design matures, the requirements assigned to lower level product components are tracked to ensure that those requirements are satisfied.
+<br>
+<br>
+Refer to the Requirements Management process area for more information about tracking requirements for product components.
+<br>
+<br>
+For Software Engineering
+<br>
+<br>
+Detailed design is focused on software product component development. The internal structure of product components is defined, data schemas are generated, algorithms are developed, and heuristics are established to provide product component capabilities that satisfy allocated requirements.
+<br>
+<br>
+For Hardware Engineering
+<br>
+<br>
+Detailed design is focused on product development of electronic, mechanical, electro-optical, and other hardware products and their components. Electrical schematics and interconnection diagrams are developed, mechanical and optical assembly models are generated, and fabrication and assembly processes are developed.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Product architecture
+</li><li>Product component designs
+<br>
+<br>
+Subpractice 1: Establish and maintain criteria against which the design can be evaluated.
+<br>
+<br>
+Examples of attributes, in addition to expected performance, for which design criteria can be established, include the following:
+<br>
+<br>
+</li><li>Modular
+</li><li>Clear
+</li><li>Simple
+</li><li>Maintainable
+</li><li>Verifiable
+</li><li>Portable
+</li><li>Reliable
+</li><li>Accurate
+</li><li>Secure
+</li><li>Scalable
+</li><li>Usable
+<br>
+<br>
+Subpractice 2: Identify, develop, or acquire the design methods appropriate for the product.
+<br>
+<br>
+Effective design methods can embody a wide range of activities, tools, and descriptive techniques. Whether a given method is effective or not depends on the situation. Two companies may have very effective design methods for products in which they specialize, but these methods may not be effective in cooperative ventures. Highly sophisticated methods are not necessarily effective in the hands of designers who have not been trained in the use of the methods.
+<br>
+<br>
+Whether a method is effective also depends on how much assistance it provides the designer, and the cost effectiveness of that assistance. For example, a multiyear prototyping effort may not be appropriate for a simple product component but might be the right thing to do for an unprecedented, expensive, and complex product development. Rapid prototyping techniques, however, can be highly effective for many product components. Methods that use tools to ensure that a design will encompass all the necessary attributes needed to implement the product component design can be very effective. For example, a design tool that “knows” the capabilities of the manufacturing processes can allow the variability of the manufacturing process to be accounted for in the design tolerances.
+<br>
+<br>
+Examples of techniques and methods that facilitate effective design include the following:
+<br>
+<br>
+</li><li>Prototypes
+</li><li>Structural models
+</li><li>Object-oriented design
+</li><li>Essential systems analysis
+</li><li>Entity relationship models
+</li><li>Design reuse
+</li><li>Design patterns
+<br>
+<br>
+Subpractice 3: Ensure that the design adheres to applicable design standards and criteria.
+<br>
+<br>
+Examples of design standards include the following (some or all of these standards may be design criteria, particularly in circumstances where the standards have not been established):
+<br>
+<br>
+</li><li>Operator interface standards
+</li><li>Test Scenarios
+</li><li>Safety standards
+</li><li>Design constraints (e.g., electromagnetic compatibility, signal integrity, and environmental)
+</li><li>Production constraints
+</li><li>Design tolerances
+</li><li>Parts standards (e.g., production scrap and waste)
+<br>
+<br>
+Subpractice 4: Ensure that the design adheres to allocated requirements.
+<br>
+<br>
+Identified COTS product components must be taken into account. For example, putting existing product components into the product architecture might modify the requirements and the requirements allocation.
+<br>
+<br>
+Subpractice 5: Document the design.
+<br>
+<br>
+<a name="sp22"></a>
+<b>SP 2.2 Establish a Technical Data Package</b>
+<br>
+<br>
+Establish and maintain a technical data package.
+<br>
+<br>
+A technical data package provides the developer with a comprehensive description of the product or product component as it is developed. Such a package also provides procurement flexibility in a variety of circumstances such as performance-based contracting or build to print.
+<br>
+<br>
+The design is recorded in a technical data package that is created during preliminary design to document the architecture definition. This technical data package is maintained throughout the life of the product to record essential details of the product design. The technical data package provides the description of a product or product component (including product-related lifecycle processes if not handled as separate product components) that supports an acquisition strategy, or the implementation, production, engineering, and logistics support phases of the product lifecycle. The description includes the definition of the required design configuration and procedures to ensure adequacy of product or product component performance. It includes all applicable technical data such as drawings, associated lists, specifications, design descriptions, design databases, standards, performance requirements, quality assurance provisions, and packaging details.
+The technical data package includes a description of the selected alternative solution that was chosen for implementation.
+<br>
+<br>
+A technical data package should include the following if such information is appropriate for the type of product and product component (for example, material and manufacturing requirements may not be useful for product components associated with software services or processes):
+<br>
+<br>
+</li><li>Product architecture description
+</li><li>Allocated requirements
+</li><li>Product component descriptions
+</li><li>Product-related lifecycle process descriptions, if not described as separate product components
+</li><li>Key product characteristics
+</li><li>Required physical characteristics and constraints
+</li><li>Interface requirements
+</li><li>Materials requirements (bills of material and material characteristics)
+</li><li>Fabrication and manufacturing requirements (for both the original equipment manufacturer and field support)
+</li><li>The verification criteria used to ensure that requirements have been achieved
+</li><li>Conditions of use (environments) and operating/usage scenarios, modes and states for operations, support, training, manufacturing, disposal, and verifications throughout the life of the product
+</li><li>Rationale for decisions and characteristics (requirements, requirement allocations, and design choices)
+<br>
+<br>
+Because design descriptions can involve a very large amount of data and can be crucial to successful product component development, it is advisable to establish criteria for organizing the data and for selecting the data content. It is particularly useful to use the product architecture as a means of organizing this data and abstracting views that are clear and relevant to an issue or feature of interest. These views include the following:
+<br>
+<br>
+</li><li>Customers
+</li><li>Requirements
+</li><li>The environment
+</li><li>Functional
+</li><li>Logical
+</li><li>Security
+</li><li>Data
+</li><li>States/modes
+</li><li>Management
+<br>
+<br>
+These views are documented in the technical data package.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Technical data package
+<br>
+<br>
+Subpractice 1: Determine the number of levels of design and the appropriate level of documentation for each design level.
+<br>
+<br>
+Determining the number of levels of product components (e.g., subsystem, hardware configuration item, circuit board, computer software configuration item [CSCI], computer software product component, and computer software unit) that require documentation and requirements traceability is important to manage documentation costs and to support integration and verification plans.
+<br>
+<br>
+Subpractice 2: Base detailed design descriptions on the allocated product component requirements, architecture, and higher level designs.
+<br>
+<br>
+Subpractice 3: Document the design in the technical data package.
+<br>
+<br>
+Subpractice 4: Document the rationale for key (i.e., significant effect on cost, schedule, or technical performance) decisions made or defined.
+<br>
+<br>
+Subpractice 5: Revise the technical data package as necessary.
+<br>
+<br>
+<a name="sp23"></a>
+<b>SP 2.3 Design Interfaces Using Criteria</b>
+<br>
+<br>
+Design product component interfaces using established criteria.
+<br>
+<br>
+Interface designs include the following:
+<br>
+<br>
+</li><li>Origination
+</li><li>Destination
+</li><li>Stimulus and data characteristics for software
+</li><li>Electrical, mechanical, and functional characteristics for hardware
+</li><li>Services lines of communication
+<br>
+<br>
+The criteria for interfaces frequently reflect critical parameters that must be defined, or at least investigated, to ascertain their applicability. These parameters are often peculiar to a given type of product (e.g., software, mechanical, electrical, and service) and are often associated with safety, security, durability, and mission-critical characteristics.
+<br>
+<br>
+Refer to the Identify Interface Requirements specific practice in the Requirements Development process area for more information about identifying product and product component interface requirements.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Interface design specifications
+</li><li>Interface control documents
+</li><li>Interface specification criteria
+</li><li>Rationale for selected interface design
+<br>
+<br>
+Subpractice 1: Define interface criteria.
+<br>
+<br>
+These criteria can be a part of the organizational process assets.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about establishing and maintaining organizational process assets.
+<br>
+<br>
+Subpractice 2: Identify interfaces associated with other product components.
+<br>
+<br>
+Subpractice 3: Identify interfaces associated with external items.
+<br>
+<br>
+Subpractice 4: Identify interfaces between product components and the product-related lifecycle processes.
+<br>
+<br>
+For example, such interfaces could include those between a product component to be fabricated and the jigs and fixtures used to enable that fabrication during the manufacturing process.
+<br>
+<br>
+Subpractice 5: Apply the criteria to the interface design alternatives.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about identifying criteria and selecting alternatives based on those criteria.
+<br>
+<br>
+Subpractice 6: Document the selected interface designs and the rationale for the selection.
+<br>
+<br>
+<a name="sp24"></a>
+<b>SP 2.4 Perform Make, Buy, or Reuse Analyses</b>
+<br>
+<br>
+Evaluate whether the product components should be developed, purchased, or reused based on established criteria.
+<br>
+<br>
+The determination of what products or product components will be acquired is frequently referred to as a “make-or-buy analysis.” It is based on an analysis of the needs of the project. This make-or-buy analysis begins early in the project during the first iteration of design; continues during the design process; and is completed with the decision to develop, acquire, or reuse the product.
+<br>
+<br>
+Refer to the Requirements Development process area for more information about determining the product and product component requirements.
+<br>
+<br>
+Refer to the Requirements Management process area for more information about managing requirements.
+<br>
+<br>
+Factors affecting the make-or-buy decision include the following:
+<br>
+<br>
+</li><li>Functions the products will provide and how these functions will fit into the project
+</li><li>Available project resources and skills
+</li><li>Costs of acquiring versus developing internally
+</li><li>Critical delivery and integration dates
+</li><li>Strategic business alliances, including high-level business requirements
+</li><li>Market research of available products, including COTS products
+</li><li>Functionality and quality of available products
+</li><li>Skills and capabilities of potential suppliers
+</li><li>Impact on core competencies
+</li><li>Licenses, warranties, responsibilities, and limitations associated with products being acquired
+</li><li>Product availability
+</li><li>Proprietary issues
+</li><li>Risk reduction
+<br>
+<br>
+The make-or-buy decision can be conducted using a formal evaluation approach.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about defining criteria and alternatives and performing formal evaluations.
+<br>
+<br>
+As technology evolves, so does the rationale for choosing to develop or purchase a product component. While complex development efforts may favor purchasing an off-the-shelf product component, advances in productivity and tools may provide an opposing rationale. Off-the-shelf products may have incomplete or inaccurate documentation and may or may not be supported in the future.
+<br>
+<br>
+Once the decision is made to purchase an off-the-shelf product component, the requirements are used to establish a supplier agreement. There are times when “off the shelf” refers to an existing item that may not be readily available in the marketplace. For example, some types of aircraft and engines are not truly “off the shelf” but can be readily procured. In some cases the use of such nondeveloped items is because the specifics of the performance and other product characteristics expected need to be within the limits specified. In these cases, the requirements and acceptance criteria may need to be included in the supplier agreement and managed. In other cases, the off-the-shelf product is literally off the shelf (word processing software, for example) and there is no agreement with the supplier that needs to be managed.
+<br>
+<br>
+Refer to the Supplier Agreement Management process area for more information about how to address the acquisition of the product components that will be purchased.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Criteria for design and product component reuse
+</li><li>Make-or-buy analyses
+</li><li>Guidelines for choosing COTS product components
+<br>
+<br>
+Subpractice 1: Develop criteria for the reuse of product component designs.
+<br>
+<br>
+Subpractice 2: Analyze designs to determine if product components should be developed, reused, or purchased.
+<br>
+<br>
+Subpractice 3: Analyze implications for maintenance when considering purchased or nondevelopmental (e.g., COTS, government off the shelf, and reuse) items.
+<br>
+<br>
+Examples of implications for maintenance include the following:
+<br>
+<br>
+</li><li>Compatibility with future releases of COTS products
+</li><li>Configuration management of vendor changes
+</li><li>Defects in the nondevelopment item and their resolution
+</li><li>Unplanned obsolescence
+<br>
+<br>
+<a name="sg3"></a> 
+<b>SG 3	Implement the Product Design</b>
+<br>
+<br>
+Product components, and associated support documentation, are implemented from their designs.
+<br>
+<br>
+Product components are implemented from the designs established by the specific practices in the Develop the Design specific goal. The implementation usually includes unit testing of the product components before sending them to product integration and development of end-user documentation.
+<br>
+<br>
+<a name="sp31"></a>
+<b>SP 3.1 Implement the Design</b>
+<br>
+<br>
+Implement the designs of the product components.
+<br>
+<br>
+Once the design has been completed, it is implemented as a product component. The characteristics of that implementation depend on the type of product component.
+<br>
+<br>
+Design implementation at the top level of the product hierarchy involves the specification of each of the product components at the next level of the product hierarchy. This activity includes the allocation, refinement, and verification of each product component. It also involves the coordination between the various product component development efforts.
+<br>
+<br>
+Refer to the Requirements Development process area for more information about the allocation and refinement of requirements.
+<br>
+<br>
+Refer to the Product Integration process area for more information about the management of interfaces and the integration of products and product components.
+<br>
+<br>
+Example characteristics of this implementation are as follows:
+<br>
+<br>
+</li><li>Software is coded.
+</li><li>Data is documented.
+</li><li>Services are documented.
+</li><li>Electrical and mechanical parts are fabricated.
+</li><li>Product-unique manufacturing processes are put into operation.
+</li><li>Processes are documented.
+</li><li>Facilities are constructed.
+</li><li>Materials are produced (e.g., a product-unique material could be petroleum, oil, a lubricant, or a new alloy).
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Implemented design
+<br>
+<br>
+Subpractice 1: Use effective methods to implement the product components.
+<br>
+<br>
+For Software Engineering
+<br>
+<br>
+Examples of software coding methods include the following:
+<br>
+<br>
+</li><li>Structured programming
+</li><li>Object-oriented programming
+</li><li>Automatic code generation
+</li><li>Software code reuse
+</li><li>Use of applicable design patterns
+<br>
+<br>
+For Hardware Engineering
+<br>
+<br>
+Examples of hardware implementation methods include the following:
+<br>
+<br>
+</li><li>Gate level synthesis
+</li><li>Circuit board layout (place and route)
+</li><li>Computer Aided Design drawing
+</li><li>Post layout simulation
+</li><li>Fabrication methods
+<br>
+<br>
+Subpractice 2: Adhere to applicable standards and criteria.
+<br>
+<br>
+Examples of implementation standards include the following:
+<br>
+<br>
+</li><li>Language standards (e.g., standards for software programming languages and hardware description languages)
+</li><li>Drawing requirements
+</li><li>Standard parts lists
+</li><li>Manufactured parts
+</li><li>Structure and hierarchy of software product components
+</li><li>Process and quality standards
+<br>
+<br>
+Examples of criteria include the following:
+<br>
+<br>
+</li><li>Modularity
+</li><li>Clarity
+</li><li>Simplicity
+</li><li>Reliability
+</li><li>Safety
+</li><li>Maintainability
+<br>
+<br>
+Subpractice 3: Conduct peer reviews of the selected product components.
+<br>
+<br>
+Refer to the Verification process area for more information about conducting peer reviews.
+<br>
+<br>
+Subpractice 4: Perform unit testing of the product component as appropriate.
+<br>
+<br>
+Note that unit testing is not limited to software. Unit testing involves the testing of individual hardware or software units or groups of related items prior to integration of those items.
+<br>
+<br>
+Refer to the Verification process area for more information about verification methods and procedures and about verifying work products against their specified requirements.
+<br>
+<br>
+For Software Engineering
+<br>
+<br>
+Examples of unit testing methods include the following:
+<br>
+<br>
+</li><li>Statement coverage testing
+</li><li>Branch coverage testing
+</li><li>Predicate coverage testing
+</li><li>Path coverage testing
+</li><li>Boundary value testing
+</li><li>Special value testing
+<br>
+<br>
+For Hardware Engineering
+<br>
+<br>
+Examples of unit testing methods include the following:
+<br>
+<br>
+</li><li>Functional testing
+</li><li>Radiation inspection testing
+</li><li>Environmental testing
+<br>
+<br>
+Subpractice 5: Revise the product component as necessary.
+<br>
+<br>
+An example of when the product component may need to be revised is when problems surface during implementation that could not be foreseen during design.
+<br>
+<br>
+<a name="sp32"></a>
+<b>SP 3.2 Develop Product Support Documentation</b>
+<br>
+<br>
+Develop and maintain the end-use documentation.
+<br>
+<br>
+This specific practice develops and maintains the documentation that will be used to install, operate, and maintain the product.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>End-user training materials
+</li><li>User's manual
+</li><li>Operator's manual
+</li><li>Maintenance manual
+</li><li>Online help
+<br>
+<br>
+Subpractice 1: Review the requirements, design, product, and test results to ensure that issues affecting the installation, operation, and maintenance documentation are identified and resolved.
+<br>
+<br>
+Subpractice 2: Use effective methods to develop the installation, operation, and maintenance documentation.
+<br>
+<br>
+Subpractice 3: Adhere to the applicable documentation standards.
+<br>
+<br>
+Examples of documentation standards include the following:
+<br>
+<br>
+</li><li>Compatibility with designated word processors
+</li><li>Acceptable fonts
+</li><li>Numbering of pages, sections, and paragraphs
+</li><li>Consistency with a designated style manual
+</li><li>Use of abbreviations
+</li><li>Security classification markings
+</li><li>Internationalization requirements
+<br>
+<br>
+Subpractice 4: Develop preliminary versions of the installation, operation, and maintenance documentation in early phases of the project lifecycle for review by the relevant stakeholders.
+<br>
+<br>
+Subpractice 5: Conduct peer reviews of the installation, operation, and maintenance documentation.
+<br>
+<br>
+Refer to the Verification process area for more information about conducting peer reviews.
+<br>
+<br>
+Subpractice 6: Revise the installation, operation, and maintenance documentation as necessary.
+<br>
+<br>
+Examples of when documentation may need to be revised include when the following events occur:
+<br>
+<br>
+</li><li>Requirements change
+</li><li>Design changes are made
+</li><li>Product changes are made
+</li><li>Documentation errors are identified
+</li><li>Workaround fixes are identified
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a>
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the technical solution process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the technical solution process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for addressing the iterative cycle in which product component solutions are selected, product and product component designs are developed, and the product component designs are implemented.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the technical solution process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the technical solution process can be part of (or referenced by) the project plan as described in the Project Planning process area.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the technical solution process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Special facilities may be required for developing, designing, and implementing solutions to requirements. When necessary, the facilities required for the activities in the Technical Solution process area are developed or purchased.
+<br>
+<br>
+Examples of other resources provided include the following tools:
+<br>
+<br>
+</li><li>Design specification tools
+</li><li>Simulators and modeling tools
+</li><li>Prototyping tools
+</li><li>Scenario definition and management tools
+</li><li>Requirements tracking tools
+</li><li>Interactive documentation tools
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the technical solution process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the technical solution process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Application domain of the product and product components
+</li><li>Design methods
+</li><li>Interface design
+</li><li>Unit testing techniques
+</li><li>Standards (e.g., product, safety, human factors, and environmental)
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the technical solution process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Product, product component and interface designs
+</li><li>Technical data packages
+</li><li>Interface design documents
+</li><li>Criteria for design and product component reuse
+</li><li>Implemented designs (e.g., software code and fabricated product components)
+</li><li>User, installation, operation, and maintenance documentation
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the technical solution process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Select relevant stakeholders from customers, end users, developers, producers, testers, suppliers, marketers, maintainers, disposal personnel, and others who may be affected by, or may affect, the product as well as the process.
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+</li><li>Developing alternative solutions and selection criteria
+</li><li>Obtaining approval on external interface specifications and design descriptions
+</li><li>Developing the technical data package
+</li><li>Assessing the make, buy, or reuse alternatives for product components
+</li><li>Implementing the design
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the technical solution process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Cost, schedule, and effort expended for rework
+</li><li>Percentage of requirements addressed in the product or product component design
+</li><li>Size and complexity of the product, product components, interfaces, and documentation
+</li><li>Defect density of technical solutions work products
+</li><li>Schedule for design activities
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the technical solution process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+</li><li>Selecting product component solutions
+</li><li>Developing product and product component designs
+</li><li>Implementing product component designs
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Technical data packages
+</li><li>Product, product component, and interface designs
+</li><li>Implemented designs (e.g., software code and fabricated product components)
+</li><li>User, installation, operation, and maintenance documentation
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the technical solution process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined technical solution process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the technical solution process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Results of the make, buy, or reuse analysis
+</li><li>Design defect density
+</li><li>Results of applying new methods and tools
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the technical solution process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the technical solution process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process.</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the technical solution process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the technical solution process.&nbsp;
+<br>
+</li>			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

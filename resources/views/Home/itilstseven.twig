@@ -1,0 +1,164 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+ST{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL ST Knowledge Management</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=29') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Knowledge Management</i> aims to gather, analyze, store and share knowledge and information within an organization. The primary purpose of this ITIL process is to improve efficiency by reducing the need to rediscover knowledge.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Knowledge Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>ITIL defines Knowledge Management as the one central process responsible for providing knowledge to all other IT Service Management processes. The process overview of <a href="/images/itilsteight.jpg"  title="Itil-knowledge-management.jpg">ITIL Knowledge Management (.JPG)</a> shows the key information flows. </p>
+  <p>Many aspects of Knowledge Management - added as a new process in ITIL V3 - were covered by several other processes in the previous ITIL version. For example, Problem Management was (and in ITIL 2011 still is) responsible for managing the Known Error Database. </p>
+  <p>Knowledge Management is dealt with in many other Service Management processes. The process itself ensures that all information used in IT Service Management, stored in the Service Knowledge Management System, is consistent and readily available. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p>No sub-processes are specified for <a class="mw-selflink selflink">ITIL Knowledge Management</a>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in Knowledge Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="SKMS" itemprop="itemListElement">Service Knowledge Management System (SKMS)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Service Knowledge Management System (SKMS) is the central repository of the data, information and knowledge that the IT organization needs to manage the lifecycle of its services. Its purpose is to store, analyze and present the service provider's data, information and knowledge. The SKMS is not necessarily a single system
+        - in most cases it will be a federated system based on a variety of data sources. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Knowledge_Manager">Knowledge Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Knowledge Manager ensures that the IT organization is able to gather, analyze, store and share knowledge and information. His primary goal is to improve efficiency by reducing the need to rediscover knowledge.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b><span id="RACI-Matrix-Knowledge-Management">Responsibility Matrix: ITIL Knowledge Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 65%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Knowledge Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a class="mw-selflink selflink">Knowledge Management</a><br />
+          <i>(no sub-processes specified)</i></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Knowledge Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Knowledge Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL ST Knowldge Management</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=29') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Knowledge Management</i> aims to gather, analyze, store and share knowledge and information within an organization. The primary purpose of this ITIL process is to improve efficiency by reducing the need to rediscover knowledge.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Knowledge Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>ITIL defines Knowledge Management as the one central process responsible for providing knowledge to all other IT Service Management processes. The process overview of <a href="/images/itilsteight.jpg"  title="Itil-knowledge-management.jpg">ITIL Knowledge Management (.JPG)</a> shows the key information flows. </p>
+  <p>Many aspects of Knowledge Management - added as a new process in ITIL V3 - were covered by several other processes in the previous ITIL version. For example, Problem Management was (and in ITIL 2011 still is) responsible for managing the Known Error Database. </p>
+  <p>Knowledge Management is dealt with in many other Service Management processes. The process itself ensures that all information used in IT Service Management, stored in the Service Knowledge Management System, is consistent and readily available. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p>No sub-processes are specified for <a class="mw-selflink selflink">ITIL Knowledge Management</a>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in Knowledge Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="SKMS" itemprop="itemListElement">Service Knowledge Management System (SKMS)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Service Knowledge Management System (SKMS) is the central repository of the data, information and knowledge that the IT organization needs to manage the lifecycle of its services. Its purpose is to store, analyze and present the service provider's data, information and knowledge. The SKMS is not necessarily a single system
+        - in most cases it will be a federated system based on a variety of data sources. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Knowledge_Manager">Knowledge Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Knowledge Manager ensures that the IT organization is able to gather, analyze, store and share knowledge and information. His primary goal is to improve efficiency by reducing the need to rediscover knowledge.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b><span id="RACI-Matrix-Knowledge-Management">Responsibility Matrix: ITIL Knowledge Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 65%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Knowledge Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a class="mw-selflink selflink">Knowledge Management</a><br />
+          <i>(no sub-processes specified)</i></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Knowledge Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Knowledge Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

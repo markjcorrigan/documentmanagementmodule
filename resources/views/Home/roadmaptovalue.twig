@@ -1,0 +1,31 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Scrum Roadmap to Value{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container">
+  <h5 align="left">The Scrum Roadmap to Value</h5>
+  <hr>
+  <div align="center"> <img alt="Scrum Value Model" class="img-fluid" src="{{ asset('storage/images/scrumvaluemodelroles.jpg') }}"> </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+<h5 align="left">The Scrum Roadmap to Value</h5>
+<hr>
+<div align="center"> <img alt="Scrum Value Model" class="img-fluid" src="{{ asset('storage/images/scrumvaluemodelroles.jpg') }}"> </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endif %}
+
+
+{% endblock %}

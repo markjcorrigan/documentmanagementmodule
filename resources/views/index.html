@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}ServiceNow{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container">
+<h3>ServiceNow</h3>
+<hr>
+<p><a href="/Servicenow/books" >ServiceNow Books</a></p>
+
+
+
+</div>
+<!--BODY ENDS HERE-->
+{% endif %}
+
+
+{% endblock %}

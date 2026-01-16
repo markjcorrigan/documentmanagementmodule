@@ -1,0 +1,68 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Essential
+Links for Scrum{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+<h3>Essential Links for Scrum + some other important books</h3>
+<hr>
+<ol>
+  <li><a href="{{ asset('storage/assets/sbok.pdf') }}" >The SBOK 3rd Edition 2017</a></li>
+  <li><a href="{{ asset('storage/assets/sbok2016.pdf') }}" >The SBOK 2nd Edition 2016.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/sbok2p.pdf') }}" >The Essence of Scrum in 2 pages. (sbok2p.pdf)</a></li>
+  <li><a href="{{ asset('storage/assets/scrumguide.pdf') }}" >The Scrum Guide. (The short 19 page guide by the inventors of Scrum.)</a></li>
+  <li><a href="{{ asset('storage/assets/scrumjeff.pdf') }}" >The art of doing twice the work in half the time.</a></li>
+  <li><a href="/homeviewvideo/resources/scrumvalues.mp4" >Scrum Values Video</a></li>
+  <li><a href="/homeviewvideo/resources/kanban.mp4" >Personal KanBan Video</a></li>
+  <li><a href="{{ asset('storage/assets/principles.pdf') }}" >Scrum Principles.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/aspects.pdf') }}" >Scrum Aspects.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/agileprinciples.pdf') }}" >Agile Principles.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/workingsoftware.pdf') }}" >Working Software.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/headfirstagile.pdf') }}" >Head First Agile.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/sbokito.pdf') }}" >The SBOBITO.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/scrumito.pdf') }}" >The SBOKITO+.pdf  (more detail thatSBOTITO above</a></li>
+  <li><a href="{{ asset('storage/assets/sbrief.pdf') }}" >Scrum Breathtakingly Brief.pdf (Scrum in 40 pages)</a></li>
+  <li><a href="{{ asset('storage/assets/navigatinghybridscrumenvironments2019.pdf') }}" >Navigating Hybrid Scrum Environments Understanding the Essentials,
+    Avoiding the Pitfalls </a></li>
+  <li><a href="{{ asset('storage/assets/scrumfordummies.pdf') }}" >Scrum for Dummies 2018</a></li>
+  <li><a href="{{ asset('storage/assets/stories.pdf') }}" >Agile UX Stories.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/professionalproductowner.pdf') }}" >The Professional Product Owner.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/safe.pdf') }}" >SAFe.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/thenewoneminutemanager.zip') }}" >The New One Minute Manager.zip</a></li>
+  <li><a href="{{ asset('storage/assets/innovate.pdf') }}" >Innovate.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/devopshandbook.pdf') }}" >DevOps Handbook.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/accelerate.pdf') }}" >Accelerate.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/itilanddevops.pdf') }}" >ITIL and Devops.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/cmmiandagile.pdf') }}" >CMMi and Agile.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/agileandtoc.chm') }}" >Agile and SE and TOC.chm</a></li>
+  <li><a href="{{ asset('storage/assets/IntegratingCMMIandagiledevelopmentCasestudiesandproventechniques2011.pdf') }}" >IntegratingCMMIandagiledevelopmentCasestudies.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/CMMIforDevelopmentImplementationGuide2017.pdf') }}" >CMMIforDevelopmentImplementationGuide2017</a></li>
+  <li><a href="{{ asset('storage/assets/CMMiDev3rd.pdf') }}" >CMMi Dev 3rd  Edition</a></li>
+  <li><a href="{{ asset('storage/assets/CMMIHighMaturityHandBook.pdf') }}" >CMMI High Maturity Hand Book.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/CMMPeople.pdf') }}" >CMM People</a></li>
+  <li><a href="{{ asset('storage/assets/controllibrarycurrent.xltx') }}" >Control Library (Full list 221 but not JIRA ready)</a></li>
+  <!--<li><a href="{{ asset('storage/assets/20190124compliancestories.csv') }}" >Controls JIRA ready but not full list only 136 stories)</a></li>-->
+  <li><a href="{{ asset('storage/assets/ControlLibraryCurrentforJIRAFinal.csv') }}" >Controls Final for import into JIRA 222 stories (NB map task, summary and description only)</a></li>
+  <li><a href="{{ asset('storage/assets/jql.pdf') }}" >Search JIRA like a boss with JQL</a></li>
+  <li><a href="{{ asset('storage/assets/jql.zip') }}" >JQL and setups for Jira and Confluence</a></li>
+  <li><a href="{{ asset('storage/assets/pmwaylinksfromconfluence.zip') }}" >Confluence Page of Resources for Scrum and links to PMWay in html</a></li>
+  <li><a href="{{ asset('storage/assets/jqlcheatsheet.pdf') }}" >JQL Cheat Sheet.pdf</a></li>
+  <li><a href="{{ asset('storage/assets/standupregister.zip') }}" >Scrum Stand-up Register.zip</a></li>
+  <br>
+  <br>
+  <br>
+</ol>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="center">
+  <!--SWITCH ON AND OFF-->
+  <!--The insecure stuff goens here-->
+
+</div>
+{% endif %}
+
+
+{% endblock %}

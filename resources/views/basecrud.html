@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=4.0, minimum-scale=1, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+	<title>{% block title %}{% endblock %}</title>
+
+	<link rel="stylesheet" href="/bootstrapfourthreeone/css/bootstrap.css" />
+	<!--<link rel="stylesheet" href="/bootstrapfouroneone/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">-->
+	<link rel="stylesheet" href="/bootstrapfourthreeone/fontawesomeprowebfivetwo/css/all.css">
+	<link rel="stylesheet" href="/bootstrapfourthreeone/css/jquery-ui.css">
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+		<a class="navbar-brand" href="/">PMWay</a>
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+
+				{% if not user %}
+
+
+
+				{% endif %}
+
+				{% if user %}
+				<!-- Global Site Tag (gtag.js) - Google Analytics -->
+				<!--<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>-->
+
+
+
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-search" aria-hidden="true"></i>&nbsp;<i class="fa fa-plus"
+							aria-hidden="true"></i>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+						<!--<a class="dropdown-item" href="/home/about" title="Why PMWay"><i class="fa fa-info"></i>&nbsp;Why PMWay?</a>-->
+						<!--<a class="dropdown-item" href="/pmwaysandbox/sandbox.php"  title="The PMWay Sandbox to present and discuss ideas"><i class="fa fa-play"></i>&nbsp;Sandbox</a>-->
+						<!--<a class="dropdown-item" href="/blog/index.php"><i class="fab fa-blogger" aria-hidden="true"></i>&nbsp;Blog</a>-->
+
+						<a class="dropdown-item" href="/search/search" title="Search PMWay"><i class="fa fa-search"
+								aria-hidden="true"></i>&nbsp;Search</a>
+						<a class="dropdown-item" href="/search/add" title="Add Item"><i class="fa fa-plus"
+								aria-hidden="true"></i>&nbsp;Add</a>
+
+
+
+
+					</div>
+
+
+					{% endif %}
+
+		</div>
+	</nav>
+
+
+
+
+
+	{% for message in flash_messages %}
+
+	<div style="text-align:center" class="alert alert-{{ message.type }}">
+		{{ message.body }}
+	</div>
+	{% endfor %}
+
+
+	{% block body %}
+
+	<div class="container" style="text-align:center">
+
+
+
+
+
+
+		{% endblock %}
+
+	</div>
+	<script src="/bootstrapfourthreeone/js/jquery.js"></script>
+	<script src="/bootstrapfourthreeone/js/bootstrap.js"></script>
+	<script src="/bootstrapfourthreeone/js/popper.min.js"></script>
+	<script src="/bootstrapfourthreeone/js/jquery-ui.js"></script>
+	<style>
+		.footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 50px;
+			background-color: #040404;
+			color: white;
+			text-align: center;
+		}
+	</style>
+	<br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<footer id="sticky-footer" class=""
+		style="background-color: #111827; text-white-50; padding-top: 20px; padding-bottom: 20px;">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-7 offset-md-1">
+					<p style="text-align:center" class="text-white">Project &amp; Process Management <span
+							lang="en-za">Best
+							Practice</span> <br>at
+						<!--<a href="/cmmi" title="Where are you at? Click here for PMWay's 1 minute self assessment challenge. We dare you to take the pin test now!" >-->CM
+						Level 2<!--</a>--> and above
+					</p>
+					<p align="center"><!--<a href="/gamestats">-->
+						<!--<img alt="Up Stat or Down Stat" class="img-fluid" src="/images/devopsimagemedium.png" title="How are your game stats?">--><!--</a>-->
+						<a href="/gamestats" target="_blanik"><img alt="Up Stat or Down Stat" class="img-fluid"
+								src="/images/devopsimagemedium.png" onmouseover="this.src='/images/devops2.gif'"
+								onmouseout="this.src='/images/devopsimagemedium.png'"
+								title="How are your game stats? Click here for more"></a>
+					</p>
+					<p style="text-align:center" class="text-white">underpinned by
+						<!--<a href="/home/itil">-->ITIL<!--</a>-->
+					</p>
+				</div>
+				<div class="col-md-11 text-right small align-self-end text-white"
+					style="margin-right: 0px; margin-left: 30px;">
+					2009 PMWay<br><small>People Process Technology Governance Execution</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+	{% block footer %}
+	{% if user %}
+	{% endif %}
+	{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,2381 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}SAFe 5.1 Advanced Scrum Master{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+
+<style>
+
+
+/* a:link {color:#00FF00} */
+/* a:visited {color:#00FF00} */
+/* a:hover {color:#FF00FF} */
+a:focus {background: yellow;
+  color: navy; } /* this one! */
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) {
+   .carousel-indicators {
+
+    bottom: -35px;
+
+
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+   .carousel-indicators {
+    position: relative;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+
+
+  }
+}
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+
+  }
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+
+  }
+
+
+
+
+
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+
+  }
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+     .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+
+  small {
+    font-size:8pt;
+}
+
+
+</style>
+
+
+
+<div class="container-fluid" align="center" >
+  <h5><a href="https://www.scaledagileframework.com/" target=_blank">SAFe 5.1</a> Advanced Scrum Master (SAPM)<br><a href="/home/sasm" >SASM</a>, <a href="/home/spo" >SPO</a>, <a href="/home/sdp" >SDP</a></h5>
+
+  <p><a class="right carousel-control " href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="0"
+      title=""><small>Course Outline (SASM)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="1"
+	  title=""><small>SASM Challenges / Agile Team Characteristics</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="2"
+      title=""><small>4 Core Values / 7 Core Competencies</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="3"
+	  	  title=""><small>SM Connections in SAFe</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="4"
+	  	       title=""><small>SAFe's 10 Principles</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="5"
+	      title=""><small>#1: Take an Economic View</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="6"
+
+	  title=""><small>#2 Apply systems thinking</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="7"
+
+	  	  title=""><small>#3: Assume variability; preserve options</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="8"
+
+
+		   title=""><small>#4: Build incrementally with fast, integrated learning cycles</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="9"
+
+
+	    title=""><small>#5: Base milestones on objective evaluation of working systems</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="10"
+
+	  	  title=""><small>#6: Visualize and limit WIP, reduce batch sizes and manage queue lengths</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="11"
+
+	  title=""><small>#7: Apply cadence, synchronize with cross-domain planning</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="12"
+
+	  title=""><small>#8: Unlock the intrinsic motivation of knowledge workers</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="13"
+
+
+
+	  	  title=""><small>#9: Decentralize decision-making</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="14"
+	    title=""><small>#10: Orgainze around value</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="15"
+
+		  title=""><small>Anti-Patterns (PO, Stories, Context)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="16"
+
+	  title=""><small>Facilitating Program Execution</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="17"
+	title=""><small>Organize Teams around flow of value</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="18"
+	    title=""><small>Plan the PI</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="19"
+
+	  	  title=""><small>Execute the PI</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="20"
+	    title=""><small>Enable Teams to release value on Demand</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="21"
+
+
+
+	      title=""><small>Prepare for the next PI Planning event</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="22"
+
+
+
+
+
+	  	  title=""><small>Improve Flow with Kanban and XP</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="23"
+
+
+
+	  	  	  title=""><small>Measure and Optimize Flow</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="24"
+	  	  title=""><small>Build quality in</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="25"
+	  	  title=""><small>Foster engineering craftsmanship</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="26"
+
+
+
+
+
+
+	  	  title=""><small>Facilitate collab with Archit, System team and Ops</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="27"
+
+
+
+
+
+
+	  	  title=""><small>Build High Performing Teams (Team Collab)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="28"
+	  title=""><small>Improving Program Performance</small></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </p>
+</div>
+
+<div id="i" class="carousel slide" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#i" data-slide-to="0" title="Course Outline (SASM)" class="active"></li>
+		 <li data-target="#i" data-slide-to="1" title="SASM Challenges / Agile Team Characteristics"></li>
+			  		 <li data-target="#i" data-slide-to="2" title="4 Core Values / 7 Core Competencies"></li>
+			      <li data-target="#i" data-slide-to="3" title="SM Connections in SAFe"></li>
+		    <li data-target="#i" data-slide-to="4" title="SAFe's 10 Principles"></li>
+			 <li data-target="#i" data-slide-to="5" title="#1: Take an Economic View"></li>
+			   <li data-target="#i" data-slide-to="6" title="#2 Apply systems thinking"></li>
+			 <li data-target="#i" data-slide-to="7" title="#3:  Assume variability; preserve options"></li>
+			   	 	    <li data-target="#i" data-slide-to="8" title="#4: Build incrementally with fast, integrated learning cycles"></li>
+			   	     <li data-target="#i" data-slide-to="9" title="#5: Base milestones on objective evaluation of working systems"></li>
+			   	     <li data-target="#i" data-slide-to="10" title="#6: Visualize and limit WIP, reduce batch sizes and manage queue lengths"></li>
+			       <li data-target="#i" data-slide-to="11" title="#7: Apply cadence, synchronize with cross-domain planning"></li>
+				      			   	  <li data-target="#i" data-slide-to="12" title="#8: Unlock the intrinsic motivation of knowledge workers"></li>
+			   	  	  <li data-target="#i" data-slide-to="13" title="#9: Decentralize decision-making"></li>
+			    	  <li data-target="#i" data-slide-to="14" title="#10: Orgainze around value"></li>
+ 			   	    <li data-target="#i" data-slide-to="15" title="Anti-Patterns (PO, Stories, Context)"></li>
+						<li data-target="#i" data-slide-to="16" title="Facilitating Program Execution"></li>
+								<li data-target="#i" data-slide-to="17" title="Organize Teams around flow of value"></li>
+											<li data-target="#i" data-slide-to="18" title="Plan the PI"</li>
+						<li data-target="#i" data-slide-to="19" title="Execute the PI"</li>
+											<li data-target="#i" data-slide-to="20" title="Enable teams to release value on demand"></li>
+										<li data-target="#i" data-slide-to="21" title="Prepare for the next PI Planning event"></li>
+									<li data-target="#i" data-slide-to="22" title="Improve Flow with Kanban and XP"></li>
+																				<li data-target="#i" data-slide-to="23" title="Measure and Optimize Flow"></li>
+						<li data-target="#i" data-slide-to="24" title="Build quality in"></li>
+									<li data-target="#i" data-slide-to="25" title="Foster engineering craftsmanship"></li>
+																			<li data-target="#i" data-slide-to="26" title="Facilitate collab wiht Archit, System team and Ops"></li>
+																		<li data-target="#i" data-slide-to="27" title="Build High Performing Teams (Team Collab)"></li>
+										<li data-target="#i" data-slide-to="28" title="Improving Program Performance"></li>
+
+  </ol>
+
+
+
+
+
+
+
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active" align="center">
+
+      <div class="container" style="max-width:70%">
+      <h5>Course Outline (SASM Role)</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-4.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-6.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-7.png') }}"><br>
+	  	  <br><br>
+      </div>
+    </div>
+
+
+	  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SASM Challenges / Agile Team Characteristics</h5>
+		 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-8.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-9.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-10.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-11.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-13.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-14.png') }}"><br>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>4 Core Values / 7 Core Competencies</h5>
+		 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-15.png') }}"><br>
+		 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-16.png') }}"><br>
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-17.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-18.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-19.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-20.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-21.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-22.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-23.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-24.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-25.png') }}"><br>
+
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SM Connections in SAFe</h5>
+
+      		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-26.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-27.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-28.png') }}"><br>
+
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe's 10 Principles</h5>
+	 		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-2.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-4.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-3.png') }}"><br>
+
+
+
+      </div>
+    </div>
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#1: Take an Economic View</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-5.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-6.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-7.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-8.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-9.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-10.png') }}"><br>
+								<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-11.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-12.png') }}"><br>
+	<br><br>
+      </div>
+    </div>
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#2 Apply systems thinking</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-13.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-14.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-15.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-16.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-17.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-18.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-19.png') }}"><br>
+      </div>
+    </div>
+
+
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#3:  Assume variability; preserve options</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-20.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-21.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-22.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-23.png') }}"><br>
+
+
+
+
+
+			<br><br>
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#4: Build incrementally with fast, integrated learning cycles</h5>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-24.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-25.png') }}"><br>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-26.png') }}"><br>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-27.png') }}"><br>
+								<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-28.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-28a.png') }}"><br>
+
+	<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#5: Base milestones on objective evaluation of working systems</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-29.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-30.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-31.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-32.png') }}"><br>
+
+   </div>
+    </div>
+
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#6: Visualize and limit WIP, reduce batch sizes and manage queue lengths</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-33.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-34.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-35.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-36.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-37.png') }}"><br>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-38.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-39.png') }}"><br>
+											<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-40.png') }}"><br>
+												<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-41.png') }}"><br>
+														<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-42.png') }}"><br>
+															<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-43.png') }}"><br>
+															<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-44.png') }}"><br>
+																		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-45.png') }}"><br>
+																					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-46.png') }}"><br>
+      </div>
+    </div>
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#7: Apply cadence, synchronize with cross-domain planning</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-47.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-48.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-49.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-50.png') }}"><br>
+
+		<br><br>
+      </div>
+    </div>
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#8: Unlock the intrinsic motivation of knowledge workers</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-51.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-52.png') }}"><br>
+
+
+
+	<br><br>
+
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#9: Decentralize decision-making</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-53.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-54.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-55.png') }}"><br>
+
+
+	<br><br>
+
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#10: Orgainze around value</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-56.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-57.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-58.png') }}"><br>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-59.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-60.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-61.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-62.png') }}"><br>
+		<br><br>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Anti-Patterns (PO, Stories, Context)</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-2.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-3.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-4.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-5.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-6.png') }}"><br>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-7.png') }}"><br>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-8.png') }}"><br>
+								<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-9.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-10.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-11.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-12.png') }}"><br>
+										<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-13.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-14.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-15.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-16.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-17.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-18.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-19.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-20.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-21.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-22.png') }}"><br>
+
+
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Facilitating Program Execution</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-2.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-3.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-4.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-5.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-6.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-7.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-8.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-9.png') }}"><br>
+		<br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Organize Teams around flow of value</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-10.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-11.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-12.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-13.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-14.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-15.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-16.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-17.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-18.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-19.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-20.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-21.png') }}"><br>
+
+		<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Plan PI</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-22.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-23.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-24.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-25.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-26.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-27.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-28.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-29.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-30.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-31.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-32.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-33.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-34.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-35.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-36.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-36a.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-36b.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-37.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-38.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-39.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-40.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-41.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-42.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-43.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-44.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-45.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-46.png') }}"><br>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-47.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-48.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-49.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-50.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-51.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-52.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-53.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-54.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-55.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-56.png') }}"><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Execute the PI</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-57.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-58.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-59.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-60.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-61.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-62.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-63.png') }}"><br>
+
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Enable Teams to Release Value on Demand</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-64.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-65.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-66.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-67.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-68.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-69.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-70.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-71.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-72.png') }}"><br>
+
+
+		<br><br>
+      </div>
+    </div>
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Prepare for the next PI Planning event</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-73.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-74.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-75.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-76.png') }}"><br>
+
+
+		<br><br>
+      </div>
+    </div>
+
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Improve Flow with Kanban and XP</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-2.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-3.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-4.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-5.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-6.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-7.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-8.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-3.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-9.png') }}"><br>
+
+
+	<br><br>
+
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Measure and Optimize Flow</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-10.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-11.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-12.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-13.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-14.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-15.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-16.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-17.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-18.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-19.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-20.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-21.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-22.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-23.png') }}"><br>
+	<br><br>
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Build quality in</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-24.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-25.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-26.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-27.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-28.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-29.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-30.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-31.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-32.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-33.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-34.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-35.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-36.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-37.png') }}"><br>
+	<br><br>
+      </div>
+    </div>
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Foster engineering craftsmanship</h5>
+
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-38.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-39.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-40.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-41.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-42.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-43.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-44.png') }}"><br>
+
+	<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Facilitate collab with Archit, System team and Ops</h5>
+
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-45.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-46.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-47.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-48.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-49.png') }}"><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Build High Performing Teams (Team Collab)</h5>
+
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-2.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-3.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-4.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-5.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-6.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-7.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-8.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-9.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-10.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-11.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-12.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-13.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-14.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-15.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-16.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-17.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-18.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-19.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-20.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-21.png') }}"><br>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-22.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-23.png') }}"><br>
+
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-24.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-25.png') }}"><br>
+
+
+
+
+	<br><br>
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Improving Program Performance</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-2.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-3.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-4.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-5.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-6.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-7.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-8.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-9.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-10.png') }}"><br>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-11.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-12.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-13.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-14.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-15.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-16.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-17.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-18.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-19.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-20.png') }}"><br>
+								<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-21.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-22.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-23.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-24.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-25.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-26.png') }}"><br>
+
+      </div>
+    </div>
+
+
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+	</div>
+</div>
+
+
+
+
+
+<a class="carousel-control-prev" href="#i" role="button" data-slide="prev">
+  <i class="fas fa-lg fa-chevron-left" style="color:black"></i>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#i" role="button" data-slide="next">
+  <i class="fas fa-lg fa-chevron-right" style="color:black"></i>
+
+  <span class="sr-only">Next</span>
+</a>
+<br><br>
+<hr>
+
+<div align="center">
+
+<h5>Exploring the Scrum Master role (15%)</h5>
+
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+	<p><a href="{{ asset('storage/assets/sasmscrummaster.pdf') }}" >Scrum Master</a></p>
+	<p><a href="{{ asset('storage/assets/sasmcorevalues.pdf') }}" >SAFe Core Values</a></p>
+	<p><a href="{{ asset('storage/assets/sasmvision.pdf') }}" >SAFe Vision</a></p>
+	<p><a href="{{ asset('storage/assets/sasmfandc.pdf') }}" >SAFe Features and Capabilities</a></p>
+	<p><a href="{{ asset('storage/assets/sasmsoltrain.pdf') }}" >SAFe Solution Train</a></p>
+	<p><a href="{{ asset('storage/assets/sasmsystemteam.pdf') }}" >SAFe System Team</a></p>
+	<p><a href="{{ asset('storage/assets/sasmagileteams.pdf') }}" >SAFe Agile Teams</a></p>
+
+<h5>Applying SAFe Principles (15%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasmsystemsthinking.pdf') }}" >SAFe Apply Systems Thinking</a></p>
+<p><a href="{{ asset('storage/assets/sasmlimitwip.pdf') }}" >SAFe Visualize and Limit WIP</a></p>
+<p><a href="{{ asset('storage/assets/sasmleanagilemindset.pdf') }}" >SAFe Lean-Agile Mindset</a></p>
+
+<h5>Exploring Agile and Scrum anti-patterns (13%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+
+
+<h5>Facilitating program execution (15%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasminspectandadapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+<p><a href="{{ asset('storage/assets/sasmrelondemand.pdf') }}" >SAFe Release on Demand</a></p>
+<p><a href="{{ asset('storage/assets/sasmprepostpiplanning.pdf') }}" >SAFe Pre and Post PI Planning</a></p>
+
+
+<h5>Improving flow with Kanban and XP (13%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasmteamkanban.pdf') }}" >SAFe Team Kanban</a></p>
+<p><a href="{{ asset('storage/assets/sasmbuiltinquality.pdf') }}" >SAFe Built in Quality</a></p>
+<p><a href="{{ asset('storage/assets/sasmci.pdf') }}" >SAFe Continuous Integration</a></p>
+<p><a href="{{ asset('storage/assets/sasmportfoliokanban.pdf') }}" >SAFe Portfolio Kanban</a></p>
+
+
+<h5>Building high-performing teams (17%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasmagileteamsanother.pdf') }}" >SAFe Agile Teams (repeats)</a></p>
+<p><a href="{{ asset('storage/assets/sasmcop.pdf') }}" >SAFe Communities of Practice</a></p>
+<p><a href="{{ asset('storage/assets/sasmleanagileprinciples.pdf') }}" >SAFe Lean Agile Principles</a></p>
+<p><a href="{{ asset('storage/assets/sasmleanagilemindset.pdf') }}" >SAFe Lean-Agile Mindset (repeats)</a></p>
+
+<h5>Improving program performance (12%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasminspectandadapt.pdf') }}" >SAFe Inspect and Adapt (repeats)</a></p>
+<p><a href="{{ asset('storage/assets/sasminnovationandplanningiteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+<p><a href="{{ asset('storage/assets/sasmiterationretrospective.pdf') }}" >SAFe Iteration Retrospective</a></p>
+
+<h5>Other articles from the course</h5>
+<p><a href="{{ asset('storage/assets/SASMAdvancedTopicOrganizingAgileTeams.pdf') }}" >SAFe organizing-agile-teams-and-arts-team-topologies-at-scale</a></p>
+<p><a href="{{ asset('storage/assets/cfd.mp4') }}" >CFD video</a></p>
+
+<hr>
+	<p align="center">>>>|<<<</p>
+	<p><a href="{{ asset('storage/assets/WhatsAProductOwnerToDo.pdf') }}" >What's a Product Owner to do?</a></p>
+<p><a href="/home/leanagilemindset" >Lean Agile Mindset video</a></p>
+<p><a href="/home/safeuserstories" >SAFe User Stories video</a></p>
+<p><a href="/home/powerofpiplanning" >Power of PI Planning video</a></p>
+<p><a href="/home/strategicthemes" >Strategic Themes video</a></p>
+	<p><a href="{{ asset('storage/assets/DesignThinkingSafe.pdf') }}" >SAFe Design Thinking</a></p>
+<p><a href="/home/distributedteams" >Distributed Teams video</a></p>
+	<p><a href="{{ asset('storage/assets/SAFeBacklogs.pdf') }}" >SAFe Backlogs</a></p>
+		<p><a href="{{ asset('storage/assets/SAFePIObjectives.pdf') }}" >SAFe PI Objectives</a></p>
+		<p><a href="/home/wsjf" >WSJF video</a></p>
+			<p><a href="/home/wsjftwo" >WSJF 2 video</a></p>
+			<p><a href="/home/piplanningprep" >PI Planning Preparation video</a></p>
+	<p><a href="/home/safeprogramboard" >The Program Board video</a></p>
+		<p><a href="/home/introtopiplanning" >Intro to PI Planning</a></p>
+				<p><a href="/home/iterationplanning" >Iteration Planning</a></p>
+					<p><a href="/home/dsu" >DSU video</a></p>
+					<p><a href="/home/howtodsutwo" >How To DSU another video</a></p>
+					<p><a href="/home/backlogrefinement" >Backlog Refinement Workshop video</a></p>
+						<p><a href="/home/iterationreview" >Iteration Review video</a></p>
+						<p><a href="/home/howtoiterationplanning" >How To Iteration Planning Review videos</a></p>
+							<p><a href="/home/saferetro" >SAFe Retro video</a></p>
+							<p><a href="/home/safedevops" >DevOps and Continuous Delivery Pipeline videos</a></p>
+							<br><br>
+
+	<p align="center">>>>|<<<</p>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p><a href="{{ asset('storage/assets/SAFeSystemDemo.pdf') }}" >SAFe System Demo</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeScrumMaster.pdf') }}" >SAFe Scrum Master role</a></p>
+	  <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+	    <p><a href="{{ asset('storage/assets/SAFeRequirementsModel.pdf') }}" >SAFe Requirements Model</a></p>
+
+
+		  <p><a href="{{ asset('storage/assets/SAFeIterations.pdf') }}" >SAFe Iterations:  Plan, Execution, Review, Retrospect</a><br>
+		 <small>Note: in the article above on page 4 find this essential truth for Scrum success: "<b><a href="images/scrumvaluemodelessence.jpg" ><u>The Product Owner defines the ‘WHAT (and WHEN)’; the team defines ‘HOW’ and ‘HOW MUCH’</b></u></a>."</small></p>
+
+
+	   <p><a href="{{ asset('storage/assets/SAFeInnovationandPlanningIteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+
+ <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+  <p><a href="{{ asset('storage/assets/SAFeEssentialSafe.pdf') }}" >Essential SAFe and Core Competencies</a></p>
+    <p><a href="{{ asset('storage/assets/SAFePIPlanning.pdf') }}" >SAFe PI Planning</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeDevOps.pdf') }}" >SAFe DevOps</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeContinuousDeliveryPipeline.pdf') }}" >SAFe Continuous Delivery Pipeline</a></p>
+	 	  <p><a href="{{ asset('storage/assets/SAFeReleaseonDemand.pdf') }}" >SAFe Release on Demand</a></p>
+		  		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		 		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		   <p><a href="{{ asset('storage/assets/SAFeART.pdf') }}" >SAFe ART</a></p>
+		    <p><a href="{{ asset('storage/assets/SAFeBusinessOwners.pdf') }}" >SAFe Business Owners</a></p>
+			  <p><a href="{{ asset('storage/assets/SAFeContinuousIntegration.pdf') }}" >SAFe Continuous Integration</a></p>
+			   <p><a href="{{ asset('storage/assets/SAFEFeaturesCapabilities.pdf') }}" >SAFe Features and Capabilities</a></p>
+			     <p><a href="{{ asset('storage/assets/SAFeLeanPortfolioManagement.pdf') }}" >SAFe Lean Portfolio Management</a></p>
+				   <p><a href="{{ asset('storage/assets/SAFeNonfunctionalRequirements.pdf') }}" >SAFe Non Functional Requirements</a></p>
+				    <p><a href="{{ asset('storage/assets/SAFeProgramIncrement.pdf') }}" >SAFe Program Increment</a></p>
+					 <p><a href="{{ asset('storage/assets/SAFeSolution.pdf') }}" >SAFe Solution</a></p>
+
+
+
+
+
+
+
+	<p><a href="/pmway/?slide=4" >Tie the logic above to the Capability Maturity model for operations above CM L1</a></p>
+		<br>
+						<p>Per the <a href="/agile?slide=12" >Agile Manifesto</a> acceptance is based on working software (improvements) / business value that can be released.  <br>A Product Owner approved Demo Deck (as key project artifact [Tying together PMC with PP (at User Story level)]) from each iteration review is (in PMWay's experience and opinion) best way to run Scrum at CM L2+.</p>
+						<p>From the article "SAFe User Story" above the image below is essential to appreciate and adopt if Professional scrum of  scrums at scale within SAFe is the goal.</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/safestoryfeature.png') }}"></p>
+						<p>and then extending this into the SAFe environment for Capabilities and Epics</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/saferequirementsmodel.png') }}"></p>
+						<p>Clearly the Product Owner's role is essential.  But always remember that the Scrum Master's role to reinforce Scrum Process (balance the make it so! / and deliver what by when!? forces) for team sanity and health is just as essential!</p>
+						<p>With the above in mind why not <a href="/pin"  >take the pin test to pin down</a> where you believe you are operating at.</p>
+
+
+
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepmboksixone" aria-expanded="false" aria-controls=
+        "collapsepmboksixone">PMWay Opinion about SAFe
+</button>
+
+<div class="collapse" id="collapsepmboksixone">
+    <div class="container">
+        <div class="card text-center">
+<h5 class="card-header" align="center"></h5>
+            <div class="card-body text-center">
+
+<p>It is the considerecd opinion of PMWay that with teams that (and are forced to) operate at <a href="/pmway/?slide=4" target=_blank">Capability Maturity Level 1</a><br>([Features from PI from Executive Pressure that force down on and kill agility found in User Stories (Teams not bothering - what's the use? - to compile User Stories)] and [<a href="/redbeads" >Deming's red bead experiment</a>] without PP and PMC at the level of the professional User Story)  <a href="/home/safeisunsafe"  > etc.<br>then SAFe is definitely UNSAFe</a>.</p>
+	<p>I.e. From the SAFe is unsafe article link above</p> <div align="center">
+Ken Schwaber, co-developer of srcum <a href="https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/" ><u>expressed serious concerns about SAFe</u></a> as early as 2013.<br>
+Nicholas M. Chaillan, U.S. Air Force Chief Software Officer, <a href="https://twitter.com/lukadotnet/status/1203751211817742336?s=20" ><u>discourages</u></a> “using rigid, presrciptive frameworks such as the Scaled Agile Framework (SAFe).”<br>
+Forbes contributor Steve Denning <a href="https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/#316e49034bbe" ><u>calls out</u></a> SAFe for being “ particularly worrying” in his article on how to spot fake Agile.<br>
+Marty Cagan of the Silicon Valley Product Group <a href="https://svpg.com/revenge-of-the-pmo/" ><u>explains</u></a> how SAFe is antithetical to the mindset of Silicon Valley companies.
+</div><br><img alt="SAFe should be (like a loaded gun) kept locked up in a safe" class="img-fluid"  src="{{ asset('storage/images/safefive/safelylockedup.png') }}" title="Like a loaded gun with children best to keep it locked up in a SAFe before someone gets really hurt"><img alt="Due to the heroics and pressure to push features down on developers your human resources will ... runaway!" class="img-fluid"  src="{{ asset('storage/images/safefive/runaway.png') }}" title="Why can we not keep our good people"><br><img alt="fast path to mediocracy" class="img-fluid"  src="{{ asset('storage/images/safefive/mediocracy.png') }}" title="Classic ignorance of the wisdom of Deming and a total lack of understanding of scrum.  The Mike Cohn video on YouTube about User Stories explains the problem and how to solve it"></p>
+
+
+
+
+
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+ </div>
+</div>
+
+
+    <script src="/bootstrapfourfivetwo/js/jquery.js"></script>
+    <script src="/bootstrapfourfivetwo/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/bootstrapfourfivetwo/css/jquery-ui.css"></link>
+<script>
+  $(document).ready(function () {
+    function qs(key) {
+      key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+      var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+      var slide = match && decodeURIComponent(match[1].replace(/\+/g, " "));
+      if (Math.floor(slide) == slide && $.isNumeric(slide))
+        return parseInt(slide);
+      else
+        return 0;
+    }
+    $('#i').carousel((qs('slide')) - 1);
+  });
+</script>
+<br>
+<br>
+<br>
+<br>
+
+{% endif %}
+
+
+
+{% if not user %} 	<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+{#  #}
+
+<style>
+
+
+/* a:link {color:#00FF00} */
+/* a:visited {color:#00FF00} */
+/* a:hover {color:#FF00FF} */
+a:focus {background: yellow;
+  color: navy; } /* this one! */
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) {
+   .carousel-indicators {
+
+    bottom: -35px;
+
+
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+   .carousel-indicators {
+    position: relative;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+
+
+  }
+}
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+
+  }
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+
+  }
+
+
+
+
+
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+
+  }
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+     .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+
+  small {
+    font-size:8pt;
+}
+
+
+</style>
+
+
+<div class="container-fluid" align="center" >
+  <h5><a href="https://www.scaledagileframework.com/" target=_blank">SAFe 5.1</a> Advanced Scrum Master (SAPM)<br><a href="/home/sasm" >SASM</a>, <a href="/home/spo" >SPO</a>, <a href="/home/sdp" >SDP</a></h5>
+
+  <p><a class="right carousel-control " href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="0"
+      title=""><small>Course Outline (SASM)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="1"
+	  title=""><small>SASM Challenges / Agile Team Characteristics</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="2"
+      title=""><small>4 Core Values / 7 Core Competencies</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="3"
+	  	  title=""><small>SM Connections in SAFe</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="4"
+	  	       title=""><small>SAFe's 10 Principles</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="5"
+	      title=""><small>#1: Take an Economic View</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="6"
+
+	  title=""><small>#2 Apply systems thinking</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="7"
+
+	  	  title=""><small>#3: Assume variability; preserve options</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="8"
+
+
+		   title=""><small>#4: Build incrementally with fast, integrated learning cycles</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="9"
+
+
+	    title=""><small>#5: Base milestones on objective evaluation of working systems</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="10"
+
+	  	  title=""><small>#6: Visualize and limit WIP, reduce batch sizes and manage queue lengths</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="11"
+
+	  title=""><small>#7: Apply cadence, synchronize with cross-domain planning</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="12"
+
+	  title=""><small>#8: Unlock the intrinsic motivation of knowledge workers</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="13"
+
+
+
+	  	  title=""><small>#9: Decentralize decision-making</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="14"
+	    title=""><small>#10: Orgainze around value</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="15"
+
+		  title=""><small>Anti-Patterns (PO, Stories, Context)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="16"
+
+	  title=""><small>Facilitating Program Execution</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="17"
+	title=""><small>Organize Teams around flow of value</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="18"
+	    title=""><small>Plan the PI</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="19"
+
+	  	  title=""><small>Execute the PI</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="20"
+	    title=""><small>Enable Teams to release value on Demand</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="21"
+
+
+
+	      title=""><small>Prepare for the next PI Planning event</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="22"
+
+
+
+
+
+	  	  title=""><small>Improve Flow with Kanban and XP</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="23"
+
+
+
+	  	  	  title=""><small>Measure and Optimize Flow</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="24"
+	  	  title=""><small>Build quality in</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="25"
+	  	  title=""><small>Foster engineering craftsmanship</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="26"
+
+
+
+
+
+
+	  	  title=""><small>Facilitate collab with Archit, System team and Ops</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="27"
+
+
+
+
+
+
+	  	  title=""><small>Build High Performing Teams (Team Collab)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="28"
+	  title=""><small>Improving Program Performance</small></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </p>
+</div>
+
+<div id="i" class="carousel slide" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#i" data-slide-to="0" title="Course Outline (SASM)" class="active"></li>
+		 <li data-target="#i" data-slide-to="1" title="SASM Challenges / Agile Team Characteristics"></li>
+			  		 <li data-target="#i" data-slide-to="2" title="4 Core Values / 7 Core Competencies"></li>
+			      <li data-target="#i" data-slide-to="3" title="SM Connections in SAFe"></li>
+		    <li data-target="#i" data-slide-to="4" title="SAFe's 10 Principles"></li>
+			 <li data-target="#i" data-slide-to="5" title="#1: Take an Economic View"></li>
+			   <li data-target="#i" data-slide-to="6" title="#2 Apply systems thinking"></li>
+			 <li data-target="#i" data-slide-to="7" title="#3:  Assume variability; preserve options"></li>
+			   	 	    <li data-target="#i" data-slide-to="8" title="#4: Build incrementally with fast, integrated learning cycles"></li>
+			   	     <li data-target="#i" data-slide-to="9" title="#5: Base milestones on objective evaluation of working systems"></li>
+			   	     <li data-target="#i" data-slide-to="10" title="#6: Visualize and limit WIP, reduce batch sizes and manage queue lengths"></li>
+			       <li data-target="#i" data-slide-to="11" title="#7: Apply cadence, synchronize with cross-domain planning"></li>
+				      			   	  <li data-target="#i" data-slide-to="12" title="#8: Unlock the intrinsic motivation of knowledge workers"></li>
+			   	  	  <li data-target="#i" data-slide-to="13" title="#9: Decentralize decision-making"></li>
+			    	  <li data-target="#i" data-slide-to="14" title="#10: Orgainze around value"></li>
+ 			   	    <li data-target="#i" data-slide-to="15" title="Anti-Patterns (PO, Stories, Context)"></li>
+						<li data-target="#i" data-slide-to="16" title="Facilitating Program Execution"></li>
+								<li data-target="#i" data-slide-to="17" title="Organize Teams around flow of value"></li>
+											<li data-target="#i" data-slide-to="18" title="Plan the PI"</li>
+						<li data-target="#i" data-slide-to="19" title="Execute the PI"</li>
+											<li data-target="#i" data-slide-to="20" title="Enable teams to release value on demand"></li>
+										<li data-target="#i" data-slide-to="21" title="Prepare for the next PI Planning event"></li>
+									<li data-target="#i" data-slide-to="22" title="Improve Flow with Kanban and XP"></li>
+																				<li data-target="#i" data-slide-to="23" title="Measure and Optimize Flow"></li>
+						<li data-target="#i" data-slide-to="24" title="Build quality in"></li>
+									<li data-target="#i" data-slide-to="25" title="Foster engineering craftsmanship"></li>
+																			<li data-target="#i" data-slide-to="26" title="Facilitate collab wiht Archit, System team and Ops"></li>
+																		<li data-target="#i" data-slide-to="27" title="Build High Performing Teams (Team Collab)"></li>
+										<li data-target="#i" data-slide-to="28" title="Improving Program Performance"></li>
+
+  </ol>
+
+
+
+
+
+
+
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active" align="center">
+
+      <div class="container" style="max-width:70%">
+      <h5>Course Outline (SASM Role)</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-4.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-6.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-7.png') }}"><br>
+	  	  <br><br>
+      </div>
+    </div>
+
+
+	  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SASM Challenges / Agile Team Characteristics</h5>
+		 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-8.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-9.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-10.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-11.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-13.png') }}"><br>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-14.png') }}"><br>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>4 Core Values / 7 Core Competencies</h5>
+		 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-15.png') }}"><br>
+		 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-16.png') }}"><br>
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-17.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-18.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-19.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-20.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-21.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-22.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-23.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-24.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-25.png') }}"><br>
+
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SM Connections in SAFe</h5>
+
+      		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-26.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-27.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/1-28.png') }}"><br>
+
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe's 10 Principles</h5>
+	 		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-2.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-4.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-3.png') }}"><br>
+
+
+
+      </div>
+    </div>
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#1: Take an Economic View</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-5.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-6.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-7.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-8.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-9.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-10.png') }}"><br>
+								<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-11.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-12.png') }}"><br>
+	<br><br>
+      </div>
+    </div>
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#2 Apply systems thinking</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-13.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-14.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-15.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-16.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-17.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-18.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-19.png') }}"><br>
+      </div>
+    </div>
+
+
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#3:  Assume variability; preserve options</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-20.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-21.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-22.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-23.png') }}"><br>
+
+
+
+
+
+			<br><br>
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#4: Build incrementally with fast, integrated learning cycles</h5>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-24.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-25.png') }}"><br>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-26.png') }}"><br>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-27.png') }}"><br>
+								<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-28.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-28a.png') }}"><br>
+
+	<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#5: Base milestones on objective evaluation of working systems</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-29.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-30.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-31.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-32.png') }}"><br>
+
+   </div>
+    </div>
+
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#6: Visualize and limit WIP, reduce batch sizes and manage queue lengths</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-33.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-34.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-35.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-36.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-37.png') }}"><br>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-38.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-39.png') }}"><br>
+											<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-40.png') }}"><br>
+												<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-41.png') }}"><br>
+														<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-42.png') }}"><br>
+															<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-43.png') }}"><br>
+															<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-44.png') }}"><br>
+																		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-45.png') }}"><br>
+																					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-46.png') }}"><br>
+      </div>
+    </div>
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#7: Apply cadence, synchronize with cross-domain planning</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-47.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-48.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-49.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-50.png') }}"><br>
+
+		<br><br>
+      </div>
+    </div>
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#8: Unlock the intrinsic motivation of knowledge workers</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-51.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-52.png') }}"><br>
+
+
+
+	<br><br>
+
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#9: Decentralize decision-making</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-53.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-54.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-55.png') }}"><br>
+
+
+	<br><br>
+
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>#10: Orgainze around value</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-56.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-57.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-58.png') }}"><br>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-59.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-60.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-61.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/2-62.png') }}"><br>
+		<br><br>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Anti-Patterns (PO, Stories, Context)</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-2.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-3.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-4.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-5.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-6.png') }}"><br>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-7.png') }}"><br>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-8.png') }}"><br>
+								<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-9.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-10.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-11.png') }}"><br>
+									<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-12.png') }}"><br>
+										<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-13.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-14.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-15.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-16.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-17.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-18.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-19.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-20.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-21.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/3-22.png') }}"><br>
+
+
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Facilitating Program Execution</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-2.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-3.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-4.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-5.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-6.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-7.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-8.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-9.png') }}"><br>
+		<br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Organize Teams around flow of value</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-10.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-11.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-12.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-13.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-14.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-15.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-16.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-17.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-18.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-19.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-20.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-21.png') }}"><br>
+
+		<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Plan PI</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-22.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-23.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-24.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-25.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-26.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-27.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-28.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-29.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-30.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-31.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-32.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-33.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-34.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-35.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-36.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-36a.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-36b.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-37.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-38.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-39.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-40.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-41.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-42.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-43.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-44.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-45.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-46.png') }}"><br>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-47.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-48.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-49.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-50.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-51.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-52.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-53.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-54.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-55.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-56.png') }}"><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Execute the PI</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-57.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-58.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-59.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-60.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-61.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-62.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-63.png') }}"><br>
+
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Enable Teams to Release Value on Demand</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-64.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-65.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-66.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-67.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-68.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-69.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-70.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-71.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-72.png') }}"><br>
+
+
+		<br><br>
+      </div>
+    </div>
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Prepare for the next PI Planning event</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-73.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-74.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-75.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/4-76.png') }}"><br>
+
+
+		<br><br>
+      </div>
+    </div>
+
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Improve Flow with Kanban and XP</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-2.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-3.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-4.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-5.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-6.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-7.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-8.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-3.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-9.png') }}"><br>
+
+
+	<br><br>
+
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Measure and Optimize Flow</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-10.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-11.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-12.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-13.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-14.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-15.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-16.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-17.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-18.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-19.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-20.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-21.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-22.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-23.png') }}"><br>
+	<br><br>
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Build quality in</h5>
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-24.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-25.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-26.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-27.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-28.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-29.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-30.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-31.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-32.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-33.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-34.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-35.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-36.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-37.png') }}"><br>
+	<br><br>
+      </div>
+    </div>
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Foster engineering craftsmanship</h5>
+
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-38.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-39.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-40.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-41.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-42.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-43.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-44.png') }}"><br>
+
+	<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Facilitate collab with Archit, System team and Ops</h5>
+
+
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-45.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-46.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-47.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-48.png') }}"><br>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/5-49.png') }}"><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Build High Performing Teams (Team Collab)</h5>
+
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-2.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-3.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-4.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-5.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-6.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-7.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-8.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-9.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-10.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-11.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-12.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-13.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-14.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-15.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-16.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-17.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-18.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-19.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-20.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-21.png') }}"><br>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-22.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-23.png') }}"><br>
+
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-24.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/6-25.png') }}"><br>
+
+
+
+
+	<br><br>
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Improving Program Performance</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-2.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-3.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-4.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-5.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-6.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-7.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-8.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-9.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-10.png') }}"><br>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-11.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-12.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-13.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-14.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-15.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-16.png') }}"><br>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-17.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-18.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-19.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-20.png') }}"><br>
+								<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-21.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-22.png') }}"><br>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-23.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-24.png') }}"><br>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-25.png') }}"><br>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/sasmimages/7-26.png') }}"><br>
+
+      </div>
+    </div>
+
+
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+	</div>
+</div>
+
+
+
+
+
+<a class="carousel-control-prev" href="#i" role="button" data-slide="prev">
+  <i class="fas fa-lg fa-chevron-left" style="color:black"></i>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#i" role="button" data-slide="next">
+  <i class="fas fa-lg fa-chevron-right" style="color:black"></i>
+
+  <span class="sr-only">Next</span>
+</a>
+<br><br>
+<hr>
+
+<div align="center">
+
+<h5>Exploring the Scrum Master role (15%)</h5>
+
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+	<p><a href="{{ asset('storage/assets/sasmscrummaster.pdf') }}" >Scrum Master</a></p>
+	<p><a href="{{ asset('storage/assets/sasmcorevalues.pdf') }}" >SAFe Core Values</a></p>
+	<p><a href="{{ asset('storage/assets/sasmvision.pdf') }}" >SAFe Vision</a></p>
+	<p><a href="{{ asset('storage/assets/sasmfandc.pdf') }}" >SAFe Features and Capabilities</a></p>
+	<p><a href="{{ asset('storage/assets/sasmsoltrain.pdf') }}" >SAFe Solution Train</a></p>
+	<p><a href="{{ asset('storage/assets/sasmsystemteam.pdf') }}" >SAFe System Team</a></p>
+	<p><a href="{{ asset('storage/assets/sasmagileteams.pdf') }}" >SAFe Agile Teams</a></p>
+
+<h5>Applying SAFe Principles (15%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasmsystemsthinking.pdf') }}" >SAFe Apply Systems Thinking</a></p>
+<p><a href="{{ asset('storage/assets/sasmlimitwip.pdf') }}" >SAFe Visualize and Limit WIP</a></p>
+<p><a href="{{ asset('storage/assets/sasmleanagilemindset.pdf') }}" >SAFe Lean-Agile Mindset</a></p>
+
+<h5>Exploring Agile and Scrum anti-patterns (13%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+
+
+<h5>Facilitating program execution (15%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasminspectandadapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+<p><a href="{{ asset('storage/assets/sasmrelondemand.pdf') }}" >SAFe Release on Demand</a></p>
+<p><a href="{{ asset('storage/assets/sasmprepostpiplanning.pdf') }}" >SAFe Pre and Post PI Planning</a></p>
+
+
+<h5>Improving flow with Kanban and XP (13%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasmteamkanban.pdf') }}" >SAFe Team Kanban</a></p>
+<p><a href="{{ asset('storage/assets/sasmbuiltinquality.pdf') }}" >SAFe Built in Quality</a></p>
+<p><a href="{{ asset('storage/assets/sasmci.pdf') }}" >SAFe Continuous Integration</a></p>
+<p><a href="{{ asset('storage/assets/sasmportfoliokanban.pdf') }}" >SAFe Portfolio Kanban</a></p>
+
+
+<h5>Building high-performing teams (17%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasmagileteamsanother.pdf') }}" >SAFe Agile Teams (repeats)</a></p>
+<p><a href="{{ asset('storage/assets/sasmcop.pdf') }}" >SAFe Communities of Practice</a></p>
+<p><a href="{{ asset('storage/assets/sasmleanagileprinciples.pdf') }}" >SAFe Lean Agile Principles</a></p>
+<p><a href="{{ asset('storage/assets/sasmleanagilemindset.pdf') }}" >SAFe Lean-Agile Mindset (repeats)</a></p>
+
+<h5>Improving program performance (12%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeAdvancedScrumMasterDigitalWorkbook5.1.pdf') }}" >SAFe Advanced Scrum Master Digital Workbook 5.1.pdf</a></p>
+<p><a href="{{ asset('storage/assets/sasminspectandadapt.pdf') }}" >SAFe Inspect and Adapt (repeats)</a></p>
+<p><a href="{{ asset('storage/assets/sasminnovationandplanningiteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+<p><a href="{{ asset('storage/assets/sasmiterationretrospective.pdf') }}" >SAFe Iteration Retrospective</a></p>
+
+<h5>Other articles from the course</h5>
+<p><a href="{{ asset('storage/assets/SASMAdvancedTopicOrganizingAgileTeams.pdf') }}" >SAFe organizing-agile-teams-and-arts-team-topologies-at-scale</a></p>
+<p><a href="{{ asset('storage/assets/cfd.mp4') }}" >CFD video</a></p>
+
+<hr>
+	<p align="center">>>>|<<<</p>
+	<p><a href="{{ asset('storage/assets/WhatsAProductOwnerToDo.pdf') }}" >What's a Product Owner to do?</a></p>
+<p><a href="/home/leanagilemindset" >Lean Agile Mindset video</a></p>
+<p><a href="/home/safeuserstories" >SAFe User Stories video</a></p>
+<p><a href="/home/powerofpiplanning" >Power of PI Planning video</a></p>
+<p><a href="/home/strategicthemes" >Strategic Themes video</a></p>
+	<p><a href="{{ asset('storage/assets/DesignThinkingSafe.pdf') }}" >SAFe Design Thinking</a></p>
+<p><a href="/home/distributedteams" >Distributed Teams video</a></p>
+	<p><a href="{{ asset('storage/assets/SAFeBacklogs.pdf') }}" >SAFe Backlogs</a></p>
+		<p><a href="{{ asset('storage/assets/SAFePIObjectives.pdf') }}" >SAFe PI Objectives</a></p>
+		<p><a href="/home/wsjf" >WSJF video</a></p>
+			<p><a href="/home/wsjftwo" >WSJF 2 video</a></p>
+			<p><a href="/home/piplanningprep" >PI Planning Preparation video</a></p>
+	<p><a href="/home/safeprogramboard" >The Program Board video</a></p>
+		<p><a href="/home/introtopiplanning" >Intro to PI Planning</a></p>
+				<p><a href="/home/iterationplanning" >Iteration Planning</a></p>
+					<p><a href="/home/dsu" >DSU video</a></p>
+					<p><a href="/home/howtodsutwo" >How To DSU another video</a></p>
+					<p><a href="/home/backlogrefinement" >Backlog Refinement Workshop video</a></p>
+						<p><a href="/home/iterationreview" >Iteration Review video</a></p>
+						<p><a href="/home/howtoiterationplanning" >How To Iteration Planning Review videos</a></p>
+							<p><a href="/home/saferetro" >SAFe Retro video</a></p>
+							<p><a href="/home/safedevops" >DevOps and Continuous Delivery Pipeline videos</a></p>
+							<br><br>
+
+	<p align="center">>>>|<<<</p>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p><a href="{{ asset('storage/assets/SAFeSystemDemo.pdf') }}" >SAFe System Demo</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeScrumMaster.pdf') }}" >SAFe Scrum Master role</a></p>
+	  <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+	    <p><a href="{{ asset('storage/assets/SAFeRequirementsModel.pdf') }}" >SAFe Requirements Model</a></p>
+
+
+		  <p><a href="{{ asset('storage/assets/SAFeIterations.pdf') }}" >SAFe Iterations:  Plan, Execution, Review, Retrospect</a><br>
+		 <small>Note: in the article above on page 4 find this essential truth for Scrum success: "<b><a href="images/scrumvaluemodelessence.jpg" ><u>The Product Owner defines the ‘WHAT (and WHEN)’; the team defines ‘HOW’ and ‘HOW MUCH’</b></u></a>."</small></p>
+
+
+	   <p><a href="{{ asset('storage/assets/SAFeInnovationandPlanningIteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+
+ <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+  <p><a href="{{ asset('storage/assets/SAFeEssentialSafe.pdf') }}" >Essential SAFe and Core Competencies</a></p>
+    <p><a href="{{ asset('storage/assets/SAFePIPlanning.pdf') }}" >SAFe PI Planning</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeDevOps.pdf') }}" >SAFe DevOps</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeContinuousDeliveryPipeline.pdf') }}" >SAFe Continuous Delivery Pipeline</a></p>
+	 	  <p><a href="{{ asset('storage/assets/SAFeReleaseonDemand.pdf') }}" >SAFe Release on Demand</a></p>
+		  		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		 		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		   <p><a href="{{ asset('storage/assets/SAFeART.pdf') }}" >SAFe ART</a></p>
+		    <p><a href="{{ asset('storage/assets/SAFeBusinessOwners.pdf') }}" >SAFe Business Owners</a></p>
+			  <p><a href="{{ asset('storage/assets/SAFeContinuousIntegration.pdf') }}" >SAFe Continuous Integration</a></p>
+			   <p><a href="{{ asset('storage/assets/SAFEFeaturesCapabilities.pdf') }}" >SAFe Features and Capabilities</a></p>
+			     <p><a href="{{ asset('storage/assets/SAFeLeanPortfolioManagement.pdf') }}" >SAFe Lean Portfolio Management</a></p>
+				   <p><a href="{{ asset('storage/assets/SAFeNonfunctionalRequirements.pdf') }}" >SAFe Non Functional Requirements</a></p>
+				    <p><a href="{{ asset('storage/assets/SAFeProgramIncrement.pdf') }}" >SAFe Program Increment</a></p>
+					 <p><a href="{{ asset('storage/assets/SAFeSolution.pdf') }}" >SAFe Solution</a></p>
+
+
+
+
+
+
+
+	<p><a href="/pmway/?slide=4" >Tie the logic above to the Capability Maturity model for operations above CM L1</a></p>
+		<br>
+						<p>Per the <a href="/agile?slide=12" >Agile Manifesto</a> acceptance is based on working software (improvements) / business value that can be released.  <br>A Product Owner approved Demo Deck (as key project artifact [Tying together PMC with PP (at User Story level)]) from each iteration review is (in PMWay's experience and opinion) best way to run Scrum at CM L2+.</p>
+						<p>From the article "SAFe User Story" above the image below is essential to appreciate and adopt if Professional scrum of  scrums at scale within SAFe is the goal.</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/safestoryfeature.png') }}"></p>
+						<p>and then extending this into the SAFe environment for Capabilities and Epics</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/saferequirementsmodel.png') }}"></p>
+						<p>Clearly the Product Owner's role is essential.  But always remember that the Scrum Master's role to reinforce Scrum Process (balance the make it so! / and deliver what by when!? forces) for team sanity and health is just as essential!</p>
+						<p>With the above in mind why not <a href="/pin"  >take the pin test to pin down</a> where you believe you are operating at.</p>
+
+
+
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepmboksixone" aria-expanded="false" aria-controls=
+        "collapsepmboksixone">PMWay Opinion about SAFe
+</button>
+
+<div class="collapse" id="collapsepmboksixone">
+    <div class="container">
+        <div class="card text-center">
+<h5 class="card-header" align="center"></h5>
+            <div class="card-body text-center">
+
+<p>It is the considerecd opinion of PMWay that with teams that (and are forced to) operate at <a href="/pmway/?slide=4" target=_blank">Capability Maturity Level 1</a><br>([Features from PI from Executive Pressure that force down on and kill agility found in User Stories (Teams not bothering - what's the use? - to compile User Stories)] and [<a href="/redbeads" >Deming's red bead experiment</a>] without PP and PMC at the level of the professional User Story)  <a href="/home/safeisunsafe"  > etc.<br>then SAFe is definitely UNSAFe</a>.</p>
+	<p>I.e. From the SAFe is unsafe article link above</p> <div align="center">
+Ken Schwaber, co-developer of srcum <a href="https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/" ><u>expressed serious concerns about SAFe</u></a> as early as 2013.<br>
+Nicholas M. Chaillan, U.S. Air Force Chief Software Officer, <a href="https://twitter.com/lukadotnet/status/1203751211817742336?s=20" ><u>discourages</u></a> “using rigid, presrciptive frameworks such as the Scaled Agile Framework (SAFe).”<br>
+Forbes contributor Steve Denning <a href="https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/#316e49034bbe" ><u>calls out</u></a> SAFe for being “ particularly worrying” in his article on how to spot fake Agile.<br>
+Marty Cagan of the Silicon Valley Product Group <a href="https://svpg.com/revenge-of-the-pmo/" ><u>explains</u></a> how SAFe is antithetical to the mindset of Silicon Valley companies.
+</div><br><img alt="SAFe should be (like a loaded gun) kept locked up in a safe" class="img-fluid"  src="{{ asset('storage/images/safefive/safelylockedup.png') }}" title="Like a loaded gun with children best to keep it locked up in a SAFe before someone gets really hurt"><img alt="Due to the heroics and pressure to push features down on developers your human resources will ... runaway!" class="img-fluid"  src="{{ asset('storage/images/safefive/runaway.png') }}" title="Why can we not keep our good people"><br><img alt="fast path to mediocracy" class="img-fluid"  src="{{ asset('storage/images/safefive/mediocracy.png') }}" title="Classic ignorance of the wisdom of Deming and a total lack of understanding of scrum.  The Mike Cohn video on YouTube about User Stories explains the problem and how to solve it"></p>
+
+
+
+
+
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+ </div>
+</div>
+
+
+    <script src="/bootstrapfourfivetwo/js/jquery.js"></script>
+    <script src="/bootstrapfourfivetwo/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/bootstrapfourfivetwo/css/jquery-ui.css"></link>
+<script>
+  $(document).ready(function () {
+    function qs(key) {
+      key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+      var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+      var slide = match && decodeURIComponent(match[1].replace(/\+/g, " "));
+      if (Math.floor(slide) == slide && $.isNumeric(slide))
+        return parseInt(slide);
+      else
+        return 0;
+    }
+    $('#i').carousel((qs('slide')) - 1);
+  });
+</script>
+<br>
+<br>
+<br>
+<br>
+
+{% endif %}
+
+
+{% endblock %}
+
+
+

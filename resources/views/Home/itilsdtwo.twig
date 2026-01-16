@@ -1,0 +1,194 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SD Catalogue Management</h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=17') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Service Catalogue Management</i> aims to ensure that a Service Catalogue is produced and maintained, containing accurate information on all operational services and those being prepared to be run operationally. This process provides vital information for all other ITIL service management processes: service details, current status and the services' interdependencies.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Service Catalogue Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Checklists_.7C_Templates"><span class="tocnumber">4</span> <span class="toctext"><span>Checklists | Templates</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Service Catalogue Management was added as a new process in ITIL V3. </p>
+  <p>In the previous ITIL version, the Service Level Management process mentioned the concept of a Service Catalogue. </p>
+  <p>ITIL V3 takes this concept further, introducing a dedicated process to ensure that the Service Catalogue is up-to-date and contains reliable information. </p>
+  <p>A clear distinction exists between Business Services in the Service Catalogue (services visible to the customer, defined by SLAs) and Supporting Services (services visible only inside the IT organization, defined by OLAs or UCs). </p>
+  <p>In <i><b>ITIL 2011</b></i> the process interfaces have been adapted slightly following the introduction of the Design Coordination process. The process overview of <a href="/images/itilsdtwo.jpg"  title="Service-catalogue-management.jpg">Service Catalogue Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p>No sub-processes are specified for <a class="mw-selflink selflink">Service Catalogue Management</a>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in Service Catalogue Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Required_Modifications_to_Service_Catalogue" itemprop="itemListElement">Required Modifications to Service Catalogue</span></b> </p>
+    <ul>
+      <li itemprop="description">A request from a Service Management process to change the Service Catalogue. This request is sent to Service Catalogue Management if new services or service attributes must be recorded. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Catalogue" itemprop="itemListElement">Service Catalogue</span></b> </p>
+    <ul>
+      <li itemprop="description">A database or structured document with information about all live services, including those available for deployment. The Service Catalogue is the only part of the Service Portfolio published to Customers, and is used to support the sale and delivery of IT Services. The Service Catalogue includes information about deliverables, prices, contact points, ordering and request processes. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Checklists_|_Templates"></span><span class="mw-headline" id="Checklists_.7C_Templates"><span id="Checklists">Checklists | Templates</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Service_Catalogue" title="Service Catalog">Service Catalogue template</a> </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Service_Catalogue_Manager">Service Catalogue Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Service Catalogue Manager is responsible for maintaining the Service Catalogue, ensuring that all information within the Service Catalogue is accurate and up-to-date.<b></b></li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b><span id="RACI-Matrix-Service-Catalogue-Management">Responsibility Matrix: ITIL Service Catalogue Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 65%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Service Catalogue Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a class="mw-selflink selflink">Service Catalogue Management</a><br />
+          <i>(no sub-processes specified)</i></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Service Catalogue Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Service Catalogue Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SD Catalogue Management</h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=17') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Service Catalogue Management</i> aims to ensure that a Service Catalogue is produced and maintained, containing accurate information on all operational services and those being prepared to be run operationally. This process provides vital information for all other ITIL service management processes: service details, current status and the services' interdependencies.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Service Catalogue Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Checklists_.7C_Templates"><span class="tocnumber">4</span> <span class="toctext"><span>Checklists | Templates</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Service Catalogue Management was added as a new process in ITIL V3. </p>
+  <p>In the previous ITIL version, the Service Level Management process mentioned the concept of a Service Catalogue. </p>
+  <p>ITIL V3 takes this concept further, introducing a dedicated process to ensure that the Service Catalogue is up-to-date and contains reliable information. </p>
+  <p>A clear distinction exists between Business Services in the Service Catalogue (services visible to the customer, defined by SLAs) and Supporting Services (services visible only inside the IT organization, defined by OLAs or UCs). </p>
+  <p>In <i><b>ITIL 2011</b></i> the process interfaces have been adapted slightly following the introduction of the Design Coordination process. The process overview of <a href="/images/itilsdtwo.jpg"  title="Service-catalogue-management.jpg">Service Catalogue Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p>No sub-processes are specified for <a class="mw-selflink selflink">Service Catalogue Management</a>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in Service Catalogue Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Required_Modifications_to_Service_Catalogue" itemprop="itemListElement">Required Modifications to Service Catalogue</span></b> </p>
+    <ul>
+      <li itemprop="description">A request from a Service Management process to change the Service Catalogue. This request is sent to Service Catalogue Management if new services or service attributes must be recorded. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Catalogue" itemprop="itemListElement">Service Catalogue</span></b> </p>
+    <ul>
+      <li itemprop="description">A database or structured document with information about all live services, including those available for deployment. The Service Catalogue is the only part of the Service Portfolio published to Customers, and is used to support the sale and delivery of IT Services. The Service Catalogue includes information about deliverables, prices, contact points, ordering and request processes. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Checklists_|_Templates"></span><span class="mw-headline" id="Checklists_.7C_Templates"><span id="Checklists">Checklists | Templates</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Service_Catalogue" title="Service Catalog">Service Catalogue template</a> </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Service_Catalogue_Manager">Service Catalogue Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Service Catalogue Manager is responsible for maintaining the Service Catalogue, ensuring that all information within the Service Catalogue is accurate and up-to-date.<b></b></li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b><span id="RACI-Matrix-Service-Catalogue-Management">Responsibility Matrix: ITIL Service Catalogue Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 65%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Service Catalogue Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a class="mw-selflink selflink">Service Catalogue Management</a><br />
+          <i>(no sub-processes specified)</i></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Service Catalogue Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Service Catalogue Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

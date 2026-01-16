@@ -1,0 +1,126 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Red Bead Experiment{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container">
+<h3>Dr W. Edwards Deming's Red Bead Experiment</h3>
+<hr>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/redbeadremoved.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/redbeads/redbeadsone.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/redbeadremoved.jpg') }}" alt="">A short video showing and explaining the Red Bead Experiment </button>
+    </li>
+
+	 <li  data-poster="/images/redbeadremoved.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/redbeads/redbeadstwo.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/redbeadremoved.jpg') }}" alt="">Deming conducting a Red Bead Experiment demonstration.  I was fortunate to attend one of Demings conferences when he and I were both younger.  It was life changing!  Note:  Please stick with him as in this video he is quite an old guy.  As such it is sometimes difficult to hear what he is saying.  However, the lesson overall will soon become clear.  It (and the lessons you will learn) will stay with you for the rest of your life!   </button>
+    </li>
+
+	   <li  data-poster="/images/redbeadremoved.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/redbeads/redbeadsthree.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/redbeadremoved.jpg') }}" alt="">The lessons from the exeriment conducted by Deming's Red Bead Experiment demonstration in the video above. </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+</div>
+
+<!--ENDBODY-->
+{% endif %}
+
+	{% if not user %}
+
+<!--BODY-->
+<!--BODY-->
+
+<div class="container">
+<h3>Dr W. Edwards Deming's Red Bead Experiment</h3>
+<hr>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/redbeadremoved.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/redbeads/redbeadsone.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/redbeadremoved.jpg') }}" alt="">A short video showing and explaining the Red Bead Experiment </button>
+    </li>
+
+	 <li  data-poster="/images/redbeadremoved.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/redbeads/redbeadstwo.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/redbeadremoved.jpg') }}" alt="">Deming conducting a Red Bead Experiment demonstration.  I was fortunate to attend one of Demings conferences when he and I were both younger.  It was life changing!  Note:  Please stick with him as in this video he is quite an old guy.  As such it is sometimes difficult to hear what he is saying.  However, the lesson overall will soon become clear.  It (and the lessons you will learn) will stay with you for the rest of your life!   </button>
+    </li>
+
+	   <li  data-poster="/images/redbeadremoved.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/redbeads/redbeadsthree.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/redbeadremoved.jpg') }}" alt="">The lessons from the exeriment conducted by Deming's Red Bead Experiment demonstration in the video above. </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+	 <br>
+  <br>
+</div>
+
+<!--ENDBODY-->
+
+{% endif %}
+{% endblock %}

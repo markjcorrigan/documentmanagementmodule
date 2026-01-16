@@ -1,0 +1,35 @@
+{% extends 'base.twig' %}
+{% block title %}SCRUM Pigs and Chickens{% endblock %}
+{% block body %}
+
+
+
+
+
+
+
+	{% if user %}
+<div class="container" align="center">
+  <h5 align="left">Scrum:  The Pigs and the Chickens</h5>
+  <hr>
+  <br>
+  <img alt="" class="img-fluid" src="{{ asset('storage/images/Pig-and-chicken.png') }}" > <br>
+  <p><a href="{{ asset('storage/assets/scrum2p.pdf') }}" >Click here for a 2 page overview of SCRUM</a><br>
+    In the pdf you download, can you spot the Pigs and the Chickens?</p>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="center">
+  <h5 align="left">Scrum:  The Pigs and the Chickens</h5>
+  <hr>
+  <br>
+  <img alt="" class="img-fluid" src="{{ asset('storage/images/Pig-and-chicken.png') }}" > <br>
+  <p><a href="{{ asset('storage/assets/scrum2p.pdf') }}" >Click here for a 2 page overview of SCRUM</a><br>
+    In the pdf you download, can you spot the Pigs and the Chickens?</p>
+</div>
+{% endif %}
+
+
+{% endblock %}

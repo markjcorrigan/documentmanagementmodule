@@ -1,0 +1,12 @@
+{% if not user %}
+
+   ...
+
+{% endif %}
+to
+
+{% if not current_user and false %}
+
+   ...
+
+{% endif %}

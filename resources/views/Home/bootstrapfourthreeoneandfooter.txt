@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/bootstrapfourthreeone/css/bootstrap.css" />
+<!--<link rel="stylesheet" href="/bootstrapfouroneone/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">-->
+<link rel="stylesheet" href="/bootstrapfourthreeone/fontawesomeprowebfivetwo/css/all.css">
+<link rel="stylesheet" href="/bootstrapfourthreeone/css/jquery-ui.css">
+<link rel="stylesheet" href="/css/styles.css">
+
+
+
+
+
+
+<script src="/bootstrapfourthreeone/js/jquery.js"></script>
+<script src="/bootstrapfourthreeone/js/bootstrap.js"></script>
+<script src="/bootstrapfourthreeone/js/popper.min.js"></script>
+<script src="/bootstrapfourthreeone/js/jquery-ui.js"></script>
+
+	<style>
+		.footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 50px ;
+			background-color: #040404;
+			color: white;
+			text-align: center;
+		}
+	</style>
+	<div class="footer">
+
+		<p style="text-align:center">Project &amp; Process Management Excellence <br>@ CM Level 2+</p>
+	</div>
+
+
+
+
+
+

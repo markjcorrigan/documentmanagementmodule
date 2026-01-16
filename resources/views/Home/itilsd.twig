@@ -1,0 +1,199 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SD</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf') }}" >Awesome Summary of SD</a></p>
+  <hr>
+  <dl>
+    <dt><a href="/home/itilsdone" title="ITIL Design Coordination" itemprop="itemListElement">(Process 6 of 26): Design Coordination</a> </dt>
+    <dd itemprop="description">Process Objective: To coordinate all service design activities, processes and resources. Design coordination ensures the consistent and effective design of new or changed IT services, service management information systems, architectures, technology, processes, information and metrics. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdtwo" title="Service Catalogue Management" itemprop="itemListElement">(Process 7 of 26): Service Catalogue Management</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure that a Service Catalogue is produced and maintained, containing accurate information on all operational services and those being prepared to be run operationally. Service Catalogue Management provides vital information for all other Service Management processes: Service details, current status and the services' interdependencies. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdthree" title="Service Level Management" itemprop="itemListElement">(Process 8 of 26): Service Level Management</a> </dt>
+    <dd itemprop="description">Process Objective: To negotiate Service Level Agreements with the customers and to design services in accordance with the agreed service level targets. Service Level Management is also responsible for ensuring that all Operational Level Agreements and Underpinning Contracts are appropriate, and to monitor and report on service levels. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdfour" title="Availability Management" itemprop="itemListElement">(Process
+      9 of 26): Availability Management</a> </dt>
+    <dd itemprop="description">Process Objective: To define, analyze, plan, measure and improve all aspects of the availability of IT services. Availability Management is responsible for ensuring that all IT infrastructure, processes, tools, roles etc. are appropriate for the agreed availability targets. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdfive" title="Capacity Management" itemprop="itemListElement">(Process
+      10 of 26): Capacity Management</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure that the capacity of IT services and the IT infrastructure is able to deliver the agreed service level targets in a cost effective and timely manner. Capacity Management considers all resources required to deliver the IT service, and plans for short, medium and long term business requirements. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdsix" title="IT Service Continuity Management" itemprop="itemListElement">(Process 11 of 26): Continuity Management</a> </dt>
+    <dd itemprop="description">Process Objective: To manage risks that could seriously impact IT services. ITSCM ensures that the IT service provider can always provide minimum agreed Service Levels, by reducing the risk from disaster events to an acceptable level and planning for the recovery of IT services. ITSCM should be designed to support Business Continuity Management. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdseven" title="IT Security Management" itemprop="itemListElement">(Process 12 of 26): Information Security Management</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure the confidentiality, integrity and availability of an organization's information, data and IT services. Information Security Management usually forms part of an organizational approach to security management which has a wider scope than the IT Service Provider. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdeight" title="Supplier Management" itemprop="itemListElement">(Process 13 of 26): Supplier Management</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure that all contracts with suppliers support the needs of the business, and that all suppliers meet their contractual commitments. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdnine" title="Compliance Management" itemprop="itemListElement">Compliance Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To ensure IT services, processes and systems comply with enterprise policies and legal requirements. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdten" title="IT Architecture Management" itemprop="itemListElement">Architecture Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To define a blueprint for the future development of the technological landscape, taking into account the service strategy and newly available technologies. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdeleven" title="Risk Management" itemprop="itemListElement">Risk Management</a> (NB Not on the official ITIL V3 process list)</dt>
+    <dd itemprop="description">Process Objective: To identify, assess and control risks. This includes analyzing the value of assets to the business, identifying threats to those assets, and evaluating how vulnerable each asset is to those threats. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <p align="center">
+    <map id="ImgMap0" name="ImgMap0">
+      <area alt="" coords="176, 313, 256, 368" href="/home/itilsdone" shape="rect">
+      <area alt="" coords="188, 76, 267, 130" href="/home/itilsdtwo" shape="rect">
+      <area alt="" coords="48, 311, 127, 368" href="/home/itilsdthree" shape="rect">
+      <area alt="" coords="186, 164, 268, 216" href="/home/itilsdfour" shape="rect">
+      <area alt="" coords="289, 374, 370, 428" href="/home/itilsdfive" shape="rect">
+      <area alt="" coords="288, 437, 370, 492" href="/home/itilsdsix" shape="rect">
+      <area alt="" coords="290, 497, 371, 554" href="/home/itilsdseven" shape="rect">
+      <area alt="" coords="286, 562, 369, 617" href="/home/itilsdeight" shape="rect">
+      <area alt="" coords="46, 249, 129, 305" href="/home/itilsdnine" shape="rect">
+      <area alt="" coords="185, 665, 267, 722" href="/home/itilsdten" shape="rect">
+      <area alt="" coords="288, 313, 372, 367" href="/home/itilsdeleven" shape="rect">
+    </map>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/Overview_service_design_itilv3_thumb.jpg') }}" usemap="#ImgMap0" ></p>
+  <br>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Service_Design">Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SD</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf') }}" >Awesome Summary of SD</a></p>
+  <hr>
+  <dl>
+    <dt><a href="/home/itilsdone" title="ITIL Design Coordination" itemprop="itemListElement">(Process 6 of 26): Design Coordination</a> </dt>
+    <dd itemprop="description">Process Objective: To coordinate all service design activities, processes and resources. Design coordination ensures the consistent and effective design of new or changed IT services, service management information systems, architectures, technology, processes, information and metrics. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdtwo" title="Service Catalogue Management" itemprop="itemListElement">(Process 7 of 26): Service Catalogue Management</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure that a Service Catalogue is produced and maintained, containing accurate information on all operational services and those being prepared to be run operationally. Service Catalogue Management provides vital information for all other Service Management processes: Service details, current status and the services' interdependencies. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdthree" title="Service Level Management" itemprop="itemListElement">(Process 8 of 26): Service Level Management</a> </dt>
+    <dd itemprop="description">Process Objective: To negotiate Service Level Agreements with the customers and to design services in accordance with the agreed service level targets. Service Level Management is also responsible for ensuring that all Operational Level Agreements and Underpinning Contracts are appropriate, and to monitor and report on service levels. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdfour" title="Availability Management" itemprop="itemListElement">(Process
+      9 of 26): Availability Management</a> </dt>
+    <dd itemprop="description">Process Objective: To define, analyze, plan, measure and improve all aspects of the availability of IT services. Availability Management is responsible for ensuring that all IT infrastructure, processes, tools, roles etc. are appropriate for the agreed availability targets. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdfive" title="Capacity Management" itemprop="itemListElement">(Process
+      10 of 26): Capacity Management</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure that the capacity of IT services and the IT infrastructure is able to deliver the agreed service level targets in a cost effective and timely manner. Capacity Management considers all resources required to deliver the IT service, and plans for short, medium and long term business requirements. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdsix" title="IT Service Continuity Management" itemprop="itemListElement">(Process 11 of 26): Continuity Management</a> </dt>
+    <dd itemprop="description">Process Objective: To manage risks that could seriously impact IT services. ITSCM ensures that the IT service provider can always provide minimum agreed Service Levels, by reducing the risk from disaster events to an acceptable level and planning for the recovery of IT services. ITSCM should be designed to support Business Continuity Management. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdseven" title="IT Security Management" itemprop="itemListElement">(Process 12 of 26): Information Security Management</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure the confidentiality, integrity and availability of an organization's information, data and IT services. Information Security Management usually forms part of an organizational approach to security management which has a wider scope than the IT Service Provider. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdeight" title="Supplier Management" itemprop="itemListElement">(Process 13 of 26): Supplier Management</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure that all contracts with suppliers support the needs of the business, and that all suppliers meet their contractual commitments. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdnine" title="Compliance Management" itemprop="itemListElement">Compliance Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To ensure IT services, processes and systems comply with enterprise policies and legal requirements. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdten" title="IT Architecture Management" itemprop="itemListElement">Architecture Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To define a blueprint for the future development of the technological landscape, taking into account the service strategy and newly available technologies. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsdeleven" title="Risk Management" itemprop="itemListElement">Risk Management</a> (NB Not on the official ITIL V3 process list)</dt>
+    <dd itemprop="description">Process Objective: To identify, assess and control risks. This includes analyzing the value of assets to the business, identifying threats to those assets, and evaluating how vulnerable each asset is to those threats. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <p align="center">
+    <map id="ImgMap0" name="ImgMap0">
+      <area alt="" coords="176, 313, 256, 368" href="/home/itilsdone" shape="rect">
+      <area alt="" coords="188, 76, 267, 130" href="/home/itilsdtwo" shape="rect">
+      <area alt="" coords="48, 311, 127, 368" href="/home/itilsdthree" shape="rect">
+      <area alt="" coords="186, 164, 268, 216" href="/home/itilsdfour" shape="rect">
+      <area alt="" coords="289, 374, 370, 428" href="/home/itilsdfive" shape="rect">
+      <area alt="" coords="288, 437, 370, 492" href="/home/itilsdsix" shape="rect">
+      <area alt="" coords="290, 497, 371, 554" href="/home/itilsdseven" shape="rect">
+      <area alt="" coords="286, 562, 369, 617" href="/home/itilsdeight" shape="rect">
+      <area alt="" coords="46, 249, 129, 305" href="/home/itilsdnine" shape="rect">
+      <area alt="" coords="185, 665, 267, 722" href="/home/itilsdten" shape="rect">
+      <area alt="" coords="288, 313, 372, 367" href="/home/itilsdeleven" shape="rect">
+    </map>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/Overview_service_design_itilv3_thumb.jpg') }}" usemap="#ImgMap0" ></p>
+  <br>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Service_Design">Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

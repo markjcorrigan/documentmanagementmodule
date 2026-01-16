@@ -1,0 +1,564 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}OODA and Scrum{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" >
+<h3>OODA: The Mindset of Scrum</h3>
+<hr>
+<div align="left">
+  <h5 align="center"> <img class="img-fluid" src="{{ asset('storage/images/oodamedium.png') }}"> OBSERVE ORIENT DECIDE ACT <img class="img-fluid" src="{{ asset('storage/images/scrumboardmedium.jpg') }}"> </h5>
+</div>
+<div align="center">
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oodaone.jpg') }}"></p>
+</div>
+<div align="center">
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseburn" aria-expanded="false" aria-controls=
+        "collapseburn">The OODA Loop </button>
+  <div class="collapse" id="collapseburn">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">The Goal:  Never be caught dead in the OODA Loop!</h5>
+        <div class="card-body text-center" >
+          <h5 align="left">OODA: The Mindset of Scrum</h5>
+          <p align="left">While working with Dr. Jeff Sutherland, he often proclaimed that OODA is the Mindset of Scrum. A former RF-4C Pilot with intense combat experience over the skies of Vietnam, and the co-creator of Scrum, Dr. Sutherland is an expert in both flying the OODA Loop and applying it to Scrum.</p>
+          <h5 align="left">OODA and Scrum</h5>
+          <p align="left">Scrum is from the Toyota Production System and OODA Loop, according to Jeff Sutherland:  "In the book [Scrum: The Art of Doing Twice the Work in Half the Time] I talk about the origins of Scrum in the Toyota Production System and the OODA Loop of combat aviation."
+            - Jeff Sutherland, co-creator of Scrum</p>
+          <div align="center">
+            <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oodatwo.jpg') }}"></p>
+          </div>
+          <h5 align="left">What is the OODA Loop?</h5>
+          <p align="left">The OODA Loop is an individual and organizational learning and adaption process, a non-linear decision-making framework fit for survival and growth in this VUCA (Volatile, Uncertain, Complex and Ambiguous) world.</p>
+          <h5 align="left">Air-to-Air Combat and the OODA Loop</h5>
+          <p align="left">Over the skies of Korea, years before Jeff Sutherland and his RF-4C's Weapons System Operator's (WSO) flight plans were constantly disrupted by North Vietnamese gunfire, SAMs, and MiG fighters, John "40-Second" Boyd was mastering the art of air-to-air combat in the American built F-86 Sabre.</p>
+          <p align="left">For almost four decades, Boyd reflected back on his experiences in the skies over Korea to understand how a seemingly inferior aircraft, the American built F-86 Sabre, had a kill ratio of 10:1 over the nimbler, more agile MiG-15. As an F-86 pilot who regularly engaged with MiG-15s, Boyd realized in the mid-1970s that it was the F-86's bubble canopy that provided American pilots better situational awareness (the ability to better observe and therefore process reality) over MiG-15 pilots. In addition to giving pilots better situational awareness, as Boyd would also realize in the mid-1970s, the F-86's ability to "Pivot," or what Boyd called "Fast Transients," gave American pilots the real tactical advantage over the MiGs. <br>
+            <b> <i>(In Scrum the board is our 360 degree canopy for each combat mission or sprint we undertake!  Burning down is all about not being caught dead in the OODA Loop! I.e. rather focus in on the sprint (especially the DO and blocked columns) than in off field of combat areas that can distract (superfluous documentation etc.) and which will get your sprint killed (caught dead) in the OODA Looop - PMWay)</i> </b></p>
+          <h5 align="left">Scrum-OODA Timeline</h5>
+          <p align="left">The OODA Loop is often associated with fighter aviation from the 1950s but the first OODA Loop sketch did not appear until 1995, four years after the creation of Scrum by Jeff Sutherland and Ken Schwaber, and nine years after Takeuchi and Nonaka wrote about Scrum project management in their 1986 Harvard Business Review article, The New New Product Development Game. Side note: Rumor has it that Professor Nonaka is writing a book on the OODA Loop.</p>
+          <h5 align="left">The connection between the Toyota Production System and the OODA Loop</h5>
+          <p align="left">The Toyota Product System, according to Chet Richards, close friend of the late John Boyd and author of Certain to Win, is a manifestation of maneuver warfare applied to a production system. Maneuver warfare in the military is associated with John Boyd and his OODA Loop. Interestingly, John Boyd studied the Toyota Production System in the late '80s but he also studied cognitive science, psychology, cybernetics, biology, strategy, systems and complexity thinking, and warfare before synthesizing what is now known as the OODA Loop.</p>
+          <h5 align="left">The Infinite Game</h5>
+          <p align="left">The OODA Loop allows us to play an infinite game where the rules constantly change and players come and go. <br>
+            <br>
+            Below is the OODA Loop as found in Jeff Sutherland's book, Scrum: The Art of Doing Twice the Work in Half the Time. </p>
+          <div align="center">
+            <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oodathree.jpg') }}"></p>
+            <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oodathreea.png') }}"></p>
+            <p align="left"> As Boyd put it in his famous briefing "Organic Design for Command and Control" the key was to:
+              "Operate inside adversary's observation,orientation,decision,action loops to enmesh adversary in a world of uncertainty, doubt, mistrust, confusion, disorder, fear, panic chaos  and/or fold adversary back inside himself so that he cannot cope with events/efforts as they unfold."</p>
+          </div>
+          <h3 align="left">A short personal history of presenting the OODA Loop as the mindset of Scrum</h3>
+          <p align="left">A few years ago I tried my best to explain this "Mindset" when I co-coached with Joe Justice during his Scrum in Hardware â€“ Train the Trainer course. It was a daunting task considering I was surrounded by some of the world's finest Scrum Trainers and Agile Coaches and was asked to deliver the "Origins of Scrum" using Scrum, Inc.'s slide deck. Not easy. <br>
+            <br>
+            Knowing that much has been written about the connection between Scrum and OODA including Steve Adolph's 2006 paper, What Lessons Can the Agile Community Learn from A Maverick Fighter Pilot, I decided to spend my limited presentation time focused on two lesser known features of OODA: empathy and fast transients. Before rolling-in on these two features, here is some more background on Scrum <br>
+            <br>
+            According to Jeff Sutherland, Scrum's origins are in OODA and hardware manufacturing, not software. In fact, for those of you who are Lean Startup practitioners, you may want to adopt OODA as your mindset as well considering the Lean Startup is based on the OODA Loop. Similarly, Cyber Security borrows from Boyd's OODA Loop as do several product design approaches. </p>
+          <h5 align="left">Back to Scrum.</h5>
+          <p align="left">Scrum is widely practiced by software development teams but is applicable for transitioning work from the complex domain to complicated domain of the Cynefin framework. Best place to learn about Scrum is the 19-page Scrum Guide. If you want to learn about the interplay between the OODA Loop and Cynefin framework, join Dave Snowden and me this November in Quantico, VA for the Cynefin-OODA Loop exploratory. </p>
+          <h5 align="left">OODA: The Mindset</h5>
+          <p align="left">As I had limited time during my "Origins of Scrum" presentation, I decided to focus on empathy and fast transients, two lessor known characteristics of OODA.</p>
+          <h5 align="left">Empathy: Get inside the mind of your customer</h5>
+          <p align="left">A 1 v 1 dogfight is an exercise in empathy, according to the award-winning thinker, author, broadcaster, and speaker on today's most significant trends in business, Geoff Colvin. In his 2015 book, Humans Are Underrated: What High Achievers Know that Brilliant Machines Never Will, Geoff proposes that "Even a fighter jet dogfight, in which neither pilot would ever speak to or even see the other, was above all a human interaction. Few people would call it an exercise in empathy, but that's what it wasdiscerning what was in the mind of someone else and responding appropriately. Winning required getting really good at it." (Page 96) In his 1995 briefing, The Essence of Winning and Losing, John R. Boyd points out that analysis and synthesis are dependent on implicit cross-referencing across different domains including empathy. </p>
+          <h5 align="left">Fast Transients: The organization that can handle the quickest rate of change survives</h5>
+          <p align="left">The ability for your organization to transition from one state to another faster than your competition will ensure your organizations survival. Moreover, "Fast Transients" will bring confusion and disorder to your competition as they under or over react to your activities. </p>
+          <h5 align="left">Orientation is Schwerpunkt (focal point)</h5>
+          <p align="left">Orientation is the "genetic code" of an organism and cognitive diversity is key to creating innovative solutions to complex problems.</p>
+          <h5 align="left">Focus on Feedback Loops</h5>
+          <p align="left">One feature of complex adaptive systems are feedback Loops. Learn how to provide feedback. Effective retrospectives are a great start. </p>
+          <h5 align="left">Leverage Uncertainty</h5>
+          <p align="left">We live in a Volatile, Uncertain, Complex and Ambiguous (VUCA) world.<br>
+            The Scrum Product Owner role is therefore crucial to keep the Scrum Team fed with quality (well written) <a href="/userstories" >User Stories</a> that will keep them in the OODA Loop and the business competitive and thriving (not dead in the OODA Loop) </p>
+          <h5 align="left">Agility is Adaptation with a Time Scale</h5>
+          <p align="left">Adaptability is a cognitive skill found in High-Performance Teaming and Crew Resource Management. Agility is adaptability with a time scale and that time scale is rapidly shrinking. <br>
+            <br>
+            Non-Linear Systems Have Inherently Identical Structures
+            When looking for solutions to problems, look outside your industry. The future already exists. </p>
+        </div>
+      </div>
+      <div class="card-footer"> </div>
+    </div>
+  </div>
+</div>
+<p align="left"><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline Loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/ooda.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/oodaloops.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/ooda.png') }}" alt="">OODA Loops </button>
+    </li>
+    <li  data-poster="/images/boydone.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/boydone.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/boydone.jpg') }}" alt="">Boyd Part One (It is critical to understand that agility does not mean speed, but rather speed of decision making!) </button>
+    </li>
+    <li  data-poster="/images/boydtwo.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/boydtwo.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/boydtwo.jpg') }}" alt="">Boyd Part Two (It is critical to understand that agility does not mean speed, but rather speed of decision making!) </button>
+    </li>
+    <li  data-poster="/images/reddevils.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/blueangels.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/reddevils.jpg') }}" alt="">Blue Angels (working together with the same goal) </button>
+    </li>
+    <li  data-poster="/images/dogfight.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/dogfight.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/dogfight.jpg') }}" alt="">Dogfight  (don't get caught in the OODA Loop!) </button>
+    </li>
+    <li  data-poster="/images/threesixty.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/threesixty.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/threesixty.jpg') }}" alt="">360 degree field of view and orientation (connecting all the dots) </button>
+    </li>
+  </ul>
+  <div align="center"> <br>
+    <br>
+    <h3>The Goal:  Never be caught dead in the OODA Loop!</h3>
+    <p align="center"><img class="img-fluid" src="{{ asset('storage/images/deadintheoodaloop.jpg') }}"><br>
+      <br>
+      Note:  The "<a href="/scrumrca#indexc" >Done Scrum Team's</a>" ability to <a href="/burndown" >burn down</a> means it is in control of and is working the OODA Loop!</p>
+  </div>
+  <br>
+  <br>
+  <div align="center">
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseportalnext" aria-expanded="false" aria-controls=
+        "collapsepportalnext">Agile Delivery Plan<br>
+    with OODA </button>
+    <div class="collapse" id="collapseportalnext">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center">Defining an Agile delivery plan with the OODA loop</h5>
+          <div class="card-body text-center">
+            <p align="left">Earlier this year (Mar 2016) I had the opportunity to run a workshop I created at Alistair Cockburn's Agile Masterclass in Sydney. The workshop demonstrated how to create and use a Story map. However it also tied in two additional planning techniques that I've found extremely useful and lightweight. These techniques provide additional focus on the use of risks and strategies to decide on a course of action for a team.<br>
+              <br>
+              A common challenge while planning is getting the right balance between top-down and bottom-up planning. Purely top-down plans suffer from not being based in reality, while purely bottom-up plans can be so specific you lose flexibility in achieving your outcomes.<br>
+              <br>
+              The tendency is for teams to get stuck amongst the weeds overlooking common sense strategies to address risks.<br>
+              <br>
+              By using this set of activities teams can avoid this and start to systematically think about the big picture, align on what is important and agree on a way forward. Blending these additional elements with something like story mapping adds depth to how teams plan.<br>
+              <br>
+              During the workshop Alistair highlighted that the combination of activities reminded him of John Boyd's OODA (Observe, Orient, Decide, Act) loop. This led me to think of this approach more clearly as Decision Oriented Planning.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/zeroplee.png') }}" /></div>
+            <p align="left">Since then I've had the opportunity to teach these techniques at Campaign Monitor and our Delivery Leads use these approaches to help teams make decisions and deliver amazing products. </p>
+            <h3 align="left">The OODA Loop</h3>
+            <p align="left">Informed by his experience at the US Air Force, John Boyd developed the OODA loop and presented it in 1995 in "The essence of winning and losing". The OODA loop values agility over raw power and has been applied in business contexts as a way of gaining a competitive advantage. By being able to execute an OODA loop faster than a competitor, allows a company to stay ahead of the game, undermining a competitors ability to respond.<br>
+              <br>
+              As Jeff was an aviator himself, it's not surprising that OODA was inherently a key influencer of Scrum.</p>
+            <h3 align="left">Elements of OODA</h3>
+            <p align="left">The OODA loop is comprised of 4 majors elements:
+              Observe  Orient  Decide  Act.<br>
+              In a team environment I explain these four elements as:
+            <ul align="left">
+              <li align="left">Observe:  Understand the environment</li>
+              <li align="left">Orient:  Align on what is important</li>
+              <li align="left">Decide:  Agree on a good course of action</li>
+              <li align="left">Act:  Do it</li>
+            </ul>
+            </p>
+            <p align="left">In complex changing environments enabling these 4 elements to occur quickly and effectively can allow teams to leverage their broad range of skills and experiences to increase the likelihood of successful delivery.<br>
+              <br>
+              Although there are different ways to do each of these steps, irrespective of the way you choose, I would encourage you to use something to anchor a team's focus and visualise what is discussed. This will help enable complex interactions to emerge which would otherwise not occur. </p>
+            <h3 align="left">Observing the environment</h3>
+            <p align="left">My preferred approach for observing the environment is <a href="http://jpattonassociates.com/user-story-mapping/" >Jeff Patton's Story Mapping approach</a>. This technique has become the defacto standard for visualising product backlogs, and helps teams focus on how a customer interacts with the system.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/zeroobserve.png') }}" /></div>
+            </p>
+            <p align="left">Story Mapping is awesome as it encourages, amongst other things:
+            <ul>
+              <li align="left">Storytelling as a technique to flush out any gaps in the environment</li>
+              <li align="left">A two dimensional backlog enabling better visualisation of priorities and dependencies</li>
+            </ul>
+            </p>
+            <p align="left"> It also happens to be an awesome way to observe the environment and what a team will need to deliver to create value. </p>
+            <h3 align="left">Orient on what's important</h3>
+            <p align="left">To me the things you really want to keep an eye on when trying to ship a new product are the factors that could significantly affect delivery be it positively or negatively.
+              Putting my finance hat on, all of these can be classified as risks because they relate to an uncertainty of some kind.
+              With that in mind, my favourite approach to orient is the Risk Impact map.<br>
+              <br>
+              Because it is so simple, it is also extremely powerful.
+              The Risk Impact map is a tried and tested favourite within traditional project management. Blended with a little bit of design thinking though you can really push its application. Primed with a few simple risk categories, both customer and delivery centric risks can be explored.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/oneplee.png') }}" /></div>
+            <br>
+            <p align="left"> Teams are asked to raise any risks they have in any one of four categories:
+            <ul align="left">
+              <li align="left">Desirability:  Will a customer want it?</li>
+              <li align="left">Feasibility:  Can we technically build it given our current environment?</li>
+              <li align="left">Viability:  If we build it, will we be able to make money from it?</li>
+              <li align="left">Consumability:  Will a customer be able to find it and consume it?</li>
+            </ul>
+            </p>
+            <p align="left"> By providing this starting frame we shift thinking away from mainly feasibility orient risks towards a holistic systems view that helps expose additional risks that would typically remain hidden.<br>
+              <br>
+              In practice you'll find risks don't fit in neat boxes so it's ok to just pick any of the categories that suits. It's more important to capture risks and expose them, than it is to perfectly categorise them.<br>
+              <br>
+              Because your information about the environment is imperfect, don't worry about finding every risk possible. What your team captures are likely the things that trouble them the most. As long as you revisit the risk map regularly you can operate effectively with a high rate of uncertainty. </p>
+            <p align="left"> With the map completed, teams are challenged with thinking about the smallest thing that can be done to de-risk items that have been identified as the most likely and impactful.  Visually, teams are tasked with taking the items in the top right quadrant and doing the least amount of work possible to shift these left or down.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/twoplee.png') }}" /></div>
+            <p align="left">With this in mind, it's now time to decide on a plan. </p>
+            <h3 align="left">Decide on a good course of action</h3>
+            <p align="left">After having observed the environment and oriented on what is important it can still be difficult to decide on a course of action and understand how it links to achieving longer term goals.  Which strategy of the many available is the best one to use to move forward?<br>
+              <br>
+              The technique I've found the most effective in this space I have named Outcome Mapping.<br>
+              <br>
+              Using an "envision the end state" approach this technique helps teams decide on an immediate course of action in order to achieve a longer term goal. (This approach is also used in other techniques such as The Future, Backwards and the Toyota Kata to help set direction in complex problem domains).<br>
+              <br>
+              Outcome Mapping is as simple as drawing a single line starting at now, and ending in the future. Leaders and stakeholders are asked to use post-it notes to identify any key milestones that exist. This effectively sets constraints for the team that they need to achieve. For example a milestone might be "Ship the product by end Mar 2017", "Be ready for a trade show on 15th Jan 2017" or even "Onboard 5 new engineers by Dec 2016".</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/threeplee.png') }}" /></div>
+            <p align="left"> These constraints set an identified end state and when combined with outcome mapping, enables a team to have broad flexibility in determining appropriate action given their environment.<br>
+              <br>
+              Within the defined constraints, teams are then asked to identify the outcomes that they would deliver in order to meet the desired end state. </p>
+            <p align="left" > <img alt="" class="img-fluid" src="{{ asset('storage/images/fourplee.png') }}" style="float: left" padding="40px" > For some teams it may help to provide a simple frame for outcomes:
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            <ul align="left" >
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <li align="left">What would a team implement?</li>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <li align="left">What information would they get back from?</li>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <li align="left">What would it validate for them?</li>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            </ul>
+            </p>
+            <p align="left"> Some teams will define a sequential set of outcomes, but other teams will add parallel sets of outcomes identifying work that can be done in parallel, by other teams members or even other teams.<br>
+              <br>
+              The main benefit of having a plan is its ability to align a team around a course of action, so be flexible with how the plan is created. As long as it is visible and intuitive to the team, there are really nothing that you shouldn't allow them to do here. </p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/fiveplee.png') }}" /></div>
+            <p align="left"> With outcomes defined, it is now highly valuable to ask the team to group outcomes into mini milestones. These mini milestones help identify what a releasable slices is and the mid horizon goals that define what a team is trying to achieve during that period.<br>
+              <br>
+              I use a 1st Release, 2nd Release, Everything else approach to get teams into the mindset of planning regularly. This helps them avoid attempting to define the mythical perfect plan, and get into a regular cycle of planning out what they are currently working on, and what they thing they will work on next.<br>
+              <br>
+              Depending on the type of work release slices can really be anything.  Greenfield products often have customer validation, development of prototypes and/or steel threads as the first goals. In established products these are more likely to look like enhancing specific areas of the product, or improving or expanding existing customer journeys.
+            <h3 align="left">Acting on the outcome map</h3>
+            <p align="left">Having decided on an agreed outcome map, teams are now ready to act. Teams take the output of the outcome map, and bring it back to the Story map.<br>
+              <br>
+              The Story Map should reflect the chosen course of action.<br>
+              <br>
+              Release slices or outcomes are placed to the left of the story map in order. The cards on the right are reordered and sliced further to defined the minimum work required to achieve the desired outcome.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/sixplee.png') }}" ></div>
+            <p align="left">These cards now form the basis for execution with your chosen delivery framework.<br>
+              <br>
+              Completing any outcome completes a single OODA loop and provides some information that influences future decisions. A team focused on learning will use this information to drive the next decision loop.</p>
+            <h3 align="left">Final Note</h3>
+            <p align="left">These activities can easily be completed within a few hours, and set an agreed direction of one or two months.
+              Accelerating through the OODA loop by regularly reviewing and revising the Risk Impact map and the Outcome map will ensure teams adjusts their direction based on the changing realities of their environment.<br>
+              <br>
+              All our teams at Campaign Monitor use this approach to ensure we know what reality is. In addition it helps us set a direction that meets the environment we have, not the one we wish we had.<br>
+              <br>
+              With so many factors affecting delivery, this approach should help your teams to apply a basic OODA loop ensuring that they are always making the best possible decisions available to them. </p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/sevenplee.png') }}" ></div>
+            <p align="left"> Thanks to Peter Lee of CM Engineering</p>
+          </div>
+          <div class="card-footer"> </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <p align="left">Thanks AGLX Consulting</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<!--BODY-->
+
+<!--BODY-->
+<!--BODY-->
+
+<div class="container" >
+<h3>OODA: The Mindset of Scrum</h3>
+<hr>
+<div align="left">
+  <h5 align="center"> <img class="img-fluid" src="{{ asset('storage/images/oodamedium.png') }}"> OBSERVE ORIENT DECIDE ACT <img class="img-fluid" src="{{ asset('storage/images/scrumboardmedium.jpg') }}"> </h5>
+</div>
+<div align="center">
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oodaone.jpg') }}"></p>
+</div>
+<div align="center">
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseburn" aria-expanded="false" aria-controls=
+        "collapseburn">The OODA Loop </button>
+  <div class="collapse" id="collapseburn">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">The Goal:  Never be caught dead in the OODA Loop!</h5>
+        <div class="card-body text-center" >
+          <h5 align="left">OODA: The Mindset of Scrum</h5>
+          <p align="left">While working with Dr. Jeff Sutherland, he often proclaimed that OODA is the Mindset of Scrum. A former RF-4C Pilot with intense combat experience over the skies of Vietnam, and the co-creator of Scrum, Dr. Sutherland is an expert in both flying the OODA Loop and applying it to Scrum.</p>
+          <h5 align="left">OODA and Scrum</h5>
+          <p align="left">Scrum is from the Toyota Production System and OODA Loop, according to Jeff Sutherland:  "In the book [Scrum: The Art of Doing Twice the Work in Half the Time] I talk about the origins of Scrum in the Toyota Production System and the OODA Loop of combat aviation."
+            - Jeff Sutherland, co-creator of Scrum</p>
+          <div align="center">
+            <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oodatwo.jpg') }}"></p>
+          </div>
+          <h5 align="left">What is the OODA Loop?</h5>
+          <p align="left">The OODA Loop is an individual and organizational learning and adaption process, a non-linear decision-making framework fit for survival and growth in this VUCA (Volatile, Uncertain, Complex and Ambiguous) world.</p>
+          <h5 align="left">Air-to-Air Combat and the OODA Loop</h5>
+          <p align="left">Over the skies of Korea, years before Jeff Sutherland and his RF-4C's Weapons System Operator's (WSO) flight plans were constantly disrupted by North Vietnamese gunfire, SAMs, and MiG fighters, John "40-Second" Boyd was mastering the art of air-to-air combat in the American built F-86 Sabre.</p>
+          <p align="left">For almost four decades, Boyd reflected back on his experiences in the skies over Korea to understand how a seemingly inferior aircraft, the American built F-86 Sabre, had a kill ratio of 10:1 over the nimbler, more agile MiG-15. As an F-86 pilot who regularly engaged with MiG-15s, Boyd realized in the mid-1970s that it was the F-86's bubble canopy that provided American pilots better situational awareness (the ability to better observe and therefore process reality) over MiG-15 pilots. In addition to giving pilots better situational awareness, as Boyd would also realize in the mid-1970s, the F-86's ability to "Pivot," or what Boyd called "Fast Transients," gave American pilots the real tactical advantage over the MiGs. <br>
+            <b> <i>(In Scrum the board is our 360 degree canopy for each combat mission or sprint we undertake!  Burning down is all about not being caught dead in the OODA Loop! I.e. rather focus in on the sprint (especially the DO and blocked columns) than in off field of combat areas that can distract (superfluous documentation etc.) and which will get your sprint killed (caught dead) in the OODA Looop - PMWay)</i> </b></p>
+          <h5 align="left">Scrum-OODA Timeline</h5>
+          <p align="left">The OODA Loop is often associated with fighter aviation from the 1950s but the first OODA Loop sketch did not appear until 1995, four years after the creation of Scrum by Jeff Sutherland and Ken Schwaber, and nine years after Takeuchi and Nonaka wrote about Scrum project management in their 1986 Harvard Business Review article, The New New Product Development Game. Side note: Rumor has it that Professor Nonaka is writing a book on the OODA Loop.</p>
+          <h5 align="left">The connection between the Toyota Production System and the OODA Loop</h5>
+          <p align="left">The Toyota Product System, according to Chet Richards, close friend of the late John Boyd and author of Certain to Win, is a manifestation of maneuver warfare applied to a production system. Maneuver warfare in the military is associated with John Boyd and his OODA Loop. Interestingly, John Boyd studied the Toyota Production System in the late '80s but he also studied cognitive science, psychology, cybernetics, biology, strategy, systems and complexity thinking, and warfare before synthesizing what is now known as the OODA Loop.</p>
+          <h5 align="left">The Infinite Game</h5>
+          <p align="left">The OODA Loop allows us to play an infinite game where the rules constantly change and players come and go. <br>
+            <br>
+            Below is the OODA Loop as found in Jeff Sutherland's book, Scrum: The Art of Doing Twice the Work in Half the Time. </p>
+          <div align="center">
+            <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oodathree.jpg') }}"></p>
+            <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oodathreea.png') }}"></p>
+            <p align="left"> As Boyd put it in his famous briefing "Organic Design for Command and Control" the key was to:
+              "Operate inside adversary's observation,orientation,decision,action loops to enmesh adversary in a world of uncertainty, doubt, mistrust, confusion, disorder, fear, panic chaos  and/or fold adversary back inside himself so that he cannot cope with events/efforts as they unfold."</p>
+          </div>
+          <h3 align="left">A short personal history of presenting the OODA Loop as the mindset of Scrum</h3>
+          <p align="left">A few years ago I tried my best to explain this "Mindset" when I co-coached with Joe Justice during his Scrum in Hardware â€“ Train the Trainer course. It was a daunting task considering I was surrounded by some of the world's finest Scrum Trainers and Agile Coaches and was asked to deliver the "Origins of Scrum" using Scrum, Inc.'s slide deck. Not easy. <br>
+            <br>
+            Knowing that much has been written about the connection between Scrum and OODA including Steve Adolph's 2006 paper, What Lessons Can the Agile Community Learn from A Maverick Fighter Pilot, I decided to spend my limited presentation time focused on two lesser known features of OODA: empathy and fast transients. Before rolling-in on these two features, here is some more background on Scrum <br>
+            <br>
+            According to Jeff Sutherland, Scrum's origins are in OODA and hardware manufacturing, not software. In fact, for those of you who are Lean Startup practitioners, you may want to adopt OODA as your mindset as well considering the Lean Startup is based on the OODA Loop. Similarly, Cyber Security borrows from Boyd's OODA Loop as do several product design approaches. </p>
+          <h5 align="left">Back to Scrum.</h5>
+          <p align="left">Scrum is widely practiced by software development teams but is applicable for transitioning work from the complex domain to complicated domain of the Cynefin framework. Best place to learn about Scrum is the 19-page Scrum Guide. If you want to learn about the interplay between the OODA Loop and Cynefin framework, join Dave Snowden and me this November in Quantico, VA for the Cynefin-OODA Loop exploratory. </p>
+          <h5 align="left">OODA: The Mindset</h5>
+          <p align="left">As I had limited time during my "Origins of Scrum" presentation, I decided to focus on empathy and fast transients, two lessor known characteristics of OODA.</p>
+          <h5 align="left">Empathy: Get inside the mind of your customer</h5>
+          <p align="left">A 1 v 1 dogfight is an exercise in empathy, according to the award-winning thinker, author, broadcaster, and speaker on today's most significant trends in business, Geoff Colvin. In his 2015 book, Humans Are Underrated: What High Achievers Know that Brilliant Machines Never Will, Geoff proposes that "Even a fighter jet dogfight, in which neither pilot would ever speak to or even see the other, was above all a human interaction. Few people would call it an exercise in empathy, but that's what it wasdiscerning what was in the mind of someone else and responding appropriately. Winning required getting really good at it." (Page 96) In his 1995 briefing, The Essence of Winning and Losing, John R. Boyd points out that analysis and synthesis are dependent on implicit cross-referencing across different domains including empathy. </p>
+          <h5 align="left">Fast Transients: The organization that can handle the quickest rate of change survives</h5>
+          <p align="left">The ability for your organization to transition from one state to another faster than your competition will ensure your organizations survival. Moreover, "Fast Transients" will bring confusion and disorder to your competition as they under or over react to your activities. </p>
+          <h5 align="left">Orientation is Schwerpunkt (focal point)</h5>
+          <p align="left">Orientation is the "genetic code" of an organism and cognitive diversity is key to creating innovative solutions to complex problems.</p>
+          <h5 align="left">Focus on Feedback Loops</h5>
+          <p align="left">One feature of complex adaptive systems are feedback Loops. Learn how to provide feedback. Effective retrospectives are a great start. </p>
+          <h5 align="left">Leverage Uncertainty</h5>
+          <p align="left">We live in a Volatile, Uncertain, Complex and Ambiguous (VUCA) world.<br>
+            The Scrum Product Owner role is therefore crucial to keep the Scrum Team fed with quality (well written) <a href="/userstories" >User Stories</a> that will keep them in the OODA Loop and the business competitive and thriving (not dead in the OODA Loop) </p>
+          <h5 align="left">Agility is Adaptation with a Time Scale</h5>
+          <p align="left">Adaptability is a cognitive skill found in High-Performance Teaming and Crew Resource Management. Agility is adaptability with a time scale and that time scale is rapidly shrinking. <br>
+            <br>
+            Non-Linear Systems Have Inherently Identical Structures
+            When looking for solutions to problems, look outside your industry. The future already exists. </p>
+        </div>
+      </div>
+      <div class="card-footer"> </div>
+    </div>
+  </div>
+</div>
+<p align="left"><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline Loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/ooda.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/oodaloops.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/ooda.png') }}" alt="">OODA Loops </button>
+    </li>
+    <li  data-poster="/images/boydone.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/boydone.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/boydone.jpg') }}" alt="">Boyd Part One (It is critical to understand that agility does not mean speed, but rather speed of decision making!) </button>
+    </li>
+    <li  data-poster="/images/boydtwo.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/boydtwo.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/boydtwo.jpg') }}" alt="">Boyd Part Two (It is critical to understand that agility does not mean speed, but rather speed of decision making!) </button>
+    </li>
+    <li  data-poster="/images/reddevils.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/blueangels.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/reddevils.jpg') }}" alt="">Blue Angels (working together with the same goal) </button>
+    </li>
+    <li  data-poster="/images/dogfight.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/dogfight.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/dogfight.jpg') }}" alt="">Dogfight  (don't get caught in the OODA Loop!) </button>
+    </li>
+    <li  data-poster="/images/threesixty.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oodaloops/threesixty.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/threesixty.jpg') }}" alt="">360 degree field of view and orientation (connecting all the dots) </button>
+    </li>
+  </ul>
+  <div align="center"> <br>
+    <br>
+    <h3>The Goal:  Never be caught dead in the OODA Loop!</h3>
+    <p align="center"><img class="img-fluid" src="{{ asset('storage/images/deadintheoodaloop.jpg') }}"><br>
+      <br>
+      Note:  The "<a href="/scrumrca#indexc" >Done Scrum Team's</a>" ability to <a href="/burndown" >burn down</a> means it is in control of and is working the OODA Loop!</p>
+  </div>
+  <br>
+  <br>
+  <div align="center">
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseportalnext" aria-expanded="false" aria-controls=
+        "collapsepportalnext">Agile Delivery Plan<br>
+    with OODA </button>
+    <div class="collapse" id="collapseportalnext">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center">Defining an Agile delivery plan with the OODA loop</h5>
+          <div class="card-body text-center">
+            <p align="left">Earlier this year (Mar 2016) I had the opportunity to run a workshop I created at Alistair Cockburn's Agile Masterclass in Sydney. The workshop demonstrated how to create and use a Story map. However it also tied in two additional planning techniques that I've found extremely useful and lightweight. These techniques provide additional focus on the use of risks and strategies to decide on a course of action for a team.<br>
+              <br>
+              A common challenge while planning is getting the right balance between top-down and bottom-up planning. Purely top-down plans suffer from not being based in reality, while purely bottom-up plans can be so specific you lose flexibility in achieving your outcomes.<br>
+              <br>
+              The tendency is for teams to get stuck amongst the weeds overlooking common sense strategies to address risks.<br>
+              <br>
+              By using this set of activities teams can avoid this and start to systematically think about the big picture, align on what is important and agree on a way forward. Blending these additional elements with something like story mapping adds depth to how teams plan.<br>
+              <br>
+              During the workshop Alistair highlighted that the combination of activities reminded him of John Boyd's OODA (Observe, Orient, Decide, Act) loop. This led me to think of this approach more clearly as Decision Oriented Planning.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/zeroplee.png') }}" /></div>
+            <p align="left">Since then I've had the opportunity to teach these techniques at Campaign Monitor and our Delivery Leads use these approaches to help teams make decisions and deliver amazing products. </p>
+            <h3 align="left">The OODA Loop</h3>
+            <p align="left">Informed by his experience at the US Air Force, John Boyd developed the OODA loop and presented it in 1995 in "The essence of winning and losing". The OODA loop values agility over raw power and has been applied in business contexts as a way of gaining a competitive advantage. By being able to execute an OODA loop faster than a competitor, allows a company to stay ahead of the game, undermining a competitors ability to respond.<br>
+              <br>
+              As Jeff was an aviator himself, it's not surprising that OODA was inherently a key influencer of Scrum.</p>
+            <h3 align="left">Elements of OODA</h3>
+            <p align="left">The OODA loop is comprised of 4 majors elements:
+              Observe  Orient  Decide  Act.<br>
+              In a team environment I explain these four elements as:
+            <ul align="left">
+              <li align="left">Observe:  Understand the environment</li>
+              <li align="left">Orient:  Align on what is important</li>
+              <li align="left">Decide:  Agree on a good course of action</li>
+              <li align="left">Act:  Do it</li>
+            </ul>
+            </p>
+            <p align="left">In complex changing environments enabling these 4 elements to occur quickly and effectively can allow teams to leverage their broad range of skills and experiences to increase the likelihood of successful delivery.<br>
+              <br>
+              Although there are different ways to do each of these steps, irrespective of the way you choose, I would encourage you to use something to anchor a team's focus and visualise what is discussed. This will help enable complex interactions to emerge which would otherwise not occur. </p>
+            <h3 align="left">Observing the environment</h3>
+            <p align="left">My preferred approach for observing the environment is <a href="http://jpattonassociates.com/user-story-mapping/" >Jeff Patton's Story Mapping approach</a>. This technique has become the defacto standard for visualising product backlogs, and helps teams focus on how a customer interacts with the system.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/zeroobserve.png') }}" /></div>
+            </p>
+            <p align="left">Story Mapping is awesome as it encourages, amongst other things:
+            <ul>
+              <li align="left">Storytelling as a technique to flush out any gaps in the environment</li>
+              <li align="left">A two dimensional backlog enabling better visualisation of priorities and dependencies</li>
+            </ul>
+            </p>
+            <p align="left"> It also happens to be an awesome way to observe the environment and what a team will need to deliver to create value. </p>
+            <h3 align="left">Orient on what's important</h3>
+            <p align="left">To me the things you really want to keep an eye on when trying to ship a new product are the factors that could significantly affect delivery be it positively or negatively.
+              Putting my finance hat on, all of these can be classified as risks because they relate to an uncertainty of some kind.
+              With that in mind, my favourite approach to orient is the Risk Impact map.<br>
+              <br>
+              Because it is so simple, it is also extremely powerful.
+              The Risk Impact map is a tried and tested favourite within traditional project management. Blended with a little bit of design thinking though you can really push its application. Primed with a few simple risk categories, both customer and delivery centric risks can be explored.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/oneplee.png') }}" /></div>
+            <br>
+            <p align="left"> Teams are asked to raise any risks they have in any one of four categories:
+            <ul align="left">
+              <li align="left">Desirability:  Will a customer want it?</li>
+              <li align="left">Feasibility:  Can we technically build it given our current environment?</li>
+              <li align="left">Viability:  If we build it, will we be able to make money from it?</li>
+              <li align="left">Consumability:  Will a customer be able to find it and consume it?</li>
+            </ul>
+            </p>
+            <p align="left"> By providing this starting frame we shift thinking away from mainly feasibility orient risks towards a holistic systems view that helps expose additional risks that would typically remain hidden.<br>
+              <br>
+              In practice you'll find risks don't fit in neat boxes so it's ok to just pick any of the categories that suits. It's more important to capture risks and expose them, than it is to perfectly categorise them.<br>
+              <br>
+              Because your information about the environment is imperfect, don't worry about finding every risk possible. What your team captures are likely the things that trouble them the most. As long as you revisit the risk map regularly you can operate effectively with a high rate of uncertainty. </p>
+            <p align="left"> With the map completed, teams are challenged with thinking about the smallest thing that can be done to de-risk items that have been identified as the most likely and impactful.  Visually, teams are tasked with taking the items in the top right quadrant and doing the least amount of work possible to shift these left or down.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/twoplee.png') }}" /></div>
+            <p align="left">With this in mind, it's now time to decide on a plan. </p>
+            <h3 align="left">Decide on a good course of action</h3>
+            <p align="left">After having observed the environment and oriented on what is important it can still be difficult to decide on a course of action and understand how it links to achieving longer term goals.  Which strategy of the many available is the best one to use to move forward?<br>
+              <br>
+              The technique I've found the most effective in this space I have named Outcome Mapping.<br>
+              <br>
+              Using an "envision the end state" approach this technique helps teams decide on an immediate course of action in order to achieve a longer term goal. (This approach is also used in other techniques such as The Future, Backwards and the Toyota Kata to help set direction in complex problem domains).<br>
+              <br>
+              Outcome Mapping is as simple as drawing a single line starting at now, and ending in the future. Leaders and stakeholders are asked to use post-it notes to identify any key milestones that exist. This effectively sets constraints for the team that they need to achieve. For example a milestone might be "Ship the product by end Mar 2017", "Be ready for a trade show on 15th Jan 2017" or even "Onboard 5 new engineers by Dec 2016".</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/threeplee.png') }}" /></div>
+            <p align="left"> These constraints set an identified end state and when combined with outcome mapping, enables a team to have broad flexibility in determining appropriate action given their environment.<br>
+              <br>
+              Within the defined constraints, teams are then asked to identify the outcomes that they would deliver in order to meet the desired end state. </p>
+            <p align="left" > <img alt="" class="img-fluid" src="{{ asset('storage/images/fourplee.png') }}" style="float: left" padding="40px"  > For some teams it may help to provide a simple frame for outcomes:
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            <ul align="left" >
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <li align="left">What would a team implement?</li>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <li align="left">What information would they get back from?</li>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <li align="left">What would it validate for them?</li>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            </ul>
+            </p>
+            <p align="left"> Some teams will define a sequential set of outcomes, but other teams will add parallel sets of outcomes identifying work that can be done in parallel, by other teams members or even other teams.<br>
+              <br>
+              The main benefit of having a plan is its ability to align a team around a course of action, so be flexible with how the plan is created. As long as it is visible and intuitive to the team, there are really nothing that you shouldn't allow them to do here. </p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/fiveplee.png') }}" /></div>
+            <p align="left"> With outcomes defined, it is now highly valuable to ask the team to group outcomes into mini milestones. These mini milestones help identify what a releasable slices is and the mid horizon goals that define what a team is trying to achieve during that period.<br>
+              <br>
+              I use a 1st Release, 2nd Release, Everything else approach to get teams into the mindset of planning regularly. This helps them avoid attempting to define the mythical perfect plan, and get into a regular cycle of planning out what they are currently working on, and what they thing they will work on next.<br>
+              <br>
+              Depending on the type of work release slices can really be anything.  Greenfield products often have customer validation, development of prototypes and/or steel threads as the first goals. In established products these are more likely to look like enhancing specific areas of the product, or improving or expanding existing customer journeys.
+            <h3 align="left">Acting on the outcome map</h3>
+            <p align="left">Having decided on an agreed outcome map, teams are now ready to act. Teams take the output of the outcome map, and bring it back to the Story map.<br>
+              <br>
+              The Story Map should reflect the chosen course of action.<br>
+              <br>
+              Release slices or outcomes are placed to the left of the story map in order. The cards on the right are reordered and sliced further to defined the minimum work required to achieve the desired outcome.</p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/sixplee.png') }}" ></div>
+            <p align="left">These cards now form the basis for execution with your chosen delivery framework.<br>
+              <br>
+              Completing any outcome completes a single OODA loop and provides some information that influences future decisions. A team focused on learning will use this information to drive the next decision loop.</p>
+            <h3 align="left">Final Note</h3>
+            <p align="left">These activities can easily be completed within a few hours, and set an agreed direction of one or two months.
+              Accelerating through the OODA loop by regularly reviewing and revising the Risk Impact map and the Outcome map will ensure teams adjusts their direction based on the changing realities of their environment.<br>
+              <br>
+              All our teams at Campaign Monitor use this approach to ensure we know what reality is. In addition it helps us set a direction that meets the environment we have, not the one we wish we had.<br>
+              <br>
+              With so many factors affecting delivery, this approach should help your teams to apply a basic OODA loop ensuring that they are always making the best possible decisions available to them. </p>
+            <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/sevenplee.png') }}" ></div>
+            <p align="left"> Thanks to Peter Lee of CM Engineering</p>
+          </div>
+          <div class="card-footer"> </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <p align="left">Thanks AGLX Consulting</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,250 @@
+{% extends 'simplemedia.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}Scrum Foundation{% endif %}  {% endblock %}
+{% block body %}
+{% if current_user %}
+<!--NBNBNB This is used to allow able video player to access my Scrum Training videos-->
+<!--BODY--> 	<div class="container" align="left">
+
+	<h3 align="left">Scrum Foundation</h3>
+
+
+<hr>
+
+<!--<p><a href="/scrumablevidsub/scrumstudy/sfone/index.html" >Bob's code examples.zip</a></p>-->
+<!--<p><a href="/homesave/resources/cleancode.zip" >Bob's code examples.zip</a></p>-->
+
+<p><a href="#playlist">PLAYLIST</a></p>
+
+  <div id="player" align="center">
+	  <!-- video source and track elements will be populated from playlist -->
+		<video id="video1" preload="auto" data-able-player playsinline loop></video>
+  </div>
+	<div id="playlist">
+		<h2><a name="playlist"></a>Playlist</h2>
+		<!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+		<!-- The value of data-player must match the id of the media element -->
+		<!-- see documentation for additional details -->
+		<ul class="able-playlist" data-player="video1">
+		<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfone/index.mp4">
+					<!--data-src="/scrumablevidsub/scrumstudy/sfone/index.mp4"> NB the route with a second sub folder!!!-->
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF1: Introduction to Scrum
+				</button>
+			</li>
+
+					<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sftwo/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF2: Overview of Scrum 				</button>
+			</li>
+
+					<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfthree/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF3: History of Scrum 			</button>
+			</li>
+
+					<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sffour/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF4: Why Use Scrum 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sffive/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF5: Scalability of Scrum
+			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfsix/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF6: Purpose of the SBOK Guide
+			</button>
+			</li>
+
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfseven/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF7: Framework of the SBOK Guide 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfeight/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF8: How to use the SBOK Guide
+			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfnine/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF9: Scrum Principles
+			</button>
+			</li>
+
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sften/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF10: Scrum Aspects
+			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfeleven/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF11: Scrum Processes 			</button>
+			</li>
+
+				<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sftwelve/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF12: Scrum vs Traditional Project Management 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfthirteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF13: Introduction to Scrum Principles 			</button>
+			</li>
+
+				<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sffourteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF14: Roles Guide the Empirical Process Control
+ 			</button>
+			</li>
+
+				<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sffifteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF15: Self Organization
+
+ 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfsixteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF16: Collaboration
+ 			</button>
+			</li>
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfseventeen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF17: Value-Based Prioritization
+
+ 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfeighteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF18: Time-Boxing
+ 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sfnineteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">SF19: Iterative Development  			</button>
+			</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</ul>
+			<br>
+			<br>
+
+			</div>
+
+
+{% else %}
+
+
+<!--BODY--> 	<div class="container" align="left">
+
+			</div>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'able.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Sailboat (Speedboat) tool
+{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container" align="left">
+<h5 align="left">The Speedboat (Sailboat) Tool - Sweet and Simple!</h5>
+<hr>
+<div class="d-flex ">
+  <div class="p-2 flex-fill"></div>
+  <div class="p-1 flex-fill"></div>
+  <div class="p-5 flex-fill">
+    <video id="video1"  data-able-player="true" preload="auto" data-speed-icons="true" width="480" height="360" poster="{{ asset('storage/images/sailship.jpg') }}"  playsinline="true">
+      <source type="video/mp4" src="/ablelvids/sailboat/sailboat.mp4">
+    </video>
+  </div>
+  <div class="p-4 flex-fill"></div>
+</div>
+<div align="center">
+  <h5>Hover your mouse over the image below</h5>
+  <img class="img-fluid" src="{{ asset('storage/images/sailship.jpg') }}" onmouseover="this.src='{{ asset('storage/images/speedboatretro.jpg') }}'" onmouseout="this.src='{{ asset('storage/images/sailship.jpg') }}'"><br>
+  <br>
+  <img alt="speedboat" class="img-fluid" src="{{ asset('storage/images/speedboat.jpg') }}" align="middle"></div>
+<br>
+<br>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<!--BODY-->
+
+
+<br>
+{% endif %}
+{% endblock %}

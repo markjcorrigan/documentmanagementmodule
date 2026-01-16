@@ -1,0 +1,45 @@
+<footer class="w-full py-10 px-4 sm:px-6 lg:px-8"
+        style="background-color: {{ $backgroundColor ?? '#111827' }};"
+@isset($class) {{ $class }} @endisset>
+
+    <div class="max-w-7xl mx-auto">
+        <!-- All Content Centered -->
+        <div class="flex flex-col items-center text-center space-y-8">
+
+            <!-- Row 1: Top Text -->
+            <div>
+                <p class="text-white text-sm sm:text-base">
+                    Project &amp; Process Management Best Practice<br>
+                    at CM Level 2 and above
+                </p>
+            </div>
+
+            <!-- Row 2: Image with GIF Hover -->
+            <div class="w-full flex justify-center">
+                <a href="/gamestats"  class="block max-w-[600px] w-full">
+                    <img
+                        alt="Up Stat or Down Stat"
+                        class="w-full h-auto mx-auto"
+                        src="{{ asset('storage/images/devopsimagemedium.png') }}"
+                        onmouseover="this.src='{{ asset('storage/images/devops2.gif') }}'"
+                        onmouseout="this.src='{{ asset('storage/images/devopsimagemedium.png') }}'"
+                        title="How are your game stats? Click here for more">
+                </a>
+            </div>
+
+            <!-- Row 3: Bottom Text -->
+            <div>
+                <p class="text-white text-sm sm:text-base">underpinned by ITIL</p>
+            </div>
+
+            <!-- Row 4: Copyright -->
+            <div class="mt-12 sm:mt-16 lg:mt-20">
+                <p class="text-white text-sm">
+                    <span>&copy; 2009 PMWay</span><br>
+                    <small class="text-xs text-gray-400">People Process Technology Governance Execution</small>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>

@@ -1,0 +1,65 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}World of Hadoop{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<!--BODY-->
+
+<div class="container" > <br>
+  <h5 align="left">The World of Hadoop <br>
+    (Hadoop's Ecosystem)</h5>
+  <p>Thank you Frank Kane. <br>
+    (Udemy Course: The ultimate hands on Hadoop <br>
+    - tame your big data)</p>
+  <hr>
+  <div class="d-flex ">
+    <div class="p-2 flex-fill"></div>
+    <div class="p-1 flex-fill"></div>
+    <div class="p-5 flex-fill">
+      <video id="video1"  data-able-player="true" preload="auto" data-speed-icons="true" width="480" height="360" poster="/"  playsinline="true">
+        <source type="video/mp4" src="/ablelvids/worldofhadoop/worldofhadoop.mp4">
+      </video>
+    </div>
+    <div class="p-4 flex-fill"></div>
+  </div>
+  <br>
+  <p><a href="{{ asset('storage/assets/worldofhadoop.zip') }}">Download the 75 meg mp4 zip here.</a></p>
+  <br>
+  <br>
+  <br>
+</div>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+
+<div class="container" >
+<br>
+<h5 align="left">The World of Hadoop <br>
+  (Hadoop's Ecosystem)</h5>
+<p>Thank you Frank Kane. <br>
+  (Udemy Course: The ultimate hands on Hadoop <br>
+  - tame your big data)</p>
+<hr>
+<div class="d-flex ">
+  <div class="p-2 flex-fill"></div>
+  <div class="p-1 flex-fill"></div>
+  <div class="p-5 flex-fill">
+    <video id="video1"  data-able-player="true" preload="auto" data-speed-icons="true" width="480" height="360" poster="/"  playsinline="true">
+      <source type="video/mp4" src="/ablelvids/worldofhadoop/worldofhadoop.mp4">
+    </video>
+  </div>
+  <div class="p-4 flex-fill"></div>
+</div>
+<br>
+<p><a href="{{ asset('storage/assets/worldofhadoop.zip') }}">Download the 75 meg mp4 zip here.</a></p>
+<br>
+<br>
+<br>
+{% endif %}
+{% endblock %}

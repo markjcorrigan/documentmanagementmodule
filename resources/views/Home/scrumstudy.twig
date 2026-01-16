@@ -1,0 +1,260 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Scrum Study Vids{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+<!--BODY-->
+<div class="container" align="left">
+<h3 align="left">Scrum Study Vids</h3>
+<hr>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline ></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li data-poster="/images/scrumvideostraining.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/scrumsixmins.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">SCRUM IN 6 MINUTES! </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/oneintroduction.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">1. Introduction </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/twooverviewofscrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">2. Overview of Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/threehistoryofscrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">3. History of Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/fourwhyusescrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">4.  Why Use Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/fivescalabilityofscrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">5.  Scalability of Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/sixpurposeofsbokguide.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">6. Purpose of the Scrum Bok Guide </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/sevensrumframework.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">7.  Scrum Framework </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/eighthowtousesbokguide.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">8.  How to use the Scrum Bok Guide </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/ninescrumprinciples.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">9.  Scrum Principles </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/tenscrumaspects.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">10. Scrum Aspects </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/elevenscrumprocesses.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">11.  Scrum Processes </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/twelvescrumvstraditionalprojectmanagement.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">12.  Scrum vs Traditional Project Management </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/onesdintroductiontoprinciplesofscrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">1.  Software Developer:  Introduction to Principles of Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/twosdrrolesguidesandempiricalprocesscontrol.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">2.  Software Developer:  Empirical Process Control </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/threesdselforganization.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">3.  Software Developer:  Self Organization </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/foursdcollaboration.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">4.  Software Developer:  Collaboration </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/fivesdvaluebasedprioritization.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">5.  Software Developer:  Value Based Prioritization </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/sixsdtimeboxing.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">6.  Software Developer:  Time Boxing </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/sevensditerativedevelopment.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">7.  Software Developer:  Iterative Development </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/eightsdscrumvstraditionalprojectnanagement.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">8.  Software Developer:  Scrum vs Traditionalo Project Management </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+<div class="container" align="left">
+<h3 align="left">Scrum Study Vids</h3>
+<hr>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline ></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li data-poster="/images/scrumvideostraining.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/scrumsixmins.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">SCRUM IN 6 MINUTES! </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/oneintroduction.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">1. Introduction </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/twooverviewofscrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">2. Overview of Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/threehistoryofscrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">3. History of Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/fourwhyusescrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">4.  Why Use Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/fivescalabilityofscrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">5.  Scalability of Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/sixpurposeofsbokguide.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">6. Purpose of the Scrum Bok Guide </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/sevensrumframework.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">7.  Scrum Framework </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/eighthowtousesbokguide.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">8.  How to use the Scrum Bok Guide </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/ninescrumprinciples.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">9.  Scrum Principles </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/tenscrumaspects.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">10. Scrum Aspects </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/elevenscrumprocesses.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">11.  Scrum Processes </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/twelvescrumvstraditionalprojectmanagement.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">12.  Scrum vs Traditional Project Management </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/onesdintroductiontoprinciplesofscrum.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">1.  Software Developer:  Introduction to Principles of Scrum </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/twosdrrolesguidesandempiricalprocesscontrol.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">2.  Software Developer:  Empirical Process Control </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/threesdselforganization.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">3.  Software Developer:  Self Organization </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/foursdcollaboration.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">4.  Software Developer:  Collaboration </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/fivesdvaluebasedprioritization.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">5.  Software Developer:  Value Based Prioritization </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/sixsdtimeboxing.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">6.  Software Developer:  Time Boxing </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/sevensditerativedevelopment.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">7.  Software Developer:  Iterative Development </button>
+    </li>
+    <li data-poster="../media/wwa.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/eightsdscrumvstraditionalprojectnanagement.mp4"> </span>
+      <button type="button"> <img src="../media/wwa_mq_thumbnail.jpg" alt="">8.  Software Developer:  Scrum vs Traditionalo Project Management </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

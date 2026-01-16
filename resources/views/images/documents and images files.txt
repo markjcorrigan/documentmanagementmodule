@@ -1,0 +1,35 @@
+Administrator@LittleBlackBitch MINGW64 /c/xampp/htdocs/pmway.hopto.org/resources/views/documents (main)
+$ ls -la
+total 65
+drwxr-xr-x 1 Administrator 197121     0 Dec 10 09:54 ./
+drwxr-xr-x 1 Administrator 197121     0 Dec 10 10:59 ../
+drwxr-xr-x 1 Administrator 197121     0 Dec 10 10:32 documentlayout/
+-rw-r--r-- 1 Administrator 197121  2680 Dec 10 09:41 documents.blade.php
+-rw-r--r-- 1 Administrator 197121   120 Sep  9 18:15 download.blade.php
+-rw-r--r-- 1 Administrator 197121  5141 Dec 10 09:42 edit.blade.php
+-rw-r--r-- 1 Administrator 197121  2811 Dec 10 09:54 upload.blade.php
+-rw-r--r-- 1 Administrator 197121 12486 Dec 10 09:39 uploads.blade.php
+
+Administrator@LittleBlackBitch MINGW64 /c/xampp/htdocs/pmway.hopto.org/resources/views/documents (main)
+
+
+Administrator@LittleBlackBitch MINGW64 /c/xampp/htdocs/pmway.hopto.org/resources/views/images (main)
+$ ls -la
+total 73
+drwxr-xr-x 1 Administrator 197121     0 Dec 10 09:52 ./
+drwxr-xr-x 1 Administrator 197121     0 Dec 10 10:59 ../
+-rw-r--r-- 1 Administrator 197121   118 Sep 27 12:28 download.blade.php
+-rw-r--r-- 1 Administrator 197121  5110 Dec 10 09:50 edit.blade.php
+drwxr-xr-x 1 Administrator 197121     0 Dec 10 10:33 imagelayout/
+-rw-r--r-- 1 Administrator 197121  2656 Dec 10 09:51 images.blade.php
+-rw-r--r-- 1 Administrator 197121  2712 Dec 10 09:52 upload.blade.php
+-rw-r--r-- 1 Administrator 197121 20576 Dec 10 09:49 uploads.blade.php
+
+Administrator@LittleBlackBitch MINGW64 /c/xampp/htdocs/pmway.hopto.org/resources/views/images (main)
+
+
+NAV BAR is resources/views/components/documentsnav.blade.php
+
+I have a document and image demo which is here:  resources/views/myfile-demo.blade.php and myimage-demo.blade.php
+
+NB this is accessed via the admin portal Up/Down menu item.

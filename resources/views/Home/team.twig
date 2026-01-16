@@ -1,0 +1,74 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}The Most Awesome TEAM{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container" align="left" >
+<h5 align="left">TEAM:  Together We Achieve More!</h5>
+<hr>
+<div class="d-flex ">
+  <div class="p-2 flex-fill"></div>
+  <div class="p-1 flex-fill"></div>
+  <div class="p-5 flex-fill">
+    <video id="video1"  data-able-player="true" preload="metadata" data-speed-icons="true" width="480" height="360" poster="/images/walkofftheearth.jpg"  playsinline="true">
+      <source type="video/mp4" src="/ablelvids/somebody/somebody.mp4">
+    </video>
+    <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/team.png') }}"><img alt="" class="img-fluid" src="{{ asset('storage/images/teampullingtogether.png') }}"></p>
+  </div>
+  <div class="p-4 flex-fill"></div>
+
+</div>
+
+
+<br><br>
+<br>
+</div>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>    <br>
+     <br>   <br>
+<br><br>
+<br><br>
+</div>
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}
+<div class="container" align="left" >
+<h5 align="left">TEAM:  Together We Achieve More!</h5>
+<hr>
+<div class="d-flex ">
+  <div class="p-2 flex-fill"></div>
+  <div class="p-1 flex-fill"></div>
+  <div class="p-5 flex-fill">
+    <video id="video1"  data-able-player="true" preload="metadata" data-speed-icons="true" width="480" height="360" poster="/images/walkofftheearth.jpg"   playsinline="true">
+      <source type="video/mp4" src="/ablelvids/somebody/somebody.mp4">
+    </video>
+    <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/team.png') }}"><img alt="" class="img-fluid" src="{{ asset('storage/images/teampullingtogether.png') }}"></p>
+  </div>
+  <div class="p-4 flex-fill"></div>
+</div>
+
+
+
+<br><br>
+<br>
+</div>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>    <br>
+     <br>   <br>
+<br><br>
+<br><br>
+</div>
+
+{% endif %}
+{% endblock %}

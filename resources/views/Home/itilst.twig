@@ -1,0 +1,136 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+ST{% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL ST</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf') }}" >Awesome Summary of ST</a></p>
+  <hr>
+  <dl>
+    <dt><a href="/home/itilstone" title="Project Management - Transition Planning and Support" itemprop="itemListElement">(Process 14 of 26): Project Management: Transition Planning and Support</a> </dt>
+    <dd itemprop="description">Process Objective: To plan and coordinate the resources to deploy a major Release within the predicted cost, time and quality estimates. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsttwo" title="Change Management" itemprop="itemListElement">(Process 15 of 26): Change Management</a> </dt>
+    <dd itemprop="description">Process Objective: To control the lifecycle of all Changes. The primary objective of Change Management is to enable beneficial Changes to be made, with minimum disruption to IT services. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstthree" title="Service Asset and Configuration Management" itemprop="itemListElement">(Process 16 of 26): Service Asset and Configuration Management</a> </dt>
+    <dd itemprop="description">Process Objective: To maintain information about Configuration Items required to deliver an IT service, including their relationships. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstfour" title="Release and Deployment Management" itemprop="itemListElement">(Process 17 of 26): Release and Deployment Management</a> </dt>
+    <dd itemprop="description">Process Objective: To plan, schedule and control the movement of releases to test and live environments. The primary goal of Release Management is to ensure that the integrity of the live environment is protected and that the correct components are released. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstfive" title="Service Validation and Testing" itemprop="itemListElement">(Process 18 of 26): Service Validation and Testing</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure that deployed Releases and the resulting services meet customer expectations, and to verify that IT operations is able to support the new service. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstsix" title="ITIL Change Evaluation" itemprop="itemListElement">(Process 19 of 26): Change Evaluation</a> </dt>
+    <dd itemprop="description">Process Objective: To assess major Changes, like the introduction of a new service or a substantial change to an existing service, before those Changes are allowed to proceed to the next phase in their lifecycle. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstseven" title="Knowledge Management" itemprop="itemListElement">(Process 20 of 26): Knowledge Management</a> </dt>
+    <dd itemprop="description">Process Objective: To gather, analyze, store and share knowledge and information within an organization. The primary purpose of Knowledge Management is to improve efficiency by reducing the need to rediscover knowledge. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstfour" title="Application Development and Customization" itemprop="itemListElement">Application Development
+      and Customization</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To make available applications and systems which provide the required functionality for IT services. This process includes the development and maintenance of custom applications as well as the customization of products from software vendors. </dd>
+  </dl>
+  <br>
+  <p ><a href="/itilviewpdf/resources/servicetransitionbasedonitilamanagementguide.pdf" target="blank">Jan Van Bon, Arjen de Jong, Axel Kolthof - Service Transition Based on ITIL_ A Management Guide. V3-Van Haren Publishing (2008).pdf</a></p>
+  <br>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/459px-Overview_service_transition_itilv3.jpg') }}" ></p>
+  <br>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/itilstpathway.jpg') }}" ></p>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/dml.jpg') }}" ></p>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/phasesofreleasedml.jpg') }}" ></p>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/servicetesting.jpg') }}" ></p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL ST</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf') }}" >Awesome Summary of ST</a></p>
+  <hr>
+  <dl>
+    <dt><a href="/home/itilstone" title="Project Management - Transition Planning and Support" itemprop="itemListElement">(Process 14 of 26): Project Management: Transition Planning and Support</a> </dt>
+    <dd itemprop="description">Process Objective: To plan and coordinate the resources to deploy a major Release within the predicted cost, time and quality estimates. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsttwo" title="Change Management" itemprop="itemListElement">(Process 15 of 26): Change Management</a> </dt>
+    <dd itemprop="description">Process Objective: To control the lifecycle of all Changes. The primary objective of Change Management is to enable beneficial Changes to be made, with minimum disruption to IT services. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstthree" title="Service Asset and Configuration Management" itemprop="itemListElement">(Process 16 of 26): Service Asset and Configuration Management</a> </dt>
+    <dd itemprop="description">Process Objective: To maintain information about Configuration Items required to deliver an IT service, including their relationships. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstfour" title="Release and Deployment Management" itemprop="itemListElement">(Process 17 of 26): Release and Deployment Management</a> </dt>
+    <dd itemprop="description">Process Objective: To plan, schedule and control the movement of releases to test and live environments. The primary goal of Release Management is to ensure that the integrity of the live environment is protected and that the correct components are released. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstfive" title="Service Validation and Testing" itemprop="itemListElement">(Process 18 of 26): Service Validation and Testing</a> </dt>
+    <dd itemprop="description">Process Objective: To ensure that deployed Releases and the resulting services meet customer expectations, and to verify that IT operations is able to support the new service. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstsix" title="ITIL Change Evaluation" itemprop="itemListElement">(Process 19 of 26): Change Evaluation</a> </dt>
+    <dd itemprop="description">Process Objective: To assess major Changes, like the introduction of a new service or a substantial change to an existing service, before those Changes are allowed to proceed to the next phase in their lifecycle. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilstseven" title="Knowledge Management" itemprop="itemListElement">(Process 20 of 26): Knowledge Management</a> </dt>
+    <dd itemprop="description">Process Objective: To gather, analyze, store and share knowledge and information within an organization. The primary purpose of Knowledge Management is to improve efficiency by reducing the need to rediscover knowledge. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsteight" title="Application Development and Customization" itemprop="itemListElement">Application Development
+      and Customization</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To make available applications and systems which provide the required functionality for IT services. This process includes the development and maintenance of custom applications as well as the customization of products from software vendors. </dd>
+  </dl>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/459px-Overview_service_transition_itilv3.jpg') }}" ></p>
+  <br>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/itilstpathway.jpg') }}" ></p>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/dml.jpg') }}" ></p>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/phasesofreleasedml.jpg') }}" ></p>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/servicetesting.jpg') }}" ></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,214 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="center">
+   <h3 align="left">Information Technology Infrastructure Library (ITIL) v3:&nbsp;Lifecycle and Process Flow</h3>
+  <hr>
+ <h5><a href="{{ asset('storage/assets/itilfourintenminutes.pdf') }}" >ITIL v4 overview</a><br><a href="{{ asset('storage/assets/itilfouroverview.pdf') }}"  title="Click here for a presentation about ITIL 4">Click here</a> for a quick overview of PMWay's appreciation of ITIL v4 and their handling of Value Streams as a strategic driver for success!<br>The synergy between ITIL and DevOps is clear to anyone in the know!</h5>
+  <p><img alt="ITIL" class="img-fluid" src="{{ asset('storage/images/itil_v321.png') }}"></p>
+  <p><img alt="ITIL Books" class="img-fluid" src="{{ asset('storage/images/itilstageswithbooks.png') }}"></p>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseitiloverview" aria-expanded="false" aria-controls=
+        "collapseitiloverview">ITIL - Processes Overview </button>
+  <div class="collapse" id="collapseitiloverview">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">High Level Overivew of the ITIL Processes</h5>
+        <div class="card-body text-center">
+          <p><a href="home/itiloverview"  title="Click here for the ITIL V3 processes"><img class="img-fluid" alt="Click here for the v3 processes" src="{{ asset('storage/images/itil3a.png') }}" ></a></p>
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <p>
+    <map id="ImgMap0" name="ImgMap0">
+      <area alt="" coords="10, 152, 204, 218" href="/home/itilssone" shape="rect"  title="SS 1 Strategy Management for IT Services">
+      <area alt="" coords="10, 220, 204, 271" href="/home/itilsstwo" shape="rect"  title="SS 2 Service Portfolio Management">
+      <area alt="" coords="11, 270, 205, 336" href="/home/itilssthree" shape="rect"  title="SS 3 Financial Management">
+      <area alt="" coords="9, 361, 205, 462" href="/home/itilssfour" shape="rect" title="SS 4 Demand Management">
+      <area alt="" coords="10, 463, 204, 520" href="/home/itilssfive" shape="rect"  title="SS 5 Business Relationahip Management">
+      <area alt="" coords="205, 126, 381, 153" href="/home/itilsdone" shape="rect"  title="SD 1 Design Coordination">
+      <area alt="" coords="205, 152, 383, 204" href="/home/itilsdtwo" shape="rect"  title="SD 2 Service Catalogue Management">
+      <area alt="" coords="203, 205, 381, 264" href="/home/itilsdthree" shape="rect"  title="SD 3 SLA Management">
+      <area alt="" coords="205, 264, 383, 319" href="/home/itilsdfour" shape="rect"  title="SD 4 Availability Management">
+      <area alt="" coords="206, 320, 382, 381" href="/home/itilsdfive" shape="rect"  title="SD 5 Capacity Management">
+      <area alt="" coords="203, 381, 383, 421" href="/home/itilsdsix" shape="rect"  title="SD 6 IT Service Continuity Management">
+      <area alt="" coords="205, 422, 382, 485" href="/home/itilsdseven" shape="rect"  title="SD 7 Information Security Management">
+      <area alt="" coords="205, 486, 378, 534" href="/home/itilsdeight" shape="rect"  title="SD 8 Supplier Management">
+      <area alt="" coords="384, 152, 537, 246" href="/home/itilstone" shape="rect"  title="ST 1 Project Management: Transition and Planning">
+      <area alt="" coords="382, 245, 534, 294" href="/home/itilsttwo" shape="rect"  title="ST 2 Change Management">
+      <area alt="" coords="382, 293, 537, 411" href="/home/itilstthree" shape="rect"  title="ST 3 Service Asset and Configuration Management">
+      <area alt="" coords="385, 411, 537, 487" href="/home/itilstfour" shape="rect"  title="ST 4 Release and Deployment Management">
+      <area alt="" coords="384, 486, 533, 515" href="/home/itilstfive" shape="rect"  title="ST 5 Service Validation and Testing">
+      <area alt="" coords="382, 514, 533, 539" href="/home/itilstsix" shape="rect"  title="ST 6 Change Evaluation">
+      <area alt="" coords="383, 540, 535, 653" href="/home/itilstseven" shape="rect"  title="ST 7 Knowledge Management">
+      <area alt="" coords="536, 128, 732, 168" href="/home/itilsoone" shape="rect"  title="SO 1 Event Management">
+      <area alt="" coords="537, 167, 730, 206" href="/home/itilsotwo" shape="rect"  title="SO 2 Incident Management">
+      <area alt="" coords="534, 205, 729, 245" href="/home/itilsothree" shape="rect"  title="SO 3 Request Fulfilment">
+      <area alt="" coords="536, 244, 729, 284" href="/home/itilsofour" shape="rect"  title="SO 4 Problem Management">
+      <area alt="" coords="533, 284, 729, 324" href="/home/itilsofive" shape="rect"  title="SO 5 Access Management">
+      <area alt="" coords="732, 154, 887, 224" href="/home/itilcsi" shape="rect"  title="CSI 1 Continual Service Improvement">
+      <area alt="" coords="10, 51, 203, 93" href="{{ asset('storage/assets/sssummary.pdf') }}" shape="rect"  title="Service Strategy Overview">
+      <area alt="" coords="204, 51, 383, 101" href="{{ asset('storage/assets/sdsummary.pdf') }}" shape="rect"  title="Service Design Overview">
+      <area alt="" coords="382, 51, 535, 91" href="{{ asset('storage/assets/stsummary.pdf') }}" shape="rect"  title="Service Transition">
+      <area alt="" coords="535, 49, 732, 91" href="{{ asset('storage/assets/sosummary.pdf') }}" shape="rect"  title="Service Operations Overview">
+      <area alt="" coords="732, 51, 893, 106" href="{{ asset('storage/assets/csisummary.pdf') }}" shape="rect"  title="Continual Service Improvement Overview">
+      <area alt="" coords="536, 331, 732, 372" href="{{ asset('storage/assets/sosummary.pdf#page=36') }}" shape="rect"  title="The SO Function:  Service Desk">
+      <area alt="" coords="534, 420, 731, 462" href="{{ asset('storage/assets/sosummary.pdf#page=45') }}" shape="rect"  title="The SO Function:  Technical Management">
+      <area alt="" coords="534, 520, 730, 603" href="{{ asset('storage/assets/sosummary.pdf#page=50') }}" shape="rect"  title="The SO Function:  Operations Management inc. Facilitites Management">
+      <area alt="" coords="535, 463, 730, 520" href="{{ asset('storage/assets/sosummary.pdf#page=46') }}" shape="rect"  title="The SO Function:  Application Management">
+    </map>
+    <a name="junctionbox"><img alt="ITIL clickable down to process overview"  class="img-fluid"  src="{{ asset('storage/images/itiloverview20191217smaller.jpg') }}" usemap="#ImgMap0" title="Note the hyperlinks will no work on devices with small screens.  But if you type home (forwardslash) itilssone etc. this will allow you to get at the processes"></a></p>
+  <br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsecsibl" aria-expanded="false" aria-controls=
+        "collapsecsibl">ITIL, the CSI Register and the Scrum Backlog </button>
+  <div class="collapse" id="collapsecsibl">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">The image below explains how the CSI Register feeds the Scrum Backlog</h5>
+        <div class="card-body text-center">
+          <p align="center"><img class="img-fluid" src="{{ asset('storage/images/itilpainpoints.jpg') }}"> </p>
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <p align="left"><a href="{{ asset('storage/assets/itilfourintenminutes.pdf') }}" >ITIL v4 in 10 minutes</a></p>
+  <p align="left"><a href="{{ asset('storage/assets/itilforbeginners.pdf') }}" >A beginners guide to ITIL v3</a></p>
+  <p align="left"><a href="{{ asset('storage/assets/itilcram.pdf') }}" >ITIL v3 cram</a></p>
+  <p align="left"><a href="{{ asset('storage/assets/itilkiss.pdf') }}" >An excellent (short) ITIL v3 overview</a></p>
+  <p align="left"><a href="{{ asset('storage/assets/itilintro.pdf') }}" >Just the intro (not processes) from directly above.</a></p>
+  <p align="left"><a href="{{ asset('storage/assets/itilfourfoundation.pdf') }}" >ITIL v4 Foundation</a></p>
+  <p align="left" ><a href="/home/itilpractices" target="blank">ITIL v4 Practices</a></p>
+  <p align="left" ><a href="/itilfourstudyguide/itilfourstudyguide.html" target="blank">.ITIL 4 study guide as a web node (still working on this)  NB click outside page and print to pdf or printer</a></p>
+  <p align="left" ><a href="{{ asset('storage/assets/itilfourstudyguide.pdf') }}" target="blank">ITIL v4 study guide</a></p>
+  <p align="left"><a href="/itil/index">Click here for the guides</a></p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+<!--BODY ENDS HERE-->
+
+{% endif %}
+
+
+{% if not user %}
+<div class="container" align="center">
+  <h3 align="left">Information Technology Infrastructure Library (ITIL) v3:&nbsp;Lifecycle and Process Flow</h3>
+  <hr>
+  <h5><a href="{{ asset('storage/assets/itilfourintenminutes.pdf') }}" >ITIL v4 overview</a><br><a href="{{ asset('storage/assets/itilfouroverview.pdf') }}"  title="Click here for a presentation about ITIL 4">Click here</a> for a quick overview of PMWay's appreciation of ITIL v4 and their handling of Value Streams as a strategic driver for success!<br>The synergy between ITIL and DevOps is clear to anyone in the know!</h5>
+  <p><img alt="ITIL" class="img-fluid" src="{{ asset('storage/images/itil_v321.png') }}"></p>
+  <p><img alt="ITIL Books" class="img-fluid" src="{{ asset('storage/images/itilstageswithbooks.png') }}"></p>
+ <!-- <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseitiloverview" aria-expanded="false" aria-controls=
+        "collapseitiloverview">ITIL - Processes Overview </button>
+  <div class="collapse" id="collapseitiloverview">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">High Level Overivew of the ITIL Processes</h5>
+        <div class="card-body text-center">
+          <p><a href="home/itiloverview"  title="Click here for the ITIL V3 processes"><img class="img-fluid" alt="Click here for the v3 processes" src="{{ asset('storage/images/itil3a.png') }}" ></a></p>
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <p> The processes below are clickable down into their detail if you are logged on</p>-->
+    <map id="ImgMap0" name="ImgMap0">
+      <area alt="" coords="10, 152, 204, 218" href="/home/itilssone" shape="rect"  title="SS 1 Strategy Management for IT Services">
+      <area alt="" coords="10, 220, 204, 271" href="/home/itilsstwo" shape="rect"  title="SS 2 Service Portfolio Management">
+      <area alt="" coords="11, 270, 205, 336" href="/home/itilssthree" shape="rect"  title="SS 3 Financial Management">
+      <area alt="" coords="9, 361, 205, 462" href="/home/itilssfour" shape="rect" title="SS 4 Demand Management">
+      <area alt="" coords="10, 463, 204, 520" href="/home/itilssfive" shape="rect"  title="SS 5 Business Relationahip Management">
+      <area alt="" coords="205, 126, 381, 153" href="/home/itilsdone" shape="rect"  title="SD 1 Design Coordination">
+      <area alt="" coords="205, 152, 383, 204" href="/home/itilsdtwo" shape="rect"  title="SD 2 Service Catalogue Management">
+      <area alt="" coords="203, 205, 381, 264" href="/home/itilsdthree" shape="rect"  title="SD 3 SLA Management">
+      <area alt="" coords="205, 264, 383, 319" href="/home/itilsdfour" shape="rect"  title="SD 4 Availability Management">
+      <area alt="" coords="206, 320, 382, 381" href="/home/itilsdfive" shape="rect"  title="SD 5 Capacity Management">
+      <area alt="" coords="203, 381, 383, 421" href="/home/itilsdsix" shape="rect"  title="SD 6 IT Service Continuity Management">
+      <area alt="" coords="205, 422, 382, 485" href="/home/itilsdseven" shape="rect"  title="SD 7 Information Security Management">
+      <area alt="" coords="205, 486, 378, 534" href="/home/itilsdeight" shape="rect"  title="SD 8 Supplier Management">
+      <area alt="" coords="384, 152, 537, 246" href="/home/itilstone" shape="rect"  title="ST 1 Project Management: Transition and Planning">
+      <area alt="" coords="382, 245, 534, 294" href="/home/itilsttwo" shape="rect"  title="ST 2 Change Management">
+      <area alt="" coords="382, 293, 537, 411" href="/home/itilstthree" shape="rect"  title="ST 3 Service Asset and Configuration Management">
+      <area alt="" coords="385, 411, 537, 487" href="/home/itilstfour" shape="rect"  title="ST 4 Release and Deployment Management">
+      <area alt="" coords="384, 486, 533, 515" href="/home/itilstfive" shape="rect"  title="ST 5 Service Validation and Testing">
+      <area alt="" coords="382, 514, 533, 539" href="/home/itilstsix" shape="rect"  title="ST 6 Change Evaluation">
+      <area alt="" coords="383, 540, 535, 653" href="/home/itilstseven" shape="rect"  title="ST 7 Knowledge Management">
+      <area alt="" coords="536, 128, 732, 168" href="/home/itilsoone" shape="rect"  title="SO 1 Event Management">
+      <area alt="" coords="537, 167, 730, 206" href="/home/itilsotwo" shape="rect"  title="SO 2 Incident Management">
+      <area alt="" coords="534, 205, 729, 245" href="/home/itilsothree" shape="rect"  title="SO 3 Request Fulfilment">
+      <area alt="" coords="536, 244, 729, 284" href="/home/itilsofour" shape="rect"  title="SO 4 Problem Management">
+      <area alt="" coords="533, 284, 729, 324" href="/home/itilsofive" shape="rect"  title="SO 5 Access Management">
+      <area alt="" coords="732, 154, 887, 224" href="/home/itilcsi" shape="rect"  title="CSI 1 Continual Service Improvement">
+      <area alt="" coords="10, 51, 203, 93" href="{{ asset('storage/assets/sssummary.pdf') }}" shape="rect"  title="Service Strategy Overview">
+      <area alt="" coords="204, 51, 383, 101" href="{{ asset('storage/assets/sdsummary.pdf') }}" shape="rect"  title="Service Design Overview">
+      <area alt="" coords="382, 51, 535, 91" href="{{ asset('storage/assets/stsummary.pdf') }}" shape="rect"  title="Service Transition">
+      <area alt="" coords="535, 49, 732, 91" href="{{ asset('storage/assets/sosummary.pdf') }}" shape="rect"  title="Service Operations Overview">
+      <area alt="" coords="732, 51, 893, 106" href="{{ asset('storage/assets/csisummary.pdf') }}" shape="rect"  title="Continual Service Improvement Overview">
+      <area alt="" coords="536, 331, 732, 372" href="{{ asset('storage/assets/sosummary.pdf#page=36') }}" shape="rect"  title="The SO Function:  Service Desk">
+      <area alt="" coords="534, 420, 731, 462" href="{{ asset('storage/assets/sosummary.pdf#page=45') }}" shape="rect"  title="The SO Function:  Technical Management">
+      <area alt="" coords="534, 520, 730, 603" href="{{ asset('storage/assets/sosummary.pdf#page=50') }}" shape="rect"  title="The SO Function:  Operations Management inc. Facilitites Management">
+      <area alt="" coords="535, 463, 730, 520" href="{{ asset('storage/assets/sosummary.pdf#page=46') }}" shape="rect"  title="The SO Function:  Application Management">
+    </map>
+    <a name="junctionbox"><img alt="ITIL clickable down to process overview" class="img-fluid"  src="{{ asset('storage/images/itiloverview20191217smaller.jpg') }}" usemap="#ImgMap0" title="Note the hyperlinks will no work on devices with small screens.  But if you type home (forwardslash) itilssone etc. this will allow you to get at the processes"></a></p>
+  <br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsecsibl" aria-expanded="false" aria-controls=
+        "collapsecsibl">ITIL, the CSI Register, the Scrum Backlog and DevOps </button>
+  <div class="collapse" id="collapsecsibl">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">The image below explains how the CSI Register feeds the Scrum Backlog<br>and how DevOps fits into the picture</h5>
+        <div class="card-body text-center">
+        <!-- <p align="center"><img class="img-fluid" src="{{ asset('storage/images/itilpainpoints.jpg') }}"> </p>-->
+      <p align="center"><img class="img-fluid" src="{{ asset('storage/images/itilppsdevopsmodel.jpg') }}"> </p>
+      <p align="center">Are the team a done team?</p>
+      <p align="center"><img class="img-fluid" src="{{ asset('storage/images/doneandundone.jpg') }}"> </p>
+      <p align="center"><img class="img-fluid" src="{{ asset('storage/images/undonescrum.jpg') }}"> </p>
+
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+
+  <!--	<p align="left"><a href="{{ asset('storage/assets/itilforbeginners.pdf') }}" >A beginners guide to ITIL v3</a></p>
+				<p align="left"><a href="{{ asset('storage/assets/itilcram.pdf') }}" >ITIL v3 cram</a></p>
+				<p align="left"><a href="{{ asset('storage/assets/itilkiss.pdf') }}" >An excellent (short) ITIL v3 overview</a></p>
+				<p align="left"><a href="{{ asset('storage/assets/itilintro.pdf') }}" >Just the intro (not processes) from directly above.</a></p>
+
+			<p align="left"><a href="{{ asset('storage/assets/itilfourfoundation.pdf') }}" >ITIL 4 Foundation</a></p>
+
+			<p align="left"><a href="/accelerate" >Note:  The 24 Capabilities from DevOps</a></p>
+			<p align="left"><a href="/home/releasebamboo" >Up Production Stats by releasing via JIRA and Bamboo</a></p> -->
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

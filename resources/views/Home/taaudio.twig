@@ -1,0 +1,111 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Art
+of Scrum{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container" align="left">
+<br>
+<h3>Games People Play:  Handbook for Transactional Analysis</h3>
+<hr>
+<p align="left"><a href="/home/ta">Back to TA</a></p>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<audio id="audio1" width="480" preload="auto" data-able-player data-skin="2020" loop>
+  <!-- source elements are optional when there's a playlist. -->
+  <!-- If ommitted, they will be constructed from the first playlist item -->
+</audio>
+
+<!-- source elements are optional when there's a playlist. -->
+<!-- If ommitted, they will be constructed from the first playlist item -->
+</audio>
+
+<!-- use the following markup for each playlist -->
+<!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+<!-- The value of data-player must match the id of the media element -->
+<!-- Add data-embedded to embed the playlist into the media player -->
+<!-- see documentation for additional details about markup -->
+<ul class="able-playlist" data-player="audio1" data-embedded>
+<li data-poster="something.jpg"> <span class="able-source"
+  		data-type="audio/mpeg"
+			data-src="/ableaudiotracks/ta/gamespeopleplay.mp3"></span> <span class="able-source"
+  		data-type="audio/ogg"
+			data-src="../media/paulallen.ogg"></span>
+  <button>Intro</button>
+</li>
+</u>
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!--
+  <li>
+  	<span class="able-source"
+  		data-type="audio/mpeg"
+			data-src="../media/php70alpha.mp3"></span>
+  	<span class="able-source"
+  		data-type="audio/ogg"
+			data-src="../media/php70alpha.ogg"></span>
+  	<button>PHP 7.0 Alpha</button>
+  </li>
+	    data-mp3="/ableaudiotracks/jeffsutherland/chaptertwo.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chaptertwo.ogg">Chapter 1.</li>
+ <li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chapterthree.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chapterthree.ogg">Chapter 2.</li>
+ <li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chapterfour.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chapterfour.ogg">Chapter 3.</li>
+
+ <li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chapterfive.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chapterfive.ogg">Chapter 4.</li>
+
+       <li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chaptersix.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chaptersix.ogg">Chapter 5.</li>
+
+
+ <li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chapterseven.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chapterseven.ogg">Chapter 6.</li>
+
+<li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chaptereight.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chaptereight.ogg">Chapter 7.</li>
+
+
+<li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chapternine.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chapternine.ogg">Chapter 8.</li>
+
+<li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chapterten.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chapterten.ogg">Chapter 9</li>
+
+<li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chaptereleven.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chaptereleven.ogg">
+Acknowledgements.</li>
+
+<li
+	    data-mp3="/ableaudiotracks/jeffsutherland/chaptertwelve.mp3"
+      data-ogg="/ableaudiotracks/jeffsutherland/chaptertwelve.ogg">Appendix.</li>
+
+ -->
+
+<br>
+<br>
+<br>
+<br>
+</div>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+{% endif %}
+{% endblock %}

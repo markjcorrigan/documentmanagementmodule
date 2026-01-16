@@ -1,0 +1,1 @@
+Copy the script in Change PoswerShell Execution policy to be able to run scripts.txt and paste it into Powershell Admin from the Start menu.  This will fire off the ps1 script that is in the line of code pasted.

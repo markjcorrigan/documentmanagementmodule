@@ -1,0 +1,5 @@
+/api/product/searchlogin.php
+
+oh how boring it is for 1 to be a square
+
+/api/product/search.php?s=blablabla

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="/tinymce/tinymce.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const deleteBtn = document.getElementById('delete_btn');
+
+            if (deleteBtn) {
+                deleteBtn.addEventListener('click', function() {
+                    console.log('clicked'); // this should appear in console when you click
+                });
+            } else {
+                console.log('Delete button not found!');
+            }
+        });
+    </script>
+</head>
+<body>
+<h1>Project Notes Editor</h1>
+
+{% if app.session.has('success') %}
+    <p style="color: green;">{{ app.session.get('success') }}</p>
+{% endif %}
+
+<form method="POST" action="{{ url('/editor/save') }}">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+    <!-- Load dropdown + button -->
+    <label for="load_file">Load existing file:</label>
+    <select id="load_file">
+        <option value="">-- New File --</option>
+        {% for file in files %}
+            <option value="{{ file }}" {% if filename is defined and file == filename %}selected{% endif %}>
+                {{ file }}
+            </option>
+        {% endfor %}
+    </select>
+    <button type="button" onclick="loadSelectedFile()">Load</button>
+    <button type="button" id="delete_btn" style="margin-left:20px;">Delete File</button>
+
+    <br><br>
+
+    <!-- Editor -->
+    <textarea id="editor" name="content">{{ content|raw }}</textarea>
+
+    <br>
+    <div style="margin-bottom: 10px;">
+        <label for="custom_name">Custom filename (first 10 chars):</label>
+        <input type="text" id="custom_name" name="custom_name" placeholder="myname_yyyy" maxlength="10">
+
+
+    </div>
+    <button type="submit">Save</button>
+    <!-- Add this right above your <textarea> -->
+
+</form>
+
+<script>
+    const editorBaseUrl = "{{ url('/editor') }}";
+
+    function loadSelectedFile() {
+        const select = document.getElementById('load_file');
+        const filename = select.value;
+        if (!filename) {
+            window.location.href = editorBaseUrl; // New file
+        } else {
+            window.location.href = editorBaseUrl + '/' + encodeURIComponent(filename); // Load selected file
+        }
+    }
+
+    tinymce.init({
+        selector: '#editor',
+        height: 500,
+        plugins: 'advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen',
+        toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        automatic_uploads: true,
+        paste_data_images: true,
+        images_reuse_filename: true,
+
+        images_upload_handler: function(blobInfo, success, failure) {
+            const csrf = document.querySelector('meta[name="csrf-token"]').content;
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/tinymce/upload');
+            xhr.setRequestHeader('X-CSRF-TOKEN', csrf);
+
+            xhr.onload = function() {
+                if (xhr.status !== 200) return failure('HTTP Error: ' + xhr.status);
+                const json = JSON.parse(xhr.responseText);
+                if (!json || typeof json.location !== 'string') return failure('Invalid JSON: ' + xhr.responseText);
+                success(json.location);
+            };
+
+            const formData = new FormData();
+            formData.append('file', blobInfo.blob(), blobInfo.filename());
+            xhr.send(formData);
+        },
+
+        file_picker_types: 'image',
+        file_picker_callback: function(callback, value, meta) {
+            if (meta.filetype === 'image') {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'image/*';
+
+                input.onchange = function() {
+                    const file = this.files[0];
+                    const reader = new FileReader();
+                    reader.onload = function() {
+                        callback(reader.result, { alt: file.name });
+                    };
+                    reader.readAsDataURL(file);
+                };
+
+                input.click();
+            }
+        },
+
+        setup: function(editor) {
+            editor.on('init', function() {
+                {% if content is defined %}
+                editor.setContent(`{{ content|e('js') }}`);
+                {% endif %}
+            });
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const deleteBtn = document.getElementById('delete_btn');
+        const select = document.getElementById('load_file');
+
+        if (!deleteBtn || !select) {
+            console.error('Delete button or file select dropdown not found!');
+            return;
+        }
+
+        deleteBtn.addEventListener('click', function() {
+            const filename = select.value;
+
+            if (!filename) {
+                alert('Please select a file to delete.');
+                return;
+            }
+
+            if (!confirm(`Are you sure you want to delete "${filename}"?`)) return;
+
+            const csrf = document.querySelector('meta[name="csrf-token"]').content;
+
+            fetch(`/editor/delete/${encodeURIComponent(filename)}`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': csrf,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ filename: filename })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message || 'File deleted');
+
+                    // Remove the deleted file from the dropdown
+                    const option = select.querySelector(`option[value="${filename}"]`);
+                    if (option) option.remove();
+
+                    // Clear selection and editor
+                    select.value = '';
+                    if (tinymce.get('editor')) {
+                        tinymce.get('editor').setContent('');
+                    }
+                })
+                .catch(err => alert('Delete failed: ' + err));
+        });
+    });
+</script>
+
+
+</body>
+</html>

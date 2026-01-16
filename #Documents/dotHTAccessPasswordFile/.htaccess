@@ -1,0 +1,74 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # ======================================================================
+    # =============== START: MANAGE FOLDER BLOCKING HERE ===================
+    # ======================================================================
+    # 1. BLOCK 'documents' folder (403 Forbidden for everyone)
+    RewriteCond %{REQUEST_URI} ^/documents/ [NC]
+    RewriteRule .* - [F,L]
+
+    # 2. PASSWORD PROTECT 'apology' folder (Correct for .htaccess)
+    <FilesMatch "^.*$">
+        SetEnvIf Request_URI "^/apology/" REQUIRE_AUTH
+        AuthType Basic
+        AuthName "Restricted Area - Apology Folder"
+        AuthUserFile "C:/xampp/htdocs/pmway.hopto.org/storage/secure/.htpasswd"
+        Require valid-user
+        Order allow,deny
+        Allow from all
+        Deny from env=REQUIRE_AUTH
+        Satisfy any
+    </FilesMatch>
+    # ======================================================================
+
+    # ======================================================================
+    # <<< FULL REFERENCE LIST OF ALL PUBLIC FOLDERS >>>
+    # COPY folder names from this list and PASTE into new rules above.
+    # ======================================================================
+    # Fonts & UI: fontawesome6, tinymce, tinymcefourthirteen, tinymcetwo,
+    #             bootstrapfourfivetwo, bootstrapfouroneone, bootstrapfourthreeone
+    # Frontend:   css, js, build, assets, images, imagesv6, includessub
+    # App UI:     PMWayLanding, backend, frontend, welcome, ableaudio,
+    #             ableaudiotracks, ablelvids, ableplayer, ablevids, agileprinciples,
+    #             bakjobs, breath, cmiitraining, cmm steps, cmmi1,
+    #             cmmidev, cmmidevelopment, cmmimodels, conditions, cv,
+    #             designpatterns, dsdm, dsdmmanual, dsdmwhitepapers, emetercourse,
+    #             ethics, fallacies, flipacp, flipdsdm, flippmbokfive,
+    #             flippmp, flipprince2, flipprince22015, flipprince2a,
+    #             goodcheapfast, helpme, imgman, imgmap, itilfouroverview, itilfouroverviewsimple, itilfourstudyguide,
+    #             latin, lovemstuffs, lrh, lrhbooks, madmoment, movies, pcmm,
+    #             philosopherstoolkit, philosophy, phoenixlecturespics,
+    #             pmboksixmanual, prince2mm, prince2procs, processesdash,
+    #             prod, recharges, road to clear, robertsrulesoforder, scientology,
+    #             scientologydict, scrum, scrummanual, silverbullet, sitaepmo,
+    #             standardtechcourse, strategystuff, study manual, studyitil,
+    #             summitd, thewayaudio, trscourse, twcsstraining, zen
+    # Documents:  booklets, books, booksummaries, cbandmetercourses,
+    #             complexprince, freezonecourses, macroecon,
+    #             pmbok5, pmbok6, pmi2015, shsb, tao, techdic,
+    #             technologydict, atecdic
+    # Uploads:    uploads
+    # Storage:    storage (symlink - Laravel's public storage, do not block)
+    # ======================================================================
+    # ================ END: MANAGE FOLDER BLOCKING HERE ====================
+    # ======================================================================
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

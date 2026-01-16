@@ -1,0 +1,74 @@
+SETUPSYSTEMCONFIDENTIAL FLAGS - COMPLETE GUIDE
+Default Behavior (NO FLAGS):
+bashphp artisan system:setup-confidential
+Drops ALL tables and rebuilds EVERYTHING:
+
+✅ Drops all tables (migrate:fresh)
+✅ Creates users
+✅ Runs seeders
+✅ Rebuilds documents
+✅ Rebuilds images
+✅ Rebuilds protected files (ProtectedFile model - old system)
+✅ Rebuilds guitar scores (guitar_scores table)
+✅ NEW: Rebuilds protected storage files (protected_files table)
+
+
+FLAG 1: --skip-protected
+bashphp artisan system:setup-confidential --skip-protected
+What it skips: Old protected files system (ProtectedFile model)
+Still runs:
+
+✅ migrate:fresh (drops all tables)
+✅ Users, seeders, documents, images
+✅ Guitar scores
+✅ NEW: Protected storage files
+
+
+FLAG 2: --skip-guitar
+bashphp artisan system:setup-confidential --skip-guitar
+What it skips: Guitar scores (guitar_scores table)
+Still runs:
+
+✅ migrate:fresh (drops all tables)
+✅ Users, seeders, documents, images
+✅ Old protected files
+✅ NEW: Protected storage files
+
+
+FLAG 3: --skip-protected-storage ← NEW
+bashphp artisan system:setup-confidential --skip-protected-storage
+What it skips: NEW protected storage files (protected_files table)
+Still runs:
+
+✅ migrate:fresh (drops all tables)
+✅ Users, seeders, documents, images
+✅ Old protected files
+✅ Guitar scores
+
+
+COMBINING FLAGS:
+bash# Skip both old systems, only sync new protected storage
+php artisan system:setup-confidential --skip-protected --skip-guitar
+
+# Skip new system, keep old systems
+php artisan system:setup-confidential --skip-protected-storage
+
+# Skip everything except core setup
+php artisan system:setup-confidential --skip-protected --skip-guitar --skip-protected-storage
+
+WHAT YOU PROBABLY WANT:
+Full Nuclear Rebuild (Your Standard):
+bashphp artisan system:setup-confidential
+Drops and rebuilds EVERYTHING. No flags needed.
+Test New Module Only (Preserve Existing Data):
+bashphp artisan system:setup-confidential --skip-guitar --skip-protected
+Still does migrate:fresh, but only syncs the NEW protected storage system.
+
+IMPORTANT:
+
+ALL flags are OPTIONAL
+Default = rebuild everything
+Flags 1 & 2 were already in your system
+Flag 3 is the only new one I added
+
+Your system behavior hasn't changed - it still drops and rebuilds everything by default.

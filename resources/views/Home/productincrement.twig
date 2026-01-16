@@ -1,0 +1,80 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Product Increment{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+
+<div class="container" > <br>
+  <h5 align="left">The Product Increment:&nbsp; The art of slicing sprint delivery
+    for most value now!</h5>
+  <hr>
+  <p>The goal is to reduce the size of the increment to smallest number (chunk of
+    valuable work).<br>
+    This will ensure that
+    focused value can be delivered rapidly to the Product Owner by the scrum team within
+    each sprint, and, trying to do too much, will not be carried over.</p>
+  <div align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/productincrement.jpg') }}"  > <br>
+    <br>
+    <h6>Here is the secret:  Correct "Definition of Done" and use of the Product Increment (to focus effort towards demonstrating (a slice) of valuable working software to the Product Owner) will help the team
+      stay in gradient (achieve <a href="/home/burndownshort" >sprint burndown</a>), reduce pressure on the team and will increase team production!</h6>
+    <br>
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepo" aria-expanded="false" aria-controls=
+        "collapsepo">The Product Owners role to achieve value </button>
+    <div class="collapse" id="collapsepo">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center">The slide below explains the crucial importance of the Product Owner.<br>
+            Can you see it?</h5>
+          <div class="card-body text-center"> <a href="/home/cmmidevdash" title="Find PP and PMC on the CMMi Dashboard by clicking this image now!" > <img alt="sprint with PP and PMC" class="img-fluid" src="{{ asset('storage/images/sprintmethodwithpppmc.jpg') }}"></a>
+            <p style="font-size:small">If interested <a href="/the-pmway" >Click here</a> to see where PP (Project Planning) and PMC (Project Monitoring and Control) are found <br>
+              on the PMBOK 6 Dashboard?</p>
+          </div>
+          <div class="card-footer"> </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsegradient" aria-expanded="false" aria-controls=
+        "collapsegradient">More information on &quot;In&quot; or &quot;Out&quot; gradient <br>
+    and
+    &quot;Increasing&quot; or &quot;Decreasing&quot; production stats </button>
+    <div class="collapse" id="collapsegradient">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center">Being "In" or "Out Gradient is about managing the Product Increments (Scope)
+            for the sprint. <br>
+            Your Production Stats (Demonstration of Done as Working Software to the Product Owner) will reflect how capable you are at doing this.<br>
+            The Sprint Burndown is used to get a handle on and to better manage this sprint by sprint.</h5>
+          <div class="card-body text-center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/focus.jpg') }}"  ><br>
+            <p>See if you can get these concepts below:</p>
+            <img alt="" class="img-fluid" src="{{ asset('storage/images/increase_decrease.jpg') }}"  ><br>
+            <img alt="" class="img-fluid" src="{{ asset('storage/images/stepbystep.png') }}"  ><img alt="" class="img-fluid" src="{{ asset('storage/images/toosteep.png') }}"  ><br>
+            &nbsp;
+            <p><a href="/burndownshort">Use the burndown chart to get a handle on <br>
+              (towards improving / stabilizing) <br>
+              your team production stats (sprint by sprint)</a>!</p>
+          </div>
+          <div class="card-footer"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}
+
+<!--BODY-->
+
+{% endif %}
+{% endblock %}

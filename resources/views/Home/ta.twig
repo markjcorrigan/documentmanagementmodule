@@ -1,0 +1,287 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}TA{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+<h3>Transactional Analysis (Parent X Child or Adult = Adult)</h3>
+<hr>
+<p align="left"><a href="/home/tagames" title="A short 1 hour video detailing some of the important games by name with a short description">1 hour video overview of some of the games</a></p>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline ></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul align="left"> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/ta.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/taone.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/ta.png') }}" alt="">Transactional Analysis 1 (What / How) </button>
+    </li>
+    <li  data-poster="/images/ta.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/tatwo.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/ta.png') }}" alt="">Transactional Analysis 2 (Games People Play) </button>
+    </li>
+    <li  data-poster="/images/ta.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/tathree.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/ta.png') }}" alt="">Transactional Analysis 3 (Gimmicks) </button>
+    </li>
+    <li  data-poster="/images/copyingenemies.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/copyingenemies.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/copyingenemies.jpg') }}" alt="">Copying Enemies </button>
+    </li>
+    <li  data-poster="/images/tellingstories.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/tellingstories.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/tellingstories.jpg') }}" alt="">Telling Stories </button>
+    </li>
+  </ul>
+  <div align="center">
+    <h5 align="left">What is the current ego state of a sender and receiver of a communication?<br>
+      Is it crossed?<br>
+      Can you move it to Adult Adult.</h5>
+    <p align="left">
+    <h5 align="left">
+    <strong>Eric Berne's Transactional Analysis - early TA history and theory</strong>
+    </h3>
+    <p align="left">Transactional Analysis is one of the most accessible theories of modern psychology. Transactional Analysis was founded by Eric Berne, and the famous 'parent adult child' theory is still being developed today. Transactional Analysis has wide applications in clinical, therapeutic, organizational and personal development, encompassing communications, management, personality, relationships and behavior. Whether you're in business, a parent, a social worker or interested in personal development, Eric Berne's Transactional Analysis theories, and those of his followers, will enrich your dealings with people, and your understanding of yourself. This section covers the background to Transactional Analysis, and Transactional Analysis underpinning theory. </p>
+    <p align="left">Throughout history, and from all standpoints: philosophy, medical science, religion; people have believed that each man and woman has a multiple nature. </p>
+    <p align="left">In the early 20<sup>th</sup> century, Sigmund Freud first established that the human psyche is multi-faceted, and that each of us has warring factions in our subconscious. Since then, new theories continue to be put forward, all concentrating on the essential conviction that each one of us has parts of our personality which surface and affect our behavior according to different circumstances.</p>
+    <p align="left">In 1951 Dr Wilder Penfield began a series of scientific experiments. Penfield proved, using conscious human subjects, by touching a part of the brain (the temporal cortex) with a weak electrical probe, that the brain could be caused to 'play back' certain past experiences, and the feelings associated with them. The patients 'replayed' these events and their feelings despite not normally being able to recall them using their conventional memories.</p>
+    <p align="left">Penfield's experiments went on over several years, and resulted in wide acceptance of the following conclusions:</p>
+    <ul align="left">
+      <li >The human brain acts like a tape recorder, and whilst we may 'forget' experiences, the brain still has them recorded. </li>
+      <li >Along with events the brain also records the associated feelings, and both feelings and events stay locked together. </li>
+      <li >It is possible for a person to exist in two states simultaneously (because patients replaying hidden events and feelings could talk about them objectively at the same time). </li>
+      <li >Hidden experiences when replayed are vivid, and affect how we feel at the time of replaying. </li>
+      <li >There is a certain connection between mind and body, i.e. the link between the biological and the psychological, eg a psychological fear of spiders and a biological feeling of nausea.. </li>
+    </ul>
+    <h5 align="left">early transactional analysis theory and modelearly transactional analysis theory and model</h5>
+    <p align="left">In the 1950's Eric Berne began to develop his theories of Transactional Analysis. He said that verbal communication, particularly face to face, is at the centre of human social relationships and psychoanalysis. </p>
+    <p align="left">His starting-point was that when two people encounter each other, one of them will speak to the other. This he called the Transaction Stimulus. The reaction from the other person he called the Transaction Response.</p>
+    <p align="left">The person sending the Stimulus is called the Agent. The person who responds is called the Respondent.</p>
+    <p align="left">Transactional Analysis became the method of examining the transaction wherein: 'I do something to you, and you do something back'.</p>
+    <p align="left">Berne also said that each person is made up of three alter ego states:</p>
+    <h5 align="left">Parent</h5>
+    <h5 align="left">Adult</h5>
+    <h5 align="left">Child</h5>
+    <p align="left">These terms have different definitions than in normal language.</p>
+    <h5 align="left">Parent</h5>
+    <p align="left">This is our ingrained voice of authority, absorbed conditioning, learning and attitudes from when we were young. We were conditioned by our real parents, teachers, older people, next door neighbours, aunts and uncles, Father Christmas and Jack Frost. Our Parent is made up of a huge number of hidden and overt recorded playbacks. Typically embodied by phrases and attitudes starting with 'how to', 'under no circumstances', 'always' and 'never forget', 'don't lie, cheat, steal', etc, etc. Our parent is formed by external events and influences upon us as we grow through early childhood. We can change it, but this is easier said than done.</p>
+    <h5 align="left">Child</h5>
+    <p align="left">Our internal reaction and feelings to external events form the 'Child'. This is the seeing, hearing, feeling, and emotional body of data within each of us. When anger or despair dominates reason, the Child is in control. Like our Parent we can change it, but it is no easier.</p>
+    <h5 align="left">Adult</h5>
+    <p align="left">Our 'Adult' is our ability to think and determine action for ourselves, based on received data. The adult in us begins to form at around ten months old, and is the means by which we keep our Parent and Child under control. If we are to change our Parent or Child we must do so through our adult.</p>
+    <p align="left">In other words:</p>
+    <ul align="left">
+      <li >Parent is our 'Taught' concept of life </li>
+      <li >Adult is our 'Thought' concept of life </li>
+      <li >Child is our 'Felt' concept of lifee </li>
+    </ul>
+    <p align="left">When we communicate we are doing so from one of our own alter ego states, our Parent, Adult or Child. Our feelings at the time determine which one we use, and at any time something can trigger a shift from one state to another. When we respond, we are also doing this from one of the three states, and it is in the analysis of these stimuli and responses that the essence of Transactional Analysis lies. See the poem at the bottom of this page by Philip Larkin about how parental conditioning affects children and their behaviour into adulthood. And for an uplifting antidote see the lovely Thich Nhat Hanh quote, also at the bottom. These are all excellent illustrations of the effect and implications of parental conditioning in the context of Transactional Analysis.</p>
+    <p align="left">At the core of Berne's theory is the rule that effective transactions (ie successful communications) must be complementary. They must go back from the receiving ego state to the sending ego state. For example, if the stimulus is Parent to Child, the response must be Child to Parent, or the transaction is 'crossed', and there will be a problem between sender and receiver.</p>
+    <p align="left">If a crossed transaction occurs, there is an ineffective communication. Worse still either or both parties will be upset. In order for the relationship to continue smoothly the agent or the respondent must rescue the situation with a complementary transaction.</p>
+    <p align="left">In serious break-downs, there is no chance of immediately resuming a discussion about the original subject matter. Attention is focused on the relationship. The discussion can only continue constructively when and if the relationship is mended.</p>
+    <p align="left">Here are some simple clues as to the ego state sending the signal. You will be able to see these clearly in others, and in yourself:</p>
+    <h5 align="left">Parent</h5>
+    <p align="left">Physical - angry or impatient body-language and expressions, finger-pointing, patronising gestures, </p>
+    <p align="left">Verbal - always, never, for once and for all, judgmental words, critical words, patronising language, posturing language.</p>
+    <p align="left">N.B. beware of cultural differences in body-language or emphases that appear 'Parental'.</p>
+    <h5 align="left">Child</h5>
+    <p align="left">Physical - emotionally sad expressions, despair, temper tantrums, whining voice, rolling eyes, shrugging shoulders, teasing, delight, laughter, speaking behind hand, raising hand to speak, squirming and giggling.</p>
+    <p align="left">Verbal - baby talk, I wish, I dunno, I want, I'm gonna, I don't care, oh no, not again, things never go right for me, worst day of my life, bigger, biggest, best, many superlatives, words to impress.</p>
+    <h5 align="left">Adult</h5>
+    <p align="left">Physical - attentive, interested, straight-forward, tilted head, non-threatening and non-threatened.</p>
+    <p align="left">Verbal - why, what, how, who, where and when, how much, in what way, comparative expressions, reasoned statements, true, false, probably, possibly, I think, I realise, I see, I believe, in my opinion.</p>
+    <p align="left">And remember, when you are trying to identify ego states: words are only part of the story. </p>
+    <p align="left">To analyse a transaction you need to see and feel what is being said as well. </p>
+    <ul align="left">
+      <li >Only 7% of meaning is in the words spoken. </li>
+      <li >38% of meaning is paralinguistic (the way that the words are said). </li>
+      <li >55% is in facial expression. </li>
+    </ul>
+    <p align="left">There is no general rule as to the effectiveness of any ego state in any given situation (some people get results by being dictatorial (Parent to Child), or by having temper tantrums, (Child to Parent), but for a balanced approach to life, Adult to Adult is generally recommended. </p>
+    <p align="left">Transactional Analysis is effectively a language within a language; a language of true meaning, feeling and motive. It can help you in every situation, firstly through being able to understand more clearly what is going on, and secondly, by virtue of this knowledge, we give ourselves choices of what ego states to adopt, which signals to send, and where to send them. This enables us to make the most of all our communications and therefore create, develop and maintain better relationships.</p>
+    <h5 align="left">modern transactional analysis theory </h5>
+    <p align="left">Transactional Analysis is a theory which operates as each of the following:</p>
+    <ul align="left">
+      <li >a theory of personality </li>
+      <li >a model of communication </li>
+      <li >a study of repetitive patterns of behaviour </li>
+    </ul>
+    <p align="left">Transactional Analysis developed significantly beyond these Berne's early theories, by Berne himself until his death in 1970, and since then by his followers and many current writers and experts. Transactional Analysis has been explored and enhanced in many different ways by these people, including: Ian Stewart and Vann Joines (their book 'TA Today' is widely regarded as a definitive modern interpretation); John Dusay, Aaron and Jacqui Schiff, Robert and Mary Goulding, Pat Crossman, Taibi Kahler, Abe Wagner, Ken Mellor and Eric Sigmund, Richard Erskine and Marityn Zalcman, Muriel James, Pam Levin, Anita Mountain and Julie Hay (specialists in organizational applications), Susannah Temple, Claude Steiner, Franklin Ernst, S Woollams and M Brown, Fanita English, P Clarkson, M M Holloway, Stephen Karpman and others. </p>
+    <p align="left">Significantly, the original three Parent Adult Child components were sub-divided to form a new seven element model, principally during the 1980's by Wagner, Joines and Mountain. This established Controlling and Nurturing aspects of the Parent mode, each with positive and negative aspects, and the Adapted and Free aspects of the Child mode, again each with positive an negative aspects, which essentially gives us the model to which most TA practitioners refer today:</p>
+    <h5 align="left">parent</h5>
+    <p align="left">Parent is now commonly represented as a circle with four quadrants:</p>
+    <p align="left"><b>Nurturing</b> - Nurturing (positive) and Spoiling (negative).</p>
+    <p align="left"><b>Controlling</b> - Structuring (positive) and Critical (negative).</p>
+    <h5 align="left">adult</h5>
+    <p align="left">Adult remains as a single entity, representing an 'accounting' function or mode, which can draw on the resources of both Parent and Child.</p>
+    <h5 align="left">child</h5>
+    <p align="left">Child is now commonly represented as circle with four quadrants:</p>
+    <p align="left"><b>Adapted</b> - Co-operative (positive) and Compliant/Resistant (negative).</p>
+    <p align="left"><b>Free</b> - Spontaneous (positive) and Immature (negative).</p>
+    <p>&nbsp;</p>
+  </div>
+  <p align="left"><a href="{{ asset('storage/assets/ericbernegamespeopleplaysixtysix.pdf') }}" >Click here for Eric Berne's Games People Play 1966</a></p>
+  <p align="left"><a href="{{ asset('storage/assets/ericbernegamespeopleplayseventythree.pdf') }}" >Click here for Eric Berne's Games People Play 1973</a></p>
+  <p align="left"><a href="{{ asset('storage/assets/ericbernesexinhumanloving.pdf') }}" >Click here for Eric Berne's Sex in Human Loving</a></p>
+  <p align="left"><a href="/home/taaudio" >Click here for Eric Berne's Games People Play audio book</a></p>
+  <br>
+  <br>
+</div>
+<br>
+<br>
+
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+<h3>Transactional Analysis (Parent X Child or Adult = Adult)</h3>
+<hr>
+<p align="left"><a href="/home/tagames" title="A short 1 hour video detailing some of the important games by name with a short description">1 hour video overview of some of the games</a></p>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline ></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul align="left"> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/ta.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/taone.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/ta.png') }}" alt="">Transactional Analysis 1 (What / How) </button>
+    </li>
+    <li  data-poster="/images/ta.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/tatwo.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/ta.png') }}" alt="">Transactional Analysis 2 (Games People Play) </button>
+    </li>
+    <li  data-poster="/images/ta.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/tathree.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/ta.png') }}" alt="">Transactional Analysis 3 (Gimmicks) </button>
+    </li>
+    <li  data-poster="/images/copyingenemies.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/copyingenemies.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/copyingenemies.jpg') }}" alt="">Copying Enemies </button>
+    </li>
+    <li  data-poster="/images/tellingstories.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/ta/tellingstories.mp4"> </span>
+      <button type="button"> <img class="img-fluid" src="{{ asset('storage/images/tellingstories.jpg') }}" alt="">Telling Stories </button>
+    </li>
+  </ul>
+  <div align="center"> <br>
+    <br>
+    <h5 align="left">What is the current ego state of a sender and receiver of a communication?<br>
+      Is it crossed?<br>
+      Can you move it to Adult Adult.</h5>
+    <p align="left">
+    <h5 align="left">
+    <strong>Eric Berne's Transactional Analysis - early TA history and theory</strong>
+    </h3>
+    <p align="left">Transactional Analysis is one of the most accessible theories of modern psychology. Transactional Analysis was founded by Eric Berne, and the famous 'parent adult child' theory is still being developed today. Transactional Analysis has wide applications in clinical, therapeutic, organizational and personal development, encompassing communications, management, personality, relationships and behaviour. Whether you're in business, a parent, a social worker or interested in personal development, Eric Berne's Transactional Analysis theories, and those of his followers, will enrich your dealings with people, and your understanding of yourself. This section covers the background to Transactional Analysis, and Transactional Analysis underpinning theory. </p>
+    <p align="left">Throughout history, and from all standpoints: philosophy, medical science, religion; people have believed that each man and woman has a multiple nature. </p>
+    <p align="left">In the early 20<sup>th</sup> century, Sigmund Freud first established that the human psyche is multi-faceted, and that each of us has warring factions in our subconscious. Since then, new theories continue to be put forward, all concentrating on the essential conviction that each one of us has parts of our personality which surface and affect our behaviour according to different circumstances.</p>
+    <p align="left">In 1951 Dr Wilder Penfield began a series of scientific experiments. Penfield proved, using conscious human subjects, by touching a part of the brain (the temporal cortex) with a weak electrical probe, that the brain could be caused to 'play back' certain past experiences, and the feelings associated with them. The patients 'replayed' these events and their feelings despite not normally being able to recall them using their conventional memories.</p>
+    <p align="left">Penfield's experiments went on over several years, and resulted in wide acceptance of the following conclusions:</p>
+    <ul align="left">
+      <li >The human brain acts like a tape recorder, and whilst we may 'forget' experiences, the brain still has them recorded. </li>
+      <li >Along with events the brain also records the associated feelings, and both feelings and events stay locked together. </li>
+      <li >It is possible for a person to exist in two states simultaneously (because patients replaying hidden events and feelings could talk about them objectively at the same time). </li>
+      <li >Hidden experiences when replayed are vivid, and affect how we feel at the time of replaying. </li>
+      <li >There is a certain connection between mind and body, i.e. the link between the biological and the psychological, eg a psychological fear of spiders and a biological feeling of nausea.. </li>
+    </ul>
+    <h5 align="left">early transactional analysis theory and modelearly transactional analysis theory and model</h5>
+    <p align="left">In the 1950's Eric Berne began to develop his theories of Transactional Analysis. He said that verbal communication, particularly face to face, is at the centre of human social relationships and psychoanalysis. </p>
+    <p align="left">His starting-point was that when two people encounter each other, one of them will speak to the other. This he called the Transaction Stimulus. The reaction from the other person he called the Transaction Response.</p>
+    <p align="left">The person sending the Stimulus is called the Agent. The person who responds is called the Respondent.</p>
+    <p align="left">Transactional Analysis became the method of examining the transaction wherein: 'I do something to you, and you do something back'.</p>
+    <p align="left">Berne also said that each person is made up of three alter ego states:</p>
+    <h5 align="left">Parent</h5>
+    <h5 align="left">Adult</h5>
+    <h5 align="left">Child</h5>
+    <p align="left">These terms have different definitions than in normal language.</p>
+    <h5 align="left">Parent</h5>
+    <p align="left">This is our ingrained voice of authority, absorbed conditioning, learning and attitudes from when we were young. We were conditioned by our real parents, teachers, older people, next door neighbours, aunts and uncles, Father Christmas and Jack Frost. Our Parent is made up of a huge number of hidden and overt recorded playbacks. Typically embodied by phrases and attitudes starting with 'how to', 'under no circumstances', 'always' and 'never forget', 'don't lie, cheat, steal', etc, etc. Our parent is formed by external events and influences upon us as we grow through early childhood. We can change it, but this is easier said than done.</p>
+    <h5 align="left">Child</h5>
+    <p align="left">Our internal reaction and feelings to external events form the 'Child'. This is the seeing, hearing, feeling, and emotional body of data within each of us. When anger or despair dominates reason, the Child is in control. Like our Parent we can change it, but it is no easier.</p>
+    <h5 align="left">Adult</h5>
+    <p align="left">Our 'Adult' is our ability to think and determine action for ourselves, based on received data. The adult in us begins to form at around ten months old, and is the means by which we keep our Parent and Child under control. If we are to change our Parent or Child we must do so through our adult.</p>
+    <p align="left">In other words:</p>
+    <ul align="left">
+      <li >Parent is our 'Taught' concept of life </li>
+      <li >Adult is our 'Thought' concept of life </li>
+      <li >Child is our 'Felt' concept of lifee </li>
+    </ul>
+    <p align="left">When we communicate we are doing so from one of our own alter ego states, our Parent, Adult or Child. Our feelings at the time determine which one we use, and at any time something can trigger a shift from one state to another. When we respond, we are also doing this from one of the three states, and it is in the analysis of these stimuli and responses that the essence of Transactional Analysis lies. See the poem at the bottom of this page by Philip Larkin about how parental conditioning affects children and their behaviour into adulthood. And for an uplifting antidote see the lovely Thich Nhat Hanh quote, also at the bottom. These are all excellent illustrations of the effect and implications of parental conditioning in the context of Transactional Analysis.</p>
+    <p align="left">At the core of Berne's theory is the rule that effective transactions (ie successful communications) must be complementary. They must go back from the receiving ego state to the sending ego state. For example, if the stimulus is Parent to Child, the response must be Child to Parent, or the transaction is 'crossed', and there will be a problem between sender and receiver.</p>
+    <p align="left">If a crossed transaction occurs, there is an ineffective communication. Worse still either or both parties will be upset. In order for the relationship to continue smoothly the agent or the respondent must rescue the situation with a complementary transaction.</p>
+    <p align="left">In serious break-downs, there is no chance of immediately resuming a discussion about the original subject matter. Attention is focused on the relationship. The discussion can only continue constructively when and if the relationship is mended.</p>
+    <p align="left">Here are some simple clues as to the ego state sending the signal. You will be able to see these clearly in others, and in yourself:</p>
+    <h5 align="left">Parent</h5>
+    <p align="left">Physical - angry or impatient body-language and expressions, finger-pointing, patronising gestures, </p>
+    <p align="left">Verbal - always, never, for once and for all, judgmental words, critical words, patronising language, posturing language.</p>
+    <p align="left">N.B. beware of cultural differences in body-language or emphases that appear 'Parental'.</p>
+    <h5 align="left">Child</h5>
+    <p align="left">Physical - emotionally sad expressions, despair, temper tantrums, whining voice, rolling eyes, shrugging shoulders, teasing, delight, laughter, speaking behind hand, raising hand to speak, squirming and giggling.</p>
+    <p align="left">Verbal - baby talk, I wish, I dunno, I want, I'm gonna, I don't care, oh no, not again, things never go right for me, worst day of my life, bigger, biggest, best, many superlatives, words to impress.</p>
+    <h5 align="left">Adult</h5>
+    <p align="left">Physical - attentive, interested, straight-forward, tilted head, non-threatening and non-threatened.</p>
+    <p align="left">Verbal - why, what, how, who, where and when, how much, in what way, comparative expressions, reasoned statements, true, false, probably, possibly, I think, I realise, I see, I believe, in my opinion.</p>
+    <p align="left">And remember, when you are trying to identify ego states: words are only part of the story. </p>
+    <p align="left">To analyse a transaction you need to see and feel what is being said as well. </p>
+    <ul align="left">
+      <li >Only 7% of meaning is in the words spoken. </li>
+      <li >38% of meaning is paralinguistic (the way that the words are said). </li>
+      <li >55% is in facial expression. </li>
+    </ul>
+    <p align="left">There is no general rule as to the effectiveness of any ego state in any given situation (some people get results by being dictatorial (Parent to Child), or by having temper tantrums, (Child to Parent), but for a balanced approach to life, Adult to Adult is generally recommended. </p>
+    <p align="left">Transactional Analysis is effectively a language within a language; a language of true meaning, feeling and motive. It can help you in every situation, firstly through being able to understand more clearly what is going on, and secondly, by virtue of this knowledge, we give ourselves choices of what ego states to adopt, which signals to send, and where to send them. This enables us to make the most of all our communications and therefore create, develop and maintain better relationships.</p>
+    <h5 align="left">modern transactional analysis theory </h5>
+    <p align="left">Transactional Analysis is a theory which operates as each of the following:</p>
+    <ul align="left">
+      <li >a theory of personality </li>
+      <li >a model of communication </li>
+      <li >a study of repetitive patterns of behaviour </li>
+    </ul>
+    <p align="left">Transactional Analysis developed significantly beyond these Berne's early theories, by Berne himself until his death in 1970, and since then by his followers and many current writers and experts. Transactional Analysis has been explored and enhanced in many different ways by these people, including: Ian Stewart and Vann Joines (their book 'TA Today' is widely regarded as a definitive modern interpretation); John Dusay, Aaron and Jacqui Schiff, Robert and Mary Goulding, Pat Crossman, Taibi Kahler, Abe Wagner, Ken Mellor and Eric Sigmund, Richard Erskine and Marityn Zalcman, Muriel James, Pam Levin, Anita Mountain and Julie Hay (specialists in organizational applications), Susannah Temple, Claude Steiner, Franklin Ernst, S Woollams and M Brown, Fanita English, P Clarkson, M M Holloway, Stephen Karpman and others. </p>
+    <p align="left">Significantly, the original three Parent Adult Child components were sub-divided to form a new seven element model, principally during the 1980's by Wagner, Joines and Mountain. This established Controlling and Nurturing aspects of the Parent mode, each with positive and negative aspects, and the Adapted and Free aspects of the Child mode, again each with positive an negative aspects, which essentially gives us the model to which most TA practitioners refer today:</p>
+    <h5 align="left">parent</h5>
+    <p align="left">Parent is now commonly represented as a circle with four quadrants:</p>
+    <p align="left"><b>Nurturing</b> - Nurturing (positive) and Spoiling (negative).</p>
+    <p align="left"><b>Controlling</b> - Structuring (positive) and Critical (negative).</p>
+    <h5 align="left">adult</h5>
+    <p align="left">Adult remains as a single entity, representing an 'accounting' function or mode, which can draw on the resources of both Parent and Child.</p>
+    <h5 align="left">child</h5>
+    <p align="left">Child is now commonly represented as circle with four quadrants:</p>
+    <p align="left"><b>Adapted</b> - Co-operative (positive) and Compliant/Resistant (negative).</p>
+    <p align="left"><b>Free</b> - Spontaneous (positive) and Immature (negative).</p>
+    <p>&nbsp;</p>
+  </div>
+  <br>
+  <br>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% endblock %}

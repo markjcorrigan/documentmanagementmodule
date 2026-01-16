@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}ServiceNow{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container">
+<h3>ServiceNow</h3>
+<hr>
+
+
+
+
+
+       <p><a href="/servicenowviewpdf/resources/servicenow.pdf" >  Tim Woodruff - Learning ServiceNow _ administration and development on the Now platform, for powerful IT automation (2018)</a></p>
+
+
+
+</div>
+<!--BODY ENDS HERE-->
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,273 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}OOP Vids{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container">
+  <h3>OOP Vids</h3>
+  <hr>
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oop.png') }}"></p>
+  <p align="left">NB I am using public_html/aaaaoop to play with these concepts<br>
+    and remember for oop we are looking at Properties and Methods (PM [and passing parameters into functions]) ->"pointing" to this and via $this-> in class as opposed to Functions and Variables.<br>
+    Static :: works with the varibles in the class.  I.e. directly not via oop</p>
+  <p><a href="#playlist">PLAYLIST</a></p>
+  <div id="player" align="center">
+    <!-- video source and track elements will be populated from playlist -->
+    <video id="video1" preload="false" data-able-player playsinline loop></video>
+  </div>
+  <div id="playlist">
+    <h2><a name="playlist"></a>Playlist</h2>
+    <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+    <!-- The value of data-player must match the id of the media element -->
+    <!-- see documentation for additional details -->
+    <ul class="able-playlist" data-player="video1">
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopone.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Intro </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/ooptwo.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">MVC </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopthree.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Create Classes </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopfour.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Visibility and Inheritance </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopfive.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Properties and Methods </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopsix.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Constructors and Destructors </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopseven.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Delete Objects </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopeight.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Static Properties and Methods </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopnine.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Load Classes Automatically </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopten.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Type Declarations </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopeleven.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Exersize 1 </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/ooptwelve.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Scope Resolution </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopthirteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Interfaces </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopfourteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Abstract Classes </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopfifteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Anonymous Classes </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopsixteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Connect to a DB using OOP </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopseventeen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Query a DB using OOP </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopeighteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Apply MVC to OOP PHP </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/ajax.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Ajax Travesty Media </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/encapsulationinoop.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Encapsulation in OOP Arabic but a good example </button>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <p align="left">Thanks Dani Krossing from Youtube for video's 1 - 18 above</p>
+    <p>Note:  Magic method getter and setter</p>
+    <img alt="" class="img-fluid" src="{{ asset('storage/images/magicmethodgetandset.jpg') }}"> <img alt="" class="img-fluid" src="{{ asset('storage/images/magicmethodgetandset1.jpg') }}"> </div>
+</div>
+<br>
+<br>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+<div class="container">
+<!--BODY-->
+
+<div class="container">
+  <h3>OOP Vids</h3>
+  <hr>
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/oop.png') }}"></p>
+  <p align="left">NB I am using public_html/aaaaoop to play with these concepts<br>
+    and remember for oop we are looking at Properties and Methods (PM [and passing parameters into functions]) ->"pointing" to this and via $this-> in class as opposed to Functions and Variables.<br>
+    Static :: works with the varibles in the class.  I.e. directly not via oop</p>
+  <p><a href="#playlist">PLAYLIST</a></p>
+  <div id="player" align="center">
+    <!-- video source and track elements will be populated from playlist -->
+    <video id="video1" preload="false" data-able-player playsinline loop></video>
+  </div>
+  <div id="playlist">
+    <h2><a name="playlist"></a>Playlist</h2>
+    <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+    <!-- The value of data-player must match the id of the media element -->
+    <!-- see documentation for additional details -->
+    <ul class="able-playlist" data-player="video1">
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopone.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Intro </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/ooptwo.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">MVC </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopthree.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Create Classes </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopfour.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Visibility and Inheritance </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopfive.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Properties and Methods </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopsix.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Constructors and Destructors </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopseven.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Delete Objects </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopeight.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Static Properties and Methods </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopnine.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Load Classes Automatically </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopten.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Type Declarations </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopeleven.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Exersize 1 </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/ooptwelve.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Scope Resolution </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopthirteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Interfaces </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopfourteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Abstract Classes </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopfifteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Anonymous Classes </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopsixteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Connect to a DB using OOP </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopseventeen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Query a DB using OOP </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/oopeighteen.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Apply MVC to OOP PHP </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/ajax.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Ajax Travesty Media </button>
+      </li>
+      <li  data-poster="/images/oop.png" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/oop/encapsulationinoop.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/oop.png') }}" alt="">Encapsulation in OOP Arabic but a good example </button>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <p align="left">Thanks Dani Krossing from Youtube for video's 1 - 18 above</p>
+    <p>Note:  Magic method getter and setter</p>
+    <img alt="" class="img-fluid" src="{{ asset('storage/images/magicmethodgetandset.jpg') }}"> <img alt="" class="img-fluid" src="{{ asset('storage/images/magicmethodgetandset1.jpg') }}"> </div>
+</div>
+<br>
+<br>
+{% endif %}
+{% endblock %}

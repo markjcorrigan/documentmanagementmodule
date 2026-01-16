@@ -1,0 +1,63 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Personal Kanban (Speedboat) tool
+Burndown{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="left">
+<h5 align="left">The Personal Kanban - Kanban made Sweet and Simple!</h5>
+<hr>
+<div class="d-flex ">
+  <div class="p-2 flex-fill"></div>
+  <div class="p-1 flex-fill"></div>
+  <div class="p-5 flex-fill">
+    <video id="video1"  data-able-player="true" preload="auto" data-speed-icons="true" width="480" height="360" poster="/images/personalkanban.jpg"  playsinline="true">
+      <source type="video/mp4" src="/ablelvids/kanban/kanban.mp4">
+    </video>
+  </div>
+  <div class="p-4 flex-fill"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+<h5 align="left">The Personal Kanban - Kanban made Sweet and Simple!</h5>
+<hr>
+<div class="d-flex ">
+  <div class="p-2 flex-fill"></div>
+  <div class="p-1 flex-fill"></div>
+  <div class="p-5 flex-fill">
+    <video id="video1"  data-able-player="true" preload="auto" data-speed-icons="true" width="480" height="360" poster="/images/personalkanban.jpg"  playsinline="true">
+      <source type="video/mp4" src="/ablelvids/kanban/kanban.mp4">
+    </video>
+  </div>
+  <div class="p-4 flex-fill"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

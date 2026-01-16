@@ -1,0 +1,340 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SD Design Cordination </h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=45') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Design Coordination</i> aims to coordinate all service design activities, processes and resources. This ITIL process ensures the consistent and effective design of new or changed IT services, service management information systems, architectures, technology, processes, information and metrics.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Service Design Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates"><span class="tocnumber">4</span> <span class="toctext"><span>Templates</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Design Coordination has been added as a new process, in line with the latest <i><b>ITIL 2011</b></i> guidance. Design Coordination is now responsible for coordinating the design activities carried out by other Service Design processes. </p>
+  <p>In the previous ITIL version, some of these tasks were carried out as part of Service Level Management, which is why the sub-processes Decomposition of Business Service into Supporting Services, Technical and Organizational Service Design and RFC Compilation and Submission have been moved from Service Level Management to Design Coordination. </p>
+  <p>The process overview of <a href="/images/itilsdone.jpg"  title="Itil-design-coordination.jpg">ITIL Design Coordination</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Design Coordination sub-processes:">These are the <strong class="selflink">ITIL Design Coordination</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Design_Coordination_Support" itemprop="itemListElement">Design Coordination Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To coordinate and develop Service Design resources and capabilities, and to ensure that a consistent approach to designing new or changed services is adopted across all service transition projects. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Design_Coordination_Planning" itemprop="itemListElement">Service Design Planning</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To plan design activities in detail, making sure that all relevant aspects are considered during service design. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Design_Coordination_and_Monitoring" itemprop="itemListElement">Service Design Coordination and Monitoring</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To coordinate the design activities performed by various Service Design processes, and to determine if the new or changed service can be provided economically. This process is also responsible for deciding if the clients' requirements can be fulfilled or must be renegotiated. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Technical_and_Organizational_Service_Design" itemprop="itemListElement">Technical and Organizational Service Design</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To determine how a new service will be provided from an IT perspective. In particular, this means to specify any technical infrastructure to be created, as well as required organizational changes. The resulting Service Design Package contains all relevant information for Service Transition. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Design_Coordination_Review_&#82;FC" itemprop="itemListElement">Service Design Review and RFC Submission</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To submit the Service Design Package to a final review and initiate the implementation of the service by submitting a formal Request for Change. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Design Coordination to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="SDP" itemprop="itemListElement">Service Design Package (SDP)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Service Design Package builds upon the Service Level Requirements. It further specifies the requirements from the viewpoint of the client and defines how these are actually fulfilled from a technical and organizational point of view <i>(see also: <a href="/index.php/Checklist_Service_Design_Package_SDP" title="Checklist Service Design Package SDP">ITIL Checklist Service Design Package</a>)</i>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Design_Policy" itemprop="itemListElement">Service Design Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">The Service Design Policy provides guidance on how to ensure that a consistent approach is applied to all design activities. In particular, the Service Design Policy specifies which projects or Changes are required to undergo the formal Service Design stage, and who needs to be involved in Service Design to ensure that all relevant aspects are considered. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Templates"><span id="Checklists">Templates</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Service_Design_Package_SDP" title="Service Design Package SDP">Service Design Package - SDP template</a> </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Service_Design_Manager">Service Design Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Service Design Manager is responsible for producing quality, secure and resilient designs for new or improved services. This includes producing and maintaining all design documentation.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="6"><b>Responsibility Matrix: ITIL Design Coordination</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Service Design Manager </th>
+        <th style="background:#ffffee;">Project Manager </th>
+        <th style="background:#ffffee;">IT Operations Manager </th>
+        <th style="background:#ffffee;">Financial Manager </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Design_Coordination_Support">Design Coordination Support</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Design_Coordination_Planning">Service Design Planning</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Design_Coordination_and_Monitoring">Service Design Coordination and Monitoring</a></td>
+        <td>A </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Technical_and_Organizational_Service_Design">Technical and Organizational Service Design</a></td>
+        <td>A </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Design_Coordination_Review_RFC">Service Design Review and RFC Submission</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Change Evaluation process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Change Evaluation.</span> </p>
+  <p><span id="ITIL_Design_Coordination_Group">[3] Applications Analyst, Technical Analyst, IT Operations Manager, Process Architect, Process Owner and others, depending on the expertise required.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Design_Coordination" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SD Design Cordination </h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=45') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Design Coordination</i> aims to coordinate all service design activities, processes and resources. This ITIL process ensures the consistent and effective design of new or changed IT services, service management information systems, architectures, technology, processes, information and metrics.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Service Design Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates"><span class="tocnumber">4</span> <span class="toctext"><span>Templates</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Design Coordination has been added as a new process, in line with the latest <i><b>ITIL 2011</b></i> guidance. Design Coordination is now responsible for coordinating the design activities carried out by other Service Design processes. </p>
+  <p>In the previous ITIL version, some of these tasks were carried out as part of Service Level Management, which is why the sub-processes Decomposition of Business Service into Supporting Services, Technical and Organizational Service Design and RFC Compilation and Submission have been moved from Service Level Management to Design Coordination. </p>
+  <p>The process overview of <a href="/images/itilsdone.jpg"  title="Itil-design-coordination.jpg">ITIL Design Coordination</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Design Coordination sub-processes:">These are the <strong class="selflink">ITIL Design Coordination</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Design_Coordination_Support" itemprop="itemListElement">Design Coordination Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To coordinate and develop Service Design resources and capabilities, and to ensure that a consistent approach to designing new or changed services is adopted across all service transition projects. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Design_Coordination_Planning" itemprop="itemListElement">Service Design Planning</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To plan design activities in detail, making sure that all relevant aspects are considered during service design. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Design_Coordination_and_Monitoring" itemprop="itemListElement">Service Design Coordination and Monitoring</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To coordinate the design activities performed by various Service Design processes, and to determine if the new or changed service can be provided economically. This process is also responsible for deciding if the clients' requirements can be fulfilled or must be renegotiated. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Technical_and_Organizational_Service_Design" itemprop="itemListElement">Technical and Organizational Service Design</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To determine how a new service will be provided from an IT perspective. In particular, this means to specify any technical infrastructure to be created, as well as required organizational changes. The resulting Service Design Package contains all relevant information for Service Transition. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Design_Coordination_Review_&#82;FC" itemprop="itemListElement">Service Design Review and RFC Submission</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To submit the Service Design Package to a final review and initiate the implementation of the service by submitting a formal Request for Change. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Design Coordination to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="SDP" itemprop="itemListElement">Service Design Package (SDP)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Service Design Package builds upon the Service Level Requirements. It further specifies the requirements from the viewpoint of the client and defines how these are actually fulfilled from a technical and organizational point of view <i>(see also: <a href="/index.php/Checklist_Service_Design_Package_SDP" title="Checklist Service Design Package SDP">ITIL Checklist Service Design Package</a>)</i>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Design_Policy" itemprop="itemListElement">Service Design Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">The Service Design Policy provides guidance on how to ensure that a consistent approach is applied to all design activities. In particular, the Service Design Policy specifies which projects or Changes are required to undergo the formal Service Design stage, and who needs to be involved in Service Design to ensure that all relevant aspects are considered. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Templates"><span id="Checklists">Templates</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Service_Design_Package_SDP" title="Service Design Package SDP">Service Design Package - SDP template</a> </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Service_Design_Manager">Service Design Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Service Design Manager is responsible for producing quality, secure and resilient designs for new or improved services. This includes producing and maintaining all design documentation.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="6"><b>Responsibility Matrix: ITIL Design Coordination</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Service Design Manager </th>
+        <th style="background:#ffffee;">Project Manager </th>
+        <th style="background:#ffffee;">IT Operations Manager </th>
+        <th style="background:#ffffee;">Financial Manager </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Design_Coordination_Support">Design Coordination Support</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Design_Coordination_Planning">Service Design Planning</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Design_Coordination_and_Monitoring">Service Design Coordination and Monitoring</a></td>
+        <td>A </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Technical_and_Organizational_Service_Design">Technical and Organizational Service Design</a></td>
+        <td>A </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Design_Coordination_Review_RFC">Service Design Review and RFC Submission</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Change Evaluation process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Change Evaluation.</span> </p>
+  <p><span id="ITIL_Design_Coordination_Group">[3] Applications Analyst, Technical Analyst, IT Operations Manager, Process Architect, Process Owner and others, depending on the expertise required.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Design_Coordination" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

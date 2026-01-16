@@ -1,0 +1,2503 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}SAFe 5.1 Product Owner / Product Manager{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+
+
+<style>
+
+
+/* a:link {color:#00FF00} */
+/* a:visited {color:#00FF00} */
+/* a:hover {color:#FF00FF} */
+a:focus {background: yellow;
+  color: navy; } /* this one! */
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) {
+   .carousel-indicators {
+
+    bottom: -35px;
+
+
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+   .carousel-indicators {
+    position: relative;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+
+
+  }
+}
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+
+  }
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+
+  }
+
+
+
+
+
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+
+  }
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+     .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+
+  small {
+    font-size:8pt;
+}
+
+
+</style>
+
+
+<div class="container-fluid" align="center" >
+  <h5><a href="https://www.scaledagileframework.com/" target=_blank">SAFe 5.1</a> Product Owner / Product Master (SPM / SPM)<br><a href="/home/sasm" >SASM</a>, <a href="/home/spo" >SPO</a>, <a href="/home/sdp" >SDP</a></h5>
+  <p><i><small>NB: <u>Underlined links</u> show where User Stories are referred to in the BOK. I.e. do not fool yourself that Features are not based on Quality User Stories!</u></small></i></p>
+  <p><a class="right carousel-control " href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="0"
+      title=""><small>Value Streams</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="1"
+      title=""><small>Types of Value Streams</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="2"
+      title=""><small>Solution</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="3"
+	  title=""><small>House of Lean (AMan4D)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="4"
+	       title=""><small>Agile Manifesto 12P's</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="5"
+	      title=""><small>SAFe Lean Agile 10P's</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="6"
+	  title=""><small><u>Agile Team? (Resp+Roles)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="7"
+	  	  title=""><small>ART? Cross-Func</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="8"
+		   title=""><small><u>POPM leads ART + Focus Areas</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="9"
+	    title=""><small><u>POPM Governance</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="10"
+	  	  title=""><small>ART Roles</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="11"
+	  title=""><small>PI Plan PM takes lead</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="12"
+	  title=""><small><u>Program Increment? + PI Planning? + Benefits</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="13"
+	  	  title=""><small>PI Planning Agenda + Process</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="14"
+	    title=""><small>PI Obj align + Pred uncommitted Objs</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="15"
+		  title=""><small>Prod Sol Vision + Strat Themes</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="16"
+	  title=""><small>PM + Future State of Vision</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="17"
+	title=""><small>Sol Roadmap Multi-Year View</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="18"
+	    title=""><small>Market Unpredictibitity</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="19"
+	  	  title=""><small><u>SAFe Requirements Epic Feature Story etc.</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="20"
+	    title=""><small>More about Epics</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="21"
+	      title=""><small><u>More on Features</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="22"
+	  	  title=""><small><u>Definition of Done</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="23"
+	  	  	  title=""><small><u>Backlogs</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="24"
+	  	  title=""><small>Architecture</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="25"
+	  	  title=""><small><u>Kanban</u></small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="26"
+	  	  title=""><small>Priotorization + [AP]</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="27"
+	  	  title=""><small>Cost of Delay Examples and WSJF</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="28"
+   title=""><small>PI Prep</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="29"
+      title=""><small>Leading PI Planning</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="30"
+	  	  title=""><small><u>POPM Day 1?</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="31"
+	  	  title=""><small><u>POPM Day 2? + PI PBJs</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="32"
+	  title=""><small>Assigning Business Value</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="33"
+	  title=""><small>Manage Dependencies</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="34"
+	 	 title=""><small>Program Team Risks</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="35"
+	 	 title=""><small>Final PI Plan</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="36"
+	 	 title=""><small><u>User Stories -> Features</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="37"
+	 	  title=""><small><u>BDD</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="38"
+	  title=""><small><u>Iteration Planning</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="39"
+	  title=""><small><u>Team Capacity</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="40"
+	  	  title=""><small><u>Iteration Goal</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="41"
+		    title=""><small>Team Kanban</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="42"
+	  title=""><small><u>DSU</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="43"
+	    title=""><small><u>Backlog Ref Workshop (AP)</u></small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="44"
+	  	  title=""><small><u>Iteration Review (Done Stories)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="45"
+
+
+
+
+	  title=""><small><u>Retro (RELENTLESS IMPROVEMENT)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="46"
+	  title=""><small><u>DevOps CDP</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="47"
+	  	  title=""><small>PO Sync</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="48"
+
+		  	  	  title=""><small>System Demo (AP)</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="49"
+				  		  	  	  title=""><small><u>Innovation</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="50"
+								   	  	  title=""><small>Inspect and Adapt</small></a><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="51"
+
+
+
+
+
+
+
+
+
+
+
+  </p>
+</div>
+
+<div id="i" class="carousel slide" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#i" data-slide-to="0" title="Value Stream?" class="active"></li>
+	  		 <li data-target="#i" data-slide-to="1" title="Types of Value Streams"></li>
+	      <li data-target="#i" data-slide-to="2" title="What is a Solution?"></li>
+		    <li data-target="#i" data-slide-to="3" title="House Of Lean"></li>
+			 <li data-target="#i" data-slide-to="4" title="Agile Manifesto 12 Principles"></li>
+			   <li data-target="#i" data-slide-to="5" title="SAFe Lean Agile 10 Principles"></li>
+			 <li data-target="#i" data-slide-to="6" title="What is an Agile Team (Responsibilities and Roles)"></li>
+			   	 	    <li data-target="#i" data-slide-to="7" title="ART? and Cross Func"></li>
+			   	     <li data-target="#i" data-slide-to="8" title="POPM leads ART + Focus Areas"></li>
+			   	     <li data-target="#i" data-slide-to="9" title="POPM Governance"></li>
+			       <li data-target="#i" data-slide-to="10" title="ART Roles"></li>
+			   	  <li data-target="#i" data-slide-to="11" title="PI Planning Its the PM that takes lead"></li>
+			   	  	  <li data-target="#i" data-slide-to="12" title="Program Increment? + PI Planning? + Benefits"></li>
+			    	  <li data-target="#i" data-slide-to="13" title="PI Planning Agenda + Process"></li>
+			   	    <li data-target="#i" data-slide-to="14" title="PI Objectives alignment + Maintain Predicability with uncommitted Objectives"></li>
+						<li data-target="#i" data-slide-to="15" title="Product Solution Vision + Strategic Themes"></li>
+								<li data-target="#i" data-slide-to="16" title="M Expresses Future State of the Vision"></li>
+											<li data-target="#i" data-slide-to="17" title="Solution Roadmap Multi-Year View"</li>
+						<li data-target="#i" data-slide-to="18" title="Market Unpredictibility"</li>
+										<li data-target="#i" data-slide-to="19" title="SAFe Requirements Epic Feature Story etc."></li>
+								<li data-target="#i" data-slide-to="20" title="More about Epics"></li>
+							<li data-target="#i" data-slide-to="21" title="Features: Design Tools, refinement and etc."></li>
+																				<li data-target="#i" data-slide-to="22" title="Definition of Done"></li>
+						<li data-target="#i" data-slide-to="23" title="Backlogs"></li>
+									<li data-target="#i" data-slide-to="24" title="Architecture"></li>
+									<li data-target="#i" data-slide-to="25" title="Kanban"></li>
+   <li data-target="#i" data-slide-to="26" title="Priotorization + [AP]"></li>
+						<li data-target="#i" data-slide-to="27" title="Cost of Delay Examples and WSJF"></li>
+						<li data-target="#i" data-slide-to="28" title="PI Preparation"></li>
+							<li data-target="#i" data-slide-to="29" title="Leading PI Planning"></li>
+									<li data-target="#i" data-slide-to="29" title="POPM Day 1"></li>
+								<li data-target="#i" data-slide-to="30" title="POPM Day 2? + PI OBJs"></li>
+				<li data-target="#i" data-slide-to="31" title="Assigning Business Value"></li>
+					<li data-target="#i" data-slide-to="32" title="Manage Dependencies"></li>
+				<li data-target="#i" data-slide-to="33" title="Program, Team and other Risks"></li>
+											<li data-target="#i" data-slide-to="34" title="Final PI Plan"></li>
+									<li data-target="#i" data-slide-to="35" title="User Stories -> Features"></li>
+										<li data-target="#i" data-slide-to="36" title="BDD"></li>
+												<li data-target="#i" data-slide-to="37" title="Iteration Planning"></li>
+											<li data-target="#i" data-slide-to="38" title="Team Capacity"></li>
+																<li data-target="#i" data-slide-to="39" title="Iteration Goals"></li>
+							<li data-target="#i" data-slide-to="40" title="Team Kanban"></li>
+								<li data-target="#i" data-slide-to="41" title="DSU"></li>
+												<li data-target="#i" data-slide-to="42" title="Backlog Refinement Workshop (AP)"></li>
+								<li data-target="#i" data-slide-to="43" title="Iteration Review Done Stories"></li>
+																						<li data-target="#i" data-slide-to="44" title="Retro Relentless Improvement"></li>
+
+																							<li data-target="#i" data-slide-to="45" title="DevOps CDP"></li>
+																								<li data-target="#i" data-slide-to="46" title="PO Sync"></li>
+
+
+																									<li data-target="#i" data-slide-to="47" title="System Demo (AP)"></li>
+
+																										<li data-target="#i" data-slide-to="48" title="Innovation"></li>
+
+																										<li data-target="#i" data-slide-to="49" title="Inspect and Adapt"></li>
+
+
+
+
+
+
+  </ol>
+
+
+
+
+
+
+
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active" align="center">
+
+      <div class="container" style="max-width:70%">
+      <h5>Value Streams</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/001.png') }}"><br>
+
+
+
+
+	  <br><br>
+      </div>
+    </div>
+
+	  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Types of Value Streams</h5>
+		  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/001a.png') }}"><br>
+
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/001b.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/002.png') }}"><br>
+	  	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/002a.png') }}"><br>
+		   	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/003a.png') }}"><br>
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>What is a Solution?</h5>
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/003.png') }}"></p>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>House of Lean (Lean Agile Mindset)</h5>
+
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/004.png') }}"></p>
+
+      </div>
+    </div>
+
+
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Agile Manifesto 12 Principles</h5>
+	 	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/005a.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/005b.png') }}"></p>
+
+
+      </div>
+    </div>
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Lean Agile 10 Principles</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/006.png') }}"></p>
+	<br><br>
+      </div>
+
+
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>What is an Agile Team + Responsibilities and Roles</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/007.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/007b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/007c.png') }}"></p>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ART and Cross-Functional</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/008a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/008b.png') }}"></p>
+
+
+
+			<br><br>
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>POPM Leads the ART + Focus Areas</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/009a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/009b.png') }}"></p>
+
+	<br><br>
+      </div>
+    </div>
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>POPM Governance</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/010.png') }}"><br><br>
+   </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ART Roles</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/011.png') }}"><br><br>
+      </div>
+    </div>
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>In PI Planning its the PM that takes the lead (Both Essential for Success)</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/012.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/012b.png') }}"></p>
+
+	<br><br>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Program Increment? + PI Planning? + Benefits</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/013a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/013b.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/013c.png') }}"></p>
+
+
+	<br><br>
+
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Planning Agenda + Process</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/014a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/014b.png') }}"></p>
+
+	<br><br>
+
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Objectives alignment + Predictability with uncommitted Objectivs</h5>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/015a.png') }}"></p>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/015b.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Product Solution Vision + Strategic Themes</h5>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/016.png') }}"></p>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/016b.png') }}"></p><br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Product Management creates the Vision for the ART + Expresses Future State of the Vision</h5>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/017.png') }}"></p>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/017b.png') }}"></p>
+			<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/017c.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Solution Roadmap Multi-Year View</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018d.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018e.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Market Unpredictibility</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/019.png') }}"><br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Requirements Epic Feature Story etc.</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/020.png') }}"><br><br>
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>More about Epics</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/021.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/021b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/021c.png') }}"></p>
+
+
+		<br><br>
+      </div>
+    </div>
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Features: Design Tools, Refinement etc.</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022a.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022b.png') }}"></p>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022c.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022d.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022e.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Definition of Done</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023c.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023d.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023e.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023f.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023g.png') }}"></p>
+	<br><br>
+
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Backlogs</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/024a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/024b.png') }}"></p>
+	<br><br>
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Architecture</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/025a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/025b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/025c.png') }}"></p>
+	<br><br>
+      </div>
+    </div>
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Kanban</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/026a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/026b.png') }}"></p>
+
+	<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Priotorization</h5>
+
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/027a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/027b.png') }}"></p><br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Cost of Delay Examples & WSJF</h5>
+
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028b.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028c.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028e.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028d.png') }}"></p>
+
+
+
+	<br><br>
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Preparation</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/029.png') }}"><br><br>
+      </div>
+    </div>
+
+						    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Leading PI Planning</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/030.png') }}"><br><br>
+      </div>
+    </div>
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>POPM PI Planning Day 1 Some slides from the course</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031aa.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031bb.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031d.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031e.png') }}"></p>
+
+
+		<br><br>
+      </div>
+    </div>
+
+						    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>POPM PI Planning Day 2 Some slides from the course</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032d.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032e.png') }}"></p>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032f.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032g.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+							    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Assigning Business Value</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/033a.png') }}"></p>
+
+
+	<br><br>
+      </div>
+    </div>
+
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Manage Dependencies</h5>
+
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/034a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/034b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/034c.png') }}"></p>
+
+	<br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Program, Team and other Risks</h5>
+
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/035a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/035b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/035c.png') }}"></p>
+
+	<br><br>
+      </div>
+    </div>
+
+			    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Final PI Plan</h5>
+
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/036a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/036b.png') }}"></p>
+
+
+	<br><br>
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>User Stories -> Features</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037c.png') }}"></p>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037d.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037e.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037f.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037g.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037h.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037i.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037j.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037k.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037l.png') }}"></p>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037m.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037n.png') }}"></p>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037o.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Behaviour Driver Development</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/038a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/038b.png') }}"></p>
+			<br><br>
+      </div>
+    </div>
+
+
+							    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Planning</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039d.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039e.png') }}"></p><p align="centere">
+		<img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039f.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+								    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Capacity</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040d.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040e.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040f.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040g.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040h.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040i.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040j.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Goals</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/041a.png') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/041b.png') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/041c.png') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/041d.png') }}"></p>
+<br><br>
+    </div>
+    </div>
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Kanban</h5>
+    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/042a.png') }}"></p>
+	<br><br>
+    </div>
+    </div>
+
+
+							<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>DSU</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/043a.png') }}"></p>
+
+
+<br><br>
+    </div>
+    </div>
+
+									<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Backlog Refinement Workshop</h5>
+
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/044a.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/044b.png') }}"></p>
+
+	<br><br>
+    </div>
+    </div>
+
+
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Review (Done Stories) Metrics and Relentless Improvement</h5>
+
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045a.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045b.png') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045c.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045d.png') }}"></p>
+	  	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045e.png') }}"></p>
+
+
+	<br><br>
+    </div>
+    </div>
+
+
+
+
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Retro Relentless Improvement</h5>
+
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/046a.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/046b.png') }}"></p>
+
+
+	<br><br>
+    </div>
+    </div>
+
+
+
+									<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>DevOps and the CDP</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047a.png') }}"></p>
+    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047b.png') }}"></p>
+	   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047c.png') }}"></p>
+    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047d.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047e.png') }}"></p>
+	    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047f.png') }}"></p>
+
+
+
+   <br><br>
+    </div>
+    </div>
+
+									<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PO Sync</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/048a.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/048b.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/048c.png') }}"></p>
+		    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/048d.png') }}"></p>
+
+
+   <br><br>
+    </div>
+    </div>
+
+
+										<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>System Demo (AP)</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/049a.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/049b.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/049c.png') }}"></p>
+		   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/049c.png') }}"></p>
+
+
+
+   <br><br>
+    </div>
+    </div>
+
+
+										<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Innovation</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050a.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050b.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050c.png') }}"></p>
+		    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050d.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050e.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050f.png') }}"></p>
+		 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050g.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050h.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050i.png') }}"></p>
+
+
+   <br><br>
+    </div>
+    </div>
+
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Inspect and Adapt (Its 3 Parts)</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051a.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051b.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051c.png') }}"></p>
+		  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051d.png') }}"></p>
+		   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051e.png') }}"></p>
+		    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051f.png') }}"></p>
+			 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051g.png') }}"></p>
+
+
+
+   <br><br>
+    </div>
+    </div>
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+	</div>
+</div>
+
+
+
+
+
+<a class="carousel-control-prev" href="#i" role="button" data-slide="prev">
+  <i class="fas fa-lg fa-chevron-left" style="color:black"></i>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#i" role="button" data-slide="next">
+  <i class="fas fa-lg fa-chevron-right" style="color:black"></i>
+
+  <span class="sr-only">Next</span>
+</a>
+<br><br>
+<hr>
+<h5 align="center"><small><b>Bottom Line:</b> Increment by increment can your team run with and demo <b>Quality User Stories</b> per the SAFe Scrum processes in the image below?<br>I.e. per the <a href="/scrumrca" >"Snowflake Scrum dysfunction" and others</a> <i><b>You either do Scrum or you don't do Scrum</b></i>.<br>Modifying Scrum does not fix the problems.  Modifying Scrum will likely hide your problems for a little while.  When the problems are hidden, it may feel better, but those problems are still there.<br>Ultimately, they will manifest as a lack of business agility and dysfunction.</small></h5>
+<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/mvp.jpg') }}"></p><br>
+<div align="center">
+
+<h5>Becoming a Product Owner/Product Manager in the SAFe enterprise (10%)</h5>
+	<p><a href="{{ asset('storage/assets/SAFe Lean-Agile Principles - Scaled Agile Framework.pdf') }}" >SAFe Lean Agile Principles</a></p>
+
+<p><a href="{{ asset('storage/assets/Principle1Takeaneconomicview.pdf') }}" >Principle #1 – Take an economic view </a></p>
+<p><a href="{{ asset('storage/assets/Principle2Applysystemsthinking.pdf') }}" >Principle #2 – Apply systems thinking </a></p>
+<p><a href="{{ asset('storage/assets/Principle3Assumevariabilitypreserveoptions.pdf') }}" >Principle #3 – Assume variability preserve options </a></p>
+<p><a href="{{ asset('storage/assets/Principle4Buildincrementallywithfastintegratedlearningcycles.pdf') }}" >Principle #4 – Build incrementally with fast learning cycles </a></p>
+<p><a href="{{ asset('storage/assets/Principle5BaseMilestonesonObjectiveEvaluationofWorkingSystems.pdf') }}" >Principle #5 – Base Milestones on Objective Evaluation of Working Systems </a></p>
+<p><a href="{{ asset('storage/assets/Principle6VisualizeandLimitWIPReduceBatchSizesandManageQueueLengths.pdf') }}" >Principle #6 – Visualize and Limit WIP Reduce Batch Sizes and Manage Queue Lengths </a></p>
+<p><a href="{{ asset('storage/assets/Principle7Applycadencesynchronizewithcrossdomainplanning.pdf') }}" >Principle #7 – Apply cadence synchronize with cross domain planning </a></p>
+<p><a href="{{ asset('storage/assets/Principle8UnlocktheIntrinsicMotivationofKnowledgeWorkers.pdf') }}" >Principle #8 – Unlock the Intrinsic Motivation of Knowledge Workers </a></p>
+<p><a href="{{ asset('storage/assets/Principle9DecentralizeDecisionMaking.pdf') }}" >Principle #9 – Decentralize Decision Making </a></p>
+<p><a href="{{ asset('storage/assets/Principle10Organizearoundvalue.pdf') }}" >Principle #10 – Organize around value </a></p>
+
+
+
+<h5>Preparing for PI Planning (30%)</h5>
+<p><a href="{{ asset('storage/assets/Principle3Assumevariabilitypreserveoptions.pdf') }}" >Principle #3 – Assume variability preserve options </a></p>
+<p><a href="{{ asset('storage/assets/Principle5BaseMilestonesonObjectiveEvaluationofWorkingSystems.pdf') }}" >Principle #5 – Base Milestones on Objective Evaluation of Working Systems </a></p>
+<p><a href="{{ asset('storage/assets/Principle9DecentralizeDecisionMaking.pdf') }}" >Principle #9 – Decentralize Decision Making </a></p>
+<h5>Leading PI Planning (20%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeEpic.pdf') }}" >Epic </a></p>
+
+<h5>Executing Iterations (30%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeContinuousExploration.pdf') }}" >Continuous Exploration </a></p>
+<p><a href="{{ asset('storage/assets/SAFeCustomerCentricity.pdf') }}" >Customer Centricity </a></p>
+<p><a href="{{ asset('storage/assets/SAFeVision.pdf') }}" >Vision </a></p>
+<p><a href="{{ asset('storage/assets/SAFeRoadmap.pdf') }}" >Roadmap </a></p>
+<p><a href="{{ asset('storage/assets/SAFeProductManagement.pdf') }}" >Product and Solution Management </a></p>
+<p><a href="{{ asset('storage/assets/SAFeProgramandSolutionBacklogs.pdf') }}" >Program and Solution Backlogs </a></p>
+	  <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+
+
+<h5>Executing the PI (10%)</h5>
+	  <p><a href="{{ asset('storage/assets/SAFeEnablers.pdf') }}" >SAFe Enablers</a></p>
+	   <p><a href="{{ asset('storage/assets/SAFePreandPostPIPlanning.pdf') }}" >SAFe Pre and Post PI Planning</a></p>
+	    <p><a href="{{ asset('storage/assets/SAFeReleaseonDemand1.pdf') }}" >SAFe Release on Demand</a></p>
+
+	<p align="center">>>>|<<<</p>
+	<p><a href="{{ asset('storage/assets/WhatsAProductOwnerToDo.pdf') }}" >What's a Product Owner to do?</a></p>
+<p><a href="/home/leanagilemindset" >Lean Agile Mindset video</a></p>
+<p><a href="/home/safeuserstories" >SAFe User Stories video</a></p>
+<p><a href="/home/powerofpiplanning" >Power of PI Planning video</a></p>
+<p><a href="/home/strategicthemes" >Strategic Themes video</a></p>
+	<p><a href="{{ asset('storage/assets/DesignThinkingSafe.pdf') }}" >SAFe Design Thinking</a></p>
+<p><a href="/home/distributedteams" >Distributed Teams video</a></p>
+	<p><a href="{{ asset('storage/assets/SAFeBacklogs.pdf') }}" >SAFe Backlogs</a></p>
+		<p><a href="{{ asset('storage/assets/SAFePIObjectives.pdf') }}" >SAFe PI Objectives</a></p>
+		<p><a href="/home/wsjf" >WSJF video</a></p>
+			<p><a href="/home/wsjftwo" >WSJF 2 video</a></p>
+			<p><a href="/home/piplanningprep" >PI Planning Preparation video</a></p>
+	<p><a href="/home/safeprogramboard" >The Program Board video</a></p>
+		<p><a href="/home/introtopiplanning" >Intro to PI Planning</a></p>
+				<p><a href="/home/iterationplanning" >Iteration Planning</a></p>
+					<p><a href="/home/dsu" >DSU video</a></p>
+					<p><a href="/home/howtodsutwo" >How To DSU another video</a></p>
+					<p><a href="/home/backlogrefinement" >Backlog Refinement Workshop video</a></p>
+						<p><a href="/home/iterationreview" >Iteration Review video</a></p>
+						<p><a href="/home/howtoiterationplanning" >How To Iteration Planning Review videos</a></p>
+							<p><a href="/home/saferetro" >SAFe Retro video</a></p>
+							<p><a href="/home/safedevops" >DevOps and Continuous Delivery Pipeline videos</a></p>
+							<br><br>
+
+	<p align="center">>>>|<<<</p>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p><a href="{{ asset('storage/assets/SAFeSystemDemo.pdf') }}" >SAFe System Demo</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeScrumMaster.pdf') }}" >SAFe Scrum Master role</a></p>
+	  <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+	    <p><a href="{{ asset('storage/assets/SAFeRequirementsModel.pdf') }}" >SAFe Requirements Model</a></p>
+
+
+		  <p><a href="{{ asset('storage/assets/SAFeIterations.pdf') }}" >SAFe Iterations:  Plan, Execution, Review, Retrospect</a><br>
+		 <small>Note: in the article above on page 4 find this essential truth for Scrum success: "<b><a href="images/scrumvaluemodelessence.jpg" ><u>The Product Owner defines the ‘WHAT (and WHEN)’; the team defines ‘HOW’ and ‘HOW MUCH’</b></u></a>."</small></p>
+
+
+	   <p><a href="{{ asset('storage/assets/SAFeInnovationandPlanningIteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+
+ <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+  <p><a href="{{ asset('storage/assets/SAFeEssentialSafe.pdf') }}" >Essential SAFe and Core Competencies</a></p>
+    <p><a href="{{ asset('storage/assets/SAFePIPlanning.pdf') }}" >SAFe PI Planning</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeDevOps.pdf') }}" >SAFe DevOps</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeContinuousDeliveryPipeline.pdf') }}" >SAFe Continuous Delivery Pipeline</a></p>
+	 	  <p><a href="{{ asset('storage/assets/SAFeReleaseonDemand.pdf') }}" >SAFe Release on Demand</a></p>
+		  		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		 		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		   <p><a href="{{ asset('storage/assets/SAFeART.pdf') }}" >SAFe ART</a></p>
+		    <p><a href="{{ asset('storage/assets/SAFeBusinessOwners.pdf') }}" >SAFe Business Owners</a></p>
+			  <p><a href="{{ asset('storage/assets/SAFeContinuousIntegration.pdf') }}" >SAFe Continuous Integration</a></p>
+			   <p><a href="{{ asset('storage/assets/SAFEFeaturesCapabilities.pdf') }}" >SAFe Features and Capabilities</a></p>
+			     <p><a href="{{ asset('storage/assets/SAFeLeanPortfolioManagement.pdf') }}" >SAFe Lean Portfolio Management</a></p>
+				   <p><a href="{{ asset('storage/assets/SAFeNonfunctionalRequirements.pdf') }}" >SAFe Non Functional Requirements</a></p>
+				    <p><a href="{{ asset('storage/assets/SAFeProgramIncrement.pdf') }}" >SAFe Program Increment</a></p>
+					 <p><a href="{{ asset('storage/assets/SAFeSolution.pdf') }}" >SAFe Solution</a></p>
+
+
+
+
+
+
+
+	<p><a href="/pmway/?slide=4" >Tie the logic above to the Capability Maturity model for operations above CM L1</a></p>
+		<br>
+						<p>Per the <a href="/agile?slide=12" >Agile Manifesto</a> acceptance is based on working software (improvements) / business value that can be released.  <br>A Product Owner approved Demo Deck (as key project artifact [Tying together PMC with PP (at User Story level)]) from each iteration review is (in PMWay's experience and opinion) best way to run Scrum at CM L2+.</p>
+						<p>From the article "SAFe User Story" above the image below is essential to appreciate and adopt if Professional scrum of  scrums at scale within SAFe is the goal.</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/safestoryfeature.png') }}"></p>
+						<p>and then extending this into the SAFe environment for Capabilities and Epics</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/saferequirementsmodel.png') }}"></p>
+						<p>Clearly the Product Owner's role is essential.  But always remember that the Scrum Master's role to reinforce Scrum Process (balance the make it so! / and deliver what by when!? forces) for team sanity and health is just as essential!</p>
+						<p>With the above in mind why not <a href="/pin"  >take the pin test to pin down</a> where you believe you are operating at.</p>
+
+
+
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepmboksixone" aria-expanded="false" aria-controls=
+        "collapsepmboksixone">PMWay Opinion about SAFe
+</button>
+
+<div class="collapse" id="collapsepmboksixone">
+    <div class="container">
+        <div class="card text-center">
+<h5 class="card-header" align="center"></h5>
+            <div class="card-body text-center">
+
+<p>It is the considerecd opinion of PMWay that with teams that (and are forced to) operate at <a href="/pmway/?slide=4" target=_blank">Capability Maturity Level 1</a><br>([Features from PI from Executive Pressure that force down on and kill agility found in User Stories (Teams not bothering - what's the use? - to compile User Stories)] and [<a href="/redbeads" >Deming's red bead experiment</a>] without PP and PMC at the level of the professional User Story)  <a href="/home/safeisunsafe"  > etc.<br>then SAFe is definitely UNSAFe</a>.</p>
+	<p>I.e. From the SAFe is unsafe article link above</p> <div align="center">
+Ken Schwaber, co-developer of srcum <a href="https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/" ><u>expressed serious concerns about SAFe</u></a> as early as 2013.<br>
+Nicholas M. Chaillan, U.S. Air Force Chief Software Officer, <a href="https://twitter.com/lukadotnet/status/1203751211817742336?s=20" ><u>discourages</u></a> “using rigid, presrciptive frameworks such as the Scaled Agile Framework (SAFe).”<br>
+Forbes contributor Steve Denning <a href="https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/#316e49034bbe" ><u>calls out</u></a> SAFe for being “ particularly worrying” in his article on how to spot fake Agile.<br>
+Marty Cagan of the Silicon Valley Product Group <a href="https://svpg.com/revenge-of-the-pmo/" ><u>explains</u></a> how SAFe is antithetical to the mindset of Silicon Valley companies.
+</div><br><img alt="SAFe should be (like a loaded gun) kept locked up in a safe" class="img-fluid"  src="{{ asset('storage/images/safefive/safelylockedup.png') }}" title="Like a loaded gun with children best to keep it locked up in a SAFe before someone gets really hurt"><img alt="Due to the heroics and pressure to push features down on developers your human resources will ... runaway!" class="img-fluid"  src="{{ asset('storage/images/safefive/runaway.png') }}" title="Why can we not keep our good people"><br><img alt="fast path to mediocracy" class="img-fluid"  src="{{ asset('storage/images/safefive/mediocracy.png') }}" title="Classic ignorance of the wisdom of Deming and a total lack of understanding of scrum.  The Mike Cohn video on YouTube about User Stories explains the problem and how to solve it"></p>
+
+
+
+
+
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+ </div>
+</div>
+
+
+    <script src="/bootstrapfourfivetwo/js/jquery.js"></script>
+    <script src="/bootstrapfourfivetwo/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/bootstrapfourfivetwo/css/jquery-ui.css"></link>
+<script>
+  $(document).ready(function () {
+    function qs(key) {
+      key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+      var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+      var slide = match && decodeURIComponent(match[1].replace(/\+/g, " "));
+      if (Math.floor(slide) == slide && $.isNumeric(slide))
+        return parseInt(slide);
+      else
+        return 0;
+    }
+    $('#i').carousel((qs('slide')) - 1);
+  });
+</script>
+<br>
+<br>
+<br>
+<br>
+
+{% endif %}
+
+
+{% if not user %} 	<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+{#  #}
+
+<style>
+
+
+/* a:link {color:#00FF00} */
+/* a:visited {color:#00FF00} */
+/* a:hover {color:#FF00FF} */
+a:focus {background: yellow;
+  color: navy; } /* this one! */
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) {
+   .carousel-indicators {
+
+    bottom: -35px;
+
+
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+   .carousel-indicators {
+    position: relative;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+
+
+  }
+}
+   .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+
+  }
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+
+  }
+
+
+
+
+
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+
+  }
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+     .carousel-indicators {
+    position: absolute;
+    bottom: -35px;
+	width: auto;
+  }
+
+  .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #040404;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  /*carousel indicators */
+  .carousel-indicators li,
+    {
+    background: #f00 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: 30px;
+    margin: 3px;
+    opacity: 0.5;
+    width: 30px;
+  }
+
+  /*active slide indicator */
+  .carousel-indicators .active {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #040404;
+  }
+}
+
+
+
+
+
+  small {
+    font-size:8pt;
+}
+
+
+</style>
+
+
+<div class="container-fluid" align="center" >
+  <h5><a href="https://www.scaledagileframework.com/" target=_blank">SAFe 5.1</a> Product Owner / Product Master (SPM / SPM)<br><a href="/home/sasm" >SASM</a>, <a href="/home/spo" >SPO</a>, <a href="/home/sdp" >SDP</a></h5>
+  <p><i><small>NB: <u>Underlined links</u> show where User Stories are referred to in the BOK. I.e. do not fool yourself that Features are not based on Quality User Stories!</u></small></i></p>
+  <p><a class="right carousel-control " href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="0"
+      title=""><small>Value Streams</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="1"
+      title=""><small>Types of Value Streams</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="2"
+      title=""><small>Solution</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="3"
+	  title=""><small>House of Lean (AMan4D)</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="4"
+	       title=""><small>Agile Manifesto 12P's</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="5"
+	      title=""><small>SAFe Lean Agile 10P's</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="6"
+	  title=""><small><u>Agile Team? (Resp+Roles)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="7"
+	  	  title=""><small>ART? Cross-Func</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="8"
+		   title=""><small><u>POPM leads ART + Focus Areas</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="9"
+	    title=""><small><u>POPM Governance</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="10"
+	  	  title=""><small>ART Roles</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="11"
+	  title=""><small>PI Plan PM takes lead</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="12"
+	  title=""><small><u>Program Increment? + PI Planning? + Benefits</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="13"
+	  	  title=""><small>PI Planning Agenda + Process</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="14"
+	    title=""><small>PI Obj align + Pred uncommitted Objs</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="15"
+		  title=""><small>Prod Sol Vision + Strat Themes</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="16"
+	  title=""><small>PM + Future State of Vision</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="17"
+	title=""><small>Sol Roadmap Multi-Year View</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="18"
+	    title=""><small>Market Unpredictibitity</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="19"
+	  	  title=""><small><u>SAFe Requirements Epic Feature Story etc.</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="20"
+	    title=""><small>More about Epics</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="21"
+	      title=""><small><u>More on Features</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="22"
+	  	  title=""><small><u>Definition of Done</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="23"
+	  	  	  title=""><small><u>Backlogs</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="24"
+	  	  title=""><small>Architecture</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="25"
+	  	  title=""><small><u>Kanban</u></small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="26"
+	  	  title=""><small>Priotorization + [AP]</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="27"
+	  	  title=""><small>Cost of Delay Examples and WSJF</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="28"
+   title=""><small>PI Prep</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="29"
+      title=""><small>Leading PI Planning</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="30"
+	  	  title=""><small><u>POPM Day 1?</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="31"
+	  	  title=""><small><u>POPM Day 2? + PI PBJs</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="32"
+	  title=""><small>Assigning Business Value</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="33"
+	  title=""><small>Manage Dependencies</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="34"
+	 	 title=""><small>Program Team Risks</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="35"
+	 	 title=""><small>Final PI Plan</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="36"
+	 	 title=""><small><u>User Stories -> Features</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="37"
+	 	  title=""><small><u>BDD</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="38"
+	  title=""><small><u>Iteration Planning</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="39"
+	  title=""><small><u>Team Capacity</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="40"
+	  	  title=""><small><u>Iteration Goal</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="41"
+		    title=""><small>Team Kanban</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="42"
+	  title=""><small><u>DSU</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="43"
+	    title=""><small><u>Backlog Ref Workshop (AP)</u></small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="44"
+	  	  title=""><small><u>Iteration Review (Done Stories)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="45"
+
+
+
+
+	  title=""><small><u>Retro (RELENTLESS IMPROVEMENT)</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="46"
+	  title=""><small><u>DevOps CDP</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="47"
+	  	  title=""><small>PO Sync</small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="48"
+
+		  	  	  title=""><small>System Demo (AP)</small></a><br><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="49"
+				  		  	  	  title=""><small><u>Innovation</u></small></a>|<a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="50"
+								   	  	  title=""><small>Inspect and Adapt</small></a><a class="right carousel-control" href="#carousel-example-generic" role="button" data-target="#i" data-slide-to="51"
+
+
+
+
+
+
+
+
+
+
+
+  </p>
+</div>
+
+<div id="i" class="carousel slide" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#i" data-slide-to="0" title="Value Stream?" class="active"></li>
+	  		 <li data-target="#i" data-slide-to="1" title="Types of Value Streams"></li>
+	      <li data-target="#i" data-slide-to="2" title="What is a Solution?"></li>
+		    <li data-target="#i" data-slide-to="3" title="House Of Lean"></li>
+			 <li data-target="#i" data-slide-to="4" title="Agile Manifesto 12 Principles"></li>
+			   <li data-target="#i" data-slide-to="5" title="SAFe Lean Agile 10 Principles"></li>
+			 <li data-target="#i" data-slide-to="6" title="What is an Agile Team (Responsibilities and Roles)"></li>
+			   	 	    <li data-target="#i" data-slide-to="7" title="ART? and Cross Func"></li>
+			   	     <li data-target="#i" data-slide-to="8" title="POPM leads ART + Focus Areas"></li>
+			   	     <li data-target="#i" data-slide-to="9" title="POPM Governance"></li>
+			       <li data-target="#i" data-slide-to="10" title="ART Roles"></li>
+			   	  <li data-target="#i" data-slide-to="11" title="PI Planning Its the PM that takes lead"></li>
+			   	  	  <li data-target="#i" data-slide-to="12" title="Program Increment? + PI Planning? + Benefits"></li>
+			    	  <li data-target="#i" data-slide-to="13" title="PI Planning Agenda + Process"></li>
+			   	    <li data-target="#i" data-slide-to="14" title="PI Objectives alignment + Maintain Predicability with uncommitted Objectives"></li>
+						<li data-target="#i" data-slide-to="15" title="Product Solution Vision + Strategic Themes"></li>
+								<li data-target="#i" data-slide-to="16" title="M Expresses Future State of the Vision"></li>
+											<li data-target="#i" data-slide-to="17" title="Solution Roadmap Multi-Year View"</li>
+						<li data-target="#i" data-slide-to="18" title="Market Unpredictibility"</li>
+										<li data-target="#i" data-slide-to="19" title="SAFe Requirements Epic Feature Story etc."></li>
+								<li data-target="#i" data-slide-to="20" title="More about Epics"></li>
+							<li data-target="#i" data-slide-to="21" title="Features: Design Tools, refinement and etc."></li>
+																				<li data-target="#i" data-slide-to="22" title="Definition of Done"></li>
+						<li data-target="#i" data-slide-to="23" title="Backlogs"></li>
+									<li data-target="#i" data-slide-to="24" title="Architecture"></li>
+									<li data-target="#i" data-slide-to="25" title="Kanban"></li>
+   <li data-target="#i" data-slide-to="26" title="Priotorization + [AP]"></li>
+						<li data-target="#i" data-slide-to="27" title="Cost of Delay Examples and WSJF"></li>
+						<li data-target="#i" data-slide-to="28" title="PI Preparation"></li>
+							<li data-target="#i" data-slide-to="29" title="Leading PI Planning"></li>
+									<li data-target="#i" data-slide-to="29" title="POPM Day 1"></li>
+								<li data-target="#i" data-slide-to="30" title="POPM Day 2? + PI OBJs"></li>
+				<li data-target="#i" data-slide-to="31" title="Assigning Business Value"></li>
+					<li data-target="#i" data-slide-to="32" title="Manage Dependencies"></li>
+				<li data-target="#i" data-slide-to="33" title="Program, Team and other Risks"></li>
+											<li data-target="#i" data-slide-to="34" title="Final PI Plan"></li>
+									<li data-target="#i" data-slide-to="35" title="User Stories -> Features"></li>
+										<li data-target="#i" data-slide-to="36" title="BDD"></li>
+												<li data-target="#i" data-slide-to="37" title="Iteration Planning"></li>
+											<li data-target="#i" data-slide-to="38" title="Team Capacity"></li>
+																<li data-target="#i" data-slide-to="39" title="Iteration Goals"></li>
+							<li data-target="#i" data-slide-to="40" title="Team Kanban"></li>
+								<li data-target="#i" data-slide-to="41" title="DSU"></li>
+												<li data-target="#i" data-slide-to="42" title="Backlog Refinement Workshop (AP)"></li>
+								<li data-target="#i" data-slide-to="43" title="Iteration Review Done Stories"></li>
+																						<li data-target="#i" data-slide-to="44" title="Retro Relentless Improvement"></li>
+
+																							<li data-target="#i" data-slide-to="45" title="DevOps CDP"></li>
+																								<li data-target="#i" data-slide-to="46" title="PO Sync"></li>
+
+
+																									<li data-target="#i" data-slide-to="47" title="System Demo (AP)"></li>
+
+																										<li data-target="#i" data-slide-to="48" title="Innovation"></li>
+
+																										<li data-target="#i" data-slide-to="49" title="Inspect and Adapt"></li>
+
+
+
+
+
+
+  </ol>
+
+
+
+
+
+
+
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active" align="center">
+
+      <div class="container" style="max-width:70%">
+      <h5>Value Streams</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/001.png') }}"><br>
+
+
+
+
+	  <br><br>
+      </div>
+    </div>
+
+	  <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Types of Value Streams</h5>
+		  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/001a.png') }}"><br>
+
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/001b.png') }}"><br>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/002.png') }}"><br>
+	  	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/002a.png') }}"><br>
+		   	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/003a.png') }}"><br>
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>What is a Solution?</h5>
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/003.png') }}"></p>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>House of Lean (Lean Agile Mindset)</h5>
+
+      	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/004.png') }}"></p>
+
+      </div>
+    </div>
+
+
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Agile Manifesto 12 Principles</h5>
+	 	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/005a.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/005b.png') }}"></p>
+
+
+      </div>
+    </div>
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Lean Agile 10 Principles</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/006.png') }}"></p>
+	<br><br>
+      </div>
+
+
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>What is an Agile Team + Responsibilities and Roles</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/007.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/007b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/007c.png') }}"></p>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ART and Cross-Functional</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/008a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/008b.png') }}"></p>
+
+
+
+			<br><br>
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>POPM Leads the ART + Focus Areas</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/009a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/009b.png') }}"></p>
+
+	<br><br>
+      </div>
+    </div>
+
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>POPM Governance</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/010.png') }}"><br><br>
+   </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>ART Roles</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/011.png') }}"><br><br>
+      </div>
+    </div>
+
+
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>In PI Planning its the PM that takes the lead (Both Essential for Success)</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/012.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/012b.png') }}"></p>
+
+	<br><br>
+
+      </div>
+    </div>
+
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Program Increment? + PI Planning? + Benefits</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/013a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/013b.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/013c.png') }}"></p>
+
+
+	<br><br>
+
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Planning Agenda + Process</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/014a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/014b.png') }}"></p>
+
+	<br><br>
+
+      </div>
+    </div>
+    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Objectives alignment + Predictability with uncommitted Objectivs</h5>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/015a.png') }}"></p>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/015b.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Product Solution Vision + Strategic Themes</h5>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/016.png') }}"></p>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/016b.png') }}"></p><br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Product Management creates the Vision for the ART + Expresses Future State of the Vision</h5>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/017.png') }}"></p>
+		<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/017b.png') }}"></p>
+			<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/017c.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Solution Roadmap Multi-Year View</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018d.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/018e.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Market Unpredictibility</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/019.png') }}"><br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>SAFe Requirements Epic Feature Story etc.</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/020.png') }}"><br><br>
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>More about Epics</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/021.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/021b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/021c.png') }}"></p>
+
+
+		<br><br>
+      </div>
+    </div>
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Features: Design Tools, Refinement etc.</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022a.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022b.png') }}"></p>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022c.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022d.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/022e.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Definition of Done</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023c.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023d.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023e.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023f.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/023g.png') }}"></p>
+	<br><br>
+
+      </div>
+    </div>
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Backlogs</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/024a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/024b.png') }}"></p>
+	<br><br>
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Architecture</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/025a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/025b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/025c.png') }}"></p>
+	<br><br>
+      </div>
+    </div>
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Kanban</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/026a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/026b.png') }}"></p>
+
+	<br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Priotorization</h5>
+
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/027a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/027b.png') }}"></p><br><br>
+      </div>
+    </div>
+
+	    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Cost of Delay Examples & WSJF</h5>
+
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028a.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028b.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028c.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028e.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/028d.png') }}"></p>
+
+
+
+	<br><br>
+      </div>
+    </div>
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PI Preparation</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/029.png') }}"><br><br>
+      </div>
+    </div>
+
+						    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Leading PI Planning</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/030.png') }}"><br><br>
+      </div>
+    </div>
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>POPM PI Planning Day 1 Some slides from the course</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031aa.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031bb.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031d.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/031e.png') }}"></p>
+
+
+		<br><br>
+      </div>
+    </div>
+
+						    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>POPM PI Planning Day 2 Some slides from the course</h5>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032d.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032e.png') }}"></p>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032f.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/032g.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+							    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Assigning Business Value</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/033a.png') }}"></p>
+
+
+	<br><br>
+      </div>
+    </div>
+
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Manage Dependencies</h5>
+
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/034a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/034b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/034c.png') }}"></p>
+
+	<br><br>
+      </div>
+    </div>
+
+		    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Program, Team and other Risks</h5>
+
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/035a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/035b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/035c.png') }}"></p>
+
+	<br><br>
+      </div>
+    </div>
+
+			    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Final PI Plan</h5>
+
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/036a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/036b.png') }}"></p>
+
+
+	<br><br>
+      </div>
+    </div>
+
+
+				    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>User Stories -> Features</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037c.png') }}"></p>
+				<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037d.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037e.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037f.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037g.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037h.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037i.png') }}"></p>
+					<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037j.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037k.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037l.png') }}"></p>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037m.png') }}"></p>
+						<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037n.png') }}"></p>
+							<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/037o.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+
+					    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Behaviour Driver Development</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/038a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/038b.png') }}"></p>
+			<br><br>
+      </div>
+    </div>
+
+
+							    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Planning</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039b.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039d.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039e.png') }}"></p><p align="centere">
+		<img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/039f.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+
+								    <div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Capacity</h5>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040a.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040b.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040c.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040d.png') }}"></p>
+	<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040e.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040f.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040g.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040h.png') }}"></p>
+			<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040i.png') }}"></p>
+		<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/040j.png') }}"></p>
+		<br><br>
+      </div>
+    </div>
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Goals</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/041a.png') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/041b.png') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/041c.png') }}"></p>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/041d.png') }}"></p>
+<br><br>
+    </div>
+    </div>
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Team Kanban</h5>
+    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/042a.png') }}"></p>
+	<br><br>
+    </div>
+    </div>
+
+
+							<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>DSU</h5>
+<p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/043a.png') }}"></p>
+
+
+<br><br>
+    </div>
+    </div>
+
+									<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Backlog Refinement Workshop</h5>
+
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/044a.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/044b.png') }}"></p>
+
+	<br><br>
+    </div>
+    </div>
+
+
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Iteration Review (Done Stories) Metrics and Relentless Improvement</h5>
+
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045a.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045b.png') }}"></p>
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045c.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045d.png') }}"></p>
+	  	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/045e.png') }}"></p>
+
+
+	<br><br>
+    </div>
+    </div>
+
+
+
+
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Retro Relentless Improvement</h5>
+
+	 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/046a.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/046b.png') }}"></p>
+
+
+	<br><br>
+    </div>
+    </div>
+
+
+
+									<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>DevOps and the CDP</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047a.png') }}"></p>
+    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047b.png') }}"></p>
+	   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047c.png') }}"></p>
+    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047d.png') }}"></p>
+	  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047e.png') }}"></p>
+	    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/047f.png') }}"></p>
+
+
+
+   <br><br>
+    </div>
+    </div>
+
+									<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>PO Sync</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/048a.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/048b.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/048c.png') }}"></p>
+		    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/048d.png') }}"></p>
+
+
+   <br><br>
+    </div>
+    </div>
+
+
+										<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>System Demo (AP)</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/049a.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/049b.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/049c.png') }}"></p>
+		   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/049c.png') }}"></p>
+
+
+
+   <br><br>
+    </div>
+    </div>
+
+
+										<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Innovation</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050a.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050b.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050c.png') }}"></p>
+		    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050d.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050e.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050f.png') }}"></p>
+		 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050g.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050h.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/050i.png') }}"></p>
+
+
+   <br><br>
+    </div>
+    </div>
+
+
+								<div class="carousel-item" align="center">
+      <div class="container" style="max-width:70%">
+        <h5>Inspect and Adapt (Its 3 Parts)</h5>
+   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051a.png') }}"></p>
+      <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051b.png') }}"></p>
+	     <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051c.png') }}"></p>
+		  <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051d.png') }}"></p>
+		   <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051e.png') }}"></p>
+		    <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051f.png') }}"></p>
+			 <p align="centere">   <img alt="" class="img-fluid" src="{{ asset('storage/images/spoimages/051g.png') }}"></p>
+
+
+
+   <br><br>
+    </div>
+    </div>
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+	</div>
+</div>
+
+
+
+
+
+<a class="carousel-control-prev" href="#i" role="button" data-slide="prev">
+  <i class="fas fa-lg fa-chevron-left" style="color:black"></i>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#i" role="button" data-slide="next">
+  <i class="fas fa-lg fa-chevron-right" style="color:black"></i>
+
+  <span class="sr-only">Next</span>
+</a>
+<br><br>
+<hr>
+<h5 align="center"><small><b>Bottom Line:</b> Increment by increment can your team run with and demo <b>Quality User Stories</b> per the SAFe Scrum processes in the image below?<br>I.e. per the <a href="/scrumrca" >"Snowflake Scrum dysfunction" and others</a> <i><b>You either do Scrum or you don't do Scrum</b></i>.<br>Modifying Scrum does not fix the problems.  Modifying Scrum will likely hide your problems for a little while.  When the problems are hidden, it may feel better, but those problems are still there.<br>Ultimately, they will manifest as a lack of business agility and dysfunction.</small></h5>
+<p align="center">   <img alt="" class="img-fluid" src="{{ asset('storage/images/mvp.jpg') }}"></p><br>
+<div align="center">
+
+<h5>Becoming a Product Owner/Product Manager in the SAFe enterprise (10%)</h5>
+	<p><a href="{{ asset('storage/assets/SAFe Lean-Agile Principles - Scaled Agile Framework.pdf') }}" >SAFe Lean Agile Principles</a></p>
+
+<p><a href="{{ asset('storage/assets/Principle1Takeaneconomicview.pdf') }}" >Principle #1 – Take an economic view </a></p>
+<p><a href="{{ asset('storage/assets/Principle2Applysystemsthinking.pdf') }}" >Principle #2 – Apply systems thinking </a></p>
+<p><a href="{{ asset('storage/assets/Principle3Assumevariabilitypreserveoptions.pdf') }}" >Principle #3 – Assume variability preserve options </a></p>
+<p><a href="{{ asset('storage/assets/Principle4Buildincrementallywithfastintegratedlearningcycles.pdf') }}" >Principle #4 – Build incrementally with fast learning cycles </a></p>
+<p><a href="{{ asset('storage/assets/Principle5BaseMilestonesonObjectiveEvaluationofWorkingSystems.pdf') }}" >Principle #5 – Base Milestones on Objective Evaluation of Working Systems </a></p>
+<p><a href="{{ asset('storage/assets/Principle6VisualizeandLimitWIPReduceBatchSizesandManageQueueLengths.pdf') }}" >Principle #6 – Visualize and Limit WIP Reduce Batch Sizes and Manage Queue Lengths </a></p>
+<p><a href="{{ asset('storage/assets/Principle7Applycadencesynchronizewithcrossdomainplanning.pdf') }}" >Principle #7 – Apply cadence synchronize with cross domain planning </a></p>
+<p><a href="{{ asset('storage/assets/Principle8UnlocktheIntrinsicMotivationofKnowledgeWorkers.pdf') }}" >Principle #8 – Unlock the Intrinsic Motivation of Knowledge Workers </a></p>
+<p><a href="{{ asset('storage/assets/Principle9DecentralizeDecisionMaking.pdf') }}" >Principle #9 – Decentralize Decision Making </a></p>
+<p><a href="{{ asset('storage/assets/Principle10Organizearoundvalue.pdf') }}" >Principle #10 – Organize around value </a></p>
+
+
+
+<h5>Preparing for PI Planning (30%)</h5>
+<p><a href="{{ asset('storage/assets/Principle3Assumevariabilitypreserveoptions.pdf') }}" >Principle #3 – Assume variability preserve options </a></p>
+<p><a href="{{ asset('storage/assets/Principle5BaseMilestonesonObjectiveEvaluationofWorkingSystems.pdf') }}" >Principle #5 – Base Milestones on Objective Evaluation of Working Systems </a></p>
+<p><a href="{{ asset('storage/assets/Principle9DecentralizeDecisionMaking.pdf') }}" >Principle #9 – Decentralize Decision Making </a></p>
+<h5>Leading PI Planning (20%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeEpic.pdf') }}" >Epic </a></p>
+
+<h5>Executing Iterations (30%)</h5>
+<p><a href="{{ asset('storage/assets/SAFeContinuousExploration.pdf') }}" >Continuous Exploration </a></p>
+<p><a href="{{ asset('storage/assets/SAFeCustomerCentricity.pdf') }}" >Customer Centricity </a></p>
+<p><a href="{{ asset('storage/assets/SAFeVision.pdf') }}" >Vision </a></p>
+<p><a href="{{ asset('storage/assets/SAFeRoadmap.pdf') }}" >Roadmap </a></p>
+<p><a href="{{ asset('storage/assets/SAFeProductManagement.pdf') }}" >Product and Solution Management </a></p>
+<p><a href="{{ asset('storage/assets/SAFeProgramandSolutionBacklogs.pdf') }}" >Program and Solution Backlogs </a></p>
+	  <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+
+
+<h5>Executing the PI (10%)</h5>
+	  <p><a href="{{ asset('storage/assets/SAFeEnablers.pdf') }}" >SAFe Enablers</a></p>
+	   <p><a href="{{ asset('storage/assets/SAFePreandPostPIPlanning.pdf') }}" >SAFe Pre and Post PI Planning</a></p>
+	    <p><a href="{{ asset('storage/assets/SAFeReleaseonDemand1.pdf') }}" >SAFe Release on Demand</a></p>
+
+	<p align="center">>>>|<<<</p>
+	<p><a href="{{ asset('storage/assets/WhatsAProductOwnerToDo.pdf') }}" >What's a Product Owner to do?</a></p>
+<p><a href="/home/leanagilemindset" >Lean Agile Mindset video</a></p>
+<p><a href="/home/safeuserstories" >SAFe User Stories video</a></p>
+<p><a href="/home/powerofpiplanning" >Power of PI Planning video</a></p>
+<p><a href="/home/strategicthemes" >Strategic Themes video</a></p>
+	<p><a href="{{ asset('storage/assets/DesignThinkingSafe.pdf') }}" >SAFe Design Thinking</a></p>
+<p><a href="/home/distributedteams" >Distributed Teams video</a></p>
+	<p><a href="{{ asset('storage/assets/SAFeBacklogs.pdf') }}" >SAFe Backlogs</a></p>
+		<p><a href="{{ asset('storage/assets/SAFePIObjectives.pdf') }}" >SAFe PI Objectives</a></p>
+		<p><a href="/home/wsjf" >WSJF video</a></p>
+			<p><a href="/home/wsjftwo" >WSJF 2 video</a></p>
+			<p><a href="/home/piplanningprep" >PI Planning Preparation video</a></p>
+	<p><a href="/home/safeprogramboard" >The Program Board video</a></p>
+		<p><a href="/home/introtopiplanning" >Intro to PI Planning</a></p>
+				<p><a href="/home/iterationplanning" >Iteration Planning</a></p>
+					<p><a href="/home/dsu" >DSU video</a></p>
+					<p><a href="/home/howtodsutwo" >How To DSU another video</a></p>
+					<p><a href="/home/backlogrefinement" >Backlog Refinement Workshop video</a></p>
+						<p><a href="/home/iterationreview" >Iteration Review video</a></p>
+						<p><a href="/home/howtoiterationplanning" >How To Iteration Planning Review videos</a></p>
+							<p><a href="/home/saferetro" >SAFe Retro video</a></p>
+							<p><a href="/home/safedevops" >DevOps and Continuous Delivery Pipeline videos</a></p>
+							<br><br>
+
+	<p align="center">>>>|<<<</p>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p><a href="{{ asset('storage/assets/SAFeSystemDemo.pdf') }}" >SAFe System Demo</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeScrumMaster.pdf') }}" >SAFe Scrum Master role</a></p>
+	  <p><a href="{{ asset('storage/assets/SAFeStory.pdf') }}" >SAFe User Story</a></p>
+	    <p><a href="{{ asset('storage/assets/SAFeRequirementsModel.pdf') }}" >SAFe Requirements Model</a></p>
+
+
+		  <p><a href="{{ asset('storage/assets/SAFeIterations.pdf') }}" >SAFe Iterations:  Plan, Execution, Review, Retrospect</a><br>
+		 <small>Note: in the article above on page 4 find this essential truth for Scrum success: "<b><a href="images/scrumvaluemodelessence.jpg" ><u>The Product Owner defines the ‘WHAT (and WHEN)’; the team defines ‘HOW’ and ‘HOW MUCH’</b></u></a>."</small></p>
+
+
+	   <p><a href="{{ asset('storage/assets/SAFeInnovationandPlanningIteration.pdf') }}" >SAFe Innovation and Planning Iteration</a></p>
+
+ <p><a href="{{ asset('storage/assets/SAFeInspectAndAdapt.pdf') }}" >SAFe Inspect and Adapt</a></p>
+  <p><a href="{{ asset('storage/assets/SAFeEssentialSafe.pdf') }}" >Essential SAFe and Core Competencies</a></p>
+    <p><a href="{{ asset('storage/assets/SAFePIPlanning.pdf') }}" >SAFe PI Planning</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeDevOps.pdf') }}" >SAFe DevOps</a></p>
+	 <p><a href="{{ asset('storage/assets/SAFeContinuousDeliveryPipeline.pdf') }}" >SAFe Continuous Delivery Pipeline</a></p>
+	 	  <p><a href="{{ asset('storage/assets/SAFeReleaseonDemand.pdf') }}" >SAFe Release on Demand</a></p>
+		  		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		 		  <p><a href="{{ asset('storage/assets/SAFEAgileTeams.pdf') }}" >SAFe Agile Teams</a></p>
+		   <p><a href="{{ asset('storage/assets/SAFeART.pdf') }}" >SAFe ART</a></p>
+		    <p><a href="{{ asset('storage/assets/SAFeBusinessOwners.pdf') }}" >SAFe Business Owners</a></p>
+			  <p><a href="{{ asset('storage/assets/SAFeContinuousIntegration.pdf') }}" >SAFe Continuous Integration</a></p>
+			   <p><a href="{{ asset('storage/assets/SAFEFeaturesCapabilities.pdf') }}" >SAFe Features and Capabilities</a></p>
+			     <p><a href="{{ asset('storage/assets/SAFeLeanPortfolioManagement.pdf') }}" >SAFe Lean Portfolio Management</a></p>
+				   <p><a href="{{ asset('storage/assets/SAFeNonfunctionalRequirements.pdf') }}" >SAFe Non Functional Requirements</a></p>
+				    <p><a href="{{ asset('storage/assets/SAFeProgramIncrement.pdf') }}" >SAFe Program Increment</a></p>
+					 <p><a href="{{ asset('storage/assets/SAFeSolution.pdf') }}" >SAFe Solution</a></p>
+
+
+
+
+
+
+
+	<p><a href="/pmway/?slide=4" >Tie the logic above to the Capability Maturity model for operations above CM L1</a></p>
+		<br>
+						<p>Per the <a href="/agile?slide=12" >Agile Manifesto</a> acceptance is based on working software (improvements) / business value that can be released.  <br>A Product Owner approved Demo Deck (as key project artifact [Tying together PMC with PP (at User Story level)]) from each iteration review is (in PMWay's experience and opinion) best way to run Scrum at CM L2+.</p>
+						<p>From the article "SAFe User Story" above the image below is essential to appreciate and adopt if Professional scrum of  scrums at scale within SAFe is the goal.</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/safestoryfeature.png') }}"></p>
+						<p>and then extending this into the SAFe environment for Capabilities and Epics</p>
+						<p><img alt="SAFe User Stories and how they relate to Features" class="img-fluid" src="{{ asset('storage/images/saferequirementsmodel.png') }}"></p>
+						<p>Clearly the Product Owner's role is essential.  But always remember that the Scrum Master's role to reinforce Scrum Process (balance the make it so! / and deliver what by when!? forces) for team sanity and health is just as essential!</p>
+						<p>With the above in mind why not <a href="/pin"  >take the pin test to pin down</a> where you believe you are operating at.</p>
+
+
+
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepmboksixone" aria-expanded="false" aria-controls=
+        "collapsepmboksixone">PMWay Opinion about SAFe
+</button>
+
+<div class="collapse" id="collapsepmboksixone">
+    <div class="container">
+        <div class="card text-center">
+<h5 class="card-header" align="center"></h5>
+            <div class="card-body text-center">
+
+<p>It is the considerecd opinion of PMWay that with teams that (and are forced to) operate at <a href="/pmway/?slide=4" target=_blank">Capability Maturity Level 1</a><br>([Features from PI from Executive Pressure that force down on and kill agility found in User Stories (Teams not bothering - what's the use? - to compile User Stories)] and [<a href="/redbeads" >Deming's red bead experiment</a>] without PP and PMC at the level of the professional User Story)  <a href="/home/safeisunsafe"  > etc.<br>then SAFe is definitely UNSAFe</a>.</p>
+	<p>I.e. From the SAFe is unsafe article link above</p> <div align="center">
+Ken Schwaber, co-developer of srcum <a href="https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/" ><u>expressed serious concerns about SAFe</u></a> as early as 2013.<br>
+Nicholas M. Chaillan, U.S. Air Force Chief Software Officer, <a href="https://twitter.com/lukadotnet/status/1203751211817742336?s=20" ><u>discourages</u></a> “using rigid, presrciptive frameworks such as the Scaled Agile Framework (SAFe).”<br>
+Forbes contributor Steve Denning <a href="https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/#316e49034bbe" ><u>calls out</u></a> SAFe for being “ particularly worrying” in his article on how to spot fake Agile.<br>
+Marty Cagan of the Silicon Valley Product Group <a href="https://svpg.com/revenge-of-the-pmo/" ><u>explains</u></a> how SAFe is antithetical to the mindset of Silicon Valley companies.
+</div><br><img alt="SAFe should be (like a loaded gun) kept locked up in a safe" class="img-fluid"  src="{{ asset('storage/images/safefive/safelylockedup.png') }}" title="Like a loaded gun with children best to keep it locked up in a SAFe before someone gets really hurt"><img alt="Due to the heroics and pressure to push features down on developers your human resources will ... runaway!" class="img-fluid"  src="{{ asset('storage/images/safefive/runaway.png') }}" title="Why can we not keep our good people"><br><img alt="fast path to mediocracy" class="img-fluid"  src="{{ asset('storage/images/safefive/mediocracy.png') }}" title="Classic ignorance of the wisdom of Deming and a total lack of understanding of scrum.  The Mike Cohn video on YouTube about User Stories explains the problem and how to solve it"></p>
+
+
+
+
+
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+ </div>
+</div>
+
+
+    <script src="/bootstrapfourfivetwo/js/jquery.js"></script>
+    <script src="/bootstrapfourfivetwo/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/bootstrapfourfivetwo/css/jquery-ui.css"></link>
+<script>
+  $(document).ready(function () {
+    function qs(key) {
+      key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+      var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+      var slide = match && decodeURIComponent(match[1].replace(/\+/g, " "));
+      if (Math.floor(slide) == slide && $.isNumeric(slide))
+        return parseInt(slide);
+      else
+        return 0;
+    }
+    $('#i').carousel((qs('slide')) - 1);
+  });
+</script>
+<br>
+<br>
+<br>
+<br>
+
+{% endif %}
+
+
+{% endblock %}
+
+
+

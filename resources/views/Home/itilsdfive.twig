@@ -1,0 +1,342 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SD Capacity Management</h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=38') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Capacity Management</i> aims to ensure that the capacity of IT services and the IT infrastructure is able to deliver the agreed service level targets in a cost effective and timely manner. The Capacity Management process considers all resources required to deliver the IT service, and plans for short, medium and long term business requirements.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Capacity Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>There are no major differences between Capacity Management in ITIL V3 (2007) and ITIL 2011. </p>
+  <p>Following the introduction of Design Coordination in <i><b>ITIL 2011</b></i> the information flows have been adapted. The process overview of <a href="/images/itilsdfine.jpg"  title="Capacity-management-itil.jpg">ITIL Capacity Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Capacity Management sub-processes:">These are the <strong class="selflink">Capacity Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Business_Capacity_Management_ITIL" itemprop="itemListElement">Business Capacity Management</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To translate business needs and plans into capacity and performance requirements for services and IT infrastructure, and to ensure that future capacity and performance needs can be fulfilled. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Capacity_Management_ITIL" itemprop="itemListElement">Service Capacity Management</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To manage, control and predict the performance and capacity of operational services. This includes initiating proactive and reactive action to ensure that the performances and capacities of services meet their agreed targets. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Component_Capacity_Management_ITIL" itemprop="itemListElement">Component Capacity Management</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To manage, control and predict the performance, utilization and capacity of IT resources and individual IT components. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Capacity_Management_Reporting" itemprop="itemListElement">Capacity Management Reporting</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide other Service Management processes and IT Management with information related to service and resource capacity, utilization and performance (NB:
+        &quot;Capacity Report"). </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Capacity Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Capacity_Management_Information_System" itemprop="itemListElement">Capacity Management Information System</span></b> </p>
+    <ul>
+      <li itemprop="description">A virtual repository of all Capacity Management data, usually stored in multiple physical locations. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Capacity_Plan" itemprop="itemListElement">Capacity Plan</span></b> </p>
+    <ul>
+      <li itemprop="description">A Capacity Plan is used to manage the resources required to deliver IT services. The plan contains scenarios for different predictions of business demand, and costed options to deliver the agreed service level targets. <i>(NB: ITIL Checklist Capacity Plan)</i> </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Capacity_Report" itemprop="itemListElement">Capacity Report</span></b> </p>
+    <ul>
+      <li itemprop="description">The Capacity Report provides other Service Management processes and IT Management with information related to service and resource utilization and performance. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Capacity_Management_Rules" itemprop="itemListElement">Event Filtering and Correlation Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">Rules and criteria used to determine if an Event is significant and to decide upon an appropriate response. Event Filtering and Correlation Rules are typically used by Event Monitoring systems. Some of those rules are defined during the Service Design stage, for example to ensure that Events are triggered when the required service availability is endangered. </li>
+      <li><i>Note: The output "Event Filtering and Correlation Rules" has been added in ITIL 2011, to emphasize that (some) Event filtering and correlation rules should be designed by Capacity Management to support the detection of capacity issues.</i> </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Design#ITIL_KPIs_Capacity_Management" title="ITIL KPIs Capacity Management">Key Performance Indicators (KPIs) Capacity Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL-Checklists#Capacity_Management">Capacity Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Capacity_Plan" title="Capacity Plan template">Capacity Plan</a>, and</li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Capacity_Forecast" title="Capacity Forecast">Capacity Forecast</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Capacity_Report" title="Capacity Report">Capacity Report</a></li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Capacity_Manager">Capacity Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Capacity Manager is responsible for ensuring that services and infrastructure are able to deliver the agreed capacity and performance targets in a cost effective and timely manner.</li>
+    <li>He considers all resources required to deliver the service, and plans for short, medium and long term business requirements.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="5"><b>Responsibility Matrix: ITIL Capacity Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Capacity Manager </th>
+        <th style="background:#ffffee;">Service Owner </th>
+        <th style="background:#ffffee;">Applications Analyst </th>
+        <th style="background:#ffffee;">Technical Analyst </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Business_Capacity_Management_ITIL">Business Capacity Management</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Service_Capacity_Management_ITIL">Service Capacity Management</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Component_Capacity_Management_ITIL">Component Capacity Management</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Capacity_Management_Reporting">Capacity Management Reporting</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Capacity Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within ITIL Capacity Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SD Capacity Management</h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=38') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Capacity Management</i> aims to ensure that the capacity of IT services and the IT infrastructure is able to deliver the agreed service level targets in a cost effective and timely manner. The Capacity Management process considers all resources required to deliver the IT service, and plans for short, medium and long term business requirements.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Capacity Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>There are no major differences between Capacity Management in ITIL V3 (2007) and ITIL 2011. </p>
+  <p>Following the introduction of Design Coordination in <i><b>ITIL 2011</b></i> the information flows have been adapted. The process overview of <a href="/images/itilsdfine.jpg"  title="Capacity-management-itil.jpg">ITIL Capacity Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Capacity Management sub-processes:">These are the <strong class="selflink">Capacity Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Business_Capacity_Management_ITIL" itemprop="itemListElement">Business Capacity Management</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To translate business needs and plans into capacity and performance requirements for services and IT infrastructure, and to ensure that future capacity and performance needs can be fulfilled. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Capacity_Management_ITIL" itemprop="itemListElement">Service Capacity Management</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To manage, control and predict the performance and capacity of operational services. This includes initiating proactive and reactive action to ensure that the performances and capacities of services meet their agreed targets. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Component_Capacity_Management_ITIL" itemprop="itemListElement">Component Capacity Management</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To manage, control and predict the performance, utilization and capacity of IT resources and individual IT components. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Capacity_Management_Reporting" itemprop="itemListElement">Capacity Management Reporting</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide other Service Management processes and IT Management with information related to service and resource capacity, utilization and performance (NB:
+        &quot;Capacity Report"). </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Capacity Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Capacity_Management_Information_System" itemprop="itemListElement">Capacity Management Information System</span></b> </p>
+    <ul>
+      <li itemprop="description">A virtual repository of all Capacity Management data, usually stored in multiple physical locations. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Capacity_Plan" itemprop="itemListElement">Capacity Plan</span></b> </p>
+    <ul>
+      <li itemprop="description">A Capacity Plan is used to manage the resources required to deliver IT services. The plan contains scenarios for different predictions of business demand, and costed options to deliver the agreed service level targets. <i>(NB: ITIL Checklist Capacity Plan)</i> </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Capacity_Report" itemprop="itemListElement">Capacity Report</span></b> </p>
+    <ul>
+      <li itemprop="description">The Capacity Report provides other Service Management processes and IT Management with information related to service and resource utilization and performance. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Capacity_Management_Rules" itemprop="itemListElement">Event Filtering and Correlation Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">Rules and criteria used to determine if an Event is significant and to decide upon an appropriate response. Event Filtering and Correlation Rules are typically used by Event Monitoring systems. Some of those rules are defined during the Service Design stage, for example to ensure that Events are triggered when the required service availability is endangered. </li>
+      <li><i>Note: The output "Event Filtering and Correlation Rules" has been added in ITIL 2011, to emphasize that (some) Event filtering and correlation rules should be designed by Capacity Management to support the detection of capacity issues.</i> </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Design#ITIL_KPIs_Capacity_Management" title="ITIL KPIs Capacity Management">Key Performance Indicators (KPIs) Capacity Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL-Checklists#Capacity_Management">Capacity Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Capacity_Plan" title="Capacity Plan template">Capacity Plan</a>, and</li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Capacity_Forecast" title="Capacity Forecast">Capacity Forecast</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Capacity_Report" title="Capacity Report">Capacity Report</a></li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Capacity_Manager">Capacity Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Capacity Manager is responsible for ensuring that services and infrastructure are able to deliver the agreed capacity and performance targets in a cost effective and timely manner.</li>
+    <li>He considers all resources required to deliver the service, and plans for short, medium and long term business requirements.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="5"><b>Responsibility Matrix: ITIL Capacity Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Capacity Manager </th>
+        <th style="background:#ffffee;">Service Owner </th>
+        <th style="background:#ffffee;">Applications Analyst </th>
+        <th style="background:#ffffee;">Technical Analyst </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Business_Capacity_Management_ITIL">Business Capacity Management</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Service_Capacity_Management_ITIL">Service Capacity Management</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Component_Capacity_Management_ITIL">Component Capacity Management</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Capacity_Management_Reporting">Capacity Management Reporting</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Capacity Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within ITIL Capacity Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

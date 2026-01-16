@@ -1,0 +1,36 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Mind The Gap{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container">
+  <h5>The V Model</h5>
+  <p align="left">The V Model is all about bidirectional traceability (a CMMi REQM SP 1.4) and Ver and Val (CMMi Level 3 processes). <br>
+    <a href="/home/cmmidevdash">Click here for the CMMi Dashboard</a> and find these essential processes.  Essential for Software Engineering success (and especially CM (Configuration Management) if you want to do it correctly.</p>
+  <div align="center"><img class="img-fluid" src="{{ asset('storage/images/vmodelbevel.png') }}"> </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+<h5>The V Model</h5>
+<p align="left">The V Model is all about bidirectional traceability (a CMMi REQM SP 1.4) and Ver and Val (CMMi Level 3 processes). <br>
+  <a href="/cmmidevdash">Click here for the CMMi Dashboard</a> and find these essential processes.  Essential for Software Engineering success (and especially CM (Configuration Management) if you want to do it correctly.</p>
+<div align="center"><img class="img-fluid" src="{{ asset('storage/images/vmodelbevel.png') }}"> </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--ENDBODY-->
+
+{% endif %}
+
+
+{% endblock %}

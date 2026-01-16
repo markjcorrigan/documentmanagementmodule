@@ -1,0 +1,72 @@
+@extends('frontend.pmboksix_master')
+
+@section('title', 'NineTwo')
+
+@section('content')
+    <div class="container">
+        <h3>Estimate Activity Resources</h3>
+        <h5>PG Planning, KA Resource, #9.2</h5>
+        <hr/>
+        <p><small>Note: On a desktop you can click on the processes with your mouse. On a smaller screen use the arrows to navigate around the dashboard.</small></p>
+        <div align="center">
+            <!-- Image Map for menu -->
+            <map id="imgmap0" name="imgmap0">
+                <area coords="39, 52, 71, 81" href="/pmboksix/tenone" shape="rect" title="down">
+                <area coords="0, 14, 36, 58" href="/pmboksix/resource" shape="rect" title="left">
+                <area coords="38, 24, 72, 51" href="/pmboksix/nineone" shape="rect" title="up">
+                <area coords="35, 5, 75, 24" href="/pmway" shape="rect" title="index">
+                <area coords="76, 17, 109, 58" href="/pmboksix/ninethree" shape="rect" title="right">
+            </map>
+            <img class="img-fluid" alt="" height="82" src="/storage/images/menulrdindex.png" width="111" style="float: left" usemap="#imgmap0"/><br/>
+            <p class="ctr"><img class="img-fluid" alt="" height="1074" src="/storage/images/ver69point2.png" width="842" usemap="#imgmap2"></p>
+            <br><br>
+            <p class="ctr">Inputs, Tools and Techniques, and Outputs (ITTO's) as a dashboard to the PMBOK version 6 guide.<br><a href="/pmboksixmanual/ninetwo.pdf" ><img class="img-fluid" alt="" height="862" src="/storage/images/92.png" width="634"></a></p>
+            <p class="ctr">ITTO's as an image from the PMBOK version 6 guide.<br>
+                <img class="img-fluid" src="/storage/images/mouseover.png" onclick="this.src='/storage/images/92ittos.png'" ondblclick="this.src='/storage/images/mouseover.png'"><br><br>
+                <img class="img-fluid" src="/storage/images/mouseover.png" onclick="this.src='/storage/images/92flow.png'" ondblclick="this.src='/storage/images/mouseover.png'"><br>
+                This Process Data Flow diagram from the PMBOK version 6 guide.
+            </p>
+            <!-- Date Display -->
+            <p id="today-date"></p>
+            <!-- Tailoring Notes Section -->
+            <a name="topofbox99"></a>
+            <section class="round-border">
+                <h5>
+                    <button type="button" class="nav-toggle" data-target="#collapse99">Show</button>&nbsp;Tailoring notes:
+                </h5>
+                <div id="collapse99" style="display:none" class="auto-style4">
+                <textarea rows="100" cols="170" style="float:left">
+                    <h3>Tailoring Notes for the Project Management Process being tailored: I.e. The Process / Input / Tool / Technique / Output or etc.'s name here.</h3>
+                    <p>Use this Notes Section to enter any tailoring information you have considered with regard to this process.<br />I.e. tailoring is how you have simplified, or left out something in order to run the project faster. Obviously this must not jeopardize the project integrity or place it under risk. Risks and Issues (Risks happening) can be used to monitor the effect of tailoring on the project. I.e. this operates like a warning system (if Issue is picked up), which can then evolve into a set of TAsks to minimize or handle the Issue / Risk.</p>
+                    <p>Use the print button at the top to print this to hard copy or pdf.</p>
+                </textarea>
+                </div>
+            </section>
+        </div>
+        <!-- JS Section -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Date display
+                var today = new Date();
+                document.getElementById("today-date").textContent = today.toLocaleString();
+
+                // Nav toggle
+                var navToggles = document.querySelectorAll(".nav-toggle");
+                navToggles.forEach(function (toggle) {
+                    toggle.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        var collapseId = this.getAttribute("data-target");
+                        var collapseEl = document.querySelector(collapseId);
+                        if (collapseEl && collapseEl.style.display === "none") {
+                            collapseEl.style.display = "block";
+                            this.textContent = "Hide";
+                        } else if (collapseEl) {
+                            collapseEl.style.display = "none";
+                            this.textContent = "Show";
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+@endsection

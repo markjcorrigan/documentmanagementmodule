@@ -1,0 +1,75 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL Overview
+CSI{% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+    <div align="left" class="container">
+			<h3>ITIL Overview</h3>
+			<p><i><a href="/home/itil">Back to /home/itil</a></i></p>
+			<hr>
+	<dl><dt><span id="ITIL_Processes_Strategy"><a href="/home/itilss" title="ITIL Service Strategy" itemprop="itemListElement">Service Strategy</a></span>
+</dt><dd itemprop="description">Process Objective: To decide on a strategy to serve customers. Starting from an assessment of customer needs and the market place, the Service Strategy process determines which services the IT organization is to offer and what capabilities need to be developed. Its ultimate goal is to make the IT organization think and act in a strategic manner.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt><span id="ITIL_Processes_Design"><a href="/home/itilsd" title="ITIL Service Design" itemprop="itemListElement">Service Design</a></span>
+</dt><dd itemprop="description">Process Objective: To design new IT services. The scope of the process includes the design of new services, as well as changes and improvements to existing ones.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt><span id="ITIL_Processes_Transition"><a href="/home/itilst" title="ITIL Service Transition" itemprop="itemListElement">Service Transition</a></span>
+</dt><dd itemprop="description">Process Objective: To build and deploy IT services. Service Transition also makes sure that changes to services and Service Management processes are carried out in a coordinated way.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt><span id="ITIL_Processes_Operation"><a href="/home/itilso" title="ITIL Service Operation" itemprop="itemListElement">Service Operation</a></span>
+</dt><dd itemprop="description">Process Objective: To make sure that IT services are delivered effectively and efficiently. The Service Operation process includes fulfilling user requests, resolving service failures, fixing problems, as well as carrying out routine operational tasks.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt><span id="ITIL_Processes_Improvement"><a href="/home/itilcsi" title="ITIL CSI - Continual Service Improvement" itemprop="itemListElement">Continual Service Improvement - CSI</a></span>
+</dt><dd itemprop="description">Process Objective: To use methods from quality management in order to learn from past successes and failures. The Continual Service Improvement process aims to continually improve the effectiveness and efficiency of IT processes and services, in line with the concept of continual improvement adopted in ISO 20000.
+</dd></dl>
+		<br>
+		<br>
+		<br>
+
+	</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+    <div align="left" class="container">
+			<h3>ITIL Overview</h3>
+			<p><i><a href="/home/itil">Back to /home/itil</a></i></p>
+
+			<hr>
+	<dl><dt><span id="ITIL_Processes_Strategy"><a href="/home/itilss" title="ITIL Service Strategy" itemprop="itemListElement">Service Strategy</a></span>
+</dt><dd itemprop="description">Process Objective: To decide on a strategy to serve customers. Starting from an assessment of customer needs and the market place, the Service Strategy process determines which services the IT organization is to offer and what capabilities need to be developed. Its ultimate goal is to make the IT organization think and act in a strategic manner.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt><span id="ITIL_Processes_Design"><a href="/home/itilsd" title="ITIL Service Design" itemprop="itemListElement">Service Design</a></span>
+</dt><dd itemprop="description">Process Objective: To design new IT services. The scope of the process includes the design of new services, as well as changes and improvements to existing ones.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt><span id="ITIL_Processes_Transition"><a href="/home/itilst" title="ITIL Service Transition" itemprop="itemListElement">Service Transition</a></span>
+</dt><dd itemprop="description">Process Objective: To build and deploy IT services. Service Transition also makes sure that changes to services and Service Management processes are carried out in a coordinated way.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt><span id="ITIL_Processes_Operation"><a href="/home/itilso" title="ITIL Service Operation" itemprop="itemListElement">Service Operation</a></span>
+</dt><dd itemprop="description">Process Objective: To make sure that IT services are delivered effectively and efficiently. The Service Operation process includes fulfilling user requests, resolving service failures, fixing problems, as well as carrying out routine operational tasks.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt><span id="ITIL_Processes_Improvement"><a href="/home/itilcsi" title="ITIL CSI - Continual Service Improvement" itemprop="itemListElement">Continual Service Improvement - CSI</a></span>
+</dt><dd itemprop="description">Process Objective: To use methods from quality management in order to learn from past successes and failures. The Continual Service Improvement process aims to continually improve the effectiveness and efficiency of IT processes and services, in line with the concept of continual improvement adopted in ISO 20000.
+</dd></dl>
+	<br>
+		<br>
+		<br>
+
+
+	</div>
+{% endif %}
+{% endblock %}

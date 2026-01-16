@@ -1,0 +1,169 @@
+# =========================
+# Laravel Core
+# =========================
+/vendor
+/node_modules
+
+# =========================
+# Public Folder - Ignore Content Directories
+# =========================
+# Ignore all directories in public/ first
+/public/*/
+
+# Then explicitly allow back Laravel-essential directories
+!/public/build/
+!/public/css/
+!/public/js/
+
+# Ignore specific build artifacts and generated files
+/public/hot
+/public/storage
+/public/mix-manifest.json
+
+# Ignore frontend library directories specifically
+/public/fontawesome*/
+/public/bootstrap*/
+
+# =========================
+# Storage - Comprehensive
+# =========================
+# Ignore everything in storage except .gitignore files
+/storage/*
+!/storage/.gitignore
+!/storage/app/.gitignore
+!/storage/app/public/.gitignore
+!/storage/framework/.gitignore
+!/storage/logs/.gitignore
+
+# Explicitly ignore everything inside these directories
+/storage/app/public/*
+/storage/app/assets/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+/storage/debugbar/*
+/storage/reverb/*
+
+# Keep the .gitignore files in subdirectories
+!/storage/app/public/.gitignore
+!/storage/framework/cache/.gitignore
+!/storage/framework/sessions/.gitignore
+!/storage/framework/testing/.gitignore
+!/storage/framework/views/.gitignore
+!/storage/logs/.gitignore
+!/storage/debugbar/.gitignore
+
+# =========================
+# Bootstrap Cache
+# =========================
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+# =========================
+# Environment Files
+# =========================
+.env
+.env.*
+!.env.example
+.env.backup
+.env.production
+.env.local
+.env.*.local
+
+# =========================
+# IDE / Editor
+# =========================
+/.idea
+/.phpstorm.meta.php
+/.vscode
+/.fleet
+/.zed
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+*.swp
+*.swo
+*~
+.project
+.settings
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# Testing
+# =========================
+.phpunit.cache
+.phpunit.result.cache
+/coverage
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Laravel Specific
+# =========================
+auth.json
+Homestead.json
+Homestead.yaml
+composer.phar
+
+# =========================
+# Custom Directories (PMWay specific)
+# =========================
+/#MyResourcesForARebuild
+/#WEBPHP
+/resources/views/Home/resources
+/resources/views/Home/images/imagesv6bak
+
+# =========================
+# Large Media & Binary Files
+# =========================
+*.exe
+*.docx
+*.psd
+*.xlsx
+*.xls
+*.pdf
+*.mp4
+*.mp3
+*.mov
+*.avi
+*.zip
+*.tar.gz
+*.rar
+*.epub
+
+# =========================
+# Large Files Removed via git-filter-repo (PMWay Critical)
+# =========================
+# The massive Windows ISO and related tool directories
+/#Documents/WinISODefenderControl/
+/#Documents/TRUEMIRROR/
+
+# Specific large file types encountered
+*.iso
+*.dll
+*.chm
+*.azw3
+*.mobi
+*.pptx
+
+# =========================
+# Misc
+# =========================
+.php_cs.cache
+.php-cs-fixer.cache

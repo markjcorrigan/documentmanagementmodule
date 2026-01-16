@@ -1,0 +1,154 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Scrum But{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="left">
+<h3>ScrumBut!</h3>
+<hr>
+<h6>ScrumButs to avoid:</h6>
+<p>ScrumButs is an initiative by the originators of scrum.<br>
+  It is designed to assist people who think they get agile (but don't really), to GET IT!<br>
+<ol>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Goalless, soulless Scrum</li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Cherry-picking
+    practices and premature process optimization </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Marginalizing (<a href="/images/scrumvalues.jpg" >no respect</a> / understanding for) the Scrum Master (<a href="/images/scrumgovernance.png" >who's role is to be in charge of scrum method and scrum / agile process improvement</a>)</li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Shooting the Scrum messenger</li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Planning
+    paralysis </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Mis-aligned stories </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Command and control-style micro management <br>
+    (<a href="/images/scrumgovernance.png" >PO (Business)</a> <a href="/images/scrumdevhorse.jpg" >riding the Dev work horse hard</a>) <br>
+    (Someone/s on (or, from outside the team, imposing on) team thinking command and control) </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Overlaying unrealistic and not agreed delivery milestones (to meet unrealistic "heroic" business deadlines)<br>
+    that violate agile (scrum) method; i.e. evolving to a solution sprint by sprint. </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Individual heroics </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Smoke and mirror demos <br>
+    (no demo deck agreed up front and signed off by the PO after Sprint Review) </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Lack of risk management </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;The
+    vicious cycle of over commitment </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Stalled improvement </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;An inability to regularly <a href="/release" >release</a> <a href="/workingsoftware" >working software</a> => UAT => PROD that is valuable to business </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;An inability (sprint by sprint) to <a href="/images/vmodelbevel.jpg" >"Mind the Gap"</a> <br>
+    (This could pertain to at lack of
+    sufficient attention to detail with regard to the Capability Maturity processes <a href="/pmway/?slide=5" >PP, PMC, REQM, CM, VER and VAL (and others)</a>, all above <a href="/pmway/?slide=4" >CM L1</a>)</li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Lack of attention to software solution surviving in Technology Stack (insufficient resources or unstable network etc.) <br>
+    (<a href="/pmway/?slide=6" >I.e. per People, Process and Technology triad)</a><br>
+    (<a href="/pmway/?slide=8" >Answers, typically, are found in the careful application of ITIL processes</a> (<a href="/pmway/?slide=9" >of which DevOps</a> is simply faster ITIL))</li>
+</ol>
+<br>
+<br>
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsescrumbutwords" aria-expanded="false" aria-controls=
+        "collapsescrumbutwords">Some Word Bubbles for ScrumBut! </button>
+<div class="collapse" id="collapsescrumbutwords">
+  <div class="container">
+    <div class="card text-center">
+      <h5 class="card-header" align="center"> </h5>
+      <div class="card-body text-center"> <img alt="scrumbuts thought bubbles" class="img-fluid" src="{{ asset('storage/images/scrumbutwords.jpg') }}" > </div>
+      <div class="card-footer"> </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsesprof" aria-expanded="false" aria-controls=
+        "collapsesprof">Scrum Done Professionally! </button>
+<div class="collapse" id="collapsesprof">
+  <div class="container">
+    <div class="card text-center">
+      <h5 class="card-header" align="center">Note the crucial role of the Product Owner! </h5>
+      <div class="card-body text-center"> <img alt="Scrum Value Model" class="img-fluid" src="{{ asset('storage/images/scrumvaluemodelroles.jpg') }}"> <br>
+        <br>
+        <p><a href="/agile?slide=10" >Click here</a> for an overview of Scrum.</p>
+        <p><a href="/scrum" >Click here</a> for the essential overview of the Scrum Body of Knowledge.</p>
+      </div>
+      <div class="card-footer"> </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+<h3>ScrumBut!</h3>
+<hr>
+<h6>ScrumButs to avoid:</h6>
+<p>ScrumButs is an initiative by the originators of scrum.<br>
+  It is designed to assist people who think they get agile (but don't really), to GET IT!<br>
+<ol>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Goalless, soulless Scrum</li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Cherry-picking
+    practices and premature process optimization </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Marginalizing (<a href="/images/scrumvalues.jpg" >no respect</a> / understanding for) the Scrum Master (<a href="/images/scrumgovernance.png" >who's role is to be in charge of scrum method and scrum / agile process improvement</a>)</li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Shooting the Scrum messenger</li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Planning
+    paralysis </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Mis-aligned stories </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Command and control-style micro management <br>
+    (<a href="/images/scrumgovernance.png" >PO (Business)</a> <a href="/images/scrumdevhorse.jpg" >riding the Dev work horse hard</a>) <br>
+    (Someone/s on (or, from outside the team, imposing on) team thinking command and control) </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Overlaying unrealistic and not agreed delivery milestones (to meet unrealistic "heroic" business deadlines)<br>
+    that violate agile (scrum) method; i.e. evolving to a solution sprint by sprint. </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Individual heroics </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Smoke and mirror demos <br>
+    (no demo deck agreed up front and signed off by the PO after Sprint Review) </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Lack of risk management </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;The
+    vicious cycle of over commitment </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Stalled improvement </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;An inability to regularly <a href="/release" >release</a> <a href="/workingsoftware" >working software</a> => UAT => PROD that is valuable to business </li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;An inability (sprint by sprint) to <a href="/images/vmodelbevel.jpg" >"Mind the Gap"</a> <br>
+    (This could pertain to at lack of
+    sufficient attention to detail with regard to the Capability Maturity processes <a href="/pmway/?slide=5" >PP, PMC, REQM, CM, VER and VAL (and others)</a>, all above <a href="/pmway/?slide=4" >CM L1</a>)</li>
+  <li><img alt="red cross" class="img-fluid"  src="{{ asset('storage/images/redcross.png') }}" >&nbsp;&nbsp;Lack of attention to software solution surviving in Technology Stack (insufficient resources or unstable network etc.) <br>
+    (<a href="/pmway/?slide=6" >I.e. per People, Process and Technology triad)</a><br>
+    (<a href="/pmway/?slide=8" >Answers, typically, are found in the careful application of ITIL processes</a> (<a href="/pmway/?slide=9" >of which DevOps</a> is simply faster ITIL))</li>
+</ol>
+<br>
+<br>
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsescrumbutwords" aria-expanded="false" aria-controls=
+        "collapsescrumbutwords">Some Word Bubbles for ScrumBut! </button>
+<div class="collapse" id="collapsescrumbutwords">
+  <div class="container">
+    <div class="card text-center">
+      <h5 class="card-header" align="center"> </h5>
+      <div class="card-body text-center"> <img alt="scrumbuts thought bubbles" class="img-fluid" src="{{ asset('storage/images/scrumbutwords.jpg') }}" > </div>
+      <div class="card-footer"> </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsesprof" aria-expanded="false" aria-controls=
+        "collapsesprof">Scrum Done Professionally! </button>
+<div class="collapse" id="collapsesprof">
+  <div class="container">
+    <div class="card text-center">
+      <h5 class="card-header" align="center">Note the crucial role of the Product Owner! </h5>
+      <div class="card-body text-center"> <img alt="Scrum Value Model" class="img-fluid" src="{{ asset('storage/images/scrumvaluemodelroles.jpg') }}"> <br>
+        <br>
+        <p><a href="/agile?slide=10" >Click here</a> for an overview of Scrum.</p>
+        <p><a href="/scrum" >Click here</a> for the essential overview of the Scrum Body of Knowledge.</p>
+      </div>
+      <div class="card-footer"> </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+{% endif %}
+
+
+{% endblock %}

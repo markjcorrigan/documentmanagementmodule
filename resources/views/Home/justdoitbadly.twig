@@ -1,0 +1,55 @@
+{% extends 'able.html' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Just Do It - Badly?{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container" align="left" >
+<h5 align="left">Just Do It - Badly!</h5>
+<p>Great advice for beginners.<br>
+  But to win the <a href="/home/af" >Super Bowl</a> (as an example of a great professional team endeavour)<br>
+  you (members of the team) will need excellent control of your skills (mastery of the processes)!</p>
+<hr>
+<div class="d-flex ">
+  <div class="p-2 flex-fill"></div>
+  <div class="p-1 flex-fill"></div>
+  <div class="p-5 flex-fill">
+    <video id="video1"  data-able-player="true" preload="metadata" data-speed-icons="true" width="480" height="360" poster="/images/justdoitbadly.png"  playsinline="true">
+      <source type="video/mp4" src="/ablelvids/justdoitbadly/justdoitbadly.mp4">
+    </video>
+    <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/team.png') }}"><img alt="" class="img-fluid" src="{{ asset('storage/images/teampullingtogether.png') }}"></p>
+  </div>
+  <div class="p-4 flex-fill"></div>
+</div>
+<br>
+<br>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+
+<div class="container" align="left" >
+<h5 align="left">Just Do It - Badly!</h5>
+<p>Great advice for beginners.<br>
+  But to win the <a href="/home/af" >Super Bowl</a> (as an example of a great professional team endeavour)<br>
+  you (members of the team) will need excellent control of your skills (mastery of the processes)!</p>
+<hr>
+<div class="d-flex ">
+  <div class="p-2 flex-fill"></div>
+  <div class="p-1 flex-fill"></div>
+  <div class="p-5 flex-fill">
+    <video id="video1"  data-able-player="true" preload="metadata" data-speed-icons="true" width="480" height="360" poster="/images/justdoitbadly.png"  playsinline="true">
+      <source type="video/mp4" src="/ablelvids/justdoitbadly/justdoitbadly.mp4">
+    </video>
+    <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/team.png') }}"><img alt="" class="img-fluid" src="{{ asset('storage/images/teampullingtogether.png') }}"></p>
+  </div>
+  <div class="p-4 flex-fill"></div>
+</div>
+<br>
+<br>
+{% endif %}
+{% endblock %}

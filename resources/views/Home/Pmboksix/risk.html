@@ -1,0 +1,32 @@
+{% extends 'basepmboksix.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}Risk{% endif %}  {% endblock %}
+{% block body %}
+{% if current_user %}
+<!--BODY-->
+<!--BODY-- including div class container down to final div -->
+
+
+
+<div class="container" align="center">
+
+
+
+	
+	
+	
+	<img class="img-fluid" alt="risk" src="/images/risksix.jpg"></div>
+	
+	
+
+
+	
+
+<!--ENDBODY-->
+    {% if current_user %}
+    {% else %}
+        
+
+    {% endif %}
+   
+
+{% endblock %}

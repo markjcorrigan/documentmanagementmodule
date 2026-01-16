@@ -1,0 +1,254 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+ST{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL ST Change Evaluation</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Change Evaluation</i> aims to assess major Changes, like the introduction of a new service or a substantial change to an existing service, before those Changes are allowed to proceed to the next phase in their lifecycle.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Change Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p><i><b>ITIL 2011</b></i> has introduced the Change Evaluation process, including a clarification in the ITIL&#174; books that the purpose of this process is the evaluation of Major Changes. </p>
+  <p>Change Evaluation is called upon by the Change Management process at various points in a Change's lifecycle to perform a Change assessment. </p>
+  <p>The results of a formal Change evaluation are documented in a Change Evaluation Report, which is thus the main output of the new Change Evaluation process. </p>
+  <p>The process overview of <a href="/images/itilssttwo.jpg"  title="Itil-change-evaluation.jpg">ITIL Change Evaluation</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Change Evaluation sub-processes:">These are the <strong class="selflink">ITIL Change Evaluation</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Change_Evaluation_Planning" itemprop="itemListElement">Change Evaluation prior to Planning</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a proposed major Change before authorizing the Change planning phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change_Evaluation_Build" itemprop="itemListElement">Change Evaluation prior to Build</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a proposed major Change before authorizing the Change build phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change_Evaluation_Deployment" itemprop="itemListElement">Change Evaluation prior to Deployment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a proposed major Change before authorizing the Change deployment phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change_Evaluation_after_Deployment" itemprop="itemListElement">Change Evaluation after Deployment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a major Change after it has been implemented, to verify if the Change has met its objectives and to identify any lessons to be learned. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Change Evaluation to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Change_Evaluation_Report" itemprop="itemListElement">Change Evaluation Report</span></b> </p>
+    <ul>
+      <li itemprop="description">Certain types of major Changes, like the introduction of a new service or a substantial change to an existing service, require formal Change evaluations before being authorized. The results of a formal Change evaluation are documented in a Change Evaluation Report. Change evaluations may be used at different points in a Change's lifecycle, for example before authorizing the Change/Release build or during the Post Implementation Review. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Change_Manager">Change Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Change Manager controls the lifecycle of all Changes. His primary objective is to enable beneficial Changes to be made, with minimum disruption to IT services. For important Changes, the Change Manager will refer the authorization of Changes to the Change Advisory Board (CAB).</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b>Responsibility Matrix: ITIL Change Evaluation</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Change Manager </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td align="left"><a href="#Change_Evaluation_Planning">Change Evaluation prior to Planning</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Change_Evaluation_Build">Change Evaluation prior to Build</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Change_Evaluation_Deployment">Change Evaluation prior to Deployment</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Change_Evaluation_after_Deployment">Change Evaluation after Deployment</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Change Evaluation process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Change Evaluation.</span> </p>
+  <p><span id="Team">[3] In cooperation, as appropriate: Applications Analyst, Technical Analyst, Configuration Manager, Project Manager, Risk Manager and others. </span>&nbsp;</p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL ST Change Evaluation</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Change Evaluation</i> aims to assess major Changes, like the introduction of a new service or a substantial change to an existing service, before those Changes are allowed to proceed to the next phase in their lifecycle.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Change Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p><i><b>ITIL 2011</b></i> has introduced the Change Evaluation process, including a clarification in the ITIL&#174; books that the purpose of this process is the evaluation of Major Changes. </p>
+  <p>Change Evaluation is called upon by the Change Management process at various points in a Change's lifecycle to perform a Change assessment. </p>
+  <p>The results of a formal Change evaluation are documented in a Change Evaluation Report, which is thus the main output of the new Change Evaluation process. </p>
+  <p>The process overview of <a href="/images/itilssttwo.jpg"  title="Itil-change-evaluation.jpg">ITIL Change Evaluation</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Change Evaluation sub-processes:">These are the <strong class="selflink">ITIL Change Evaluation</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Change_Evaluation_Planning" itemprop="itemListElement">Change Evaluation prior to Planning</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a proposed major Change before authorizing the Change planning phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change_Evaluation_Build" itemprop="itemListElement">Change Evaluation prior to Build</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a proposed major Change before authorizing the Change build phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change_Evaluation_Deployment" itemprop="itemListElement">Change Evaluation prior to Deployment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a proposed major Change before authorizing the Change deployment phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change_Evaluation_after_Deployment" itemprop="itemListElement">Change Evaluation after Deployment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a major Change after it has been implemented, to verify if the Change has met its objectives and to identify any lessons to be learned. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Change Evaluation to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Change_Evaluation_Report" itemprop="itemListElement">Change Evaluation Report</span></b> </p>
+    <ul>
+      <li itemprop="description">Certain types of major Changes, like the introduction of a new service or a substantial change to an existing service, require formal Change evaluations before being authorized. The results of a formal Change evaluation are documented in a Change Evaluation Report. Change evaluations may be used at different points in a Change's lifecycle, for example before authorizing the Change/Release build or during the Post Implementation Review. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Change_Manager">Change Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Change Manager controls the lifecycle of all Changes. His primary objective is to enable beneficial Changes to be made, with minimum disruption to IT services. For important Changes, the Change Manager will refer the authorization of Changes to the Change Advisory Board (CAB).</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b>Responsibility Matrix: ITIL Change Evaluation</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Change Manager </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td align="left"><a href="#Change_Evaluation_Planning">Change Evaluation prior to Planning</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Change_Evaluation_Build">Change Evaluation prior to Build</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Change_Evaluation_Deployment">Change Evaluation prior to Deployment</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Change_Evaluation_after_Deployment">Change Evaluation after Deployment</a></td>
+        <td>A </td>
+        <td>R </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Change Evaluation process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Change Evaluation.</span> </p>
+  <p><span id="Team">[3] In cooperation, as appropriate: Applications Analyst, Technical Analyst, Configuration Manager, Project Manager, Risk Manager and others. </span>&nbsp;</p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

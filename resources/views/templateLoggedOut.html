@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}NAME OF PAGE{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container">
+
+	</div>
+{% endif %}
+<!--{% if not current_user and false %} --> <!--switch to turn off not logged on access-->
+{% if not user %}
+<div class="container">
+
+	</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Charioteer{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+<h3 align="left">Ethos, Logos, Pathos.</h3>
+<hr>
+<div class="container" align="center">
+  <p class="ctr"><img alt="" class="img-fluid" src="{{ asset('storage/images/charioteer.png') }}"> <br>
+    <br>
+    <img alt="" class="img-fluid"  src="{{ asset('storage/images/ethospathoslogos.png') }}" ></p>
+  <p align="left">Argument comes with an ethic.&nbsp; <br>
+    The best that mere rhetoric can offer is mere winning.<br>
+    Truth and genuine rationality demand a far higher standard than that.</p>
+</div>
+<p><a href="/homeviewpdf/philosopherstoolkit.pdf" target="_newtab">Workbook</a>.</p>
+<div> </div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="center">
+  <!--SWITCH ON AND OFF-->
+  <!--The insecure stuff goens here-->
+
+</div>
+{% endif %}
+
+
+{% endblock %}

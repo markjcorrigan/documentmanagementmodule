@@ -1,0 +1,199 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+CSI{% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+<!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL CSI</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/csisummary.pdf') }}" >Awesome Summary of CSI</a></p>
+  <hr>
+  <p>CSI continually improves the effectiveness and efficiency of services and processes. </p>
+  <p>ITIL 2011 defines one process in the CSI stage of the service lifecycle: The
+    &quot;Seven-Step Improvement Process&quot;. These seven steps describe a generic approach to continual improvement that can be applied in many situations, rather than a process that organizations would implement in practice. Specific CSI methods and techniques are mostly discussed in other parts of the ITIL CSI publication.
+    NOTE:&nbsp; The CSI Register produced from these steps feed into the
+    Service Portfolio Process in Service Strategy.&nbsp; What is interesting
+    is that this &quot;groomed list&quot; of priorities is also the Scrum Product
+    Owners Backlog!</p>
+  <br>
+  <div align="center">
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsecsi" aria-expanded="false" aria-controls=
+        "collapsecsi">ITIL 7 CSI Improvement Steps </button>
+    <div class="collapse" id="collapsecsi">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center"></h5>
+          <div class="card-body text-left">
+            <p align="center"><img alt="" src="{{ asset('storage/images/itilsevenstepimprovementprocess.png') }}" ></p>
+            <p>While casually looking at Figure 1, it may appear that the 7-step improvement process is a circular one; however, by following this practice, you form a so-called <strong>knowledge spiral</strong> in which each cycle builds upon the previous one, and outputs of the previous cycle become data inputs for the next.</p>
+            <p>Let's look into the individual steps of the 7-step improvement process.</p>
+            <h3 style="padding-bottom: 10px"><strong>1. What should you measure?</strong></h3>
+            <p> With strong interconnections with every part of the Service
+              Lifecycle, <strong>Service Strategy</strong> and <strong>Service Design</strong> should already have the answers to those questions, and should have already identified starting points. In such case, the role of the CSI is to ask the question:
+              &quot;Where are we now?&quot; - before starting the cycle all over again.</p>
+            <h3 style="padding-bottom: 10px"><strong>2. What can you measure?</strong></h3>
+            <p>Every organization may find that they have limitations on what can actually be measured. If you cannot measure something, then it should not appear in an <a href="https://www.20000academy.com/documentation/sla/"  rel="noopener"><strong>SLA</strong></a>.
+              By identifying the new service level requirements of the
+              business, the IT capabilities (identified through Service Design
+              and implemented via Service Transition) and the available
+              budgets, CSI can conduct a gap analysis to identify the
+              opportunities for improvement, as well as answer the question:
+              &quot;How do we get there?&quot;</p>
+            <h3 style="padding-bottom: 10px"><strong>3. Gather the data.</strong></h3>
+            <p>In order to properly answer the
+              &quot;Did we get there?&quot; question, data must first be gathered (usually through Service Operations). Gathering data requires having some form of monitoring in place. Monitoring could be executed using technology such as an application, system and component monitoring tools, or even a manual process for certain tasks. Data is gathered based on the goals and objectives identified. At this point, the data is raw and no conclusions are drawn.</p>
+            <h3 style="padding-bottom: 10px"><strong>4. Process the data.</strong></h3>
+            <p>Now the data is processed in alignment with the CSFs (<strong>Critical Success Factors</strong>) and KPIs (<strong>Key Performance Indicators</strong>) specified. This means that timeframes are coordinated, unaligned data is rationalized and made consistent, and gaps in the data are identified. The simple goal of this step is to process data from multiple disparate sources into an
+              &quot;apples to apples&quot; comparison. Once we have rationalized the data, we can then begin analysis.</p>
+            <h3 style="padding-bottom: 10px"><strong>5. Analyze the data.</strong></h3>
+            <p>The data becomes information as it is analyzed to identify service gaps, trends, and the impact on the business. It is the analyzing step that is often overlooked or forgotten in the rush to present data to management.</p>
+            <h3 style="padding-bottom: 10px"><strong>6. Present the information.</strong></h3>
+            <p>The answer to
+              &quot;Did we get there?&quot; is shaped and communicated in whatever way necessary to various stakeholders. The presentation should paint an accurate picture of the results of the improvement efforts. Knowledge is presented to the business in a form and manner that reflects their needs and assists them in determining the next steps.</p>
+            <h3 style="padding-bottom: 10px"><strong>7. Implement corrective action.</strong></h3>
+            <p>The knowledge gained is used to optimize, improve, and correct services. Managers identify issues and present solutions. The <a href="https://www.20000academy.com/documentation/corrective-or-preventive-action-form-2/"  rel="noopener">corrective actions</a> that need to be taken to improve the service are communicated and explained to the organization. Following this step, the organization establishes a new baseline and the cycle begins again&#8230;</p>
+          </div>
+          <div class="card-footer"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Continual Service Improvement processes:">Therefore, organizations seeking to introduce an <strong class="selflink">ITIL-aligned Continual Service Improvement (CSI) process</strong> will typically define a set of service improvement processes to ensure that ideas for improvement are identified and implemented, as described below:</span> </p>
+    <hr>
+    <p>(Process 26 of 26):  The four steps below are a way to manage the CSI Seven Step Improvement Process (Identify, Define, Gather, Process, Analyse, Present Improvements).
+
+    <hr>
+    <dl>
+      <dt><a href="/home/itilcsione" title="Service Review" itemprop="itemListElement">Service Review</a> </dt>
+      <dd itemprop="description">Process Objective: To review business services and infrastructure services on a regular basis. The aim of this process is to improve service quality where necessary, and to identify more economical ways of providing a service where possible. </dd>
+    </dl>
+    <p><br />
+    </p>
+    <dl>
+      <dt><a href="/home/itilcsitwo" title="Process Evaluation" itemprop="itemListElement">Process Evaluation</a> </dt>
+      <dd itemprop="description">Process Objective: To evaluate processes on a regular basis. This includes identifying areas where the targeted process metrics are not reached, and holding regular benchmarkings, audits, maturity assessments and reviews. </dd>
+    </dl>
+    <p><br />
+    </p>
+    <dl>
+      <dt><a href="/home/itilcsithree" title="Definition of Improvement Initiatives" itemprop="itemListElement">Definition of CSI Initiatives</a> </dt>
+      <dd itemprop="description">Process Objective: To define specific initiatives aimed at improving services and processes, based on the results of service reviews and process evaluations. The resulting initiatives are either internal initiatives pursued by the service provider on his own behalf, or initiatives which require the customer's cooperation. </dd>
+    </dl>
+    <p><br />
+    </p>
+    <dl>
+      <dt><a href="/home/itilcsifour" title="CSI Monitoring" itemprop="itemListElement">Monitoring of CSI Initiatives</a> </dt>
+      <dd itemprop="description">Process Objective: To verify if improvement initiatives are proceeding according to plan, and to introduce corrective measures where necessary. </dd>
+    </dl>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/Overview_continual_service_improvement_csi_itilv3.jpg') }}"></p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL CSI</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/csisummary.pdf') }}" >Awesome Summary of CSI</a></p>
+  <hr>
+  <p>CSI continually improves the effectiveness and efficiency of services and processes. </p>
+  <p>ITIL 2011 defines one process in the CSI stage of the service lifecycle: The
+    &quot;Seven-Step Improvement Process&quot;. These seven steps describe a generic approach to continual improvement that can be applied in many situations, rather than a process that organizations would implement in practice. Specific CSI methods and techniques are mostly discussed in other parts of the ITIL CSI publication.
+    NOTE:&nbsp; The CSI Register produced from these steps feed into the
+    Service Portfolio Process in Service Strategy.&nbsp; What is interesting
+    is that this &quot;groomed list&quot; of priorities is also the Scrum Product
+    Owners Backlog!</p>
+  <br>
+  <div align="center">
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsecsi" aria-expanded="false" aria-controls=
+        "collapsecsi">ITIL 7 CSI Improvement Steps </button>
+    <div class="collapse" id="collapsecsi">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center"></h5>
+          <div class="card-body text-left">
+            <p align="center"><img alt="" src="{{ asset('storage/images/itilsevenstepimprovementprocess.png') }}" ></p>
+            <p>While casually looking at Figure 1, it may appear that the 7-step improvement process is a circular one; however, by following this practice, you form a so-called <strong>knowledge spiral</strong> in which each cycle builds upon the previous one, and outputs of the previous cycle become data inputs for the next.</p>
+            <p>Let's look into the individual steps of the 7-step improvement process.</p>
+            <h3 style="padding-bottom: 10px"><strong>1. What should you measure?</strong></h3>
+            <p> With strong interconnections with every part of the Service
+              Lifecycle, <strong>Service Strategy</strong> and <strong>Service Design</strong> should already have the answers to those questions, and should have already identified starting points. In such case, the role of the CSI is to ask the question:
+              &quot;Where are we now?&quot; - before starting the cycle all over again.</p>
+            <h3 style="padding-bottom: 10px"><strong>2. What can you measure?</strong></h3>
+            <p>Every organization may find that they have limitations on what can actually be measured. If you cannot measure something, then it should not appear in an <a href="https://www.20000academy.com/documentation/sla/"  rel="noopener"><strong>SLA</strong></a>.
+              By identifying the new service level requirements of the
+              business, the IT capabilities (identified through Service Design
+              and implemented via Service Transition) and the available
+              budgets, CSI can conduct a gap analysis to identify the
+              opportunities for improvement, as well as answer the question:
+              &quot;How do we get there?&quot;</p>
+            <h3 style="padding-bottom: 10px"><strong>3. Gather the data.</strong></h3>
+            <p>In order to properly answer the
+              &quot;Did we get there?&quot; question, data must first be gathered (usually through Service Operations). Gathering data requires having some form of monitoring in place. Monitoring could be executed using technology such as an application, system and component monitoring tools, or even a manual process for certain tasks. Data is gathered based on the goals and objectives identified. At this point, the data is raw and no conclusions are drawn.</p>
+            <h3 style="padding-bottom: 10px"><strong>4. Process the data.</strong></h3>
+            <p>Now the data is processed in alignment with the CSFs (<strong>Critical Success Factors</strong>) and KPIs (<strong>Key Performance Indicators</strong>) specified. This means that timeframes are coordinated, unaligned data is rationalized and made consistent, and gaps in the data are identified. The simple goal of this step is to process data from multiple disparate sources into an
+              &quot;apples to apples&quot; comparison. Once we have rationalized the data, we can then begin analysis.</p>
+            <h3 style="padding-bottom: 10px"><strong>5. Analyze the data.</strong></h3>
+            <p>The data becomes information as it is analyzed to identify service gaps, trends, and the impact on the business. It is the analyzing step that is often overlooked or forgotten in the rush to present data to management.</p>
+            <h3 style="padding-bottom: 10px"><strong>6. Present the information.</strong></h3>
+            <p>The answer to
+              &quot;Did we get there?&quot; is shaped and communicated in whatever way necessary to various stakeholders. The presentation should paint an accurate picture of the results of the improvement efforts. Knowledge is presented to the business in a form and manner that reflects their needs and assists them in determining the next steps.</p>
+            <h3 style="padding-bottom: 10px"><strong>7. Implement corrective action.</strong></h3>
+            <p>The knowledge gained is used to optimize, improve, and correct services. Managers identify issues and present solutions. The <a href="https://www.20000academy.com/documentation/corrective-or-preventive-action-form-2/"  rel="noopener">corrective actions</a> that need to be taken to improve the service are communicated and explained to the organization. Following this step, the organization establishes a new baseline and the cycle begins again&#8230;</p>
+          </div>
+          <div class="card-footer"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Continual Service Improvement processes:">Therefore, organizations seeking to introduce an <strong class="selflink">ITIL-aligned Continual Service Improvement (CSI) process</strong> will typically define a set of service improvement processes to ensure that ideas for improvement are identified and implemented, as described below:</span> </p>
+    <hr>
+    <p>(Process 26 of 26):  The four steps below are a way to manage the CSI Seven Step Improvement Process (Identify, Define, Gather, Process, Analyse, Present Improvements).
+
+    <hr>
+    <dl>
+      <dt><a href="/home/itilcsione" title="Service Review" itemprop="itemListElement">Service Review</a> </dt>
+      <dd itemprop="description">Process Objective: To review business services and infrastructure services on a regular basis. The aim of this process is to improve service quality where necessary, and to identify more economical ways of providing a service where possible. </dd>
+    </dl>
+    <p><br />
+    </p>
+    <dl>
+      <dt><a href="/home/itilcsitwo" title="Process Evaluation" itemprop="itemListElement">Process Evaluation</a> </dt>
+      <dd itemprop="description">Process Objective: To evaluate processes on a regular basis. This includes identifying areas where the targeted process metrics are not reached, and holding regular benchmarkings, audits, maturity assessments and reviews. </dd>
+    </dl>
+    <p><br />
+    </p>
+    <dl>
+      <dt><a href="/home/itilcsithree" title="Definition of Improvement Initiatives" itemprop="itemListElement">Definition of CSI Initiatives</a> </dt>
+      <dd itemprop="description">Process Objective: To define specific initiatives aimed at improving services and processes, based on the results of service reviews and process evaluations. The resulting initiatives are either internal initiatives pursued by the service provider on his own behalf, or initiatives which require the customer's cooperation. </dd>
+    </dl>
+    <p><br />
+    </p>
+    <dl>
+      <dt><a href="/home/itilcsifour" title="CSI Monitoring" itemprop="itemListElement">Monitoring of CSI Initiatives</a> </dt>
+      <dd itemprop="description">Process Objective: To verify if improvement initiatives are proceeding according to plan, and to introduce corrective measures where necessary. </dd>
+    </dl>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/Overview_continual_service_improvement_csi_itilv3.jpg') }}"></p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

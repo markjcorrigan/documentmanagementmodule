@@ -1,0 +1,74 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # ======================================================================
+    # =============== START: MANAGE FOLDER BLOCKING HERE ===================
+    # ======================================================================
+    # 1. BLOCK 'documents' folder (403 Forbidden for everyone)
+    RewriteCond %{REQUEST_URI} ^/documents/ [NC]
+    RewriteRule .* - [F,L]
+
+    # 2. PASSWORD PROTECT specific folders - REMOVE DUPLICATES
+    # Remove these from the list since they appear in public sections below:
+    # - freezonecourses (in Documents public list)
+    # - macroecon (in Documents public list) 
+    # - standardtechcourse (in App UI public list)
+    SetEnvIf Request_URI "^/(apology|technologydict|cbandmetercourses|scientologydict|sitapmo|emetercourse|trscourse|madmoment|summitid|helpme|atecdic|lrh|lrhbooks|techdic|booksummaries|flipacp|flipdsdm|flippmbokfive|flippmp|flipprince2|flipprince2a|flipprince22015|shsb|scrum)/" REQUIRE_AUTH
+    AuthType Basic
+    AuthName "Restricted Area"
+    AuthUserFile "C:/xampp/htdocs/pmway.hopto.org/storage/secure/.htpasswd"
+    Require valid-user
+    Order allow,deny
+    Allow from all
+    Satisfy any
+
+    # Alternative approach if above doesn't work - use separate .htaccess files in each protected folder
+    # Or use this RewriteRule approach instead:
+    # RewriteCond %{REQUEST_URI} ^/(apology|technologydict|cbandmetercourses|scientologydict|sitapmo|emetercourse|trscourse|madmoment|summitid|helpme|atecdic|lrh|lrhbooks|techdic|booksummaries|flipacp|flipdsdm|flippmbokfive|flippmp|flipprince2|flipprince2a|flipprince22015|shsb|scrum)/ [NC]
+    # RewriteRule .* - [E=REQUIRE_AUTH:1]
+    # ======================================================================
+
+    # ======================================================================
+    # <<< FULL REFERENCE LIST OF ALL PUBLIC FOLDERS >>>
+    # REMOVE THESE FROM THE PASSWORD PROTECTION LIST ABOVE:
+    # ======================================================================
+    # Fonts & UI: fontawesome6, tinymce, tinymcefourthirteen, tinymcetwo,
+    #             bootstrapfourfivetwo, bootstrapfouroneone, bootstrapfourthreeone
+    # Frontend:   css, js, build, assets, images, includessub
+    # App UI:     PMWayLanding, backend, frontend, ableaudio,
+    #             ableaudiotracks, ablelvids, ableplayer, ablevids, agileprinciples,
+    #             breath, cmiitraining, cmmidev, cmmidevelopment, cmmimodels, conditions, cv,
+    #             dsdm, dsdmmanual, dsdmwhitepapers, 
+    #             ethics, fallacies, goodcheapfast, imgman, imgmap, itilfouroverview, itilfouroverviewsimple, itilfourstudyguide,
+    #             latin, lovemstuffs, movies, pcmm,
+    #             philosopherstoolkit, philosophy, phoenixlecturespics,
+    #             pmboksixmanual, prince2mm, prince2procs, processesdash,
+    #             recharges, roadtoclear, robertsrulesoforder, scientology,
+    #             scrummanual, silverbullet, standardtechcourse, strategystuff, studymanual, studyitil,
+    #             thewayaudio, twcsstraining, zen
+    # Documents:  booklets, complexprince, freezonecourses, macroecon,
+    #             pmbok5, pmbok6, pmi2015, tao
+    # Storage:    storage (symlink - Laravel's public storage, do not block)
+    # ======================================================================
+    # ================ END: MANAGE FOLDER BLOCKING HERE ====================
+    # ======================================================================
+
+    #  road to clear and study manual was converted to roadtoclear and studymanual may crash in the link in pmway
+    #  Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

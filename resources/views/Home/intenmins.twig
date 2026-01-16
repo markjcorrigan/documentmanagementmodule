@@ -1,0 +1,1632 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}InTenMins{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="content">
+  <div class="container center">
+    <!--This is where the main stuff goes-->
+
+    <h3 align="center"><a name="top" id="top"></a>10 Minute Overview of PMWay<br>
+      (Project / Process Management Way)</h3>
+    <hr style="width: 40%">
+    <p class="small" style="text-align:center"><img alt="lateral thinking" class="img-fluid" height="295" src="{{ asset('storage/images/latthink.png') }}" width="171"><br>
+      Dig around
+      this page <br>
+      for deeper understanding</p>
+    <p class="small" style="text-align:center">(or
+      download this <a href="/homesavepdf/paper.pdf" >paper</a> or <a href="/homesavezip/presentation.zip" target="blank">zipped PowerPoint presentation</a>) </p>
+    <hr style="width: 40%">
+    <h5 align="center">Unlike Business As Usual (BAU),<br>
+      projects are temporary endeavors <br>
+      designed to add value by creating new;<br>
+      or improving the organization's
+      existing configuration baseline/s.<br>
+      (systems, infrastructure, capability maturity processes,
+      even people skill baselines etc.)<br>
+      I.e. improving the People, Process
+      and Technology triad<br>
+      <br>
+      Else, don't run the project!</h5>
+    <div align="center"> <img class="img-fluid" src="{{ asset('storage/images/orgvalue.png') }}" ></div>
+    <hr>
+    <h5 align="left"> As Capability Maturity Level 2 is all about project management
+      expertise; <br>
+      ask yourself these 5 questions:</h5>
+    <table border="1" cellpadding="10px">
+      <tr>
+        <td><h5 align="left">1.&nbsp; Are you tired of '<em><strong><span><a href=
+                                                                                     "/images/cmmi%20@%20level%201.png"
+
+                                                                                     title=
+                                                                                     "Click here for an image that explains what &quot;Just Do It&quot;, or Capability Maturity Level 1 is all about. The image also explains why being heroic is just one of a number of Capability Maturity Level 1 unintelligent stupidities.">Just
+            Do It</a>'</span></strong></em> &amp; 'Heroic' Project Management <a href=
+                                                                                 "/images/chaos-report.pdf"
+                                                                                 title=
+                                                                                 "The Chaos Report: Project Management? 'folly' that inspired PMWay"
+                                                                                 target=
+                                                                                 "_newtab"><strong><em><span>Chaos</span></em></strong></a> at Capability
+            Maturity Level 1?</h5>
+          <p><em>Capability Maturity Level 1
+            is essentially a lack of (or insufficient) project
+            management processes and their monitoring and controls.<br>
+            This problem can apply
+            to any type of project management method.&nbsp; I.e.
+            Traditional, Agile, Extreme or etc.</em></p>
+          <p><em>The Capability Maturity Model integrated (CMMi),
+            summarized in the image below, is a process improvement model from the
+            Carnegie Mellon University,<br>
+            a private research
+            institution in Pittsburgh Pennsylvania, in the USA.</em></p></td>
+      </tr>
+      <tr>
+        <td><h5>2.&nbsp; Are your valued clients (both internal and external) frustrated
+            with a consistent lack of delivery against schedule<br>
+            (or 'post it notes [stickies]' - on your agile board), the complexity of which are
+            confounding your project team, who can't pin TAsks (Time
+            Asks) down to get them done and dusted?</h5></td>
+      </tr>
+      <tr>
+        <td><h5>3.&nbsp; Do you experience high levels of Risk, Rework and Waste?</h5></td>
+      </tr>
+      <tr>
+        <td><h5>4.&nbsp; Do you aspire for higher levels of Productivity and Quality and
+            a Focused and Motivated Workforce?</h5></td>
+      </tr>
+      <tr>
+        <td><h5>5.&nbsp; And finally, if Traditional or Agile projects under your auspices are
+            being run at Capability Maturity Level 1,<br/>
+            would you have difficulty, due to a lack of governance
+            and insufficient
+            'monitoring and controls,' if your projects needed to be audited?</h5></td>
+      </tr>
+    </table>
+    <br/>
+    <h5 align="left">If you answered YES to the questions above,<br/>
+      and want to know PMWay's solution to achieve stability at Capability Maturity Level 2+,<br/>
+      then the answers you have been looking for are found in the
+      Capability Maturity model below:</h5>
+    <div class="container text-center">
+      <h4>The Capability Maturity Model to improve Productivity and
+        Quality</h4>
+      <p class="small text-center"><em>Hover your mouse over the image below.<br>
+        These images
+        below <strong>are the essence of PMWay Web in 5
+        seconds</strong>.</em></p>
+      <img class="img-fluid" src="{{ asset('storage/images/cmmproject2plus.png') }}" onmouseover=
+            "this.src='{{ asset('storage/images/peopleprocesstechnologygovernanceexecution.png') }}'" onmouseout=
+                 "this.src='{{ asset('storage/images/cmmproject2plus.png') }}'"/><br>
+      <br>
+      <p class="small text-center"><em>Hover your mouse over the image below.</em></p>
+      <img class="img-fluid" src="{{ asset('storage/images/cmmiuplevels.png') }}" onmouseover=
+            "this.src='{{ asset('storage/images/pdca_process.png') }}'" onmouseout=
+                 "this.src='{{ asset('storage/images/cmmiuplevels.png') }}'"/>
+
+      <!--<img alt="cmmi up levels" height="489" class="img-fluid" src="{{ asset('storage/images/cmmiuplevels.png') }}" width="583">-->
+      </h5>
+      <br>
+      <br>
+      <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsecmmi" aria-expanded="false" aria-controls=
+        "collapsecmmi">Capability Maturity Model <br>
+      Orientation </button>
+      <div class="collapse" id="collapsecmmi">
+        <div class="container">
+          <div class="card text-center">
+            <h5 class="card-header" align="center">Use these 5 questions below to quickly orientate yourself
+              with the CM Model above.<br>
+              (<a href="pmway.php" >The PMBOK 6 Dashboard</a> (also a model)
+              expands CM Level 2)&nbsp;</h5>
+            <div class="card-body">
+              <h5 style="font-weight:normal; text-align:left">
+                <ol>
+                  <li>Can you find and isolate the Requirements Management
+                    process in the CM model above?<br>
+                    It is found in Level 2 (Managed) which level focuses on
+                    Project Management.<br>
+                    Requirements Management (the REQM process) is the '<strong>WHAT</strong>' that projects must deliver. <br>
+                    <br>
+                  </li>
+                  <li>Now find the Project Planning (PP) and Project Monitoring and Control (PMC) processes
+                    in the CM model above?&nbsp; <br>
+                    Understand that the CM model
+                    presented above is highly simplified.&nbsp; <br>
+                    Within the PMWay
+                    web (and the CMMi texts from Carnegie Mellon University) far more detail
+                    on this model is available.&nbsp; <br>
+                    However, for our purposes, and
+                    to illustrate the larger game that must be played for Quality
+                    and Productivity improvements, PMWay believes that the above model is perfect!<br>
+                    <br>
+                  </li>
+                  <li>Now can you find the PP and PMC processes on the <a href="" >PMBOK 6 Dashboard</a>?&nbsp; <br>
+                    (Hint:&nbsp; Because of the importance of PP and PMC, each has its own Process Group (with many
+                    processes) found at the top of the Dashboard.)<br>
+                    While PP is
+                    summarized as a single entry in the CM Model above, its
+                    detailed breakdown (process steps by Knowledge Area) is
+                    conveniently made available to us via the PMBOK Dashboard.&nbsp; <br>
+                    Do you know, due to the importance of the Planning Process Group,
+                    24 out of the total of 49 PMBOK 6 processes are focused
+                    specifically on planning processes!<br>
+                    This means just under 50% of
+                    all PMBOK 6 processes are planning processes!<br>
+                    <br>
+                  </li>
+                  <li>Can you see that the PP and PMC processes bolster up (support /
+                    enable) Project Execution (essentially the Direct and Manage Project
+                    Work process #
+                    4.3) on the PMBOK Dashboard?<br>
+                    Now here is a really cool thing to
+                    consider:&nbsp; From the PMBOK perspective, <strong>planning (the Planning
+                    Process Group) is actually a GO / No Go check list</strong> that you
+                    can use to show that you are ready to move
+                    your preliminary 'Develop Schedule' planning process (# 6.5) into the Execution Process Group
+                    as a '<strong>Developed Schedule</strong>' ready (when resources
+                    are attached) for baseline.<br>
+                    The Capability Maturity model
+                    (which, per the model above, can install a variety of
+                    improvement processes throughout
+                    the organization) sees
+                    this (PP) and (PMC) on either side of the Do The Work process (#
+                    4.3) as a cyclical or repeatable improvement process called: <strong>Plan, Do, Check</strong> and then <strong>Act</strong>. <br>
+                    Did you know that the essence of W. Edwards Deming's (the father of the Capability Maturity Model) Red Bead Experiment
+                    and 14 Observations for Management <strong>are based on the Deming cycle or circle: Plan, Do, Check Act. </strong><br>
+                    <br>
+                  </li>
+                  <li>Ultimately, as agile with
+                    its limited planning and documentation is 'Risky Business';
+                    and with these projects existing at the lower level of CM 2 (or at CM - 1 if
+                    agile is badly executed), agile projects
+                    MUST be managed with extra special care (tight Risk and Issue
+                    management controls in place) for safety to ensure success.<br>
+                    I.e. the section below (from the SCRUM Body
+                    of Knowledge) elucidates:<br>
+                    <br>
+                    <img alt="risks and issues" class="img-fluid" height="532" src="{{ asset('storage/images/risksissuesscrumbok.png') }}" width="800"></li>
+                </ol>
+              </h5>
+            </div>
+            <div class="card-footer">
+              <h5 style="text-align:center">The above said; <br>
+                It is a good idea to
+                always keep in mind that:</h5>
+              <row style="text-align:center"><img alt="All models are wrong but some useful" class="img-fluid" height="556" src="{{ asset('storage/images/modelsarewrong.png') }}" width="381"></row>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div align="center"> <br>
+        <a name="procs"></a>
+        <table border="4"  style="width: 80%" "border-style:ridge" cellpadding="10px" align="center" >
+          <tr>
+            <td><div style="text-align:center">
+              <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsedevdash" aria-expanded="false" aria-controls=
+        "collapsedevdash">Your Playbook<br>
+              CMMi Dev 3.1 </button>
+              <div class="collapse" id="collapsedevdash">
+                <div class="container">
+                  <div class="card text-center">
+                    <h5 class="card-header" align="center">Use this key to understand how the CMMi Dev. 3.1 dashboard above
+                      works.</h5>
+                    <div class="card-body text-left">
+                      <p align="left" ><strong>Category:&nbsp; </strong><span class="smltxt">Logical grouping of Process Areas I.e. Project Management, Engineering, Support etc.<span class="auto-style1"><br />
+                        </span></span><span class="auto-style1"><span class="auto-style2"> <strong>Process Area or PA:</strong></span>&nbsp; </span> <span class="smltxt"> A Process Area (there are 22 in CMMi Dev 1.3) is a cluster of related practices in an area that, when performed collectively, satisfy a set of goals considered important for making significant improvement in that area. </span><span class="auto-style1"><br />
+                        </span><span class="auto-style3"> <strong>ML</strong></span><span class="auto-style1"><strong> or Maturity level:</strong></span><span class="smltxt"> Degree of process improvement across a predefined set of process areas in which all goals within the set are attained.</span><span class="auto-style1"><br />
+                        <span class="auto-style2"> <strong>SG</strong></span><strong> or Specific Goal:</strong></span><span class="smltxt"> SG's apply to a process area and address the unique characteristics that describe what must be implemented to satisfy the process area. </span><span class="auto-style1"><br />
+                        <span class="auto-style2"> <strong>SP</strong></span><strong> or Specific Practice:</strong></span><span class="smltxt"> SP's are an activity that is considered important in achieving the associated specific goal. The specific practices describe the activities expected to result in achievement of the specific goals of a process area. Specific practices are expected model components.</span></p>
+                      <img alt="CMMi-Dev1.3 dashboard" class="img-fluid"  src="{{ asset('storage/images/cmmi-dev1.png') }}" ><br>
+                      <br>
+                      <h5 align="left">If you are interested in finding out how this dashboard
+                        is put together,
+                        work through the 6 steps below:</h5>
+                      <p align="left"><strong>Step 1.</strong>&nbsp; Find the Process, Project, Engineering and Service Management Categories on the left side of the CMMi Dev dashboard below! <br>
+                        <strong>Step 2.</strong>&nbsp; Find the Project Planning (PP) and Project Monitoring and Control (PMC) Process Areas within the Project Category. These are
+                        CM Level 2 processes. <br>
+                        <a href="/home/demo" >PP and PMC bolster the
+                        Exection Process Group in the PMBOK 6 Dashboard</a>.&nbsp; Can you see this?&nbsp; <br>
+                        PP and PMC are also essential in Agile as these two images from the
+                        SCRUM method clearly show.&nbsp; Can you see this?</p>
+                      <div align="center"><img alt="sprint with PP and PMC" class="img-fluid" src="{{ asset('storage/images/sprintmethodwithpppmc.jpg') }}"><br>
+                        <br>
+                        <br>
+                        <img alt="" class="img-fluid"  src="images/scrumprocessespppmc.jpg" ></div>
+                      <br>
+                      <p align="left"><strong>Step 3.</strong>&nbsp; Find the Requirements Management (REQM) Process Area within the Engineering Category. This is a Level 2 process. These, via ITIL
+                        (The IT Infrastructure Library, as best practice dealt with in
+                        more detail within PMWay) <strong>Service Catalogues</strong> (for example), will form the process improvements (the glue) that
+                        is needed (by each IT system) for competitive success.<br>
+                        Per
+                        Deming, the People, Process and Technology triad is essential
+                        and Process is the glue that holds the triad together.&nbsp; Put
+                        another way, to expand the triad, triangle points are pulled out
+                        in a balanced manner but via process improvements focus.<br>
+                        <strong>Step 4.</strong>&nbsp; Find the Configuration Management (CM) Process Area in the Support Category. This is a
+                        CM Level 2 process. <br>
+                        <strong>Step 5.</strong>&nbsp; REQM and CM form the essence
+                        of the V Model.</p>
+                      <div align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/vmodelcb.jpg') }}"></div>
+                      <p class align="left"> <strong>Step 6.</strong>&nbsp; Find Verification (VER) and Validation (VAL) Process Areas within the Engineering Category. <br>
+                        This is at the heart of bi-directional traceability
+                        (illustrated in the V Model above) and involves moving the baseline
+                        forward (for quality improvement).</p>
+                      <hr>
+                    </div>
+                    <div class="card-footer"> </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseconstellations" aria-expanded="false" aria-controls=
+        "collapseconstellations">CMMi Constellations <br>
+              and the shared processes </button>
+              <div class="collapse" id="collapseconstellations">
+              <div class="container">
+              <div class="card text-center">
+              <h5 class="card-header" align="center">The CMMi Constellations <br>
+                (Development, Acquisition, Services)<br>
+                The People Capability Maturity Model (CMM) is a focus area without being a
+                Constellation<br>
+                (i.e. People CMM supports the implementation of the CMMi
+                Constellations above) </h5>
+              <div class="card-body text-center">
+                <p style="text-align:center"><em>A constellation
+                  is a particular collection of process areas specifically
+                  chosen to help improve <br>
+                  a given business need within the CMMI
+                  framework. <br>
+                  <br>
+                  <img alt="cmmi constellations" class="img-fluid" height="1024" src="{{ asset('storage/images/cmmi-constellations.jpg') }}" width="769"> </em></p>
+              </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr>
+      <div style="text-align:center">
+      <table border="4"  style="width: 80%" "border-style:ridge" cellpadding="10px" align="center" >
+        <tr>
+          <td><p style="text-align:center">Looking for more detail on the above?</p>
+            <div style="text-align:center">
+              <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseppt" aria-expanded="false" aria-controls=
+        "collapseppt">The<br>
+              People, Process
+              and Technology <br>
+              Triad </button>
+              <div class="collapse" id="collapseppt">
+                <div class="container">
+                  <div class="card text-center">
+                    <h5 class="card-header" align="center">The People, Process
+                      and Technology Triad</h5>
+                    <div class="card-body text-center">
+                      <h5>Improved processes, defined and knitted into your systems (technology), will enable your people <br>
+                        to better service your valued clients.</h5>
+                      <p class="medium text-center"><em>Hover your mouse over the image below.</em></p>
+                      <img class="img-fluid" src=
+                "/images/ppt.png" onmouseover=
+                                                                         "this.src='{{ asset('storage/images/peopleprocessbottomlineboxedin.png') }}'"
+                                                                         onmouseout=
+                                                                         "this.src='{{ asset('storage/images/ppt.png') }}'"/>
+                      <h5>Everyone realizes the importance of having a motivated, quality workforce
+                        but even our finest people cannot perform at their best when the
+                        process is not understood or operating at its best.</h5>
+                    </div>
+                    <div class="card-footer">&nbsp;The three points
+                      (nodes) of this triangle <br>
+                      pulled outward (focused upon,
+                      utilized correctly, mutually improved), <br>
+                      drives the positive change
+                      that is needed to create business value.<br>
+                      <em>And<br>
+                      'Process
+                      is the glue that ties the triad together'!</em> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!------</div>-------------->
+            <br>
+            <div style="text-align:center">
+              <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsecheck" aria-expanded="false" aria-controls=
+        "collapsecheck">Are you already at <br>
+              Capability Maturity Level 3? </button>
+              <div class="collapse" id="collapsecheck">
+                <div class="container">
+                  <div class="card text-center">
+                    <h5 class="card-header" align="center">Assess your status by answering
+                      these CM Level 3 questions below:</h5>
+                    <div class="card-body">
+                      <h5>Using the V Model, PMBOK 6 Dashboard, the CM and ITIL best practice
+                        model; <br>
+                        can you say that these processes are in place where you work?</h5>
+                      <row style="text-align:center"><img alt="bidirectionaltraceability" class="img-fluid" height="418" src="{{ asset('storage/images/vmodelbevel.png') }}" width="634"></row>
+                      <ol>
+                        <li>
+                          <h5 style="font-weight:normal; text-align:left">Note <a href="/images/bidirectionaltrace.pdf" >bidirectional traceability of requirements</a> in the V Model. <br>
+                            You can also find it in the more detailed <a href="/images/cmmi-dev1.png" >version
+                            (CMMi Dev. 3.1)</a> of the
+                            simplified CMMi Dashboard above.<br>
+                            <em>(Ctrl + or - buttons [or
+                            Ctrl + moving the mouse wheel] zooms this compressed poster so you can see it better)</em> <strong><br>
+                            </strong>Look for it in the Engineering section,
+                            Process Area: REQM.&nbsp; Note that bidirectional
+                            traceability of requirements is a Sub Process of the Process
+                            REQM which is at CM Level 2.&nbsp; <br>
+                            Find bidirectional traceability of requirements at Specific
+                            Goal (SG) - Manage Requirements and Specific Practice (SP)
+                            1.4.<br>
+                            On the more detailed version (CMMi Dev. 3.1) can you see the other CM processes
+                            that exist spanning Level 2 up to Level 5?&nbsp; <br>
+                            Look
+                            for the levels under ML (Maturity Level) on CMMi Dev 3.1.<br>
+                            (In fact CMMi Dev 3.1 is one of 4 core dashboards in the
+                            CMMi family.&nbsp; I.e. the others are focused on People,
+                            Services and Acquisition (or) Procurement)<br>
+                            On the more
+                            detailed version (CMMi Dev. 3.1) can you see that a bigger
+                            game exists above CM Level 2 in the areas (Categories) of
+                            PROCESS, PROJECT, ENGINEERING and SUPPORT MANAGEMENT?<br>
+                            While Project
+                            Management Process (essentially the PMBOK processes) is at
+                            CM Level 2, these other processes are the game that we play
+                            to achieve higher levels of Quality and Productivity
+                            (lowering Risk, Rework and Waste) at CM Level 3 and above!&nbsp;
+                            CM Level 2 is the firm base needed for Levels 3, 4 and 5!&nbsp;
+                            This, CM improvement, is a rejection of CM Level ZERO and 1
+                            towards a change in mindset as you journey towards
+                            excellence.<br>
+                            <br>
+                          </h5>
+                        </li>
+                        <li>
+                          <h5 style="font-weight:normal; text-align:left">What about IT Infrastructure Library
+                            (ITIL) best practice?&nbsp; <br>
+                            <strong>Do you incorporate Continual Service
+                            Improvement as a strategic driver in projects targeting change?</strong><br>
+                            <a href="/images/itilwithpainpoints20171018.pdf" > <strong>Do you have system focused CSI registers and
+                            do they feed into each defined and managed system service catalogue</strong></a>?<br>
+                            This key activity, instead of just moving deckchairs around the deck
+                            of the Titanic, <br>
+                            ensures that core IT systems are improved to
+                            follow the best processes, <br>
+                            focusing on exactly what is needed
+                            for your people to best serve your valued clients.<br>
+                            <br>
+                          </h5>
+                        </li>
+                        <li>
+                          <h5 style="font-weight:normal; text-align:left"><strong>Do you
+                            undertake these ITIL processes (and other processes [project management
+                            / other CM processes etc.])<br>
+                            understanding
+                            how the People, Process and Technology triad above works?</strong><br>
+                            I.e. knowing
+                            that process is the glue that ties the triad together!<br>
+                            <br>
+                          </h5>
+                        </li>
+                      </ol>
+                      <h5>If you have a sound understanding of (handle on) the above concepts,<br>
+                        and are implementing them successfully in your organization, <br>
+                        you
+                        (your organization) are exhibiting Capability Maturity Level 3 competencies.</h5>
+                    </div>
+                    <div class="card-footer">
+                      <h5>Implementing CM Levels 3, 4 and 5 is a systematic process built, step by step, <br>
+                        on the strong and stable base of CM L2</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <br>
+        <div style="text-align:center">
+          <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsecml1" aria-expanded="false" aria-controls=
+        "collapsecml1">Should you / Can you <br>
+          "Up Your Game Stats"<br>
+          from CM
+          L1 (or lower)<br>
+          to CM L2 stability? </button>
+          <div class="collapse" id="collapsecml1">
+            <div class="card card-block" align="center">
+              <h5 class="card-header" align="center">Below are some visual
+                examples of what Capability Maturity Level 1
+                behavior could look like. </h5>
+              <p class="medium text-center"><em>Hover your mouse over the image below.<br>
+                Take special note of the Dunning Kruger effect in the image
+                underneath this top one!<br>
+                </em></p>
+              <img width="693" height="479" class="img-fluid" src=
+                "/images/cmmi%20@%20level%201.png"
+                     onmouseover=
+                     "this.src='{{ asset('storage/images/dunning-kruger-effectcombinedlarge.jpg') }}'"
+                     onmouseout=
+                     "this.src='{{ asset('storage/images/cmmi%20@%20level%201.png') }}'"/>
+              <!-- <img alt="Capability Maturity Level 1" src="{{ asset('storage/images/cmmi%20@%20level%201.png') }}" > -->
+              <br/>
+              <div class="card-footer">
+                <h5>Do you want to stop &quot;<a href="/images/stuck in mud.jpg" >sloshing around</a>&quot;
+                  at Capability Maturity Level 1?</h5>
+                <p class="small text-center">Project Management
+                  Process is at the heart of Capability Maturity Level 2,
+                  so, to stop sloshing, <strong>you must start there.</strong><br>
+                  The ability to
+                  pin down the first two (essential) CM L2 processes; Project
+                  Planning (PP) and Project Monitoring and Control (PMC), <strong>must be your first order of business!</strong><br>
+                  As having a sound
+                  handle on your finances is dependent on good accounting
+                  software, <br>
+                  so to then is the effective and efficient handling
+                  of the processes PP and PMC (and the agreed work as TAsking (Time Asking)
+                  transactions on a Project Schedule,<br>
+                  facilitated (through team collaboration) by the Project Management Information System
+                  (PMIS). <br>
+                  I.e. you can possibly
+                  achieve CM level 2 success without a PMIS, but, due to TAsk
+                  level complexity it will
+                  be very difficult!<br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+          <div style="text-align:center">
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseasssug" aria-expanded="false" aria-controls=
+        "collapseasssug">PMWay's Assertion | Suggestion<br>
+        towards a possible
+        strategy<br>
+        for success </button>
+          <div class="collapse" id="collapseasssug">
+
+          <div class="container">
+
+          <div class="card text-center">
+
+        <h5 class="card-header" align="center">What about this as a cool strategy for CM L2+ excellence?</h5>
+        <br>
+        <table border="4"  style="width: 80%" "border-style:ridge" cellpadding="10px" align="center" >
+          <tr>
+            <td><h4 style="text-align: center">Assertion</h4></td>
+          </tr>
+          <tr>
+            <td style="height: 133px"><h5 style="text-align: center">PMWay asserts that it is
+                behavior at Capability Maturity Level 1 (or lower), <br>
+                and not Traditional Project Management process,<br>
+                that is the reason behind <a href="/images/chaos-report.pdf" >the chaos reports
+                findings</a>.</h5>
+              <h5 style="text-align: center">I.e. if you think
+                that Agile, <br>
+                badly
+                run at Capability Maturity Level 1 is your panacea, <br>
+                then it is time to think again!</h5></td>
+          </tr>
+          <tr>
+            <td><h4 style="text-align: center">Suggestion</h4></td>
+          </tr>
+          <tr>
+            <td><h5 style="text-align: center">PMWay suggests using <a href="/images/prince2%20poster.pdf" >PRINCE2</a> Agile as the
+                recipe, <br>
+                with PMBOK version 6 for the ingredients.<br>
+                <br>
+                Also use the Project Management Information Server
+                (PMIS) to achieve quality 'TAsking' (Time Asking) <br>
+                on a
+                'Developed Schedule' (the team's 'jointly owned playing field') at Capability Maturity Level 2+.</h5></td>
+          <tr>
+            <td><h4 style="text-align: center">Let's explain how this works with an
+                example:</h4>
+              <h5 style="text-align: center">We will use <a href="/images/scrumon2pages.pdf" > SCRUM</a> on the PMIS. <br>
+                However, any project method including the PMBOK
+                can be used.</h5></td>
+          <tr>
+            <td><h5 style="text-align: center">Agile resources can Develop
+                their schedules via TAsking (to work on agreed products) on the fly using system
+                based collaboration on the PMIS.<br>
+                The TAsk is
+                essentially WHO, WHAT and by WHEN on a Gantt Chart in
+                the PMIS.<br>
+                (Collaboration is empowered when the Gantt
+                Chart - project schedule - <br>
+                is booked into (parked
+                in) the PMIS)<br>
+                <br>
+                <img alt="PMIS" class="img-fluid" height="331" src="{{ asset('storage/images/self-parking-garage1.jpg') }}" width="481"><br>
+                <br>
+                I.e. team member
+                (developer) agrees to build software module product
+                (from the Product backlog / SCRUM backlog) and books an
+                estimated five hours of work on the PMIS.&nbsp; This TAsking
+                is sent electronically to the SCRUM Master (PM) for approval and
+                for a baseline.&nbsp;
+                On completion the TAsk is updated as completed within
+                five hours (on the task within the PMIS) and is then sent
+                electronically to Quality Assurance by the developer.&nbsp;
+                After TAsk is approved by Quality Assurance (and
+                approval by the Product Owner) the TAsk is finally
+                approved on the PMIS by SCRUM Master.&nbsp;&nbsp; I.e.
+                this is the basis for collaboration on the PMIS.&nbsp;
+                And guess what:&nbsp; resources can operate virtually
+                within a TEAM (Together Everyone Achieves More) from
+                anywhere on our planet and beyond, connected to the
+                internet as they work the Developed Schedule (team's
+                jointly owned and visible via the PMIS - playing field.<br>
+                <br>
+                Risk and Issue
+                Management, essential for project success (and crucial for
+                agile project health) is also undertaken by the team using
+                PMIS collaboration.&nbsp; TEAM project progress (burn
+                down chart etc.) is available on PMIS system either
+                direct or summarized on overhead TV monitors.<br>
+                <br>
+                <img alt="burn down chart" class="img-fluid" height="260" src="{{ asset('storage/images/burn_down_chart.png') }}" width="636"><br>
+                <br>
+                <img alt="Lord Kelvin" class="img-fluid" height="499" src="{{ asset('storage/images/gg_measure1.png') }}" width="591"><br>
+                Take another look at the Capability Maturity model
+                above.<br>
+                Can you now appreciate that the CM Level 2 processes around
+                Project Monitoring and Control, Measurement and Analysis,
+                Configuration Management, Product and Process Quality Assurance etc.,
+                are all about producing and then improving production
+                statistics!<br>
+                <br>
+                Production of these, are a breeze,
+                from collaborative TAsking on the PMIS!<br>
+                <br>
+              </h5>
+              <br></td>
+          </tr>
+        </table>
+        <div class="card-body text-center"> </div>
+          <div class="card-footer">
+
+        <p class="small text-center">Let PMWay state this very important point again:<br>
+          As having a sound
+          handle on your finances is dependent on good accounting
+          software; <br>
+          so to then is the effective and efficient
+          handling of the processes PP and PMC in order to support hours of
+          work (towards your project goal) as quantifiable (Start Change Stop) transactions
+          called TAsking (Time Asking) on a Project Schedule. <br>
+          This, like
+          accounting software, is facilitated (empowered via team
+          collaboration) through <br>
+          the Project Management Information System
+          (PMIS). <br>
+          I.e. you can possibly
+          achieve CM level 2 success without a PMIS, but, due to TAsk
+          management complexity it will
+          be very difficult!<br>
+          Anything less than a PMIS for complex
+          projects, PMWay suggests, is just playing very expensive and risky
+          games!<br>
+          And if you think that post it notes on
+          a white board (operating at CM L1) will do all this for you; then good luck! <br>
+          You are going to need it!</p>
+          </td>
+
+          </tr>
+
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<br>
+<div class="container">
+  <table style="width: 50%" table border="1" cellpadding="10px">
+    <tr>
+      <td style="width: 517px"><h5 align="left">And for even more detail...<br>
+          <br>
+          <em>click the&nbsp; </em>
+          <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+                        "collapse" data-target="#collapseExample" aria-expanded="false" aria-controls=
+                                "collapseExample">More Information </button>
+          <em>&nbsp;button </em><br/>
+          and take the presentation that will appear below!</h5>
+        <p style="font-size:small; font-weight:normal; text-align:left">
+        <em><span>
+        <ul>
+          <li>Depending on your ability to
+            rapidly grasp these
+            concepts, <br>
+            this presentation can take between 5 to 10 minutes (or more).<br>
+            <br>
+          </li>
+          <li>And, only if interested, <br>
+            at the very bottom of this page
+            (using the '<strong>tech'</strong> explained here), <br>
+            <strong>PMWay has
+            compiled an 'how to' implementation strategy<br>
+            (with
+            the necessary monitoring and control mechanisms built
+            in)<br>
+            for the National Development Plan</strong>,<br>
+            for the
+            current or the next, SA Government.&nbsp; <br>
+            <strong>The argument below
+            states that there is actually no other way to
+            successfully implement any strategic, business or
+            project plan; especially (due to the unique socio-economic
+            and political environment in which South Africa finds
+            itself) <br>
+            the National Development Plan!</strong> <br>
+            You are welcome to
+            investigate and check my logic below.<br>
+            Please <a href="mailto:mark@pmway.co.za?subject=Hi.  Here is my feedback to your NDP strategy found on the PMWay Page: In2Minutes."> send me your comments, criticisms and recommendations</a>.&nbsp; <br>
+            I.e. per <a href="/images/bugs.jpg" >Linus's Law</a> aka &quot;Many Eyes Make All Bugs Shallow</li>
+        </ul>
+        </span></em>
+        </p></td>
+    </tr>
+  </table>
+  <hr/>
+  <br>
+  <div class="collapse" id="collapseExample">
+    <div align="center"> <br/>
+      <div class="align-left fixed-bottom"><img class="img-fluid" alt="" height="200" src=
+                    "/images/scrolldown.png" width="200" style=
+                                                          "float: left"/></div>
+      <hr style="width: 30%">
+      <img alt="picture worth a thousand words" class="img-fluid" height="177"
+                     src="{{ asset('storage/images/apicture.jpg') }}" width="284"><br>
+      <hr style="width: 30%">
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <h4>The Capability Maturity Model<br>
+        <span class="auto-style6">(from Carnegie Mellon University's Capability
+        Maturity Model integrated - CMMi)</span><br/>
+        is all about working smarter together<br/>
+        and at higher levels of productivity and quality.<br>
+        <br>
+        Level 2 of this model is all about Project Management
+        Process.</h4>
+      <hr/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <p class="auto-style8"><em>Hover your mouse over this slide for more
+        detail!</em></p>
+      <img class="img-fluid" width="656" height="471" src=
+                "/images/cmmclimb.jpg" onmouseover=
+                                             "this.src='{{ asset('storage/images/pdca image.jpg') }}'" onmouseout=
+                                             "this.src='{{ asset('storage/images/cmmclimb.jpg') }}'"/><br/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <p class="ctr"><img class="img-fluid" alt="" height="389" src=
+                    "/images/cmmiwhy2.jpg" width="650"/></p>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="554" src="{{ asset('storage/images/cmmiwhy4.jpg') }}"
+                     width="650"/><br/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="518" src="{{ asset('storage/images/cmmiwhy6.jpg') }}"
+                     width="650"/><br/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <p class="ctr"><img class="img-fluid" alt="" height="249" src=
+                    "/images/cmmiwhy1.jpg" width="650"/></p>
+      <img class="img-fluid" alt=""
+                                                                                       height="335"
+                                                                                       src="{{ asset('storage/images/cmmiwhy5.jpg') }}"
+                                                                                       width=
+                                                                                       "650"/><br/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <h5>What is the status of your valued customers?</h5>
+      <img alt="" class="img-fluid" height="307" src="{{ asset('storage/images/bad1.png') }}" width="400"><br>
+      <br>
+      <h4>Here is a truth</h4>
+      <h5>Improving Capability Maturity processes (a step
+        at a time) <br>
+        will move the organization away from RISK,
+        REWORK and WASTE <br>
+        towards RELIABILITY, PRODUCTIVITY and QUALITY<br>
+        for the benefit
+        of your loyal, valued and paying clients.</h5>
+      <p class="auto-style8"><em>Hover your mouse over this slide for more
+        detail!</em></p>
+      <img class="img-fluid" src="{{ asset('storage/images/cmmi%20project.png') }}"
+                                             onmouseover="this.src='{{ asset('storage/images/pdca_process537.png') }}'"
+                                             onmouseout="this.src='{{ asset('storage/images/cmmi project.png') }}'"/> <br>
+      <br>
+      <h5>Can you see that CM Level 2 is all about project management process?<br>
+        With this firm base in place you will be able to implement
+        focused projects <br>
+        to install CM L3, 4, and 5 processes with ease.</h5>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <table border="4"  style="width: 80%" "border-style:ridge" cellpadding="10px" >
+        <tr>
+          <td><h4 style="text-align: center">PMWay asserts that it is Capability Maturity Level 1 behavior (or lower) <br>
+              and not Traditional Project Management<br>
+              that is the reason behind <a href="/images/chaos-report.pdf" >the chaos reports
+              findings</a>.<br>
+              <br>
+              I.e. if you think that Agile, badly
+              run at Capability Maturity Level 1 is your panacea,
+              think again!</h4></td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <hr>
+      <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsecmlone" aria-expanded="false" aria-controls=
+        "collapsecmlone">Some examples of <br>
+      Capability Maturity Level 1 </button>
+      <div class="collapse" id="collapsecmlone">
+        <div class="container">
+          <div class="card text-center">
+            <h5 class="card-header" align="center">What CM Level 1 behavior could look like</h5>
+            <div class="card-body text-center">
+              <table border="1" cellpadding="10px">
+                <tr>
+                  <td><h1 style="text-align: center"><strong>Capability Maturity Level 1</strong></h1></td>
+                </tr>
+                <tr>
+                  <td class="auto-style2"><h5 style="text-align: center">Here are a number of images showing you what Capability Maturity Level 1 <br>
+                      (the lowest level
+                      of Capability and Maturity in the model) <br>
+                      could look like.</h5>
+                    <img class="img-fluid" alt=""
+                                                                                           height="503"
+                                                                                           src="{{ asset('storage/images/teamwork_teamwork_a.png') }}"
+                                                                                           width=
+                                                                                           "650"/><br/>
+                    <hr style="width: 5%"/>
+                    <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+                    <hr style="width: 5%"/>
+                    <p class="auto-style8"><em>Hover your mouse over this slide for more
+                      detail!</em></p>
+                    <img class="img-fluid" src=
+                "/images/cmmi%20@%20level%201.png" onmouseover=
+                                             "this.src='{{ asset('storage/images/danger.jpg') }}'" onmouseout=
+                                             "this.src='{{ asset('storage/images/cmmi%20@%20level%201.png') }}'"/><br/>
+                    <hr style="width: 5%"/>
+                    <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+                    <hr style="width: 5%"/>
+                    <p style="text-align:center"><em class="auto-style99">Move your mouse over this image for more detail.</em></p>
+                    <p style="text-align:center"> <img class="img-fluid" src="{{ asset('storage/images/divertedresources.png') }}"
+                                 onmouseover="this.src='{{ asset('storage/images/corruption.png') }}'"
+                                 onmouseout="this.src='{{ asset('storage/images/divertedresources.png') }}'"> </p>
+                    <div style="text-align:center">
+                      <table align="center" border="1" cellpadding="10px" >
+                        <tr>
+                          <td><h5 style="text-align:center">Are you really running a project?<br>
+                              At CM L1, often, due to the lack of processes
+                              conformity, this simple fact is not clear.</h5></td>
+                        </tr>
+                        <tr>
+                          <td><h5 style="text-align:center">While the definition of a project in the PMBOK ver 6
+                              runs into a number of pages essentially:<br>
+                              &quot;A project is
+                              a temporary endeavor undertaken to create a unique
+                              product, service, or result&quot;.<br>
+                              I.e. from page 6 of the
+                              PMBOK</h5>
+                            <div style="text-align:center">
+                              <p class="auto-style8"><em>Hover your mouse over this slide for more
+                                detail!</em></p>
+                              <img class="img-fluid" src="{{ asset('storage/images/orgvalue.png') }}" onmouseover="this.src='{{ asset('storage/images/vmodelbevel.png') }}'" onmouseout="this.src='{{ asset('storage/images/orgvalue.png') }}'"/><br>
+                              <h5>From the basis of Project
+                                Management (101) <br>
+                                the Developed Schedule for the current
+                                project, phase (or sprint)<br>
+                                is where resources are
+                                applied and locked down
+                                to a project schedule.<br>
+                                I.e. Human Resources (using
+                                resources) are TAsked (Time Asked) <br>
+                                to commit to an
+                                estimated for delivery deadline for completed products, <br>
+                                thus agreeing and thereby creating the Developed
+                                Schedule.<br>
+                                This activity (Plan, Do, Check, Act) MUST BE Monitored and Controlled
+                                for Good Governance.<br>
+                                <br>
+                                If you don't believe you should
+                                be doing this
+                                then please respect the PMBOK <br>
+                                and do not go about calling your
+                                CM Level 1 heroic, haphazard, chaotic and unscheduled activities a project!</h5>
+                            </div></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <hr style="width: 5%"/>
+                    <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+                    <hr style="width: 5%"/>
+                    <h4>Can you see the
+                      Program Termination Zone in the image below?</h4>
+                    <br>
+                    <h5>Sadly, Capability Maturity
+                      Level 1
+                      behavior<br>
+                      (and Level ZERO, which is all
+                      about a lack of ethics and corruption)<br>
+                      have a lot in common with the
+                      findings from the Dunning Kruger Effect!</h5>
+                    <p> <img alt="dunning kruger effect" class="img-fluid" height="466"
+                         src="{{ asset('storage/images/dunning%20kruger%20effect%20b.jpg') }}" width="580"></p>
+                    <p class="auto-style8"><em>Hover your mouse over this slide for more
+                      detail!</em></p>
+                    <img class="img-fluid" src=
+                "/images/dunning-kruger-effect-huhsmaller.png" onmouseover=
+                     "this.src='{{ asset('storage/images/dunning-kruger-effectcombinedlarge.jpg') }}'" onmouseout=
+                     "this.src='{{ asset('storage/images/dunning-kruger-effect-huhsmaller.png') }}'"/> <br>
+                    <br>
+                    <hr style="width: 5%"/>
+                    <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+                    <hr style="width: 5%"/>
+                    <h5>Often Agile, in response to the Chaos reports, believes it has the magic bullet to deliver <br>
+                      where they assert Traditional Project Management has
+                      failed. <br>
+                      Unfortunately Agile, as with any project type run at Capability Maturity Level 1 (or lower), <br>
+                      by not following process the method will always be "Just Doing It" <br>
+                      and will most often simply end up a badly run and failed project effort.</h5>
+                    <h5>I.e. even Agile, with its prioritized product list
+                      before work starts, <br>
+                      must follow process in order to be successful. <br>
+                      <br>
+                      The
+                      table below contains the SCRUM phases and processes from the SCRUM BOK Guide.<br>
+                      Can
+                      you say, when
+                      you run SCRUM projects, <br>
+                      that you tightly follow and apply these
+                      phases and processes, <br>
+                      running SCRUM as a process driven method &quot;by the numbers&quot;?<br>
+                      On a continuum with Traditional Project Management on
+                      the Left this method is towards the Right.<br>
+                      <br>
+                      <img alt="scrum processes" class="img-fluid" height="542" src="{{ asset('storage/images/scrumprocesses.png') }}" width="883"></h5>
+                    <br>
+                    <br>
+                    <h5> <a href="/images/dsdmagilepmprocess%20end%20to%20end.pdf" >Click here</a> for the DSDM (Agile PM) Phases and Processes.&nbsp; <br>
+                      Can you see the processes and phases / could you apply them?&nbsp; <br>
+                      Could you (would you
+                      be allowed to) &nbsp;install quality gates between
+                      phases?<br>
+                      On a continuum with Traditional Project
+                      Management on the Left this method is in the middle.<br>
+                    </h5>
+                    <h5>
+                    <a href="/images/prince2%20poster.pdf" >Click here</a> for the PRINCE2 method overview.  This is PMWay's preferred method.  Note that PRINCE2 Agile efforts are focused in the Managed Product Delivery phase.<br>
+                    On a continuum with Traditional Project
+                    Management on the Left this method (and PRINCE2 Agile in general) lies towards the Left.<br>
+                    <br>
+                    <br>
+                    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+                "collapse" data-target="#collapseone" aria-expanded="false" aria-controls=
+                        "collapseone">Why Agile @ CML1 <br>
+                    is downright dangerous </button>
+                    <div class="collapse" id="collapseone">
+                      <div class="container">
+                        <div class="card text-center">
+                          <h4 class="card-header" align="center">Screw the
+                            project plan: Let's Just Do It; whatever comes
+                            next.</h4>
+                          <div class="card-body text-center"> <img alt="screw the plan" class="img-fluid" height="683"
+                                     src="{{ asset('storage/images/agile.jpg') }}" width="559"><br>
+                            <br>
+                            I.e. like this...<br>
+                            <br>
+                            <img alt="no planning" class="img-fluid" height="500"
+                                                              src="{{ asset('storage/images/nopdcacycle.jpg') }}"
+                                                              width="500"> </div>
+                          <div class="card-footer"> </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr style="width: 5%"/>
+                    <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+                    <hr style="width: 5%"/>
+                    <h4>Do you see the shark attack?!</h4>
+                    <h5>At CM L1 the Hero's, <br>
+                      like the immature and
+                      incapable companies that keep them, <br>
+                      often die young
+                      and painfully!</h5>
+                    <img alt="cm level 2" class="img-fluid" height="586" src="{{ asset('storage/images/first3.png') }}"
+                     width="525"><br></td>
+                </tr>
+              </table>
+            </div>
+            <div class="card-footer"> End of the 'What CM Level 1 behavior looks like' section </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <h4>With the above in mind<br>
+        what is the state of your production stats?<br>
+        Are they low, going nowhere?</h4>
+      <img alt="up your stats" class="img-fluid" height="231"
+                     src="{{ asset('storage/images/increase_decreasesmaller.jpg') }}" width="150"><img alt="steps to nowhere"
+                                                                                                class="auto-style10"
+                                                                                                height="207"
+                                                                                                src="{{ asset('storage/images/stepsnowhere.png') }}"
+                                                                                                width="283">
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <h5>Capability Maturity process improvements are all about combining <br>
+        People, Process and Technology <br>
+        in order to
+        work together towards a SMART and process orientated approach <br>
+        with the goal of
+        quality outputs to keep valued customers!</h5>
+      <h5><br>
+        And higher levels of Capability and Maturity (Level 2 +) are
+        essential enablers <br>
+        (implemented via your best people,
+        empowered through your clear and appropriate processes)<br>
+        for the ultimate success of strategic
+        business or project plans!<br>
+      </h5>
+      <p class="auto-style8"><em>Hover your mouse over this slide for more
+        detail!</em></p>
+      <p class="auto-style8"><img class="img-fluid" src=
+                    "/images/rocketpeople.png" onmouseover=
+                                            "this.src='{{ asset('storage/images/rocketcompromised.jpg') }}'" onmouseout=
+                                            "this.src='{{ asset('storage/images/rocketpeople.png') }}'"/></p>
+      <a name="triad" id="triad"></a>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <h5>Capability Maturity process improvements will empower your people <br>
+        to deliver against your strategy.</h5>
+      <h5>The import of W. Edwards Deming's Red Bead Experiment,<br>
+        &nbsp;and
+        his 14 Observations for Management is synthesized in the image below.<br>
+        <br>
+        THIS IS IMPORTANT: <br>
+        The lesson comes direct from DEMING'S
+        RED BEAD EXPERIMENT. <br>
+        I.e. the lesson is the very opposite of a
+        HERO DRIVEN CULTURE!</h5>
+      <p class="auto-style8"><em>Hover your mouse over this slide for more
+        detail!</em></p>
+      <img class="img-fluid" src=
+                "/images/peopleprocesstech.png" onmouseover=
+                                                                         "this.src='{{ asset('storage/images/peopleprocessbottomline.png') }}'"
+                                                                         onmouseout=
+                                                                         "this.src='{{ asset('storage/images/peopleprocesstech.png') }}'"/><br/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <p class="auto-style8"><em>Hover your mouse over this slide for more
+        detail!</em></p>
+      <img class="img-fluid" src="{{ asset('storage/images/bottomlinehand.jpg') }}"
+                                             onmouseover="this.src='{{ asset('storage/images/procimp.png') }}'"
+                                             onmouseout=
+                                             "this.src='{{ asset('storage/images/bottomlinehand.jpg') }}'"/><br/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47">
+      <hr style="width: 5%"/>
+      <hr>
+      <h4>With the theoretical overview above handled, let's
+        define the bottom line:</h4>
+      <hr>
+      <h5>Use the images and argument below (with the understanding you
+        have gained from the images
+        above)<br/>
+        to focus on pinning down Capability
+        Maturity (CMMi) processes PP (Project Planning) (+ REQM (Requirement
+        Management)) <br>
+        and PMC (Project Monitoring and Control) first to stabilize
+        L2 delivery against the plan! </h5>
+      <h5>RSKM (Risk Management, a L3 process) is
+        the next area to focus on if you cannot do this concurrently!<br/>
+        Doing just these will create the correct environment and mindset (at resource pool and work
+        unit / <strong>TA</strong>sk [Time Ask] level) ready to implement the rest of CMMi!<br/>
+        PDCA and the weekly 'Sliding Window' (Plan,
+        Do, Check, Act week by week) is how you do this!</h5>
+      <h5>As Capability Maturity Level 2 is all about 'Project Management
+        Process' <br>
+        then the Project Server is an essential Tool
+        for TEAM Collaboration and TAsk Productivity.<br>
+        <br>
+        &nbsp;It is suggested to use PRINCE2&reg; AGILE
+        as the <strong>'recipe'</strong> to follow (Step by Step and by
+        the numbers reporting into a PRINCE2 Board).<br/>
+        while being mindful of the PMBOK&reg; version 6 Dashboard for the
+        correct project <strong>'ingredients'</strong>.</h5>
+      <h5>Remember, for Agile, which is risky, you need mature people and teams at People CMM
+        level
+        4+!</h5>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <hr style="width: 50%"/>
+      <h1 class="ctr"><strong>Here is the secret!</strong><br/>
+      </h1>
+      <hr style="width: 50%"/>
+      <h5 class="ctr">This playing field is where collaborating project teams play
+        and win!</h5>
+      <h3><strong>Can you see it?</strong></h3>
+      <br/>
+      <img class="img-fluid" alt="" height="316" src="{{ asset('storage/images/gantt.jpg') }}" width=
+                "276"/><br>
+      <br>
+      <h5>This playing field (the
+        Developed Project Schedule), <br>
+        on the Project Management Information Server, <br>
+        is the best shot you have at achieving stability <br>
+        at Capability Maturity Level 2 and above!</h5>
+      <h5>Note:&nbsp; Developed Project Schedule is
+        different from a Preliminary Project Schedule.</h5>
+      <h5><strong>Can you see
+        why this is so critically important for a CM L2+ attainment
+        perspective?</strong><br>
+        <a href="mailto:mark@pmway.co.za?subject=Hi from In2mins I need to know why a Developed Schedule is different from a Preliminary Schedule?">You can email me if you are not sure about this crucial point</a>.</h5>
+      <p class="ctr"><img class="img-fluid" alt="" height="198" src=
+                    "/images/engineanimated.gif" width="194"></p>
+      <hr style="width: 50%"/>
+      <h5>Here is a 'Developed Schedule,'&nbsp; in Execution being 'Monitored &amp; Controlled'
+        (PMBOK process
+        #6.6) on the Project Server.</h5>
+      <h4>Can you see
+        the playing field below<br>
+        and how TAsking's <br>
+        (Time Asking's or the game plays) <br>
+        work?</h4>
+      <img alt="&quot;Mind the Gap&quot; is managing a project off a baseline." class="img-fluid" height="453"
+                     src="{{ asset('storage/images/getitdone.png') }}" width="900"> <br>
+      <br>
+      <hr style="width: 50%"/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <hr style="width: 50%"/>
+      <h4>Can you see the vision for the game at CM
+        L2+?</h4>
+      <h5>Can you see that Level 2+ productivity (touchdown
+        scoring capability) can only really be achieved on the Project Server.</h5>
+      <p class="ctr"><img class="img-fluid" alt="" height="198" src=
+                    "/images/engineanimated.gif" width="194"></p>
+      <p class="auto-style8"><em>Hover your mouse over this slide for more
+        detail!</em></p>
+      <img class="img-fluid" src="{{ asset('storage/images/pmwayvision1.png') }}"
+                                             onmouseover="this.src='{{ asset('storage/images/combined.png') }}'"
+                                             onmouseout="this.src='{{ asset('storage/images/pmwayvision1.png') }}'"/> <br>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <h4>The Project Management Body of Knowledge Dashboard below <br>
+        explains exactly how to achieve Capability Maturity Level 2!</h4>
+      <h5>Can you see where the Develop Schedule process is found on the
+        PMBOK ver 6 Dashboard?<br>
+        Do you understand that Develop
+        Schedule is a preliminary schedule in the Plan Process Group?<br>
+        Developed Schedules (resources allocated) are moved from
+        Planning into Execution.</h5>
+      <p class="auto-style8"><em>Hover your mouse over this slide for more
+        detail!</em></p>
+      <img class="img-fluid" alt="" src=
+                "/images/pmbokepmslip.png" onmouseover=
+                                             "this.src='{{ asset('storage/images/pmbok6gate.png') }}'" onmouseout=
+                                             "this.src='{{ asset('storage/images/pmbokepmslip.png') }}'"/><br/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <p class="auto-style8"><em>Hover your mouse over this slide for more PMBOK
+        (Inputs, Tools and Techniques and Outputs </em> <span class="auto-style1">[ITTO's]</span><em>) by this process.<br/>
+        PMWay has mapped each of the PMBOK processes showing the
+        ITTO detail underneath all 49 processes.</em></p>
+      <img class="img-fluid" alt="" src=
+                "/images/ver66point5.png" width="842" onmouseover=
+                                                                  "this.src='{{ asset('storage/images/65.png') }}'"
+                                                                  onmouseout=
+                                                                  "this.src='{{ asset('storage/images/ver66point5.png') }}'"/><br/>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <p class="auto-style8"><em>Hover your mouse over this slide for more
+        detail!</em></p>
+      <h4>And yes, you will need to transform the culture!<br>
+        Can you
+        see how and why?</h4>
+      <img class="img-fluid"
+                                                                              src="{{ asset('storage/images/l2nutshell.jpg') }}"
+                                                                              onmouseover="this.src='{{ asset('storage/images/l2nutshelltrans.png') }}'"
+                                                                              onmouseout="this.src='{{ asset('storage/images/l2nutshell.jpg') }}'"/><br>
+      <br>
+      <br>
+      <h5>You do this most effectively through the jointly understood and agreed playing field <br>
+        of the defined (by the TEAM) schedule on the Project Server.</h5>
+      <p class="ctr"><img class="img-fluid" alt="" height="198" src=
+                    "/images/engineanimated.gif" width="194"></p>
+      <hr style="width: 5%"/>
+      <img class="img-fluid" alt="" height="57" src="{{ asset('storage/images/arrowdown1.png') }}"
+                     width="47"/>
+      <hr style="width: 5%"/>
+      <hr style="width: 80%"/>
+      <h4>The Project Server (with Schedule as Playing Field) facilitates TEAM
+        collaboration and success.<br>
+        TEAM - Together Everyone Achieves More!<br>
+        <br>
+        Empowered with the Project Server <br>
+        TEAMS can start to become
+        SMARTer</h4>
+      <img alt="" class="img-fluid" height="504" src="{{ asset('storage/images/SMART-Goals.jpg') }}"
+                     width="504"><br>
+      <br>
+      <ul>
+        <li>
+          <h5 class="auto-style3">TEAM collaboration (TAsking etc.) on the Project Server is available to
+            the TEAM
+            via a dedicated network or virtually from the internet!</h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">And for Agile and Traditional
+            Project Management the best way to TAsk is for the
+            resource to fill their own estimate onto the Project
+            Server schedule which is then approved or not by their
+            Project Manager / Scrum Master.&nbsp; I.e. they, the
+            TEAM create the schedule and work it Week by Week
+            towards the clearly defined goal.<br>
+          </h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">Risk and Issue Management on the Project Server
+            is a collaborative TEAM effort keeping the schedule safe and on track!</h5>
+        </li>
+        <li>
+          <h5 class="auto-style3">Documentation on the project server, crucial for audit, is available to
+            the TEAM via SharePoint.</h5>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h5 class="auto-style3">The Project Management Information Server also
+            facilitates Earned Value Management to create that magical number:&nbsp; The 'To Complete Performance Index' (TCPI)</h5>
+        </li>
+      </ul>
+      <button class="btn btn-primary align-center clearfix" type="button" data-toggle="collapse"
+                        data-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">Earned Value
+      Management </button>
+      <div class="collapse" id="collapsetwo">
+        <div class="container">
+          <div class="card text-center">
+            <h4 class="card-header" align="center">PMWay suggests that you
+              really cannot do EVM without TAsking on the Project Server!</h4>
+            <div class="card-body text-center"> <img alt="" class="img-fluid" height="420"
+                                     src="{{ asset('storage/images/evm-earned-value-management.jpg') }}" width="463"> <br>
+              <br>
+              <h5>The To Complete Performance Index (TCPI)<br>
+                is one number to tell you where
+                you project is at (AS AT NOW) from a Time, Cost and Schedule (Scope) perspective.<br>
+                I.e. While many formula's are available, TCPI is the one formula to rule them all!<br>
+                TAsking on the Project Server
+                (even
+                in agile mode) can produce the TCPI (and much more) directly from the
+                Project Server database (working in Business Intelligence mode) that is the Developed Schedule #6.5!<br>
+                PRINCE2 Boards (the Executive of this Board especially) will love this!</h5>
+              <img alt="TCPI" class="img-fluid" src="{{ asset('storage/images/tcpi.jpg') }}">
+              <h5>This can only be done effectively off TEAM TAsks
+                created and them completed on the Project Server.</h5>
+              <p class="ctr"><img class="img-fluid" alt="" height="198" src=
+                    "/images/engineanimated.gif" width="194"></p>
+            </div>
+            <div class="card-footer"> </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+                "collapse" data-target="#collapseteam" aria-expanded="false" aria-controls=
+                        "collapseteam">Build high productivity teams </button>
+      <div class="collapse" id="collapseteam">
+        <div class="container">
+          <div class="card text-center">
+            <h4 class="card-header" align="center">The New One Minute Manager is
+              an excellent way to build high productivity teams</h4>
+            <div class="card-body text-center">
+              <h5>I.e. putting the monkey's - also called The "NEXT STEPS"<br/>
+                - onto the backs of the people who are being paid to manage them.<br/>
+                <img alt="" class="img-fluid" height="453"
+                                         src="{{ asset('storage/images/monkeyonyourback.png') }}" width="275"> <br>
+                <br>
+                This is called TAsking (Time Asking) and is an essential
+                part of the PMBOK process management<br>
+                &nbsp;towards stabilizing process # 6.5
+                (or create 6.5 via TAsk based collaboration in an agile environment) and beyond.<br>
+                <br>
+                If you think about an American Football Franchise. <br>
+                Only the best and most
+                productive teams (with professional team members who are able to handle
+                their "Next Steps" very well, play by play, will ever be on the
+                top teams, will ever be true champions,
+                will ever get to the Super Bowl!)<br>
+              </h5>
+              <hr style="width: 25%"/>
+              <div class="ctr"><img class="img-fluid" alt="" height="306" src=
+                                    "/images/thenewoneminutemanager.jpg" width="200"
+                                                      class="shakeimage" onmouseover="init(this);rattleimage()"
+                                                      onmouseout=
+                                                      "stoprattle(this);top.focus()" onclick="top.focus()" style=
+                                                      "left: 0px; top: 0px;"/></div>
+              <hr style="width: 25%"/>
+            </div>
+            <div class="card-footer"> </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <h2>In Conclusion</h2>
+      <h5>
+      Remember that projects must be carefully considered <br>
+      before they
+      change the company culture / system configuration baseline.<br/>
+      I.e. the starting point for any change <strong>IS NOT TO CHANGE</strong> <br>
+      unless there is
+      quantifiable business benefit in doing so.<br>
+      <br>
+      If
+      there is agreement to change then use the PMBOK dashboard <br>
+      focusing on
+      the Developed Schedule (6.5) on the
+      Project Server <br/>
+      for TAsking (Time Asking) and scheduling success,<br/>
+      <strong>to improve project productivity statistics and team 'touchdown'
+      capability</strong>.<br>
+      <br>
+      PMWay recommends PRINCE2
+      Agile for the recipe, <br>
+      using PMBOK for the ingredients.<br>
+      <br>
+      And while the Project Server ensures TAsking (Time Asking), <br>
+      and CMMi is
+      the improvement path you must travel, <br>
+      DevOps, ITIL and Cobit align your efforts
+      from a DevOps TEAM, <br>
+      Governance / Transparency and
+      Strategy
+      perspective.
+      <hr/>
+      <h5><a href="/home/contact" >Contact me</a> if
+        you would like to consider taking out PMWay membership.<br>
+        With
+        membership (elevated access rights) I can help you to dig into
+        the essence of the PMBOK, <br>
+        PRINCE2 Agile, DSDM AgilePM,
+        SCRUM, XP, CMMi, ITIL and many other areas,<br>
+        cutting through
+        the noise to givie you fast focus on solutions you can use.</h5>
+      <p class="ctr"><a href="/home/contact" target="_newtab"><img class="img-fluid" alt="" height="205"
+                                                                         src="{{ asset('storage/images/junctionbox.png') }}"
+                                                                         width="169" title=
+                                                                         "Click here log in to be able to use PMWays PMBOK Dashboard and other tools in the Junction Box to zero into solutions you can use"/></a> </p>
+    </div>
+    <div class="center">
+      <p class="small" style="text-align:center"><a href="#top">Return to the top of this
+        page</a></p>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="btn btn-primary" type="button" data-toggle=
+            "collapse" data-target="#collapseanc" aria-expanded="false" aria-controls=
+                    "collapseanc">Post Script:<br>
+    Here is a reality check <br>
+    and challenge<br>
+    (2018/02)<br>
+    for the ANC<br>
+    (next Government in
+    power?)<br>
+    in South Africa <br>
+    in respect of the proposed <br>
+    National Development Plan<br>
+    to<br>
+    UP YOUR GAME STATS!<br>
+    <br>
+    </button>
+  </div>
+  <div class="collapse" id="collapseanc">
+    <div class="container">
+      <div class="card text-center">
+        <h4 class="card-header" align="center">South African Government:
+          From the perspective of PMWay <br>
+          and this page<br>
+          you
+          really do need to up your game stats!</h4>
+        <div class="card-body text-center" style="text-align:center">
+          <hr>
+          <p style="text-align:center"><a href="/futureofsouthafrica.pdf"
+                                                        >Warning of Capability Maturity Level ZERO
+            ignored</a>!
+          <p style="text-align:center"> <a href="/images/MistakeoftheNation_%20ThelostdecadeofZumaruleNews24.pdf"
+                               > Destruction
+            and damage to the people of South Africa caused by incapable and immature in power
+            squandering (stealing) scarce resources</a>!</p>
+          <p style="text-align:center"> <a href="/images/whatzumataughtus.pdf" > While this lesson is already learned elsewhere,
+            this is what the ANC have taught the 'New South
+            Africa."</a></p>
+          <p style="text-align:center"> <a href="/images/saftuandzuma.pdf" > SAFTU and the decision, finally.., to charge
+            ZUMA (for his requested day in court)</a></p>
+          <hr>
+          <h5>In case you don't want to read the links directly above <br>
+            here are some images to explain the problem facing
+            all South African's.</h5>
+          <p class="small">Our neighbor Zimbabwe is an
+            tarnished example of what lies in store for South
+            Africa, <br>
+            being at the tail end of their communist
+            revolution to nowhere.<br>
+            Sadly, Nelson Mandela's vision
+            of a Rainbow Nation, <br>
+            thanks to the current
+            immaturity and lack of capability of those in power, <br>
+            is a memory of how good things could have been for all
+            South African's.<br>
+            The image of the American Football
+            team scoring a touchdown at the bottom of this page <br>
+            is an example (strategic vision) of process, people and technology
+            excellence (towards improved game stats), <br>
+            regardless of race, creed etc., winning the
+            day.</p>
+          <p class="auto-style8"><em>Move your mouse over the image
+            directly below.</em>
+          <p style="text-align:center"> <img class="img-fluid" src="{{ asset('storage/images/divertedresources.png') }}"
+                                 onmouseover="this.src='{{ asset('storage/images/corruption.png') }}'"
+                                 onmouseout="this.src='{{ asset('storage/images/divertedresources.png') }}'"><br>
+          </p>
+          <img alt="" height="323" class="img-fluid"
+                             src="{{ asset('storage/images/sceletalcowproject.jpg') }}" width="450"> <br>
+          <img alt="" class="img-fluid" height="400" src="{{ asset('storage/images/goose1.jpg') }}"
+                             width="266"><img alt="" class="img-fluid" height="380"
+                                              src="{{ asset('storage/images/goose2.png') }}" width="460">
+          <p class="small"> <br>
+            The allegorical work of
+            Animal Farm by George Orwell <br>
+            explains
+            succinctly how the 'confidence trick' of <a href="/images/communism.pdf" >Communist
+            Ideology</a><br>
+            (Capability Maturity at level ZERO) <br>
+            always
+            plays out. </p>
+          <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsetoons" aria-expanded="false" aria-controls=
+        "collapsetoons">Some recent political cartoons <br>
+          on this topic<br>
+          2018/03/05<br>
+          I.e. why CM Level ZERO<br>
+          power grabbing idiocy<br>
+          is a serious threat <br>
+          to South Africa's future. </button>
+          <div class="collapse" id="collapsetoons">
+            <div class="container">
+              <div class="card text-center">
+                <h5 class="card-header" align="center">The new (oldest) game in town</h5>
+                <div class="card-body text-center"> <img alt="Trust in me..." class="img-fluid" height="424" src="{{ asset('storage/images/trust_in_me_findlay.jpg') }}" width="600"><img alt="" class="img-fluid" height="424" src="{{ asset('storage/images/idiotic1.jpeg') }}" width="600"><br>
+                  <br>
+                  <img alt="" class="img-fluid"  height="424" src="{{ asset('storage/images/idiotic2.jpeg') }}" width="600"><br>
+                  <br>
+                  <img alt="" class="img-fluid"  height="424" src="{{ asset('storage/images/idiotic5.jpeg') }}" width="600"></div>
+                <div class="card-footer"> Thanks to the awesome cartoonist's Jerm &amp; Findlay</div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <p>PMWay suggests that ignorance of the
+            above, compounded by misuse or abuse of project
+            resources are the
+            main reasons<br/>
+            &nbsp;for
+            all strategic plan / business plan / project plan failures after formulation
+            / during implementation.</p>
+          <p style="text-align:center">The guru behind the Capability Maturity
+            Model (W. Edwards Deming) asks us to PLAN, DO, CHECK and then ACT at CML2.<br>
+            I.e. as opposed to JUST DOING IT at CML1.<br>
+            CML
+            Zero is highly unethical and evil and with no focus on
+            Governance, is the height of stupidity.<br>
+            <br>
+            Check out the full strategy planning wall
+            in PMWay.<br>
+            These 5 bricks (from that wall) point to the &#39;Strategic Drivers for
+            Success&#39; of any plan. <br/>
+            <img alt="" class="img-fluid"
+                                                                src="{{ asset('storage/images/drivers.png') }}"
+                                                                height="48" width="700"><br>
+          <p style="text-align:center">Sadly... as we see in South
+            Africa under the ANC Government:<br>
+            <img alt="" class="img-fluid" height="443"
+                                                                       src="{{ asset('storage/images/wall%20and%20resources.jpg') }}"
+                                                                       width="480"/></p>
+          <table border="4"  style="width: 80%" "border-style:ridge" cellpadding="10px" align="center" >
+            <tr>
+              <td><h3 style="text-align: center">The National Development Plan <br>
+                  and other SA Government Projects</h3></td>
+            </tr>
+            <tr>
+              <td><h5 style="text-align: center">Dear Government
+                  Department:&nbsp; If you want more budget from the South
+                  African Government (Treasury) for any project you plan to run,
+                  then, to qualify, this is what we need you to conform to
+                  / put into place. </h5></td>
+            </tr>
+            <tr>
+              <td><h5 style="text-align: center">All projects must be
+                  run on the Project Management Information System (PMIS)
+                  provided virtually by the Treasury. <br>
+                  I.e. you will need to register your project and team details on the Project Management Information System (PMIS) that we host virtually.<br>
+                  No Government Department will be allowed to run a
+                  project if it is not registered on and run on the PMIS.<br>
+                  <br>
+                  Tight monitoring and
+                  control, by the PRINCE2 Boards of authorized projects (next project stages), <br>
+                  &nbsp;with
+                  Board (and President of SA [and key stakeholders - the
+                  Treasury Department, the
+                  South African Public etc.]) having access to the Developed Schedule
+                  (drillable down to TAsk Level detail) on the
+                  PMIS.&nbsp; <br>
+                  &nbsp;<br>
+                  This (using the PMIS for
+                  projects), will be done to achieve transparency, stability, productivity and quality via TAsking (Time Asking) on a Developed Schedule (the team's 'jointly owned playing field') at Capability Maturity Level 2+.<br>
+                  This (Project TAsking on the PMIS), is the only sure way
+                  to start to sort out the mess (chaos) that exists
+                  currently in the Public Sector in South Africa.</h5></td>
+            </tr>
+            <tr>
+              <td><h5 style="text-align: center">The PRINCE2 Agile
+                  method must be used as the
+                  recipe with PMBOK version 6 for the ingredients.<br>
+                  The
+                  Project Manager will use PMBOK tailoring to decide what
+                  ingredients are needed and what can be left out.<br>
+                  <br>
+                  Note:&nbsp; While PRINCE2 can be run as Traditional or
+                  Agile project types, if agile, these teams can Develop their
+                  own schedules via TAsking
+                  using PMIS collaboration on the fly.<br>
+                  A weekly PRINCE2 'Highlight'
+                  report, exception report etc., must be sent regularly
+                  to the PRINCE2 Agile Board appointed by the Treasury to
+                  oversee your project.&nbsp; All project documentation
+                  will be stored securely on the PMIS SharePoint document
+                  server which uses next version approval and control.&nbsp;
+                  Many reports will be produced automatically off the PMIS
+                  using the slice and dice reporting engine.&nbsp; These
+                  documents, and your project overall, can be audited at
+                  any time by the Treasury for Good Governance.<br>
+                  Per the
+                  PRINCE2 Agile method, a next PRINC2 Agile project phase
+                  can be terminated, or put on hold etc., by the PRINCE2
+                  Agile Board if it deems that the project is not making
+                  adequate progress, or for any other reason.<br>
+                  <br>
+                  Risk and Issue
+                  Management, essential for project success (crucial for
+                  agile projects) must be undertaken by the team using
+                  PMIS collaboration.<br>
+                  I.e. as Issues are Risks
+                  happening, as soon as an Issue is raised a TAsk must be
+                  created to resolve it.<br>
+                  If the team is unable to
+                  resolve a particular Issue then this, if serious, will
+                  need to be escalated
+                  immediately to the PRINCE2 Agile Board.&nbsp; As this is
+                  done by the system it will be a seamless and system
+                  based escalation visible to all on the
+                  project working on (logged onto) the PMIS.<br>
+                  <br>
+                  Obviously the best and most qualified people (regardless
+                  of colour, creed, race, sexual orientation etc.) must be
+                  selected for these projects.<br>
+                  (The practice of BBBEE
+                  and cadre deployment, which is economic idiocy in the form of reverse Apartheid
+                  (flying as it does in the face of the New South Africa
+                  for all, envisioned by Nelson Mandela and all of us who
+                  voted for a new beginning), is damaging the
+                  morale of the South African population and the economy
+                  and must be stopped immediately!)<br>
+                  The goal should be to get
+                  all our competent, qualified, capable and mature people
+                  in the project team operating at People Capability
+                  Maturity Model level 4 and 5.&nbsp; Training to build
+                  these skills will be provided.<br>
+                  <br>
+                </h5>
+                <div style="text-align:center"><img alt="Project Selection Matrix" class="img-fluid" height="345" src="{{ asset('storage/images/pcmmoverviewsmaller.png') }}" width="500"></div>
+                <h5 style="text-align: center">&nbsp;The small cost of the PMIS infrastructure, PRINCE2 Boards, training etc. will be pocket change
+                  to create good governance for increased production and
+                  quality capabilities, when compared to the billions of
+                  Rands that have been stolen, for zero value created for
+                  South Africa, thus far. <br>
+                  <br>
+                  PMWay believes that a
+                  lot can be learned from the NFL (American National
+                  Football League) approach towards creating 'best of the
+                  best' professionals with their touchdown scoring
+                  culture.&nbsp; How about a Super bowl for the best
+                  project!<br>
+                </h5>
+                <div align="center"> <img alt="" class="img-fluid" height="480" src="{{ asset('storage/images/touchdownwow.png') }}" width="720"> <img alt="Core and Facilitating functions" class="img-fluid" height="582" src="{{ asset('storage/images/corefacilitate1.png') }}"  width="745"></div>
+                <div align="center"><img alt="lateral thinking" class="img-fluid" height="295" src="{{ asset('storage/images/latthink.png') }}" width="171"> </div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="card-footer">
+          <p class="text-center">&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+<!-- Bootstrap core JavaScript -->
+
+</div>
+<!--Container-->
+
+<!--ENDBODY-->
+
+{% else %}
+<div class="container center">
+  <p>Please log onto PMWay to access this page.</p>
+</div>
+{% endif %}
+
+
+{% endblock %}

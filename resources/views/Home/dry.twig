@@ -1,0 +1,148 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}DRY{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+  <h3>Using DRY: Between Code Duplication and High-Coupling</h3>
+  <hr>
+  <p>DRY reduces duplication and the maintenance problems coming with it, but misusing it leads to high coupling and reduced readability. The lesson: a software development principle should be applied considering other corresponding principles, patterns and practices.</p>
+  <p>DRY stands for <em>Don&rsquo;t Repeat Yourself</em>, and it is a software development principle first mentioned by Andy Hunt and Dave Thomas in their book <a href="http://en.wikipedia.org/wiki/The_Pragmatic_Programmer">The Pragmatic Programmer: From Journeyman to Master</a>. The principle states:</p>
+  <blockquote>
+    <p><em>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</em></p>
+  </blockquote>
+  <p>In this context, Hunt emphasized the <a href="http://c2.com/cgi/wiki?DontRepeatYourself">negative impact of duplication</a>&nbsp;and consequently the importance of using DRY, on <a href="http://c2.com/cgi/wiki?WelcomeVisitors">Portland Pattern Repository's Wiki</a>:</p>
+  <blockquote>
+    <p>Duplication (inadvertent or purposeful duplication) can lead to maintenance nightmares, poor factoring, and logical contradictions.</p>
+    <p>Duplication, and the strong possibility of eventual contradiction, can arise anywhere: in architecture, requirements, code, or documentation. The effects can range from mis-implemented code and developer confusion to complete system failure.</p>
+    <p>One could argue that most of the difficulty in Y2K remediation is due to the lack of a single date abstraction within any given system; the knowledge of dates and date-handling is widely spread.</p>
+  </blockquote>
+  <p>Although DRY seems like a must-apply principle of software engineering, Anders Munch <a href="http://c2.com/cgi/wiki?DontRepeatYourself">noted</a> that there are exceptions:</p>
+  <blockquote>
+    <p>There is a pattern to the exceptions to the principle. <em>It is ok to have more than one representation of a piece of knowledge provided an effective mechanism for ensuring consistency between them is engaged.</em></p>
+    <ul>
+      <li>Definitions and declarations of C functions: these are usually in sync because the compiler flags inconsistencies, forcing the programmer to take action.</li>
+      <li>Unit tests: inconsistency means the tests will fail, again forcing someone to take action.</li>
+      <li>Auto-generated stuff: periodic regeneration ensures consistency.</li>
+    </ul>
+  </blockquote>
+  <p>These exceptions actually enforce the rationale behind DRY. But a question arises: aren&rsquo;t programmers taking DRY to extremes? Isn&rsquo;t DRY misunderstood and misused sometimes?</p>
+  <p>Dave Thomas <a href="http://www.artima.com/intv/dry.html">remarked</a> early on that &ldquo;Most people take DRY to mean you shouldn't duplicate code. That's not its intention. The idea behind DRY is far grander than that,&rdquo; expanding the DRY principle to an entire software system:</p>
+  <blockquote>
+    <p>DRY says that every piece of system knowledge should have one authoritative, unambiguous representation. Every piece of knowledge in the development of something should have a single representation. A system's knowledge is far broader than just its code. It refers to database schemas, test plans, the build system, even documentation.</p>
+    <p>Given all this knowledge, why should you find one way to represent each feature? The obvious answer is, if you have more than one way to express the same thing, at some point the two or three different representations will most likely fall out of step with each other. Even if they don't, you're guaranteeing yourself the headache of maintaining them in parallel whenever a change occurs. And change will occur. DRY is important if you want flexible and maintainable software.</p>
+    <p>The problem is: how do you represent all these different pieces of knowledge only once? If it's just code, then you can obviously organize your code so you don't repeat things, with the help of methods and subroutines. But how do you handle things like database schemas? This is where you get into other techniques in the book, like using code generation tools, automatic build systems, and scripting languages. These let you have single, authoritative representations that then generate non-authoritative work products, like code or DDLs (data description languages).</p>
+  </blockquote>
+  <p>While the issues of using DRY seemed to be settled long time ago, the principle has been mentioned again at <a href="http://www.infoq.com/articles/QCon-London-2012">QCon London 2012</a> by several speakers, including Greg Young and Dan North, who drew attention to its possible misuse. InfoQ followed the trail to find out more details on DRY. When InfoQ asked what problems he sees with DRY, Young said:</p>
+  <blockquote>
+    <p>The basic argument against following DRY is that there is another side of things. When following &quot;DRY&quot;, it is quite common that people start building coupling and complexity into their software. One side of the trade off is very easy to measure (number of face plants per hour when needing to fix bugs multiple places) while the other is rather difficult (coupling and complexity built into software in the name of DRY).</p>
+    <p>One can argue that if DRY is followed &quot;properly&quot; that there will never be coupling and complexity built into the software. This is even anecdotally visible, I can write you a code base that perfectly follows DRY while not introducing coupling and complexity. This however assumes that I have perfect knowledge.</p>
+  </blockquote>
+  <p>We also talked to David Chelimsky, author and lead developer of RSpec. He said he has seen DRY been taken &ldquo;to the line level, and it's not always appropriate there (though it can be sometimes).&rdquo; He provided the following example:</p>
+  <blockquote>
+    <pre>
+describe &quot;Person#full_name&quot; do<br /> it &quot;concats the first and last names&quot; do<br />&nbsp;&nbsp; first_name = &quot;John&quot;<br />&nbsp;&nbsp; last_name = &quot;Doe&quot;<br />&nbsp;&nbsp; person = Person.new(:first_name =&gt; first_name, :last_name =&gt; last_name)<br />&nbsp;&nbsp; person.full_name.should eq &quot;#{first_name} #{last_name}&quot;<br /> end<br />end</pre>
+  </blockquote>
+  <p>Although this piece of code avoids duplication and might seem as a good implementation of DRY, Chelimsky said he prefers the following more readable piece of code:</p>
+  <blockquote>
+    <pre>
+describe &quot;Person#full_name&quot; do<br /> it &quot;concats the first and last names&quot; do<br />&nbsp;&nbsp; person = Person.new(:first_name =&gt; &quot;John&quot;, :last_name =&gt; &quot;Doe&quot;)<br />&nbsp;&nbsp; person.full_name.should eq &quot;John Doe&quot;<br /> end<br />end</pre>
+  </blockquote>
+  <p>adding:</p>
+  <blockquote>
+    <p>To a person who doesn't really understand DRY, but thinks it's the bees knees, seeing &quot;John&quot; and &quot;Doe&quot; twice each in that example is like nails on chalkboard. For me, it's quite the opposite. I find it easier to see the relationship between the first and last names, and the outcome of full_name.</p>
+  </blockquote>
+  <p>Chelimsky also pointed to another <a href="https://github.com/bitlove/objectify/pull/3">piece of code</a> from the <a href="https://github.com/bitlove/objectify">Objectify</a> framework he recently stumbled upon. The following code marked with italics</p>
+  <pre><p>def request_resolver</p><p>&nbsp; klass = Objectify::NamedValueResolverLocator</p><p>&nbsp; @request_resolver ||= klass.new.tap do |resolver|</p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:controller, self)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:params, params)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:session, session)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:cookies, cookies)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:request, request)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:response, response)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:flash, flash)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:renderer, Renderer.new(self))</em></p><p>&nbsp; end</p><p>end</p>
+</pre>
+  <p>was replaced with this:</p>
+  <pre>
+{:controller =&gt; self, :params =&gt; params, :session =&gt; session, :cookies =&gt; cookies, :request =&gt; request,<br /> :response =&gt; response, :flash =&gt; flash, :renderer =&gt; Renderer.new(self) }.each do |key, value| resolver.add(key, value)<br />end</pre>
+  <p>Chelimsky <a href="https://github.com/bitlove/objectify/pull/3">commented</a> on this change: &ldquo;This is taking DRY too far IMO. This part is more maintainable (easier to read and modify) before this change.&rdquo;</p>
+  <p>One of the main problems seen by Chelimsky is that &ldquo;The words &quot;Don't Repeat Yourself&quot; are intended to be a memory device, but &quot;DRY&quot; has become a memory device for &quot;Don't Repeat Yourself&quot; and that ends up being _the principle_ in many minds,&rdquo; noting that this approach may lead to another side of the problem: &ldquo;when we reduce duplication, we increase coupling&rdquo;:</p>
+  <blockquote>
+    <p>When two methods on the same object do some of the same work, we typically extract a third method to which they both delegate.&nbsp; Both of the original methods are coupled to the extracted method and, indirectly, to each other.&nbsp; This seems perfectly logical and harmless in the context of a single object, but how about when we recognize similar behavior across two objects? To reduce that duplication we need to either introduce a new object they both depend on or, far worse and sadly too often, we have one object depend on the other. The latter approach often leads to dependencies between objects that are unrelated, reducing their ability to evolve over time.&nbsp; Introducing a new object increases the overall surface of the system, and requires thought and care that it doesn't always receive when introduced when refactoring.</p>
+  </blockquote>
+  <p>In order to avoid taking DRY to extremes, Chelimsky proposes balancing it with other development principles:</p>
+  <blockquote>
+    <p>DRY is important, but so are Uncle Bob's SOLID principles, for example, or broader concepts like low coupling and high cohesion. It's not good enough to simply apply one principle all the time - you have to take them all into account and weigh their relative value in each situation. It's sort of like knowing which seasoning to put on fish, and which to put on a steak. Some do really well in both cases, some not so much.</p>
+  </blockquote>
+  <p>DRY is an important principle, but abusing it can generate problems such as increased coupling and reduced readability. The lesson here is that no matter how great a principle is, it should not be used disregarding other good programming practices.</p>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+<!--SWITCH ON AND OFF-->
+<!--The insecure stuff goens here-->
+<h3>Using DRY: Between Code Duplication and High-Coupling</h3>
+<hr>
+<p>DRY reduces duplication and the maintenance problems coming with it, but misusing it leads to high coupling and reduced readability. The lesson: a software development principle should be applied considering other corresponding principles, patterns and practices.</p>
+<p>DRY stands for <em>Don&rsquo;t Repeat Yourself</em>, and it is a software development principle first mentioned by Andy Hunt and Dave Thomas in their book <a href="http://en.wikipedia.org/wiki/The_Pragmatic_Programmer">The Pragmatic Programmer: From Journeyman to Master</a>. The principle states:</p>
+<blockquote>
+  <p><em>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</em></p>
+</blockquote>
+<p>In this context, Hunt emphasized the <a href="http://c2.com/cgi/wiki?DontRepeatYourself">negative impact of duplication</a>&nbsp;and consequently the importance of using DRY, on <a href="http://c2.com/cgi/wiki?WelcomeVisitors">Portland Pattern Repository's Wiki</a>:</p>
+<blockquote>
+  <p>Duplication (inadvertent or purposeful duplication) can lead to maintenance nightmares, poor factoring, and logical contradictions.</p>
+  <p>Duplication, and the strong possibility of eventual contradiction, can arise anywhere: in architecture, requirements, code, or documentation. The effects can range from mis-implemented code and developer confusion to complete system failure.</p>
+  <p>One could argue that most of the difficulty in Y2K remediation is due to the lack of a single date abstraction within any given system; the knowledge of dates and date-handling is widely spread.</p>
+</blockquote>
+<p>Although DRY seems like a must-apply principle of software engineering, Anders Munch <a href="http://c2.com/cgi/wiki?DontRepeatYourself">noted</a> that there are exceptions:</p>
+<blockquote>
+  <p>There is a pattern to the exceptions to the principle. <em>It is ok to have more than one representation of a piece of knowledge provided an effective mechanism for ensuring consistency between them is engaged.</em></p>
+  <ul>
+    <li>Definitions and declarations of C functions: these are usually in sync because the compiler flags inconsistencies, forcing the programmer to take action.</li>
+    <li>Unit tests: inconsistency means the tests will fail, again forcing someone to take action.</li>
+    <li>Auto-generated stuff: periodic regeneration ensures consistency.</li>
+  </ul>
+</blockquote>
+<p>These exceptions actually enforce the rationale behind DRY. But a question arises: aren&rsquo;t programmers taking DRY to extremes? Isn&rsquo;t DRY misunderstood and misused sometimes?</p>
+<p>Dave Thomas <a href="http://www.artima.com/intv/dry.html">remarked</a> early on that &ldquo;Most people take DRY to mean you shouldn't duplicate code. That's not its intention. The idea behind DRY is far grander than that,&rdquo; expanding the DRY principle to an entire software system:</p>
+<blockquote>
+  <p>DRY says that every piece of system knowledge should have one authoritative, unambiguous representation. Every piece of knowledge in the development of something should have a single representation. A system's knowledge is far broader than just its code. It refers to database schemas, test plans, the build system, even documentation.</p>
+  <p>Given all this knowledge, why should you find one way to represent each feature? The obvious answer is, if you have more than one way to express the same thing, at some point the two or three different representations will most likely fall out of step with each other. Even if they don't, you're guaranteeing yourself the headache of maintaining them in parallel whenever a change occurs. And change will occur. DRY is important if you want flexible and maintainable software.</p>
+  <p>The problem is: how do you represent all these different pieces of knowledge only once? If it's just code, then you can obviously organize your code so you don't repeat things, with the help of methods and subroutines. But how do you handle things like database schemas? This is where you get into other techniques in the book, like using code generation tools, automatic build systems, and scripting languages. These let you have single, authoritative representations that then generate non-authoritative work products, like code or DDLs (data description languages).</p>
+</blockquote>
+<p>While the issues of using DRY seemed to be settled long time ago, the principle has been mentioned again at <a href="http://www.infoq.com/articles/QCon-London-2012">QCon London 2012</a> by several speakers, including Greg Young and Dan North, who drew attention to its possible misuse. InfoQ followed the trail to find out more details on DRY. When InfoQ asked what problems he sees with DRY, Young said:</p>
+<blockquote>
+  <p>The basic argument against following DRY is that there is another side of things. When following &quot;DRY&quot;, it is quite common that people start building coupling and complexity into their software. One side of the trade off is very easy to measure (number of face plants per hour when needing to fix bugs multiple places) while the other is rather difficult (coupling and complexity built into software in the name of DRY).</p>
+  <p>One can argue that if DRY is followed &quot;properly&quot; that there will never be coupling and complexity built into the software. This is even anecdotally visible, I can write you a code base that perfectly follows DRY while not introducing coupling and complexity. This however assumes that I have perfect knowledge.</p>
+</blockquote>
+<p>We also talked to David Chelimsky, author and lead developer of RSpec. He said he has seen DRY been taken &ldquo;to the line level, and it's not always appropriate there (though it can be sometimes).&rdquo; He provided the following example:</p>
+<blockquote>
+  <pre>
+describe &quot;Person#full_name&quot; do<br /> it &quot;concats the first and last names&quot; do<br />&nbsp;&nbsp; first_name = &quot;John&quot;<br />&nbsp;&nbsp; last_name = &quot;Doe&quot;<br />&nbsp;&nbsp; person = Person.new(:first_name =&gt; first_name, :last_name =&gt; last_name)<br />&nbsp;&nbsp; person.full_name.should eq &quot;#{first_name} #{last_name}&quot;<br /> end<br />end</pre>
+</blockquote>
+<p>Although this piece of code avoids duplication and might seem as a good implementation of DRY, Chelimsky said he prefers the following more readable piece of code:</p>
+<blockquote>
+  <pre>
+describe &quot;Person#full_name&quot; do<br /> it &quot;concats the first and last names&quot; do<br />&nbsp;&nbsp; person = Person.new(:first_name =&gt; &quot;John&quot;, :last_name =&gt; &quot;Doe&quot;)<br />&nbsp;&nbsp; person.full_name.should eq &quot;John Doe&quot;<br /> end<br />end</pre>
+</blockquote>
+<p>adding:</p>
+<blockquote>
+  <p>To a person who doesn't really understand DRY, but thinks it's the bees knees, seeing &quot;John&quot; and &quot;Doe&quot; twice each in that example is like nails on chalkboard. For me, it's quite the opposite. I find it easier to see the relationship between the first and last names, and the outcome of full_name.</p>
+</blockquote>
+<p>Chelimsky also pointed to another <a href="https://github.com/bitlove/objectify/pull/3">piece of code</a> from the <a href="https://github.com/bitlove/objectify">Objectify</a> framework he recently stumbled upon. The following code marked with italics</p>
+<pre><p>def request_resolver</p><p>&nbsp; klass = Objectify::NamedValueResolverLocator</p><p>&nbsp; @request_resolver ||= klass.new.tap do |resolver|</p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:controller, self)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:params, params)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:session, session)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:cookies, cookies)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:request, request)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:response, response)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:flash, flash)</em></p><p><em>&nbsp;&nbsp;&nbsp; resolver.add(:renderer, Renderer.new(self))</em></p><p>&nbsp; end</p><p>end</p>
+</pre>
+<p>was replaced with this:</p>
+<pre>
+{:controller =&gt; self, :params =&gt; params, :session =&gt; session, :cookies =&gt; cookies, :request =&gt; request,<br /> :response =&gt; response, :flash =&gt; flash, :renderer =&gt; Renderer.new(self) }.each do |key, value| resolver.add(key, value)<br />end</pre>
+<p>Chelimsky <a href="https://github.com/bitlove/objectify/pull/3">commented</a> on this change: &ldquo;This is taking DRY too far IMO. This part is more maintainable (easier to read and modify) before this change.&rdquo;</p>
+<p>One of the main problems seen by Chelimsky is that &ldquo;The words &quot;Don't Repeat Yourself&quot; are intended to be a memory device, but &quot;DRY&quot; has become a memory device for &quot;Don't Repeat Yourself&quot; and that ends up being _the principle_ in many minds,&rdquo; noting that this approach may lead to another side of the problem: &ldquo;when we reduce duplication, we increase coupling&rdquo;:</p>
+<blockquote>
+  <p>When two methods on the same object do some of the same work, we typically extract a third method to which they both delegate.&nbsp; Both of the original methods are coupled to the extracted method and, indirectly, to each other.&nbsp; This seems perfectly logical and harmless in the context of a single object, but how about when we recognize similar behavior across two objects? To reduce that duplication we need to either introduce a new object they both depend on or, far worse and sadly too often, we have one object depend on the other. The latter approach often leads to dependencies between objects that are unrelated, reducing their ability to evolve over time.&nbsp; Introducing a new object increases the overall surface of the system, and requires thought and care that it doesn't always receive when introduced when refactoring.</p>
+</blockquote>
+<p>In order to avoid taking DRY to extremes, Chelimsky proposes balancing it with other development principles:</p>
+<blockquote>
+  <p>DRY is important, but so are Uncle Bob's SOLID principles, for example, or broader concepts like low coupling and high cohesion. It's not good enough to simply apply one principle all the time - you have to take them all into account and weigh their relative value in each situation. It's sort of like knowing which seasoning to put on fish, and which to put on a steak. Some do really well in both cases, some not so much.</p>
+</blockquote>
+<p>DRY is an important principle, but abusing it can generate problems such as increased coupling and reduced readability. The lesson here is that no matter how great a principle is, it should not be used disregarding other good programming practices.</p>
+{% endif %}
+
+
+{% endblock %}

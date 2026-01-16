@@ -1,0 +1,31 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Monkey Management{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="center">
+  <h5 align="left">Agile Measurements:&nbsp; Cycle time and Lead Time</h5>
+  <hr>
+  <img alt="" class="img-fluid" src="{{ asset('storage/images/leanmeasurement.jpg') }}" > <br>
+  <br>
+    <br>  <br>
+	  <br>
+	    <br>
+		  <br>
+		    <br>
+			  <br>
+			    <br>
+</div>
+
+{% endif %}
+
+
+    {% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+    <div class="container" align="left">
+        <!--SWITCH ON AND OFF-->
+        <!--The insecure stuff goens here-->
+
+    </div>
+{% endif %}
+
+
+{% endblock %}

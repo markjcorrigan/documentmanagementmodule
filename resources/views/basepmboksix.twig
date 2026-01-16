@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>@yield('title')</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/bootstrapfourthreeone/fontawesomeprowebfivetwo/css/all.css">
+    <link rel="stylesheet" href="/bootstrapfourthreeone/css/jquery-ui.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+{#    <link rel="stylesheet" href="{{ asset('bootstrapfourthreeone/css/bootstrap.min.css') }}">#}
+{#    <link rel="stylesheet" href="{{ asset('fontawesome6/fontawesome6/pro/css/all.min.css') }}">#}
+{#    <link rel="stylesheet" href="{{ asset('bootstrapfourthreeone/css/jquery-ui.css') }}">#}
+{#    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">#}
+</head>
+<body class="d-flex flex-column" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<div id="page-content">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+{#        <a class="navbar-brand" href="/pmway">PMWay</a>#}
+        <a class="navbar-brand" href="/home">Home</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+{#        <div class="collapse navbar-collapse" id="navbarNav">#}
+{#            <ul class="navbar-nav ml-auto">#}
+{#                @if (Auth::check())#}
+{#                <!-- Navigation links for authenticated users -->#}
+{#                @else#}
+{#                <!-- Navigation links for guests -->#}
+{#                @endif#}
+{#            </ul>#}
+{#        </div>#}
+    </nav>
+    @if (session()->has('flash_messages'))
+    @foreach (session('flash_messages') as $message)
+    <div style="text-align:center" class="alert alert-{{ $message['type'] }}">
+        {{ $message['body'] }}
+    </div>
+    @endforeach
+    @endif
+    @yield('content')
+</div>
+
+
+
+<script src="/bootstrapfourthreeone/js/jquery.js"></script>
+<script src="/bootstrapfourthreeone/js/bootstrap.js"></script>
+<script src="/bootstrapfourthreeone/js/popper.min.js"></script>
+<script src="/bootstrapfourthreeone/js/jquery-ui.js"></script>
+
+{#<script src="{{ asset('bootstrapfourthreeone/js/jquery.js') }}"></script>#}
+{#<script src="{{ asset('bootstrapfourthreeone/js/bootstrap.js') }}"></script>#}
+{#<script src="{{ asset('bootstrapfourthreeone/js/popper.min.js') }}"></script>#}
+{#<script src="{{ asset('bootstrapfourthreeone/js/jquery-ui.js') }}"></script>#}
+<script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
+<script>
+    tinymce.init({
+        // TinyMCE configuration
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        // JavaScript code
+    });
+</script>
+<style>
+    .round-border {
+        border: 1px solid #eee;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+</style>
+<footer id="sticky-footer" style="background-color: #111827; padding-top: 20px; padding-bottom: 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-md-1">
+                <p class="text-white text-center">Project &amp; Process Management Best Practice <br>at CM Level 2 and above </p>
+                <p class="text-center">
+                    <a href="/gamestats" >
+                        <img alt="Up Stat or Down Stat" class="img-fluid" src="/images/devopsimagemedium.png" onmouseover="this.src='/images/devops2.gif'" onmouseout="this.src='/images/devopsimagemedium.png'" title="How are your game stats? Click here for more">
+                    </a>
+                </p>
+                <p class="text-white text-center">underpinned by ITIL</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-10">
+                <p class="text-white">&copy; 2009 PMWay<br> <span class="text-white small">People Process Technology Governance Execution</span></p>
+            </div>
+        </div>
+        <div style="height: 30px;"></div>
+    </div>
+</footer>
+</body>
+</html>

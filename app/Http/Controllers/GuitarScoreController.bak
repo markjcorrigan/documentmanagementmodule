@@ -1,0 +1,189 @@
+<?php
+namespace App\Http\Controllers;
+
+use App\Models\GuitarScore;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Log;
+
+class GuitarScoreController extends Controller
+{
+    public function index(Request $request)
+    {
+        $query = GuitarScore::where('type', 'file')
+                            ->whereIn('extension', ['mp3', 'mp4', 'pdf', 'jpg', 'jpeg', 'png']);
+        
+        $query->select([
+            'id', 'name', 'path', 'extension', 'size', 'file_modified_at'
+        ]);
+        
+        if ($request->has('search') && !empty($searchTerm = trim($request->search))) {
+            $query->where('name', 'like', "%{$searchTerm}%");
+        }
+        
+        $files = $query->orderBy('file_modified_at', 'desc')->paginate(20);
+        
+        // DEBUG: Log the first file ID
+        if ($files->count() > 0) {
+            Log::info('First file ID: ' . $files->first()->id);
+        }
+        
+        return view('protectedguitar.simple', compact('files'));
+    }
+
+    public function upload(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|file|max:102400|mimes:mp3,mp4,pdf,jpg,jpeg,png'
+        ]);
+
+        $file = $request->file('file');
+        $fileName = $file->getClientOriginalName();
+        
+        // Move file directly to storage/protectedGuitar
+        $destinationPath = storage_path('protectedGuitar');
+        $file->move($destinationPath, $fileName);
+        
+        // Store just the filename as the path (since rebuild script seems to do this)
+        $path = $fileName;
+
+        GuitarScore::create([
+            'name' => $fileName,
+            'path' => $path,
+            'type' => 'file',
+            'extension' => strtolower($file->getClientOriginalExtension()),
+            'size' => $file->getSize(),
+            'file_modified_at' => now(),
+        ]);
+
+        return back()->with('success', 'File uploaded successfully');
+    }
+
+    public function view($id)
+    {
+        $file = GuitarScore::findOrFail($id);
+        $filePath = storage_path('protectedGuitar/' . $file->path);
+
+        if (!file_exists($filePath)) {
+            abort(404, 'File not found on disk');
+        }
+
+        // For audio/video, show player page
+        if (in_array($file->extension, ['mp3', 'mp4'])) {
+            return view('protectedguitar.player', compact('file'));
+        }
+
+        // For other files, serve directly
+        $mimeTypes = [
+            'pdf' => 'application/pdf',
+            'jpg' => 'image/jpeg',
+            'jpeg' => 'image/jpeg',
+            'png' => 'image/png',
+        ];
+
+        $mimeType = $mimeTypes[$file->extension] ?? 'application/octet-stream';
+
+        return response()->file($filePath, [
+            'Content-Type' => $mimeType,
+            'Content-Disposition' => 'inline; filename="' . $file->name . '"'
+        ]);
+    }
+
+    public function stream($id)
+    {
+        $file = GuitarScore::findOrFail($id);
+        $filePath = storage_path('protectedGuitar/' . $file->path);
+
+        if (!file_exists($filePath)) {
+            abort(404, 'File not found on disk');
+        }
+
+        $mimeTypes = [
+            'mp3' => 'audio/mpeg',
+            'mp4' => 'video/mp4',
+        ];
+
+        $mimeType = $mimeTypes[$file->extension] ?? 'application/octet-stream';
+
+        return response()->file($filePath, [
+            'Content-Type' => $mimeType,
+            'Accept-Ranges' => 'bytes',
+        ]);
+    }
+
+    public function download($id)
+    {
+        $file = GuitarScore::findOrFail($id);
+        $filePath = storage_path('protectedGuitar/' . $file->path);
+
+        if (!file_exists($filePath)) {
+            abort(404, 'File not found on disk');
+        }
+
+        return response()->download($filePath, $file->name);
+    }
+
+    public function edit($id)
+    {
+        Log::info('Edit method called with ID: ' . $id);
+        
+        $file = GuitarScore::find($id);
+        
+        if (!$file) {
+            Log::error('File not found in database with ID: ' . $id);
+            abort(404, 'File not found in database. ID: ' . $id);
+        }
+        
+        return view('protectedguitar.edit', compact('file'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $file = GuitarScore::findOrFail($id);
+        
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        $oldPath = storage_path('protectedGuitar/' . $file->path);
+        $newName = $request->name;
+        
+        // Ensure extension is preserved
+        if (!str_ends_with($newName, '.' . $file->extension)) {
+            $newName .= '.' . $file->extension;
+        }
+
+        // Get just the directory path
+        $directory = dirname($file->path);
+        $newPath = $directory . '/' . $newName;
+        $newFullPath = storage_path('protectedGuitar/' . $newPath);
+
+        // Rename physical file on disk
+        if ($file->name !== $newName && file_exists($oldPath)) {
+            if (!rename($oldPath, $newFullPath)) {
+                return back()->with('error', 'Failed to rename file on disk');
+            }
+        }
+
+        // Update database
+        $file->name = $newName;
+        $file->path = $newPath;
+        $file->save();
+
+        return redirect()->route('guitar.index')->with('success', 'File renamed successfully on disk and in database');
+    }
+
+    public function destroy($id)
+    {
+        $file = GuitarScore::findOrFail($id);
+        $filePath = storage_path('protectedGuitar/' . $file->path);
+
+        if (file_exists($filePath)) {
+            unlink($filePath);
+        }
+
+        $file->delete();
+
+        return back()->with('success', 'File deleted from disk and database');
+    }
+}

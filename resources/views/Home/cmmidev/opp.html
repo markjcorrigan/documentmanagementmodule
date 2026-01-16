@@ -1,0 +1,892 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>OOP</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	 
+<table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="3%"><p><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="52%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+<!-- #BeginEditable "content" -->
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong>Organizational Process 
+					Performance (OPP)</strong><br />
+					<br />
+					</td></tr>
+				</table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+	<td><p>Provides a view of how well the processes are performing. This process area provides input into the <i>Quantitative Project Management</i> process area.
+Organizational Process Performance (OPP) has to understand <b>how to measure</b> the results achieved by following a given process. These results could be:-
+<br></p>
+<li>Effort
+</li><li>Cycle time
+</li><li>Defect removal effectiveness  
+<br>
+<br>
+These process measures can be used as a baseline to an individual project's performance (in order to subsequently measure the Project performance).
+<br>
+<br>
+This process area overlaps with Measurement and Analysis (MA) and Organizational Process Focus (OPF) but the focus of Organizational Process Performance (OPP) is to understand the relationship (or usefulness)
+of the <i>process performance</i> measures of the organization. Other CMMi process areas use (or collect measures for) Organizational Process Focus (OPF) but OPF is tasked with gaining an insight or
+<i>a quantitative understanding of the organization's process performances</i>.</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Organizational Process Performance (OPP)<br />A Process Management Process Area at Maturity Level 4</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Organizational Process Performance (OPP) is to establish and maintain a quantitative understanding of the performance of the organization’s set of standard processes in support of quality and process-performance objectives, and to provide the process-performance data, baselines, and models to quantitatively manage the organization’s projects.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+<br>
+<br>
+Process performance is a measure of the actual results achieved by following a process. Process performance is characterized by process measures (e.g., effort, cycle time, and defect removal effectiveness) and product measures (e.g., reliability, defect density, capacity, response time, and cost).
+<br>
+<br>
+The common measures for the organization are composed of process and product measures that can be used to summarize the actual performance of processes in individual projects in the organization. The organizational data for these measures are analyzed to establish a distribution and range of results, which characterize the expected performance of the process when used on any individual project in the organization.
+<br>
+<br>
+In this process area, the phrase “quality and process-performance objectives” covers objectives and requirements for product quality, service quality, and process performance. As indicated above, the term “process performance” includes quality; however, to emphasize the importance of quality, the phrase “quality and process-performance objectives” is used rather than just “process-performance objectives.”
+<br>
+<br>
+The expected process performance can be used in establishing the project’s quality and process-performance objectives and can be used as a baseline against which actual project performance can be compared. This information is used to quantitatively manage the project. Each quantitatively managed project, in turn, provides actual performance results that become a part of the baseline data for the organizational process assets.
+<br>
+<br>
+The associated process-performance models are used to represent past and current process performance and to predict future results of the process. For example, the latent defects in the delivered product can be predicted using measurements of defects identified during product verification activities.
+<br>
+<br>
+When the organization has measures, data, and analytical techniques for critical process, product, and service characteristics, it is able to do the following:
+<br>
+<br>
+<li>Determine whether processes are behaving consistently or have stable trends (i.e., are predictable)
+</li><li>Identify processes where the performance is within natural bounds that are consistent across process implementation teams
+</li><li>Establish criteria for identifying whether a process or subprocess should be statistically managed, and determine pertinent measures and analytical techniques to be used in such management
+</li><li>Identify processes that show unusual (e.g., sporadic or unpredictable) behavior
+</li><li>Identify any aspects of the processes that can be improved in the organization’s set of standard processes
+</li><li>Identify the implementation of a process which performs best
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Quantitative Project Management process area for more information about the use of process-performance baselines and models.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about specifying measures and collecting and analyzing data.
+<br>
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1 Establish Performance Baselines and Models</b>
+<br>
+<br>
+Baselines and models, which characterize the expected process performance of the organization's set of standard processes, are established and maintained.
+<br>
+<br>
+Prior to establishing process-performance baselines and models, it is necessary to determine which processes are suitable to be measured (the Select Processes specific practice), which measures are useful for determining process performance (the Establish Process-Performance Measures specific practice), and the quality and process-performance objectives for those processes (the Establish Quality and Process-Performance Objectives specific practice). These specific practices are often interrelated and may need to be performed concurrently to select the appropriate processes, measures, and quality and process-performance objectives. Often, the selection of one process, measure, or objective will constrain the selection of the others. For example, if a certain process is selected, the measures and objectives for that process may be constrained by the process itself.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<a name="sp11"></a>
+<b>SP 1.1 Select Processes</b>
+<br>
+<br>
+Select the processes or subprocesses in the organization's set of standard processes that are to be included in the organization's process-performance analyses.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about the structure of the organizational process assets.
+<br>
+<br>
+The organization’s set of standard processes consists of a set of standard processes that, in turn, are composed of subprocesses.
+<br>
+<br>
+Typically, it will not be possible, useful, or economically justifiable to apply statistical management techniques to all processes or subprocesses of the organization’s set of standard processes. Selection of the processes and/or subprocesses is based on the needs and objectives of both the organization and projects.
+<br>
+<br>
+Examples of criteria which may be used for the selection of a process or subprocess for organizational analysis include the following:
+<br>
+<br>
+</li><li>The relationship of the subprocess to key business objectives
+</li><li>Current availability of valid historical data relevant to the subprocess
+</li><li>The current degree of variability of this data
+</li><li>Subprocess stability (e.g. stable performance in comparable instances)
+</li><li>The availability of corporate or commercial information that can be used to build predictive models
+<br>
+<br>
+The existence of project data that indicates the process or subprocess has been or can be stabilized is a useful criterion for selection of a process or subprocess.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>List of processes or subprocesses identified for process-performance analyses
+<br>
+<br>
+<a name="sp12"></a> 
+<b>SP 1.2 Establish Process-Performance Measures</b>
+<br>
+<br>
+Establish and maintain definitions of the measures that are to be included in the organization’s process-performance analyses.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about selecting measures.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Definitions for the selected measures of process performance
+<br>
+<br>
+Subpractice 1: Determine which of the organization’s business objectives for quality and process performance need to be addressed by the measures.
+<br>
+<br>
+Subpractice 2: Select measures that provide appropriate insight into the organization’s quality and process performance.
+<br>
+<br>
+The Goal Question Metric paradigm is an approach that can be used to select measures that provide insight into the organization’s business objectives.
+<br>
+<br>
+Examples of criteria used to select measures include the following:
+<br>
+<br>
+</li><li>Relationship of the measures to the organization’s business objectives
+</li><li>Coverage that the measures provide over the entire life of the product or service
+</li><li>Visibility that the measures provide into the process performance
+</li><li>Availability of the measures
+</li><li>Extent to which the measures are objective
+</li><li>Frequency at which the observations of the measure can be collected
+</li><li>Extent to which the measures are controllable by changes to the process or subprocess
+</li><li>Extent to which the measures represent the users’ view of effective process performance
+<br>
+<br>
+Subpractice 3: Incorporate the selected measures into the organization’s set of common measures.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about establishing organizational process assets.
+<br>
+<br>
+Subpractice 4: Revise the set of measures as necessary.
+<br>
+<br>
+<a name="sp13"></a> 
+<b>SP 1.3 Establish Quality and Process-Performance Objectives</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for quality and process performance for the organization.
+<br>
+<br>
+The organization’s quality and process-performance objectives should have the following attributes:
+<br>
+<br>
+</li><li>Based on the organization’s business objectives
+</li><li>Based on the past performance of projects
+</li><li>Defined to gauge process performance in areas such as product quality, productivity, cycle time, or response time
+</li><li>Constrained by the inherent variability or natural bounds of the selected process or subprocess
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Organization's quality and process-performance objectives
+<br>
+<br>
+Subpractice 1: Review the organization’s business objectives related to quality and process performance.
+<br>
+<br>
+Examples of business objectives include the following:
+<br>
+<br>
+</li><li>Achieve a development cycle of a specified duration for a specified release of a product
+</li><li>Achieve an average response time less than a specified duration for a specified version of a service
+</li><li>Deliver functionality of the product to a target percentage of estimated cost
+</li><li>Decrease the cost of maintenance of the products by a specified percent
+<br>
+<br>
+Subpractice 2: Define the organization’s quantitative objectives for quality and process performance.
+<br>
+<br>
+Objectives may be established for process or subprocess measurements (e.g., effort, cycle time, and defect removal effectiveness) as well as for product measurements (e.g., reliability and defect density) and service measurements (e.g., capacity and response times) where appropriate.
+<br>
+<br>
+Examples of quality and process-performance objectives include the following:
+<br>
+<br>
+</li><li>Achieve a specified productivity
+</li><li>Deliver work products with no more than a specified number of latent defects
+</li><li>Shorten time to delivery to a specified percentage of the process-performance baseline
+</li><li>Reduce the total lifecycle cost of new and existing products by a percentage
+</li><li>Deliver a percentage of the specified product functionality
+<br>
+<br>
+Subpractice 3: Define the priorities of the organization’s objectives for quality and process performance.
+<br>
+<br>
+Subpractice 4: Review, negotiate, and obtain commitment for the organization’s quality and process-performance objectives and their priorities from the relevant stakeholders.
+<br>
+<br>
+Subpractice 5: Revise the organization’s quantitative objectives for quality and process performance as necessary.
+<br>
+<br>
+Examples of when the organization’s quantitative objectives for quality and process performance may need to be revised include the following:
+<br>
+<br>
+</li><li>When the organization’s business objectives change
+</li><li>When the organization’s processes change
+</li><li>When actual quality and process performance differs significantly from the objectives
+<br>
+<br>
+<a name="sp14"></a> 
+<b>SP 1.4 Establish Process-Performance Baselines</b>
+<br>
+<br>
+Establish and maintain the organization's process-performance baselines.
+<br>
+<br>
+The organization’s process-performance baselines are a measurement of performance for the organization’s set of standard processes at various levels of detail, as appropriate. The processes include the following:
+<br>
+<br>
+</li><li>Sequence of connected processes
+</li><li>Processes that cover the entire life of the project
+</li><li>Processes for developing individual work products
+<br>
+<br>
+There may be several process-performance baselines to characterize performance for subgroups of the organization.
+<br>
+<br>
+Examples of criteria used to categorize subgroups include the following:
+<br>
+<br>
+</li><li>Product line
+</li><li>Line of business
+</li><li>Application domain
+</li><li>Complexity
+</li><li>Team size
+</li><li>Work product size
+</li><li>Process elements from the organization’s set of standard processes
+<br>
+<br>
+Allowable tailoring of the organization’s set of standard processes may significantly affect the comparability of the data for inclusion in process-performance baselines. The effects of tailoring should be considered in establishing baselines. Depending on the tailoring allowed, separate performance baselines may exist for each type of tailoring.
+<br>
+<br>
+Refer to the Quantitative Project Management process area for more information about the use of process-performance baselines.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Baseline data on the organization’s process performance
+<br>
+<br>
+Subpractice 1: Collect measurements from the organization’s projects.
+<br>
+<br>
+The process or subprocess in use when the measurement was taken is recorded to enable appropriate use later.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for information about collecting and analyzing data.
+<br>
+<br>
+Subpractice 2: Establish and maintain the organization’s process-performance baselines from the collected measurements and analyses.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for information about establishing objectives for measurement and analysis, specifying the measures and analyses to be performed, obtaining and analyzing measures, and reporting results.
+<br>
+<br>
+Process-performance baselines are derived by analyzing the collected measures to establish a distribution and range of results that characterize the expected performance for selected processes or subprocesses when used on any individual project in the organization.
+<br>
+<br>
+The measurements from stable subprocesses from projects should be used; other data may not be reliable.
+<br>
+<br>
+Subpractice 3: Review and get agreement with relevant stakeholders about the organization's process-performance baselines.
+<br>
+<br>
+Subpractice 4: Make the organization's process-performance information available across the organization in the organization's measurement repository.
+<br>
+<br>
+The organization’s process-performance baselines are used by the projects to estimate the natural bounds for process performance.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about establishing the organization’s measurement repository.
+<br>
+<br>
+Subpractice 5: Compare the organization’s process-performance baselines to the associated objectives.
+<br>
+<br>
+Subpractice 6: Revise the organization’s process-performance baselines as necessary.
+<br>
+<br>
+Examples of when the organization’s process-performance baselines may need to be revised include the following:
+<br>
+<br>
+</li><li>When the processes change
+</li><li>When the organization’s results change
+</li><li>When the organization’s needs change
+<br>
+<br>
+<a name="sp15"></a> 
+<b>SP 1.5 Establish Process-Performance Models</b>
+<br>
+<br>
+Establish and maintain the process-performance models for the organization’s set of standard processes.
+<br>
+<br>
+Process-performance models are used to estimate or predict the value of a process-performance measure from the values of other process, product, and service measurements. These process-performance models typically use process and product measurements collected throughout the life of the project to estimate progress toward achieving objectives that cannot be measured until later in the project’s life.
+<br>
+<br>
+The process-performance models are used as follows:
+<br>
+<br>
+</li><li>The organization uses them for estimating, analyzing, and predicting the process performance associated with the processes in the organization’s set of standard processes.
+</li><li>The organization uses them to assess the (potential) return on investment for process improvement activities.
+</li><li>Projects use them for estimating, analyzing, and predicting the process performance for their defined processes.
+</li><li>Projects use them for selecting processes or subprocesses for use.
+<br>
+<br>
+These measures and models are defined to provide insight into, and to provide the ability to predict, critical process and product characteristics that are relevant to business value.
+<br>
+<br>
+Examples of areas of concern to projects in which models may be useful include the following:
+<br>
+<br>
+</li><li>Schedule and cost
+</li><li>Reliability
+</li><li>Defect identification and removal rates
+</li><li>Defect removal effectiveness
+</li><li>Latent defect estimation
+</li><li>Response time
+</li><li>Project progress
+</li><li>Combinations of these areas
+<br>
+<br>
+Examples of process-performance models include the following:
+<br>
+<br>
+</li><li>System dynamics models
+</li><li>Reliability growth models
+</li><li>Complexity models
+<br>
+<br>
+Refer to the Quantitative Project Management process area for more information about the use of process-performance models.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Process-performance models
+<br>
+<br>
+Subpractice 1: Establish the process-performance models based on the organization’s set of standard processes and the organization’s process-performance baselines.
+<br>
+<br>
+Subpractice 2: Calibrate the process-performance models based on the organization’s past results and current needs.
+<br>
+<br>
+Subpractice 3: Review the process-performance models and get agreement with relevant stakeholders.
+<br>
+<br>
+Subpractice 4: Support the projects’ use of the process-performance models.
+<br>
+<br>
+Subpractice 5: Revise the process-performance models as necessary.
+<br>
+<br>
+Examples of when the process-performance models may need to be revised include the following:
+<br>
+<br>
+</li><li>When the processes change
+</li><li>When the organization’s results change
+</li><li>When the organization’s needs change
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the organizational process performance process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the organizational process performance process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for establishing and maintaining process-performance baselines for the organization’s set of standard processes.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the organizational process performance process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the organizational process performance process can be included in (or referenced by) the organization’s process improvement plan, which is described in the Organizational Process Focus process area, or it may be documented in a separate plan that describes only the plan for the organizational process performance process.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the organizational process performance process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Special expertise in statistics and statistical process control may be needed to establish the process-performance baselines for the organization’s set of standard processes.
+<br>
+<br>
+Examples of other resources provided include the following tools:
+<br>
+<br>
+</li><li>Database management systems
+</li><li>System dynamics model
+</li><li>Process modeling tools
+</li><li>Statistical analysis packages
+</li><li>Problem-tracking packages
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the organizational process performance process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the organizational process performance process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Process and process improvement modeling
+</li><li>Quantitative and statistical methods (e.g., estimating models, Pareto analysis, and control charts)
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the organizational process performance process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Organization’s quality and process-performance objectives
+</li><li>Definitions of the selected measures of process performance
+</li><li>Baseline data on the organization’s process performance
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the organizational process performance process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Establishing the organization’s quality and process-performance objectives and their priorities
+</li><li>Reviewing and resolving issues on the organization’s process-performance baselines
+</li><li>Reviewing and resolving issues on the organization’s process-performance models
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the organizational process performance process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Trends in the organization’s process performance with respect to changes in work products and task attributes (e.g., size growth, effort, schedule, and quality)
+</li><li>Schedule for collecting and reviewing measures to be used for establishing a process-performance baseline
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the organizational process performance process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Establishing process-performance baselines and models
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Process-performance plans
+</li><li>Organization’s quality and process-performance objectives
+</li><li>Definitions of the selected measures of process performance
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Process improvement plans
+</li><li>Process action plans
+</li><li>Process deployment plans
+</li><li>Plans for the organization’s process appraisals
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the organizational process performance process with higher level management and resolve issues.
+<br>
+<br>
+These reviews are typically in the form of a briefing presented to the management steering committee by the process group and the process action teams.
+<br>
+<br>
+Examples of presentation topics include the following:
+<br>
+<br>
+</li><li>Status of improvements being developed by process action teams
+</li><li>Results of pilots
+</li><li>Results of deployments
+</li><li>Schedule status for achieving significant milestones (e.g., readiness for an appraisal, or progress toward achieving a targeted organizational maturity level or capability level profile)
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+This generic goal's appearance here reflects its location in the continuous representation.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined organizational process performance process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the organizational process performance process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Process-performance baselines
+</li><li>Percent of measurement data that is rejected because of inconsistencies with the process-performance measurement definitions
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the organizational process performance process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the organizational process performance process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the organizational process performance process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the organizational process performance process.<br>
+</li>					
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

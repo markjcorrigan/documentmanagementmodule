@@ -1,0 +1,966 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}    {% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+ <!--BODY-->
+	<div class="container" align="left">
+	 <style>
+        .accordion .card-header:after {
+            content: "\2013";
+            font-weight: bold;
+            float: right;
+        }
+
+        .accordion .card-header.collapsed:after {
+            /* symbol for "collapsed" panels */
+            content: "\002B";
+        }
+    </style>
+	<h3>Heading</h3>
+<hr>
+    <div align="left"><br>
+        <br>
+<h3>Heading</h3>
+<hr>
+
+        <div class="container">
+            <div id="accordion" class="accordion">
+                <div class="card ">
+                    <div class="card-header collapsed" data-toggle="collapse" href="#collapse1">
+                        <a class="card-title">
+                      Constitution
+</a>
+
+                    </div>
+                    <div id="collapse1" class="card-body collapse" data-parent="#accordion">
+                        <h3>Constitution</h3>
+                        <br>
+                        <div align="center">
+
+                        </div>
+
+                    </div>
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <a class="card-title">
+                          Disrespect
+</a>
+                    </div>
+                    <div id="collapse2" class="card-body collapse" data-parent="#accordion">
+
+                        <h3>Disrespect</h3>
+                        <br>
+                        <div align="center">
+
+                        </div>
+
+                    </div>
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        <a class="card-title">
+                           Mountebank
+</a>
+                    </div>
+                    <div id="collapse3" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Mountebank</h3>
+                            <br>
+                            <div align="center">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                        <a class="card-title">
+                            Sophist
+</a>
+                    </div>
+                    <div id="collapse4" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+
+                            <h3>Sophist</h3>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                        <a class="card-title">
+                           Ignoramus
+</a>
+                    </div>
+                    <div id="collapse5" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Ignoramus</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                        <a class="card-title">
+                            Dissapointment
+                        </a>
+                    </div>
+                    <div id="collapse6" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>     Dissapointment</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                        <a class="card-title">
+                          Specious
+                        </a>
+                    </div>
+                    <div id="collapse7" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Specious</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+                        <a class="card-title">
+                    Spurious
+                        </a>
+                    </div>
+                    <div id="collapse8" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Spurious</h3>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                        <a class="card-title">
+                         Apocryphal
+                        </a>
+                    </div>
+                    <div id="collapse9" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Apocryphal</h3>
+                        </div>
+                    </div>
+
+                 <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+                        <a class="card-title">Ersatz
+                        </a>
+                    </div>
+                    <div id="collapse10" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                              <h3>Ersatz</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+                        <a class="card-title">
+                         Skulduggery
+                        </a>
+                    </div>
+                    <div id="collapse11" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Skulduggery</h3>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse12">
+                        <a class="card-title">
+                        Machinations
+                        </a>
+                    </div>
+                    <div id="collapse12" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Machinations</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+                        <a class="card-title">
+                           Hornswoggle
+                        </a>
+                    </div>
+                    <div id="collapse13" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Hornswoggle</h3>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse14">
+                        <a class="card-title">
+                        Bellicose
+                        </a>
+                    </div>
+                    <div id="collapse14" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Bellicose</h3>
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse15">
+                        <a class="card-title">
+                       Scabrous
+                        </a>
+                    </div>
+                    <div id="collapse15" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Scabrous</h3>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse16">
+                        <a class="card-title">
+                           Truculent
+                        </a>
+                    </div>
+                    <div id="collapse16" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Truculent</h3>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse17">
+                        <a class="card-title">
+                         Contumacious
+                        </a>
+                    </div>
+                    <div id="collapse17" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Contumacious</h3>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse18">
+                        <a class="card-title">
+                          Greedy
+                        </a>
+                    </div>
+                    <div id="collapse18" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Greedy</h3>
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse19">
+                        <a class="card-title">
+                         Rapacious
+                        </a>
+                    </div>
+                    <div id="collapse19" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Rapacious</h3>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse20">
+                        <a class="card-title">
+                           Evil
+                        </a>
+                    </div>
+                    <div id="collapse20" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Evil</h3>
+
+
+                        </div>
+                    </div>
+
+           <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse21">
+                        <a class="card-title">
+                        Procrustean
+                        </a>
+                    </div>
+                    <div id="collapse21" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Procrusteans</h3>
+                    </div>
+                    </div>
+
+           <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse22">
+                        <a class="card-title">
+                        Maladministration
+                        </a>
+                    </div>
+                    <div id="collapse22" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Maladministration</h3>
+                    </div>
+                    </div>
+
+        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse23">
+                        <a class="card-title">
+                        Maladroit
+                        </a>
+                    </div>
+                    <div id="collapse23" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Maladroit</h3>
+                    </div>
+                    </div>
+
+
+        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse24">
+                        <a class="card-title">
+                      Malfeasance
+                        </a>
+                    </div>
+                    <div id="collapse24" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Malfeasance</h3>
+                    </div>
+	    </div>
+
+     <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse25">
+                        <a class="card-title">
+                      Malefactor
+                        </a>
+                    </div>
+                    <div id="collapse25" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Malefactor</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse26">
+                        <a class="card-title">
+                     Venal
+                        </a>
+                    </div>
+                    <div id="collapse26" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Venal</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse27">
+                        <a class="card-title">
+                     Insidious
+                        </a>
+                    </div>
+                    <div id="collapse27" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Insidious</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse28">
+                        <a class="card-title">
+                     Insvidious
+                        </a>
+                    </div>
+                    <div id="collapse28" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Invidious</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse29">
+                        <a class="card-title">
+                     Turpitude    </a>
+                    </div>
+                    <div id="collapse29" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Turpitude</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse30">
+                        <a class="card-title">
+                   Inchoate   </a>
+                    </div>
+                    <div id="collapse30" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Inchoate</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse31">
+                 <a class="card-title"> Callow   </a>
+                    </div>
+                    <div id="collapse31" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Callow</h3>
+                    </div>
+	    </div>
+
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse32">
+           <a class="card-title">  Dillettante  </a>
+                    </div>
+                    <div id="collapse32" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Dilletante</h3>
+                    </div>
+	    </div>
+
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse33">
+         <a class="card-title">  Purile </a>
+                    </div>
+                    <div id="collapse33" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Purile</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse34">
+         <a class="card-title">  Childish</a>
+                    </div>
+                    <div id="collapse34" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Childish</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse35">
+      <a class="card-title">  Immature</a>
+                    </div>
+                    <div id="collapse35" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Immature</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse36">
+      <a class="card-title"> Gaslighting</a>
+                    </div>
+                    <div id="collapse36" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Gaslighting</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse37">
+     <a class="card-title">  Terrorize</a>
+                    </div>
+                    <div id="collapse37" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Terrorize</h3>
+                        </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse38">
+ <a class="card-title">Xenophobia</a>                </div>
+                    <div id="collapse38" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Xenophobia</h3>
+                    </div>
+                </div>
+            </div>
+
+<hr></div>
+<br>
+<br>
+<script>
+function myFunction() {
+      alert("Some text in pop up if needed");}
+
+myFunction()
+</script>
+</div>
+
+		</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}
+ <!--BODY-->
+	<div class="container" align="left">
+	 <style>
+        .accordion .card-header:after {
+            content: "\2013";
+            font-weight: bold;
+            float: right;
+        }
+
+        .accordion .card-header.collapsed:after {
+            /* symbol for "collapsed" panels */
+            content: "\002B";
+        }
+    </style>
+	<h3>Heading</h3>
+<hr>
+    <div align="left"><br>
+        <br>
+<h3>Heading</h3>
+<hr>
+
+        <div class="container">
+            <div id="accordion" class="accordion">
+                <div class="card ">
+                    <div class="card-header collapsed" data-toggle="collapse" href="#collapse1">
+                        <a class="card-title">
+                      Constitution
+</a>
+
+                    </div>
+                    <div id="collapse1" class="card-body collapse" data-parent="#accordion">
+                        <h3>Constitution</h3>
+                        <br>
+                        <div align="center">
+
+                        </div>
+
+                    </div>
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <a class="card-title">
+                          Disrespect
+</a>
+                    </div>
+                    <div id="collapse2" class="card-body collapse" data-parent="#accordion">
+
+                        <h3>Disrespect</h3>
+                        <br>
+                        <div align="center">
+
+                        </div>
+
+                    </div>
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        <a class="card-title">
+                           Mountebank
+</a>
+                    </div>
+                    <div id="collapse3" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Mountebank</h3>
+                            <br>
+                            <div align="center">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                        <a class="card-title">
+                            Sophist
+</a>
+                    </div>
+                    <div id="collapse4" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+
+                            <h3>Sophist</h3>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                        <a class="card-title">
+                           Ignoramus
+</a>
+                    </div>
+                    <div id="collapse5" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Ignoramus</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                        <a class="card-title">
+                            Dissapointment
+                        </a>
+                    </div>
+                    <div id="collapse6" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>     Dissapointment</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                        <a class="card-title">
+                          Specious
+                        </a>
+                    </div>
+                    <div id="collapse7" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Specious</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+                        <a class="card-title">
+                    Spurious
+                        </a>
+                    </div>
+                    <div id="collapse8" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Spurious</h3>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                        <a class="card-title">
+                         Apocryphal
+                        </a>
+                    </div>
+                    <div id="collapse9" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Apocryphal</h3>
+                        </div>
+                    </div>
+
+                 <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+                        <a class="card-title">Ersatz
+                        </a>
+                    </div>
+                    <div id="collapse10" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                              <h3>Ersatz</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+                        <a class="card-title">
+                         Skulduggery
+                        </a>
+                    </div>
+                    <div id="collapse11" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Skulduggery</h3>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse12">
+                        <a class="card-title">
+                        Machinations
+                        </a>
+                    </div>
+                    <div id="collapse12" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Machinations</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+                        <a class="card-title">
+                           Hornswoggle
+                        </a>
+                    </div>
+                    <div id="collapse13" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Hornswoggle</h3>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse14">
+                        <a class="card-title">
+                        Bellicose
+                        </a>
+                    </div>
+                    <div id="collapse14" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Bellicose</h3>
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse15">
+                        <a class="card-title">
+                       Scabrous
+                        </a>
+                    </div>
+                    <div id="collapse15" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Scabrous</h3>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse16">
+                        <a class="card-title">
+                           Truculent
+                        </a>
+                    </div>
+                    <div id="collapse16" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Truculent</h3>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse17">
+                        <a class="card-title">
+                         Contumacious
+                        </a>
+                    </div>
+                    <div id="collapse17" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Contumacious</h3>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse18">
+                        <a class="card-title">
+                          Greedy
+                        </a>
+                    </div>
+                    <div id="collapse18" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Greedy</h3>
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse19">
+                        <a class="card-title">
+                         Rapacious
+                        </a>
+                    </div>
+                    <div id="collapse19" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Rapacious</h3>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse20">
+                        <a class="card-title">
+                           Evil
+                        </a>
+                    </div>
+                    <div id="collapse20" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Evil</h3>
+
+
+                        </div>
+                    </div>
+
+           <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse21">
+                        <a class="card-title">
+                        Procrustean
+                        </a>
+                    </div>
+                    <div id="collapse21" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Procrusteans</h3>
+                    </div>
+                    </div>
+
+           <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse22">
+                        <a class="card-title">
+                        Maladministration
+                        </a>
+                    </div>
+                    <div id="collapse22" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Maladministration</h3>
+                    </div>
+                    </div>
+
+        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse23">
+                        <a class="card-title">
+                        Maladroit
+                        </a>
+                    </div>
+                    <div id="collapse23" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Maladroit</h3>
+                    </div>
+                    </div>
+
+
+        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse24">
+                        <a class="card-title">
+                      Malfeasance
+                        </a>
+                    </div>
+                    <div id="collapse24" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Malfeasance</h3>
+                    </div>
+	    </div>
+
+     <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse25">
+                        <a class="card-title">
+                      Malefactor
+                        </a>
+                    </div>
+                    <div id="collapse25" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Malefactor</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse26">
+                        <a class="card-title">
+                     Venal
+                        </a>
+                    </div>
+                    <div id="collapse26" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Venal</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse27">
+                        <a class="card-title">
+                     Insidious
+                        </a>
+                    </div>
+                    <div id="collapse27" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Insidious</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse28">
+                        <a class="card-title">
+                     Insvidious
+                        </a>
+                    </div>
+                    <div id="collapse28" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Invidious</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse29">
+                        <a class="card-title">
+                     Turpitude    </a>
+                    </div>
+                    <div id="collapse29" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Turpitude</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse30">
+                        <a class="card-title">
+                   Inchoate   </a>
+                    </div>
+                    <div id="collapse30" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Inchoate</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse31">
+                 <a class="card-title"> Callow   </a>
+                    </div>
+                    <div id="collapse31" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Callow</h3>
+                    </div>
+	    </div>
+
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse32">
+           <a class="card-title">  Dillettante  </a>
+                    </div>
+                    <div id="collapse32" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Dilletante</h3>
+                    </div>
+	    </div>
+
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse33">
+         <a class="card-title">  Purile </a>
+                    </div>
+                    <div id="collapse33" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Purile</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse34">
+         <a class="card-title">  Childish</a>
+                    </div>
+                    <div id="collapse34" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Childish</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse35">
+      <a class="card-title">  Immature</a>
+                    </div>
+                    <div id="collapse35" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Immature</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse36">
+      <a class="card-title"> Gaslighting</a>
+                    </div>
+                    <div id="collapse36" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Gaslighting</h3>
+                    </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse37">
+     <a class="card-title">  Terrorize</a>
+                    </div>
+                    <div id="collapse37" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Terrorize</h3>
+                        </div>
+	    </div>
+
+   <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse38">
+ <a class="card-title">Xenophobia</a>                </div>
+                    <div id="collapse38" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <h3>Xenophobia</h3>
+                    </div>
+                </div>
+            </div>
+
+<hr></div>
+<br>
+<br>
+<script>
+function myFunction() {
+      alert("Some text in popup if needed");}
+
+myFunction()
+</script>
+</div>
+
+		</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% endblock %}

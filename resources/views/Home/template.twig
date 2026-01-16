@@ -1,0 +1,26 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}PUT NEW NAME HERE{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+ <!--BODY-->
+	<div class="container" align="left">
+	This is inside pmway
+	</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}
+
+	<div class="container" align="left">
+	<!--SWITCH ON AND OFF-->
+	<!--The insecure stuff goens here-->
+	This is outside pmway
+	</div>
+
+
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.twig' %}
+{% block title %}{% if not user %}PMWay{% else %}ACID{% endif %}{% endblock %}
+{% block body %}
+    {% if user %}
+        <div class="container" align="left">
+            <h3>Does your data have ACIDity?</h3>
+            <hr>
+            <p>ACID (Atomicity, Consistency, Isolation, and Durability) is an acronym for the four primary attributes ensured to any transaction by a <a href="https://searchcio.techtarget.com/definition/transaction" >transaction</a> manager (also called a transaction monitor). These attributes are:</p>
+
+            <p><b>Atomicity.</b> In a transaction involving two or more pieces of information, either all pieces are committed or none are.</p>
+
+            <p><b>Consistency.</b> A transaction either creates a new and valid state of data or, if any failure occurs, returns all data to its state before the transaction started.</p>
+
+            <p><b>Isolation.</b> A transaction in process and not yet committed must remain isolated from any other transaction.</p>
+
+            <p><b>Durability.</b> Committed data is saved by the system so that, even in the event of a failure and system restart, the data is available in its correct state.</p>
+
+            <p>The ACID concept is described in ISO/IEC 10026-1:1992 Section 4. Each of these attributes can be measured against a <a href="https://searchcio.techtarget.com/definition/benchmark" >benchmark</a>. In general, a transaction manager or monitor is designed to realize the ACID concept. In a <a href="https://whatis.techtarget.com/definition/distributed" >distributed</a> system, one way to achieve ACID is to use a two-phase commit (2PC), which ensures that all involved sites must commit to transaction completion or none do, and the transaction is rolled back (see <a href="https://searchsqlserver.techtarget.com/definition/rollback" >rollback</a>).</p>
+        </div>
+    {% endif %}
+
+    {% if not user %}
+        <div class="container" align="left">
+            <h3 align="left">Please log in to access the content on this page</h3>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    {% endif %}
+
+{% endblock %}

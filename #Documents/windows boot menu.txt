@@ -1,0 +1,2 @@
+# Force Windows to show the advanced boot menu
+shutdown /r /o /f /t 0

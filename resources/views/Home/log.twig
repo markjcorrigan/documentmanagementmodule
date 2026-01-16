@@ -1,0 +1,131 @@
+{% extends 'basepmboksix.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Log{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+	<div class="container">
+
+	<h3>Daily Log</h3>
+        <p>I have a more robust editor at this <a href="/editor">link<a>.  <br>Possibly copy the tailoring notes and paste them in the editor if you want to use the Prince2 log method.<br>Note: I use logs for all project methods I run.</p>
+
+
+{#<script language="javascript">#}
+{# <!--#}
+{# var today = new date();#}
+{# document.write(today);#}
+{# //-->#}
+{# </script>#}
+
+
+<textarea rows="30" cols="130" style="float:left">
+<h3>Tailoring Notes for the Project Management Process being tailored:  I.e. Put the Process / Input / Tool / Technique / Output name here.</h3>
+	<p>Use these Notes to enter any tailoring information you have considered with regard to this process.<br>I.e. tailoring is how you have simplified, or left out something in order to run the project faster.  Obviously this must not jeopardize the project integrity or place it under risk.  Risks and Issues (Risks happening) can be used to monitor the effect of tailoring on the project.  I.e. this operates like a warning system (if Issue is picked up), which can then evolve into a set of TAsks to minimize or handle the Issue / Risk.</p>
+
+<p>Use the print button at the top to print this to hard copy or pdf.</p>
+
+<h3>Possibly you use the PRINCE2Agile methodology</h3>
+<h3>A.7 DAilY LOG</h3>
+<p align="left">A.7.1 Purpose A Daily Log is used to record informal issues, reqUired actions or significant events not caught by other PRINCE2 registers or logs. It acts as the project diary for the Project Manager.
+It can also be used as a repository for issues and risks during the Starting up a Project process if the other registers have not been set up.
+There may be more than one Daily Log as Team Managers may elect to have one for their Work Packages, separate from the Project Manager's Daily Log.
+A.7.2 Composition A Daily Log is in free form but likely to include:<br>
+- Date of entry <br>
+- Problem, action, event or comment <br>
+- Person responsible <br>
+- Target date - Results.
+<br>
+<br>
+A.7.3 Derivation
+Entries are made when the Project Manager or Team Manager feels it is appropriate to log some event. Often entries are based on thoughts, conversations and observations.<br><br>
+A.7.4 Format and presentation<br>
+
+A Daily Log can take a number of formats, including:<br>
+- Document or spreadsheet <br>
+- Desk diary or log book <br>
+- Electronic diarylcalendar/task lists <br>
+- Entry in a project management tool.<br>
+<br>
+
+A.7.S Quality criteria<br>
+- Entries are sufficiently documented to be understandable later (a short note might make sense at the time, but will it in several months' time?) <br>
+- Date, person responsible and target date are always filled in <br>
+- Consideration has been given to access rights for the Daily Log (e.g. should the Daily Log be visible to everyone working on the project?).</p>
+
+</textarea>
+
+
+
+<br>
+<br>
+	</div>
+
+
+
+
+
+
+<!--ENDBODY-->
+
+<!--ENDBODY-->
+{% else %}
+<div class="container">
+
+ 	<h3>Daily Log</h3>
+
+
+{#<script language="javascript">#}
+{# <!--#}
+{# var today = new date();#}
+{# document.write(today);#}
+{# //-->#}
+{# </script>#}
+
+
+<textarea rows="30" cols="130" style="float:left">
+<h3>Tailoring Notes for the Project Management Process being tailored:  I.e. Put the Process / Input / Tool / Technique / Output name here.</h3>
+	<p>Use these Notes to enter any tailoring information you have considered with regard to this process.<br>I.e. tailoring is how you have simplified, or left out something in order to run the project faster.  Obviously this must not jeopardize the project integrity or place it under risk.  Risks and Issues (Risks happening) can be used to monitor the effect of tailoring on the project.  I.e. this operates like a warning system (if Issue is picked up), which can then evolve into a set of TAsks to minimize or handle the Issue / Risk.</p>
+
+<p>Use the print button at the top to print this to hard copy or pdf.</p>
+
+<h3>Possibly you use the PRINCE2Agile methodology</h3>
+<h3>A.7 DAilY LOG</h3>
+<p align="left">A.7.1 Purpose A Daily Log is used to record informal issues, reqUired actions or significant events not caught by other PRINCE2 registers or logs. It acts as the project diary for the Project Manager.
+It can also be used as a repository for issues and risks during the Starting up a Project process if the other registers have not been set up.
+There may be more than one Daily Log as Team Managers may elect to have one for their Work Packages, separate from the Project Manager's Daily Log.
+A.7.2 Composition A Daily Log is in free form but likely to include:<br>
+- Date of entry <br>
+- Problem, action, event or comment <br>
+- Person responsible <br>
+- Target date - Results.
+<br>
+<br>
+A.7.3 Derivation
+Entries are made when the Project Manager or Team Manager feels it is appropriate to log some event. Often entries are based on thoughts, conversations and observations.<br><br>
+A.7.4 Format and presentation<br>
+
+A Daily Log can take a number of formats, including:<br>
+- Document or spreadsheet <br>
+- Desk diary or log book <br>
+- Electronic diarylcalendar/task lists <br>
+- Entry in a project management tool.<br>
+<br>
+
+A.7.S Quality criteria<br>
+- Entries are sufficiently documented to be understandable later (a short note might make sense at the time, but will it in several months' time?) <br>
+- Date, person responsible and target date are always filled in <br>
+- Consideration has been given to access rights for the Daily Log (e.g. should the Daily Log be visible to everyone working on the project?).</p>
+
+</textarea>
+
+
+<br>
+<br>
+	</div>
+
+
+
+
+
+
+{% endif %}
+{% endblock %}

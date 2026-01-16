@@ -1,0 +1,58 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Scrum Roles Clarity{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="left">
+  <h3>Can the Scrum Master also be the Product Owner?<br>
+    &amp; Vice versa?</h3>
+  <hr>
+  <p class="p3"><span class="s1"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/two_people_planning.jpg') }}" style="float: right"  >If you&rsquo;ve experimented with scrum, you&rsquo;re likely familiar with the&nbsp;<span class="s2">Scrum</span>&nbsp;Master and Product Owner roles. But just in case you&rsquo;re not, here&rsquo;s a quick breakdown: The Scrum Master is responsible for ensuring that the team follows the Scrum process, while the Product Owner ensures that the team spends time building things that bring the most value to the organization. These roles sound so deceivingly simple that sometimes a single person will try tackling both.</span></p>
+  <p class="p3"><span class="s1">This can happen&nbsp;in a ground-up implementation of scrum when a Product Owner is never officially assigned to the team, leaving the Scrum Master to fill&nbsp;these responsibilities. It can also&nbsp;happen when the team&rsquo;s Scrum Master is also an individual contributor, and simply too overwhelmed to focus on the scrum process. In these cases the Product Owner may try to step up to lead&nbsp;the process, in addition to their own responsibilities.<br>
+    <br>
+    Regardless of the reason, when a team attempts to combine all responsibilities into a single role, it almost never ends well. <br>
+    <br>
+    Let&rsquo;s look at some of the ways this can go awry, and how to fix it.</span></p>
+  <h5 class="p4"><span class="s1">Scenario 1:&nbsp;Scrum Master acts as Product Owner</span></h5>
+  <p class="p3"><span class="s1">Most commonly, when these roles are combined,&nbsp;it results in the Scrum Master also wearing the hat of Product Owner. While it sounds logical, the Scrum Master may not have access to the customers to gather valuable feedback. Without actionable feedback, the team simply breaks an un-validated product down into smaller and smaller pieces delivering each incrementally. While incremental delivery is an improvement over a single large delivery, the reality is that it&rsquo;s really just a more&nbsp;efficient way to deliver the wrong product.</span></p>
+  <p class="p3"><span class="s1">When the Scrum Master acts as Product Owner, it&rsquo;s easy to miss out on a coherent vision for the team, resulting in the delivery of low-value work. This can happen when the Scrum Master, lacking customer access or a true vision for the product, simply stacks the backlog with the items they find most interesting or familiar. This results in the team dusting the app by making minor enhancements to existing features or cleaning up low-priority bugs, but not accomplishing any meaningful work. In this case, low-value shouldn&rsquo;t be confused with low-quality: While the team may be producing high-quality work, it doesn&rsquo;t mean it&rsquo;s making a&nbsp;meaningful impact on the product.</span></p>
+  <h5 class="p4"><span class="s1">Scenario 2:&nbsp;Product Owner acts as Scrum Master</span></h5>
+  <p class="p3"><span class="s1">Product Ownership is a full-time job. This means that it&rsquo;s easy for responsibilities outside of this role to slip. When the Product Owner acts as a Scrum Master we usually see the less tangible pieces of the scrum process slowly start to wane. Retrospectives are often the first casualty, as their outcomes can (incorrectly) seem less relevant to a busy Product Owner. While the Product Owner may not officially cancel a Retrospective, they may view it as most relevant to the development team and, therefore, leave the scheduling to them. These meetings appear unimportant to the organization and eventually die out.</span></p>
+  <p class="p3"><span class="s1">Alternatively, the symptom may not be as blatant as a missed meeting. In some cases, regular meetings will still occur but you&rsquo;ll start to notice that their focus subtly changes. For instance, daily standups still occur but rather than acting as a chance for the team to plan their work for the day, they slowly morph into a status meeting in which each team member reports their progress to the Product Owner. Likewise, sprint-planning meetings will still occur, but rather than the team arriving at estimates and a sprint plan together, they may find themselves bullied into uncomfortable commitments as the&nbsp;result of an overzealous Product Owner.</span></p>
+  <h5 class="p4"><span class="s1">How to fix it</span></h5>
+  <p class="p3"><span class="s1">Both&nbsp;Scrum Master and Product Owner, for the most part, are full-time jobs. When the same person attempts to fill both roles disaster almost always ensues. In the cases where the Scrum Master is filling the Product Owner&rsquo;s responsibilities, the simplest solution can be to free the individual of their Scrum Master responsibilities, allowing them to focus on the Product Owner role entirely. Many Scrum Masters eventually gravitate toward the Product Owner role and, as of late, this has become a very popular career progression for those with a taste for Product Management.</span></p>
+  <p class="p3"><span class="s1">Keep in mind, however, that your team still&nbsp;needs a Scrum Master. This is your opportunity to identify a team member who&rsquo;s up for the challenge, and coach them into their new role. If successful, you&rsquo;ll have a new, dedicated Scrum Master, brought up from within the team, and a new dedicated Product Owner with a background in the scrum process. That&rsquo;s a pretty big win.</span></p>
+  <p class="p3"><span class="s1">In situations where the Product Owner acts as&nbsp;Scrum Master, the solution is to find a new Scrum Master who can dedicate time to the role. Not only does this free the Product Owner from managing the Scrum process, but it also helps create healthy tension between Scrum Masters and Product Owners. Ideally, the Scrum Master and Product Owner act as opposing forces. While the Product Owner represents the interest of the customers, the Scrum Master represents the interests of the team. When a single person tries to fill both roles, this healthy tension is lost and the fulcrum inevitably tips too far in one direction.</span></p>
+  <p class="p3"><span class="s1">This is often seen when the Product Owner attempts both roles, as the fulcrum may tip toward bigger feature sets and a rush to market, which not only sacrifices the team&rsquo;s investment in quality, but can also take a toll on their overall well-being. Freeing the Product Owner to focus entirely on product ownership, while allowing a completely different individual to focus on the scrum process, helps restore balance and better serves the end result.</span></p>
+  <h5 class="p4"><span class="s1">Takeaway</span></h5>
+  <p class="p3"><span class="s1">There are exceptions to every rule, and it is possible for one person to serve both roles successfully. Just keep in mind that this isn&rsquo;t the norm, nor should it be a long-term solution. To give your organization the best chance for success when using scrum, allow two distinct individuals to serve these roles. Even if you&rsquo;re struggling to find those&nbsp;with the right aptitude, you&rsquo;ll be better off with two people who have a passion to grow into their respective roles, rather than one exceptional individual struggling to balance both.</span></p>
+ Thanks ScrumAlliance: Jeremy Jerrell<br>
+  <br>
+  <p>For more information on this subject find a short description of the 3 core scrum roles below. <br>
+    Thanks to F. Fowler.<br>
+    Note the longest is 9 pages and the shortest is 7 pages.</p>
+  <a href="{{ asset('storage/assets/productowner.pdf') }}" >Product Owner</a><br>
+  <a href="{{ asset('storage/assets/scrumteam.pdf') }}" >Scrum Team</a><br>
+  <a href="{{ asset('storage/assets/scrummaster.pdf') }}" >Scrum Master</a><br>
+  <br>
+  <br>
+  <h5>Core Team (<a href="/home/hamandeggs" >the pigs</a>):  Don't Break the Seven Rules of Scrum!</h5>
+  <a href="/home/sevenrulesofscrum" >
+  <p align="left"><img alt="" class="img-fluid" src="{{ asset('storage/images/dontbreak.jpg') }}" ></p>
+  </a><br>
+  <br>
+  <a href="/scrum-dashboards" >Click here for Scrum Values, Principles, Processes, Aspects and especially the ideas at the bottom of the page about Scrum Roles and Governance.</a> <br>
+  <br>
+  <br>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<
+
+{% endif %}
+
+
+{% endblock %}

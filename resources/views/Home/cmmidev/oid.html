@@ -1,0 +1,1102 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?>html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>OID</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+<!DOCTYPE 
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	<table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="10%"><p class="auto-style53"><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="40%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+<!-- #BeginEditable "content" -->
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong>Organizational Innovation 
+					and Deployment (OID)</strong><br />
+					<br />
+					</td>
+				</table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+<td><p>
+This process area is really about <b>break out innovation</b>, that is something <b>more than an incremental improvement</b> of coding standards or requirements section headings etc. These break out innovations would include usage of leading edge technologies such as <i>Business Rules Engines</i> or <i>Object Oriented Analysis techniques</i>.
+These innovations are typically implemented as <b>pilot projects</b> first before they are considered for mainstream projects.
+<br>
+<br>
+In short innovation can come from anywhere but the organization that selectively implements and monitors innovations will be better placed for improving the overall software delivery process.</p>
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Organizational Innovation and Deployment (OID)<br />A Process Management Process Area at Maturity Level 5</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Organizational Innovation and Deployment (OID) is to select and deploy incremental and innovative improvements that measurably improve the organization’s processes and technologies. The improvements support the organization’s quality and process-performance objectives as derived from the organization’s business objectives.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+<br>
+<br>
+The Organizational Innovation and Deployment process area enables the selection and deployment of improvements that can enhance the organization’s ability to meet its quality and process-performance objectives. (See the definition of “quality and process-performance objectives” in the glossary.) The term “improvement,” as used in this process area, refers to all of the ideas (proven and unproven) that would change the organization’s processes and technologies to better meet the organization’s quality and process-performance objectives.
+<br>
+<br>
+Quality and process-performance objectives that this process area might address include the following:
+<br>
+<br>
+<li>Improved product quality (e.g., functionality, performance)
+</li><li>Increased productivity
+</li><li>Decreased cycle time
+</li><li>Greater customer and end-user satisfaction
+</li><li>Shorter development or production time to change functionality or add new features, or adapt to new technologies
+</li><li>Reduce delivery time
+</li><li>Reduce time to adapt to new technologies and business needs
+<br>
+<br>
+Achievement of these objectives depends on the successful establishment of an infrastructure that enables and encourages all people in the organization to propose potential improvements to the organization’s processes and technologies. Achievement of these objectives also depends on being able to effectively evaluate and deploy proposed improvements to the organization’s processes and technologies. All members of the organization can participate in the organization’s process- and technology-improvement activities. Their proposals are systematically gathered and addressed.
+<br>
+<br>
+Pilots are conducted to evaluate significant changes involving untried, high-risk, or innovative improvements before they are broadly deployed.
+<br>
+<br>
+Process and technology improvements that will be deployed across the organization are selected from process- and technology-improvement proposals based on the following criteria:
+<br>
+<br>
+</li><li>A quantitative understanding of the organization’s current quality and process performance
+</li><li>The organization’s quality and process-performance objectives
+</li><li>Estimates of the improvement in quality and process performance resulting from deploying the process and technology improvements
+</li><li>Estimated costs of deploying process and technology improvements, and the resources and funding available for such deployment
+<br>
+<br>
+The expected benefits added by the process and technology improvements are weighed against the cost and impact to the organization. Change and stability must be balanced carefully. Change that is too great or too rapid can overwhelm the organization, destroying its investment in organizational learning represented by organizational process assets. Rigid stability can result in stagnation, allowing the changing business environment to erode the organization’s business position.
+<br>
+<br>
+Improvements are deployed, as appropriate, to new and ongoing projects.
+<br>
+<br>
+In this process area, the term “process and technology improvements” refers to incremental and innovative improvements to processes and also to process or product technologies (including project work environments).
+<br>
+<br>
+The informative material in this process area is written with the assumption that the specific practices are applied to a quantitatively managed process. The specific practices of this process area may be applicable, but with reduced value, if the assumption is not met.
+<br>
+<br>
+The specific practices in this process area complement and extend those found in the Organizational Process Focus process area. The focus of this process area is process improvement that is based on a quantitative knowledge of the organization’s set of standard processes and technologies and their expected quality and performance in predictable situations. In the Organizational Process Focus process area, no assumptions are made about the quantitative basis of improvement.
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about incorporating the deployed process improvements into organizational process assets.
+<br>
+<br>
+Refer to the Organizational Process Focus process area for more information about soliciting, collecting, and handling process improvement proposals and coordinating the deployment of process improvement into the project’s defined processes.
+<br>
+<br>
+Refer to the Organizational Training process area for more information about providing updated training to support deployment of process and technology improvements.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about quality and process-performance objectives and process-performance models. Quality and process-performance objectives are used to analyze and select process- and technology-improvement proposals for deployment. Process-performance models are used to quantify the impact and benefits of innovations.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about establishing objectives for measurement and analysis, specifying the measures and analyses to be performed, obtaining and analyzing measures, and reporting results.
+<br>
+<br>
+Refer to the Integrated Project Management process area for more information about coordinating the deployment of process and technology improvements into the project’s defined process and project work environment.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about formal evaluations related to improvement proposals and innovations.
+<br>
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1 Select Improvements</b>
+<br>
+<br>
+Process and technology improvements, which contribute to meeting quality and process-performance objectives, are selected.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<a name="sp11"></a>
+<b>SP 1.1 Collect and Analyze Improvement Proposals</b>
+<br>
+<br>
+Collect and analyze process- and technology-improvement proposals.
+<br>
+<br>
+Each process- and technology-improvement proposal must be analyzed.
+<br>
+<br>
+Simple process and technology improvements, with well-understood benefits and effects, will not usually undergo detailed evaluations.
+<br>
+<br>
+Examples of simple process and technology improvements include the following:
+<br>
+<br>
+</li><li>Add an item to a peer review checklist.
+</li><li>Combine the technical review and management review for suppliers into a single technical/management review.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Analyzed process- and technology-improvement proposals
+Subpractice 1: Collect process- and technology-improvement proposals.
+<br>
+<br>
+A process- and technology-improvement proposal documents proposed incremental and innovative improvements to specific processes and technologies. Managers and staff in the organization, as well as customers, end users, and suppliers can submit process- and technology-improvement proposals. Process and technology improvements may be implemented at the local level before being proposed for the organization.
+<br>
+<br>
+Examples of sources for process- and technology-improvement proposals include the following:
+<br>
+<br>
+</li><li>Findings and recommendations from process appraisals
+</li><li>The organization’s quality and process-performance objectives
+</li><li>Analysis of data about customer and end-user problems as well as customer and end-user satisfaction
+</li><li>Analysis of data about project performance compared to quality and productivity objectives
+</li><li>Analysis of technical performance measures
+</li><li>Results of process and product benchmarking efforts
+</li><li>Analysis of data on defect causes
+</li><li>Measured effectiveness of process activities
+</li><li>Measured effectiveness of project work environments
+</li><li>Examples of process- and technology-improvement proposals that were successfully adopted elsewhere
+</li><li>Feedback on previously submitted process- and technology-improvement proposals
+</li><li>Spontaneous ideas from managers and staff
+<br>
+<br>
+Refer to the Organizational Process Focus process area for more information about process- and technology-improvement proposals.
+<br>
+<br>
+Subpractice 2: Analyze the costs and benefits of process- and technology-improvement proposals as appropriate.
+Process- and technology-improvement proposals that have a large cost-to-benefit ratio are rejected.
+<br>
+<br>
+Criteria for evaluating costs and benefits include the following:
+<br>
+<br>
+</li><li>Contribution toward meeting the organization’s quality and process-performance objectives
+</li><li>Effect on mitigating identified project and organizational risks
+</li><li>Ability to respond quickly to changes in project requirements, market situations, and the business environment
+</li><li>Effect on related processes and associated assets
+</li><li>Cost of defining and collecting data that supports the measurement and analysis of the process- and technology-improvement proposal
+</li><li>Expected life span of the proposal
+<br>
+<br>
+Process- and technology-improvement proposals that would not improve the organization's processes are rejected.
+<br>
+<br>
+Process-performance models provide insight into the effect of process changes on process capability and performance.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about process-performance models.
+<br>
+<br>
+Subpractice 3: Identify the process- and technology-improvement proposals that are innovative.
+<br>
+<br>
+Innovative improvements are also identified and analyzed in the Identify and Analyze Innovations specific practice.
+<br>
+<br>
+Whereas this specific practice analyzes proposals that have been passively collected, the purpose of the Identify and Analyze Innovations specific practice is to actively search for and locate innovative improvements. The search primarily involves looking outside the organization.
+<br>
+<br>
+Innovative improvements are typically identified by reviewing process- and technology-improvement proposals or by actively investigating and monitoring innovations that are in use in other organizations or are documented in research literature. Innovation may be inspired by internal improvement objectives or by the external business environment.
+<br>
+<br>
+Innovative improvements are typically major changes to the process that represent a break from the old way of doing things (e.g., changing the lifecycle model). Innovative improvements may also include changes in the products that support, enhance, or automate the process (e.g., using off-the-shelf products to support the process).
+<br>
+<br>
+Examples of innovative improvements include the following:
+<br>
+<br>
+</li><li>Advances in computer and related hardware products
+</li><li>New support tools
+</li><li>New techniques, methodologies, processes, or lifecycle models
+</li><li>New interface standards
+</li><li>New reusable components
+</li><li>New management techniques
+</li><li>New quality-improvement techniques
+</li><li>New process development and deployment support tools
+<br>
+<br>
+Subpractice 4: Identify potential barriers and risks to deploying each process- and technology-improvement proposal.
+<br>
+<br>
+Examples of barriers to deploying process and technology improvements include the following:
+<br>
+<br>
+</li><li>Turf guarding and parochial perspectives
+</li><li>Unclear or weak business rationale
+</li><li>Lack of short-term benefits and visible successes
+</li><li>Unclear picture of what is expected from everyone
+</li><li>Too many changes at the same time
+</li><li>Lack of involvement and support of relevant stakeholders
+<br>
+<br>
+Examples of risk factors that affect the deployment of process and technology improvements include the following:
+<br>
+<br>
+</li><li>Compatibility of the improvement with existing processes, values, and skills of potential end users
+</li><li>Complexity of the improvement
+</li><li>Difficulty implementing the improvement
+</li><li>Ability to demonstrate the value of the improvement before widespread deployment
+</li><li>Justification for large, up-front investments in areas such as tools and training
+</li><li>Inability to overcome “technology drag” where the current implementation is used successfully by a large and mature installed base of end users
+<br>
+<br>
+Subpractice 5: Estimate the cost, effort, and schedule required for deploying each process- and technology-improvement proposal.
+<br>
+<br>
+Subpractice 6: Select the process- and technology-improvement proposals to be piloted before broadscale deployment.
+<br>
+<br>
+Since innovations, by definition, usually represent a major change, most innovative improvements will be piloted.
+<br>
+<br>
+Subpractice 7: Document the results of the evaluation of each process- and technology-improvement proposal.
+<br>
+<br>
+Subpractice 8: Monitor the status of each process- and technology-improvement proposal.
+<br>
+<br>
+<a name="sp12"></a> 
+<b>SP 1.2 Identify and Analyze Innovations</b>
+<br>
+<br>
+Identify and analyze innovative improvements that could increase the organization’s quality and process performance.
+<br>
+<br>
+The specific practice, Collect and Analyze Improvement Proposals, analyzes proposals that are passively collected. The purpose of this specific practice is to actively search for, locate, and analyze innovative improvements. This search primarily involves looking outside the organization.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Candidate innovative improvements
+</li><li>Analysis of proposed innovative improvements
+<br>
+<br>
+Subpractice 1: Analyze the organization's set of standard processes to determine areas where innovative improvements would be most helpful.
+<br>
+<br>
+These analyses are performed to determine which subprocesses are critical to achieving the organization’s quality and process-performance objectives and which ones are good candidates to be improved.
+<br>
+<br>
+Subpractice 2: Investigate innovative improvements that may improve the organization's set of standard processes.
+<br>
+<br>
+Investigating innovative improvements involves the following:
+<br>
+<br>
+</li><li>Systematically maintaining awareness of leading relevant technical work and technology trends
+</li><li>Periodically searching for commercially available innovative improvements
+</li><li>Collecting proposals for innovative improvements from the projects and the organization
+</li><li>Systematically reviewing processes and technologies used externally and comparing them to those used within the organization
+</li><li>Identifying areas where innovative improvements have been used successfully, and reviewing data and documentation of experience using these improvements
+</li><li>Identifying improvements that integrate new technology into products and project work environments
+<br>
+<br>
+Subpractice 3: Analyze potential innovative improvements to understand their effects on process elements and predict their influence on the process.
+<br>
+<br>
+Process-performance models can provide a basis for analyzing possible effects of changes to process elements.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about process-performance models.
+<br>
+<br>
+Subpractice 4: Analyze the costs and benefits of potential innovative improvements.
+<br>
+<br>
+Innovative improvements that have a very large cost-to-benefit ratio are rejected.
+<br>
+<br>
+Subpractice 5: Create process- and technology-improvement proposals for those innovative improvements that would result in improving the organization's processes or technologies.
+<br>
+<br>
+Subpractice 6: Select the innovative improvements to be piloted before broadscale deployment.
+<br>
+<br>
+Since innovations, by definition, usually represent a major change, most innovative improvements will be piloted.
+<br>
+<br>
+Subpractice 7: Document the results of the evaluations of innovative improvements.
+<br>
+<br>
+<a name="sp13"></a> 
+<b>SP 1.3 Pilot Improvements</b>
+<br>
+<br>
+Pilot process and technology improvements to select which ones to implement.
+<br>
+<br>
+Pilots are performed to assess new and unproven major changes before they are broadly deployed, as appropriate.
+<br>
+<br>
+The implementation of this specific practice may overlap with the implementation of the Implement the Action Proposals specific practice in the Causal Analysis and Resolution process area (e.g., when causal analysis and resolution is implemented organizationally or across multiple projects).
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Pilot evaluation reports
+</li><li>Documented lessons learned from pilots
+<br>
+<br>
+Subpractice 1: Plan the pilots.
+<br>
+<br>
+When planning pilots, it is critical to define quantitative criteria to be used for evaluating pilot results.
+<br>
+<br>
+Subpractice 2: Review and get relevant stakeholder agreement on the plans for the pilots.
+<br>
+<br>
+Subpractice 3: Consult with and assist the people performing the pilots.
+<br>
+<br>
+Subpractice 4: Perform each pilot in an environment that is characteristic of the environment present in a broadscale deployment.
+<br>
+<br>
+Subpractice 5: Track the pilots against their plans.
+<br>
+<br>
+Subpractice 6: Review and document the results of pilots.
+<br>
+<br> 
+Pilot results are evaluated using the quantitative criteria defined during pilot planning. Reviewing and documenting the results of pilots usually involves the following:
+<br>
+<br>
+</li><li>Deciding whether to terminate the pilot, replan and continue the pilot, or proceed with deploying the process and technology improvement
+</li><li>Updating the disposition of process- and technology-improvement proposals associated with the pilot
+</li><li>Identifying and documenting new process- and technology-improvement proposals as appropriate
+</li><li>Identifying and documenting lessons learned and problems encountered during the pilot
+<br>
+<br>
+<a name="sp14"></a> 
+<b>SP 1.4 Select Improvements for Deployment</b>
+<br>
+<br>
+Select process and technology improvements for deployment across the organization.
+<br>
+<br>
+Selection of process and technology improvements for deployment across the organization is based on quantifiable criteria derived from the organization’s quality and process-performance objectives.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Process and technology improvements selected for deployment
+<br>
+<br>
+Subpractice 1: Prioritize the candidate process and technology improvements for deployment.
+<br>
+<br>
+Priority is based on an evaluation of the estimated cost-to-benefit ratio with regard to the quality and process-performance objectives.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about quality and process-performance objectives.
+<br>
+<br>
+Subpractice 2: Select the process and technology improvements to be deployed.
+<br>
+<br>
+The selection of the process improvements is based on their priorities and the available resources.
+<br>
+<br>
+Subpractice 3: Determine how each process and technology improvement will be deployed.
+<br>
+<br>
+Examples of where the process and technology improvements may be deployed include the following:
+<br>
+<br>
+</li><li>Organizational process assets
+</li><li>Project-specific or common work environments
+</li><li>Organization’s product families
+</li><li>Organization's capabilities
+</li><li>Organization’s projects
+</li><li>Organizational groups
+<br>
+<br>
+Subpractice 4: Document the results of the selection process.
+<br>
+<br>
+The results of the selection process usually include the following:
+<br>
+<br>
+</li><li>The selection criteria for candidate improvements
+</li><li>The disposition of each improvement proposal
+</li><li>The rationale for the disposition of each improvement proposal
+</li><li>The assets to be changed for each selected improvement
+<br>
+<br>
+<a name="sg2"></a>  
+<b>SG 2 Deploy Improvements</b>
+<br>
+<br>
+Measurable improvements to the organization's processes and technologies are continually and systematically deployed.
+<br>
+<br>
+<a name="sp21"></a> 
+<b>SP 2.1 Plan the Deployment</b>
+<br>
+<br>
+Establish and maintain the plans for deploying the selected process and technology improvements.
+<br>
+<br>
+The plans for deploying each process and technology improvement may be included in the organization’s plan for organizational innovation and deployment or they may be documented separately.
+<br>
+<br>
+The implementation of this specific practice complements the Deploy Organizational Process Assets specific practice in the Organizational Process Focus process area, and adds the use of quantitative data to guide the deployment and to determine the value of the improvements with respect to quality and process-performance objectives.
+<br>
+<br>
+Refer to the Organizational Process Focus process area for more information about deploying organizational process assets.
+<br>
+<br>
+This specific practice plans the deployment of individual process and technology improvements. The Plan the Process generic practice addresses comprehensive planning that covers the specific practices in this process area.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Deployment plan for selected process and technology improvements
+<br>
+<br>
+Subpractice 1: Determine how each process and technology improvement must be adjusted for organization-wide deployment.
+<br>
+<br>
+Process and technology improvements proposed within a limited context (e.g., for a single project) might have to be modified to work across the organization.
+<br>
+<br>
+Subpractice 2: Determine the changes necessary to deploy each process and technology improvement.
+<br>
+<br>
+Examples of changes needed to deploy a process and technology improvement include the following:
+</li><li>Process descriptions, standards, and procedures
+</li><li>Work environments
+</li><li>Education and training
+</li><li>Skills
+</li><li>Existing commitments
+</li><li>Existing activities
+</li><li>Continuing support to end users
+</li><li>Organizational culture and characteristics
+<br>
+<br>
+Subpractice 3: Identify strategies to address potential barriers to deploying each process and technology improvement.
+<br>
+<br>
+Subpractice 4: Establish measures and objectives for determining the value of each process and technology improvement with respect to the organization’s quality and process-performance objectives.
+<br>
+<br>
+Examples of measures for determining the value of a process and technology improvement include the following:
+<br>
+<br>
+</li><li>Return on investment
+</li><li>Time to recover the cost of the process or technology improvement
+</li><li>Measured improvement in the project’s or organization’s process performance
+</li><li>Number and types of project and organizational risks mitigated by the process or technology improvement
+</li><li>Average time required to respond to changes in project requirements, market situations, and the business environment
+<br>
+<br> 
+Refer to the Measurement and Analysis process area for more information about establishing objectives for measurement and analysis, specifying the measures and analyses to be performed, obtaining and analyzing measures, and reporting results.
+<br>
+<br>
+Subpractice 5: Document the plan for deploying each process and technology improvement.
+<br>
+<br>
+Subpractice 6: Review and get agreement with relevant stakeholders on the plan for deploying each process and technology improvement.
+<br>
+<br>
+Subpractice 7: Revise the plan for deploying each process and technology improvement as necessary.
+<br>
+<br>
+<a name="sp22"></a> 
+<b>SP 2.2 Manage the Deployment</b>
+<br>
+<br>
+Manage the deployment of the selected process and technology improvements.
+<br>
+<br>
+The implementation of this specific practice may overlap with the implementation of the Implement the Action Proposals specific practice in the Causal Analysis and Resolution process area (e.g., when causal analysis and resolution is implemented organizationally or across multiple projects). The primary difference is that in the Causal Analysis and Resolution process area, planning is done to manage the removal of the root causes of defects or problems from the project’s defined processes. In the Organizational Innovation and Deployment process area, planning is done to manage the deployment of improvements to the organization’s processes and technologies that can be quantified against the organization’s business objectives.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Updated training materials (to reflect deployed process and technology improvements)
+</li><li>Documented results of process- and technology-improvement deployment activities
+</li><li>Revised process- and technology-improvement measures, objectives, priorities, and deployment plans
+<br>
+<br>
+Subpractice 1: Monitor the deployment of the process and technology improvements using the deployment plan.
+<br>
+<br>
+Subpractice 2: Coordinate the deployment of process and technology improvements across the organization.
+<br>
+<br> 
+Coordinating deployment includes the following activities:
+<br>
+<br>
+</li><li>Coordinating the activities of projects, support groups, and organizational groups for each process and technology improvement
+</li><li>Coordinating the activities for deploying related process and technology improvements
+<br>
+<br>
+Subpractice 3: Quickly deploy process and technology improvements in a controlled and disciplined manner, as appropriate.
+<br>
+<br>
+Examples of methods for quickly deploying process and technology improvements include the following:
+<br>
+<br>
+</li><li>Using red-lines, process change notices, or other controlled process documentation as interim process descriptions
+</li><li>Deploying process and technology improvements incrementally, rather than as a single deployment
+</li><li>Providing comprehensive consulting to early adopters of the process and technology improvement in lieu of revised formal training
+<br>
+<br>
+Subpractice 4: Incorporate the process and technology improvements into organizational process assets, as appropriate.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about organizational process assets.
+<br>
+<br>
+Subpractice 5: Coordinate the deployment of the process and technology improvements into the projects' defined processes as appropriate.
+<br>
+<br>
+Refer to the Organizational Process Focus process area for more information about deploying organizational process assets.
+<br>
+<br>
+Subpractice 6: Provide consulting, as appropriate, to support deployment of the process and technology improvements.
+<br>
+<br>
+Subpractice 7: Provide updated training materials to reflect the improvements to the organizational process assets.
+<br>
+<br>
+Refer to the Organizational Training process area for more information about training materials.
+<br>
+<br>
+Subpractice 8: Confirm that the deployment of all process and technology improvements is completed.
+<br>
+<br>
+Subpractice 9: Determine whether the ability of the defined process to meet quality and process-performance objectives is adversely affected by the process and technology improvement, and take corrective action as necessary.
+<br>
+<br>
+Refer to the Quantitative Project Management process area for more information about quantitatively managing the project’s defined process to achieve the project’s established quality and process-performance objectives.
+<br>
+<br>
+Subpractice 10: Document and review the results of process- and technology-improvement deployment.
+<br>
+<br>
+Documenting and reviewing the results includes the following:
+<br>
+<br>
+</li><li>Identifying and documenting lessons learned
+</li><li>Identifying and documenting new process- and technology-improvement proposals
+</li><li>Revising process- and technology-improvement measures, objectives, priorities, and deployment plans
+<br>
+<br>
+<a name="sp23"></a>
+<b>SP 2.3 Measure Improvement Effects</b>
+<br>
+<br>
+Measure the effects of the deployed process and technology improvements.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about establishing objectives for measurement and analysis, specifying the measures and analyses to be performed, obtaining and analyzing measures, and reporting results.
+<br>
+<br>
+The implementation of this specific practice may overlap with the implementation of the Evaluate the Effect of Changes specific practice in the Causal Analysis and Resolution process area (e.g., when causal analysis and resolution is implemented organizationally or across multiple projects).
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Documented measures of the effects resulting from the deployed process and technology improvements
+<br>
+<br>
+Subpractice 1: Measure the actual cost, effort, and schedule for deploying each process and technology improvement.
+<br>
+<br>
+Subpractice 2: Measure the value of each process and technology improvement.
+<br>
+<br>
+Subpractice 3: Measure the progress toward achieving the organization's quality and process-performance objectives.
+<br>
+<br>
+Subpractice 4: Analyze the progress toward achieving the organization's quality and process-performance objectives and take corrective action as needed.
+<br>
+<br>
+Refer to the Organizational Process Performance process area for more information about process-performance analyses.
+<br>
+<br>
+Subpractice 5: Store the measures in the organization’s measurement repository.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the organizational innovation and deployment process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the organizational innovation and deployment process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for identifying and deploying process and technology improvements that contribute to meeting quality and process-performance objectives.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the organizational innovation and deployment process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the organizational innovation and deployment process differs from the deployment plans described in a specific practice in this process area. The plan called for in this generic practice would address the comprehensive planning for all of the specific practices in this process area, from collecting and analyzing improvement proposals all the way through to the measurement of improvement effects. In contrast, the deployment plans called for in the specific practice would address the planning needed for the deployment of individual process and technology improvements.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the organizational innovation and deployment process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of resources provided include the following tools:
+<br>
+<br>
+</li><li>Simulation packages
+</li><li>Prototyping tools
+</li><li>Statistical packages
+</li><li>Dynamic systems modeling
+<br>
+<br>
+</li><li>Subscriptions to online technology databases and publications
+</li><li>Process modeling tools
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the organizational innovation and deployment process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the organizational innovation and deployment process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Planning, designing, and conducting pilots
+</li><li>Cost/benefit analysis
+</li><li>Technology transition
+</li><li>Change management
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the organizational innovation and deployment process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Documented lessons learned from pilots
+</li><li>Revised process- and technology-improvement measures, objectives, priorities, and deployment plans
+</li><li>Updated training material
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the organizational innovation and deployment process as planned. Identify and involve the relevant stakeholders of the measurement and analysis process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Reviewing process- and technology-improvement proposals that may have major impacts on process performance or on customer and end-user satisfaction
+</li><li>Providing feedback to the organization on the status and results of the process- and technology-improvement deployment activities
+The feedback typically involves:
+<br>
+<br>
+</li><li>Informing the people who submit process- and technology-improvement proposals about the disposition of their proposals
+</li><li>Regularly informing relevant stakeholders about the plans and status for selecting and deploying process and technology improvements
+</li><li>Preparing and distributing a summary of process- and technology-improvement selection and deployment activities
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the organizational innovation and deployment process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Change in quality
+</li><li>Change in process performance
+</li><li>Schedule for activities to deploy a selected improvement
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the organizational innovation and deployment process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Selecting improvements
+</li><li>Deploying improvements
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Deployment plans
+</li><li>Revised process- and technology-improvement measures, objectives, priorities, and deployment plans
+</li><li>Updated training material
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the organizational innovation and deployment process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+This generic goal's appearance here reflects its location in the continuous representation.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined organizational innovation and deployment process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the organizational innovation and deployment process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Lessons learned captured from relevant stakeholders that identify barriers to deployment from previous technology insertions
+</li><li>Documented measures of the costs and benefits resulting from deploying innovations
+</li><li>Report of a comparison of similar development processes to identify the potential for improving efficiency
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the organizational innovation and deployment process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the organizational innovation and deployment process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the organizational innovation and deployment process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the organizational innovation and deployment process.
+<br>
+ 					
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+================================================================================
+ADD THESE ROUTES TO routes/web.php
+================================================================================
+
+// EXISTING FILE ROUTES (already working - don't touch these)
+Route::get('/guitar-scores', [GuitarScoreController::class, 'index'])->name('guitar.index');
+Route::post('/guitar-scores/upload', [GuitarScoreController::class, 'upload'])->name('guitar.upload');
+Route::get('/guitar-scores/{id}/view', [GuitarScoreController::class, 'view'])->name('guitar.view');
+Route::get('/guitar-scores/{id}/stream', [GuitarScoreController::class, 'stream'])->name('guitar.stream');
+Route::get('/guitar-scores/{id}/download', [GuitarScoreController::class, 'download'])->name('guitar.download');
+Route::get('/guitar-scores/{id}/edit', [GuitarScoreController::class, 'edit'])->name('guitar.edit');
+Route::put('/guitar-scores/{id}', [GuitarScoreController::class, 'update'])->name('guitar.update');
+Route::delete('/guitar-scores/{id}', [GuitarScoreController::class, 'destroy'])->name('guitar.destroy');
+
+// NEW FOLDER ROUTES (add these)
+Route::prefix('guitar-folders')->name('guitar.folders.')->group(function () {
+    Route::get('/', [GuitarFolderController::class, 'index'])->name('index');
+    Route::post('/', [GuitarFolderController::class, 'store'])->name('store');
+    Route::get('/{id}', [GuitarFolderController::class, 'show'])->name('show');
+    Route::get('/{id}/edit', [GuitarFolderController::class, 'edit'])->name('edit');
+    Route::put('/{id}', [GuitarFolderController::class, 'update'])->name('update');
+    Route::delete('/{id}', [GuitarFolderController::class, 'destroy'])->name('destroy');
+});
+
+================================================================================
+FOLDER STRUCTURE
+================================================================================
+
+1. Controller:
+   app/Http/Controllers/GuitarFolderController.php
+
+2. Views (create folder first):
+   resources/views/protectedguitar/folders/index.blade.php
+   resources/views/protectedguitar/folders/show.blade.php
+   resources/views/protectedguitar/folders/edit.blade.php
+
+3. Keep existing:
+   resources/views/protectedguitar/simple.blade.php
+   resources/views/protectedguitar/edit.blade.php
+   resources/views/protectedguitar/player.blade.php
+   resources/views/protectedguitar/layout.blade.php
+
+================================================================================
+NAVIGATION BUTTONS
+================================================================================
+
+The folder views have these buttons in the top nav:
+- "Files" button → goes to guitar.index (your existing file list)
+- "Folders" button → goes to guitar.folders.index (new folder list)
+
+You can add similar buttons to your existing file views to switch between them.
+
+================================================================================
+URL STRUCTURE
+================================================================================
+
+Existing (Files):
+https://pmway.hopto.org/guitar-scores           ← File list
+https://pmway.hopto.org/guitar-scores/123/edit  ← Edit file
+
+New (Folders):
+https://pmway.hopto.org/guitar-folders          ← Folder list
+https://pmway.hopto.org/guitar-folders/456      ← View files in folder
+https://pmway.hopto.org/guitar-folders/456/edit ← Rename folder
+
+================================================================================

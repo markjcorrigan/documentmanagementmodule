@@ -1,0 +1,1139 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>OPF</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	<table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="10%"><p class="auto-style53"><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="40%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+</div>
+<!-- #BeginEditable "content" -->
+
+
+	<div id="contentWrapper">
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong>Organizational Process Focus 
+					(OPF)</strong><br />
+					<br />
+					</td></tr>
+				</table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+<td><p>Although CMMi can be thought of as a <i>Software Process Improvement SPI framework</i>, process improvement itself does not happen in a disorganized fashion.
+	The Organizational Process Focus (OPF) Process Area is the process area that brings focus (or standardizes and co-ordinates) the software improvement process.
+<br>
+<br>
+This process area relies on the <i>Organizational Process Definition</i> as a reference point for improvements.
+<br>
+<br>
+Just as the Process and Product Quality Assurance, PPQA, process area can be seen as Software Quality Assurance within CMMi the Organizational Process Focus (OPF) Process Area can be seen as Software Process Improvement.
+</p>
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Organizational Process Focus 
+					(OPF)<br />A Process Management Process Area at Maturity Level 3</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Organizational Process Focus (OPF) is to plan, implement, and deploy organizational process improvements based on a thorough understanding of the current strengths and weaknesses of the organization’s processes and process assets.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+<br>
+<br>
+The organization's processes include all the processes used by the organization and its projects. Candidate improvements to the organization's processes and process assets are obtained from various sources, including measurement of the processes, lessons learned in implementing the processes, results of process appraisals, results of product evaluation activities, results of benchmarking against other organizations’ processes, and recommendations from other improvement initiatives in the organization.
+<br>
+<br>
+Process improvement occurs within the context of the organization’s needs and is used to address the organization’s objectives. The organization encourages participation in process improvement activities by those who will perform the process. The responsibility for facilitating and managing the organization’s process improvement activities, including coordinating the participation of others, is typically assigned to a process group. The organization provides the long-term commitment and resources required to sponsor this group and to ensure the effective and timely deployment of the improvements.
+<br>
+<br>
+Careful planning is required to ensure that process improvement efforts across the organization are adequately managed and implemented. The organization’s planning for process improvement results in a process improvement plan.
+<br>
+<br>
+The organization’s process improvement plan will address appraisal planning, process action planning, pilot planning, and deployment planning. Appraisal plans describe the appraisal timeline and schedule, the scope of the appraisal, the resources required to perform the appraisal, the reference model against which the appraisal will be performed, and the logistics for the appraisal.
+<br>
+<br>
+Process action plans usually result from appraisals and document how specific improvements targeting the weaknesses uncovered by an appraisal will be implemented. In cases in which it is determined that the improvement described in the process action plan should be tested on a small group before deploying it across the organization, a pilot plan is generated.
+<br>
+<br>
+Finally, when the improvement is to be deployed, a deployment plan is used. This plan describes when and how the improvement will be deployed across the organization.
+<br>
+<br>
+Organizational process assets are used to describe, implement, and improve the organization's processes (see the definition of “organizational process assets” in the glossary).
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about the organizational process assets.
+<br>
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1 Determine Process Improvement Opportunities</b>
+<br>
+<br>
+Strengths, weaknesses, and improvement opportunities for the organization's processes are identified periodically and as needed.
+<br>
+<br>
+Strengths, weaknesses, and improvement opportunities may be determined relative to a process standard or model such as a CMMI model or International Organization for Standardization (ISO) standard. The process improvements should be selected specifically to address the organization’s needs.
+<br>
+<br>
+<a name="sp11"></a>
+<b>SP 1.1 Establish Organizational Process Needs</b>
+<br>
+<br>
+Establish and maintain the description of the process needs and objectives for the organization.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+Integrated processes that emphasize parallel rather than serial development are a cornerstone of IPPD implementation. The processes for developing the product and for developing product-related lifecycle processes, such as the manufacturing process and the support process processes, are integrated and conducted concurrently. Such integrated processes need to accommodate the information provided by stakeholders representing all phases of the product lifecycle from both business and technical functions. Processes for effective teamwork will also be needed.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+Examples of processes for effective teamwork include the following:
+<br>
+<br>
+<li>Communications
+</li><li>Collaborative decision making
+</li><li>Issue resolution
+</li><li>Team building
+<br>
+<br>
+The organization’s processes operate in a business context that must be understood. The organization’s business objectives, needs, and constraints determine the needs and objectives for the organization’s processes. Typically, the issues related to finance, technology, quality, human resources, and marketing are important process considerations.
+<br>
+<br>
+The organization’s process needs and objectives cover aspects that include the following:
+<br>
+<br>
+</li><li>Characteristics of the processes
+</li><li>Process-performance objectives, such as time-to-market and delivered quality
+</li><li>Process effectiveness
+<br>
+<br>
+<a name="sp11wp"></a>Typical Work Products
+<br>
+<br>
+</li><li>Organization’s process needs and objectives
+<br>
+<br>
+Subpractice 1: Identify the policies, standards, and business objectives that are applicable to the organization's processes.
+<br>
+<br>
+Subpractice 2: Examine relevant process standards and models for best practices.
+<br>
+<br>
+Subpractice 3: Determine the organization’s process-performance objectives.
+<br>
+<br>
+Process-performance objectives may be expressed in quantitative or qualitative terms.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about establishing measurement objectives.
+<br>
+<br>
+Examples of process-performance objectives include the following:
+<br>
+<br>
+</li><li>Cycle time
+</li><li>Defect removal rates
+</li><li>Productivity
+<br>
+<br>
+Subpractice 4: Define the essential characteristics of the organization’s processes.
+<br>
+<br>
+The essential characteristics of the organization’s processes are determined based on the following:
+<br>
+<br>
+</li><li>Processes currently being used in the organization
+</li><li>Standards imposed by the organization
+</li><li>Standards commonly imposed by customers of the organization
+<br>
+<br>
+Examples of process characteristics include the following:
+<br>
+<br>
+</li><li>Level of detail used to describe the processes
+</li><li>Process notation used
+</li><li>Granularity of the processes
+<br>
+<br>
+Subpractice 5: Document the organization’s process needs and objectives.
+<br>
+<br>
+Subpractice 6: Revise the organization’s process needs and objectives as needed.
+<br>
+<br>
+<a name="sp12"></a> 
+<b>SP 1.2 Appraise the Organization’s Processes</b>
+<br>
+<br>
+Appraise the organization's processes periodically and as needed to maintain an understanding of their strengths and weaknesses.
+<br>
+<br>
+Process appraisals may be performed for the following reasons:
+<br>
+<br>
+</li><li>To identify processes that should be improved
+</li><li>To confirm progress and make the benefits of process improvement visible
+</li><li>To satisfy the needs of a customer-supplier relationship
+</li><li>To motivate and facilitate buy-in
+<br>
+<br>
+The buy-in gained during a process appraisal can be eroded significantly if it is not followed by an appraisal-based action plan.
+<br>
+<br>
+<a name="sp12wp"></a>Typical Work Products
+<br>
+<br>
+</li><li>Plans for the organization's process appraisals
+</li><li>Appraisal findings that address strengths and weaknesses of the organization's processes
+</li><li>Improvement recommendations for the organization's processes
+<br>
+<br>
+Subpractice 1: Obtain sponsorship of the process appraisal from senior management.
+<br>
+<br>
+Senior management sponsorship includes the commitment to have the organization's managers and staff participate in the process appraisal and to provide the resources and funding to analyze and communicate the findings of the appraisal.
+<br>
+<br>
+Subpractice 2: Define the scope of the process appraisal.
+<br>
+<br>
+Process appraisals may be performed on the entire organization or may be performed on a smaller part of an organization such as a single project or business area.
+<br>
+<br>
+The scope of the process appraisal addresses the following:
+<br>
+<br>
+</li><li>Definition of the organization (e.g., sites or business areas) that will be covered by the appraisal
+</li><li>Identification of the project and support functions that will represent the organization in the appraisal
+</li><li>Processes that will be appraised
+<br>
+<br>
+Subpractice 3: Determine the method and criteria for process appraisal.
+<br>
+<br>
+Process appraisals can occur in many forms. Process appraisals should address the needs and objectives of the organization, which may change over time. For example, the appraisal may be based on a process model, such as a CMMI model, or on a national or international standard, such as ISO 9001 [ISO 2000]. The appraisals may also be based on a benchmark comparison with other organizations. The appraisal method may assume a variety of characteristics in terms of time and effort expended, makeup of the appraisal team, and the method and depth of investigation.
+<br>
+<br>
+Subpractice 4: Plan, schedule, and prepare for the process appraisal.
+<br>
+<br>
+Subpractice 5: Conduct the process appraisal.
+<br>
+<br>
+Subpractice 6: Document and deliver the appraisal’s activities and findings.
+<br>
+<br>
+<a name="sp13"></a> 
+<b>SP 1.3 Identify the Organization's Process Improvements</b>
+<br>
+<br>
+Identify improvements to the organization's processes and process assets.
+<br>
+<br>
+					<a name="sp13wp"></a>Typical Work Products
+<br>
+<br>
+</li><li>Analysis of candidate process improvements
+</li><li>Identification of improvements for the organization's processes
+<br>
+<br>
+Subpractice 1: Determine candidate process improvements.
+<br>
+<br>
+Candidate process improvements are typically determined by doing the following:
+<br>
+<br>
+</li><li>Measure the processes and analyze the measurement results
+</li><li>Review the processes for effectiveness and suitability
+</li><li>Review the lessons learned from tailoring the organization’s set of standard processes
+</li><li>Review the lessons learned from implementing the processes
+</li><li>Review process improvement proposals submitted by the organization’s managers, staff, and other relevant stakeholders
+</li><li>Solicit inputs on process improvements from senior management and leaders in the organization
+</li><li>Examine the results of process appraisals and other process-related reviews
+</li><li>Review results of other organizational improvement initiatives
+<br>
+<br>
+Subpractice 2: Prioritize the candidate process improvements.
+<br>
+<br>
+Criteria for prioritization are as follows:
+<br>
+<br>
+</li><li>Consider the estimated cost and effort to implement the process improvements
+</li><li>Appraise the expected improvement against the organization’s improvement objectives and priorities
+</li><li>Determine the potential barriers to the process improvements and develop strategies for overcoming these barriers
+<br>
+<br>
+Examples of techniques to help determine and prioritize the possible improvements to be implemented include the following:
+<br>
+<br>
+</li><li>A gap analysis that compares current conditions in the organization with optimal conditions
+</li><li>Force-field analysis of potential improvements to identify potential barriers and strategies for overcoming those barriers
+</li><li>Cause-and-effect analyses to provide information on the potential effects of different improvements that can then be compared
+<br>
+<br>
+Subpractice 3: Identify and document the process improvements that will be implemented.
+<br>
+<br>
+Subpractice 4: Revise the list of planned process improvements to keep it current.
+<br>
+<br>
+<a name="sg2"></a>  
+<b>SG 2 Plan and Implement Process Improvements</b>
+<br>
+<br>
+Process actions that address improvements to the organization’s processes and process assets are planned and implemented.
+<br>
+<br>
+Successful implementation of improvements requires participation in process action planning and implementation by process owners, those performing the process, and support organizations.
+<br>
+<br>
+<a name="sp21"></a> 
+<b>SP 2.1 Establish Process Action Plans</b>
+<br>
+<br>
+Establish and maintain process action plans to address improvements to the organization's processes and process assets.
+<br>
+<br>
+Establishing and maintaining process action plans typically involves the following roles:
+<br>
+<br>
+</li><li>Management steering committees to set strategies and oversee process improvement activities
+</li><li>Process group staff to facilitate and manage process improvement activities
+</li><li>Process action teams to define and implement process actions
+</li><li>Process owners to manage deployment
+</li><li>Practitioners to perform the process
+<br>
+<br>
+This involvement helps to obtain buy-in on the process improvements and increases the likelihood of effective deployment.
+<br>
+<br>
+Process action plans are detailed implementation plans. These plans differ from the organization’s process improvement plan in that they are plans targeting specific improvements that have been defined to address weaknesses usually uncovered by appraisals.
+<br>
+<br>
+					<a name="sp21wp"></a>Typical Work Products
+<br>
+<br>
+</li><li>Organization's approved process action plans
+<br>
+<br>
+Subpractice 1: Identify strategies, approaches, and actions to address the identified process improvements.
+<br>
+<br>
+New, unproven, and major changes are piloted before they are incorporated into normal use.
+<br>
+<br>
+Subpractice 2: Establish process action teams to implement the actions.
+<br>
+<br>
+The teams and people performing the process improvement actions are called “process action teams.” Process action teams typically include process owners and those who perform the process.
+<br>
+<br>
+Subpractice 3: Document process action plans.
+<br>
+<br>
+Process action plans typically cover the following:
+<br>
+<br>
+</li><li>Process improvement infrastructure
+</li><li>Process improvement objectives
+</li><li>Process improvements that will be addressed
+</li><li>Procedures for planning and tracking process actions
+</li><li>Strategies for piloting and implementing the process actions
+</li><li>Responsibility and authority for implementing the process actions
+</li><li>Resources, schedules, and assignments for implementing the process actions
+</li><li>Methods for determining the effectiveness of the process actions
+</li><li>Risks associated with process action plans
+<br>
+<br>
+Subpractice 4: Review and negotiate process action plans with relevant stakeholders.
+<br>
+<br>
+Subpractice 5: Review process action plans as necessary.
+<br>
+<br>
+<a name="sp22"></a> 
+<b>SP 2.2 Implement Process Action Plans</b>
+<br>
+<br>
+Implement process action plans.
+<br>
+<br>
+					<a name="sp22wp"></a>Typical Work Products
+<br>
+<br>
+</li><li>Commitments among the various process action teams
+</li><li>Status and results of implementing process action plans
+</li><li>Plans for pilots
+<br>
+<br>
+Subpractice 1: Make process action plans readily available to relevant stakeholders.
+<br>
+<br>
+Subpractice 2: Negotiate and document commitments among the process action teams and revise their process action plans as necessary.
+<br>
+<br>
+Subpractice 3: Track progress and commitments against process action plans.
+<br>
+<br>
+Subpractice 4: Conduct joint reviews with the process action teams and relevant stakeholders to monitor the progress and results of the process actions.
+<br>
+<br>
+Subpractice 5: Plan pilots needed to test selected process improvements.
+<br>
+<br>
+Subpractice 6: Review the activities and work products of process action teams.
+<br>
+<br>
+Subpractice 7: Identify, document, and track to closure issues in implementing process action plans.
+<br>
+<br>
+Subpractice 8: Ensure that the results of implementing process action plans satisfy the organization’s process improvement objectives.
+<br>
+<br>
+<a name="sg3"></a>  
+<b>SG 3 Deploy Organizational Process Assets and Incorporate Lessons Learned</b>
+<br>
+<br>
+The organizational process assets are deployed across the organization and process-related experiences are incorporated into the organizational process assets.
+<br>
+<br>
+The specific practices within this specific goal describe ongoing activities. New opportunities to benefit from the organizational process assets and changes to them may arise throughout the life of each project. Deployment of the standard processes and other organizational process assets must be continually supported within the organization, particularly for new projects at startup.
+<br>
+<br>
+<a name="sp31"></a> 
+<b>SP 3.1 Deploy Organizational Process Assets</b>
+<br>
+<br>
+Deploy organizational process assets across the organization.
+<br>
+<br>
+Deploying organizational process assets or changes to organizational process assets should be performed in an orderly manner. Some organizational process assets or changes to organizational process assets may not be appropriate for use in some parts of the organization (because of customer requirements or the current lifecycle phase being implemented, for example). It is therefore important that those that are or will be executing the process, as well as other organization functions (such as training and quality assurance), be involved in the deployment as necessary.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about how the deployment of organizational process assets is supported and enabled by the organization’s process asset library.
+<br>
+<br>
+					<a name="sp31wp"></a>Typical Work Products
+<br>
+<br>
+</li><li>Plans for deploying organizational process assets and changes to them across the organization
+</li><li>Training materials for deploying organizational process assets and changes to them
+</li><li>Documentation of changes to organizational process assets
+</li><li>Support materials for deploying organizational process assets and changes to them
+<br>
+<br>
+Subpractice 1: Deploy organizational process assets across the organization.
+<br>
+<br>
+Typical activities performed as a part of this deployment include the following:
+<br>
+<br>
+</li><li>Identifying the organizational process assets that should be adopted by those who perform the process
+</li><li>Determining how the organizational process assets are made available (e.g., via Web site)
+</li><li>Identifying how changes to the organizational process assets are communicated
+</li><li>Identifying the resources (e.g., methods and tools) needed to support the use of the organizational process assets
+</li><li>Planning the deployment
+</li><li>Assisting those who use the organizational process assets
+</li><li>Ensuring that training is available for those who use the organizational process assets
+<br>
+<br>
+Refer to the Organizational Training process area for more information about coordination of training.
+<br>
+<br>
+Subpractice 2: Document the changes to the organizational process assets.
+<br>
+<br>
+Documenting changes to the organizational process assets serves two main purposes:
+<br>
+<br>
+</li><li>To enable communication of the changes
+</li><li>To understand the relationship of changes in the organizational process assets to changes in process performance and results
+<br>
+<br>
+Subpractice 3: Deploy the changes that were made to the organizational process assets across the organization.
+<br>
+<br>
+Typical activities performed as a part of deploying changes include the following:
+<br>
+<br>
+</li><li>Determining which changes are appropriate for those who perform the process
+</li><li>Planning the deployment
+</li><li>Arranging for the associated support needed to successfully transition the changes
+<br>
+<br>
+Subpractice 4: Provide guidance and consultation on the use of the organizational process assets.
+<br>
+<br>
+<a name="sp32"></a> 
+<b>SP 3.2 Deploy Standard Processes</b>
+<br>
+<br>
+Deploy the organization’s set of standard processes to projects at their startup and deploy changes to them as appropriate throughout the life of each project.
+<br>
+<br>
+It is important that new projects use proven and effective processes to perform critical early activities (e.g., project planning, receiving requirements, and obtaining resources).
+<br>
+<br>
+Projects should also periodically update their defined processes to incorporate the latest changes made to the organization’s set of standard processes when it will benefit them. This periodic updating helps to ensure that all project activities derive the full benefit of what other projects have learned.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about the organization’s set of standard processes and tailoring guidelines.
+<br>
+<br>
+					<a name="sp32wp"></a>Typical Work Products
+<br>
+<br>
+</li><li>Organization's list of projects and status of process deployment on each project (i.e., existing and planned projects)
+</li><li>Guidelines for deploying the organization’s set of standard processes on new projects
+</li><li>Records of tailoring the organization’s set of standard processes and implementing them on identified projects
+<br>
+<br>
+Subpractice 1: Identify projects within the organization that are starting up.
+<br>
+<br>
+Subpractice 2: Identify active projects that would benefit from implementing the organization’s current set of standard processes.
+<br>
+<br>
+Subpractice 3: Establish plans to implement the organization’s current set of standard processes on the identified projects.
+<br>
+<br>
+Subpractice 4: Assist projects in tailoring the organization’s set of standard processes to meet project needs.
+Refer to the Integrated Project Management process area for more information about tailoring the organization’s set of standard processes to meet the unique needs and objectives of the project.
+<br>
+<br>
+Subpractice 5: Maintain records of tailoring and implementing processes on the identified projects.
+<br>
+<br>
+Subpractice 6: Ensure that the defined processes resulting from process tailoring are incorporated into the plans for process-compliance audits.
+Process-compliance audits address objective evaluations of project activities against the project’s defined processes.
+<br>
+<br>
+Subpractice 7: As the organization’s set of standard processes are updated, identify which projects should implement the changes.
+<br>
+<br>
+<a name="sp33"></a> 
+<b>SP 3.3 Monitor Implementation</b>
+<br>
+<br>
+Monitor the implementation of the organization’s set of standard processes and use of process assets on all projects.
+<br>
+<br>
+By monitoring implementation, the organization ensures that the organization’s set of standard processes and other process assets are appropriately deployed to all projects. Monitoring implementation also helps the organization develop an understanding of the organizational process assets being used and where they are used within the organization. Monitoring also helps to establish a broader context for interpreting and using process and product measures, lessons learned, and improvement information obtained from projects.
+<br>
+<br>
+					<a name="sp33wp"></a>Typical Work Products
+<br>
+<br>
+</li><li>Results of monitoring process implementation on projects
+</li><li>Status and results of process-compliance evaluations
+</li><li>Results of reviewing selected process artifacts created as part of process tailoring and implementation
+<br>
+<br>
+Subpractice 1: Monitor projects for their use of the organization’s process assets and changes to them.
+<br>
+<br>
+Subpractice 2: Review selected process artifacts created during the life of each project.
+<br>
+<br>
+Reviewing selected process artifacts created during the life of a project ensures that all projects are making appropriate use of the organization’s set of standard processes.
+<br>
+<br>
+Subpractice 3: Review the results of process-compliance evaluations to determine how well the organization’s set of standard processes has been deployed.
+<br>
+<br>
+Refer to the Process and Product Quality Assurance process area for more information about objectively evaluating processes against applicable process descriptions, standards, and procedures.
+<br>
+<br>
+Subpractice 4: Identify, document, and track to closure issues related to implementing the organization’s set of standard processes.
+<br>
+<br>
+<a name="sp34"></a> 
+<b>SP 3.4 Incorporate Process-Related Experiences into the Organizational Process Assets</b>
+<br>
+<br>
+Incorporate process-related work products, measures, and improvement information derived from planning and performing the process into the organizational process assets.
+<br>
+<br>
+					<a name="sp34wp"></a>Typical Work Products
+<br>
+<br>
+</li><li>Process improvement proposals
+</li><li>Process lessons learned
+</li><li>Measurements on the organizational process assets
+</li><li>Improvement recommendations for the organizational process assets
+</li><li>Records of the organization's process improvement activities
+</li><li>Information on the organizational process assets and improvements to them
+<br>
+<br>
+Subpractice 1: Conduct periodic reviews of the effectiveness and suitability of the organization’s set of standard processes and related organizational process assets relative to the organization’s business objectives.
+<br>
+<br>
+Subpractice 2: Obtain feedback about the use of the organizational process assets.
+<br>
+<br>
+Subpractice 3: Derive lessons learned from defining, piloting, implementing, and deploying the organizational process assets.
+<br>
+<br>
+Subpractice 4: Make available lessons learned to the people in the organization as appropriate.
+<br>
+<br>
+Actions may have to be taken to ensure that lessons learned are used appropriately.
+<br>
+<br>
+Examples of inappropriate use of lessons learned include the following:
+<br>
+<br>
+</li><li>Evaluating the performance of people
+</li><li>Judging process performance or results
+Examples of ways to prevent inappropriate use of lessons learned include the following:
+<br>
+<br>
+</li><li>Controlling access to the lessons learned
+</li><li>Educating people about the appropriate use of lessons learned
+<br>
+<br>
+Subpractice 5: Analyze the organization's common set of measures.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about analyzing measures.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about establishing an organizational measurement repository, including common measures.
+<br>
+<br>
+Subpractice 6: Appraise the processes, methods, and tools in use in the organization and develop recommendations for improving the organizational process assets.
+<br>
+<br> 
+This appraisal typically includes the following:
+<br>
+<br>
+</li><li>Determining which of the processes, methods, and tools are of potential use to other parts of the organization
+</li><li>Appraising the quality and effectiveness of the organizational process assets
+</li><li>Identifying candidate improvements to the organizational process assets
+</li><li>Determining compliance with the organization’s set of standard processes and tailoring guidelines
+<br>
+<br>
+Subpractice 7: Make the best of the organization's processes, methods, and tools available to the people in the organization as appropriate.
+<br>
+<br>
+Subpractice 8: Manage process improvement proposals.
+<br>
+<br>
+Process improvement proposals can address both process and technology improvements.
+<br>
+<br>
+The activities for managing process improvement proposals typically include the following:
+<br>
+<br>
+</li><li>Soliciting process improvement proposals
+</li><li>Collecting process improvement proposals
+</li><li>Reviewing process improvement proposals
+</li><li>Selecting the process improvement proposals that will be implemented
+</li><li>Tracking the implementation of process improvement proposals
+<br>
+<br>
+Process improvement proposals are documented as process change requests or problem reports, as appropriate.
+<br>
+<br>
+Some process improvement proposals may be incorporated into the organization’s process action plans.
+<br>
+<br>
+Subpractice 9: Establish and maintain records of the organization's process improvement activities.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the organizational process focus process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the organizational process focus process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for determining process improvement opportunities for the processes being used and for planning, implementing, and deploying process improvements across the organization.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the organizational process focus process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the organizational process focus process, which is often called “the process improvement plan,” differs from the process action plans described in specific practices in this process area. The plan called for in this generic practice addresses the comprehensive planning for all of the specific practices in this process area, from the establishment of organizational process needs all the way through to the incorporation of process-related experiences into the organizational process assets.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the organizational process focus process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of resources provided include the following tools:
+<br>
+<br>
+</li><li>Database management systems
+</li><li>Process improvement tools
+</li><li>Web page builders and browsers
+</li><li>Groupware
+</li><li>Quality-improvement tools (e.g., cause-and-effect diagrams, affinity diagrams, and Pareto charts)
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the organizational process focus process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Two groups are typically established and assigned responsibility for process improvement: (1) a management steering committee for process improvement to provide senior management sponsorship, and (2) a process group to facilitate and manage the process improvement activities.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the organizational process focus process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>CMMI and other process improvement reference models
+</li><li>Planning and managing process improvement
+</li><li>Tools, methods, and analysis techniques
+</li><li>Process modeling
+</li><li>Facilitation techniques
+</li><li>Change management
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the organizational process focus process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Process improvement proposals
+</li><li>Organization’s approved process action plans
+</li><li>Training materials for deploying organizational process assets
+</li><li>Guidelines for deploying the organization’s set of standard processes on new projects
+</li><li>Plans for the organization’s process appraisals
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the organizational process focus process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Coordinating and collaborating on process improvement activities with process owners, those who are or will be performing the process, and support organizations (e.g., training staff and quality assurance representatives)
+</li><li>Establishing the organizational process needs and objectives
+</li><li>Appraising the organization’s processes
+</li><li>Implementing process action plans
+</li><li>Coordinating and collaborating on the execution of pilots to test selected improvements
+</li><li>Deploying organizational process assets and changes to organizational process assets
+</li><li>Communicating the plans, status, activities, and results related to planning, implementing, and deploying process improvements
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the organizational process focus process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Number of process improvement proposals submitted, accepted, or implemented
+</li><li>CMMI maturity level or capability level
+</li><li>Schedule for deployment of an organizational process asset
+</li><li>Percentage of projects using the current organization’s set of standard processes (or tailored version of same)
+</li><li>Issue trends associated with implementing the organization’s set of standard processes (i.e., number of issues identified and number closed)
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the organizational process focus process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Determining process improvement opportunities
+</li><li>Planning and coordinating process improvement activities
+</li><li>Deploying the organization’s set of standard processes on projects at their startup
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Process improvement plans
+</li><li>Process action plans
+</li><li>Process deployment plans
+</li><li>Plans for the organization’s process appraisals
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the organizational process focus process with higher level management and resolve issues.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+These reviews are typically in the form of a briefing presented to the management steering committee by the process group and the process action teams.
+<br>
+<br>
+Examples of presentation topics include the following:
+<br>
+<br>
+</li><li>Status of improvements being developed by process action teams
+</li><li>Results of pilots
+</li><li>Results of deployments
+</li><li>Schedule status for achieving significant milestones (e.g., readiness for an appraisal, or progress toward achieving a targeted organizational maturity level or capability level profile)
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+This generic goal's appearance here reflects its location in the continuous representation.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined organizational process focus process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the organizational process focus process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Criteria used for prioritizing candidate process improvements
+</li><li>Appraisal findings that address strengths and weaknesses of the organization's processes
+</li><li>Status of improvement activities against the schedule
+</li><li>Records of tailoring the organization’s set of standard processes and implementing them on identified projects
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the organizational process focus process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the organizational process focus process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the organizational process focus process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the organizational process focus process.
+</li>					<br />
+					
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

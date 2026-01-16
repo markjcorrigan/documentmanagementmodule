@@ -1,0 +1,770 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SO Incident Management</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=9') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Incident Management</i> aims to manage the lifecycle of all Incidents (unplanned interruptions or reductions in quality of IT services). The primary objective of this ITIL process is to return the IT service to users as quickly as possible.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: Incident Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#ITIL_4_Incident_Management"><span class="tocnumber">1</span> <span class="toctext">ITIL 4 Incident Management</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Process_Description"><span class="tocnumber">2</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Sub-Processes"><span class="tocnumber">3</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Definitions"><span class="tocnumber">4</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Templates_.7C_KPIs"><span class="tocnumber">5</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-6"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">6</span> <span class="toctext"><span>Roles | Responsibilities</span></span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="ITIL_4_Incident_Management">ITIL 4 Incident Management</span></h2>
+  <p>The Incident Management process described here follows the specifications of ITIL V3, where <a class="mw-selflink selflink">Incident Management</a> is a process in the service lifecycle stage of Service Operation. </p>
+  <p>ITIL V4 is no longer prescriptive about processes but shifts the focus on 34 'practices', giving organizations more freedom to define tailor-made processes. </p>
+  <blockquote>
+    <p>ITIL 4 therefore refers to Incident Management as a practice, describing Incident Management key activities, inputs, outputs and roles. Based on this guidance, organizations are advised to design a process for managing Incidents in line with their specific requirements.</p>
+  </blockquote>
+  <p>Since the processes defined in ITIL V3 have not been invalidated with the introduction of ITIL V4, organizations can still use the ITIL V3 process of Incident Management as a template. </p>
+  <p>What is more, in our YaSM Service Management Wiki we describe a <a class="external" href="https://yasm.com/wiki/en/index.php/Service_Management_Processes" title="Service management processes">leaner set of 19 service management processes</a> that are more in tune with ITIL 4 and its focus on simplicity and "just enough process". The YaSM service management model includes a <a class="external" href="https://yasm.com/wiki/en/index.php/LP4.6:_Resolve_incidents_and_service_requests" title="YaSM incident management process">process for managing incidents</a> that is a good starting point for organizations that wish to adopt ITIL 4. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>ITIL distinguishes between <a href="#Incident">Incidents</a> (service interruptions) and Service Requests  (customer or user requests that do not represent a service disruption, such as a password reset). Service interruptions are handled through Incident Management, and Service Requests through the ITIL V3 process of Request Fulfilment. </p>
+  <p>The Incident Management process can be triggered in various ways: A user, customer or supplier may report an issue, technical staff may notice a (potential or actual) failure, or an Incident may be raised automatically by an event monitoring system. </p>
+  <p>All <a href="#Incident-Categorization">Incidents should be logged as Incident Records</a>, where their status can be tracked, and a complete historical record maintained. Initial categorization and prioritization of Incidents is a critical step for determining how the Incident will be handled and how much time is available for its resolution (see&#160;checklist Incident Prioritization Guideline). </p>
+  <p>If possible, Incidents should be matched to other Incidents, Problems and Known Errors. </p>
+  <p>Organizations should use automated resolution tools and provide support portals with self-help information so users can resolve simple Incidents themselves. For other Incidents, <a href="#ITIL-Incident-Management-1st-Level">1st Level Support will try to diagnose and resolve the issue</a>, typically using information from a knowledge base or pre-defined Incident Models. </p>
+  <p>If 1st Level Support is unable to resolve an Incident, it must be escalated to an appropriate specialist support group in 2nd Level Support ("functional escalation"). If required, <a href="#ITIL-Incident-Management-2nd-Level">2nd Level Support</a> may in turn involve external parties such as suppliers and vendors (in ITIL referred to as "3rd Level Support"). </p>
+  <p>ITIL defines a special <a href="#Handling-of-Major-Incidents">process for dealing with Major Incidents</a> (emergencies that affect business-critical services and require immediate attention). Major Incidents typically require a temporary Major Incident Team to identify and implement the resolution. </p>
+  <p>Once Incidents are resolved, 1st Level Support will formally close them. This includes verifying that the users are satisfied and ensuring that the Incident Record is fully documented (see&#160;<a href="#Incident-Closure">Incident Closure and Evaluation</a>). Any new Problems, Workarounds or Known Errors identified during Incident resolution should be forwarded to the Problem Management process. </p>
+  <p>Incident Management interfaces with a number of other ITIL processes: </p>
+  <ul>
+    <li>Event Management may raise an Incident Record if monitoring systems identify a condition that requires a response.</li>
+    <li>Problem Management provides information to the Incident Management process, such as Workarounds and Known Errors. Problem Management uses data collected during Incident resolution for Problem identification.</li>
+    <li>Change Management may be invoked from Incident Management if a Change is needed to resolve an Incident.</li>
+    <li>Configuration Management provides data used to identify Incidents and link them to particular Configuration Items.</li>
+  </ul>
+  <p>The overview diagram of '<a href="/images/itilsotwo.jpg"  title="Incident-management-itil.jpg">ITIL Incident Management</a>' shows the key information flows and interfaces of the process. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Incident Management sub-processes:">These are the <strong class="selflink">ITIL Incident Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Incident_Management_Support" itemprop="itemListElement">Incident Management Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: ITIL Incident Management Support aims to provide and maintain the tools, processes, skills and rules for an effective and efficient handling of Incidents. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Categorization" itemprop="itemListElement">Incident Logging and Categorization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To record and prioritize the Incident with appropriate diligence, in order to facilitate a swift and effective resolution. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Incident-Management-1st-Level" itemprop="itemListElement">Immediate Incident Resolution by 1st Level Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To solve an Incident (service interruption) within the agreed time schedule. The aim is the fast recovery of the IT service, where necessary with the aid of a Workaround. As soon as it becomes clear that 1st Level Support is not able to resolve the Incident itself or when target times for 1st level resolution are exceeded, the Incident is transferred to a suitable group within 2nd Level Support. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Incident-Management-2nd-Level" itemprop="itemListElement">Incident Resolution by 2nd Level Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To solve an Incident (service interruption) within the agreed time schedule. The aim is the fast recovery of the service, where necessary by means of a Workaround. If required, specialist support groups or third-party suppliers (3rd Level Support) are involved. If the correction of the root cause is not possible, a Problem Record is created and the error-correction transferred to Problem Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Handling-of-Major-Incidents" itemprop="itemListElement">Handling of Major Incidents</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To resolve a Major Incident. Major Incidents cause serious interruptions of business activities and must be resolved with greater urgency. The aim is the fast recovery of the service, where necessary by means of a Workaround. If required, specialist support groups or third-party suppliers (3rd Level Support) are involved. If the correction of the root cause is not possible, a Problem Record is created and the error-correction transferred to Problem Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Monitoring" itemprop="itemListElement">Incident Monitoring and Escalation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To continuously monitor the processing status of outstanding Incidents, so that counter-measures may be introduced as soon as possible if service levels are likely to be breached. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Closure" itemprop="itemListElement">Incident Closure and Evaluation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To submit the Incident Record to a final quality control before it is closed. The aim is to make sure that the Incident is actually resolved and that all information required to describe the Incident's life-cycle is supplied in sufficient detail. In addition to this, findings from the resolution of the Incident are to be recorded for future use. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Pro-Active-User-Information" itemprop="itemListElement">Pro-Active User Information</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To inform users of service failures as soon as these are known to the Service Desk, so that users are in a position to adjust themselves to interruptions. Proactive user information also aims to reduce the number of inquiries by users. This process is also responsible for distributing other information to users, e.g. security alerts. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Mgmt-Reporting" itemprop="itemListElement">Incident Management Reporting</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: ITIL Incident Management Reporting aims to supply Incident-related information to the other Service Management processes, and to ensure that that improvement potentials are derived from past Incidents. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Incident Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Incident" itemprop="itemListElement">Incident</span></b> </p>
+    <ul>
+      <li itemprop="description">An Incident is defined as an unplanned interruption or reduction in quality of an IT service (a Service Interruption). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Escalation-Rules" itemprop="itemListElement">Incident Escalation Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of rules defining a hierarchy for escalating Incidents, and triggers which lead to escalations. Triggers are usually based on Incident severity and resolution times.
+        NB: Checklist Incident Priority </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Management-Report" itemprop="itemListElement">Incident Management Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A report supplying Incident-related information to the other Service Management processes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Model" itemprop="itemListElement">Incident Model</span></b> </p>
+    <ul>
+      <li itemprop="description">An Incident Model contains the pre-defined steps that should be taken for dealing with a particular type of Incident. This is a way to ensure that routinely occurring Incidents are handled efficiently and effectively. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Prioritization-Guideline" itemprop="itemListElement">Incident Prioritization Guideline</span></b> </p>
+    <ul>
+      <li itemprop="description">The Incident Prioritization Guideline describes the rules for assigning priorities to Incidents, including the definition of what constitutes a Major Incident. Since Incident Management escalation rules are usually based on priorities, assigning the correct priority to an Incident is essential for triggering appropriate escalations.
+        NB: Checklist Incident Prioritization Guideline </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Record" itemprop="itemListElement">Incident Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of data with all details of an Incident, documenting the history of the Incident from registration to closure. An Incident is defined as an unplanned interruption or reduction in quality of an IT service. Every event that could potentially impair an IT service in the future is also an Incident (e.g. the failure of one hard-drive of a set of mirrored drives).
+        NB: ITIL Checklist Incident Record </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Status-Info" itemprop="itemListElement">Incident Status Information</span></b> </p>
+    <ul>
+      <li itemprop="description">A message containing the present status of an Incident sent to a user who earlier reported a service interruption. Status information is typically provided to users at various points during an Incident's lifecycle. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Major-Incident" itemprop="itemListElement">Major Incident</span></b> </p>
+    <ul>
+      <li itemprop="description">Major Incidents cause serious interruptions of business activities and must be solved with greater urgency.
+        NB: Checklist Incident Priority: Major Incidents. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Major-Incident-Review" itemprop="itemListElement">Major Incident Review</span></b> </p>
+    <ul>
+      <li itemprop="description">A Major Incident Review takes place after a Major Incident has occurred. The review documents the Incident's underlying causes (if known) and the complete resolution history, and identifies opportunities for improving the handling of future Major Incidents. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service-Failure" itemprop="itemListElement">Notification of Service Failure</span></b> </p>
+    <ul>
+      <li itemprop="description">The reporting of a service failure to the Service Desk, for example by a user via telephone or e-mail, or by a system monitoring tool. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Pro-active-User-Info" itemprop="itemListElement">Pro-Active User Information</span></b> </p>
+    <ul>
+      <li itemprop="description">A notification to users of existing or imminent service failures even if the users are not yet aware of the interruptions, so that users are in a position to prepare themselves for a period of service unavailability. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Status-Inquiry" itemprop="itemListElement">Status Inquiry</span></b> </p>
+    <ul>
+      <li itemprop="description">An inquiry regarding the present status of an Incident or Service Request, usually from a user who earlier reported an Incident or submitted a request. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Support-Request" itemprop="itemListElement">Support Request</span></b> </p>
+    <ul>
+      <li itemprop="description">A request to support the resolution of an Incident or Problem, usually issued from the Incident or Problem Management processes when further assistance is needed from technical experts. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User-Escalation" itemprop="itemListElement">User Escalation</span></b> </p>
+    <ul>
+      <li itemprop="description">Escalation regarding the processing of an Incident or Service Request, initiated by a user experiencing delays or a failure to restore their services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User-FAQ" itemprop="itemListElement">User FAQs</span></b> </p>
+    <ul>
+      <li itemprop="description">Self-help information for users supplied by the Service Desk, usually as part of the Support Pages on the intranet. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Operation#ITIL_KPIs_Incident_Management" title="ITIL KPIs Incident Management, Service Desk">Key Performance Indicators (KPIs) Incident Management</a> </li>
+    <li><a href="/index.php/ITIL-Checklists#Incident_Management_.2F_Service_Desk" title="ITIL Incident Management templates">Incident Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Incident_Record" title="Incident Record - How to record incidents">Incident Record template</a> </li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Incident_Priority" title="Incident Priority - How to prioritize incidents">Checklist Incident Priority</a>, and </li>
+        <li><a href="/index.php/Checklist_Initial_Analysis_of_an_Incident" title="Initial Analysis of an Incident">Checklist Initial Analysis of an Incident</a> </li>
+        <li><a href="/index.php/Checklist_Incident_Escalation" title="Incident Escalation">Checklist Incident Escalation</a> </li>
+        <li><a href="/index.php/Checklist_Closure_of_an_Incident" title="Closure of an Incident">Checklist Closure of an Incident</a> </li>
+        <li><a href="/index.php/Checklist_Incident_Report" title="Incident Report">Incident Report template</a> </li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities"><span id="roles-responsibilities-matrix">Roles | Responsibilities</span></span></h2>
+  <p><b><span id="Incident-Manager">Incident Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Incident Manager is responsible for the effective implementation of the Incident Management process and carries out the corresponding reporting. He represents the first stage of escalation for Incidents, should these not be resolvable within the agreed Service Levels.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="1st-Level">1st Level Support</span></b> </p>
+  <ul>
+    <li>The responsibility of 1st Level Support is to register and classify received Incidents and to undertake an immediate effort in order to restore a failed IT service as quickly as possible. If no ad-hoc solution can be achieved, 1st Level Support will transfer the Incident to expert technical support groups (2nd Level Support). 1st Level Support also keeps users informed about their Incidents' status at agreed intervals.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="2nd-Level">2nd Level Support</span></b> </p>
+  <ul>
+    <li>2nd Level Support takes over Incidents which cannot be solved immediately with the means of 1st Level Support. If necessary, it will request external support, e.g. from software or hardware manufacturers. The aim is to restore a failed IT service as quickly as possible. If no solution can be found, the 2nd Level Support passes on the Incident to Problem Management.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="3rd-Level">3rd Level Support</span></b> </p>
+  <ul>
+    <li>3rd Level Support is typically located at hardware or software manufacturers (third-party suppliers). Its services are requested by 2nd Level Support if required for solving an Incident. The aim is to restore a failed IT Service as quickly as possible.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="Major-Incident-Team">Major Incident Team</span></b> </p>
+  <ul>
+    <li>A dynamically established team of IT managers and technical experts, usually under the leadership of the Incident Manager, formulated to concentrate on the resolution of a Major Incident.</li>
+  </ul>
+  <p>&#160;</p>
+  <table class="wikitable" style="background: white;">
+    <caption style="background:#013b5e; color:#ffffff; font-size: 120%">
+    <b><span id="RACI-Matrix-Incident-Management">Responsibility Matrix: ITIL Incident Management</span></b>
+    </caption>
+    <tbody>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#eeeeee; font-size: 90%">Incident Manager </th>
+        <th style="background:#eeeeee; font-size: 90%">1st Level Support </th>
+        <th style="background:#eeeeee; font-size: 90%">2nd Level Support </th>
+        <th style="background:#eeeeee; font-size: 90%">Major Incident Team </th>
+        <th style="background:#eeeeee; font-size: 90%">Applications Analyst</th>
+        <th style="background:#eeeeee; font-size: 90%">Technical Analyst</th>
+        <th style="background:#eeeeee; font-size: 90%">IT Operator</th>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Management Support </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Logging and Categorization </td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Immediate Incident Resolution by 1st Level Support </td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Resolution by 2nd Level Support </td>
+        <td>A </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Handling of Major Incidents </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Monitoring and Escalation </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Closure and Evaluation </td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Pro-Active User Information </td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Management Reporting </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Incident Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Incident Management.</span> </p>
+  <p><span id="Support">[3] In cooperation, as required. 2nd Level Support Groups often include Applications Analysts and/ or Technical Analysts.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SO Incident Management</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=9') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Incident Management</i> aims to manage the lifecycle of all Incidents (unplanned interruptions or reductions in quality of IT services). The primary objective of this ITIL process is to return the IT service to users as quickly as possible.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: Incident Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#ITIL_4_Incident_Management"><span class="tocnumber">1</span> <span class="toctext">ITIL 4 Incident Management</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Process_Description"><span class="tocnumber">2</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Sub-Processes"><span class="tocnumber">3</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Definitions"><span class="tocnumber">4</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Templates_.7C_KPIs"><span class="tocnumber">5</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-6"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">6</span> <span class="toctext"><span>Roles | Responsibilities</span></span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="ITIL_4_Incident_Management">ITIL 4 Incident Management</span></h2>
+  <p>The Incident Management process described here follows the specifications of ITIL V3, where <a class="mw-selflink selflink">Incident Management</a> is a process in the service lifecycle stage of Service Operation. </p>
+  <p>ITIL V4 is no longer prescriptive about processes but shifts the focus on 34 'practices', giving organizations more freedom to define tailor-made processes. </p>
+  <blockquote>
+    <p>ITIL 4 therefore refers to Incident Management as a practice, describing Incident Management key activities, inputs, outputs and roles. Based on this guidance, organizations are advised to design a process for managing Incidents in line with their specific requirements.</p>
+  </blockquote>
+  <p>Since the processes defined in ITIL V3 have not been invalidated with the introduction of ITIL V4, organizations can still use the ITIL V3 process of Incident Management as a template. </p>
+  <p>What is more, in our YaSM Service Management Wiki we describe a <a class="external" href="https://yasm.com/wiki/en/index.php/Service_Management_Processes" title="Service management processes">leaner set of 19 service management processes</a> that are more in tune with ITIL 4 and its focus on simplicity and "just enough process". The YaSM service management model includes a <a class="external" href="https://yasm.com/wiki/en/index.php/LP4.6:_Resolve_incidents_and_service_requests" title="YaSM incident management process">process for managing incidents</a> that is a good starting point for organizations that wish to adopt ITIL 4. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>ITIL distinguishes between <a href="#Incident">Incidents</a> (service interruptions) and Service Requests  (customer or user requests that do not represent a service disruption, such as a password reset). Service interruptions are handled through Incident Management, and Service Requests through the ITIL V3 process of Request Fulfilment. </p>
+  <p>The Incident Management process can be triggered in various ways: A user, customer or supplier may report an issue, technical staff may notice a (potential or actual) failure, or an Incident may be raised automatically by an event monitoring system. </p>
+  <p>All <a href="#Incident-Categorization">Incidents should be logged as Incident Records</a>, where their status can be tracked, and a complete historical record maintained. Initial categorization and prioritization of Incidents is a critical step for determining how the Incident will be handled and how much time is available for its resolution (see&#160;checklist Incident Prioritization Guideline). </p>
+  <p>If possible, Incidents should be matched to other Incidents, Problems and Known Errors. </p>
+  <p>Organizations should use automated resolution tools and provide support portals with self-help information so users can resolve simple Incidents themselves. For other Incidents, <a href="#ITIL-Incident-Management-1st-Level">1st Level Support will try to diagnose and resolve the issue</a>, typically using information from a knowledge base or pre-defined Incident Models. </p>
+  <p>If 1st Level Support is unable to resolve an Incident, it must be escalated to an appropriate specialist support group in 2nd Level Support ("functional escalation"). If required, <a href="#ITIL-Incident-Management-2nd-Level">2nd Level Support</a> may in turn involve external parties such as suppliers and vendors (in ITIL referred to as "3rd Level Support"). </p>
+  <p>ITIL defines a special <a href="#Handling-of-Major-Incidents">process for dealing with Major Incidents</a> (emergencies that affect business-critical services and require immediate attention). Major Incidents typically require a temporary Major Incident Team to identify and implement the resolution. </p>
+  <p>Once Incidents are resolved, 1st Level Support will formally close them. This includes verifying that the users are satisfied and ensuring that the Incident Record is fully documented (see&#160;<a href="#Incident-Closure">Incident Closure and Evaluation</a>). Any new Problems, Workarounds or Known Errors identified during Incident resolution should be forwarded to the Problem Management process. </p>
+  <p>Incident Management interfaces with a number of other ITIL processes: </p>
+  <ul>
+    <li>Event Management may raise an Incident Record if monitoring systems identify a condition that requires a response.</li>
+    <li>Problem Management provides information to the Incident Management process, such as Workarounds and Known Errors. Problem Management uses data collected during Incident resolution for Problem identification.</li>
+    <li>Change Management may be invoked from Incident Management if a Change is needed to resolve an Incident.</li>
+    <li>Configuration Management provides data used to identify Incidents and link them to particular Configuration Items.</li>
+  </ul>
+  <p>The overview diagram of '<a href="/images/itilsotwo.jpg"  title="Incident-management-itil.jpg">ITIL Incident Management</a>' shows the key information flows and interfaces of the process. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Incident Management sub-processes:">These are the <strong class="selflink">ITIL Incident Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Incident_Management_Support" itemprop="itemListElement">Incident Management Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: ITIL Incident Management Support aims to provide and maintain the tools, processes, skills and rules for an effective and efficient handling of Incidents. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Categorization" itemprop="itemListElement">Incident Logging and Categorization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To record and prioritize the Incident with appropriate diligence, in order to facilitate a swift and effective resolution. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Incident-Management-1st-Level" itemprop="itemListElement">Immediate Incident Resolution by 1st Level Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To solve an Incident (service interruption) within the agreed time schedule. The aim is the fast recovery of the IT service, where necessary with the aid of a Workaround. As soon as it becomes clear that 1st Level Support is not able to resolve the Incident itself or when target times for 1st level resolution are exceeded, the Incident is transferred to a suitable group within 2nd Level Support. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Incident-Management-2nd-Level" itemprop="itemListElement">Incident Resolution by 2nd Level Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To solve an Incident (service interruption) within the agreed time schedule. The aim is the fast recovery of the service, where necessary by means of a Workaround. If required, specialist support groups or third-party suppliers (3rd Level Support) are involved. If the correction of the root cause is not possible, a Problem Record is created and the error-correction transferred to Problem Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Handling-of-Major-Incidents" itemprop="itemListElement">Handling of Major Incidents</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To resolve a Major Incident. Major Incidents cause serious interruptions of business activities and must be resolved with greater urgency. The aim is the fast recovery of the service, where necessary by means of a Workaround. If required, specialist support groups or third-party suppliers (3rd Level Support) are involved. If the correction of the root cause is not possible, a Problem Record is created and the error-correction transferred to Problem Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Monitoring" itemprop="itemListElement">Incident Monitoring and Escalation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To continuously monitor the processing status of outstanding Incidents, so that counter-measures may be introduced as soon as possible if service levels are likely to be breached. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Closure" itemprop="itemListElement">Incident Closure and Evaluation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To submit the Incident Record to a final quality control before it is closed. The aim is to make sure that the Incident is actually resolved and that all information required to describe the Incident's life-cycle is supplied in sufficient detail. In addition to this, findings from the resolution of the Incident are to be recorded for future use. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Pro-Active-User-Information" itemprop="itemListElement">Pro-Active User Information</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To inform users of service failures as soon as these are known to the Service Desk, so that users are in a position to adjust themselves to interruptions. Proactive user information also aims to reduce the number of inquiries by users. This process is also responsible for distributing other information to users, e.g. security alerts. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Mgmt-Reporting" itemprop="itemListElement">Incident Management Reporting</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: ITIL Incident Management Reporting aims to supply Incident-related information to the other Service Management processes, and to ensure that that improvement potentials are derived from past Incidents. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Incident Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Incident" itemprop="itemListElement">Incident</span></b> </p>
+    <ul>
+      <li itemprop="description">An Incident is defined as an unplanned interruption or reduction in quality of an IT service (a Service Interruption). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Escalation-Rules" itemprop="itemListElement">Incident Escalation Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of rules defining a hierarchy for escalating Incidents, and triggers which lead to escalations. Triggers are usually based on Incident severity and resolution times.
+        NB: Checklist Incident Priority </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Management-Report" itemprop="itemListElement">Incident Management Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A report supplying Incident-related information to the other Service Management processes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Model" itemprop="itemListElement">Incident Model</span></b> </p>
+    <ul>
+      <li itemprop="description">An Incident Model contains the pre-defined steps that should be taken for dealing with a particular type of Incident. This is a way to ensure that routinely occurring Incidents are handled efficiently and effectively. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Prioritization-Guideline" itemprop="itemListElement">Incident Prioritization Guideline</span></b> </p>
+    <ul>
+      <li itemprop="description">The Incident Prioritization Guideline describes the rules for assigning priorities to Incidents, including the definition of what constitutes a Major Incident. Since Incident Management escalation rules are usually based on priorities, assigning the correct priority to an Incident is essential for triggering appropriate escalations.
+        NB: Checklist Incident Prioritization Guideline </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Record" itemprop="itemListElement">Incident Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A set of data with all details of an Incident, documenting the history of the Incident from registration to closure. An Incident is defined as an unplanned interruption or reduction in quality of an IT service. Every event that could potentially impair an IT service in the future is also an Incident (e.g. the failure of one hard-drive of a set of mirrored drives).
+        NB: ITIL Checklist Incident Record </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Incident-Status-Info" itemprop="itemListElement">Incident Status Information</span></b> </p>
+    <ul>
+      <li itemprop="description">A message containing the present status of an Incident sent to a user who earlier reported a service interruption. Status information is typically provided to users at various points during an Incident's lifecycle. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Major-Incident" itemprop="itemListElement">Major Incident</span></b> </p>
+    <ul>
+      <li itemprop="description">Major Incidents cause serious interruptions of business activities and must be solved with greater urgency.
+        NB: Checklist Incident Priority: Major Incidents. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Major-Incident-Review" itemprop="itemListElement">Major Incident Review</span></b> </p>
+    <ul>
+      <li itemprop="description">A Major Incident Review takes place after a Major Incident has occurred. The review documents the Incident's underlying causes (if known) and the complete resolution history, and identifies opportunities for improving the handling of future Major Incidents. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service-Failure" itemprop="itemListElement">Notification of Service Failure</span></b> </p>
+    <ul>
+      <li itemprop="description">The reporting of a service failure to the Service Desk, for example by a user via telephone or e-mail, or by a system monitoring tool. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Pro-active-User-Info" itemprop="itemListElement">Pro-Active User Information</span></b> </p>
+    <ul>
+      <li itemprop="description">A notification to users of existing or imminent service failures even if the users are not yet aware of the interruptions, so that users are in a position to prepare themselves for a period of service unavailability. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Status-Inquiry" itemprop="itemListElement">Status Inquiry</span></b> </p>
+    <ul>
+      <li itemprop="description">An inquiry regarding the present status of an Incident or Service Request, usually from a user who earlier reported an Incident or submitted a request. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Support-Request" itemprop="itemListElement">Support Request</span></b> </p>
+    <ul>
+      <li itemprop="description">A request to support the resolution of an Incident or Problem, usually issued from the Incident or Problem Management processes when further assistance is needed from technical experts. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User-Escalation" itemprop="itemListElement">User Escalation</span></b> </p>
+    <ul>
+      <li itemprop="description">Escalation regarding the processing of an Incident or Service Request, initiated by a user experiencing delays or a failure to restore their services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="User-FAQ" itemprop="itemListElement">User FAQs</span></b> </p>
+    <ul>
+      <li itemprop="description">Self-help information for users supplied by the Service Desk, usually as part of the Support Pages on the intranet. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Operation#ITIL_KPIs_Incident_Management" title="ITIL KPIs Incident Management, Service Desk">Key Performance Indicators (KPIs) Incident Management</a> </li>
+    <li><a href="/index.php/ITIL-Checklists#Incident_Management_.2F_Service_Desk" title="ITIL Incident Management templates">Incident Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Incident_Record" title="Incident Record - How to record incidents">Incident Record template</a> </li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Incident_Priority" title="Incident Priority - How to prioritize incidents">Checklist Incident Priority</a>, and </li>
+        <li><a href="/index.php/Checklist_Initial_Analysis_of_an_Incident" title="Initial Analysis of an Incident">Checklist Initial Analysis of an Incident</a> </li>
+        <li><a href="/index.php/Checklist_Incident_Escalation" title="Incident Escalation">Checklist Incident Escalation</a> </li>
+        <li><a href="/index.php/Checklist_Closure_of_an_Incident" title="Closure of an Incident">Checklist Closure of an Incident</a> </li>
+        <li><a href="/index.php/Checklist_Incident_Report" title="Incident Report">Incident Report template</a> </li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities"><span id="roles-responsibilities-matrix">Roles | Responsibilities</span></span></h2>
+  <p><b><span id="Incident-Manager">Incident Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Incident Manager is responsible for the effective implementation of the Incident Management process and carries out the corresponding reporting. He represents the first stage of escalation for Incidents, should these not be resolvable within the agreed Service Levels.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="1st-Level">1st Level Support</span></b> </p>
+  <ul>
+    <li>The responsibility of 1st Level Support is to register and classify received Incidents and to undertake an immediate effort in order to restore a failed IT service as quickly as possible. If no ad-hoc solution can be achieved, 1st Level Support will transfer the Incident to expert technical support groups (2nd Level Support). 1st Level Support also keeps users informed about their Incidents' status at agreed intervals.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="2nd-Level">2nd Level Support</span></b> </p>
+  <ul>
+    <li>2nd Level Support takes over Incidents which cannot be solved immediately with the means of 1st Level Support. If necessary, it will request external support, e.g. from software or hardware manufacturers. The aim is to restore a failed IT service as quickly as possible. If no solution can be found, the 2nd Level Support passes on the Incident to Problem Management.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="3rd-Level">3rd Level Support</span></b> </p>
+  <ul>
+    <li>3rd Level Support is typically located at hardware or software manufacturers (third-party suppliers). Its services are requested by 2nd Level Support if required for solving an Incident. The aim is to restore a failed IT Service as quickly as possible.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="Major-Incident-Team">Major Incident Team</span></b> </p>
+  <ul>
+    <li>A dynamically established team of IT managers and technical experts, usually under the leadership of the Incident Manager, formulated to concentrate on the resolution of a Major Incident.</li>
+  </ul>
+  <p>&#160;</p>
+  <table class="wikitable" style="background: white;">
+    <caption style="background:#013b5e; color:#ffffff; font-size: 120%">
+    <b><span id="RACI-Matrix-Incident-Management">Responsibility Matrix: ITIL Incident Management</span></b>
+    </caption>
+    <tbody>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#eeeeee; font-size: 90%">Incident Manager </th>
+        <th style="background:#eeeeee; font-size: 90%">1st Level Support </th>
+        <th style="background:#eeeeee; font-size: 90%">2nd Level Support </th>
+        <th style="background:#eeeeee; font-size: 90%">Major Incident Team </th>
+        <th style="background:#eeeeee; font-size: 90%">Applications Analyst</th>
+        <th style="background:#eeeeee; font-size: 90%">Technical Analyst</th>
+        <th style="background:#eeeeee; font-size: 90%">IT Operator</th>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Management Support </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Logging and Categorization </td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Immediate Incident Resolution by 1st Level Support </td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Resolution by 2nd Level Support </td>
+        <td>A </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Handling of Major Incidents </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Monitoring and Escalation </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Closure and Evaluation </td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Pro-Active User Information </td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Incident Management Reporting </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Incident Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Incident Management.</span> </p>
+  <p><span id="Support">[3] In cooperation, as required. 2nd Level Support Groups often include Applications Analysts and/ or Technical Analysts.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

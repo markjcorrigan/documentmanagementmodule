@@ -1,0 +1,78 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Scrum Values{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<div class="container">
+<h3>The Essence of Scrum in 6 Minutes</h3>
+<hr>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/scrumsixmins.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/scrumsixmins.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/scrumsixmins.jpg') }}" alt="">SCRUM IN 6 MINUTES! </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}
+<div class="container">
+<h3>The Essence of Scrum in 6 Minutes</h3>
+<hr>
+
+<!--
+<div align="center">
+<br>
+
+
+<div class="d-flex ">
+  <div class="p-2 flex-fill"></div>
+  <div class="p-1 flex-fill"></div>
+  <div class="p-5 flex-fill">
+<video id="video1"  data-able-player="false" preload="false" data-speed-icons="true" width="480" height="360" poster="/images/scrumsixmins.jpg"  playsinline="true">
+<source type="video/mp4" src="/ablelvids/scrumstudy/scrumsixmins.mp4">
+</video>
+</div>
+  <div class="p-4 flex-fill"></div>
+</div>
+<br>
+</div>-->
+
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline loop></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li data-poster="/images/scrumsixmins.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/scrumstudy/scrumsixmins.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/scrumsixmins.jpg') }}" alt="">SCRUM IN 6 MINUTES! </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+
+{% endblock %}

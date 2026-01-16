@@ -1,0 +1,1547 @@
+
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>PP</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	<table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="10%"><p class="auto-style53"><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="40%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+<!-- #BeginEditable "content" -->
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" width="100%">
+				<tr>
+					<td><span class="auto-style2"><strong>Project Planning (PP)</strong><br />
+					<br />
+					</span></td>
+				</tr>
+				
+				</table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>
+Project Planning (PP) lays out the goals of the project and the course the given project is expected to take in order to satisfy its goals. 
+This planning activity includes scope and selection of the appropriate SDLC to fulfill the stated goals.
+<br>
+<br>
+Estimating also forms a vital part of the planning process in order that appropriate resources (including Human) can be scheduled at the appropriate time in the projects life cycle.
+<br>
+<br>
+This process is a prerequisite for Project Monitoring and Control (PMC) which checks the projects progress against its overall plan.</p>
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Project Planning (PP)<br />A Project Management 
+					Process Area at Maturity Level 2</b> <br />
+					<br />
+					<center><b>Purpose</b> </center><br />
+					The purpose of Project Planning (PP) is to establish and 
+					maintain plans that define project activities. <br />
+					<br />
+					<center><b>Introductory Notes </b></center><br />
+					The Project Planning process area involves the following:
+					<br />
+					<br />
+					<li>Developing the project plan </li>
+					<li>Interacting with stakeholders appropriately </li>
+					<li>Getting commitment to the plan </li>
+					<li>Maintaining the plan <br />
+					<br />
+					Planning begins with requirements that define the product 
+					and project. <br />
+					<br />
+					Planning includes estimating the attributes of the work 
+					products and tasks, determining the resources needed, 
+					negotiating commitments, producing a schedule, and 
+					identifying and analyzing project risks. Iterating through 
+					these activities may be necessary to establish the project 
+					plan. The project plan provides the basis for performing and 
+					controlling the project’s activities that address the 
+					commitments with the project’s customer. <br />
+					<br />
+					The project plan will usually need to be revised as the 
+					project progresses to address changes in requirements and 
+					commitments, inaccurate estimates, corrective actions, and 
+					process changes. Specific practices describing both planning 
+					and replanning are contained in this process area. <br />
+					<br />
+					The term “project plan” is used throughout the generic and 
+					specific practices in this process area to refer to the 
+					overall plan for controlling the project. <br />
+					<br />
+					Related Process Areas <br />
+					<br />
+					Refer to the Requirements Development process area for more 
+					information about developing requirements that define the 
+					product and product components. Product and product 
+					component requirements and changes to those requirements 
+					serve as a basis for planning and replanning. <br />
+					<br />
+					Refer to the Requirements Management process area for more 
+					information about managing requirements needed for planning 
+					and replanning. <br />
+					<br />
+					Refer to the Risk Management process area for more 
+					information about identifying and managing risks. <br />
+					<br />
+					Refer to the Technical Solution process area for more 
+					information about transforming requirements into product and 
+					product component solutions. <br />
+					<br />
+					<a name="sgp"></a><b>Specific Practices by Goal</b> <br />
+					<br />
+					<a name="sg1"></a><b>SG 1 Establish Estimates</b> <br />
+					<br />
+					Estimates of project planning parameters are established and 
+					maintained. <br />
+					<br />
+					Project planning parameters include all information needed 
+					by the project to perform the necessary planning, 
+					organizing, staffing, directing, coordinating, reporting, 
+					and budgeting. <br />
+					<br />
+					Estimates of planning parameters should have a sound basis 
+					to instill confidence that any plans based on these 
+					estimates are capable of supporting project objectives.
+					<br />
+					<br />
+					Factors that are typically considered when estimating these 
+					parameters include the following: <br />
+					<br />
+					</li>
+					<li>Project requirements, including the product 
+					requirements, the requirements imposed by the organization, 
+					the requirements imposed by the customer, and other 
+					requirements that impact the project </li>
+					<li>Scope of the project </li>
+					<li>Identified tasks and work products </li>
+					<li>Technical approach </li>
+					<li>Selected project lifecycle model (e.g., waterfall, 
+					incremental, or spiral) </li>
+					<li>Attributes of the work products and tasks (e.g., size or 
+					complexity) </li>
+					<li>Schedule </li>
+					<li>Models or historical data for converting the attributes 
+					of the work products and tasks into labor hours and cost
+					</li>
+					<li>Methodology (e.g., models, data, algorithms) used to 
+					determine needed material, skills, labor hours, and cost
+					<br />
+					<br />
+					Documentation of the estimating rationale and supporting 
+					data is needed for stakeholders’ review and commitment to 
+					the plan and for maintenance of the plan as the project 
+					progresses. <br />
+					<br />
+					<a name="sp1.1"></a><b>SP 1.1 Estimate the Scope of 
+					the Project</b> <br />
+					<br />
+					Establish a top-level work breakdown structure (WBS) to 
+					estimate the scope of the project. <br />
+					<br />
+					The WBS evolves with the project. Initially a top-level WBS 
+					can serve to structure the initial estimating. The 
+					development of a WBS divides the overall project into an 
+					interconnected set of manageable components. Typically, the 
+					WBS is a product oriented structure that provides a scheme 
+					for identifying and organizing the logical units of work to 
+					be managed, which are called “work packages.” The WBS 
+					provides a reference and organizational mechanism for 
+					assigning effort, schedule, and responsibility and is used 
+					as the underlying framework to plan, organize, and control 
+					the work done on the project. Some projects use the term 
+					“contract WBS” to refer to the portion of the WBS placed 
+					under contract (possibly the entire WBS). Not all projects 
+					have a contract WBS (e.g., internally funded development).
+					<br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Task descriptions </li>
+					<li>Work package descriptions </li>
+					<li>WBS <br />
+					<br />
+					Subpractice 1: Develop a WBS based on the product 
+					architecture. <br />
+					<br />
+					The WBS provides a scheme for organizing the project’s work 
+					around the product and product components that the work 
+					supports. The WBS should permit the identification of the 
+					following items: <br />
+					<br />
+					</li>
+					<li>Identified risks and their mitigation tasks </li>
+					<li>Tasks for deliverables and supporting activities </li>
+					<li>Tasks for skill and knowledge acquisition </li>
+					<li>Tasks for development of needed support plans, such as 
+					configuration management, quality assurance, and 
+					verification plans </li>
+					<li>Tasks for integration and management of nondevelopmental 
+					items <br />
+					<br />
+					Subpractice 2: Identify the work packages in sufficient 
+					detail to specify estimates of project tasks, 
+					responsibilities, and schedule. <br />
+					<br />
+					The top-level WBS is intended to help in gauging the project 
+					work effort in terms of tasks and organizational roles and 
+					responsibilities. The amount of detail in the WBS at this 
+					more detailed level helps in developing realistic schedules, 
+					thereby minimizing the need for management reserve. <br />
+					<br />
+					Subpractice 3: Identify product or product components that 
+					will be externally acquired. <br />
+					<br />
+					Refer to the Supplier Agreement Management process area for 
+					more information about acquiring products from sources 
+					external to the project. <br />
+					<br />
+					Subpractice 4: Identify work products that will be reused.
+					<br />
+					<br />
+					<a name="sp1.2"></a><b>SP 1.2 Establish Estimates of Work 
+					Product and Task Attributes</b> <br />
+					<br />
+					Establish and maintain estimates of the attributes of the 
+					work products and tasks. <br />
+					<br />
+					Size is the primary input to many models used to estimate 
+					effort, cost, and schedule. The models can also be based on 
+					inputs such as connectivity, complexity, and structure.
+					<br />
+					<br />
+					Examples of types of work products for which size estimates 
+					are made include the following: <br />
+					<br />
+					</li>
+					<li>Deliverable and nondeliverable work products </li>
+					<li>Documents and files </li>
+					<li>Operational and support hardware, firmware, and software
+					<br />
+					<br />
+					Examples of size measures include the following: <br />
+					<br />
+					</li>
+					<li>Number of functions </li>
+					<li>Function points </li>
+					<li>Source lines of code </li>
+					<li>Number of classes and objects </li>
+					<li>Number of requirements </li>
+					<li>Number and complexity of interfaces </li>
+					<li>Number of pages </li>
+					<li>Number of inputs and outputs </li>
+					<li>Number of technical risk items </li>
+					<li>Volume of data </li>
+					<li>Number of logic gates for integrated circuits </li>
+					<li>Number of parts (e.g., printed circuit boards, 
+					components, and mechanical parts) </li>
+					<li>Physical constraints (e.g., weight and volume) <br />
+					<br />
+					The estimates should be consistent with project requirements 
+					to determine the project’s effort, cost, and schedule. A 
+					relative level of difficulty or complexity should be 
+					assigned for each size attribute. <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Technical approach </li>
+					<li>Size and complexity of tasks and work products </li>
+					<li>Estimating models </li>
+					<li>Attribute estimates <br />
+					<br />
+					Subpractice 1: Determine the technical approach for the 
+					project. <br />
+					<br />
+					The technical approach defines a top-level strategy for 
+					development of the product. It includes decisions on 
+					architectural features, such as distributed or 
+					client/server; state-of-the-art or established technologies 
+					to be applied, such as robotics, composite materials, or 
+					artificial intelligence; and breadth of the functionality 
+					expected in the final products, such as safety, security, 
+					and ergonomics. <br />
+					<br />
+					Subpractice 2: Use appropriate methods to determine the 
+					attributes of the work products and tasks that will be used 
+					to estimate the resource requirements. <br />
+					<br />
+					Methods for determining size and complexity should be based 
+					on validated models or historical data. <br />
+					<br />
+					The methods for determining attributes evolve as our 
+					understanding of the relationship of product characteristics 
+					to attributes increases. <br />
+					<br />
+					Examples of current methods include the following: <br />
+					<br />
+					</li>
+					<li>Number of logic gates for integrated circuit design </li>
+					<li>Lines of code or function points for software </li>
+					<li>Number/complexity of requirements for systems 
+					engineering </li>
+					<li>Number of square feet for standard-specified residential 
+					homes <br />
+					<br />
+					Subpractice 3: Estimate the attributes of the work products 
+					and tasks. <br />
+					<br />
+					<a name="sp1.3"></a><b>SP 1.3 Define Project Lifecycle</b>
+					<br />
+					<br />
+					Define the project lifecycle phases on which to scope the 
+					planning effort. <br />
+					<br />
+					The determination of a project’s lifecycle phases provides 
+					for planned periods of evaluation and decision making. These 
+					are normally defined to support logical decision points at 
+					which significant commitments are made concerning resources 
+					and technical approach. Such points provide planned events 
+					at which project course corrections and determinations of 
+					future scope and cost can be made. <br />
+					<br />
+					The project lifecycle phases need to be defined depending on 
+					the scope of requirements, the estimates for project 
+					resources, and the nature of the project. Larger projects 
+					may contain multiple phases, such as concept exploration, 
+					development, production, operations, and disposal. Within 
+					these phases, subphases may be needed. A development phase 
+					may include subphases such as requirements analysis, design, 
+					fabrication, integration, and verification. The 
+					determination of project phases typically includes selection 
+					and refinement of one or more development models to address 
+					interdependencies and appropriate sequencing of the 
+					activities in the phases. <br />
+					<br />
+					Depending on the strategy for development, there may be 
+					intermediate phases for the creation of prototypes, 
+					increments of capability, or spiral model cycles. <br />
+					<br />
+					Understanding the project lifecycle is crucial in 
+					determining the scope of the planning effort and the timing 
+					of the initial planning, as well as the timing and criteria 
+					(critical milestones) for replanning. <br />
+					<br />
+					Typical Work Products </li>
+					<li>Project lifecycle phases <br />
+					<br />
+					<a name="sp1.4"></a><b>SP 1.4 Determine Estimates of Effort 
+					and Cost</b> <br />
+					<br />
+					Estimate the project effort and cost for the work products 
+					and tasks based on estimation rationale. <br />
+					<br />
+					Estimates of effort and cost are generally based on the 
+					results of analysis using models or historical data applied 
+					to size, activities, and other planning parameters. 
+					Confidence in these estimates is based on the rationale for 
+					the selected model and the nature of the data. There may be 
+					occasions when the available historical data does not apply, 
+					such as where efforts are unprecedented or where the type of 
+					task does not fit available models. An effort is 
+					unprecedented (to some degree) if a similar product or 
+					component has never been built. An effort may also be 
+					unprecedented if the development group has never built such 
+					a product or component. <br />
+					<br />
+					Unprecedented efforts are more risky, require more research 
+					to develop reasonable bases of estimate, and require more 
+					management reserve. The uniqueness of the project must be 
+					documented when using these models to ensure a common 
+					understanding of any assumptions made in the initial 
+					planning stages. <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Estimation rationale </li>
+					<li>Project effort estimates </li>
+					<li>Project cost estimates <br />
+					<br />
+					Subpractice 1: Collect the models or historical data that 
+					will be used to transform the attributes of the work 
+					products and tasks into estimates of the labor hours and 
+					cost. <br />
+					<br />
+					Many parametric models have been developed to aid in 
+					estimating cost and schedule. The use of these models as the 
+					sole source of estimation is not recommended because these 
+					models are based on historical project data that may or may 
+					not be pertinent to your project. Multiple models and/or 
+					methods can be used to ensure a high level of confidence in 
+					the estimate. <br />
+					<br />
+					Historical data include the cost, effort, and schedule data 
+					from previously executed projects, plus appropriate scaling 
+					data to account for differing sizes and complexity. <br />
+					<br />
+					Subpractice 2: Include supporting infrastructure needs when 
+					estimating effort and cost. <br />
+					<br />
+					The supporting infrastructure includes resources needed from 
+					a development and sustainment perspective for the product.
+					<br />
+					<br />
+					Consider the infrastructure resource needs in the 
+					development environment, the test environment, the 
+					production environment, the target environment, or any 
+					appropriate combination of these when estimating effort and 
+					cost. <br />
+					<br />
+					Examples of infrastructure resources include the following:
+					<br />
+					<br />
+					</li>
+					<li>Critical computer resources (e.g., memory, disk and 
+					network capacity, peripherals, communication channels, and 
+					the capacities of these) </li>
+					<li>Engineering environments and tools (e.g., tools for 
+					prototyping, assembly, computer-aided design [CAD], and 
+					simulation) </li>
+					<li>Facilities, machinery, and equipment (e.g., test benches 
+					and recording devices) <br />
+					<br />
+					Subpractice 3: Estimate effort and cost using models and/or 
+					historical data. <br />
+					<br />
+					Effort and cost inputs used for estimating typically include 
+					the following: <br />
+					<br />
+					</li>
+					<li>Judgmental estimates provided by an expert or group of 
+					experts (e.g., Delphi Method) </li>
+					<li>Risks, including the extent to which the effort is 
+					unprecedented </li>
+					<li>Critical competencies and roles needed to perform the 
+					work </li>
+					<li>Product and product component requirements </li>
+					<li>Technical approach </li>
+					<li>WBS </li>
+					<li>Size estimates of work products and anticipated changes
+					</li>
+					<li>Cost of externally acquired products </li>
+					<li>Selected project lifecycle model and processes </li>
+					<li>Lifecycle cost estimates </li>
+					<li>Capability of tools provided in engineering environment
+					</li>
+					<li>Skill levels of managers and staff needed to perform the 
+					work </li>
+					<li>Knowledge, skill, and training needs </li>
+					<li>Facilities needed (e.g., office and meeting space and 
+					workstations) </li>
+					<li>Engineering facilities needed </li>
+					<li>Capability of manufacturing process(es) </li>
+					<li>Travel </li>
+					<li>Level of security required for tasks, work products, 
+					hardware, software, personnel, and work environment </li>
+					<li>Service level agreements for call centers and warranty 
+					work </li>
+					<li>Direct labor and overhead <br />
+					<br />
+					<a name="sg2"></a><b>SG 2 Develop a Project Plan</b> <br />
+					<br />
+					A project plan is established and maintained as the basis 
+					for managing the project. <br />
+					<br />
+					A project plan is a formal, approved document used to manage 
+					and control the execution of the project. It is based on the 
+					project requirements and the established estimates. <br />
+					<br />
+					The project plan should consider all phases of the project 
+					lifecycle. Project planning should ensure that all plans 
+					affecting the project are consistent with the overall 
+					project plan. <br />
+					<br />
+					<a name="sp2.1"></a><b>SP 2.1 Establish the Budget and 
+					Schedule</b> <br />
+					<br />
+					Establish and maintain the project’s budget and schedule.
+					<br />
+					<br />
+					The project’s budget and schedule are based on the developed 
+					estimates and ensure that budget allocation, task 
+					complexity, and task dependencies are appropriately 
+					addressed. <br />
+					<br />
+					Event-driven, resource-limited schedules have proven to be 
+					effective in dealing with project risk. Identifying 
+					accomplishments to be demonstrated before initiation of the 
+					event provides some flexibility in the timing of the event, 
+					a common understanding of what is expected, a better vision 
+					of the state of the project, and a more accurate status of 
+					the project’s tasks. <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Project schedules </li>
+					<li>Schedule dependencies </li>
+					<li>Project budget <br />
+					<br />
+					Subpractice 1: Identify major milestones. <br />
+					<br />
+					Milestones are often imposed to ensure completion of certain 
+					deliverables by the milestone. Milestones can be event based 
+					or calendar based. If calendar based, once milestone dates 
+					have been agreed on, it is often very difficult to change 
+					them. <br />
+					<br />
+					Subpractice 2: Identify schedule assumptions. <br />
+					<br />
+					When schedules are initially developed, it is common to make 
+					assumptions about the duration of certain activities. These 
+					assumptions are frequently made on items for which little if 
+					any estimation data is available. Identifying these 
+					assumptions provides insight into the level of confidence 
+					(uncertainties) in the overall schedule. <br />
+					<br />
+					Subpractice 3: Identify constraints. <br />
+					<br />
+					Factors that limit the flexibility of management options 
+					need to be identified as early as possible. The examination 
+					of the attributes of the work products and tasks often will 
+					bring these issues to the surface. Such attributes can 
+					include task duration, resources, inputs, and outputs. <br />
+					<br />
+					Subpractice 4: Identify task dependencies. <br />
+					<br />
+					Typically, the tasks for a project can be accomplished in 
+					some ordered sequence that will minimize the duration of the 
+					project. This involves the identification of predecessor and 
+					successor tasks to determine the optimal ordering. <br />
+					<br />
+					Examples of tools that can help determine an optimal 
+					ordering of task activities include the following: <br />
+					<br />
+					</li>
+					<li>Critical Path Method (CPM) </li>
+					<li>Program Evaluation and Review Technique (PERT) </li>
+					<li>Resource-limited scheduling <br />
+					<br />
+					Subpractice 5: Define the budget and schedule. <br />
+					<br />
+					Establishing and maintaining the project’s budget and 
+					schedule typically includes the following: <br />
+					<br />
+					</li>
+					<li>Defining the committed or expected availability of 
+					resources and facilities </li>
+					<li>Determining time phasing of activities </li>
+					<li>Determining a breakout of subordinate schedules </li>
+					<li>Defining the dependencies between the activities 
+					(predecessor or successor relationships) </li>
+					<li>Defining the schedule activities and milestones to 
+					support accuracy in progress measurement </li>
+					<li>Identifying milestones for delivery of products to the 
+					customer </li>
+					<li>Defining activities of appropriate duration </li>
+					<li>Defining milestones of appropriate time separation </li>
+					<li>Defining a management reserve based on the confidence 
+					level in meeting the schedule and budget </li>
+					<li>Using appropriate historical data to verify the schedule
+					</li>
+					<li>Defining incremental funding requirements </li>
+					<li>Documenting project assumptions and rationale <br />
+					<br />
+					Subpractice 6: Establish corrective action criteria. <br />
+					<br />
+					Criteria are established for determining what constitutes a 
+					significant deviation from the project plan. A basis for 
+					gauging issues and problems is necessary to determine when a 
+					corrective action should be taken. The corrective actions 
+					may require replanning, which may include revising the 
+					original plan, establishing new agreements, or including 
+					mitigation activities within the current plan. <br />
+					<br />
+					<a name="sp2.2"></a><b>SP 2.2 Identify Project Risks</b>
+					<br />
+					<br />
+					Identify and analyze project risks. <br />
+					<br />
+					Refer to the Risk Management process area for more 
+					information about risk management activities. <br />
+					<br />
+					Refer to the Monitor Project Risks specific practice in the 
+					Project Monitoring and Control process area for more 
+					information about risk monitoring activities. <br />
+					<br />
+					Risks are identified or discovered and analyzed to support 
+					project planning. This specific practice should be extended 
+					to all the plans that affect the project to ensure that the 
+					appropriate interfacing is taking place between all relevant 
+					stakeholders on identified risks. Project planning risk 
+					identification and analysis typically include the following:
+					<br />
+					<br />
+					</li>
+					<li>Identifying risks </li>
+					<li>Analyzing the risks to determine the impact, probability 
+					of occurrence, and time frame in which problems are likely 
+					to occur </li>
+					<li>Prioritizing risks <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Identified risks </li>
+					<li>Risk impacts and probability of occurrence </li>
+					<li>Risk priorities <br />
+					<br />
+					Subpractice 1: Identify risks. <br />
+					<br />
+					The identification of risks involves the identification of 
+					potential issues, hazards, threats, vulnerabilities, and so 
+					on that could negatively affect work efforts and plans. 
+					Risks must be identified and described in an understandable 
+					way before they can be analyzed. When identifying risks, it 
+					is a good idea to use a standard method for defining risks. 
+					Risk identification and analysis tools can be used to help 
+					identify possible problems. <br />
+					<br />
+					Examples of risk identification and analysis tools include 
+					the following: <br />
+					<br />
+					</li>
+					<li>Risk taxonomies </li>
+					<li>Risk assessments </li>
+					<li>Checklists </li>
+					<li>Structured interviews </li>
+					<li>Brainstorming </li>
+					<li>Performance models </li>
+					<li>Cost models </li>
+					<li>Network analysis </li>
+					<li>Quality factor analysis <br />
+					<br />
+					Subpractice 2: Document the risks. <br />
+					<br />
+					Subpractice 3: Review and obtain agreement with relevant 
+					stakeholders on the completeness and correctness of the 
+					documented risks. <br />
+					<br />
+					Subpractice 4: Revise the risks as appropriate. <br />
+					<br />
+					Examples of when identified risks may need to be revised 
+					include the following: <br />
+					<br />
+					</li>
+					<li>When new risks are identified </li>
+					<li>When risks become problems </li>
+					<li>When risks are retired </li>
+					<li>When project circumstances change significantly <br />
+					<br />
+					<a name="sp2.3"></a><b>SP 2.3 Plan for Data Management</b>
+					<br />
+					<br />
+					Plan for the management of project data. <br />
+					<br />
+					IPPD Addition <br />
+					<br />
+					When integrated teams are formed, project data includes data 
+					developed and used solely within a particular team as well 
+					as data applicable across integrated team boundaries, if 
+					there are multiple integrated teams. <br />
+					<br />
+					Data are the various forms of documentation required to 
+					support a program in all of its areas (e.g., administration, 
+					engineering, configuration management, finance, logistics, 
+					quality, safety, manufacturing, and procurement). The data 
+					can take any form (e.g., reports, manuals, notebooks, 
+					charts, drawings, specifications, files, or correspondence). 
+					The data may exist in any medium (e.g., printed or drawn on 
+					various materials, photographs, electronic, or multimedia). 
+					Data may be deliverable (e.g., items identified by a 
+					program’s contract data requirements) or data may be 
+					nondeliverable (e.g., informal data, trade studies and 
+					analyses, internal meeting minutes, internal design review 
+					documentation, lessons learned, and action items). 
+					Distribution can take many forms, including electronic 
+					transmission. <br />
+					<br />
+					The data requirements for the project should be established 
+					for both the data items to be created and their content and 
+					form, based on a common or standard set of data 
+					requirements. Uniform content and format requirements for 
+					data items facilitate understanding of data content and help 
+					with consistent management of the data resources. <br />
+					<br />
+					The reason for collecting each document should be clear. 
+					This task includes the analysis and verification of project 
+					deliverables and nondeliverables, contract and noncontract 
+					data requirements, and customer-supplied data. Often, data 
+					is collected with no clear understanding of how it will be 
+					used. Data is costly and should be collected only when 
+					needed. <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Data management plan </li>
+					<li>Master list of managed data </li>
+					<li>Data content and format description </li>
+					<li>Data requirements lists for acquirers and for suppliers
+					</li>
+					<li>Privacy requirements </li>
+					<li>Security requirements </li>
+					<li>Security procedures </li>
+					<li>Mechanism for data retrieval, reproduction, and 
+					distribution </li>
+					<li>Schedule for collection of project data </li>
+					<li>Listing of project data to be collected <br />
+					<br />
+					Subpractice 1: Establish requirements and procedures to 
+					ensure privacy and security of the data. <br />
+					<br />
+					Not everyone will have the need or clearance necessary to 
+					access the project data. Procedures must be established to 
+					identify who has access to what data as well as when they 
+					have access to the data. <br />
+					<br />
+					Subpractice 2: Establish a mechanism to archive data and to 
+					access archived data. <br />
+					<br />
+					Accessed information should be in an understandable form 
+					(e.g., electronic or computer output from a database) or 
+					represented as originally generated. <br />
+					<br />
+					Subpractice 3: Determine the project data to be identified, 
+					collected, and distributed. <br />
+					<br />
+					<a name="sp2.4"></a><b>SP 2.4 Plan for Project Resources</b>
+					<br />
+					<br />
+					Plan for necessary resources to perform the project. <br />
+					<br />
+					IPPD Addition <br />
+					<br />
+					When integrated teams are formed, planning for project 
+					resources should consider staffing of the integrated teams.
+					<br />
+					<br />
+					Defining project resources (labor, machinery/equipment, 
+					materials, and methods) and quantities needed to perform 
+					project activities builds on the initial estimates and 
+					provides additional information that can be applied to 
+					expand the WBS used to manage the project. <br />
+					<br />
+					The top-level WBS developed earlier as an estimation 
+					mechanism is typically expanded by decomposing these top 
+					levels into work packages that represent singular work units 
+					that can be separately assigned, performed, and tracked. 
+					This subdivision is done to distribute management 
+					responsibility and provide better management control. Each 
+					work package or work product in the WBS should be assigned a 
+					unique identifier (e.g., number) to permit tracking. A WBS 
+					can be based on requirements, activities, work products, or 
+					a combination of these items. A dictionary that describes 
+					the work for each work package in the WBS should accompany 
+					the work breakdown structure. <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>WBS work packages </li>
+					<li>WBS task dictionary </li>
+					<li>Staffing requirements based on project size and scope
+					</li>
+					<li>Critical facilities/equipment list </li>
+					<li>Process/workflow definitions and diagrams </li>
+					<li>Program administration requirements list <br />
+					<br />
+					Subpractice 1: Determine process requirements. <br />
+					<br />
+					The processes used to manage a project must be identified, 
+					defined, and coordinated with all the relevant stakeholders 
+					to ensure efficient operations during project execution.
+					<br />
+					<br />
+					Subpractice 2: Determine staffing requirements. <br />
+					<br />
+					The staffing of a project depends on the decomposition of 
+					the project requirements into tasks, roles, and 
+					responsibilities for accomplishing the project requirements 
+					as laid out within the work packages of the WBS. <br />
+					<br />
+					Staffing requirements must consider the knowledge and skills 
+					required for each of the identified positions, as defined in 
+					the Plan for Needed Knowledge and Skills specific practice.
+					<br />
+					<br />
+					Subpractice 3: Determine facilities, equipment, and 
+					component requirements. <br />
+					<br />
+					Most projects are unique in some sense and require some set 
+					of unique assets to accomplish the objectives of the 
+					project. The determination and acquisition of these assets 
+					in a timely manner are crucial to project success. <br />
+					<br />
+					Lead-time items need to be identified early to determine how 
+					they will be addressed. Even when the required assets are 
+					not unique, compiling a list of all of the facilities, 
+					equipment, and parts (e.g., number of computers for the 
+					personnel working on the project, software applications, and 
+					office space) provides insight into aspects of the scope of 
+					an effort that are often overlooked. <br />
+					<br />
+					<a name="sp2.5"></a><b>SP 2.5 Plan for Needed Knowledge and 
+					Skills</b> <br />
+					<br />
+					Plan for knowledge and skills needed to perform the project.
+					<br />
+					<br />
+					Refer to the Organizational Training process area for more 
+					information about knowledge and skills information to be 
+					incorporated into the project plan. <br />
+					<br />
+					Knowledge delivery to projects involves both training of 
+					project personnel and acquisition of knowledge from outside 
+					sources. <br />
+					<br />
+					Staffing requirements are dependent on the knowledge and 
+					skills available to support the execution of the project.
+					<br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Inventory of skill needs </li>
+					<li>Staffing and new hire plans </li>
+					<li>Databases (e.g., skills and training) <br />
+					<br />
+					Subpractice 1: Identify the knowledge and skills needed to 
+					perform the project. <br />
+					<br />
+					Subpractice 2: Assess the knowledge and skills available.
+					<br />
+					<br />
+					Subpractice 3: Select mechanisms for providing needed 
+					knowledge and skills. <br />
+					<br />
+					Example mechanisms include the following: <br />
+					<br />
+					</li>
+					<li>In-house training (both organizational and project) </li>
+					<li>External training </li>
+					<li>Staffing and new hires </li>
+					<li>External skill acquisition <br />
+					<br />
+					The choice of in-house training or outsourced training for 
+					the needed knowledge and skills is determined by the 
+					availability of training expertise, the project’s schedule, 
+					and the business objectives. <br />
+					<br />
+					Subpractice 4: Incorporate selected mechanisms into the 
+					project plan. <br />
+					<br />
+					<a name="sp2.6"></a><b>SP 2.6 Plan Stakeholder Involvement</b>
+					<br />
+					<br />
+					Plan the involvement of identified stakeholders. <br />
+					<br />
+					IPPD Addition <br />
+					<br />
+					When integrated teams are formed, stakeholder involvement 
+					should be planned down to the integrated team level. <br />
+					<br />
+					Stakeholders are identified from all phases of the project 
+					lifecycle by identifying the type of people and functions 
+					needing representation in the project and describing their 
+					relevance and the degree of interaction for specific project 
+					activities. A two-dimensional matrix with stakeholders along 
+					one axis and project activities along the other axis is a 
+					convenient format for accomplishing this identification. 
+					Relevance of the stakeholder to the activity in a particular 
+					project phase and the amount of interaction expected would 
+					be shown at the intersection of the project phase activity 
+					axis and the stakeholder axis. <br />
+					<br />
+					For the inputs of stakeholders to be useful, careful 
+					selection of relevant stakeholders is necessary. For each 
+					major activity, identify the stakeholders who are affected 
+					by the activity and those who have expertise that is needed 
+					to conduct the activity. This list of relevant stakeholders 
+					will probably change as the project moves through the phases 
+					of the project lifecycle. It is important, however, to 
+					ensure that relevant stakeholders in the latter phases of 
+					the lifecycle have early input to requirements and design 
+					decisions that affect them. <br />
+					<br />
+					Examples of the type of material that should be included in 
+					a plan for stakeholder interaction include the following:
+					<br />
+					<br />
+					</li>
+					<li>List of all relevant stakeholders </li>
+					<li>Rationale for stakeholder involvement </li>
+					<li>Roles and responsibilities of the relevant stakeholders 
+					with respect to the project, by project lifecycle phase </li>
+					<li>Relationships between stakeholders </li>
+					<li>Relative importance of the stakeholder to success of the 
+					project, by project lifecycle phase </li>
+					<li>Resources (e.g., training, materials, time, and funding) 
+					needed to ensure stakeholder interaction </li>
+					<li>Schedule for phasing of stakeholder interaction <br />
+					<br />
+					Conduct of this specific practice relies on shared or 
+					exchanged information with the previous Plan for Needed 
+					Knowledge and Skills specific practice. <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Stakeholder involvement plan <br />
+					<br />
+					<a name="sp2.7"></a><b>SP 2.7 Establish the Project Plan</b>
+					<br />
+					<br />
+					Establish and maintain the overall project plan content.
+					<br />
+					<br />
+					A documented plan that addresses all relevant planning items 
+					is necessary to achieve the mutual understanding, 
+					commitment, and performance of individuals, groups, and 
+					organizations that must execute or support the plans. The 
+					plan generated for the project defines all aspects of the 
+					effort, tying together in a logical manner: project 
+					lifecycle considerations; technical and management tasks; 
+					budgets and schedules; milestones; data management, risk 
+					identification, resource and skill requirements; and 
+					stakeholder identification and interaction. Infrastructure 
+					descriptions include responsibility and authority 
+					relationships for project staff, management, and support 
+					organizations. <br />
+					<br />
+					For Software Engineering <br />
+					<br />
+					For software, the planning document is often referred to as 
+					one of the following: <br />
+					<br />
+					</li>
+					<li>Software development plan </li>
+					<li>Software project plan </li>
+					<li>Software plan <br />
+					<br />
+					For Hardware Engineering <br />
+					<br />
+					For hardware, the planning document is often referred to as 
+					a hardware development plan. Development activities in 
+					preparation for production may be included in the hardware 
+					development plan or defined in a separate production plan.
+					<br />
+					<br />
+					Examples of plans that have been used in the U.S. Department 
+					of Defense community include the following: <br />
+					<br />
+					</li>
+					<li>Integrated Master Plan—an event-driven plan that 
+					documents significant accomplishments with pass/fail 
+					criteria for both business and technical elements of the 
+					project and that ties each accomplishment to a key program 
+					event. </li>
+					<li>Integrated Master Schedule—an integrated and networked 
+					multi-layered schedule of program tasks required to complete 
+					the work effort documented in a related Integrated Master 
+					Plan. </li>
+					<li>Systems Engineering Management Plan—a plan that details 
+					the integrated technical effort across the project. </li>
+					<li>Systems Engineering Master Schedule—an event-based 
+					schedule that contains a compilation of key technical 
+					accomplishments, each with measurable criteria, requiring 
+					successful completion to pass identified events. </li>
+					<li>Systems Engineering Detailed Schedule—a detailed, 
+					time-dependent, task-oriented schedule that associates 
+					specific dates and milestones with the Systems Engineering 
+					Master Schedule. <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Overall project plan <br />
+					<br />
+					<a name="sg3"></a><b>SG 3 Obtain Commitment to the Plan</b>
+					<br />
+					<br />
+					Commitments to the project plan are established and 
+					maintained. <br />
+					<br />
+					To be effective, plans require commitment by those 
+					responsible for implementing and supporting the plan. <br />
+					<br />
+					<a name="sp3.1"></a><b>SP 3.1 Review Plans That Affect the 
+					Project</b> <br />
+					<br />
+					Review all plans that affect the project to understand 
+					project commitments. <br />
+					<br />
+					IPPD Addition <br />
+					<br />
+					When integrated teams are formed, their integrated work 
+					plans are among the plans to review. <br />
+					<br />
+					Plans developed within other process areas will typically 
+					contain information similar to that called for in the 
+					overall project plan. These plans may provide additional 
+					detailed guidance and should be compatible with and support 
+					the overall project plan to indicate who has the authority, 
+					responsibility, accountability, and control. All plans that 
+					affect the project should be reviewed to ensure a common 
+					understanding of the scope, objectives, roles, and 
+					relationships that are required for the project to be 
+					successful. Many of these plans are described by the Plan 
+					the Process generic practice in each of the process areas.
+					<br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Record of the reviews of plans that affect the project
+					<br />
+					<br />
+					<a name="sp3.2"></a><b>SP 3.2 Reconcile Work and Resource 
+					Levels</b> <br />
+					<br />
+					Reconcile the project plan to reflect available and 
+					estimated resources. <br />
+					<br />
+					IPPD Addition <br />
+					<br />
+					When integrated teams are formed, special attention should 
+					be paid to resource commitments in circumstances of 
+					distributed integrated teams and when people are on multiple 
+					integrated teams in one or more projects. <br />
+					<br />
+					To establish a project that is feasible, obtain commitment 
+					from relevant stakeholders and reconcile any differences 
+					between the estimates and the available resources. 
+					Reconciliation is typically accomplished by lowering or 
+					deferring technical performance requirements, negotiating 
+					more resources, finding ways to increase productivity, 
+					outsourcing, adjusting the staff skill mix, or revising all 
+					plans that affect the project or schedules. <br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Revised methods and corresponding estimating parameters 
+					(e.g., better tools and use of off-the-shelf components)
+					</li>
+					<li>Renegotiated budgets </li>
+					<li>Revised schedules </li>
+					<li>Revised requirements list </li>
+					<li>Renegotiated stakeholder agreements <br />
+					<br />
+					<a name="sp3.3"></a><b>SP 3.3 Obtain Plan Commitment</b>
+					<br />
+					<br />
+					Obtain commitment from relevant stakeholders responsible for 
+					performing and supporting plan execution. <br />
+					<br />
+					IPPD Addition <br />
+					<br />
+					When integrated teams are formed, the integrated team plans 
+					should have buy-in from the team members, the interfacing 
+					teams, the project, and the process owners of the standard 
+					processes that the team has selected for tailored 
+					application. <br />
+					<br />
+					Obtaining commitment involves interaction among all relevant 
+					stakeholders both internal and external to the project. The 
+					individual or group making a commitment should have 
+					confidence that the work can be performed within cost, 
+					schedule, and performance constraints. Often, a provisional 
+					commitment is adequate to allow the effort to begin and to 
+					permit research to be performed to increase confidence to 
+					the appropriate level needed to obtain a full commitment.
+					<br />
+					<br />
+					Typical Work Products <br />
+					<br />
+					</li>
+					<li>Documented requests for commitments </li>
+					<li>Documented commitments <br />
+					<br />
+					Subpractice 1: Identify needed support and negotiate 
+					commitments with relevant stakeholders. <br />
+					<br />
+					The WBS can be used as a checklist for ensuring that 
+					commitments are obtained for all tasks. <br />
+					<br />
+					The plan for stakeholder interaction should identify all 
+					parties from whom commitment should be obtained. <br />
+					<br />
+					Subpractice 2: Document all organizational commitments, both 
+					full and provisional, ensuring appropriate level of 
+					signatories. <br />
+					<br />
+					Commitments must be documented to ensure a consistent mutual 
+					understanding as well as for tracking and maintenance. 
+					Provisional commitments should be accompanied by a 
+					description of the risks associated with the relationship.
+					<br />
+					<br />
+					Subpractice 3: Review internal commitments with senior 
+					management as appropriate. <br />
+					<br />
+					Subpractice 4: Review external commitments with senior 
+					management as appropriate. <br />
+					<br />
+					Management may have the necessary insight and authority to 
+					reduce risks associated with external commitments. <br />
+					<br />
+					Subpractice 5: Identify commitments on interfaces between 
+					elements in the project, and with other projects and 
+					organizational units so that they can be monitored. <br />
+					<br />
+					Well-defined interface specifications form the basis for 
+					commitments. <br />
+					<br />
+					<a name="gg"></a><b>Generic Practices by Goal</b> <br />
+					<br />
+					<a name="ggp"></a><b>GG 1 Achieve Specific Goals</b> <br />
+					<br />
+					The process supports and enables achievement of the specific 
+					goals of the process area by transforming identifiable input 
+					work products to produce identifiable output work products.
+					<br />
+					<br />
+					<a name="gp11"></a><b>GP 1.1 Perform Specific Practices</b>
+					<br />
+					<br />
+					Perform the specific practices of the project planning 
+					process to develop work products and provide services to 
+					achieve the specific goals of the process area. <br />
+					<br />
+					<a name="gg2"></a><b>GG 2 Institutionalize a Managed Process</b>
+					<br />
+					<br />
+					The process is institutionalized as a managed process. <br />
+					<br />
+					<a name="gp21"></a><b>GP 2.1 Establish an Organizational 
+					Policy</b> <br />
+					<br />
+					Establish and maintain an organizational policy for planning 
+					and performing the project planning process. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					This policy establishes organizational expectations for 
+					estimating the planning parameters, making internal and 
+					external commitments, and developing the plan for managing 
+					the project. <br />
+					<br />
+					<a name="gp22"></a><b>GP 2.2 Plan the Process</b> <br />
+					<br />
+					Establish and maintain the plan for performing the project 
+					planning process. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Refer to Table 6.2 on page 95 in Generic Goals and Generic 
+					Practices for more information about the relationship 
+					between generic practice 2.2 and the Project Planning 
+					process area. <br />
+					<br />
+					<a name="gp23"></a><b>GP 2.3 Provide Resources</b> <br />
+					<br />
+					Provide adequate resources for performing the project 
+					planning process, developing the work products, and 
+					providing the services of the process. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Special expertise, equipment, and facilities in project 
+					planning may be required. Special expertise in project 
+					planning may include the following: <br />
+					<br />
+					</li>
+					<li>Experienced estimators </li>
+					<li>Schedulers </li>
+					<li>Technical experts in applicable areas (e.g., product 
+					domain and technology) <br />
+					<br />
+					Examples of other resources provided include the following 
+					tools: <br />
+					<br />
+					</li>
+					<li>Spreadsheet programs </li>
+					<li>Estimating models </li>
+					<li>Project planning and scheduling packages <br />
+					<br />
+					<a name="gp24"></a><b>GP 2.4 Assign Responsibility</b>
+					<br />
+					<br />
+					Assign responsibility and authority for performing the 
+					process, developing the work products, and providing the 
+					services of the project planning process. <br />
+					<br />
+					<a name="gp25"></a><b>GP 2.5 Train People</b> <br />
+					<br />
+					Train the people performing or supporting the project 
+					planning process as needed. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of training topics include the following: <br />
+					<br />
+					</li>
+					<li>Estimating </li>
+					<li>Budgeting </li>
+					<li>Negotiating </li>
+					<li>Risk identification and analysis </li>
+					<li>Data management </li>
+					<li>Planning </li>
+					<li>Scheduling <br />
+					<br />
+					<a name="gp26"></a><b>GP 2.6 Manage Configurations</b>
+					<br />
+					<br />
+					Place designated work products of the project planning 
+					process under appropriate levels of control. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of work products placed under control include the 
+					following: <br />
+					<br />
+					</li>
+					<li>Work breakdown structure </li>
+					<li>Project plan </li>
+					<li>Data management plan </li>
+					<li>Stakeholder involvement plan <br />
+					<br />
+					<a name="gp27"></a><b>GP 2.7 Identify and Involve Relevant 
+					Stakeholders</b> <br />
+					<br />
+					Identify and involve the relevant stakeholders of the 
+					project planning process as planned. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Refer to Table 6.2 on page 95 in Generic Goals and Generic 
+					Practices for more information about the relationship 
+					between generic practice 2.7 and the Plan Stakeholder 
+					Involvement practice in the Project Planning process area.
+					<br />
+					<br />
+					Examples of activities for stakeholder involvement include 
+					the following: <br />
+					<br />
+					</li>
+					<li>Establishing estimates </li>
+					<li>Reviewing and resolving issues on the completeness and 
+					correctness of the project risks </li>
+					<li>Reviewing data management plans </li>
+					<li>Establishing project plans </li>
+					<li>Reviewing project plans and resolving issues on work and 
+					resource issues <br />
+					<br />
+					<a name="gp28"></a><b>GP 2.8 Monitor and Control the 
+					Process</b> <br />
+					<br />
+					Monitor and control the project planning process against the 
+					plan for performing the process and take appropriate 
+					corrective action. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of measures and work products used in monitoring 
+					and controlling include the following: <br />
+					<br />
+					</li>
+					<li>Number of revisions to the plan </li>
+					<li>Cost, schedule, and effort variance per plan revision
+					</li>
+					<li>Schedule for development and maintenance of program 
+					plans <br />
+					<br />
+					<a name="gp29"></a><b>GP 2.9 Objectively Evaluate Adherence</b>
+					<br />
+					<br />
+					Objectively evaluate adherence of the project planning 
+					process against its process description, standards, and 
+					procedures, and address noncompliance. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of activities reviewed include the following: <br />
+					<br />
+					</li>
+					<li>Establishing estimates </li>
+					<li>Developing the project plan </li>
+					<li>Obtaining commitments to the project plan <br />
+					<br />
+					Examples of work products reviewed include the following:
+					<br />
+					<br />
+					</li>
+					<li>WBS </li>
+					<li>Project plan </li>
+					<li>Data management plan </li>
+					<li>Stakeholder involvement plan <br />
+					<br />
+					<a name="gp21"></a><b>GP 2.10 Review Status with Higher 
+					Level Management</b> <br />
+					<br />
+					Review the activities, status, and results of the project 
+					planning process with higher level management and resolve 
+					issues. <br />
+					<br />
+					<a name="gg3"></a><b>GG 3 Institutionalize a Defined Process</b>
+					<br />
+					<br />
+					The process is institutionalized as a defined process. <br />
+					<br />
+					This generic goal's appearance here reflects its location in 
+					the continuous representation. <br />
+					<br />
+					<a name="gp31"></a><b>GP 3.1 Establish a Defined Process</b>
+					<br />
+					<br />
+					Establish and maintain the description of a defined project 
+					planning process. <br />
+					<br />
+					<a name="gp32"></a><b>GP 3.2 Collect Improvement 
+					Information</b> <br />
+					<br />
+					Collect work products, measures, measurement results, and 
+					improvement information derived from planning and performing 
+					the project planning process to support the future use and 
+					improvement of the organization’s processes and process 
+					assets. <br />
+					<br />
+					Elaboration: <br />
+					<br />
+					Examples of work products, measures, measurement results, 
+					and improvement information include the following: <br />
+					<br />
+					</li>
+					<li>Project data library structure </li>
+					<li>Project attribute estimates </li>
+					<li>Risk impacts and probability of occurrence <br />
+					<br />
+					<a name="gg4"></a><b>GG 4 Institutionalize a Quantitatively 
+					Managed Process</b> <br />
+					<br />
+					The process is institutionalized as a quantitatively managed 
+					process. <br />
+					<br />
+					<a name="gp41"></a><b>GP 4.1 Establish Quantitative 
+					Objectives for the Process</b> <br />
+					<br />
+					Establish and maintain quantitative objectives for the 
+					project planning process, which address quality and process 
+					performance, based on customer needs and business 
+					objectives. <br />
+					<br />
+					<a name="gp42"></a><b>GP 4.2 Stabilize Subprocess 
+					Performance</b> <br />
+					<br />
+					Stabilize the performance of one or more subprocesses to 
+					determine the ability of the project planning process to 
+					achieve the established quantitative quality and 
+					process-performance objectives. <br />
+					<br />
+					<a name="gg5"></a><b>GG 5 Institutionalize an Optimizing 
+					Process</b> <br />
+					<br />
+					The process is institutionalized as an optimizing process.
+					<br />
+					<br />
+					<a name="gp51"></a><b>GP 5.1 Ensure Continuous Process 
+					Improvement</b> <br />
+					<br />
+					Ensure continuous improvement of the project planning 
+					process in fulfilling the relevant business objectives of 
+					the organization. <br />
+					<br />
+					<a name="gp52"></a><b>GP 5.2 Correct Root Causes of 
+					Problems</b> <br />
+					<br />
+					Identify and correct the root causes of defects and other 
+					problems in the project planning process. <center>
+					</center><br />
+					<br />
+					</li>
+					</font></td>
+				</tr>
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

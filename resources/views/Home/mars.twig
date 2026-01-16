@@ -1,0 +1,28 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Mars
+Attacks{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+  <h3>Mars (panic) Attacks!</h3>
+  <hr>
+  <p align="center"><img alt="Software" class="img-fluid" src="{{ asset('storage/images/mars.jpg') }}" ></p>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+  <!--SWITCH ON AND OFF-->
+  <!--The insecure stuff goens here-->
+  <h3>Mars (panic) Attacks!</h3>
+  <hr>
+  <p align="center"><img alt="Software" class="img-fluid" src="{{ asset('storage/images/mars.jpg') }}" ></p>
+</div>
+{% endif %}
+
+
+{% endblock %}

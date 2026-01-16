@@ -1,0 +1,974 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>OT</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	<table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="3%"><p><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="52%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+<!-- #BeginEditable "content" -->
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td><span class="auto-style2"><strong>Organizational 
+					Training (OT)</strong><br />
+					<br />
+					</span></td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>Organizational Training (OT) aligns the organization's training program (and budget) to the goals and skills required to make the organization successful.
+<br>
+<br>For the most part Organizational Training (OT) looks at the Organizational Process Definition and the skill required to execute the defined processes then examines any shortfalls with the current Human Resource in order to identify and provide training opportunities.
+</p>
+
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Organizational Training (OT)<br />A Process Management Process Area at Maturity Level 3</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Organizational Training (OT) is to develop the skills and knowledge of people so they can perform their roles effectively and efficiently.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+<br>
+<br>
+Organizational Training includes training to support the organization’s strategic business objectives and to meet the tactical training needs that are common across projects and support groups. Specific training needs identified by individual projects and support groups are handled at the project and support group level and are outside the scope of Organizational Training. Project and support groups are responsible for identifying and addressing their specific training needs.
+<br>
+<br>
+Refer to the Project Planning process area for more information about the specific training needs identified by projects.
+<br>
+<br>
+An organizational training program involves the following:
+<br>
+<br>
+<li>Identifying the training needed by the organization
+</li><li>Obtaining and providing training to address those needs
+</li><li>Establishing and maintaining training capability
+</li><li>Establishing and maintaining training records
+</li><li>Assessing training effectiveness
+<br>
+<br>
+Effective training requires assessment of needs, planning, instructional design, and appropriate training media (e.g., workbooks and computer software), as well as a repository of training process data. As an organizational process, the main components of training include a managed training development program, documented plans, personnel with appropriate mastery of specific disciplines and other areas of knowledge, and mechanisms for measuring the effectiveness of the training program.
+<br>
+<br>
+The identification of process training needs is primarily based on the skills that are required to perform the organization’s set of standard processes.
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about the organization’s set of standard processes.
+<br>
+<br>
+Certain skills may be effectively and efficiently imparted through vehicles other than in-class training experiences (e.g., informal mentoring). Other skills require more formalized training vehicles, such as in a classroom, by Web-based training, through guided self-study, or via a formalized on-the-job training program. The formal or informal training vehicles employed for each situation should be based on an assessment of the need for training and the performance gap to be addressed. The term “training” used throughout this process area is used broadly to include all of these learning options.
+<br>
+<br>
+Success in training can be measured in terms of the availability of opportunities to acquire the skills and knowledge needed to perform new and ongoing enterprise activities.
+<br>
+<br>
+Skills and knowledge may be technical, organizational, or contextual. Technical skills pertain to the ability to use the equipment, tools, materials, data, and processes required by a project or a process. Organizational skills pertain to behavior within and according to the employee’s organization structure, role and responsibilities, and general operating principles and methods. Contextual skills are the self-management, communication, and interpersonal abilities needed to successfully perform in the organizational and social context of the project and support groups.
+<br>
+<br>
+The phrase “project and support groups” is used frequently in the text of the process area description to indicate an organization-level perspective.
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Organizational Process Definition process area for more information about the organization’s process assets.
+<br>
+<br>
+Refer to the Project Planning process area for more information about the specific training needs identified by projects.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for how to apply decision-making criteria when determining training approaches.
+<br>
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1 Establish an Organizational Training Capability</b>
+<br>
+<br>
+A training capability, which supports the organization's management and technical roles, is established and maintained.
+<br>
+<br>
+The organization identifies the training required to develop the skills and the knowledge necessary to perform enterprise activities. Once the needs are identified, a training program addressing those needs is developed.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+Cross-functional training, leadership training, interpersonal skills training, and training in the skills needed to integrate appropriate business and technical functions is needed by integrated team members. The potentially wider range of requirements and participant backgrounds may require relevant stakeholders who were not involved in requirements development to take cross training in the disciplines involved in product design in order to commit to requirements with a full understanding of the range of requirements and their interrelationships.
+<br>
+<br>
+<a name="sp11"></a>
+<b>SP 1.1 Establish the Strategic Training Needs</b>
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+Establish and maintain the strategic training needs of the organization.
+<br>
+<br>
+Strategic training needs address long-term objectives to build a capability by filling significant knowledge gaps, introducing new technologies, or implementing major changes in behavior. Strategic planning typically looks two to five years into the future.
+<br>
+<br>
+Examples of sources of strategic training needs include the following:
+<br>
+<br>
+</li><li>Organization’s standard processes
+</li><li>Organization’s strategic business plan
+</li><li>Organization’s process improvement plan
+</li><li>Enterprise-level initiatives
+</li><li>Skill assessments
+</li><li>Risk analyses
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+IPPD requires leadership and interpersonal skills beyond those typically found in traditional development environments. Specific skills emphasized in an IPPD environment include the following:
+<br>
+<br>
+</li><li>The ability to integrate all appropriate business and technical functions and their processes
+</li><li>The ability to coordinate and collaborate with others
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Training needs
+</li><li>Assessment analysis
+<br>
+<br>
+Subpractice 1: Analyze the organization’s strategic business objectives and process improvement plan to identify potential future training needs.
+<br>
+<br>
+Subpractice 2: Document the strategic training needs of the organization.
+<br>
+<br>
+Examples of categories of training needs include (but are not limited to) the following:
+<br>
+<br>
+</li><li>Process analysis and documentation
+</li><li>Engineering (e.g., requirements analysis, design, testing, configuration management, and quality assurance)
+</li><li>Service delivery
+</li><li>Selection and management of suppliers
+</li><li>Management (e.g., estimating, tracking, and risk management)
+</li><li>Disaster recovery and continuity of operations
+<br>
+<br>
+Subpractice 3: Determine the roles and skills needed to perform the organization’s set of standard processes.
+<br>
+<br>
+Subpractice 4: Document the training needed to perform the roles in the organization’s set of standard processes.
+<br>
+<br>
+Subpractice 5: Document the training needed to maintain the safe, secure and continued operation of the business.
+<br>
+<br>
+Subpractice 6: Revise the organization’s strategic needs and required training as necessary.
+<br>
+<br>
+<a name="sp12"></a> 
+<b>SP 1.2 Determine Which Training Needs Are the Responsibility of the Organization</b>
+<br>
+<br>
+Determine which training needs are the responsibility of the organization and which will be left to the individual project or support group.
+<br>
+<br>
+Refer to the Project Planning process area for more information about project- and support-group-specific plans for training.
+<br>
+<br>
+In addition to strategic training needs, organizational training addresses training requirements that are common across projects and support groups. Projects and support groups have the primary responsibility for identifying and addressing their specific training needs. The organization’s training staff is only responsible for addressing common cross-project and support group training needs (e.g., training in work environments common to multiple projects). In some cases, however, the organization’s training staff may address additional training needs of projects and support groups, as negotiated with them, within the context of the training resources available and the organization’s training priorities.
+<br>
+<br>
+Typical Work Products
+</li><li>Common project and support group training needs
+</li><li>Training commitments
+Subpractice 1: Analyze the training needs identified by the various projects and support groups.
+<br>
+<br>
+Analysis of project and support group needs is intended to identify common training needs that can be most efficiently addressed organization-wide. These needs-analysis activities are used to anticipate future training needs that are first visible at the project and support group level.
+<br>
+<br>
+Subpractice 2: Negotiate with the various projects and support groups on how their specific training needs will be satisfied.
+The support provided by the organization’s training staff depends on the training resources available and the organization’s training priorities.
+<br>
+<br>
+Examples of training appropriately performed by the project or support group include the following:
+<br>
+<br>
+</li><li>Training in the application or service domain of the project
+</li><li>Training in the unique tools and methods used by the project or support group
+</li><li>Training in safety, security, and human factors
+<br>
+<br>
+Subpractice 3: Document the commitments for providing training support to the projects and support groups.
+<br>
+<br>
+<a name="sp13"></a> 
+<b>SP 1.3 Establish an Organizational Training Tactical Plan</b>
+<br>
+<br>
+Establish and maintain an organizational training tactical plan.
+<br>
+<br>
+The organizational training tactical plan is the plan to deliver the training that is the responsibility of the organization and is necessary for individuals to perform their roles effectively. This plan addresses the near-term execution of training and is adjusted periodically in response to changes (e.g., in needs or resources) and to evaluations of effectiveness.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Organizational training tactical plan
+<br>
+<br>
+Subpractice 1: Establish plan content.
+<br>
+<br>
+Organizational training tactical plans typically contain the following:
+<br>
+</li><li>Training needs
+</li><li>Training topics
+</li><li>Schedules based on training activities and their dependencies
+</li><li>Methods used for training
+</li><li>Requirements and quality standards for training materials
+</li><li>Training tasks, roles, and responsibilities
+</li><li>Required resources including tools, facilities, environments, staffing, and skills and knowledge
+<br>
+<br>
+Subpractice 2: Establish commitments to the plan.
+<br>
+<br>
+Documented commitments by those responsible for implementing and supporting the plan are essential for the plan to be effective.
+<br>
+<br>
+Subpractice 3: Revise plan and commitments as necessary.
+<br>
+<br>
+<a name="sp14"></a> 
+<b>SP 1.4 Establish Training Capability</b>
+<br>
+<br>
+Establish and maintain training capability to address organizational training needs.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for how to apply decision-making criteria when selecting training approaches and developing training materials.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Training materials and supporting artifacts
+<br>
+<br>
+Subpractice 1: Select the appropriate approaches to satisfy specific organizational training needs.
+<br>
+<br>
+Many factors may affect the selection of training approaches, including audience-specific knowledge, costs and schedule, work environment, and so on. Selection of an approach requires consideration of the means to provide skills and knowledge in the most effective way possible given the constraints.
+<br>
+<br>
+Examples of training approaches include the following:
+<br>
+<br>
+</li><li>Classroom training
+</li><li>Computer-aided instruction
+</li><li>Guided self-study
+</li><li>Formal apprenticeship and mentoring programs
+</li><li>Facilitated videos
+</li><li>Chalk talks
+</li><li>Brown-bag lunch seminars
+</li><li>Structured on-the-job training
+<br>
+<br>
+Subpractice 2: Determine whether to develop training materials internally or acquire them externally.
+<br>
+<br>
+Determine the costs and benefits of internal training development or of obtaining training externally.
+<br>
+<br>
+Example criteria that can be used to determine the most effective mode of knowledge or skill acquisition include the following:
+<br>
+<br>
+</li><li>Performance objectives
+</li><li>Time available to prepare for project execution
+</li><li>Business objectives
+</li><li>Availability of in-house expertise
+</li><li>Availability of training from external sources
+<br>
+<br>
+Examples of external sources of training include the following:
+<br>
+<br>
+</li><li>Customer-provided training
+</li><li>Commercially available training courses
+</li><li>Academic programs
+</li><li>Professional conferences
+</li><li>Seminars
+<br>
+<br>
+Subpractice 3: Develop or obtain training materials.
+<br>
+<br>
+Training may be provided by the project, by support groups, by the organization, or by an external organization. The organization’s training staff coordinates the acquisition and delivery of training regardless of its source.
+<br>
+<br>
+Examples of training materials include the following:
+<br>
+<br>
+</li><li>Courses
+</li><li>Computer-aided instruction
+</li><li>Videos
+<br>
+<br>
+Subpractice 4: Develop or obtain qualified instructors.
+<br>
+<br>
+To ensure that internally provided training instructors have the necessary knowledge and training skills, criteria can be defined to identify, develop, and qualify them. In the case of externally provided training, the organization’s training staff can investigate how the training provider determines which instructors will deliver the training. This can also be a factor in selecting or continuing to use a specific training provider.
+<br>
+<br>
+Subpractice 5: Describe the training in the organization's training curriculum.
+<br>
+<br>
+Examples of the information provided in the training descriptions for each course include the following:
+<br>
+<br>
+</li><li>Topics covered in the training
+</li><li>Intended audience
+</li><li>Prerequisites and preparation for participating
+</li><li>Training objectives
+</li><li>Length of the training
+</li><li>Lesson plans
+</li><li>Completion criteria for the course
+</li><li>Criteria for granting training waivers
+<br>
+<br>
+Subpractice 6: Revise the training materials and supporting artifacts as necessary.
+<br>
+<br>
+Examples of situations in which the training materials and supporting artifacts may need to be revised include the following:
+<br>
+<br>
+</li><li>Training needs change (e.g., when new technology associated with the training topic is available)
+</li><li>An evaluation of the training identifies the need for change (e.g., evaluations of training effectiveness surveys, training program performance assessments, or instructor evaluation forms)
+<br>
+<br>
+<a name="sg2"></a>  
+<b>SG 2 Provide Necessary Training</b>
+<br>
+<br>
+Training necessary for individuals to perform their roles effectively is provided.
+<br>
+<br>
+In selecting people to be trained, the following should be taken into consideration:
+<br>
+<br>
+</li><li>Background of the target population of training participants
+</li><li>Prerequisite background to receive training
+</li><li>Skills and abilities needed by people to perform their roles
+</li><li>Need for cross-discipline technical management training for all disciplines, including project management
+</li><li>Need for managers to have training in appropriate organizational processes
+</li><li>Need for training in the basic principles of all appropriate disciplines to support personnel in quality management, configuration management, and other related support functions
+</li><li>Need to provide competency development for critical functional areas
+</li><li>Need to maintain the competencies and qualifications of personnel to operate and maintain work environments common to multiple projects
+<br>
+<br>
+<a name="sp21"></a>
+<b>SP 2.1 Deliver Training</b>
+<br>
+<br>
+Deliver the training following the organizational training tactical plan.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Delivered training course
+Subpractice 1: Select the people who will receive the training necessary to perform their roles effectively.
+<br>
+<br>
+Training is intended to impart knowledge and skills to people performing various roles within the organization. Some people already possess the knowledge and skills required to perform well in their designated roles. Training can be waived for these people, but care should be taken that training waivers are not abused.
+<br>
+<br>
+Subpractice 2: Schedule the training, including any resources, as necessary (e.g., facilities and instructors).
+<br>
+<br>
+Training should be planned and scheduled. Training is provided that has a direct bearing on the expectations of work performance. Therefore, optimal training occurs in a timely manner with regard to imminent job-performance expectations. These expectations often include the following:
+<br>
+<br>
+</li><li>Training in the use of specialized tools
+</li><li>Training in procedures that are new to the individual who will perform them
+<br>
+<br>
+Subpractice 3: Conduct the training.
+<br>
+<br>
+Experienced instructors should perform training. When possible, training is conducted in settings that closely resemble actual performance conditions and includes activities to simulate actual work situations. This approach includes integration of tools, methods, and procedures for competency development. Training is tied to work responsibilities so that on-the-job activities or other outside experiences will reinforce the training within a reasonable time after the training.
+<br>
+<br>
+Subpractice 4: Track the delivery of training against the plan.
+<br>
+<br>
+<a name="sp22"></a>
+<b>SP 2.2 Establish Training Records</b>
+<br>
+<br>
+Establish and maintain records of the organizational training.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for information about how project or support group training records are maintained.
+<br>
+<br>
+The scope of this practice is for the training performed at the organizational level. Establishment and maintenance of training records for project- or support-group-sponsored training is the responsibility of each individual project or support group.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Training records
+</li><li>Training updates to the organizational repository
+<br>
+<br>
+Subpractice 1: Keep records of all students who successfully complete each training course or other approved training activity as well as those who are unsuccessful.
+<br>
+<br>
+Subpractice 2: Keep records of all staff who have been waived from specific training.
+<br>
+<br>
+The rationale for granting a waiver should be documented, and both the manager responsible and the manager of the excepted individual should approve the waiver for organizational training.
+<br>
+<br>
+Subpractice 3: Keep records of all students who successfully complete their designated required training.
+<br>
+<br>
+Subpractice 4: Make training records available to the appropriate people for consideration in assignments.
+<br>
+<br>
+Training records may be part of a skills matrix developed by the training organization to provide a summary of the experience and education of people, as well as training sponsored by the organization.
+<br>
+<br>
+<a name="sp23"></a>
+<b>SP 2.3 Assess Training Effectiveness</b>
+<br>
+<br>
+Assess the effectiveness of the organization’s training program.
+<br>
+<br>
+A process should exist to determine the effectiveness of training (i.e., how well the training is meeting the organization’s needs).
+<br>
+<br>
+Examples of methods used to assess training effectiveness include the following:
+<br>
+<br>
+</li><li>Testing in the training context
+</li><li>Post-training surveys of training participants
+</li><li>Surveys of managers’ satisfaction with post-training effects
+</li><li>Assessment mechanisms embedded in courseware
+<br>
+<br>
+Measures may be taken to assess the benefit of the training against both the project’s and organization’s objectives. Particular attention should be paid to the need for various training methods, such as training teams as integral work units. When used, performance objectives should be shared with course participants, and should be unambiguous, observable, and verifiable. The results of the training-effectiveness assessment should be used to revise training materials as described in the Establish Training Capability specific practice.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Training-effectiveness surveys
+</li><li>Training program performance assessments
+</li><li>Instructor evaluation forms
+</li><li>Training examinations
+<br>
+<br>
+Subpractice 1: Assess in-progress or completed projects to determine whether staff knowledge is adequate for performing project tasks.
+<br>
+<br>
+Subpractice 2: Provide a mechanism for assessing the effectiveness of each training course with respect to established organizational, project, or individual learning (or performance) objectives.
+<br>
+<br>
+Subpractice 3: Obtain student evaluations of how well training activities met their needs.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the organizational training process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the organizational training process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for identifying the strategic training needs of the organization, and providing that training.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the organizational training process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the organizational training process differs from the tactical plan for organizational training described in a specific practice in this process area. The plan called for in this generic practice would address the comprehensive planning for all of the specific practices in this process area, from the establishment of strategic training needs all the way through to the assessment of the effectiveness of the organizational training effort. In contrast, the organizational training tactical plan called for in the specific practice would address the periodic planning for the delivery of individual training offerings.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the organizational training process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of people (full or part time, internal or external), and skills needed include the following:
+<br>
+<br>
+</li><li>Subject-matter experts
+</li><li>Curriculum designers
+</li><li>Instructional designers
+</li><li>Instructors
+</li><li>Training administrators
+<br>
+<br>
+Special facilities may be required for training. When necessary, the facilities required for the activities in the Organizational Training process area are developed or purchased.
+<br>
+<br>
+Examples of other resources provided include the following tools:
+<br>
+<br>
+</li><li>Instruments for analyzing training needs
+</li><li>Workstations to be used for training
+</li><li>Instructional design tools
+</li><li>Packages for developing presentation materials
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the organizational training process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the organizational training process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Knowledge and skills needs analysis
+</li><li>Instructional design
+</li><li>Instructional techniques (e.g., train the trainer)
+</li><li>Refresher training on subject matter
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the organizational training process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Organizational training tactical plan
+</li><li>Training records
+</li><li>Training materials and supporting artifacts
+</li><li>Instructor evaluation forms
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the organizational training process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Establishing a collaborative environment for discussion of training needs and training effectiveness to ensure that the organization’s training needs are met
+</li><li>Identifying training needs
+</li><li>Reviewing the organizational training tactical plan
+</li><li>Assessing training effectiveness
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the organizational training process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Number of training courses delivered (e.g., planned versus actual)
+</li><li>Post-training evaluation ratings
+</li><li>Training program quality survey ratings
+</li><li>Schedule for delivery of training
+</li><li>Schedule for development of a course
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the organizational training process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Identifying training needs and making training available
+</li><li>Providing necessary training
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Organizational training tactical plan
+</li><li>Training materials and supporting artifacts
+</li><li>Instructor evaluation forms
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the organizational training process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+This generic goal's appearance here reflects its location in the continuous representation.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined organizational training process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the organizational training process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Results of training effectiveness surveys
+</li><li>Training program performance assessment results
+</li><li>Course evaluations
+</li><li>Training requirements from an advisory group
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the organizational training process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the organizational training process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the organizational training process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the organizational training process.
+					
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

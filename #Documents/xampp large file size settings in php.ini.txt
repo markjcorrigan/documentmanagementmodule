@@ -1,0 +1,74 @@
+Fix 1: Update PHP Settings
+File: C:\xampp\php\php.ini
+
+upload_max_filesize = 2048M
+post_max_size = 2048M
+max_execution_time = 600
+max_input_time = 600
+memory_limit = 512M
+
+
+413 error means the server is blocking large uploads! This is a PHP/Apache configuration issue, not Laravel.
+Since you're using XAMPP, you need to update these settings:
+Fix 1: Update PHP Settings
+File: C:\xampp\php\php.ini
+Find and change these lines:
+iniupload_max_filesize = 2048M
+post_max_size = 2048M
+max_execution_time = 600
+max_input_time = 600
+memory_limit = 512M
+Fix 2: Update Apache Settings (if needed)
+File: C:\xampp\apache\conf\extra\httpd-default.conf
+Add this line:
+apacheLimitRequestBody 2147483648
+Fix 3: Restart XAMPP
+Stop and restart Apache in XAMPP Control Panel.
+Fix 4: Update Laravel Validation
+File: app/Http/Controllers/Admin/GuitarPieceController.php
+Change line 38:
+php'video' => 'required|file|mimes:mp4|max:2097152', // 2GB max (2048 MB * 1024)
+And line 81:
+php'video' => 'nullable|file|mimes:mp4|max:2097152', // 2GB max
+
+After making these changes:
+
+Restart XAMPP Apache
+Clear Laravel cache: php artisan config:clear
+Try uploading again
+
+Note: Videos over 2GB should work, but I recommend keeping them under 1GB for faster loading on the frontend carousel. Let me know if it still fails!#
+# This is the main Apache HTTP server configuration file.  It contains the
+# configuration directives that give the server its instructions.
+# See <URL:http://httpd.apache.org/docs/2.4/> for detailed information.
+# In particular, see 
+# <URL:http://httpd.apache.org/docs/2.4/mod/directives.htmpastedwhere must fix 2. go10:03 AMPinpointed optimal Apache configuration section for directive placement.The user wants to know where to add the LimitRequestBody directive in the Apache config file. Looking at the file they provided, I can see it's the main httpd.conf file.
+The LimitRequestBody directive should be added in a location where it applies to all requests. The best place would be:
+
+Inside the main <Directory> block for the DocumentRoot
+Or in the httpd-default.conf file which is included at the bottom
+
+Since they're asking specifically about this file, I should tell them to add it in the <Directory "C:/xampp/htdocs"> section, which starts around line 246.
+Actually, looking more carefully, the user is asking where "Fix 2" should go. Fix 2 was about adding LimitRequestBody 2147483648 to the Apache config.
+The best place would be in the <Directory "C:/xampp/htdocs"> block or globally. Let me point them to the right location.Add Fix 2 in the <Directory> block for your document root.
+Find this section (around line 246):
+apacheDocumentRoot "C:/xampp/htdocs"
+<Directory "C:/xampp/htdocs">
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Require all granted
+</Directory>
+Change it to:
+apacheDocumentRoot "C:/xampp/htdocs"
+<Directory "C:/xampp/htdocs">
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Require all granted
+    LimitRequestBody 2147483648
+</Directory>
+That's it! Just add LimitRequestBody 2147483648 inside the <Directory> block.
+Then:
+
+Save the file
+Restart Apache in XAMPP Control Panel
+Try uploading again

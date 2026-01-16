@@ -1,0 +1,41 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}DML{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+  <h3>What is the DML</h3>
+  <hr>
+  <p align="center"><img alt="Definitive Media Library" class="img-fluid" src="{{ asset('storage/images/dml.jpg') }}"></p>
+  <br>
+  <br>
+  <p align="left"><a href="/pmway/?slide=8">Click here</a> to see that the DML sits within the SD and ST processes, ultimately releasing working software that is version controlled, which asset is fully secured by the organization.</p>
+  <p align="center"><img alt="Definitive Media Library within ITIL processes" class="img-fluid" src="{{ asset('storage/images/devqastageuatprod.jpg') }}"></p>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+  <h3>What is the DML</h3>
+  <hr>
+  <p align="center"><img alt="Definitive Media Library" class="img-fluid" src="{{ asset('storage/images/dml.jpg') }}"></p>
+  <br>
+  <br>
+  <p align="left"><a href="/pmway/?slide=8">Click here</a> to see that the DML sits within the SD and ST processes, ultimately releasing working software that is version controlled, which asset is fully secured by the organization.</p>
+  <p align="center"><img alt="Definitive Media Library within ITIL processes" class="img-fluid" src="{{ asset('storage/images/devqastageuatprod.jpg') }}"></p>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

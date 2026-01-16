@@ -1,0 +1,975 @@
+{
+  "title" : "",
+  "description" : "",
+  "author" : "",
+  "width" : 1920.0,
+  "height" : 1080.0,
+  "version" : "0.5",
+  "editRate" : 30,
+  "authoringClientName" :  {
+    "name" : "Camtasia Studio",
+    "platform" : "Windows",
+    "version" : "9.0"
+  },
+  "sourceBin" : [
+    {
+      "id" : 1,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T072503",
+      "sourceTracks" : [
+        {
+          "range" : [0, 7943],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18.trec;"
+        },
+        {
+          "range" : [0, 11679744],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 1.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T073854",
+      "sourceTracks" : [
+        {
+          "range" : [0, 6667],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 1.trec;"
+        },
+        {
+          "range" : [0, 9799680],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 3,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 2.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T075927",
+      "sourceTracks" : [
+        {
+          "range" : [0, 3652],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 2.trec;"
+        },
+        {
+          "range" : [0, 5370880],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 4,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 3.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T080846",
+      "sourceTracks" : [
+        {
+          "range" : [0, 9162],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 3.trec;"
+        },
+        {
+          "range" : [0, 13466624],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 5,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 4.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T084845",
+      "sourceTracks" : [
+        {
+          "range" : [0, 5376],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 4.trec;"
+        },
+        {
+          "range" : [0, 7903232],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 6,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 5.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T085722",
+      "sourceTracks" : [
+        {
+          "range" : [0, 9227],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 5.trec;"
+        },
+        {
+          "range" : [0, 13563904],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 7,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 6.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T090546",
+      "sourceTracks" : [
+        {
+          "range" : [0, 3775],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 6.trec;"
+        },
+        {
+          "range" : [0, 5544960],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 8,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 7.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T091410",
+      "sourceTracks" : [
+        {
+          "range" : [0, 6622],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 7.trec;"
+        },
+        {
+          "range" : [0, 9734144],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 9,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 8.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T093643",
+      "sourceTracks" : [
+        {
+          "range" : [0, 25287],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 8.trec;"
+        },
+        {
+          "range" : [0, 37174272],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 10,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 9.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T095558",
+      "sourceTracks" : [
+        {
+          "range" : [0, 17361],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 9.trec;"
+        },
+        {
+          "range" : [0, 25521152],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 11,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 10.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T100923",
+      "sourceTracks" : [
+        {
+          "range" : [0, 13633],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 10.trec;"
+        },
+        {
+          "range" : [0, 20042752],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 12,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 11.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T101801",
+      "sourceTracks" : [
+        {
+          "range" : [0, 13819],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 11.trec;"
+        },
+        {
+          "range" : [0, 20314112],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 13,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 12.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T122141",
+      "sourceTracks" : [
+        {
+          "range" : [0, 6744],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 12.trec;"
+        },
+        {
+          "range" : [0, 9912320],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 14,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 13.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T123302",
+      "sourceTracks" : [
+        {
+          "range" : [0, 11855],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 13.trec;"
+        },
+        {
+          "range" : [0, 17429504],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 15,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 14.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T124412",
+      "sourceTracks" : [
+        {
+          "range" : [0, 8981],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 14.trec;"
+        },
+        {
+          "range" : [0, 13203456],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 16,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 15.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T125626",
+      "sourceTracks" : [
+        {
+          "range" : [0, 12659],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 15.trec;"
+        },
+        {
+          "range" : [0, 18608128],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 17,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 16.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T130608",
+      "sourceTracks" : [
+        {
+          "range" : [0, 8813],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 16.trec;"
+        },
+        {
+          "range" : [0, 12955648],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 18,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 17.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T131631",
+      "sourceTracks" : [
+        {
+          "range" : [0, 10516],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 17.trec;"
+        },
+        {
+          "range" : [0, 15460352],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 19,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 18.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T132654",
+      "sourceTracks" : [
+        {
+          "range" : [0, 8630],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 18.trec;"
+        },
+        {
+          "range" : [0, 12684288],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 20,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 19.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T133433",
+      "sourceTracks" : [
+        {
+          "range" : [0, 6163],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 19.trec;"
+        },
+        {
+          "range" : [0, 9057280],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 21,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 20.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T134334",
+      "sourceTracks" : [
+        {
+          "range" : [0, 4149],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 20.trec;"
+        },
+        {
+          "range" : [0, 6099968],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 22,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 21.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T134950",
+      "sourceTracks" : [
+        {
+          "range" : [0, 6221],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 21.trec;"
+        },
+        {
+          "range" : [0, 9143296],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 23,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 22.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T135652",
+      "sourceTracks" : [
+        {
+          "range" : [0, 6963],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 22.trec;"
+        },
+        {
+          "range" : [0, 10232832],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 24,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 23.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T140752",
+      "sourceTracks" : [
+        {
+          "range" : [0, 7909],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 23.trec;"
+        },
+        {
+          "range" : [0, 11626496],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 25,
+      "src" : "C:\\Users\\markc\\Documents\\Camtasia Studio\\Rec 05-23-18 24.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20180523T141519",
+      "sourceTracks" : [
+        {
+          "range" : [0, 6303],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 05-23-18 24.trec;"
+        },
+        {
+          "range" : [0, 9264128],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "metaData" : ""
+        }
+      ]
+    }
+  ],
+  "timeline" : {
+    "id" : 26,
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "duration" : 193.933333333333,
+          "title" : "",
+          "type" : "",
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0,
+                "medias" : [
+                  {
+                    "id" : 27,
+                    "_type" : "StitchedMedia",
+                    "minMediaStart" : 0,
+                    "attributes" : {
+                      "ident" : "Rec 05-23-18 24",
+                      "gain" : 1.0,
+                      "mixToMono" : false
+                    },
+                    "parameters" : {
+                      "volume" : 1.0,
+                      "cursorOpacity" : 1.0,
+                      "cursorScale" : 1.0
+                    },
+                    "medias" : [
+                        {
+                          "id" : 28,
+                          "_type" : "UnifiedMedia",
+                          "video" : 
+                              {
+                                "id" : 29,
+                                "_type" : "ScreenVMFile",
+                                "src" : 25,
+                                "trackNumber" : 0,
+                                "attributes" : {
+                                  "ident" : "Rec 05-23-18 24"
+                                },
+                                "parameters" : {
+                                  "cursorScale" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  },
+                                  "cursorOpacity" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  }
+                                },
+                                "effects" : [
+
+                                ],
+                                "start" : 0,
+                                "duration" : 5088,
+                                "mediaStart" : 0,
+                                "mediaDuration" : 5088,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              },
+                          "audio" : 
+                              {
+                                "id" : 30,
+                                "_type" : "AMFile",
+                                "src" : 25,
+                                "trackNumber" : 1,
+                                "attributes" : {
+                                  "ident" : "",
+                                  "sampleRate" : 44100,
+                                  "bitDepth" : 16,
+                                  "gain" : 1.0,
+                                  "mixToMono" : false
+                                },
+                                  "channelNumber" : "0,1",
+                                "effects" : [
+
+                                ],
+                                "start" : 0,
+                                "duration" : 5088,
+                                "mediaStart" : 0,
+                                "mediaDuration" : 5088,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              }
+,
+                          "start" : 0,
+                          "duration" : 5088,
+                          "mediaStart" : 0,
+                          "mediaDuration" : 6302,
+                          "scalar" : 1,
+                          "metadata" : {
+                            "AutoAppliedSmartFocus" : "False",
+                            "WinSubProjectDisplayName" : "",
+                            "clipSpeedAttribute" : false
+                          }
+                        },
+                        {
+                          "id" : 31,
+                          "_type" : "UnifiedMedia",
+                          "video" : 
+                              {
+                                "id" : 32,
+                                "_type" : "ScreenVMFile",
+                                "src" : 25,
+                                "trackNumber" : 0,
+                                "attributes" : {
+                                  "ident" : "Rec 05-23-18 24"
+                                },
+                                "parameters" : {
+                                  "cursorScale" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  },
+                                  "cursorOpacity" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  }
+                                },
+                                "effects" : [
+
+                                ],
+                                "start" : 5088,
+                                "duration" : 1026,
+                                "mediaStart" : 5276,
+                                "mediaDuration" : 1026,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              },
+                          "audio" : 
+                              {
+                                "id" : 33,
+                                "_type" : "AMFile",
+                                "src" : 25,
+                                "trackNumber" : 1,
+                                "attributes" : {
+                                  "ident" : "",
+                                  "sampleRate" : 44100,
+                                  "bitDepth" : 16,
+                                  "gain" : 1.0,
+                                  "mixToMono" : false
+                                },
+                                  "channelNumber" : "0,1",
+                                "effects" : [
+
+                                ],
+                                "start" : 5088,
+                                "duration" : 1026,
+                                "mediaStart" : 5276,
+                                "mediaDuration" : 1026,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              }
+,
+                          "start" : 5088,
+                          "duration" : 1026,
+                          "mediaStart" : 0,
+                          "mediaDuration" : 6302,
+                          "scalar" : 1,
+                          "metadata" : {
+                            "AutoAppliedSmartFocus" : "False",
+                            "WinSubProjectDisplayName" : "",
+                            "clipSpeedAttribute" : false
+                          }
+                        }
+                    ],
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 5818,
+                    "mediaStart" : 43,
+                    "mediaDuration" : 5818,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "AutoAppliedSmartFocus" : "False",
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "trackAttributes" : [
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "135.38461538462"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "135.38461538462"
+        }
+      }
+    ],
+    "captionAttributes" : {
+      "enabled" : true,
+      "fontName" : "Arial",
+      "fontSize" : 64,
+      "backgroundColor" : [ 0, 0, 0, 191],
+      "foregroundColor" : [ 255, 255, 255, 255],
+      "lang" : "en",
+      "alignment" : 0,
+      "defaultFontSize" : true,
+      "opacity" : 0.5,
+      "backgroundEnabled" : true,
+      "backgroundOnlyAroundText" : true
+    },
+    "backgroundColor" : [ 0, 0, 0, 255]
+  },
+  "metadata" : {
+    "AutoSaveFile" : "",
+    "CanvasZoom" : 60,
+    "Date" : "2018-05-23 09:18:08 AM",
+    "Fit" : 0,
+    "IsAutoSave" : "0",
+    "Language" : "ENU",
+    "ProfileName" : "",
+    "ProjectDimensionsChanged" : "1",
+    "Title" : "index",
+    "audioNarrationNotes" : "",
+    "calloutStyle" : "Basic",
+    "canvasDetached" : "False",
+    "canvasPositionHeight" : "0",
+    "canvasPositionLeft" : "0",
+    "canvasPositionTop" : "0",
+    "canvasPositionWidth" : "0"
+  }
+}

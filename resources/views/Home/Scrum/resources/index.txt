@@ -1,0 +1,47 @@
+NB:  
+
+---sponine is part of chapter 2 - the three roles.
+I.e. nine is sporole and sporole fires html
+
+---spoten C2 is the scrum team role  sposcrumteamrole fires html
+
+---spoeleven C2 is the scrum master role.  sposmaster fires the html
+
+---spotwelve C3 is the scrumflow.  scrumflow fires the html
+
+---spothirteen C3 is the scrum backlog scrumbacklog  fires the html
+
+---spofourteen C3 is the adaptive scrum planning 
+scrumadaptandscrumplan fires the html
+
+---spofifteen C3 is scrumacceptanceanddone scrumacceptanceanddone firest the html
+
+---sposixteen C3 is importance of value.  scrumvalue fires the html
+
+---sposeventeen C3 is riskburndownchart.  scrumrisk fires the html
+
+---spoeighteen C3 is scrumimplementation.  scrumimplementation fires the html
+
+---sponineteen C4 is sprints.  sprintplanning fires the html.
+
+---spotwenty C4 is sprintplanningmeeting.  sprintplanningmeeting fires the html
+
+---spotwentyone C4 is PO role in sprint planning.  
+
+---spotwentytwo C4 is task estimation. sprintplanningmeetingtaskestimate first html
+
+???am I missing videos---spotwentythree C5 is the sprintplanningbacklog.  sprintplanningbacklog fires the html  
+
+---spotwentyfour C6 is the daily standup meeting.  sprintdailystandup fires the html
+
+---spotwentyfive C6 is the sprint review overview.  sprintreview fires the html
+
+---spotwentysix C6 is the sprint retrospective.  sprintretrospective fires the html
+
+---spotwentyseven C6 is groom product backlog.  groomprodbacklog first the html
+
+---spotwentyeight C7 is cheif product owner.  chiefprodowner fires html
+
+---spotwentynine C7 distributed teams in scrum.  dsiteamsinscrum fires html
+
+---spothirty C7 maintain stakeholders.  maintainstake fires html.  

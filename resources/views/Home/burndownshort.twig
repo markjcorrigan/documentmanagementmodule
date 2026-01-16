@@ -1,0 +1,69 @@
+{% extends 'simplemedia.twig' %}
+
+{% block title %}
+    {% if not user %}PMWay{% else %}Sprint Burndown{% endif %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h3>The Sprint Burndown</h3>
+    <hr>
+    <p><a href="#playlist">PLAYLIST</a></p>
+
+    <div id="player" class="text-center">
+        <video id="video1" preload="false" data-able-player playsinline loop></video>
+    </div>
+
+    <div id="playlist">
+        <h2><a name="playlist"></a>Playlist</h2>
+        <ul class="able-playlist" data-player="video1">
+            <li data-poster="{{ asset('storage/images/burn_down_chart.png') }}" data-width="480" data-height="360">
+                <span class="able-source" data-type="video/mp4" data-src="/ablelvids/burndownshort/burndownshort.mp4"></span>
+                <button type="button" class="btn btn-outline-secondary">
+                    <img src="{{ asset('storage/images/burn_down_chart.png') }}" alt="Scrum Burndown Chart"> SCRUM BURNDOWN!
+                </button>
+            </li>
+            <li data-poster="{{ asset('storage/images/burn_down_chart.png') }}" data-width="480" data-height="360">
+                <span class="able-source" data-type="video/mp4" data-src="/ablelvids/burndownshort/burndownup.mp4"></span>
+                <button type="button" class="btn btn-outline-secondary">
+                    <img src="{{ asset('storage/images/burndownup.png') }}" alt="Scrum Burndown and Burnup Chart"> SCRUM BURNDOWN and BURNUP!!
+                </button>
+            </li>
+            <li data-poster="{{ asset('storage/images/agreements.jpg') }}" data-width="480" data-height="360">
+                <span class="able-source" data-type="video/mp4" data-src="/ablelvids/brokenpromises/brokenpromises.mp4"></span>
+                <button type="button" class="btn btn-outline-secondary">
+                    <img src="{{ asset('storage/images/agreements.jpg') }}" alt="Agreements"> Agile and Broken Promises - the King and the Mysterious Stranger
+                </button>
+            </li>
+        </ul>
+        <br><br>
+    </div>
+
+    <div class="text-center mb-5">
+        <button class="btn btn-primary" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#collapseburn" 
+                aria-expanded="false" 
+                aria-controls="collapseburn">
+            Ski down the guideline (target burndown)
+        </button>
+
+        <div class="collapse mt-3" id="collapseburn">
+            <div class="card text-center">
+                <h5 class="card-header">
+                    The goal is to ski down the guideline (target burndown or delivery baseline);<br>
+                    staying as close to it as possible<br>
+                    dusting issues as you go!
+                </h5>
+                <div class="card-body">
+                    <img src="{{ asset('storage/images/skiingdownbaseline.jpg') }}" alt="Skiing down baseline" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS (ensure this is included somewhere in your layout) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

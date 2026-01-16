@@ -1,0 +1,684 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+ST{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL ST Change Management</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=4') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Change Management</i> aims to control the lifecycle of all Changes. The primary objective of of this process is to enable beneficial Changes to be made, with minimum disruption to IT services.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Change Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+      <li class="toclevel-1 tocsection-6"><a href="#Examples"><span class="tocnumber">6</span> <span class="toctext">Examples</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>In <i><b>ITIL 2011</b></i> the structure of the <a class="mw-selflink selflink">Change Management</a> process has been modified to highlight that significant Changes require authorization at different points in their lifecycle. The process overview of <a href="/images/itilstone.jpg"  title="Change-management-itil.jpg">ITIL Change Management (.JPG)</a> shows the key information flows
+    o the process. </p>
+  <p>New sub-processes have been added to assess Change Proposals and to implement minor Changes. </p>
+  <p>Change Management now submits major Changes to the Change Evaluation process for a formal assessment. </p>
+  <p>Change Scheduling has been revised so that the detailed planning of a Change and the corresponding Release is performed by Release Management. </p>
+  <p>Change Management according to ITIL V3 introduced <i>Change Models</i>, putting more emphasis on defining different types of Changes and how they are to be handled. In ITIL 2011 Change Models have been given a more prominent role in Change Management, being used not only for Standard Changes (low-risk Changes on an operational level), but also for recurring significant Changes. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Change Management sub-processes:">These are the <strong class="selflink">ITIL Change Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Change-Management-Support" itemprop="itemListElement">Change Management Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide templates and guidance for the authorization of Changes, and to supply the other IT Service Management processes with information on planned and ongoing Changes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change-Proposal-Assessment" itemprop="itemListElement">Assessment of Change Proposals</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To asses Change Proposals which are typically submitted for significant Changes by Service Strategy. The purpose of assessing Change Proposals is to identify possible issues prior to the start of design activities. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="RFC-Logging" itemprop="itemListElement">RFC Logging and Review</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To filter out Requests for Change which do not contain all information required for assessment or which are deemed impractical. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Implementing-Emergency-Changes" itemprop="itemListElement">Assessment and Implementation of Emergency Changes</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess, authorize and implement an Emergency Change as quickly as possible. This process is invoked if normal Change Management procedures cannot be applied because an emergency requires immediate action. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Assessment-Change-Manager" itemprop="itemListElement">Change Assessment by the Change Manager</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To determine the required level of authorization for the assessment of a proposed Change. Significant Changes are passed on to the CAB for assessment, while minor Changes are immediately assessed and authorized by the Change Manager. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Assessment-CAB" itemprop="itemListElement">Change Assessment by the CAB</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a proposed Change and authorize the Change planning phase. If required, higher levels of authority (e.g. IT Management) are involved in the authorization process. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change-Scheduling" itemprop="itemListElement">Change Scheduling and Build Authorization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To authorize detailed Change and Release planning, and to assess the resulting Project Plan prior to authorizing the Change Build phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Deployment" itemprop="itemListElement">Change Deployment Authorization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess if all required Change components have been built and properly tested, and to authorize the Change Deployment phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Minor-Change-Deployment-ITIL" itemprop="itemListElement">Minor Change Deployment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To implement low-risk, well-understood Changes which do not require the involvement of Release Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-PIR" itemprop="itemListElement">Post Implementation Review and Change Closure</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess the course of the Change implementation and the achieved results, in order to verify that a complete history if activities is present for future reference, and to make sure that any mistakes are analyzed and lessons learned. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Change Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="CAB-Agenda" itemprop="itemListElement">CAB Agenda Template</span></b> </p>
+    <ul>
+      <li itemprop="description">The CAB Agenda lists the topics for discussion in a CAB meeting. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change" itemprop="itemListElement">Change</span></b> </p>
+    <ul>
+      <li itemprop="description">The addition, modification or removal of anything that could have an effect on IT services. The scope should include changes to all architectures, processes, tools, metrics and documentation, as well as changes to IT services and other configuration items. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Evaluation-Report" itemprop="itemListElement">Change Evaluation Report</span></b> </p>
+    <ul>
+      <li itemprop="description">Certain types of major Changes, like the introduction of a new service or a substantial change to an existing service, require formal Change evaluations before being authorized. The results of a formal Change evaluation are documented in a Change Evaluation Report. Change evaluations may be used at different points in a Change's lifecycle, for example before authorizing the Change/ Release build or during the Post Implementation Review (PIR). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Evaluation-Policy" itemprop="itemListElement">Change Management Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">The decision to authorize or reject a proposed Change is based on the completed Change Assessment. In particular, the assessment is about properly understanding the risks associated with the implementation of a Change. In this context, the Change Management Policy specifies the levels of authorization required to authorize different types of Changes and other rules for assessing Changes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change-Model" itemprop="itemListElement">Change Model</span></b> </p>
+    <ul>
+      <li itemprop="description">Change Models describe procedures for the handling of recurring Changes. While Change Models can be created for Changes of any scale, they are often used to define Standard Changes (low-risk, pre-authorized Changes like installing additional hardware on a client PC). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change-Proposal" itemprop="itemListElement">Change Proposal</span></b> </p>
+    <ul>
+      <li itemprop="description">A Change Proposal describes a proposed major Change, like the introduction of a new service or a substantial change to an existing service. The purpose of Change Proposals is to communicate a proposed major Change and assess its risk, impact and feasibility before design activities begin. Change Proposals are typically created in Service Portfolio Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Record" itemprop="itemListElement">Change Record</span></b> </p>
+    <ul>
+      <li itemprop="description">The Change Record contains all the details of a Change, documenting the lifecycle of a single Change. It is usually created on the basis of a preceding Request for Change (RFC). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Schedule" itemprop="itemListElement">Change Schedule</span></b> </p>
+    <ul>
+      <li itemprop="description">A Document that lists all approved Change Proposals and Changes and their planned implementation dates. A Change Schedule is sometimes called a <i>Forward Schedule of Change (FSC)</i>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Emergency-Change-ITIL" itemprop="itemListElement">Emergency Change</span></b> </p>
+    <ul>
+      <li itemprop="description">A Change that must be introduced as soon as possible - for example, to resolve a major incident or implement a security patch. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="PSO" itemprop="itemListElement">Projected Service Outage (PSO)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Projected Service Outage (PSO) document lists any expected deviations from the service availability agreed in SLAs. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-RFC" itemprop="itemListElement">Request for Change (RFC)</span></b> </p>
+    <ul>
+      <li itemprop="description">A formal request for a Change to be implemented. An RFC, specifying the details of the proposed Change, must be submitted to Change Management for every non-standard Change (NB: ITIL Checklist Request for Change - RFC). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="RFC-Template" itemprop="itemListElement">RFC Template</span></b> </p>
+    <ul>
+      <li itemprop="description">A template to be used when formally requesting a Change. An RFC includes details of the proposed Change, and may be recorded on paper or electronically. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Transition#ITIL_KPIs_Change_Management" title="ITIL KPIs Change Management">Key Performance Indicators (KPIs) Change Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL-Checklists#Change_Management">Change Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Request_for_Change_RFC" title="Checklist Request for Change RFC">Request for Change (RFC template)</a>, and</li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Change_Record">Change Record</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Change_Classification">Change Classification</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_CAB_Agenda">CAB Agenda</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Forward_Schedule_of_Changes_(FSC)">Forward Schedule of Changes (FSC checklist)</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Post_Implementation_Review_(PIR)">Post Implementation Review (PIR template)</a></li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Change-Manager">Change Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Change Manager controls the lifecycle of all Changes.</li>
+    <li>His primary objective is to enable beneficial Changes to be made, with minimum disruption to IT services.</li>
+    <li>For important Changes, the Change Manager will refer the authorization of Changes to the Change Advisory Board (CAB).</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="CAB">Change Advisory Board (CAB)</span></b> </p>
+  <ul>
+    <li>A group of people that advises the Change Manager in the assessment, prioritization and scheduling of Changes.</li>
+    <li>This board is usually made up of representatives from all areas within the IT organization, the business, and third parties such as suppliers.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="ECAB">Emergency Change Advisory Board (ECAB)</span></b> </p>
+  <ul>
+    <li>A sub-set of the Change Advisory Board who makes decisions about high impact Emergency Changes.</li>
+    <li>Membership of the ECAB may be decided at the time a meeting is called, and depends on the nature of the Emergency Change.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="6"><b>Responsibility Matrix: ITIL Change Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Change Manager </th>
+        <th style="background:#ffffee;">Change Advisory Board (CAB) </th>
+        <th style="background:#ffffee;">Emergency Change Advisory Board (ECAB) </th>
+        <th style="background:#ffffee;">IT Operator </th>
+        <th style="background:#ffffee;">Other Roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Management Support </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Assessment of Change Proposals </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">RFC Logging and Pre-Evaluation </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Assessment and Implementation of Emergency Changes </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Assessment by the Change Manager </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Assessment by the CAB </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Scheduling and Build Authorization </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Deployment Authorization </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Minor Change Deployment </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Post Implementation Review and Change Closure </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Change Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within ITIL Change Management.</span> </p>
+  <p><span id="CM-CAB">[3] The documents created or managed by this process must be approved by the CAB.</span> </p>
+  <p><span id="CM-Group1">[4] Applications Analyst, Technical Analyst, IT Operator (and others, as appropriate)</span> </p>
+  <p><span id="CM-Group2">[5] Configuration Manager, Applications Analyst, Technical Analyst (and others, as appropriate).</span> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Examples">Examples</span></h2>
+  <p>The <a rel="nofollow" class="external text" href="https://en.it-processmaps.com/itil/itil-iso20000-downloads.html#downloads-itil-screenshots">ITIL Process Map screenshots</a> show samples of the ITIL process templates with contents from Service Transition and ITIL Change Management, including the </p>
+  <ul>
+    <li>high-level view of the ITIL Service Lifecycle (Level 0)</li>
+    <li>overview of the Service Transition process (Level 1)</li>
+    <li>overview of the Change Management process (Level 2)</li>
+    <li>detailed process flow for the process "Assessment of Change Proposals" (Level 3)</li>
+  </ul>
+  <p>&#160;</p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL ST Change Management</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=4') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Change Management</i> aims to control the lifecycle of all Changes. The primary objective of of this process is to enable beneficial Changes to be made, with minimum disruption to IT services.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Change Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+      <li class="toclevel-1 tocsection-6"><a href="#Examples"><span class="tocnumber">6</span> <span class="toctext">Examples</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>In <i><b>ITIL 2011</b></i> the structure of the <a class="mw-selflink selflink">Change Management</a> process has been modified to highlight that significant Changes require authorization at different points in their lifecycle. The process overview of <a href="/images/itilstone.jpg"  title="Change-management-itil.jpg">ITIL Change Management (.JPG)</a> shows the key information flows
+    o the process. </p>
+  <p>New sub-processes have been added to assess Change Proposals and to implement minor Changes. </p>
+  <p>Change Management now submits major Changes to the Change Evaluation process for a formal assessment. </p>
+  <p>Change Scheduling has been revised so that the detailed planning of a Change and the corresponding Release is performed by Release Management. </p>
+  <p>Change Management according to ITIL V3 introduced <i>Change Models</i>, putting more emphasis on defining different types of Changes and how they are to be handled. In ITIL 2011 Change Models have been given a more prominent role in Change Management, being used not only for Standard Changes (low-risk Changes on an operational level), but also for recurring significant Changes. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Change Management sub-processes:">These are the <strong class="selflink">ITIL Change Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Change-Management-Support" itemprop="itemListElement">Change Management Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide templates and guidance for the authorization of Changes, and to supply the other IT Service Management processes with information on planned and ongoing Changes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change-Proposal-Assessment" itemprop="itemListElement">Assessment of Change Proposals</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To asses Change Proposals which are typically submitted for significant Changes by Service Strategy. The purpose of assessing Change Proposals is to identify possible issues prior to the start of design activities. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="RFC-Logging" itemprop="itemListElement">RFC Logging and Review</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To filter out Requests for Change which do not contain all information required for assessment or which are deemed impractical. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Implementing-Emergency-Changes" itemprop="itemListElement">Assessment and Implementation of Emergency Changes</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess, authorize and implement an Emergency Change as quickly as possible. This process is invoked if normal Change Management procedures cannot be applied because an emergency requires immediate action. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Assessment-Change-Manager" itemprop="itemListElement">Change Assessment by the Change Manager</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To determine the required level of authorization for the assessment of a proposed Change. Significant Changes are passed on to the CAB for assessment, while minor Changes are immediately assessed and authorized by the Change Manager. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Assessment-CAB" itemprop="itemListElement">Change Assessment by the CAB</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess a proposed Change and authorize the Change planning phase. If required, higher levels of authority (e.g. IT Management) are involved in the authorization process. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change-Scheduling" itemprop="itemListElement">Change Scheduling and Build Authorization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To authorize detailed Change and Release planning, and to assess the resulting Project Plan prior to authorizing the Change Build phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Deployment" itemprop="itemListElement">Change Deployment Authorization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess if all required Change components have been built and properly tested, and to authorize the Change Deployment phase. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Minor-Change-Deployment-ITIL" itemprop="itemListElement">Minor Change Deployment</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To implement low-risk, well-understood Changes which do not require the involvement of Release Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-PIR" itemprop="itemListElement">Post Implementation Review and Change Closure</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To assess the course of the Change implementation and the achieved results, in order to verify that a complete history if activities is present for future reference, and to make sure that any mistakes are analyzed and lessons learned. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Change Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="CAB-Agenda" itemprop="itemListElement">CAB Agenda Template</span></b> </p>
+    <ul>
+      <li itemprop="description">The CAB Agenda lists the topics for discussion in a CAB meeting. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change" itemprop="itemListElement">Change</span></b> </p>
+    <ul>
+      <li itemprop="description">The addition, modification or removal of anything that could have an effect on IT services. The scope should include changes to all architectures, processes, tools, metrics and documentation, as well as changes to IT services and other configuration items. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Evaluation-Report" itemprop="itemListElement">Change Evaluation Report</span></b> </p>
+    <ul>
+      <li itemprop="description">Certain types of major Changes, like the introduction of a new service or a substantial change to an existing service, require formal Change evaluations before being authorized. The results of a formal Change evaluation are documented in a Change Evaluation Report. Change evaluations may be used at different points in a Change's lifecycle, for example before authorizing the Change/ Release build or during the Post Implementation Review (PIR). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Evaluation-Policy" itemprop="itemListElement">Change Management Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">The decision to authorize or reject a proposed Change is based on the completed Change Assessment. In particular, the assessment is about properly understanding the risks associated with the implementation of a Change. In this context, the Change Management Policy specifies the levels of authorization required to authorize different types of Changes and other rules for assessing Changes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change-Model" itemprop="itemListElement">Change Model</span></b> </p>
+    <ul>
+      <li itemprop="description">Change Models describe procedures for the handling of recurring Changes. While Change Models can be created for Changes of any scale, they are often used to define Standard Changes (low-risk, pre-authorized Changes like installing additional hardware on a client PC). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-Change-Proposal" itemprop="itemListElement">Change Proposal</span></b> </p>
+    <ul>
+      <li itemprop="description">A Change Proposal describes a proposed major Change, like the introduction of a new service or a substantial change to an existing service. The purpose of Change Proposals is to communicate a proposed major Change and assess its risk, impact and feasibility before design activities begin. Change Proposals are typically created in Service Portfolio Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Record" itemprop="itemListElement">Change Record</span></b> </p>
+    <ul>
+      <li itemprop="description">The Change Record contains all the details of a Change, documenting the lifecycle of a single Change. It is usually created on the basis of a preceding Request for Change (RFC). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Change-Schedule" itemprop="itemListElement">Change Schedule</span></b> </p>
+    <ul>
+      <li itemprop="description">A Document that lists all approved Change Proposals and Changes and their planned implementation dates. A Change Schedule is sometimes called a <i>Forward Schedule of Change (FSC)</i>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Emergency-Change-ITIL" itemprop="itemListElement">Emergency Change</span></b> </p>
+    <ul>
+      <li itemprop="description">A Change that must be introduced as soon as possible - for example, to resolve a major incident or implement a security patch. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="PSO" itemprop="itemListElement">Projected Service Outage (PSO)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Projected Service Outage (PSO) document lists any expected deviations from the service availability agreed in SLAs. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL-RFC" itemprop="itemListElement">Request for Change (RFC)</span></b> </p>
+    <ul>
+      <li itemprop="description">A formal request for a Change to be implemented. An RFC, specifying the details of the proposed Change, must be submitted to Change Management for every non-standard Change (NB: ITIL Checklist Request for Change - RFC). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="RFC-Template" itemprop="itemListElement">RFC Template</span></b> </p>
+    <ul>
+      <li itemprop="description">A template to be used when formally requesting a Change. An RFC includes details of the proposed Change, and may be recorded on paper or electronically. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Transition#ITIL_KPIs_Change_Management" title="ITIL KPIs Change Management">Key Performance Indicators (KPIs) Change Management</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL-Checklists#Change_Management">Change Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Request_for_Change_RFC" title="Checklist Request for Change RFC">Request for Change (RFC template)</a>, and</li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Change_Record">Change Record</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Change_Classification">Change Classification</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_CAB_Agenda">CAB Agenda</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Forward_Schedule_of_Changes_(FSC)">Forward Schedule of Changes (FSC checklist)</a></li>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Post_Implementation_Review_(PIR)">Post Implementation Review (PIR template)</a></li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Change-Manager">Change Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Change Manager controls the lifecycle of all Changes.</li>
+    <li>His primary objective is to enable beneficial Changes to be made, with minimum disruption to IT services.</li>
+    <li>For important Changes, the Change Manager will refer the authorization of Changes to the Change Advisory Board (CAB).</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="CAB">Change Advisory Board (CAB)</span></b> </p>
+  <ul>
+    <li>A group of people that advises the Change Manager in the assessment, prioritization and scheduling of Changes.</li>
+    <li>This board is usually made up of representatives from all areas within the IT organization, the business, and third parties such as suppliers.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="ECAB">Emergency Change Advisory Board (ECAB)</span></b> </p>
+  <ul>
+    <li>A sub-set of the Change Advisory Board who makes decisions about high impact Emergency Changes.</li>
+    <li>Membership of the ECAB may be decided at the time a meeting is called, and depends on the nature of the Emergency Change.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="6"><b>Responsibility Matrix: ITIL Change Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Change Manager </th>
+        <th style="background:#ffffee;">Change Advisory Board (CAB) </th>
+        <th style="background:#ffffee;">Emergency Change Advisory Board (ECAB) </th>
+        <th style="background:#ffffee;">IT Operator </th>
+        <th style="background:#ffffee;">Other Roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Management Support </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Assessment of Change Proposals </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">RFC Logging and Pre-Evaluation </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Assessment and Implementation of Emergency Changes </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Assessment by the Change Manager </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Assessment by the CAB </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Scheduling and Build Authorization </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Change Deployment Authorization </td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Minor Change Deployment </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Post Implementation Review and Change Closure </td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Change Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within ITIL Change Management.</span> </p>
+  <p><span id="CM-CAB">[3] The documents created or managed by this process must be approved by the CAB.</span> </p>
+  <p><span id="CM-Group1">[4] Applications Analyst, Technical Analyst, IT Operator (and others, as appropriate)</span> </p>
+  <p><span id="CM-Group2">[5] Configuration Manager, Applications Analyst, Technical Analyst (and others, as appropriate).</span> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Examples">Examples</span></h2>
+  <p>The <a rel="nofollow" class="external text" href="https://en.it-processmaps.com/itil/itil-iso20000-downloads.html#downloads-itil-screenshots">ITIL Process Map screenshots</a> show samples of the ITIL process templates with contents from Service Transition and ITIL Change Management, including the </p>
+  <ul>
+    <li>high-level view of the ITIL Service Lifecycle (Level 0)</li>
+    <li>overview of the Service Transition process (Level 1)</li>
+    <li>overview of the Change Management process (Level 2)</li>
+    <li>detailed process flow for the process "Assessment of Change Proposals" (Level 3)</li>
+  </ul>
+  <p>&#160;</p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,89 @@
+Mailgun SMTP Authentication Failed (Error 535) - Solution Documentation
+Problem
+SMTP authentication fails with error:
+Failed to authenticate on SMTP server with username "postmaster@pmway.hopto.org"
+Error code "535" - Authentication failed
+Root Cause
+Mailgun has IP restrictions enabled. When your server's IP address changes (common with home hosting/dynamic IPs), Mailgun blocks SMTP authentication even with correct credentials.
+
+Solution
+Step 1: Find Your Current IP Address
+Option A - Using PowerShell:
+powershellcurl ifconfig.me
+Option B - Using Browser:
+Visit: https://whatismyipaddress.com/
+Copy the IP address (e.g., 197.87.217.96)
+
+Step 2: Add IP to Mailgun Allowlist
+
+Login to Mailgun Dashboard: https://app.mailgun.com/ (or https://app.eu.mailgun.com/ for EU)
+Click on your account email/name in the top right corner
+Select "IP Access Management" from the dropdown menu
+Click "Add IP Address" or similar button
+Paste your IP address from Step 1
+Save changes
+
+
+Step 3: Clear Laravel Config Cache
+bashphp artisan config:clear
+php artisan cache:clear
+
+Step 4: Restart Your Web Server
+For XAMPP:
+
+Open XAMPP Control Panel
+Stop Apache
+Start Apache
+
+
+Step 5: Test Email
+bashphp artisan tinker
+Then in tinker:
+phpMail::raw('Test', function($m) { $m->to('your-email@example.com')->subject('Test'); });
+Expected result: = null (success)
+
+Alternative Solution (Recommended for Dynamic IPs)
+If your IP address changes frequently, consider switching from SMTP to Mailgun API which doesn't have IP restrictions.
+Update .env file:
+envMAIL_MAILER=mailgun
+MAIL_HOST=smtp.eu.mailgun.org
+MAIL_PORT=587
+MAIL_USERNAME=postmaster@pmway.hopto.org
+MAIL_PASSWORD="your-password-here"
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=postmaster@pmway.hopto.org
+
+# Add these API settings:
+MAILGUN_DOMAIN=pmway.hopto.org
+MAILGUN_SECRET=key-YOUR_API_KEY_HERE
+MAILGUN_ENDPOINT=api.eu.mailgun.net
+Get Your Mailgun API Key:
+
+Go to Settings → API Keys in Mailgun dashboard
+Copy your Private API key (starts with key-)
+Paste into MAILGUN_SECRET in .env
+
+Clear cache and test:
+bashphp artisan config:clear
+php artisan tinker
+phpMail::raw('Test', function($m) { $m->to('your-email@example.com')->subject('Test'); });
+
+Quick Reference
+IssueLocation in Mailgun DashboardIP AllowlistTop right account menu → IP Access ManagementSMTP CredentialsSending → Domain settings → SMTP credentialsAPI KeysSettings → API KeysDomain StatusSending → DomainsRegion CheckTop right corner (shows "EU" or "US")
+
+Notes
+
+SMTP Method: Requires IP to be added to allowlist every time IP changes
+API Method: No IP restrictions, better for dynamic IPs
+Remember to clear config cache after any .env changes
+Always restart web server after updating credentials
+
+
+Verify Your Settings
+Check .env has:
+envMAIL_MAILER=smtp  # or 'mailgun' for API
+MAIL_HOST=smtp.eu.mailgun.org  # Use smtp.mailgun.org for US region
+MAIL_PORT=587
+MAIL_ENCRYPTION=tls
+For EU region servers: Use smtp.eu.mailgun.org and api.eu.mailgun.net
+For US region servers: Use smtp.mailgun.org and api.mailgun.net

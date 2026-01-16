@@ -1,0 +1,755 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>REQM</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header"><table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="3%"><p><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="52%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+</div>
+<!-- #BeginEditable "content" -->
+
+
+	<div id="contentWrapper">
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong>Requirements Management 
+					(REQM)</strong><br />
+					<br />
+					</td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>Requirements Management (REQM) is about managing versions of Requirements as well as the relationship between the requiirements and the project deliverables.
+The relationship between the requirements and other project deliverables can be seen using a <a href="http://en.wikipedia.org/wiki/traceability_matrix">Traceability Matrix</a> that correlates any two <i>baselined documents</i>, for example cross referencing
+a given requirement to a design section or cross referencing a requirement with a test case that verifies the presence of the given requirement.
+
+ 
+</p>
+
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Requirements Management (REQM)<br />An Engineering Process Area at Maturity Level 2</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Requirements Management (REQM) is to manage the requirements of the project’s products and product components and to identify inconsistencies between those requirements and the project’s plans and work products.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+Requirements management processes manage all requirements received or generated by the project, including both technical and nontechnical requirements as well as those requirements levied on the project by the organization. In particular, if the Requirements Development process area is implemented, its processes will generate product and product component requirements that will also be managed by the requirements management processes. Throughout the process areas, where we use the terms product and product component, their intended meanings also encompass services and their components. When the Requirements Management, Requirements Development, and Technical Solution process areas are all implemented, their associated processes may be closely tied and be performed concurrently.
+<br>
+<br>
+The project takes appropriate steps to ensure that the agreed-on set of requirements is managed to support the planning and execution needs of the project. When a project receives requirements from an approved requirements provider, the requirements are reviewed with the requirements provider to resolve issues and prevent misunderstanding before the requirements are incorporated into the project’s plans. Once the requirements provider and the requirements receiver reach an agreement, commitment to the requirements is obtained from the project participants. The project manages changes to the requirements as they evolve and identifies any inconsistencies that occur among the plans, work products, and requirements.
+<br>
+<br>
+Part of the management of requirements is to document requirements changes and rationale and to maintain bidirectional traceability between source requirements and all product and product component requirements (See the definition of “bidirectional traceability” in the glossary.)
+<br>
+<br>
+All development projects have requirements. In the case of a project that is focused on maintenance activities, the changes to the product or product components are based on changes to the existing requirements, design, or implementation. The requirements changes, if any, might be documented in change requests from the customer or users, or they might take the form of new requirements received from the requirements development process. Regardless of their source or form, the maintenance activities that are driven by changes to requirements are managed accordingly.
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Requirements Development process area for more information about transforming stakeholder needs into product requirements and deciding how to allocate or distribute requirements among the product components.
+<br>
+<br>
+Refer to the Technical Solution process area for more information about transforming requirements into technical solutions.
+<br>
+<br>
+Refer to the Project Planning process area for more information about how project plans reflect requirements and need to be revised as requirements change.
+<br>
+<br>
+Refer to the Configuration Management process area for more information about baselines and controlling changes to configuration documentation for requirements.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about tracking and controlling the activities and work products that are based on the requirements and taking appropriate corrective action.
+<br>
+<br>
+Refer to the Risk Management process area for more information about identifying and handling risks associated with requirements.
+<br>
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1 Manage Requirements</b>
+<br>
+Requirements are managed and inconsistencies with project plans and work products are identified.
+<br>
+<br>
+The project maintains a current and approved set of requirements over the life of the project by doing the following:
+<br>
+<br>
+<li>Managing all changes to the requirements
+</li><li>Maintaining the relationships among the requirements, the project plans, and the work products
+</li><li>Identifying inconsistencies among the requirements, the project plans, and the work products
+</li><li>Taking corrective action
+<br>
+<br>
+Refer to the Technical Solution process area for more information about determining the feasibility of the requirements.
+<br>
+<br>
+Refer to the Requirements Development process area for more information about ensuring that the requirements reflect the needs and expectations of the customer.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about taking corrective action.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<a name="sp11"></a>
+<b>SP 1.1 Obtain an Understanding of Requirements</b>
+<br>
+<br>
+Develop an understanding with the requirements providers on the meaning of the requirements.
+<br>
+<br>
+As the project matures and requirements are derived, all activities or disciplines will receive requirements. To avoid requirements creep, criteria are established to designate appropriate channels, or official sources, from which to receive requirements. The receiving activities conduct analyses of the requirements with the requirements provider to ensure that a compatible, shared understanding is reached on the meaning of the requirements. The result of this analysis and dialog is an agreed-to set of requirements.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Lists of criteria for distinguishing appropriate requirements providers
+</li><li>Criteria for evaluation and acceptance of requirements
+</li><li>Results of analyses against criteria
+</li><li>An agreed-to set of requirements
+<br>
+<br>
+Subpractice 1: Establish criteria for distinguishing appropriate requirements providers.
+<br>
+<br>
+Subpractice 2: Establish objective criteria for the evaluation and acceptance of requirements.
+<br>
+<br>
+Lack of evaluation and acceptance criteria often results in inadequate verification, costly rework, or customer rejection.
+<br>
+<br>
+Examples of evaluation and acceptance criteria include the following:
+<br>
+<br>
+</li><li>Clearly and properly stated
+</li><li>Complete
+</li><li>Consistent with each other
+</li><li>Uniquely identified
+</li><li>Appropriate to implement
+</li><li>Verifiable (testable)
+</li><li>Traceable
+<br>
+<br>
+Subpractice 3: Analyze requirements to ensure that the established criteria are met.
+<br>
+<br>
+Subpractice 4: Reach an understanding of the requirements with the requirements provider so that the project participants can commit to them.
+<br>
+<br>
+<a name="sp12"></a> 
+<b>SP 1.2 Obtain Commitment to Requirements</b>
+<br>
+<br>
+Obtain commitment to the requirements from the project participants.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about monitoring the commitments made.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+When integrated teams are formed, the project participants are the integrated teams and their members. Commitment to the requirement for interacting with other integrated teams is as important for each integrated team as its commitments to product and other project requirements.
+<br>
+<br>
+Whereas the previous specific practice dealt with reaching an understanding with the requirements providers, this specific practice deals with agreements and commitments among those who have to carry out the activities necessary to implement the requirements. Requirements evolve throughout the project, especially as described by the specific practices of the Requirements Development process area and the Technical Solution process area. As the requirements evolve, this specific practice ensures that project participants commit to the current, approved requirements and the resulting changes in project plans, activities, and work products.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Requirements impact assessments
+</li><li>Documented commitments to requirements and requirements changes
+<br>
+<br>
+Subpractice 1: Assess the impact of requirements on existing commitments.
+<br>
+<br>
+The impact on the project participants should be evaluated when the requirements change or at the start of a new requirement.
+<br>
+<br>
+Subpractice 2:Negotiate and record commitments.
+<br>
+<br>
+Changes to existing commitments should be negotiated before project participants commit to the requirement or requirement change.
+<br>
+<br>
+<a name="sp13"></a> 
+<b>SP 1.3 Manage Requirements Changes</b>
+<br>
+<br>
+Manage changes to the requirements as they evolve during the project.
+<br>
+<br>
+Refer to the Configuration Management process area for more information about maintaining and controlling the requirements baseline and on making the requirements and change data available to the project.
+<br>
+<br>
+During the project, requirements change for a variety of reasons. As needs change and as work proceeds, additional requirements are derived and changes may have to be made to the existing requirements. It is essential to manage these additions and changes efficiently and effectively. To effectively analyze the impact of the changes, it is necessary that the source of each requirement is known and the rationale for any change is documented. The project manager may, however, want to track appropriate measures of requirements volatility to judge whether new or revised controls are necessary.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Requirements status
+</li><li>Requirements database
+</li><li>Requirements decision database
+<br>
+<br>
+Subpractice 1: Document all requirements and requirements changes that are given to or generated by the project.
+<br>
+<br>
+Subpractice 2: Maintain the requirements change history with the rationale for the changes.
+<br>
+<br>
+Maintaining the change history helps track requirements volatility.
+<br>
+<br>
+Subpractice 3: Evaluate the impact of requirement changes from the standpoint of relevant stakeholders.
+<br>
+<br>
+Subpractice 4: Make the requirements and change data available to the project.
+<br>
+<br>
+<a name="sp14"></a> 
+<b>SP 1.4 Maintain Bidirectional Traceability of Requirements</b>
+<br>
+<br>
+Maintain bidirectional traceability among the requirements and work products.
+<br>
+<br>
+The intent of this specific practice is to maintain the bidirectional traceability of requirements for each level of product decomposition. (See the definition of “bidirectional traceability” in the glossary.) When the requirements are managed well, traceability can be established from the source requirement to its lower level requirements and from the lower level requirements back to their source. Such bidirectional traceability helps determine that all source requirements have been completely addressed and that all lower level requirements can be traced to a valid source.
+<br>
+<br>
+Requirements traceability can also cover the relationships to other entities such as intermediate and final work products, changes in design documentation, and test plans. The traceability can cover horizontal relationships, such as across interfaces, as well as vertical relationships. Traceability is particularly needed in conducting the impact assessment of requirements changes on the project's activities and work products.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Requirements traceability matrix
+</li><li>Requirements tracking system
+<br>
+<br>
+Subpractice 1: Maintain requirements traceability to ensure that the source of lower level (derived) requirements is documented.
+<br>
+<br>
+Subpractice 2: Maintain requirements traceability from a requirement to its derived requirements and allocation to functions, interfaces, objects, people, processes, and work products.
+<br>
+<br>
+Subpractice 3: Generate the requirements traceability matrix.
+<br>
+<br>
+<a name="sp15"></a> 
+<b>SP 1.5 Identify Inconsistencies Between Project Work and Requirements</b>
+<br>
+<br>
+Identify inconsistencies between the project plans and work products and the requirements.
+<br>
+<br>
+Refer to the Project Monitoring and Control process area for more information about monitoring and controlling the project plans and work products for consistency with requirements and taking corrective actions when necessary.
+<br>
+<br>
+This specific practice finds the inconsistencies between the requirements and the project plans and work products and initiates the corrective action to fix them.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Documentation of inconsistencies including sources, conditions, and rationale
+</li><li>Corrective actions
+<br>
+<br>
+Subpractice: 1 Review the project’s plans, activities, and work products for consistency with the requirements and the changes made to them.
+<br>
+<br>
+Subpractice: 2 Identify the source of the inconsistency and the rationale.
+<br>
+<br>
+Subpractice: 3 Identify changes that need to be made to the plans and work products resulting from changes to the requirements baseline.
+<br>
+<br>
+Subpractice: 4 Initiate corrective actions.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the requirements management process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the requirements management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for managing requirements and identifying inconsistencies between the requirements and the project plans and work products.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the requirements management process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the requirements management process can be part of (or referenced by) the project plan as described in the Project Planning process area.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the requirements management process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of resources provided include the following tools:
+<br>
+<br>
+</li><li>Requirements tracking tools
+</li><li>Traceability tools
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the requirements management process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the requirements management process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Application domain
+</li><li>Requirements definition, analysis, review, and management
+</li><li>Requirements management tools
+</li><li>Configuration management
+</li><li>Negotiation and conflict resolution
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the requirements management process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Requirements
+</li><li>Requirements traceability matrix
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the requirements management process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Select relevant stakeholders from customers, end users, developers, producers, testers, suppliers, marketers, maintainers, disposal personnel, and others who may be affected by, or may affect, the product as well as the process.
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Resolving issues on the understanding of the requirements
+</li><li>Assessing the impact of requirements changes
+</li><li>Communicating the bidirectional traceability
+</li><li>Identifying inconsistencies among project plans, work products, and requirements
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the requirements management process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Requirements volatility (percentage of requirements changed)
+</li><li>Schedule for coordination of requirements
+</li><li>Schedule for analysis of a proposed requirements change
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the requirements management process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Managing requirements
+</li><li>Identifying inconsistencies among project plans, work products, and requirements
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Requirements
+</li><li>Requirements traceability matrix
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the requirements management process with higher level management and resolve issues.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Proposed changes to commitments to be made external to the organization are reviewed with higher level management to ensure that all commitments can be accomplished.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+This generic goal's appearance here reflects its location in the continuous representation.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined requirements management process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the requirements management process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Requirements traceability matrix
+</li><li>Number of unfunded requirements changes after baselining
+</li><li>Lessons learned in resolving ambiguous requirements
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the requirements management process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the requirements management process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the requirements management process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the requirements management process.
+</li>					
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

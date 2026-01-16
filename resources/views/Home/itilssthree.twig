@@ -1,0 +1,343 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SS{% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SS Financial Management</h3>
+  <p><i><a href="/home/itilss">Back to ITIL SS</a></i></p>
+  <p><a href="{{ asset('storage/assets/sssummary.pdf#page=15') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective</span></b>: <span id="md-webpage-description" itemprop="description">The objective of <i>ITIL Financial Management for IT Services</i> is to manage the service provider's budgeting, accounting and charging requirements.</span></p>
+  <p><b>Part of</b>: Service Strategy </p>
+  <p><b>Process Owner</b>: Financial Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Essentially, the activities and process objectives of Financial Management in ITIL V3 (2007) and the <i>Financial Management for IT Services</i> process according to <i><b>ITIL 2011</b></i> have not changed. </p>
+  <p>The interfaces between Financial Management and the other ITIL processes have been adjusted to reflect the new ITIL 2011 process structure. The process overview of <a href="/images/itilssthree.jpg"  title="Itil-financial-management.jpg">ITIL Financial Management (.JPG)</a> shows the key information flows (<i>see Fig. 1</i>). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Financial Management sub-processes:">These are the <strong class="selflink">ITIL Financial Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Financial_Management_Support" itemprop="itemListElement">Financial Management Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define the necessary structures for the management of financial planning data and costs, as well as for the allocation of costs to services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Financial_Management_Planning" itemprop="itemListElement">Financial Planning</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To determine the required financial resources over the next planning period ("IT Budget"), and to allocate those resources for optimum benefits. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Financial_Management_Analysis" itemprop="itemListElement">Financial Analysis and Reporting</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To analyze the structure of service provisioning cost and the profitability of services. The resulting financial analysis allows Service Portfolio Management to make informed decisions when deciding about changes to the Service Portfolio. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Financial_Management_IT_Services_Invoicing" itemprop="itemListElement">Service Invoicing</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To issue invoices for the provision of services and transmission of the invoice to the customer. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in Financial Management for IT Services to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Budget_Request" itemprop="itemListElement">Budget Request</span></b> </p>
+    <ul>
+      <li itemprop="description">A request for a budget, typically issued from any of the Service Management processes at the same time when compiling a Request for Change. An approved Budget Request means that the required financial resources for implementing a Change are approved by Financial Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Budget_Allocation" itemprop="itemListElement">Budget Allocation</span></b> </p>
+    <ul>
+      <li itemprop="description">A budget allocated by the Financial Manager to implement a Change. Budget Allocations are issued in response to Budget Requests originating from any Service Management process in conjunction with Requests for Change. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Cost_Data_for_Service_Provisioning" itemprop="itemListElement">Cost Data for Service Provisioning</span></b> </p>
+    <ul>
+      <li itemprop="description">The cost for providing a service, calculated by Financial Management as a basis for calculating the price a customer is expected to pay for a service. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Financial_Analysis" itemprop="itemListElement">Financial Analysis</span></b> </p>
+    <ul>
+      <li itemprop="description">The Financial Analysis is an important input to the Portfolio Management process. It contains information on the costs for providing services and provides insight into the profitability of services and customers (NB: ITIL Checklist Financial Analysis). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Financial_Data_Categories" itemprop="itemListElement">Financial Data Categories</span></b> </p>
+    <ul>
+      <li itemprop="description">Various categories are used to structure financial data, as a means to gain insight into the underlying costs of service provisioning and service profitability. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Indirect_Cost_Allocation_Table" itemprop="itemListElement">Indirect Cost Allocation Table</span></b> </p>
+    <ul>
+      <li itemprop="description">A table used to allocate indirect costs that are shared among multiple services, defining the rules how those costs are spread among the services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Invoice" itemprop="itemListElement">Invoice</span></b> </p>
+    <ul>
+      <li itemprop="description">The invoice for the delivery of a service or product. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="IT_Budget" itemprop="itemListElement">IT Budget</span></b> </p>
+    <ul>
+      <li itemprop="description">The IT Budget is an annual financial plan that provides a forecast of expected expenditures and allocates financial resources to the various service management processes and organizational units within the IT organization. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Strategy#ITIL_KPIs_Financial_Management" title="KPIs Service Strategy - Financial Management for IT Services">Key Performance Indicators (KPIs) Financial Management</a> </li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Financial_Analysis" title="ITIL Financial Analysis template">Checklist/ template Financial Analysis</a> </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Financial_Manager">Financial Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Financial Manager is responsible for managing an IT service provider's budgeting, accounting and charging requirements.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b>Responsibility Matrix: Financial Management for IT Services</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 70%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Financial Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Financial_Management_Support">Financial Management Support</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Financial_Management_Planning">Financial Planning</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Financial_Management_Analysis">Financial Analysis and Reporting</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Financial_Management_IT_Services_Invoicing">Service Invoicing</a></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Financial Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Financial Management for IT Services.</span> </p>
+  <br>
+  <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/Financial_Management"  >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SS Financial Management</h3>
+  <p><i><a href="/home/itilss">Back to ITIL SS</a></i></p>
+  <p><a href="{{ asset('storage/assets/sssummary.pdf#page=15') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective</span></b>: <span id="md-webpage-description" itemprop="description">The objective of <i>ITIL Financial Management for IT Services</i> is to manage the service provider's budgeting, accounting and charging requirements.</span></p>
+  <p><b>Part of</b>: Service Strategy </p>
+  <p><b>Process Owner</b>: Financial Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Essentially, the activities and process objectives of Financial Management in ITIL V3 (2007) and the <i>Financial Management for IT Services</i> process according to <i><b>ITIL 2011</b></i> have not changed. </p>
+  <p>The interfaces between Financial Management and the other ITIL processes have been adjusted to reflect the new ITIL 2011 process structure. The process overview of <a href="/images/itilssthree.jpg"  title="Itil-financial-management.jpg">ITIL Financial Management (.JPG)</a> shows the key information flows (<i>see Fig. 1</i>). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Financial Management sub-processes:">These are the <strong class="selflink">ITIL Financial Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Financial_Management_Support" itemprop="itemListElement">Financial Management Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define the necessary structures for the management of financial planning data and costs, as well as for the allocation of costs to services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Financial_Management_Planning" itemprop="itemListElement">Financial Planning</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To determine the required financial resources over the next planning period ("IT Budget"), and to allocate those resources for optimum benefits. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Financial_Management_Analysis" itemprop="itemListElement">Financial Analysis and Reporting</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To analyze the structure of service provisioning cost and the profitability of services. The resulting financial analysis allows Service Portfolio Management to make informed decisions when deciding about changes to the Service Portfolio. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Financial_Management_IT_Services_Invoicing" itemprop="itemListElement">Service Invoicing</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To issue invoices for the provision of services and transmission of the invoice to the customer. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in Financial Management for IT Services to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Budget_Request" itemprop="itemListElement">Budget Request</span></b> </p>
+    <ul>
+      <li itemprop="description">A request for a budget, typically issued from any of the Service Management processes at the same time when compiling a Request for Change. An approved Budget Request means that the required financial resources for implementing a Change are approved by Financial Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Budget_Allocation" itemprop="itemListElement">Budget Allocation</span></b> </p>
+    <ul>
+      <li itemprop="description">A budget allocated by the Financial Manager to implement a Change. Budget Allocations are issued in response to Budget Requests originating from any Service Management process in conjunction with Requests for Change. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Cost_Data_for_Service_Provisioning" itemprop="itemListElement">Cost Data for Service Provisioning</span></b> </p>
+    <ul>
+      <li itemprop="description">The cost for providing a service, calculated by Financial Management as a basis for calculating the price a customer is expected to pay for a service. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Financial_Analysis" itemprop="itemListElement">Financial Analysis</span></b> </p>
+    <ul>
+      <li itemprop="description">The Financial Analysis is an important input to the Portfolio Management process. It contains information on the costs for providing services and provides insight into the profitability of services and customers (NB: ITIL Checklist Financial Analysis). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Financial_Data_Categories" itemprop="itemListElement">Financial Data Categories</span></b> </p>
+    <ul>
+      <li itemprop="description">Various categories are used to structure financial data, as a means to gain insight into the underlying costs of service provisioning and service profitability. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Indirect_Cost_Allocation_Table" itemprop="itemListElement">Indirect Cost Allocation Table</span></b> </p>
+    <ul>
+      <li itemprop="description">A table used to allocate indirect costs that are shared among multiple services, defining the rules how those costs are spread among the services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Invoice" itemprop="itemListElement">Invoice</span></b> </p>
+    <ul>
+      <li itemprop="description">The invoice for the delivery of a service or product. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="IT_Budget" itemprop="itemListElement">IT Budget</span></b> </p>
+    <ul>
+      <li itemprop="description">The IT Budget is an annual financial plan that provides a forecast of expected expenditures and allocates financial resources to the various service management processes and organizational units within the IT organization. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Strategy#ITIL_KPIs_Financial_Management" title="KPIs Service Strategy - Financial Management for IT Services">Key Performance Indicators (KPIs) Financial Management</a> </li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Financial_Analysis" title="ITIL Financial Analysis template">Checklist/ template Financial Analysis</a> </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Financial_Manager">Financial Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Financial Manager is responsible for managing an IT service provider's budgeting, accounting and charging requirements.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b>Responsibility Matrix: Financial Management for IT Services</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 70%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Financial Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Financial_Management_Support">Financial Management Support</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Financial_Management_Planning">Financial Planning</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Financial_Management_Analysis">Financial Analysis and Reporting</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Financial_Management_IT_Services_Invoicing">Service Invoicing</a></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Financial Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Financial Management for IT Services.</span> </p>
+  <br>
+  <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/Financial_Management"  >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

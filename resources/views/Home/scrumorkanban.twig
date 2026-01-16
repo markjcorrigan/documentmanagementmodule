@@ -1,0 +1,294 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Scrum or Kanban{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<section class="article-content">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8">
+        <h3>Kanban, Scrum, Scrumban-the differences, challenges and solutions</h3>
+        <hr>
+        <blockquote>
+          <p>No two products are the same. Then why do so many software teams hop on the kanban and scrum wagon? When done right, organizations report a number of positive benefits when they work under one-or a combination of-these development frameworks. When done wrong, a failed implementation inspires people to write impassioned blog posts about how and why these methodologies are the wrong way to build software.</p>
+        </blockquote>
+        <p>Methodologies aren't a silver bullet that'll automatically solve all the dysfunctions, wasteful practices and flaws of a product development process. Why? For starters, there's the compatibility issue. Certain methodologies work better in some organizations, while others don't.</p>
+        <p>Leadership and management need to assess the cultural ecosystem the product exists in before making any massive internal process transformations. And yet, so many companies fail at laying those essential foundations.</p>
+        <p>One way to prepare for structural change in the product development and delivery process is by becoming aware of the common issues that can arise with implementing scrum, kanban or a hybrid that borrows elements from each.</p>
+        <p>By foreseeing the potential problems that may arise, an organization can assess if one of these methodologies is right for them. Being aware of-and planning for-possible pitfalls and issues also creates an environment where teams feel prepared to tackle whatever may come.</p>
+        <p>For product managers, and any product leaders guiding a software development team, here's what you need to know about scrum, kanban and scrumban before settling for one methodology.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-1.svg') }}" alt="kanban scrum scrumban"></p>
+        <h2 id="whyiskanbansopopular">Why is kanban so popular?</h2>
+        <p>Kanban is just one of many frameworks used for implementing agile and lean principles. The ideal outcome under kanban is to facilitate the communication of capacity and to encourage transparency of the work being done using a kanban board. When used right, kanban boards help teams improve flow, limit the work in progress and maximize efficiency.</p>
+        <p>There's a lot of information (and misinformation) out there on what kanban is and isn't. For starters, it's <em>not</em> a strict methodology and it <em>can</em> be adjusted according to the specific requirements of a team. Kanban doesn't prescribe roles and it doesn't have time restrictions for the work in progress (unlike scrum).</p>
+        <p>When kanban is implemented the right way, the benefits include:</p>
+        <ul>
+          <li><strong>The work becomes visible.</strong> It establishes an accurate visualization of the development workflow. This allows teams to see where the bottlenecks and delays live, which they can then fix.</li>
+          <li><strong>Better accountability and communication.</strong> It gives everyone an equal understanding of who's working on what, and what the status of any given initiative is.</li>
+          <li><strong>Teams work within their capacity.</strong> The focus on limiting the work in progress using a pull system prevents teams from being overwhelmed with work</li>
+          <li><strong>Value is built and delivered much faster.</strong> This is done by improving the speed and efficiency of the workflow.</li>
+        </ul>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-1a.svg') }}" alt="scrum kanban scrumban"></p>
+        <p>These also happen to be some of the things that motivate organizations to make the switch to kanban. Some of the other benefits reported by organizations that successfully implemented kanban include an increase in customer satisfaction, improvement of the quality of the software, shortened time to market and reduced overall cost of development.</p>
+        <p>Kanban has the potential to solve the workflow management headaches that product teams typically deal with. It can create a centralized work stream that combines the work from multiple departments and sources.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-2.svg') }}" alt="scrum kanban scrumban"></p>
+        <h3 id="howtoimplementkanbansuccessfully">How to implement kanban successfully</h3>
+        <p>Implementing kanban comes with a lot of challenges and pitfalls that organizations need to prepare for. In this section, we go over a couple of the worst offenders that hinder the process of successfully implementing kanban within a product team, as well as some proposed solutions.</p>
+        <p><strong>Kanban challenge:</strong> Kanban isn't a complete change management framework<br>
+          <strong>Solution:</strong> Have an end-to-end implementation strategy and framework management plan (with metrics!)</p>
+        <p>For any development framework, there should always be a champion. A kanban champion doesn't necessarily have to be the product manager, but it helps the methodology stick in the long-term when product managers are on the lookout for ways the process can be improved.</p>
+        <p>Product managers work in the trenches of product development-they work closely with every department that makes up the product team, and one of their goals is to improve the ideation-to-delivery process. When a product manager becomes a kanban educator or guide, it adds another level of accountability to the process.</p>
+        <p>Kanban isn't a comprehensive or complete change management platform, so management has to fill in the blanks of what's missing. Product managers can create a battle plan for the implementation and optimization of kanban practices by creating a strategy complete with a set of metrics designed to measure the success of the implementation of the process.</p>
+        <h3 id="kanbanmetricsforproductteams">Kanban metrics for product teams</h3>
+        <p><strong>Delivery time metrics:</strong> Cycle time, lead time</p>
+        <p><strong>Lead time:</strong> The time period between the appearance of a task in your workflow until its departure from the system. It's the time it takes an idea to become a finished feature.<br>
+          <strong>Cycle time:</strong> This metric measures the time it takes for a task to go through individual parts of the process like testing and development.</p>
+        <p>Use a <strong>lead and cycle time chart</strong> to visualize the progress of these metrics. This chart lets you step back and spot where the bottlenecks are, as well as how quickly and efficiently any given initiative makes it through the system.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-2a.svg') }}" alt="scrum kanban scrumban"></p>
+        <p><strong>Performance metrics:</strong> Throughput, work in progress</p>
+        <ul>
+          <li><strong>Throughput</strong> is the number of initiatives, tasks, features, bugs and updates that are delivered and finished in a given period of time. It can be weeks, months, or quarters depending on the organization</li>
+          <li><strong>Work in progress</strong> is any work that's being worked and hasn't yet delivered any value to the users. Tracking this metric allows you to see how many initiatives are in progress and what the capacity of the team is</li>
+        </ul>
+        <p>Use a <strong>cumulative flow diagram (CFD)</strong> to visualize all of these metrics. To get started, count and categorize the number of initiatives in each section of the board. Then, gather the data in a table. This information will be plotted in a diagram where the vertical axis represents the number of tasks, and the horizontal axis is the timeframe.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-2b.svg') }}" alt="scrum kanban scrumban"><br>
+          <img class="img-fluid" src="{{ asset('storage/images/method-ch3-2c.svg') }}" alt="scrum kanban scrumban"></p>
+        <p><strong>Kanban challenge:</strong> Kanban is dull and repetitive, so teams have a hard time staying motivated<br>
+          <strong>Solution:</strong> Use ceremonies as you see fit, encourage team collaboration and participation</p>
+        <p>Kanban doesn't prescribe much in terms of process. Because of how simple it is, it can be easy to fall into a cadence of repetition and boredom. Teams just go through the motions of moving cards on the kanban board every day, feeling the pressure to deliver quickly during each cycle.</p>
+        <p>There's no reason why teams should be limited to the kanban basics. Just because kanban doesn't prescribe any iterations, reviews, demonstrations and retrospectives, it doesn't mean they shouldn't exist. The cadence of these ceremonies doesn't have to be strictly tied to the workflow of the kanban board. These practices can happen any time the team feels they are needed, as long as they happen meaningfully.</p>
+        <p>This leads to the idea of encouraging team collaboration and participation. Facilitating the communication channels and meetings for individual team members to discuss their process and workflow results in a few things. First, teams feel empowered to solve the problems that emerge from visualizing the work.</p>
+        <p>Second, kanban isn't about management dictating an amount of work to be completed by a certain timeframe. It's about stepping back and observing the current process, identifying where it can be improved, and allowing teams to "own" the process by generating their own solutions while keeping their eyes on the prize (the prize being organizational improvement).</p>
+        <p>Scrum, on the other hand, is a bit more prescriptive and heavy on the required elements needed to achieve results.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-3.svg') }}" alt="scrum kanban scrumban"></p>
+        <h2 id="whyisscrumsopopular">Why is scrum so popular?</h2>
+        <p>Scrum is another agile development framework that promises an effective system for organizing work and delivering results. Ideally, and when done right, scrum can improve feedback loops and internal communication, create more efficient teamwork, and get the results to reach users more quickly.</p>
+        <p>Scrum is made up of a set of roles, artifacts and ceremonies that work together to create an environment within a product team where these ideal results can happen. The roles are the product owner, the development team and the scrum master. The artifacts are the product backlog, the spring backlog and increments. The ceremonies are sprint planning, sprint review and sprint retrospectives.</p>
+        <p>Part of the appeal of scrum goes beyond the potential improvements, but also the fact that anyone can implement it. Scrum doesn't require any technical training or qualifications, only an understanding of those roles, artifacts and ceremonies and a good implementation strategy that includes an action plan for any potential pitfalls and challenges that may arise.</p>
+        <p>When done right, teams that implement scrum have the potential to achieve a few things:</p>
+        <ul>
+          <li><strong>Faster speed to market.</strong> Scrum is a way to achieve the incremental delivery that the agile approach promises using regular small releases.</li>
+          <li><strong>Reduced risk.</strong> Delivering early prototypes within short iterations allows teams to "fail early" and learn lessons they can immediately apply to the development of the product before it's shipped.</li>
+          <li><strong>Transparency and visibility.</strong> Scrum ceremonies allow teams to identify roadblocks, what's working, what's not working. They also facilitate an environment where teams work together to figure out solutions and ways to improve or remove the bottlenecks and delays.</li>
+          <li><strong>Higher user satisfaction.</strong> Scrum teams are committed to helping users. They do this by involving users early and often in the testing phase, and responding quickly to changes in the industry and modifying the backlog accordingly</li>
+        </ul>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-3a.svg') }}" alt="scrum kanban scrumban"></p>
+        <h3 id="howtoimplementscrumsuccessfully">How to implement scrum successfully</h3>
+        <p>Because scrum is much more process-intensive than kanban, it's important that product teams answer a few questions before implementing it:</p>
+        <ul>
+          <li>What are the outcomes that matter to our organization? What will success look like a quarter, six months, a year from now?</li>
+          <li>Is the culture of the organization capable of evolving from siloed departments to collaborative, cross-functional teams? Is the company able to change?</li>
+          <li>Is our main goal to bring more tangible value to the user?</li>
+          <li>What are some implementation challenges we might come across, and how can we prepare for them?</li>
+        </ul>
+        <p>As for that last question, here are some common challenges and pitfalls that arise when implementing scrum.</p>
+        <p><strong>Scrum challenge:</strong> Resistance to change<br>
+          <strong>Solution:</strong> Create a strategy that outlines the steps to achieve that change and execute it</p>
+        <p>Resistance to change can occur for reasons like lack of understanding in how scrum works and a refusal to change habits that have worked for a long time.</p>
+        <p>Addressing resistance to change comes in a set of sequential steps that create a roadmap to success:</p>
+        <ol>
+          <li><strong>Communicate the reason for the change.</strong> If the goal is to increase user satisfaction, show how scrum will do that at your organization. Demonstrate how the proposed changes are connected to delivering this new and improved user value. If the goal is to improve the development process, gather the necessary evidence that shows a change is needed to improve performance</li>
+          <li><strong>Educate the team.</strong> Make sure everyone involved understands and agrees on the definitions of the artifacts, roles and ceremonies. Set the standards from the beginning and provide the training, tools and time for teams to get the hang of scrum</li>
+          <li><strong>Set a scrum vision.</strong> Describe what the ideal outcome under scrum will be and create relevant OKRs to implement it. This also involves communicating the vision wiki pages, one on ones and learning sessions (lunch and learns, ask me anythings)</li>
+          <li><strong>Make the team feel heard.</strong> Do this by incorporating their feedback into the process and addressing their concerns. When team members feel that they're actively involved in the process changes, they're more likely to be more invested and active in achieving the vision.</li>
+          <li><strong>Measure, document and celebrate the things that work.</strong> Like with the OKRs for the scrum vision, you should have metrics in place that tell you how you're making progress internally. Highlight when and how these metrics moved in the right direction, and broadcast a collective understanding of why these efforts worked</li>
+        </ol>
+        <p>Addressing all of those components also helps address other scrum pitfalls like lack of understanding of the methodology, a sense of lack of autonomy, misalignment on the goals and the why behind a change in process, lack of short-term wins, and poor documentation of the processes that are successful so that they can be replicated in the future.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-4.svg') }}" alt="scrum kanban scrumban"></p>
+        <h2 id="thedifferencebetweenscrumandkanban">The difference between scrum and kanban</h2>
+        <p>For starters, let's go over the similarities between these two agile methodologies:</p>
+        <ul>
+          <li>They're both adaptable and flexible. They can be used in a wide variety of industries, types and sizes of companies.</li>
+          <li>They both limit the work in progress for the same reason: to improve the flow of the work and increase user satisfaction. Kanban does this using WIP limits, and scrum does this by measuring velocity and number of tasks per sprint</li>
+          <li>They both encourage visualization of the work, the internal goals, and the progress.</li>
+          <li>They're empirical, experimental processes that aim to better understand users and solve their problems</li>
+          <li>They encourage teams to become self-sufficient and autonomous. Management isn't dictating the tasks.</li>
+        </ul>
+        <p>In terms of the differences, they can be boiled down to the fact that scrum is an all-round, end-to-end model for building a product and optimizing the way teams work. Kanban, on the other hand, doesn't demand massive organizational changes, only small and incremental improvements to the current process in place.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-4a.svg') }}" alt="scrum kanban scrumban"></p>
+        <p>When you see the aspects of scrum that are undefined, but which are defined in kanban, it's easy to see how a marriage between these two agile methodologies makes sense. For example, there's no "board" in scrum for visualizing the work, so it's possible for teams to include a kanban board with progress columns.</p>
+        <p>These methodologies are flexible, and allow teams to choose how they'll make it work for their individual use case. One way to do this is by using a method called scrumban.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-5.svg') }}" alt="scrum kanban scrumban"></p>
+        <h2 id="scrumbanamarriagebetweenscrumandkanban">Scrumban: a marriage between Scrum and Kanban</h2>
+        <p>Scrumban is ideal for teams that like the structure that scrum provides, but who also like the flow of kanban and its focus on continuous improvement methods.</p>
+        <h3 id="scrumbanpractices">Scrumban practices</h3>
+        <p>Because of the added flexibility that comes with using elements from both scrum and kanban, there are many different versions of what scrumban ideally looks like.</p>
+        <p>The elements of scrum and kanban that are kept in scrumban include:</p>
+        <ul>
+          <li><strong>A scrumban board.</strong> In kanban, the board is usually split into "to do", "work in progress" and "done". In a scrumban board, more columns can be added to specify more phases in the development process. Usually, these extra columns go at the beginning at the To Do phase, to add visibility to into the user stories and the backlog</li>
+        </ul>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-5a.svg') }}" alt="scrum kanban scrumban"></p>
+        <ul>
+          <li>Self-managing and self-organizing teams.</li>
+          <li>Continuous workflow over iterations</li>
+          <li>On-demand planning and daily meetings over sprint planning and retrospectives</li>
+          <li>The metrics of scrumban are lead time and cycle time</li>
+        </ul>
+        <h3 id="whoshouldconsiderscrumban">Who should consider scrumban?</h3>
+        <ul>
+          <li>Scrum teams who have a hard time completing the amount of work prescribed for a sprint. Kanban's WIP limits allow teams to prioritize ruthlessly when it's time to pick what initiatives to work on.</li>
+          <li>User stories and priorities are always changing, which requires sprints to have some flexibility in the work to be done</li>
+          <li>Organizations looking to step down from scrum and implement kanban instead. Scrumban originated as a transitional methodology for teams looking to break away from scrum.</li>
+        </ul>
+        <p>Thanks <a href="/Roadmunkhttps://roadmunk.com/guides/kanban-scrum-scrumban/" >Roadmunk</a></p>
+        <h3>PMWay's 2 cents worth</h3>
+        <p>Do you understand that a project is a means of controlling cost, time and scope?<br>
+        <p>Kanban is NOT project focused, and, in fact, rolls on down the highway.  If you have read Alice in Wonderland then you will know that any road will take you where you are not sure you need to be.<br>
+          Scrum Method (Agile Project Management), like Traditional Project Management puts up a clear vision and goal (with budget tied to scope and time) and according to this "plan," revisited every time the sprint ends, ensures that the team are timeboxed, monitored and controlled.</p>
+        <p>Take a look at the image below.</p>
+        <p>This image is a way to tie IT Service Management (ITIL), Software Engineering (including CMMi etc., if you join the dots on PMWay's home page), Scrum, Kanban and also DevOps (version controlling releases of working software).</p>
+        <p>PMWay suggests that a support team (developers who support Service Operations) can not include Scrum Developers (Service Design and Service Transition), else focus and productivity will be lost.</p>
+        <img class="img-fluid" alt="ITIL, Scrum and Devops" src="{{ asset('storage/images/devopsrelease.jpg') }}" >
+        <p><a href="/blog/contact.php">Let me know your thoughts on PMWay's opinion</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<section class="article-content">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8">
+        <h3>Kanban, Scrum, Scrumban-the differences, challenges and solutions</h3>
+        <hr>
+        <blockquote>
+          <p>No two products are the same. Then why do so many software teams hop on the kanban and scrum wagon? When done right, organizations report a number of positive benefits when they work under one-or a combination of-these development frameworks. When done wrong, a failed implementation inspires people to write impassioned blog posts about how and why these methodologies are the wrong way to build software.</p>
+        </blockquote>
+        <p>Methodologies aren't a silver bullet that'll automatically solve all the dysfunctions, wasteful practices and flaws of a product development process. Why? For starters, there's the compatibility issue. Certain methodologies work better in some organizations, while others don't.</p>
+        <p>Leadership and management need to assess the cultural ecosystem the product exists in before making any massive internal process transformations. And yet, so many companies fail at laying those essential foundations.</p>
+        <p>One way to prepare for structural change in the product development and delivery process is by becoming aware of the common issues that can arise with implementing scrum, kanban or a hybrid that borrows elements from each.</p>
+        <p>By foreseeing the potential problems that may arise, an organization can assess if one of these methodologies is right for them. Being aware of-and planning for-possible pitfalls and issues also creates an environment where teams feel prepared to tackle whatever may come.</p>
+        <p>For product managers, and any product leaders guiding a software development team, here's what you need to know about scrum, kanban and scrumban before settling for one methodology.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-1.svg') }}" alt="kanban scrum scrumban"></p>
+        <h2 id="whyiskanbansopopular">Why is kanban so popular?</h2>
+        <p>Kanban is just one of many frameworks used for implementing agile and lean principles. The ideal outcome under kanban is to facilitate the communication of capacity and to encourage transparency of the work being done using a kanban board. When used right, kanban boards help teams improve flow, limit the work in progress and maximize efficiency.</p>
+        <p>There's a lot of information (and misinformation) out there on what kanban is and isn't. For starters, it's <em>not</em> a strict methodology and it <em>can</em> be adjusted according to the specific requirements of a team. Kanban doesn't prescribe roles and it doesn't have time restrictions for the work in progress (unlike scrum).</p>
+        <p>When kanban is implemented the right way, the benefits include:</p>
+        <ul>
+          <li><strong>The work becomes visible.</strong> It establishes an accurate visualization of the development workflow. This allows teams to see where the bottlenecks and delays live, which they can then fix.</li>
+          <li><strong>Better accountability and communication.</strong> It gives everyone an equal understanding of who's working on what, and what the status of any given initiative is.</li>
+          <li><strong>Teams work within their capacity.</strong> The focus on limiting the work in progress using a pull system prevents teams from being overwhelmed with work</li>
+          <li><strong>Value is built and delivered much faster.</strong> This is done by improving the speed and efficiency of the workflow.</li>
+        </ul>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-1a.svg') }}" alt="scrum kanban scrumban"></p>
+        <p>These also happen to be some of the things that motivate organizations to make the switch to kanban. Some of the other benefits reported by organizations that successfully implemented kanban include an increase in customer satisfaction, improvement of the quality of the software, shortened time to market and reduced overall cost of development.</p>
+        <p>Kanban has the potential to solve the workflow management headaches that product teams typically deal with. It can create a centralized work stream that combines the work from multiple departments and sources.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-2.svg') }}" alt="scrum kanban scrumban"></p>
+        <h3 id="howtoimplementkanbansuccessfully">How to implement kanban successfully</h3>
+        <p>Implementing kanban comes with a lot of challenges and pitfalls that organizations need to prepare for. In this section, we go over a couple of the worst offenders that hinder the process of successfully implementing kanban within a product team, as well as some proposed solutions.</p>
+        <p><strong>Kanban challenge:</strong> Kanban isn't a complete change management framework<br>
+          <strong>Solution:</strong> Have an end-to-end implementation strategy and framework management plan (with metrics!)</p>
+        <p>For any development framework, there should always be a champion. A kanban champion doesn't necessarily have to be the product manager, but it helps the methodology stick in the long-term when product managers are on the lookout for ways the process can be improved.</p>
+        <p>Product managers work in the trenches of product development-they work closely with every department that makes up the product team, and one of their goals is to improve the ideation-to-delivery process. When a product manager becomes a kanban educator or guide, it adds another level of accountability to the process.</p>
+        <p>Kanban isn't a comprehensive or complete change management platform, so management has to fill in the blanks of what's missing. Product managers can create a battle plan for the implementation and optimization of kanban practices by creating a strategy complete with a set of metrics designed to measure the success of the implementation of the process.</p>
+        <h3 id="kanbanmetricsforproductteams">Kanban metrics for product teams</h3>
+        <p><strong>Delivery time metrics:</strong> Cycle time, lead time</p>
+        <p><strong>Lead time:</strong> The time period between the appearance of a task in your workflow until its departure from the system. It's the time it takes an idea to become a finished feature.<br>
+          <strong>Cycle time:</strong> This metric measures the time it takes for a task to go through individual parts of the process like testing and development.</p>
+        <p>Use a <strong>lead and cycle time chart</strong> to visualize the progress of these metrics. This chart lets you step back and spot where the bottlenecks are, as well as how quickly and efficiently any given initiative makes it through the system.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-2a.svg') }}" alt="scrum kanban scrumban"></p>
+        <p><strong>Performance metrics:</strong> Throughput, work in progress</p>
+        <ul>
+          <li><strong>Throughput</strong> is the number of initiatives, tasks, features, bugs and updates that are delivered and finished in a given period of time. It can be weeks, months, or quarters depending on the organization</li>
+          <li><strong>Work in progress</strong> is any work that's being worked and hasn't yet delivered any value to the users. Tracking this metric allows you to see how many initiatives are in progress and what the capacity of the team is</li>
+        </ul>
+        <p>Use a <strong>cumulative flow diagram (CFD)</strong> to visualize all of these metrics. To get started, count and categorize the number of initiatives in each section of the board. Then, gather the data in a table. This information will be plotted in a diagram where the vertical axis represents the number of tasks, and the horizontal axis is the timeframe.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-2b.svg') }}" alt="scrum kanban scrumban"><br>
+          <img class="img-fluid" src="{{ asset('storage/images/method-ch3-2c.svg') }}" alt="scrum kanban scrumban"></p>
+        <p><strong>Kanban challenge:</strong> Kanban is dull and repetitive, so teams have a hard time staying motivated<br>
+          <strong>Solution:</strong> Use ceremonies as you see fit, encourage team collaboration and participation</p>
+        <p>Kanban doesn't prescribe much in terms of process. Because of how simple it is, it can be easy to fall into a cadence of repetition and boredom. Teams just go through the motions of moving cards on the kanban board every day, feeling the pressure to deliver quickly during each cycle.</p>
+        <p>There's no reason why teams should be limited to the kanban basics. Just because kanban doesn't prescribe any iterations, reviews, demonstrations and retrospectives, it doesn't mean they shouldn't exist. The cadence of these ceremonies doesn't have to be strictly tied to the workflow of the kanban board. These practices can happen any time the team feels they are needed, as long as they happen meaningfully.</p>
+        <p>This leads to the idea of encouraging team collaboration and participation. Facilitating the communication channels and meetings for individual team members to discuss their process and workflow results in a few things. First, teams feel empowered to solve the problems that emerge from visualizing the work.</p>
+        <p>Second, kanban isn't about management dictating an amount of work to be completed by a certain timeframe. It's about stepping back and observing the current process, identifying where it can be improved, and allowing teams to "own" the process by generating their own solutions while keeping their eyes on the prize (the prize being organizational improvement).</p>
+        <p>Scrum, on the other hand, is a bit more prescriptive and heavy on the required elements needed to achieve results.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-3.svg') }}" alt="scrum kanban scrumban"></p>
+        <h2 id="whyisscrumsopopular">Why is scrum so popular?</h2>
+        <p>Scrum is another agile development framework that promises an effective system for organizing work and delivering results. Ideally, and when done right, scrum can improve feedback loops and internal communication, create more efficient teamwork, and get the results to reach users more quickly.</p>
+        <p>Scrum is made up of a set of roles, artifacts and ceremonies that work together to create an environment within a product team where these ideal results can happen. The roles are the product owner, the development team and the scrum master. The artifacts are the product backlog, the spring backlog and increments. The ceremonies are sprint planning, sprint review and sprint retrospectives.</p>
+        <p>Part of the appeal of scrum goes beyond the potential improvements, but also the fact that anyone can implement it. Scrum doesn't require any technical training or qualifications, only an understanding of those roles, artifacts and ceremonies and a good implementation strategy that includes an action plan for any potential pitfalls and challenges that may arise.</p>
+        <p>When done right, teams that implement scrum have the potential to achieve a few things:</p>
+        <ul>
+          <li><strong>Faster speed to market.</strong> Scrum is a way to achieve the incremental delivery that the agile approach promises using regular small releases.</li>
+          <li><strong>Reduced risk.</strong> Delivering early prototypes within short iterations allows teams to "fail early" and learn lessons they can immediately apply to the development of the product before it's shipped.</li>
+          <li><strong>Transparency and visibility.</strong> Scrum ceremonies allow teams to identify roadblocks, what's working, what's not working. They also facilitate an environment where teams work together to figure out solutions and ways to improve or remove the bottlenecks and delays.</li>
+          <li><strong>Higher user satisfaction.</strong> Scrum teams are committed to helping users. They do this by involving users early and often in the testing phase, and responding quickly to changes in the industry and modifying the backlog accordingly</li>
+        </ul>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-3a.svg') }}" alt="scrum kanban scrumban"></p>
+        <h3 id="howtoimplementscrumsuccessfully">How to implement scrum successfully</h3>
+        <p>Because scrum is much more process-intensive than kanban, it's important that product teams answer a few questions before implementing it:</p>
+        <ul>
+          <li>What are the outcomes that matter to our organization? What will success look like a quarter, six months, a year from now?</li>
+          <li>Is the culture of the organization capable of evolving from siloed departments to collaborative, cross-functional teams? Is the company able to change?</li>
+          <li>Is our main goal to bring more tangible value to the user?</li>
+          <li>What are some implementation challenges we might come across, and how can we prepare for them?</li>
+        </ul>
+        <p>As for that last question, here are some common challenges and pitfalls that arise when implementing scrum.</p>
+        <p><strong>Scrum challenge:</strong> Resistance to change<br>
+          <strong>Solution:</strong> Create a strategy that outlines the steps to achieve that change and execute it</p>
+        <p>Resistance to change can occur for reasons like lack of understanding in how scrum works and a refusal to change habits that have worked for a long time.</p>
+        <p>Addressing resistance to change comes in a set of sequential steps that create a roadmap to success:</p>
+        <ol>
+          <li><strong>Communicate the reason for the change.</strong> If the goal is to increase user satisfaction, show how scrum will do that at your organization. Demonstrate how the proposed changes are connected to delivering this new and improved user value. If the goal is to improve the development process, gather the necessary evidence that shows a change is needed to improve performance</li>
+          <li><strong>Educate the team.</strong> Make sure everyone involved understands and agrees on the definitions of the artifacts, roles and ceremonies. Set the standards from the beginning and provide the training, tools and time for teams to get the hang of scrum</li>
+          <li><strong>Set a scrum vision.</strong> Describe what the ideal outcome under scrum will be and create relevant OKRs to implement it. This also involves communicating the vision wiki pages, one on ones and learning sessions (lunch and learns, ask me anythings)</li>
+          <li><strong>Make the team feel heard.</strong> Do this by incorporating their feedback into the process and addressing their concerns. When team members feel that they're actively involved in the process changes, they're more likely to be more invested and active in achieving the vision.</li>
+          <li><strong>Measure, document and celebrate the things that work.</strong> Like with the OKRs for the scrum vision, you should have metrics in place that tell you how you're making progress internally. Highlight when and how these metrics moved in the right direction, and broadcast a collective understanding of why these efforts worked</li>
+        </ol>
+        <p>Addressing all of those components also helps address other scrum pitfalls like lack of understanding of the methodology, a sense of lack of autonomy, misalignment on the goals and the why behind a change in process, lack of short-term wins, and poor documentation of the processes that are successful so that they can be replicated in the future.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-4.svg') }}" alt="scrum kanban scrumban"></p>
+        <h2 id="thedifferencebetweenscrumandkanban">The difference between scrum and kanban</h2>
+        <p>For starters, let's go over the similarities between these two agile methodologies:</p>
+        <ul>
+          <li>They're both adaptable and flexible. They can be used in a wide variety of industries, types and sizes of companies.</li>
+          <li>They both limit the work in progress for the same reason: to improve the flow of the work and increase user satisfaction. Kanban does this using WIP limits, and scrum does this by measuring velocity and number of tasks per sprint</li>
+          <li>They both encourage visualization of the work, the internal goals, and the progress.</li>
+          <li>They're empirical, experimental processes that aim to better understand users and solve their problems</li>
+          <li>They encourage teams to become self-sufficient and autonomous. Management isn't dictating the tasks.</li>
+        </ul>
+        <p>In terms of the differences, they can be boiled down to the fact that scrum is an all-round, end-to-end model for building a product and optimizing the way teams work. Kanban, on the other hand, doesn't demand massive organizational changes, only small and incremental improvements to the current process in place.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-4a.svg') }}" alt="scrum kanban scrumban"></p>
+        <p>When you see the aspects of scrum that are undefined, but which are defined in kanban, it's easy to see how a marriage between these two agile methodologies makes sense. For example, there's no "board" in scrum for visualizing the work, so it's possible for teams to include a kanban board with progress columns.</p>
+        <p>These methodologies are flexible, and allow teams to choose how they'll make it work for their individual use case. One way to do this is by using a method called scrumban.</p>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-5.svg') }}" alt="scrum kanban scrumban"></p>
+        <h2 id="scrumbanamarriagebetweenscrumandkanban">Scrumban: a marriage between Scrum and Kanban</h2>
+        <p>Scrumban is ideal for teams that like the structure that scrum provides, but who also like the flow of kanban and its focus on continuous improvement methods.</p>
+        <h3 id="scrumbanpractices">Scrumban practices</h3>
+        <p>Because of the added flexibility that comes with using elements from both scrum and kanban, there are many different versions of what scrumban ideally looks like.</p>
+        <p>The elements of scrum and kanban that are kept in scrumban include:</p>
+        <ul>
+          <li><strong>A scrumban board.</strong> In kanban, the board is usually split into "to do", "work in progress" and "done". In a scrumban board, more columns can be added to specify more phases in the development process. Usually, these extra columns go at the beginning at the To Do phase, to add visibility to into the user stories and the backlog</li>
+        </ul>
+        <p><img class="img-fluid" src="{{ asset('storage/images/method-ch3-5a.svg') }}" alt="scrum kanban scrumban"></p>
+        <ul>
+          <li>Self-managing and self-organizing teams.</li>
+          <li>Continuous workflow over iterations</li>
+          <li>On-demand planning and daily meetings over sprint planning and retrospectives</li>
+          <li>The metrics of scrumban are lead time and cycle time</li>
+        </ul>
+        <h3 id="whoshouldconsiderscrumban">Who should consider scrumban?</h3>
+        <ul>
+          <li>Scrum teams who have a hard time completing the amount of work prescribed for a sprint. Kanban's WIP limits allow teams to prioritize ruthlessly when it's time to pick what initiatives to work on.</li>
+          <li>User stories and priorities are always changing, which requires sprints to have some flexibility in the work to be done</li>
+          <li>Organizations looking to step down from scrum and implement kanban instead. Scrumban originated as a transitional methodology for teams looking to break away from scrum.</li>
+        </ul>
+        <p>Thanks <a href="/Roadmunkhttps://roadmunk.com/guides/kanban-scrum-scrumban/" >Roadmunk</a></p>
+        <h3>PMWay's 2 cents worth</h3>
+        <p>Do you understand that a project is a means of controlling cost, time and scope?<br>
+        <p>Kanban is NOT project focused, and, in fact, rolls on down the highway.  If you have read Alice in Wonderland then you will know that any road will take you where you are not sure you need to be.<br>
+          Scrum Method (Agile Project Management), like Traditional Project Management puts up a clear vision and goal (with budget tied to scope and time) and according to this "plan," revisited every time the sprint ends, ensures that the team are timeboxed, monitored and controlled.</p>
+        <p>Take a look at the image below.</p>
+        <p>This image is a way to tie IT Service Management (ITIL), Software Engineering (including CMMi etc., if you join the dots on PMWay's home page), Scrum, Kanban and also DevOps (version controlling releases of working software).</p>
+        <p>PMWay suggests that a support team (developers who support Service Operations) can not include Scrum Developers (Service Design and Service Transition), else focus and productivity will be lost.</p>
+        <img class="img-fluid" alt="ITIL, Scrum and Devops" src="{{ asset('storage/images/devopsrelease.jpg') }}" >
+        <p><a href="/blog/contact.php">Let me know your thoughts on PMWay's opinion</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+{% endblock %}

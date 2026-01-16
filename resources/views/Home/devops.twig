@@ -1,0 +1,176 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}DevOps{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="center">
+  <h5> <strong>DevOps</strong> </h5>
+  <p align="center"> <a href="/accelerate"  title="Click here for the 24 capabilities and way to install Devops (eat the elephant)!"><img alt="" class="img-fluid" src="{{ asset('storage/images/devopscogs.png') }}"></a> </p>
+  <p align="center"> <a href="/accelerate"  title="Click here for the 24 capabilities and way to install Devops (eat the elephant)!"><img alt="Its DevOps" class="img-fluid" src="{{ asset('storage/images/itsdevops.png') }}"></a> </p>
+  <p><i>Click the Elephant for DevOps process essence!</i></p>
+  <p align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/devopsuncertain.png') }}" onmouseover="this.src='{{ asset('storage/images/devandops.png') }}'" onmouseout="this.src='{{ asset('storage/images/devopsuncertain.png') }}'" title="Click the image now to reduce Devops uncertainty"></p>
+  <img alt="PO are the new RM's" class="img-fluid" src="{{ asset('storage/images/poarenewrm.png') }}" ><br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepmboksixone" aria-expanded="false" aria-controls=
+        "collapsepmboksixone">PO as new RM! </button>
+  <div class="collapse" id="collapsepmboksixone">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">From Reinventing ITIL in the age of DevOps<br>
+          Abhinav Krishn Akaiser 2019</h5>
+        <div class="card-body text-left">
+          <h5 align="left">Product Owners Are the New Release Managers</h5>
+          <p>The release management team has been made partially redundant by machines. It is not
+            absolute because of two reasons.</p>
+          <ul>
+            <li>You need an owner for the entire release management process that
+              cuts across both development and operations.</li>
+            <li>Cognitive abilities are very much in demand to ensure that the
+              release management process succeeds and aligns with the objectives
+              set forth.</li>
+          </ul>
+          <p align="left">The person who manages the entire release from end to end is the release manager
+            and is still necessary. However, the release management role went from being a full-time
+            position to a part-time one (statistically speaking), mainly because of the diminished
+            work (thanks to automation). Capable release managers are
+          <ol>
+            <li>Well aware of the customer landscape, the requirements, and to
+              an extent the business priorities</li>
+            <li>Fully involved in the development and deployment processes</li>
+            <li>Understands operations and their acceptance criteria</li>
+          </ol>
+          <p align="left">The person who could do all this in the past was the product owner (PO), and thus
+            that person is a favorite choice for a part-time release manager. POs are an adequate
+            choice mainly because of their closeness to the business and to the development
+            and operations teams. The person was like a bridge between the two entities and was
+            expected to keep the boat going in the most turbulent conditions.</p>
+          <br>
+          <p align="left">Thanks Abhinav (page 294)<br>
+            PS <a href="/pmway/?slide=10" >I am reminded by the above of the importance of the Board Exeuctive to produce products in PRINCE2 Agile</a></p>
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle="collapse" data-target="#collapsevaluemodel" aria-expanded="false" aria-controls="collapsevaluemodel">The
+  Product Owner <br>
+  and <br>
+  Scrum Value Model </button>
+  <div class="collapse" id="collapsevaluemodel">
+    <div class="container">
+      <div class="card text-center">
+        <p class="card-header" align="center">Note below how value is produced in agile's Scrum method.</p>
+        <div class="card-body text-center"> <img alt="Scrum Value Model" class="img-fluid" src="{{ asset('storage/images/scrumvaluemodelroles.jpg') }}"> <br>
+        </div>
+        <div class="card-footer">
+          <p align="center">Note above that the first 3 stages occur before sprints start</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h5>I.e.</h5>
+  <p>DevOps is <a href="/home/index?slide=8">ITIL</a>, just empowered for speed! <br>
+    Scrum team sprints
+    (as an example) must be able to <a href="/release" >release</a> <a href="/workingsoftware" >working software</a> faster.</p>
+  <a href="/pmway/?slide=8" ><img alt="DevOps ops is itil but faster! Click this image to go find out more about ITIL's 26 processes" class="img-fluid" src="{{ asset('storage/images/itilppsmaller.png') }}" title="DevOps ops is itil but faster! Click this image to go find out more about ITIL's 26 processes"></a><br>
+  <p align="center">Click the image above for the 26 ITIL processes</p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="center">
+  <h5> <strong>DevOps</strong> </h5>
+  <p align="center"> <a href="/accelerate"  title="Click here for the 24 capabilities and way to install Devops (eat the elephant)!"><img alt="" class="img-fluid" src="{{ asset('storage/images/devopscogs.png') }}"></a> </p>
+  <p align="center"> <a href="/accelerate"  title="Click here for the 24 capabilities and way to install Devops (eat the elephant)!"><img alt="Its DevOps" class="img-fluid" src="{{ asset('storage/images/itsdevops.png') }}"></a> </p>
+  <p><i>Click the Elephant for DevOps process essence!</i></p>
+  <p align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/devopsuncertain.png') }}" onmouseover="this.src='{{ asset('storage/images/devandops.png') }}'" onmouseout="this.src='{{ asset('storage/images/devopsuncertain.png') }}'" title="Click the image now to reduce Devops uncertainty"></p>
+  <img alt="PO are the new RM's" class="img-fluid" src="{{ asset('storage/images/poarenewrm.png') }}" ><br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsepmboksixone" aria-expanded="false" aria-controls=
+        "collapsepmboksixone">PO as new RM! </button>
+  <div class="collapse" id="collapsepmboksixone">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">From Reinventing ITIL in the age of DevOps<br>
+          Abhinav Krishn Akaiser 2019</h5>
+        <div class="card-body text-left">
+          <h5 align="left">Product Owners Are the New Release Managers</h5>
+          <p>The release management team has been made partially redundant by machines. It is not
+            absolute because of two reasons.</p>
+          <ul>
+            <li>You need an owner for the entire release management process that
+              cuts across both development and operations.</li>
+            <li>Cognitive abilities are very much in demand to ensure that the
+              release management process succeeds and aligns with the objectives
+              set forth.</li>
+          </ul>
+          <p align="left">The person who manages the entire release from end to end is the release manager
+            and is still necessary. However, the release management role went from being a full-time
+            position to a part-time one (statistically speaking), mainly because of the diminished
+            work (thanks to automation). Capable release managers are
+          <ol>
+            <li>Well aware of the customer landscape, the requirements, and to
+              an extent the business priorities</li>
+            <li>Fully involved in the development and deployment processes</li>
+            <li>Understands operations and their acceptance criteria</li>
+          </ol>
+          <p align="left">The person who could do all this in the past was the product owner (PO), and thus
+            that person is a favorite choice for a part-time release manager. POs are an adequate
+            choice mainly because of their closeness to the business and to the development
+            and operations teams. The person was like a bridge between the two entities and was
+            expected to keep the boat going in the most turbulent conditions.</p>
+          <br>
+          <p align="left">Thanks Abhinav (page 294)<br>
+            PS <a href="/pmway/?slide=10" >I am reminded by the above of the importance of the Board Exeuctive to produce products in PRINCE2 Agile</a></p>
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle="collapse" data-target="#collapsevaluemodel" aria-expanded="false" aria-controls="collapsevaluemodel">The
+  Product Owner <br>
+  and <br>
+  Scrum Value Model </button>
+  <div class="collapse" id="collapsevaluemodel">
+    <div class="container">
+      <div class="card text-center">
+        <p class="card-header" align="center">Note below how value is produced in agile's Scrum method.</p>
+        <div class="card-body text-center"> <img alt="Scrum Value Model" class="img-fluid" src="{{ asset('storage/images/scrumvaluemodelroles.jpg') }}"> <br>
+        </div>
+        <div class="card-footer">
+          <p align="center">Note above that the first 3 stages occur before sprints start</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h5>I.e.</h5>
+  <p>DevOps is <a href="/home/index?slide=8">ITIL</a>, just empowered for speed! <br>
+    Scrum team sprints
+    (as an example) must be able to <a href="/release" >release</a> <a href="/workingsoftware" >working software</a> faster.</p>
+  <a href="/pmway/?slide=8" ><img alt="DevOps ops is itil but faster! Click this image to go find out more about ITIL's 26 processes" class="img-fluid" src="{{ asset('storage/images/itilppsmaller.png') }}" title="DevOps ops is itil but faster! Click this image to go find out more about ITIL's 26 processes"></a><br>
+  <p align="center">Click the image above for the 26 ITIL processes</p>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

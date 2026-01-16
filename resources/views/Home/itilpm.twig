@@ -1,0 +1,523 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL PM{% endif %}{% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container">
+<h3>ITIL and Project Management Synergy</h3>
+<!--
+	<h1>Get your 'performance stats' up now!</h1>
+	<a href="/itil.php">
+	<img class="img-fluid" alt="Back" height="30" src="{{ asset('storage/images/arrow_left.png') }}" width="30" ></a><br />
+&nbsp; -->
+<hr>
+<p>Within most organizations, Information Technology Infrastructure Library (ITIL) process owners and the IT project management office find themselves disconnected and using different terminology.<br />
+  While both disciplines emphasize delivering value and capabilities to IT's customers, they emphasize different perspectives. IT project management focuses on planning, organizing, and executing IT projects in a manner that ensures quality project delivery within a prescribed schedule and budget. In contrast, ITIL v3 emphasizes a service lifecycle approach, though many organizations focus their ITIL efforts on the service transition and operations phases of the service lifecycle (e.g., Change, Configuration, Incident, and Problem Management).</p>
+<p><strong>ITIL and project management defined</strong></p>
+<p>ITIL v3 is set of best practices for IT service management (ITSM) consisting of a library of five books that outline each phase of the service lifecycle: Service Strategy, Service Design, Service Transition, Service Operation, and Continual Service Improvement (The Figure
+  directly below). A key factor that sometimes gets overlooked is that the ITIL authors recognize that ITIL by itself is incomplete; it is made complete by integrating other disciplines, including IT project management.</p>
+<div align="center"> <img class="img-fluid" alt="ITIL service lifecycle" src="{{ asset('storage/images/service_lifecycle.png') }}" ></div>
+<p><strong>ITIL service lifecycle</strong></p>
+<p>ITIL v3 defines services from the customer perspective as &rdquo;a means of delivering value to customers by facilitating outcomes customers want to achieve without the ownership of specific costs and risks&rdquo; (section 2.2.1 of each the five ITIL books). This value is determined by a service's utility (fitness for its intended purpose) and warranty (fitness for use). Utility can be thought of as: "Does the service do what I need it to do with the level of effort I expect?" Warranty can be thought of as: "Is the service available, reliable, and secure to me when I need it?"</p>
+<p>Value is compromised if a service lacks either utility or warranty.</p>
+<p>IT project management offices often apply either the best practices provided by the Project Management Book of Knowledge (PMBOK) published by the Project Management Institute (PMI) or by the United Kingdom's Office of Government Commerce's PRojects IN Controlled Environments 2nd Edition (PRINCE2). For the purpose of this article, we'll refer to PMBOK.</p>
+<p>PMBOK prescribes five core procedures to IT project management including initiate, plan, execute, monitor &amp; control, and close project (The Figure
+  directly below). Unlike ITIL's lifecycle approach, IT projects have a definitive start and end date. In addition, while PMBOK emphasizes requirements identification, many IT project managers tend to focus on the functional requirements (i.e., utility, or fitness for purpose) and consider the operational requirements (i.e. warranty, or fitness for use) as the project is made ready for transition into operations.</p>
+<div class="center"> <img class="img-fluid" alt="PMBOK" src="{{ asset('storage/images/project_mgmt_process.gif') }}"  ></div>
+<p><strong>Service Lifecycle integration:</strong></p>
+<p>There are numerous opportunities to integrate ITIL processes with IT project management disciplines. One way to identify these opportunities is to consider the objectives and challenges associated with each ITIL service lifecycle phase during the definition, design, development, test and transition phases of projects.</p>
+<p><strong>Service Strategy -</strong> In the service strategy phase of the ITIL service lifecycle, organizations can easily identify the relationships between projects and services by simply identifying the services impacted by each project. This enhances the organization's understanding of the potential project impact, which helps ensure a thorough identification of the project benefits. This understanding also provides the opportunity to realize benefits such as managing customer expectations through service level management and preparing the business for the pending change through change and release management.</p>
+<p>In addition, by managing their project portfolio investment distribution by service, IT organizations strengthen the alignment between their IT investment spend and business strategy. Managing IT investments in accordance with business services establishes the business customers&rsquo; understanding of the value they receive from their IT spend.</p>
+<p><strong>Service Design -</strong> ITIL's service catalog management process is relatively simple, consisting of design, develop, build and test, release and manage procedures. While the linkage to IT project management may seem straight forward, few IT projects are managed from a service perspective. We suggest that IT's opportunity to enhance their ITSM capabilities is greatest when a service perspective is applied during the IT project planning and execution stages.</p>
+<p>By applying a service perspective and basic service level management principles to IT projects, IT organizations are more likely to consider both value attributes -- utility and warranty. Having both utility and warranty based requirements defined and documented early in an IT project helps ensure that the resulting solutions are properly designed and fitted in accordance with business expectations.</p>
+<p>While we acknowledge that defining the utility requirements is often easier than defining the warranty factors (such as capacity, availability, security and continuity requirements) IT would benefit by having these discussions prior to design rather than after a major incident.</p>
+<p>During the early IT project stages it is beneficial to include architectural standards for error messaging and handling. By establishing and applying such standards, organizations can improve a service's availability -- a core attribute of utility -- by reducing related incidents' mean-time-to-restore.</p>
+<p>Engaging ITSM change, release and configuration management processes during the design phase, makes the IT project more likely to be ready for transition to operations. This readiness includes ensuring that the release management group properly designs the communications and training essential to prepare the business for the "new" functional fit. From an IT operations perspective, involvement of these core processes during the design phase enhances IT's ability to assess and design, in order to mitigate the impact and risk of the change. This allows IT operations to properly address the core warranty attributes of capacity, continuity, and security.</p>
+<p><strong>Service Transition -</strong> From an IT project manager's perspective, an unstable development, test, or quality assurance (QA) environment can be very disruptive. By applying change at a practical level to the various environments; such as creating change records for QA environment changes, organizations will enhance the stability of these environments.</p>
+<p>Similarly, when IT project teams move the solution from environment to environment (especially from QA to production), occasionally the solution "doesn't perform the same." By applying configuration management disciplines to these environments, the project team will have improved information to plan and adjust their testing approach.</p>
+<p>Both improvements enhances IT project teams&rsquo; ability to successfully meet project schedule and cost constraints.</p>
+<p><strong>Service Operation -</strong> A key ITIL service operation consideration is the ability to properly support the project once it is in production. Often this early support influences the business's first impression of the new or modified service's utility and warranty. We have yet to experience a project that goes into production without some outstanding known issues. Equipping the service desk with these known issues will enhance IT's ability to provide timely and accurate support. From an ITSM perspective, these known issues should be integrated into the known error or knowledge base databases, which are accessible and easy to navigate using a service desk tool.</p>
+<p><strong>Continual Service Improvement -</strong> Ultimately, IT projects are expected to improve service in some manner, either in utility (fitness for purpose), warranty (fitness for use) or both. By establishing a baseline of the service measures for utility and warranty (including key performance indicators and critical success factors) and then subsequently applying the same measures after a defined period of time in production (e.g., 3-6 months), the organization is able to reasonably assess the improvement contribution.</p>
+<p>ITIL provides guidance on the provision of quality services and project management provides guidance on planning, organizing, and executing projects. Their similarities drive synergy in the delivery of projects and services by IT to the business -- and the greatest value is not realized by one or the other process, but by the integration of the whole.</p>
+<p>Good project management processes coupled with sound application of the ITIL framework can produce maximum benefit of investment.</p>
+<p>Thanks Ed.&nbsp; Ed Rivard is a managing IT service management consultant at Forsythe. He can be reached at erivard@forysthe.com.</p>
+<br>
+<br>
+<!--
+	You are welcome to contact me via email for more information about PMWay on a casual
+	basis.</h2><p>
+	However, if you need more focused help to assist you to banish CMMi Level
+	1 forever <br />
+	then click the button below for a solutions based sounding board for you
+	on your journey to CMMi Level 2+!  <br />
+	</p>
+
+	<a name="topofbox10"></a>
+
+		<section class="round-border">
+		<h2><button href="#collapse10" class="nav-toggle">Show</button>&nbsp;PMWay
+		Internet Based Consulting Services</h2>
+		<div id="collapse10" style="display:none" class="auto-style4">
+
+		<a name="topofbox11"></a>
+
+
+
+
+	<p>I know that PMWay may appear confusing to many.  <br />
+	I know also that CMMi (and the many focus / knowledge areas / methodologies etc.) discussed in PMWay are often seen as overwhelming and can be confusing.<br />
+	If you sign up with PMWay I will work with you, assisting and directing you quickly to key areas within this web that are relevant for you.<br />
+	The cost for membership below covers my time to actively assist you (over the Internet) on your journey towards CMMi Level 2+.</p>
+
+
+
+	<p class="auto-style1"><strong><em><a name="register"></a>For consulting support a once off fee of $99 USD per annum is charged.</em></strong></p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<div class="auto-style1">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="PK96XQG9L9ZV4">
+<table>
+<tr><td><input type="hidden" name="on0" value="Your eMail"><p>Enter your email in the box below<br />
+	then click the Buy Now button:</p></td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
+</table>
+<input type="image" src="https://www.paypalobjects.com/en_us/i/btn/btn_buynowcc_lg.gif" border="0" name="submit" class="img-fluid" alt="PayPal - The safer, easier way to pay online!">
+<img class="img-fluid" alt="" border="0" src="https://www.paypalobjects.com/en_us/i/scr/pixel.gif" width="1" height="1">
+	</div>
+</form>
+
+
+	<p class="ctr">
+	<map id="ImgMap0" name="ImgMap0">
+		<area class="img-fluid" alt="" coords="10, 0, 88, 50" href="mailto:mark@pmway.co.za?subject=i visited your pmway web site.  i have the following questions" title="eMail me any questions you may have."shape="rect" />
+	</map>
+	<img class="img-fluid" alt="" height="426" src="{{ asset('storage/images/oracle-of-delphi.jpg') }}" width="639" usemap="#ImgMap0" title="email me for more information"/></p>
+
+
+
+
+
+		<div class="left"><a href="#topofbox10"><span class="smltxt">Return to top of pop open box</span></a></div></div></section>
+
+
+		</div>
+
+	</div>
+
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a name="starthere1"></a><div style="margin-left:15px" class="ctr">	<p>
+				<a href="#top" ><img class="img-fluid" alt="" height="49" src="{{ asset('storage/images/cursor1.png') }}" width="28" /></a><a href="#top"><span class="smltxt">return to top</span></a>
+			</p></div>
+
+
+		<h2><button href="#collapse" class="nav-toggle">Show</button>&nbsp;&nbsp;
+		PMWay&#39;s <span dir="auto">raison d&#39;&ecirc;tre</span></h2>
+
+
+		<section class="round-border">
+		<a name="form"></a>
+		<div id="collapse" style="display:none" class="auto-style12" >
+
+			<br />
+			<img class="img-fluid" alt="Melting Pot" src="{{ asset('storage/images/meltingpot.png') }}" style align="left" /><h1>&nbsp; &nbsp;&nbsp; PMWay is a melting pot <br />&nbsp; &nbsp;&nbsp;where ideas on Projectization, CMMi <br />&nbsp; &nbsp;&nbsp;(and many other ingredients)
+			<br />&nbsp; &nbsp;&nbsp;
+			are liberally added to produce a thick and tasty broth <br />
+			&nbsp; &nbsp;&nbsp;- hopefully to your liking!</h1>
+			<p class="left">
+			Opinions, as they say, are like noses on faces!<br />I.e.
+		everyone has a slightly different and in their opinion better opinion!&nbsp;
+			<br />In my "opinion" a problem exists where Consultants "pop in to help," charge large amounts of money for their time, spend
+		the
+		time philosophizing about project management but leave little in the way of practical
+		"HOW TO" advice for those who will be left behind and who (where the rubber hits the road) will really need it! <br /><br />And courses on Project Management, CMMi
+			etc., especially in South Africa, are often extremely expensive (our exchange rate does not help), with the essence often elusively hidden in deep (often
+			inaccessible) forests of formality and pages and pages of thick and dense subject matter.<br /><br /> In the "new" South Africa an urgent need exists for practical "how to"
+		tips offered up front towards the implementation of a project office
+		which, if it is to be successful, should utilize the relatively advanced first world technology
+		and
+		framework that is Project Management and PMBOK&reg;/ Prince2&reg;, the Enterprise Project
+		Management System (<a href="epms.php" >EPMS</a>) and be fully integrated and
+		combined within a CMMi Capability Maturity mindset
+
+		etc.<br /><br />
+		I also believe that some of the most basic principles of project management process (fully encapsulated within CMMi) have actually been lost.  This has to do with the tight management of tasks by (FULLY EMPOWERED) resource towards the successful achievement of the task per the clear principles of the
+			<a href="irontriangle.php" >IRON TRIANGLE</a>. I.e. complete work "within time, within scope and in budget towards an agreed quality!
+		<br /><br />
+		In addition the critical
+			<a href="governance.php" >importance of Governance</a>,
+			<a href="transparency.php" >transparency</a>, combining ethics and honesty with excellent management and people skills etc. are also urgently needed.<br />
+
+			<a href="/transparency.php#diverted" >Some of the above problems alluded to can be summed up
+			succinctly in the cartoon directly in this cartoon</a> (and goes a long way to explain service delivery problems in our country) in my opinion!
+
+<br />
+<br />These and other reasons are why I have pulled together PMWay.&nbsp; I.e. to give you the
+		opportunity to get to grips with the essence of "project management process" and "full projectization"
+		on your own terms first, before deciding if it is going to be
+		appropriate for you.&nbsp; </p><p class="left">Remember you can also do nothing - and continue to
+			<a href="/cmm.php#justdoit" >JUST DO IT</a> as you have always done - at CMMi Level 1!</p>
+
+			<p class=" left">Know "the essence" espoused in PMWay is in fact very
+		simple and is summed up in the PMWay web page "<a href="essence.php" >The
+		3 word essence of PMWay</a>".&nbsp; </p>
+			<p class=" left">Here it is again.<p class=" left"><strong>Define the GAP (define project scope),
+			<br />Jump (safely) across the "baselined" gap (deliver project scope)</strong>.
+			<strong><br />Congratulate yourself &amp; the team on its success!</strong>&nbsp;
+
+			<strong><br />Learn the lessons to do it better next time.</strong>
+			<br /></p>
+			<p class=" left">If you can achieve this and your client is content to sign off your
+		project at the end of the project lifecycle (because you have delivered per the
+		mutually agreed requirement), then you are doing Professional Project
+		Management!&nbsp; <br /><br />I do realize that some institutions are locked into CMMi
+		Level 1 and will never understand or appreciate the PMWay.&nbsp; For
+		them its always JUST DO IT!&nbsp; <br /><br />However, time and time again this immature understanding and application
+		of project management (without tightly applied project management
+		controls) is shown to be flawed!&nbsp; <br /><br />This is why the
+			<a href="pmpprocesses.php" >Project Management Body of Knowledge (PMBOK<sup>&reg;
+			</sup>) with its
+		many knowledge areas </a>and its tried and tested approach exists.&nbsp; The
+		same applies to Prince2 (Remember the Guide to the PMBOK<sup>&reg; </sup>specifically
+&#8216;calls on the practitioner to apply a project
+management methodology - as a tool/techniques&#8230;
+AND Prince2&#8482; provides one!) and these are there to help us tame project management,
+		which is actually quite a difficult horse to ride!<br /><br />I am sure you have all heard Project Management referred to as the
+		Project Manager riding the horse and not the horse taking the Project
+		Manager for a ride!</p>
+
+		<p class="ctr">
+			<img class="img-fluid" alt="" height="291" src="{{ asset('storage/images/horse.png') }}" width="378" /></p>
+
+			<p class=" left">Hopefully, if you can aspire to the awareness of "higher levels" of process maturity
+		and embrace the ideals of perfection then possibly
+		PMWay can help a little towards achieving your goals be they whatever
+		you have set up for yourself.&nbsp; I.e. be they the creation of a
+		project office and the movement towards full projectization or the full
+		implementation of CMMi Level 2 (which involves basic project management
+		but also including the other recommended, categories, process and
+		specific practices for this level), or the planning and then delivering
+		a large and complex project etc. <br /><br />Ultimately, it is also my hope that readers will also simply enjoy digging around this site and have a little fun
+		while doing so.&nbsp; <br />If you can take something
+		meaningful away (even something small) for yourself then good for you and excellent news for
+		me!&nbsp; Nobody can ever say that they have all the correct answers and
+		as we are all scholars of Project Management, if you can teach
+		me something you know then I am 100% open to receiving the experience.&nbsp;&nbsp; As such,
+		you are very welcome to contact me with any questions, comments, errors
+		noted (I do work on this only when I have time and in short bursts)
+		etc., and even criticisms. <br /><br />Finally, some lofty and esoteric philosophizing
+		on Project Management.<br /><br />Plato, the philosopher told us; we should all aspire to move toward and
+		identify<a href="arc.php#form"> true "Form"</a>.<br />Philosophers understand the close relationship between function and
+		form.<br />Poets have also known for thousands of years that truth is beauty and beauty truth!&nbsp;
+		(I.e. quality is perfection)<br />They, as did Plato, knew that, due to our "chained" physical
+		manifestation, often we can only see reflections of the truth as shadows
+		flitting on the back of "the cave" of our existence.<br />"In light" of this, all models (PMWay included) are always but simple (poor) reflections of the truth.<br />This does not mean that it cannot be useful to you!</p>
+		<p class="ctr">
+			<img class="img-fluid" alt="" height="534" src="{{ asset('storage/images/model.png') }}" width="336" /><p class=" left">CMMi (I believe) incorporates the steps that can take us towards the
+		truth of a higher perfection, and if implemented honestly and
+		truthfully, and in a systematic and
+		sustained manner (taking carefully applied - and if necessary "baby
+		steps" towards clearly defined and sustainable goals), then gains can be
+		made that will make the difference and begin to loose the
+		chains that bind, allowing us to see and then to live projectization as it,
+		in its essential form, should be seen and lived!&nbsp; I.e. we can
+		become a mature and successful project driven organization that has
+		reduced risk and waste and is geared towards productivity and quality
+		for the good of <a href="client.php" >our clients</a>.</p>
+
+
+							<div class="left">
+
+                      <a href="#starthere1"><span class="smltxt">Return to top of pop open box</span></a>
+                      </div>
+
+
+		</div>
+</section>
+
+<br>
+<br>
+<br>
+
+
+</div>
+
+	<!--BODY-->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+<h3>ITIL and Project Management Synergy</h3>
+<!--
+	<h1>Get your 'performance stats' up now!</h1>
+	<a href="/itil.php">
+	<img class="img-fluid" alt="Back" height="30" src="{{ asset('storage/images/arrow_left.png') }}" width="30" ></a><br />
+&nbsp; -->
+<hr>
+<p>Within most organizations, Information Technology Infrastructure Library (ITIL) process owners and the IT project management office find themselves disconnected and using different terminology.<br />
+  While both disciplines emphasize delivering value and capabilities to IT's customers, they emphasize different perspectives. IT project management focuses on planning, organizing, and executing IT projects in a manner that ensures quality project delivery within a prescribed schedule and budget. In contrast, ITIL v3 emphasizes a service lifecycle approach, though many organizations focus their ITIL efforts on the service transition and operations phases of the service lifecycle (e.g., Change, Configuration, Incident, and Problem Management).</p>
+<p><strong>ITIL and project management defined</strong></p>
+<p>ITIL v3 is set of best practices for IT service management (ITSM) consisting of a library of five books that outline each phase of the service lifecycle: Service Strategy, Service Design, Service Transition, Service Operation, and Continual Service Improvement (The Figure
+  directly below). A key factor that sometimes gets overlooked is that the ITIL authors recognize that ITIL by itself is incomplete; it is made complete by integrating other disciplines, including IT project management.</p>
+<div align="center"> <img class="img-fluid" alt="ITIL service lifecycle" src="{{ asset('storage/images/service_lifecycle.png') }}" ></div>
+<p><strong>ITIL service lifecycle</strong></p>
+<p>ITIL v3 defines services from the customer perspective as &rdquo;a means of delivering value to customers by facilitating outcomes customers want to achieve without the ownership of specific costs and risks&rdquo; (section 2.2.1 of each the five ITIL books). This value is determined by a service's utility (fitness for its intended purpose) and warranty (fitness for use). Utility can be thought of as: "Does the service do what I need it to do with the level of effort I expect?" Warranty can be thought of as: "Is the service available, reliable, and secure to me when I need it?"</p>
+<p>Value is compromised if a service lacks either utility or warranty.</p>
+<p>IT project management offices often apply either the best practices provided by the Project Management Book of Knowledge (PMBOK) published by the Project Management Institute (PMI) or by the United Kingdom's Office of Government Commerce's PRojects IN Controlled Environments 2nd Edition (PRINCE2). For the purpose of this article, we'll refer to PMBOK.</p>
+<p>PMBOK prescribes five core procedures to IT project management including initiate, plan, execute, monitor &amp; control, and close project (The Figure
+  directly below). Unlike ITIL's lifecycle approach, IT projects have a definitive start and end date. In addition, while PMBOK emphasizes requirements identification, many IT project managers tend to focus on the functional requirements (i.e., utility, or fitness for purpose) and consider the operational requirements (i.e. warranty, or fitness for use) as the project is made ready for transition into operations.</p>
+<div class="center"> <img class="img-fluid" alt="PMBOK" src="{{ asset('storage/images/project_mgmt_process.gif') }}"  ></div>
+<p><strong>Service Lifecycle integration:</strong></p>
+<p>There are numerous opportunities to integrate ITIL processes with IT project management disciplines. One way to identify these opportunities is to consider the objectives and challenges associated with each ITIL service lifecycle phase during the definition, design, development, test and transition phases of projects.</p>
+<p><strong>Service Strategy -</strong> In the service strategy phase of the ITIL service lifecycle, organizations can easily identify the relationships between projects and services by simply identifying the services impacted by each project. This enhances the organization's understanding of the potential project impact, which helps ensure a thorough identification of the project benefits. This understanding also provides the opportunity to realize benefits such as managing customer expectations through service level management and preparing the business for the pending change through change and release management.</p>
+<p>In addition, by managing their project portfolio investment distribution by service, IT organizations strengthen the alignment between their IT investment spend and business strategy. Managing IT investments in accordance with business services establishes the business customers&rsquo; understanding of the value they receive from their IT spend.</p>
+<p><strong>Service Design -</strong> ITIL's service catalog management process is relatively simple, consisting of design, develop, build and test, release and manage procedures. While the linkage to IT project management may seem straight forward, few IT projects are managed from a service perspective. We suggest that IT's opportunity to enhance their ITSM capabilities is greatest when a service perspective is applied during the IT project planning and execution stages.</p>
+<p>By applying a service perspective and basic service level management principles to IT projects, IT organizations are more likely to consider both value attributes -- utility and warranty. Having both utility and warranty based requirements defined and documented early in an IT project helps ensure that the resulting solutions are properly designed and fitted in accordance with business expectations.</p>
+<p>While we acknowledge that defining the utility requirements is often easier than defining the warranty factors (such as capacity, availability, security and continuity requirements) IT would benefit by having these discussions prior to design rather than after a major incident.</p>
+<p>During the early IT project stages it is beneficial to include architectural standards for error messaging and handling. By establishing and applying such standards, organizations can improve a service's availability -- a core attribute of utility -- by reducing related incidents' mean-time-to-restore.</p>
+<p>Engaging ITSM change, release and configuration management processes during the design phase, makes the IT project more likely to be ready for transition to operations. This readiness includes ensuring that the release management group properly designs the communications and training essential to prepare the business for the "new" functional fit. From an IT operations perspective, involvement of these core processes during the design phase enhances IT's ability to assess and design, in order to mitigate the impact and risk of the change. This allows IT operations to properly address the core warranty attributes of capacity, continuity, and security.</p>
+<p><strong>Service Transition -</strong> From an IT project manager's perspective, an unstable development, test, or quality assurance (QA) environment can be very disruptive. By applying change at a practical level to the various environments; such as creating change records for QA environment changes, organizations will enhance the stability of these environments.</p>
+<p>Similarly, when IT project teams move the solution from environment to environment (especially from QA to production), occasionally the solution "doesn't perform the same." By applying configuration management disciplines to these environments, the project team will have improved information to plan and adjust their testing approach.</p>
+<p>Both improvements enhances IT project teams&rsquo; ability to successfully meet project schedule and cost constraints.</p>
+<p><strong>Service Operation -</strong> A key ITIL service operation consideration is the ability to properly support the project once it is in production. Often this early support influences the business's first impression of the new or modified service's utility and warranty. We have yet to experience a project that goes into production without some outstanding known issues. Equipping the service desk with these known issues will enhance IT's ability to provide timely and accurate support. From an ITSM perspective, these known issues should be integrated into the known error or knowledge base databases, which are accessible and easy to navigate using a service desk tool.</p>
+<p><strong>Continual Service Improvement -</strong> Ultimately, IT projects are expected to improve service in some manner, either in utility (fitness for purpose), warranty (fitness for use) or both. By establishing a baseline of the service measures for utility and warranty (including key performance indicators and critical success factors) and then subsequently applying the same measures after a defined period of time in production (e.g., 3-6 months), the organization is able to reasonably assess the improvement contribution.</p>
+<p>ITIL provides guidance on the provision of quality services and project management provides guidance on planning, organizing, and executing projects. Their similarities drive synergy in the delivery of projects and services by IT to the business -- and the greatest value is not realized by one or the other process, but by the integration of the whole.</p>
+<p>Good project management processes coupled with sound application of the ITIL framework can produce maximum benefit of investment.</p>
+<p>Thanks Ed.&nbsp; Ed Rivard is a managing IT service management consultant at Forsythe. He can be reached at erivard@forysthe.com.</p>
+<br>
+<br>
+<!--
+	You are welcome to contact me via email for more information about PMWay on a casual
+	basis.</h2><p>
+	However, if you need more focused help to assist you to banish CMMi Level
+	1 forever <br />
+	then click the button below for a solutions based sounding board for you
+	on your journey to CMMi Level 2+!  <br />
+	</p>
+
+	<a name="topofbox10"></a>
+
+		<section class="round-border">
+		<h2><button href="#collapse10" class="nav-toggle">Show</button>&nbsp;PMWay
+		Internet Based Consulting Services</h2>
+		<div id="collapse10" style="display:none" class="auto-style4">
+
+		<a name="topofbox11"></a>
+
+
+
+
+	<p>I know that PMWay may appear confusing to many.  <br />
+	I know also that CMMi (and the many focus / knowledge areas / methodologies etc.) discussed in PMWay are often seen as overwhelming and can be confusing.<br />
+	If you sign up with PMWay I will work with you, assisting and directing you quickly to key areas within this web that are relevant for you.<br />
+	The cost for membership below covers my time to actively assist you (over the Internet) on your journey towards CMMi Level 2+.</p>
+
+
+
+	<p class="auto-style1"><strong><em><a name="register"></a>For consulting support a once off fee of $99 USD per annum is charged.</em></strong></p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<div class="auto-style1">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="PK96XQG9L9ZV4">
+<table>
+<tr><td><input type="hidden" name="on0" value="Your eMail"><p>Enter your email in the box below<br />
+	then click the Buy Now button:</p></td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
+</table>
+<input type="image" src="https://www.paypalobjects.com/en_us/i/btn/btn_buynowcc_lg.gif" border="0" name="submit" class="img-fluid" alt="PayPal - The safer, easier way to pay online!">
+<img class="img-fluid" alt="" border="0" src="https://www.paypalobjects.com/en_us/i/scr/pixel.gif" width="1" height="1">
+	</div>
+</form>
+
+
+	<p class="ctr">
+	<map id="ImgMap0" name="ImgMap0">
+		<area class="img-fluid" alt="" coords="10, 0, 88, 50" href="mailto:mark@pmway.co.za?subject=i visited your pmway web site.  i have the following questions" title="eMail me any questions you may have."shape="rect" />
+	</map>
+	<img class="img-fluid" alt="" height="426" src="{{ asset('storage/images/oracle-of-delphi.jpg') }}" width="639" usemap="#ImgMap0" title="email me for more information"/></p>
+
+
+
+
+
+		<div class="left"><a href="#topofbox10"><span class="smltxt">Return to top of pop open box</span></a></div></div></section>
+
+
+		</div>
+
+	</div>
+
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a name="starthere1"></a><div style="margin-left:15px" class="ctr">	<p>
+				<a href="#top" ><img class="img-fluid" alt="" height="49" src="{{ asset('storage/images/cursor1.png') }}" width="28" /></a><a href="#top"><span class="smltxt">return to top</span></a>
+			</p></div>
+
+
+		<h2><button href="#collapse" class="nav-toggle">Show</button>&nbsp;&nbsp;
+		PMWay&#39;s <span dir="auto">raison d&#39;&ecirc;tre</span></h2>
+
+
+		<section class="round-border">
+		<a name="form"></a>
+		<div id="collapse" style="display:none" class="auto-style12" >
+
+			<br />
+			<img class="img-fluid" alt="Melting Pot" src="{{ asset('storage/images/meltingpot.png') }}" style align="left" /><h1>&nbsp; &nbsp;&nbsp; PMWay is a melting pot <br />&nbsp; &nbsp;&nbsp;where ideas on Projectization, CMMi <br />&nbsp; &nbsp;&nbsp;(and many other ingredients)
+			<br />&nbsp; &nbsp;&nbsp;
+			are liberally added to produce a thick and tasty broth <br />
+			&nbsp; &nbsp;&nbsp;- hopefully to your liking!</h1>
+			<p class="left">
+			Opinions, as they say, are like noses on faces!<br />I.e.
+		everyone has a slightly different and in their opinion better opinion!&nbsp;
+			<br />In my "opinion" a problem exists where Consultants "pop in to help," charge large amounts of money for their time, spend
+		the
+		time philosophizing about project management but leave little in the way of practical
+		"HOW TO" advice for those who will be left behind and who (where the rubber hits the road) will really need it! <br /><br />And courses on Project Management, CMMi
+			etc., especially in South Africa, are often extremely expensive (our exchange rate does not help), with the essence often elusively hidden in deep (often
+			inaccessible) forests of formality and pages and pages of thick and dense subject matter.<br /><br /> In the "new" South Africa an urgent need exists for practical "how to"
+		tips offered up front towards the implementation of a project office
+		which, if it is to be successful, should utilize the relatively advanced first world technology
+		and
+		framework that is Project Management and PMBOK&reg;/ Prince2&reg;, the Enterprise Project
+		Management System (<a href="epms.php" >EPMS</a>) and be fully integrated and
+		combined within a CMMi Capability Maturity mindset
+
+		etc.<br /><br />
+		I also believe that some of the most basic principles of project management process (fully encapsulated within CMMi) have actually been lost.  This has to do with the tight management of tasks by (FULLY EMPOWERED) resource towards the successful achievement of the task per the clear principles of the
+			<a href="irontriangle.php" >IRON TRIANGLE</a>. I.e. complete work "within time, within scope and in budget towards an agreed quality!
+		<br /><br />
+		In addition the critical
+			<a href="governance.php" >importance of Governance</a>,
+			<a href="transparency.php" >transparency</a>, combining ethics and honesty with excellent management and people skills etc. are also urgently needed.<br />
+
+			<a href="/transparency.php#diverted" >Some of the above problems alluded to can be summed up
+			succinctly in the cartoon directly in this cartoon</a> (and goes a long way to explain service delivery problems in our country) in my opinion!
+
+<br />
+<br />These and other reasons are why I have pulled together PMWay.&nbsp; I.e. to give you the
+		opportunity to get to grips with the essence of "project management process" and "full projectization"
+		on your own terms first, before deciding if it is going to be
+		appropriate for you.&nbsp; </p><p class="left">Remember you can also do nothing - and continue to
+			<a href="/cmm.php#justdoit" >JUST DO IT</a> as you have always done - at CMMi Level 1!</p>
+
+			<p class=" left">Know "the essence" espoused in PMWay is in fact very
+		simple and is summed up in the PMWay web page "<a href="essence.php" >The
+		3 word essence of PMWay</a>".&nbsp; </p>
+			<p class=" left">Here it is again.<p class=" left"><strong>Define the GAP (define project scope),
+			<br />Jump (safely) across the "baselined" gap (deliver project scope)</strong>.
+			<strong><br />Congratulate yourself &amp; the team on its success!</strong>&nbsp;
+
+			<strong><br />Learn the lessons to do it better next time.</strong>
+			<br /></p>
+			<p class=" left">If you can achieve this and your client is content to sign off your
+		project at the end of the project lifecycle (because you have delivered per the
+		mutually agreed requirement), then you are doing Professional Project
+		Management!&nbsp; <br /><br />I do realize that some institutions are locked into CMMi
+		Level 1 and will never understand or appreciate the PMWay.&nbsp; For
+		them its always JUST DO IT!&nbsp; <br /><br />However, time and time again this immature understanding and application
+		of project management (without tightly applied project management
+		controls) is shown to be flawed!&nbsp; <br /><br />This is why the
+			<a href="pmpprocesses.php" >Project Management Body of Knowledge (PMBOK<sup>&reg;
+			</sup>) with its
+		many knowledge areas </a>and its tried and tested approach exists.&nbsp; The
+		same applies to Prince2 (Remember the Guide to the PMBOK<sup>&reg; </sup>specifically
+&#8216;calls on the practitioner to apply a project
+management methodology - as a tool/techniques&#8230;
+AND Prince2&#8482; provides one!) and these are there to help us tame project management,
+		which is actually quite a difficult horse to ride!<br /><br />I am sure you have all heard Project Management referred to as the
+		Project Manager riding the horse and not the horse taking the Project
+		Manager for a ride!</p>
+
+		<p class="ctr">
+			<img class="img-fluid" alt="" height="291" src="{{ asset('storage/images/horse.png') }}" width="378" /></p>
+
+			<p class=" left">Hopefully, if you can aspire to the awareness of "higher levels" of process maturity
+		and embrace the ideals of perfection then possibly
+		PMWay can help a little towards achieving your goals be they whatever
+		you have set up for yourself.&nbsp; I.e. be they the creation of a
+		project office and the movement towards full projectization or the full
+		implementation of CMMi Level 2 (which involves basic project management
+		but also including the other recommended, categories, process and
+		specific practices for this level), or the planning and then delivering
+		a large and complex project etc. <br /><br />Ultimately, it is also my hope that readers will also simply enjoy digging around this site and have a little fun
+		while doing so.&nbsp; <br />If you can take something
+		meaningful away (even something small) for yourself then good for you and excellent news for
+		me!&nbsp; Nobody can ever say that they have all the correct answers and
+		as we are all scholars of Project Management, if you can teach
+		me something you know then I am 100% open to receiving the experience.&nbsp;&nbsp; As such,
+		you are very welcome to contact me with any questions, comments, errors
+		noted (I do work on this only when I have time and in short bursts)
+		etc., and even criticisms. <br /><br />Finally, some lofty and esoteric philosophizing
+		on Project Management.<br /><br />Plato, the philosopher told us; we should all aspire to move toward and
+		identify<a href="arc.php#form"> true "Form"</a>.<br />Philosophers understand the close relationship between function and
+		form.<br />Poets have also known for thousands of years that truth is beauty and beauty truth!&nbsp;
+		(I.e. quality is perfection)<br />They, as did Plato, knew that, due to our "chained" physical
+		manifestation, often we can only see reflections of the truth as shadows
+		flitting on the back of "the cave" of our existence.<br />"In light" of this, all models (PMWay included) are always but simple (poor) reflections of the truth.<br />This does not mean that it cannot be useful to you!</p>
+		<p class="ctr">
+			<img class="img-fluid" alt="" height="534" src="{{ asset('storage/images/model.png') }}" width="336" /><p class=" left">CMMi (I believe) incorporates the steps that can take us towards the
+		truth of a higher perfection, and if implemented honestly and
+		truthfully, and in a systematic and
+		sustained manner (taking carefully applied - and if necessary "baby
+		steps" towards clearly defined and sustainable goals), then gains can be
+		made that will make the difference and begin to loose the
+		chains that bind, allowing us to see and then to live projectization as it,
+		in its essential form, should be seen and lived!&nbsp; I.e. we can
+		become a mature and successful project driven organization that has
+		reduced risk and waste and is geared towards productivity and quality
+		for the good of <a href="client.php" >our clients</a>.</p>
+
+
+							<div class="left">
+
+                      <a href="#starthere1"><span class="smltxt">Return to top of pop open box</span></a>
+                      </div>
+
+
+		</div>
+</section>
+
+<br>
+<br>
+<br>
+
+
+</div>
+
+{% endif %}
+
+
+{% endblock %}

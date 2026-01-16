@@ -1,0 +1,10 @@
+
+# Sends my web site to E
+cd "C:\Users\Administrator\Desktop\TRUEMRROR"
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+.\TRUEMIRROR_PROD-Improved.ps1
+
+# Sends my web site to D
+cd "C:\Users\Administrator\Desktop\TRUEMIRROR"
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+.\TRUEMIRROR_PROD-Improved-2D.ps1

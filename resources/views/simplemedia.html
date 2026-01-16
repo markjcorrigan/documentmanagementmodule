@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+{#{% if user %}#}
+{#    <!-- signed-in menu items -->#}
+{#{% endif %}#}
+
+{#{% if not user %}#}
+{#    <!-- guest menu items -->#}
+{#{% endif %}#}
+
+	<head>
+		<meta charset="utf-8">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+			<title>{% block title %}{% endblock %}</title>
+			<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+		 <!---------------------Original bootstrap 4.5 before fixed for ableplayer <link rel="stylesheet" href="/bootstrapfourfivetwo/css/bootstrap.css" /> ---->
+	<link rel="stylesheet" href="/bootstrapfourfivetwo/css/bootstrapfixedforableplayer.css" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!--<link rel="stylesheet" href="/bootstrapfouroneone/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">-->
+    <link rel="stylesheet" href="/bootstrapfourthreeone/fontawesomeprowebfivetwo/css/all.css">
+  <!--  <link rel="stylesheet" href="/bootstrapfourthreeone/css/jquery-ui.css"> --------------------------------------NB recently -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+
+
+
+		<!--	<link rel="stylesheet" href="/bootstrapfouroneone/bootstrapableplay.css" >-->
+			<!--<link rel="stylesheet" href="/bootstrapfouroneone/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+			<link rel="stylesheet" href="/css/styles.css">-->
+			<link rel="stylesheet" href="/ableaudio/build/ableplayer.min.css" type="text/css">
+
+
+
+
+
+				</head>
+				<body class="d-flex flex-column" oncontextmenu="return false" ondragstart="return true"
+onselectstart="return false">
+
+					 <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+<!--        <a class="navbar-brand" href="/pmway">PMWay</a>-->
+        <a class="navbar-brand" href="/home">Home</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+
+                {# Signed-in menu #}
+                {# Signed-in menu #}
+                {% if user %}
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/home/about" title="Why PMWay?"><i class="fad fa-info"></i>&nbsp;&nbsp;</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/home/waterfallvsagile" title="Lean and Agile?"><i-->
+<!--                                class="fad fa-cogs"></i></a>-->
+<!--                    </li>-->
+
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"-->
+<!--                           aria-haspopup="true" aria-expanded="false">-->
+<!--                            <i class="fa-duotone fa-solid fa-question"></i>-->
+<!--                        </a>-->
+<!--                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">-->
+<!--                            <a class="dropdown-item" href="/home/pmbokprocessnutshell"-->
+<!--                               title="Find out how to use the PMBok Dashboard">-->
+<!--                                <i class="fad fa-cogs"></i>&nbsp;HowTo-->
+<!--                            </a>-->
+<!--                            <a class="dropdown-item" href="/home/agile" title="Want an overview of Lean and Agile">-->
+<!--                                <i class="fad fa-cogs"></i>&nbsp;Agile-->
+<!--                            </a>-->
+<!--                            <a class="dropdown-item" href="/home/carousel"-->
+<!--                               title="See the PMBOK in the Greater Scheme by Connecting the Dots here">-->
+<!--                                <i class="fad fa-cogs"></i>&nbsp;TheDots-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">-->
+<!--                            {{ csrf_field() }}-->
+<!--                        </form>-->
+
+<!--                        {# Logout link that triggers the form #}-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#" id="logout" title="Logout from PMWay" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">-->
+<!--                            <i class="fad fa-lock" aria-hidden="true"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+                {% endif %}
+
+                {# Guest menu #}
+                {% if not user %}
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/home/about" title="Why PMWay?"><i class="fad fa-info"></i></a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/home/waterfallvsagile" title="Lean and Agile?"><i-->
+<!--                                class="fad fa-cogs"></i></a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/#section-5" title="Contact PMWay">-->
+<!--                            <i class="fad fa-envelope" aria-hidden="true"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/register" id="register" title="Register on PMWay">-->
+<!--                            <i class="fad fa-user-plus" aria-hidden="true"></i>-->
+<!--                        </a>-->
+<!--                    </li class="nav-item">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/login" id="login" title="Login to PMWay">-->
+
+<!--                            <i class="fad fa-lock-open" aria-hidden="true"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+
+                {% endif %}
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+        {% for message in flash_messages %}
+
+									<div style="text-align:center" class="alert alert-{{ message.type }}">
+                {{ message.body }}
+            </div>
+        {% endfor %}
+
+
+        {% block body %}
+
+									<div class="container" style="text-align:center">
+
+
+
+
+
+
+        {% endblock %}
+
+									</div>
+
+									<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+									<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>-->
+									<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+
+									<!--<script src="https://use.fontawesome.com/2f08d8400c.js"></script>-->
+
+
+					<!-- Dependencies -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/ableaudio/thirdparty/js.cookie.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/ableaudio/build/ableplayer.min.css" type="text/css"/>
+
+<!-- JavaScript -->
+<script src="/ableaudio/build/ableplayer.min.js"></script>
+
+
+
+
+	<!--
+									<script src="/bootstrapfourfivetwo/js/jquery.js"></script>
+
+									<script src="/bootstrapfourfivetwo/js/bootstrap.js"></script>
+
+<script src="/ableaudio/build/ableplayer.js"></script>
+
+<script src="/ableaudio/thirdparty/js.cookie.js"></script>  -->
+
+
+
+
+
+
+
+									<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+									<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+									-->
+
+
+
+
+{% block footer %}
+
+
+        <footer id="sticky-footer" class="py-5" style="background-color: #111827;">
+            <div class="container">
+
+                <!-- All Content Centered -->
+                <div class="d-flex flex-column align-items-center text-center">
+
+                    <!-- Top Text -->
+                    <div class="mb-4">
+                        <p class="text-white mb-0">
+                            Project &amp; Process Management <span lang="en-za">Best Practice</span><br>
+                            at CM Level 2 and above
+                        </p>
+                    </div>
+
+                    <!-- Image with GIF Hover -->
+                    <div class="mb-4 w-100 d-flex justify-content-center">
+                        <a href="/gamestats"  class="d-block" style="max-width: 600px; width: 100%;">
+                            <img
+                                alt="Up Stat or Down Stat"
+                                class="img-fluid w-100 mx-auto"
+                                src="{{ asset('storage/images/devopsimagemedium.png') }}"
+                                onmouseover="this.src='{{ asset('storage/images/devops2.gif') }}'"
+                                onmouseout="this.src='{{ asset('storage/images/devopsimagemedium.png') }}'"
+                                title="How are your game stats? Click here for more">
+                        </a>
+                    </div>
+
+                    <!-- Bottom Text -->
+                    <div class="mb-4">
+                        <p class="text-white mb-0">underpinned by ITIL</p>
+                    </div>
+
+                    <!-- Copyright -->
+                    <div class="mt-5">
+                        <p class="text-white small mb-0">
+                            &copy; 2009 PMWay<br>
+                            <span class="text-white-50" style="font-size: 0.875rem;">
+                        People Process Technology Governance Execution
+                    </span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+
+
+{% if user %}
+
+  {% endif %}
+{% endblock %}
+</body>
+</html>
+
+

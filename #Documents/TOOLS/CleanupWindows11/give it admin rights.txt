@@ -1,0 +1,52 @@
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\Cleanup-Windows11.ps1
+
+What This Script Cleans:
+Activity History & Timeline data
+
+Windows Search/Cortana cache
+
+Temporary files (multiple locations)
+
+Windows Update cache
+
+Error reports (WER)
+
+Thumbnail & icon caches
+
+Clipboard data
+
+PowerShell history
+
+Event logs (non-critical)
+
+Recycle Bin
+
+DNS cache
+
+Safety Features:
+Administrator check with warnings
+
+Restore point creation (when run as admin)
+
+Selective cleaning (avoids critical system files)
+
+Error handling (won't crash on failures)
+
+User prompts for potentially disruptive operations
+
+Service management (stops/restarts services properly)
+
+Important Notes:
+Run as Administrator for full functionality
+
+Reboot recommended after running
+
+Some features may need manual reconfiguration after cleanup
+
+The script is non-destructive to system files
+
+Windows will regenerate some caches over time
+
+For maximum privacy, combine this script with manual privacy settings adjustments in Windows Settings.
+

@@ -1,0 +1,71 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}SAFe 5{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container">
+  <h3>Scaled Agile Framework (SAFe) version 5 in 5 minutes</h3>
+  <hr>
+  <p><a href="#playlist">PLAYLIST</a></p>
+  <div id="player" align="center">
+    <!-- video source and track elements will be populated from playlist -->
+    <video id="video1" preload="false" data-able-player playsinline ></video>
+  </div>
+  <div id="playlist">
+    <h2><a name="playlist"></a>Playlist</h2>
+    <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+    <!-- The value of data-player must match the id of the media element -->
+    <!-- see documentation for additional details -->
+    <ul class="able-playlist" data-player="video1">
+      <li  data-poster="/images/safefive.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/safe/safe.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/safefive.jpg') }}" alt="">SAFe 5 in 5 minutes </button>
+      </li>
+    </ul>
+    <br>
+    <br>
+  </div>
+</div>
+<br>
+<br>
+
+<!--ENDBODY-->
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+  <h3>SAFe Scaled Agile Framework version 5 in 5 minutes</h3>
+  <hr>
+  <p><a href="#playlist">PLAYLIST</a></p>
+  <div id="player" align="center">
+    <!-- video source and track elements will be populated from playlist -->
+    <video id="video1" preload="false" data-able-player playsinline ></video>
+  </div>
+  <div id="playlist">
+    <h2><a name="playlist"></a>Playlist</h2>
+    <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+    <!-- The value of data-player must match the id of the media element -->
+    <!-- see documentation for additional details -->
+    <ul class="able-playlist" data-player="video1">
+      <li  data-poster="/images/safefive.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/safe/safe.mp4"> </span>
+        <button type="button"> <img src="{{ asset('storage/images/safefive.jpg') }}" alt="">SAFe 5 in 5 minutes </button>
+      </li>
+    </ul>
+    <br>
+    <br>
+  </div>
+</div>
+<br>
+<br>
+
+<!--ENDBODY-->
+
+<!--ENDBODY-->
+
+{% endif %}
+{% endblock %}

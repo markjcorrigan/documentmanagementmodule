@@ -1,0 +1,27 @@
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px !important;
+  background-color: #292b2c;
+  color:gray;
+  text-align: center;
+}
+</style>
+<div class="footer">
+
+<p style="text-align:center"  >Project &amp; Process Management Excellence <br><a href="/cmmi">@ CM Level 2+</a></p>
+</div>
+
+
+
+
+
+<style>
+.able-wrapper {
+
+text-align:left;
+}
+</style>

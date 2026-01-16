@@ -1,0 +1,104 @@
+<?php
+
+use App\Events\VisitorConnected;
+use App\Models\ChatSession;
+use App\Models\User;
+use Illuminate\Support\Facades\Broadcast;
+
+/*
+|--------------------------------------------------------------------------
+| Broadcast Channels
+|--------------------------------------------------------------------------
+|
+| Here you may register all of the event broadcasting channels that your
+| application supports. The given channel authorization callbacks are
+| used to check if an authenticated user can listen to the channel.
+|
+*/
+
+Broadcast::channel('chat-session.{sessionId}', function (User $user, int $sessionId) {
+    // ✅ LOG VISITOR WHEN THEY JOIN A CHAT SESSION
+    \Log::info('🎯 User joining chat-session channel', ['user_id' => $user->id]);
+    VisitorConnected::dispatch(
+        userId: $user->id,
+        username: $user->name,
+        ipAddress: request()->ip(),
+        userAgent: request()->userAgent(),
+        pageUrl: request()->header('referer', 'N/A')
+    );
+
+    $session = ChatSession::find($sessionId);
+
+    if (!$session) {
+        return false;
+    }
+
+    // Check if user is part of this chat session
+    if ($session->user1_id === $user->id || $session->user2_id === $user->id) {
+        return [
+            'id' => $user->id,
+            'name' => $user->name,
+        ];
+    }
+
+    return false;
+});
+
+Broadcast::channel('online-users', function (User $user) {
+    // ✅ LOG VISITOR WHEN THEY JOIN ONLINE-USERS CHANNEL
+    \Log::info('🎯 User joining online-users channel', ['user_id' => $user->id]);
+    VisitorConnected::dispatch(
+        userId: $user->id,
+        username: $user->name,
+        ipAddress: request()->ip(),
+        userAgent: request()->userAgent(),
+        pageUrl: request()->header('referer', 'N/A')
+    );
+
+    // All authenticated users can join the online-users presence channel
+    return [
+        'id' => $user->id,
+        'name' => $user->name,
+        'email' => $user->email,
+    ];
+});
+
+Broadcast::channel('presence-online-users', function (User $user) {
+    // ✅ LOG VISITOR WHEN THEY JOIN PRESENCE-ONLINE-USERS CHANNEL
+    \Log::info('🎯 User joining presence-online-users channel', [
+        'user_id' => $user->id,
+        'username' => $user->name,
+        'ip' => request()->ip(),
+        'referer' => request()->header('referer'),
+        'time' => now()->toDateTimeString()
+    ]);
+
+    VisitorConnected::dispatch(
+        userId: $user->id,
+        username: $user->name,
+        ipAddress: request()->ip(),
+        userAgent: request()->userAgent(),
+        pageUrl: request()->header('referer', 'N/A')
+    );
+
+    // All authenticated users can join the presence-online-users channel
+    return [
+        'id' => $user->id,
+        'name' => $user->name,
+        'email' => $user->email,
+    ];
+});
+
+Broadcast::channel('user.{userId}', function (User $user, $userId) {
+    // ✅ LOG VISITOR WHEN THEY JOIN USER CHANNEL (optional)
+    \Log::info('🎯 User joining user.{userId} channel', ['user_id' => $user->id]);
+    VisitorConnected::dispatch(
+        userId: $user->id,
+        username: $user->name,
+        ipAddress: request()->ip(),
+        userAgent: request()->userAgent(),
+        pageUrl: request()->header('referer', 'N/A')
+    );
+
+    return (int)$user->id === (int)$userId;
+});

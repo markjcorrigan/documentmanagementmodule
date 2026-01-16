@@ -1,0 +1,168 @@
+{% extends 'simplemedia.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}3P's and 7F's{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+
+<div class="container">
+<h3>3 P's and 7 F's from Development that Pays</h3>
+<hr>
+<p align="left">3 [Problems] P's:  Pull, Productivity and Predictability</p>
+<p align="left">7 [Fixes] F's:  Foundation, Flex, Focus, Flow, Fuel, Farewell, Fine-Tune</p>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline ></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/sevenfs.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/sevenfs/sevenfs.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/sevenfs.jpg') }}" alt="">3 [Problems] P's and 7 [Fixes] F's from Development that Pays </button>
+    </li>
+
+	     <li  data-poster="/images/splitstories.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/storysplitting.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/splitstories.jpg') }}" alt="">Story Splitting  </button>
+    </li>
+  </ul>
+  <br>
+
+
+  <br>
+    <h3>Some ideas on above - from the trenches</h3>
+  <p align="left">The Project Management Institute Agile Certified Practitioner (ACP) Exam handles Agile in 3 key areas:
+  <ul>
+    <li>Scrum (Their chosen Agile project method)</li>
+    <li>XP (Extreme Programming - focused on building Agile programming skills)
+    <li>Lean/Kanban (focused on visualization of work and how well "features" [not user stories] flow through a system)
+  </ul>
+  The point made is that all are needed for success in Agile!
+  </p>
+	<p align="left">PMWay suggests (per the Scrum flow image below) that project management is all about the temporary endeavor (the sprint) to create a unique product, service and result (<a href="/workingsoftware" ><u>working software</u></a>).  This is also understood in essence as Start, Change and Stop which requires "monitoring and control" in the sprint to achieve the goals that have been set by the team.  Else the project and team are just rolling on down the highway.  Bottom line:  a project is not Business As Usual (BAU).<br>
+		In software engineering (software development) any change to the system baseline to produce (release) a new version of a software system version be <a href="/home/donedone" ><u>done done</u></a> as soon as possible within a project phase /s (timebox /s or sprint /s)!<br>
+		The V Model explains the agile flow diagram below and touches on the <a href="/pmway/?slide=5" ><u>Capability Maturity Level 2 (REQM process)</u></a> with specific mention of the <a href="/pmway/?slide=6" ><u>bidirectional traceability of requirements</u></a> Specific Practice.</p>
+  <p align="center"><img class="img-fluid" alt="" src="{{ asset('storage/images/agilescrumlifecycldiagram.png') }}"></p>
+	<p align="left">Agile (finding answers and solutions as we go, rather than wasting time with long term planning) notwithstanding, without clear requirements and a short term plan any software project management team will be lost.  User stories are the "essential fuel" for a successful sprint giving the team the goals that they can "lock on to" and "drive towards achieveing" (like scoring a try in Rugby or a touchdown in American Football). <br><br><h5>The Product Owner Job:  Supply the Scrum Team with Prioritised User Stories</h5>
+	<p align="left">Groomed and prioritized User Stories (the short form of User Story is: "as a 'role' I want 'goal' so that 'benefit'") are the primary responsibility of the Product Owner.  The Scrum Team deal only with one Product Owner (one poing of business contact) who is used to channel all business requirements (next sprint scope) to the team.  Per <a href="/userstories" ><u>Mike Cohn's user story writing workshop</u></a> the short form is the first C (Card) with 2 C's remaining (Conversation and Confirmation).  The Product Owner needs to ensure that the 2nd C (Conversation) is facilitated to the satisfaction of the development team and the Product Owner MUST PROVIDE the final C (Confirmation) before the team can decide to focus on delivery of a particular User Story in a next sprint.  The Product Owner does not insist on story inclusion.  The development team select next stories with consideration as to what they can achieve based on prioritisation of the groomed backlog.<br>
+    <br>
+		<b>Take special note</b> of the discussion by Mike on the balance of power that is required between Business (Product Owner) and IT (The Development Team) and how this would be facilitated best through well written User Stories.  Mike mentions this in the first 3 minutes of his lecture!  Also note his point about the "rapid descoping phase."  If you are doing this at the end of each sprint then your user stories for the sprint contain <b>TOO MUCH SCOPE for the sprint!</b><br>
+    <br>
+		The Product Owner says <b>WHAT</b> and <b>WHEN</b> but it is up to the Development Team to say <b>HOW</b> and <b>HOW MUCH!</b> <a href="/Scrum" ><u>Click here</u></a> and find Scrum at Capability Maturity Level 2 for more on the scrum roles, scrum governance and how Scrum should be implemented / how its processes should work.  <br>Take special note of the scrum values, scrum principles, scrum aprocesses and scrum aspects.  If you are not running each scrum sprint managing against these "dimensions" then chances are good you are operating without cognisance of the scrum processes and <a href="/cmmi" ><u>heroically and at Capability Maturity Level 1</u></a>.  Note from the CM Model that CM L1 is High Risk, High Rework and High Waste!</p>
+	<h5>Potential Problem:  Business does not understand or respect Scrum [<a href="/scrumvalues" ><u>Respect is a Scrum Value!</u></a>] or play by the rules [Scrum method / processes].</h5>
+  <p align="left">Often business (pressurizing the Product Owner and pushing hard for results) will bypass and undermine the Scrum Master role in order to be able to manipulate the development team, to force additional stories into the sprint.  In essence moving out of their "lane" by insisting on WHAT, WHEN and HOW MUCH (sometimes even HOW)!  This is wrong!  And often, if the environment (business) is operating heroically at CM L1 and the Scrum Master's attempts to ensure that the Product Owner (and business) have respect for Scrum process his attempts may be undermined.  This (political pressure / development team opts for support the Product Owner to reduce the pressure to conform) is often not easy for the Scrum Master to deal with and the Scrum Master (a servant leadership) role (and Scrum Method) will be systematically underminded and invalidated.  Scrum effort in this type of environment, while it may seem that pressure will produce results, will surely fail.  In addition, Developers, who are forced to do more that they can will fail to burn down sprint by sprint and ultimatly can decide to withdraw from the team (loss of skills and invested Intellectual Property for the business). <br>
+    <br>
+  <h5>How To Improve Scrum Results (Product Owner's key responsibility at the end of each sprint)</h5>
+	<p align="left">On completion of the sprint, it is the Product Owner's responsibility (and duty) to sign off the demo deck (<b>validating</b> the demo was successful - or not).  In Scrum the Demonstrate and Validate process is process #16. Unfortunately, often Product Owners do not want to take on this very important responsibility.<br>
+    <br>
+   The comments, put in by the Product Owner into the Demo Deck where demo was not up to scratch (when compared to the well defined User Story (<a href="/home/productincrement" ><u>or better, the sliced story or increment</u></a> as suitable "Fuel")) is essential to help the team in "Fine-Tuning."<br>
+  <h5>Here is an interesting observation that puts Scrum into context (often misunderstood by the untrained / uncertified)</h5>
+  <p align="left">Let us assume that only one sprint is run by a Scrum team.  At the end of the sprint, after the demonstrate and validate process is concluded (and demo deck signed off by the Product Owner) the Scrum team and Scrum Master have now completed their job and the sprint is done!   That is, their result (sprint output) now sits back with the Product Owner.<br>
+    <br>
+	  If the Product Owner has validated the demonstration the sprint then the Scrum team have delivered everything they agreed to deliver and the sprint was successful (but without releasing working software). Now the Scrum Team, including Product Owner and Scrum Master can begin with the next phase, essentially, as seen in the image above, this is "rinse and repeat" (and moving forward at an easy and sustainable pace <a href="/home/agile" >per the Agile Manifesto</a>). <br>
+    <br>
+	  <b>First prize however</b>, is a sprint that is <a href="/donedone" ><u>done done</u></a> and that the output from the sprint can and does rapidly get turned into value and is released as <a href="/workingsoftware" ><u>working software</u></a> as a next (new and secured) version of the <a href="/dml" ><u>definitive media library</u></a>.  If this happens then the one sprint the development team were involved in was a TOTAL SUCCESS!  That is how Scrum works.  If continual improvement of software is the goal then the <a href="/home/itil" ><u>ITIL mindset explained here</u></a> requires ongoing sprinting to produce value to business in the form of <a href="{{ asset('storage/assets/itilfouroverview.pdf') }}" ><u>itil 4 value streams managed for Continual Improvement</u></a>.<br>
+    <br>
+	  The Product Owner must surely understand that Agile (Scrum method) is not long term planning and as such cannot hold a Scrum team responsible for requirements that are sold to business that the Scrum team have not bought into being or been able to deliver!  To do so, or to blame the Scrum team for non delivery or slow delivery when additional User Stories are forced into each sprint by the Product Owner puts unfair pressure on the developers, is very unfair and highly disrespectful (respect of scrum process is one of its core values).  It is worth noting that an undone scrum team that is unable to burn down sprint after sprint (are suffering from some form of the <a href="/scrumrca#indexc" ><u>scrum dysfunctions</u></a>) will surely burn up budget and this will surely burn them eventually!  The Product Owner who does not validate the demo by signing off the demo deck is harming the business and the team!<br>The above ssaid, assuming a demodeck is signed off then with the retrospective, the Scrum master and Scrum Team are now ready to reset the stage (the clock) and prepare for a next sprint - with improvements "Fine Tuning" that they as a team agree should be made.  If problems exist (a testing server is not provided by business etc.) that are raised by the Scrum team and are not handled then these must be escalated as a Scrum Risk per the <a href="/scrum" ><u>Scrum Aspects</u></a>.  Fully aligned the team gets ready for the next sprint (drive) down the field to attempt to deliver the next set of agreed minimal requirements (without any detailed plan) and the Scrum cycle starts again. <br>
+    <br>
+	<h5>Most problems (and areas for improvement) for the Scrum Team (developers) the writer belives sits in the <a href="/home/itil" ><u>[ITIL] Service Transition lifecycle and its processes</u></a>; typically outside of the developers direct control</h5>
+  <p align="left">CI and CD (per <a href="/accelerate" ><u>Dev Ops</u></a> / <a href="{{ asset('storage/assets/itilfouroverview.pdf') }}"><u>ITIL</u></a> possibly using <a href="/azure" ><u>Azure Dev Ops</u></a> are ways to speed up delivery; empower repos and pipelines for increased agility and speed etc.<br>
+	  The goal as always must be valuable software produced regularly, approved by the Product Owner and released regularly. If this does not happen then the team is essentially dysfunctional and nothing more than an <a href="/Scrumrca#indexc" ><u>undone Scrum Team</u></a>.  As Agile and Scrum produce value as they go, not <a href="/workingsoftware" ><u>releasing working software</u></a> approved by the Product Owner is actually the very worst thing for a Scrum Team! Think of a Rugby Team or American Football Team.  If they do not score tries and touchdowns when needed (assuming the team are capabile and mature and empowered enough to produce) how long with they remain in business.  It is exactly the same with Scrum Teams!<br>
+    <br>
+	  The principle and essence of <a href="/empirical" ><u>Empirical Process Control</u></a> is also violated as a result of an inability to produce <a href="/workingsoftware" ><u>working software</u></a>. Again the capable and mature and crucial role of the Professional and Certified Product Owner in this regard is critically essential for Scrum Team success.  If the Product Owner does not step up and sign off the demo deck each sprint then they are placing the Scrum team and the business in jeopardy.<br>
+    <br>
+  <h5>Conclusion</h5>
+	<p align="left">PMWay Suggests that the above <a href="/burndown" ><u>is achieved by driving User Story delivery via burn-down.</u></a> If burndown is managed and "done done" correctly this will take care of most aspects (problems) associated with the 3 p's mentioned above.   I.e. not necessarily driving as they do in Rugby (which is a good start) but more like the way that they do it in <a href="/home/af" ><u>American Football</u>!</a> Ultimately, if you can't measure it you can't manage it.  And if you are just rolling down the highway then <a href="/images/anyroad.jpg" ><u>any road will surely take you to your destination - which is nowhere</u></a> and <a href="/cmmi" ><u>heroics will be rewarded (I.e. Capability Maturity Level 1 with high levels of Risk, Rework and Waste)</u></a>.  A lack of process focus and control also means that <a href="/pmway/?slide=5" ><u><b>CM L2 - L5 processes</b></u></a> and their Quality and Productivity gains will remain forever out of the team's reach.</p>
+  <br>
+  <br>
+</div>
+
+<!--ENDBODY-->
+{% else %}<!--BODY-->
+<!--BODY-->
+
+<div class="container">
+<h3>3 P's and 7 F's from Development that Pays</h3>
+<hr>
+<p align="left">3 [Problems] P's:  Pull, Productivity and Predictability</p>
+<p align="left">7 [Fixes] F's:  Foundation, Flex, Focus, Flow, Fuel, Farewell, Fine-Tune</p>
+<p><a href="#playlist">PLAYLIST</a></p>
+<div id="player" align="center">
+  <!-- video source and track elements will be populated from playlist -->
+  <video id="video1" preload="false" data-able-player playsinline ></video>
+</div>
+<div id="playlist">
+  <h2><a name="playlist"></a>Playlist</h2>
+  <!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+  <!-- The value of data-player must match the id of the media element -->
+  <!-- see documentation for additional details -->
+  <ul class="able-playlist" data-player="video1">
+    <li  data-poster="/images/sevenfs.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/sevenfs/sevenfs.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/sevenfs.jpg') }}" alt="">3 P's and 7 F's from Development that Pays </button>
+    </li>
+	       <li  data-poster="/images/splitstories.jpg" data-width="480" data-height="360"> <span class="able-source"
+					data-type="video/mp4"
+					data-src="/ablelvids/storysplitting.mp4"> </span>
+      <button type="button"> <img src="{{ asset('storage/images/splitstories.jpg') }}" alt="">Story Splitting  </button>
+    </li>
+  </ul>
+  <br>
+  <br>
+    <h3>Some ideas on above - from the trenches</h3>
+  <p align="left">The Project Management Institute Agile Certified Practitioner (ACP) Exam handles Agile in 3 key areas:
+  <ul>
+    <li>Scrum (Their chosen Agile project method)</li>
+    <li>XP (Extreme Programming - focused on building Agile programming skills)
+    <li>Lean/Kanban (focused on visualization of work and how well "features" [not user stories] flow through a system)
+  </ul>
+  The point made is that all are needed for success in Agile!
+  </p>
+	<p align="left">PMWay suggests (per the Scrum flow image below) that project management is all about the temporary endeavor (the sprint) to create a unique product, service and result (<a href="/workingsoftware" ><u>working software</u></a>).  This is also understood in essence as Start, Change and Stop which requires "monitoring and control" in the sprint to achieve the goals that have been set by the team.  Else the project and team are just rolling on down the highway.  Bottom line:  a project is not Business As Usual (BAU).<br>
+		In software engineering (software development) any change to the system baseline to produce (release) a new version of a software system version be <a href="/home/donedone" ><u>done done</u></a> as soon as possible within a project phase /s (timebox /s or sprint /s)!<br>
+		The V Model explains the agile flow diagram below and touches on the <a href="/pmway/?slide=5" ><u>Capability Maturity Level 2 (REQM process)</u></a> with specific mention of the <a href="/pmway/?slide=6" ><u>bidirectional traceability of requirements</u></a> Specific Practice.</p>
+  <p align="center"><img class="img-fluid" alt="" src="{{ asset('storage/images/agilescrumlifecycldiagram.png') }}"></p>
+	<p align="left">Agile (finding answers and solutions as we go, rather than wasting time with long term planning) notwithstanding, without clear requirements and a short term plan any software project management team will be lost.  User stories are the "essential fuel" for a successful sprint giving the team the goals that they can "lock on to" and "drive towards achieveing" (like scoring a try in Rugby or a touchdown in American Football). <br><br><h5>The Product Owner Job:  Supply the Scrum Team with Prioritised User Stories</h5>
+	<p align="left">Groomed and prioritized User Stories (the short form of User Story is: "as a 'role' I want 'goal' so that 'benefit'") are the primary responsibility of the Product Owner.  The Scrum Team deal only with one Product Owner (one poing of business contact) who is used to channel all business requirements (next sprint scope) to the team.  Per <a href="/userstories" ><u>Mike Cohn's user story writing workshop</u></a> the short form is the first C (Card) with 2 C's remaining (Conversation and Confirmation).  The Product Owner needs to ensure that the 2nd C (Conversation) is facilitated to the satisfaction of the development team and the Product Owner MUST PROVIDE the final C (Confirmation) before the team can decide to focus on delivery of a particular User Story in a next sprint.  The Product Owner does not insist on story inclusion.  The development team select next stories with consideration as to what they can achieve based on prioritisation of the groomed backlog.<br>
+    <br>
+		<b>Take special note</b> of the discussion by Mike on the balance of power that is required between Business (Product Owner) and IT (The Development Team) and how this would be facilitated best through well written User Stories.  Mike mentions this in the first 3 minutes of his lecture!  Also note his point about the "rapid descoping phase."  If you are doing this at the end of each sprint then your user stories for the sprint contain <b>TOO MUCH SCOPE for the sprint!</b><br>
+    <br>
+		The Product Owner says <b>WHAT</b> and <b>WHEN</b> but it is up to the Development Team to say <b>HOW</b> and <b>HOW MUCH!</b> <a href="/Scrum" ><u>Click here</u></a> and find Scrum at Capability Maturity Level 2 for more on the scrum roles, scrum governance and how Scrum should be implemented / how its processes should work.  <br>Take special note of the scrum values, scrum principles, scrum aprocesses and scrum aspects.  If you are not running each scrum sprint managing against these "dimensions" then chances are good you are operating without cognisance of the scrum processes and <a href="/cmmi" ><u>heroically and at Capability Maturity Level 1</u></a>.  Note from the CM Model that CM L1 is High Risk, High Rework and High Waste!</p>
+	<h5>Potential Problem:  Business does not understand or respect Scrum [<a href="/scrumvalues" ><u>Respect is a Scrum Value!</u></a>] or play by the rules [Scrum method / processes].</h5>
+  <p align="left">Often business (pressurizing the Product Owner and pushing hard for results) will bypass and undermine the Scrum Master role in order to be able to manipulate the development team, to force additional stories into the sprint.  In essence moving out of their "lane" by insisting on WHAT, WHEN and HOW MUCH (sometimes even HOW)!  This is wrong!  And often, if the environment (business) is operating heroically at CM L1 and the Scrum Master's attempts to ensure that the Product Owner (and business) have respect for Scrum process his attempts may be undermined.  This (political pressure / development team opts for support the Product Owner to reduce the pressure to conform) is often not easy for the Scrum Master to deal with and the Scrum Master (a servant leadership) role (and Scrum Method) will be systematically underminded and invalidated.  Scrum effort in this type of environment, while it may seem that pressure will produce results, will surely fail.  In addition, Developers, who are forced to do more that they can will fail to burn down sprint by sprint and ultimatly can decide to withdraw from the team (loss of skills and invested Intellectual Property for the business). <br>
+    <br>
+  <h5>How To Improve Scrum Results (Product Owner's key responsibility at the end of each sprint)</h5>
+	<p align="left">On completion of the sprint, it is the Product Owner's responsibility (and duty) to sign off the demo deck (<b>validating</b> the demo was successful - or not).  In Scrum the Demonstrate and Validate process is process #16. Unfortunately, often Product Owners do not want to take on this very important responsibility.<br>
+    <br>
+   The comments, put in by the Product Owner into the Demo Deck where demo was not up to scratch (when compared to the well defined User Story (<a href="/home/productincrement" ><u>or better, the sliced story or increment</u></a> as suitable "Fuel")) is essential to help the team in "Fine-Tuning."<br>
+  <h5>Here is an interesting observation that puts Scrum into context (often misunderstood by the untrained / uncertified)</h5>
+  <p align="left">Let us assume that only one sprint is run by a Scrum team.  At the end of the sprint, after the demonstrate and validate process is concluded (and demo deck signed off by the Product Owner) the Scrum team and Scrum Master have now completed their job and the sprint is done!   That is, their result (sprint output) now sits back with the Product Owner.<br>
+    <br>
+	  If the Product Owner has validated the demonstration the sprint then the Scrum team have delivered everything they agreed to deliver and the sprint was successful (but without releasing working software). Now the Scrum Team, including Product Owner and Scrum Master can begin with the next phase, essentially, as seen in the image above, this is "rinse and repeat" (and moving forward at an easy and sustainable pace <a href="/home/agile" >per the Agile Manifesto</a>). <br>
+    <br>
+	  <b>First prize however</b>, is a sprint that is <a href="/donedone" ><u>done done</u></a> and that the output from the sprint can and does rapidly get turned into value and is released as <a href="/workingsoftware" ><u>working software</u></a> as a next (new and secured) version of the <a href="/dml" ><u>definitive media library</u></a>.  If this happens then the one sprint the development team were involved in was a TOTAL SUCCESS!  That is how Scrum works.  If continual improvement of software is the goal then the <a href="/home/itil" ><u>ITIL mindset explained here</u></a> requires ongoing sprinting to produce value to business in the form of <a href="{{ asset('storage/assets/itilfouroverview.pdf') }}" ><u>itil 4 value streams managed for Continual Improvement</u></a>.<br>
+    <br>
+	  The Product Owner must surely understand that Agile (Scrum method) is not long term planning and as such cannot hold a Scrum team responsible for requirements that are sold to business that the Scrum team have not bought into being or been able to deliver!  To do so, or to blame the Scrum team for non delivery or slow delivery when additional User Stories are forced into each sprint by the Product Owner puts unfair pressure on the developers, is very unfair and highly disrespectful (respect of scrum process is one of its core values).  It is worth noting that an undone scrum team that is unable to burn down sprint after sprint (are suffering from some form of the <a href="/scrumrca#indexc" ><u>scrum dysfunctions</u></a>) will surely burn up budget and this will surely burn them eventually!  The Product Owner who does not validate the demo by signing off the demo deck is harming the business and the team!<br>The above ssaid, assuming a demodeck is signed off then with the retrospective, the Scrum master and Scrum Team are now ready to reset the stage (the clock) and prepare for a next sprint - with improvements "Fine Tuning" that they as a team agree should be made.  If problems exist (a testing server is not provided by business etc.) that are raised by the Scrum team and are not handled then these must be escalated as a Scrum Risk per the <a href="/scrum" ><u>Scrum Aspects</u></a>.  Fully aligned the team gets ready for the next sprint (drive) down the field to attempt to deliver the next set of agreed minimal requirements (without any detailed plan) and the Scrum cycle starts again. <br>
+    <br>
+	<h5>Most problems (and areas for improvement) for the Scrum Team (developers) the writer belives sits in the <a href="/home/itil" ><u>[ITIL] Service Transition lifecycle and its processes</u></a>; typically outside of the developers direct control</h5>
+  <p align="left">CI and CD (per <a href="/accelerate" ><u>Dev Ops</u></a> / <a href="{{ asset('storage/assets/itilfouroverview.pdf') }}"><u>ITIL</u></a> possibly using <a href="/azure" ><u>Azure Dev Ops</u></a> are ways to speed up delivery; empower repos and pipelines for increased agility and speed etc.<br>
+	  The goal as always must be valuable software produced regularly, approved by the Product Owner and released regularly. If this does not happen then the team is essentially dysfunctional and nothing more than an <a href="/Scrumrca#indexc" ><u>undone Scrum Team</u></a>.  As Agile and Scrum produce value as they go, not <a href="/workingsoftware" ><u>releasing working software</u></a> approved by the Product Owner is actually the very worst thing for a Scrum Team! Think of a Rugby Team or American Football Team.  If they do not score tries and touchdowns when needed (assuming the team are capabile and mature and empowered enough to produce) how long with they remain in business.  It is exactly the same with Scrum Teams!<br>
+    <br>
+	  The principle and essence of <a href="/empirical" ><u>Empirical Process Control</u></a> is also violated as a result of an inability to produce <a href="/workingsoftware" ><u>working software</u></a>. Again the capable and mature and crucial role of the Professional and Certified Product Owner in this regard is critically essential for Scrum Team success.  If the Product Owner does not step up and sign off the demo deck each sprint then they are placing the Scrum team and the business in jeopardy.<br>
+    <br>
+  <h5>Conclusion</h5>
+	<p align="left">PMWay Suggests that the above <a href="/burndown" ><u>is achieved by driving User Story delivery via burn-down.</u></a> If burndown is managed and "done done" correctly this will take care of most aspects (problems) associated with the 3 p's mentioned above.   I.e. not necessarily driving as they do in Rugby (which is a good start) but more like the way that they do it in <a href="/home/af" ><u>American Football</u>!</a> Ultimately, if you can't measure it you can't manage it.  And if you are just rolling down the highway then <a href="/images/anyroad.jpg" ><u>any road will surely take you to your destination - which is nowhere</u></a> and <a href="/cmmi" ><u>heroics will be rewarded (I.e. Capability Maturity Level 1 with high levels of Risk, Rework and Waste)</u></a>.  A lack of process focus and control also means that <a href="/pmway/?slide=5" ><u><b>CM L2 - L5 processes</b></u></a> and their Quality and Productivity gains will remain forever out of the team's reach.</p>
+  <br>
+  <br>
+</div>
+
+<!--ENDBODY-->
+{% endif %}
+{% endblock %}

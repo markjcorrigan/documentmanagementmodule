@@ -1,0 +1,349 @@
+{% extends 'simplemedia.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}Scrum Product Owner{% endif %}  {% endblock %}
+{% block body %}
+{% if current_user %}
+<!--NBNBNB This is used to allow able video player to access my Scrum Training videos-->
+<!--BODY--> 	<div class="container" align="left">
+
+	<h3 align="left">Scrum Product Owner</h3>
+
+
+<hr>
+
+<!--<p><a href="/scrumablevidsub/scrumstudy/sfone/index.html" >Bob's code examples.zip</a></p>-->
+<!--<p><a href="/homesave/resources/cleancode.zip" >Bob's code examples.zip</a></p>-->
+
+<p><a href="#playlist">PLAYLIST</a></p>
+
+  <div id="player" align="center">
+	  <!-- video source and track elements will be populated from playlist -->
+		<video id="video1" preload="auto" data-able-player playsinline loop></video>
+  </div>
+	<div id="playlist">
+		<h2><a name="playlist"></a>Playlist</h2>
+		<!-- an AblePlayer playlist is any <ul> with class="able-playlist" -->
+		<!-- The value of data-player must match the id of the media element -->
+		<!-- see documentation for additional details -->
+		<ul class="able-playlist" data-player="video1">
+		<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spoone/index.mp4">
+					<!--data-src="/scrumablevidsub/scrumstudy/sfone/index.mp4"> NB the route with a second sub folder!!!-->
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO1: What is Agile?  Why use Agile (2:13)
+				</button>
+			</li>
+
+					<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwo/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO2: The Agile Manifesto (3:33)			</button>
+			</li>
+
+					<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spothree/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO3: Principles of the Agile Manifesto (4:10) 		</button>
+			</li>
+
+					<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spofour/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO4: What has Changed (3:10)			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spofive/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO5: Agile Methods (8:36)			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sposix/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO6: SPOC Scrum Principles (3:05)			</button>
+			</li>
+
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sposeven/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO7: Scrum Characteristics (3:02)			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spoeight/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO8: Advantages of Scrum (4:39)			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sponine/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO9: The Product Owner (3:34)		</button>
+			</li>
+
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spoten/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO10: The Scrum Team (4:10)			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spoeleven/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO11: The Scrum Master (2:44)	</button>
+			</li>
+
+				<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwelve/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO12: Scrum Flow (1:30) 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spothirteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO13: Requirements in Scrum and Prioritizing the Product Backlog (3:33)	</button>
+			</li>
+
+				<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spofourteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO14: Adaptive Project Management and Scrum Planning (22:54)	</button>
+			</li>
+
+				<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spofifteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO15: Acceptance Criteria/Done Criteria/Estimation
+					Criteria (4:42) 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sposixteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO16: Importance of Value (2:47) 			</button>
+			</li>
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sposeventeen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO17: Risk Burndown
+					Graphics/Risk-Adjusted Backlog (1:26)
+ 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spoeighteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO18: Scrum Board (7:54)
+ 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/sponineteen/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO19: Sprints (1:34) 			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwenty/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO20: Sprint Planning Meeting (0:34)
+			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwentyone/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO21: Product Owners role in Sprint Planning Meeting (1:30)
+			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwentytwo/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO22: Task Estimation (1:33)			</button>
+			</li>
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwentythree/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO23: The Sprint Backlog (1:13)			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwentyfour/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO24: Daily Stand-up Meeting (7:15)
+
+			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwentyfive/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO25: Sprint Review Meeting Overview (2:46)			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwentysix/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO26: Sprint Retrospective Meeting (1:15)			</button>
+			</li>
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwentyseven/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO27: Product Backlog Grooming (6:01)			</button>
+			</li>
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwentyeight/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO28: The Chief Product Owner (3:38)			</button>
+			</li>
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spotwentynine/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO29: Distributed Teams in Scrum (1:44)			</button>
+			</li>
+
+			<li data-poster="../media/wwa.jpg" data-width="480" data-height="360">
+				<span class="able-source"
+					data-type="video/mp4"
+					data-src="/scrumviewablevideo/spothirty/index.mp4">
+				</span>
+				<button type="button">
+					<img src="../media/wwa_mq_thumbnail.jpg" alt="">PO30: Maintaining Stakeholder Involvement (1:43)			</button>
+			</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</ul>
+			<br>
+			<br>
+
+			</div>
+
+
+{% else %}
+
+
+<!--BODY--> 	<div class="container" align="left">
+
+			</div>
+
+{% endif %}
+{% endblock %}

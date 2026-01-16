@@ -1,0 +1,120 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Spike{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+  <h3>The Spike</h3>
+  <img alt="" class="img-fluid" src="{{ asset('storage/images/spikelb.png') }}" >
+  <hr>
+  <p>Spikes are an invention of Extreme Programming (XP), are a special type of user story that is used to gain the knowledge necessary to reduce the risk of a technical approach, better understand a requirement, or increase the reliability of a story estimate. A spike has a maximum time-box size as the sprint it is contained in it. At the end of a sprint, the spike will be determined that is done or not-done just like any other ordinary user story. A Spike is a great way to mitigate risks early and allows the team ascertain feedback and develop an understanding on an upcoming PBI(Product Blocking Item)'s complexity.</p>
+  <div class="medium-12 large-12 columns editor-promotion-block">
+    <div class="medium-5 large-5 small-12 columns">
+      <p><img alt="" class="img-fluid" src="{{ asset('storage/images/spike6.png') }}" ></p>
+    </div>
+  </div>
+  <h2>When To Use Spike?</h2>
+  <p>Sometime the team are unsure if they can complete the story due to some potential blockers and probably can't even estimate the story. Thus, you may consider a spike as an investment for a Product Owner to figure out what needs to be built and how the team is going to build it. The Product Owner allocates a little bit of the team's capacity now, ahead of when the story needs to be delivered, so that when the story comes into the sprint, the team knows what to do.</p>
+  <p>Here are the examples of when Spikes may be used:</p>
+  <ul>
+    <li>The team may not have knowledge of a new technology, and spikes may be used for basic research to ensure the feasibility of the new technology (domain or new approach).</li>
+    <li>A story requires to be implemented using a 3<sup>rd</sup> party library with API that is poorly written and documented.</li>
+    <li>The story may contain significant technical risk, and the team may have to do some experiments or prototypes to gain confidence in a technological approach that may allow them to commit the user story to some future timebox.</li>
+  </ul>
+  <h2>Technical Spikes and Functional Spikes</h2>
+  <p>Spikes primarily come in two forms: technical and functional. A distinction can be made between technical spikes and functional spikes:</p>
+  <h3>Technical Spike</h3>
+  <p>The technical spike is used more often for evaluating the impact new technology has on the current implementation that the team needs experiment a new technology to gain more confident for a desired approach before committing new functionality to a timebox.</p>
+  <p>i.e. &quot;how long it takes to update a customer display to current usage,
+    determining communication requirements, bandwidth, and whether to push or pull
+    the data&quot;</p>
+  <h3>Functional Spike</h3>
+  <p>A functional spike are used whenever there is significant uncertainty as to how a user might interact with the system. Functional spikes are often best evaluated through some level of prototyping, whether it be user interface mockups, wireframes, page flows, or whatever techniques is best suited to get feedback from the customer or stakeholders.,</p>
+  <p>i.e. &quot;Prototype a histogram in the web portal and get some user feedback on
+    presentation size, style, and charting&quot;</p>
+  <p>Spikes should be estimated as in-Sprint tasks during Sprint Planning. The task's duration should be spent researching and developing some
+    'thing' that can be delivered. That thing can be a working piece of software, workflow, documentation, etc. Ultimately the value from the spike is a direction or re-direction in the course of the feature. If the team estimated that a Spike takes four hours, then ONLY four hours should be spent researching or developing. Prototypes, Proof of Concepts (PoC), and Wireframes all fall into the classification of Spikes.</p>
+  <h2>Acceptance Criteria for Spike Stories</h2>
+  <p>Just like any other ordinary user story, they need fulfil some certain criteria to obtain the status of done by making sure that the
+    &quot;Spike Story&quot; estimable, demonstrable, and acceptable:</p>
+  <p><strong>Estimable</strong></p>
+  <p>Like other stories, spikes are put in the backlog, estimable and sized to fit in an iteration. Spike results are different from a story, as they generally produce information, rather than working code. A spike may result in a decision, a prototype, storyboard, proof of concept, or some other partial solution to help drive the final results.</p>
+  <p>In any case, the spike should develop just the information sufficient to resolve the uncertainty in being able to identify and size the stories hidden beneath the spike.</p>
+  <p><strong style="font-size: 1rem;">Demonstrable</strong></p>
+  <p>The output of a spike is demonstrable to the team. This brings visibility to the research and architectural efforts and also helps build collective ownership and shared responsibility for the key decisions that are being taken.</p>
+  <p><strong style="font-size: 1rem;">Acceptable</strong></p>
+  <p>And like any other story, spikes are accepted by the product owner when the acceptance criteria for the spike have been fulfilled.</p>
+  <p>&nbsp;</p>
+  <hr>
+  <p>Spikes have their inspiration from mountain climbing where a climber secures his position on a cliff face by banging in spikes and rope before considering the next best move forward
+    to move further up the rock face.&nbsp; Spikes, used often, also ensure safety
+    at difficult spots ensuring safety for the duration of the climb.</p>
+  <p><img alt="" class="img-fluid" src="{{ asset('storage/images/spike2.jpg') }}" ><img alt="" class="img-fluid" src="{{ asset('storage/images/spike3.jpg') }}" ><img alt="" class="img-fluid" src="{{ asset('storage/images/spike5.jpg') }}" ><img alt="" class="img-fluid" src="{{ asset('storage/images/spike.jpg') }}" ><img alt="" class="img-fluid" src="{{ asset('storage/images/spike4.jpg') }}" ></p>
+  <hr>
+  <br>
+  <p><a href="https://www.visual-paradigm.com/scrum/what-is-scrum-spike/" >Thanks to Visual Paradigm</a>.</p>
+  <br>
+  <br>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+  <h3>The Spike</h3>
+  <img alt="" class="img-fluid" src="{{ asset('storage/images/spikelb.png') }}" >
+  <hr>
+  <p>Spikes are an invention of Extreme Programming (XP), are a special type of user story that is used to gain the knowledge necessary to reduce the risk of a technical approach, better understand a requirement, or increase the reliability of a story estimate. A spike has a maximum time-box size as the sprint it is contained in it. At the end of a sprint, the spike will be determined that is done or not-done just like any other ordinary user story. A Spike is a great way to mitigate risks early and allows the team ascertain feedback and develop an understanding on an upcoming PBI(Product Blocking Item)'s complexity.</p>
+  <div class="medium-12 large-12 columns editor-promotion-block">
+    <div class="medium-5 large-5 small-12 columns">
+      <p><img alt="" class="img-fluid" src="{{ asset('storage/images/spike6.png') }}" ></p>
+    </div>
+  </div>
+  <h2>When To Use Spike?</h2>
+  <p>Sometime the team are unsure if they can complete the story due to some potential blockers and probably can't even estimate the story. Thus, you may consider a spike as an investment for a Product Owner to figure out what needs to be built and how the team is going to build it. The Product Owner allocates a little bit of the team's capacity now, ahead of when the story needs to be delivered, so that when the story comes into the sprint, the team knows what to do.</p>
+  <p>Here are the examples of when Spikes may be used:</p>
+  <ul>
+    <li>The team may not have knowledge of a new technology, and spikes may be used for basic research to ensure the feasibility of the new technology (domain or new approach).</li>
+    <li>A story requires to be implemented using a 3<sup>rd</sup> party library with API that is poorly written and documented.</li>
+    <li>The story may contain significant technical risk, and the team may have to do some experiments or prototypes to gain confidence in a technological approach that may allow them to commit the user story to some future timebox.</li>
+  </ul>
+  <h2>Technical Spikes and Functional Spikes</h2>
+  <p>Spikes primarily come in two forms: technical and functional. A distinction can be made between technical spikes and functional spikes:</p>
+  <h3>Technical Spike</h3>
+  <p>The technical spike is used more often for evaluating the impact new technology has on the current implementation that the team needs experiment a new technology to gain more confident for a desired approach before committing new functionality to a timebox.</p>
+  <p>i.e. &quot;how long it takes to update a customer display to current usage,
+    determining communication requirements, bandwidth, and whether to push or pull
+    the data&quot;</p>
+  <h3>Functional Spike</h3>
+  <p>A functional spike are used whenever there is significant uncertainty as to how a user might interact with the system. Functional spikes are often best evaluated through some level of prototyping, whether it be user interface mockups, wireframes, page flows, or whatever techniques is best suited to get feedback from the customer or stakeholders.,</p>
+  <p>i.e. &quot;Prototype a histogram in the web portal and get some user feedback on
+    presentation size, style, and charting&quot;</p>
+  <p>Spikes should be estimated as in-Sprint tasks during Sprint Planning. The task's duration should be spent researching and developing some
+    'thing' that can be delivered. That thing can be a working piece of software, workflow, documentation, etc. Ultimately the value from the spike is a direction or re-direction in the course of the feature. If the team estimated that a Spike takes four hours, then ONLY four hours should be spent researching or developing. Prototypes, Proof of Concepts (PoC), and Wireframes all fall into the classification of Spikes.</p>
+  <h2>Acceptance Criteria for Spike Stories</h2>
+  <p>Just like any other ordinary user story, they need fulfil some certain criteria to obtain the status of done by making sure that the
+    &quot;Spike Story&quot; estimable, demonstrable, and acceptable:</p>
+  <p><strong>Estimable</strong></p>
+  <p>Like other stories, spikes are put in the backlog, estimable and sized to fit in an iteration. Spike results are different from a story, as they generally produce information, rather than working code. A spike may result in a decision, a prototype, storyboard, proof of concept, or some other partial solution to help drive the final results.</p>
+  <p>In any case, the spike should develop just the information sufficient to resolve the uncertainty in being able to identify and size the stories hidden beneath the spike.</p>
+  <p><strong style="font-size: 1rem;">Demonstrable</strong></p>
+  <p>The output of a spike is demonstrable to the team. This brings visibility to the research and architectural efforts and also helps build collective ownership and shared responsibility for the key decisions that are being taken.</p>
+  <p><strong style="font-size: 1rem;">Acceptable</strong></p>
+  <p>And like any other story, spikes are accepted by the product owner when the acceptance criteria for the spike have been fulfilled.</p>
+  <hr>
+  <p>Spikes have their inspiration from mountain climbing where a climber secures his position on a cliff face by banging in spikes and rope before considering the next best move forward
+    to move further up the rock face.&nbsp; Spikes, used often, also ensure safety
+    at difficult spots ensuring safety for the duration of the climb.</p>
+  <p><img alt="" class="img-fluid" src="{{ asset('storage/images/spike2.jpg') }}" ><img alt="" class="img-fluid" src="{{ asset('storage/images/spike3.jpg') }}" ><img alt="" class="img-fluid" src="{{ asset('storage/images/spike5.jpg') }}" ><img alt="" class="img-fluid" src="{{ asset('storage/images/spike.jpg') }}" ><img alt="" class="img-fluid" src="{{ asset('storage/images/spike4.jpg') }}" ></p>
+  <hr>
+  <br>
+  <p><a href="https://www.visual-paradigm.com/scrum/what-is-scrum-spike/" >Thanks to Visual Paradigm</a>.</p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

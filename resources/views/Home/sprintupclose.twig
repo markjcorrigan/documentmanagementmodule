@@ -1,0 +1,31 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Sprint Up Close{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container">
+  <h5>The Scrum Sprint - Up Close and Personal</h5>
+  <hr>
+  <br>
+  <div align="center"><a href="/home/workingsoftware" title="Click on the black box to see how scrum teams can be successful"><img class="img-fluid" src="{{ asset('storage/images/sprintupclose.png') }}"></a> </div>
+  <br>
+  <br>
+    <p><a href="/home/workingsoftware"><u>Click the black box</u></a> in front of the person with the clip board to the right to see the scrum teams
+    secret for success.</p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container">
+
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% endblock %}

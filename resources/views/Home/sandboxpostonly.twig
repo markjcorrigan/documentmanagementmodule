@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		             	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>-->
+
+		  <meta name="description" content="The Essence of Traditional and Agile Project Management Process Improvement:  Projectize your business for Capability Maturity Level 2+" >
+    <meta name="keywords" content="PMBOK, SBOK, Scrumbok, CM Level 2, Capability Improvement, Process Maturity, Project Management, CMMi" >
+			<title>{% block title %}{% endblock %}</title>
+			<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+			<link rel="stylesheet" href="/bootstrapfouroneone/css/bootstrap.css" />
+			<link rel="stylesheet" href="/bootstrapfouroneone/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+			<link rel="stylesheet" href="/css/styles.css">
+				</head>
+				<body>
+					<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+						<a class="navbar-brand" href="/">PMWay</a>
+						<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="navbar-nav ml-auto">
+
+    		 {% if not user %}
+			 	<ul class="navbar-nav ml-auto">
+         	<li class="nav-item">
+									<a class="nav-link" href="/pmwaysandbox/sandbox.php?page=1">
+										<i class="fa fa-home" aria-hidden="true"></i>
+									</a>
+								</li class="nav-item">
+        		<li class="nav-item">
+
+									<a class="nav-link" href="/blog/contactpmway.php">
+										<i class="fa fa-envelope" aria-hidden="true"></i>
+									</a>
+								</li class="nav-item">
+
+        <li class="nav-item">
+									<a class="nav-link" href="/pmwaysandbox/Login.php" id="login">
+										<i class="fa fa-unlock" aria-hidden="true"></i>
+									</a>
+								</li class="nav-item">
+      </ul>
+
+
+
+
+
+
+                <!--        <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-cogs"></i>&nbsp;PMWays
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="/">&nbsp;PMBOK Dashboard</a>
+                                <a class="dropdown-item" href="/home/pmbokprocessnutshell">&nbsp;PMBOK (Dashboard with 'Teaching Overlay / How To')</a>
+                              <a class="dropdown-item" href="/default.php" onclick="return confirm_alert(this);"></a>
+								<li class="nav-item">
+									<a class="nav-link" href="/profile/show">
+										<i class="fa fa-user" aria-hidden="true"></i>&nbsp;Profile
+									</a>
+								</li class="nav-item">
+										<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarNav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-lock"></i>&nbsp;Logout
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+										<a class="dropdown-item" href="/logout">
+											<i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Logout
+										</a>
+
+											<li class="nav-item">
+												<a class="nav-link" href="/home/contact">
+													<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact
+												</a>
+											</li class="nav-item">
+											<!--<li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Log out</a></li class="nav-item">-->
+
+
+
+&nbsp;</div>
+
+
+
+                   {% endif %}
+
+         {% if user %}
+
+	<ul class="navbar-nav ml-auto">
+        <form class="form-inline d-none d-sm-block" action="sandbox.php">
+          <div class="form-group">
+          <input class="form-control mr-2" type="text" name="Search" placeholder="Search here"value="">
+          <button  class="btn btn-primary" name="SearchButton">Go</button>
+          </div>
+        </form>
+        	<li class="nav-item">
+									<a class="nav-link" href="sandbox.php?page=1">
+										<i class="fa fa-home" aria-hidden="true"></i>
+									</a>
+								</li class="nav-item">
+        		<li class="nav-item">
+
+									<a class="nav-link" href="/blog/contactpmway.php">
+										<i class="fa fa-envelope" aria-hidden="true"></i>
+									</a>
+								</li class="nav-item">
+
+        <li class="nav-item">
+									<a class="nav-link" href="/pmwaysandbox/Login.php" id="login">
+										<i class="fa fa-unlock" aria-hidden="true"></i>
+									</a>
+								</li class="nav-item">
+      </ul>
+
+
+
+
+
+
+                <!--        <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-cogs"></i>&nbsp;PMWays
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="/">&nbsp;PMBOK Dashboard</a>
+                                <a class="dropdown-item" href="/home/pmbokprocessnutshell">&nbsp;PMBOK (Dashboard with 'Teaching Overlay / How To')</a>
+                              <a class="dropdown-item" href="/default.php" onclick="return confirm_alert(this);"></a>
+								<li class="nav-item">
+									<a class="nav-link" href="/profile/show">
+										<i class="fa fa-user" aria-hidden="true"></i>&nbsp;Profile
+									</a>
+								</li class="nav-item">
+										<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarNav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-lock"></i>&nbsp;Logout
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+										<a class="dropdown-item" href="/logout">
+											<i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Logout
+										</a>
+
+											<li class="nav-item">
+												<a class="nav-link" href="/home/contact">
+													<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact
+												</a>
+											</li class="nav-item">
+											<!--<li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Log out</a></li class="nav-item">-->
+
+
+
+&nbsp;</div>
+
+
+
+                    {% endif %}
+
+										</div>
+									</nav>
+
+
+
+
+
+        {% for message in flash_messages %}
+
+									<div style="text-align:center" class="alert alert-{{ message.type }}">
+                {{ message.body }}
+            </div>
+        {% endfor %}
+
+
+        {% block body %}
+
+									<div class="container" style="text-align:center">
+
+
+
+
+
+
+        {% endblock %}
+
+									</div>
+
+									<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+									<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>-->
+									<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+
+									<!--<script src="https://use.fontawesome.com/2f08d8400c.js"></script>-->
+
+
+									<!--<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>-->
+									<script src="/bootstrapfouroneone/jquery/jquery.js"></script>
+									<script src="/bootstrapfouroneone/js/popper.min.js"></script>
+									<script src="/bootstrapfouroneone/js/bootstrap.js"></script>
+
+
+									<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+									<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+									-->
+
+									<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<table style="width: 100%">
+														<tr>
+															<td>
+																<h5 class="modal-title text-sm-left" id="contactModalTitle">
+																	<a href="#">Login</a>
+																</h5>
+															</td>
+															<!--<td><h5 class="modal-title text-sm-right align-bottom"><a href="/register" role="button"><small>Register</small></a></h5></td><td><button class="close" data-dismiss="modal"><span>&times;</span></button></td>-->
+														</tr>
+													</table>
+												</div>
+												<div class="modal-body">
+													<form action="/login/create" method="post" role="form" style="display: block; ">
+														<div class="form-group">
+															<input type="text" name="email" id="email" tabindex="1" class="form-control bg-light border border-primary rounded" placeholder="Email" autofocus required>
+															</div>
+															<div class="form-group">
+																<p style="text-align:left">
+																	<font color="navy">
+																		<input type="password" name="password" id="login-password" tabindex="2" class="form-control bg-light border border-primary rounded" placeholder="Password" required>
+																		</font>
+																	</p>
+																</div>
+																<div class="form-group text-center">
+																	<p style="text-align:left">
+																		<font color="navy">
+																			<label>
+																				<input type="checkbox" name="remember_me" id="remember"  >
+																					 Remember Me</label>
+																				</font>
+																			</p>
+																		</div>
+																		<div class="form-group">
+																			<div class="row">
+																				<div class="col-sm-6 col-sm-offset-3">
+																					<p style="text-align:left">
+																						<font color="navy">
+																							<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control text-white btn btn-login bg-primary border border-primary rounded" value="Log In">
+																							</font>
+																						</p>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-lg-12">
+																						<div class="text-center">
+																							<p style="text-align:left">
+																								<font color="navy">
+																									<a href="/password/forgot" tabindex="5" class="forgot-password">Forgot Password?</a>
+																								</font>
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</form>
+																	</div>
+																	<div class="modal-footer">
+																		<p style="text-align:left">
+																			<font color="navy">
+																				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																			</font>
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="modal fade" id="contactModalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+															<div class="modal-dialog" role="document">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<table style="width: 100%">
+																			<tr>
+																				<td>
+																					<h5 class="modal-title text-sm-left" id="contactModalTitle">
+																						<a href="#">Register</a>
+																					</h5>
+																				</td>
+																				<!--<td><h5 class="modal-title text-sm-right align-bottom"><a href="/login" role="button"><small>Login</small></a></h5></td><td><button class="close" data-dismiss="modal"><span>&times;</span></button></td>-->
+																			</tr>
+																		</table>
+																	</div>
+																	<div class="modal-body">
+																		<form method="post" action="/signup/create" id="formSignup">
+																			<div class="form-group">
+																				<p style="text-align:left">
+																					<label for="inputName">
+																						<font color="navy">Name</font>
+																					</label>
+																					<input id="inputName" name="name" placeholder="Name" autofocus value="{{ user.name }}" required class="form-control" />
+																				</p>
+																			</div>
+																			<div class="form-group">
+																				<p style="text-align:left">
+																					<font color="navy">
+																						<label for="inputEmail">Email address</label>
+																						<input id="inputEmail" name="email" placeholder="email address" value="{{ user.email }}" required type="email" class="form-control" />
+																					</font>
+																				</p>
+																			</div>
+																			<div class="form-group">
+																			<p style="text-align:left">
+																				<font color="navy">
+																				<label for="inputPassword">Password</label>
+																						<input type="password" id="inputPassword" name="password" placeholder="Password" required class="form-control" />
+																					</font>
+																				</p>
+																			</div>
+																			<p style="text-align:left">
+																				<font color="navy">
+																					<button type="submit" class="btn btn-primary">Sign up</button>
+																				</font>
+																			</p>
+																		</form>
+																	</div>
+																	<div class="modal-footer">
+																		<p style="text-align:left">
+																			<font color="navy">
+																				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+																			</font>
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<script>
+    $("a#login").on("click", function (e) {
+        e.preventDefault();
+        $('#contactModal').modal('show');
+    });
+</script>
+														<script>
+    $("a#register").on("click", function (e) {
+        e.preventDefault();
+        $('#contactModalRegister').modal('show');
+    });
+</script>
+
+
+{% block footer %}
+{% if user %}
+<!--Footer-->
+
+<!--<footer class="page-footer font-small pt-2 mt-2 bg-dark">-->
+
+    <!--Footer Links-->
+  <!--  <div class="container-fluid text-center text-md-left">
+        <div class="row">-->
+
+            <!--First column-->
+           <!-- <div class="col-md-12 text-center">
+                <p class="text-white" style="font-size:small">--><!--Footer Content-->
+				<!--The Capability Maturity Model <a href="/home/intwomins#procs">level 2 to 5 processes</a> are
+				installed via the PMWay</p>
+-->
+ <!--Here you can use rows and columns here to organize your footer content.</p>-->
+<!--            </div>-->
+            <!--/.First column-->
+
+            <!--Second column-->
+            <!--<div class="col-md-6">
+                <h5 class="text-uppercase"><!--Links--><!--</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!"><!--Link 1--><!--</a>
+                    </li>
+
+                </ul>
+            </div>-->
+            <!--/.Second column-->
+<!--        </div>-->
+<!--   </div>-->
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <!--<div class="footer-copyright py-3 text-center">
+        © 2018 Copyright:
+        <a href="https://mdbootstrap.com/material-design-for-bootstrap/"><!-- MDBootstrap.com --><!--</a>
+    </div>-->
+    <!--/.Copyright-->
+
+<!--</footer>-->
+<!--/.Footer-->
+  {% endif %}
+{% endblock %}
+</body>
+</html>
+
+

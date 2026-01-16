@@ -1,0 +1,44 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}The PMBOK Game{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+  <h3>The PMBOK Game:</h3>
+  <p align="left">How you play it to win</p>
+  <hr>
+  <p align="left"><a href="/pmway" >Click here to go back to the PMBOK Processes and Knowledge Areas Dashboard</a></p>
+  <br>
+  <br>
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/thegamelargewhite.jpg') }}" ></p>
+</div>
+<br>
+<br>
+<br>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<!--BODY-->
+<div class="container" align="left">
+<div class="container" align="left">
+  <h3>The PMBOK Game:</h3>
+  <p align="left">How you play it to win</p>
+  <hr>
+  <p align="left"><a href="/pmway" >Click here to go back to the PMBOK Processes and Knowledge Areas Dashboard</a></p>
+  <br>
+  <br>
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/thegamelargewhite.jpg') }}" ></p>
+</div>
+<br>
+<br>
+<br>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% endblock %}

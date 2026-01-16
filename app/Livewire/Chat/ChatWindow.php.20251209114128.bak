@@ -1,0 +1,252 @@
+<?php
+
+namespace App\Livewire\Chat;
+
+use App\Events\ChatEnded;
+use App\Events\ChatMessageSent;
+use App\Events\MessageRead;
+use App\Models\ChatMessage;
+use App\Models\ChatSession;
+use Illuminate\View\View;
+use Livewire\Component;
+
+class ChatWindow extends Component
+{
+    public ?ChatSession $session = null;
+
+    public $chatMessages = [];
+
+    public $message = '';
+
+    public $otherUser = null;
+
+    public function mount(?int $sessionId = null): void
+    {
+        // REMOVED: Aggressive session cleanup was breaking everything
+        // Sessions are now only deleted when:
+        // 1. Chat is explicitly ended
+        // 2. Request is cancelled
+        // 3. User logs out
+
+        if ($sessionId) {
+            $this->loadSession($sessionId);
+        }
+    }
+
+    public function loadSession(int $sessionId): void
+    {
+        $this->session = ChatSession::with(['user1', 'user2'])->findOrFail($sessionId);
+
+        // Determine the other user
+        $this->otherUser = $this->session->user1_id === auth()->id()
+            ? $this->session->user2
+            : $this->session->user1;
+
+        $this->loadMessages();
+        $this->markMessagesAsRead();
+    }
+
+    public function loadMessages(): void
+    {
+        if (! $this->session) {
+            return;
+        }
+
+        $this->chatMessages = $this->session->messages()
+            ->with('sender')
+            ->latest()
+            ->take(50)
+            ->get()
+            ->reverse()
+            ->values();
+    }
+
+    public function sendMessage()
+    {
+        \Log::info('[START] sendMessage() START');
+
+        try {
+            \Log::info('[START] sendMessage() called', [
+                'session_id' => $this->session?->id,
+                'message' => $this->message,
+            ]);
+
+            $this->validate([
+                'message' => 'required|string|max:1000',
+            ]);
+
+            \Log::info('[CHECK] Validation passed, creating message');
+            \Log::info('📝 LINE 77 EXECUTING');
+
+            $sessionId = $this->session->id;
+            \Log::info('📝 LINE 80 - Got session ID: '.$sessionId);
+
+            $senderId = auth()->id();
+            \Log::info('📝 LINE 83 - Got sender ID: '.$senderId);
+
+            $messageText = $this->message;
+            \Log::info('📝 LINE 86 - Got message text: '.$messageText);
+
+            \Log::info('📝 LINE 88 - About to call ChatMessage::create');
+
+            // Create the message
+            $message = ChatMessage::create([
+                'chat_session_id' => $sessionId,
+                'sender_id' => $senderId,
+                'message' => $messageText,
+            ]);
+
+            \Log::info('💾 Message created in DB', ['message_id' => $message->id]);
+
+            // Broadcast the message immediately (no queue)
+            \Log::info('🔥 BROADCASTING ChatMessageSent EVENT', ['message_id' => $message->id]);
+
+            broadcast(new ChatMessageSent($message));
+
+            \Log::info('🎉 BROADCAST DISPATCHED');
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            \Log::error('❌ Validation failed', ['errors' => $e->errors()]);
+            throw $e;
+        } catch (\Exception $e) {
+            \Log::error('❌ Exception in sendMessage', [
+                'error' => $e->getMessage(),
+                'line' => $e->getLine(),
+                'file' => $e->getFile(),
+            ]);
+            throw $e;
+        }
+
+        \Log::info('🏁 sendMessage() FINISHED');
+
+        // Clear the input
+        $this->message = '';
+
+        // Reload messages to show the new one
+        $this->loadMessages();
+
+        // Dispatch event for scrolling
+        $this->dispatch('messageSent');
+    }
+
+    public function markMessagesAsRead(): void
+    {
+        if (! $this->session) {
+            return;
+        }
+
+        $unreadMessages = $this->session->messages()
+            ->where('sender_id', '!=', auth()->id())
+            ->where('is_read', false)
+            ->get();
+
+        foreach ($unreadMessages as $msg) {
+            $msg->markAsRead();
+
+            // Broadcast read receipt
+            broadcast(new MessageRead($msg->id, $this->session->id));
+        }
+    }
+
+    /**
+     * Handle new message from JavaScript (called via $wire.call)
+     */
+    public function handleNewMessage($event): void
+    {
+        // Add the new message to the list
+        $message = ChatMessage::with('sender')->find($event['id']);
+
+        if ($message) {
+            $this->chatMessages->push($message);
+
+            // Mark as read but DON'T broadcast read receipt again to avoid loops
+            $message->markAsRead();
+
+            $this->dispatch('scroll-to-bottom');
+            $this->dispatch('message-received');
+        }
+    }
+
+    /**
+     * Handle message read from JavaScript (called via $wire.call)
+     */
+    public function handleMessageRead($event): void
+    {
+        // Update the message as read in the local collection
+        $messageIndex = $this->chatMessages->search(function ($msg) use ($event) {
+            return $msg->id === $event['message_id'];
+        });
+
+        if ($messageIndex !== false) {
+            $this->chatMessages[$messageIndex]->is_read = true;
+        }
+    }
+
+    /**
+     * Handle chat ended from JavaScript (called via $wire.call)
+     */
+    public function handleChatEnded($event): void
+    {
+        // Check if this is our current session that was ended
+        if ($this->session && $this->session->id === $event['chat_session_id']) {
+            // Close the chat when the other user ends it
+            $this->closeChat();
+
+            // Show a message to the user
+            session()->flash('error', 'The other user has ended the chat. All messages have been deleted.');
+        }
+    }
+
+    public function endChat(): void
+    {
+        if (! $this->session) {
+            return;
+        }
+
+        try {
+            // Store the session ID before deletion for broadcasting
+            $sessionId = $this->session->id;
+            $userId = auth()->id();
+
+            // Delete all messages in this chat session
+            ChatMessage::where('chat_session_id', $this->session->id)->delete();
+
+            // Delete the chat session itself
+            $this->session->delete();
+
+            // Broadcast that the chat has ended to all users
+            broadcast(new ChatEnded($sessionId, $userId));
+
+            // Clear any chat-related session data
+            session()->forget('active_chat_session_id');
+            session()->forget('current_chat_session_id');
+            session()->forget('chat_ended');
+
+            // Close the chat window
+            $this->closeChat();
+
+            // Show success message
+            session()->flash('success', 'Chat ended successfully. All messages have been deleted.');
+
+        } catch (\Exception $e) {
+            // Log the error and show error message
+            \Log::error('Error ending chat: '.$e->getMessage());
+            session()->flash('error', 'Failed to end chat. Please try again.');
+        }
+    }
+
+    public function closeChat(): void
+    {
+        $this->session = null;
+        $this->chatMessages = collect([]);
+        $this->otherUser = null;
+        $this->message = '';
+
+        $this->dispatch('chat-closed')->to('chat.chat-dashboard');
+    }
+
+    public function render(): View
+    {
+        return view('livewire.chat.chat-window');
+    }
+}

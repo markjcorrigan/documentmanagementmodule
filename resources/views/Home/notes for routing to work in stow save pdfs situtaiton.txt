@@ -1,0 +1,153 @@
+
+if you have a list like that, to pass different IDs to the delete button, you need to pass the ID in the URL. You can do it using the query string, like this:
+
+example.com/contacts/delete?id=123
+
+then in the controller you can get the ID like this:
+
+• $id = $_GET['id'];
+
+•
+
+Or, you can have the ID as a URL segment, like this:
+
+example.com/contacts/123/delete
+
+for which you need a matching route:
+
+• $router->add('{controller}/{id:\d+}/{action}');
+
+•
+
+and then in the controller you can get the ID in the route_params property:
+
+• $id = $this->route_params['id'];
+
+And more ideas on routes below
+
+
+
+Remember that the saveAction must also be changed.
+
+I.e. 
+<?php
+
+namespace App\Controllers;
+
+use \Core\View;
+
+class Greatbooksww extends Authenticated
+{
+
+    public function indexAction()
+    {
+        View::renderTemplate('./Greatbooksww/index.html');
+    
+    }
+    
+    
+    protected function savegreatbookswwAction()   <-----
+
+    {
+
+Must change controller name first is Upper rest lower.
+
+$router->add('mybooklist', ['controller' => 'Mybooklist', 'action' => 'index']);  ///////NB This works
+$router->add('mybooklistsave/{filename:[\w\s\.-]+}', ['controller' => 'Mybooklist', 'action' => 'save']);  //////NB this works
+
+
+Must ensure that index.php in Public_html is changed correctly.
+
+Must ensure that Dir2Html  has directorynamesave in ./  i.e. change to  ../directorynamesave/    NBNBNBNBNBNBNBNBNBNBNB  I must use Dir2Html and change ./ and insert ../directorynamesave before the file name.
+
+
+Also Dir2Html must delete the data column on right.  I.e. click at top of column and then bottom in Expression Web then this COLUMN can be deleted.
+
+Also Dir2Html must switch off %20 for spaces.
+
+>>>>>>>>>>>>>>
+This works for Mybooklist
+>>>>>>>>>>>>>>>
+<?php
+
+namespace App\Controllers;
+
+use \Core\View;
+use \App\Auth;
+
+class Mybooklist extends Authenticated
+{
+
+    public function indexAction()
+    {
+    if ( ! Auth::getUser()->is_access) {
+ 
+    echo "<script type='text/javascript'>alert(\"You do not have sufficient rights to access this page.\");
+    window.location='../stow';
+    
+    </script>";
+
+//include("../../Stowage/index.html");
+//View::renderTemplate('Stowage/index.html');
+  
+   
+    
+    
+
+
+
+} else 
+
+
+
+    {
+        View::renderTemplate('./Mybooklist/index.html');
+    
+    }
+    
+ }   
+    protected function saveAction()
+
+    {
+    if ( ! Auth::getUser()->is_access) {
+ 
+      echo "<script type='text/javascript'>alert(\"You do not have sufficient rights to access this page.\");
+    window.location='../stow';
+    
+    </script>";
+
+
+
+} else 
+
+
+
+
+
+
+
+    {
+        // Get the filename from the URL and prepend the directory
+    		$filename = "../App/Views/Mybooklist/" . $this->route_params['filename'];
+        // Check if the file exists, throw a 404 if not found
+        if (file_exists($filename)) {
+            header("Content-type: application/pdf");  
+            header("Content-Disposition: attachment; filename=\"" . basename($filename) . "\"");
+           //header("Content-Disposition: attachment; filename=downloaded.pdf");
+           //header('Content-Disposition: attachment; filename="'.basename($filename).'"' ); 
+            
+            readfile($filename);
+                    
+        } else {
+            throw new \Exception('File not found.', 404);
+        }   
+    }   
+
+  } //this ties back to {if
+
+    
+ }
+
+
+
+

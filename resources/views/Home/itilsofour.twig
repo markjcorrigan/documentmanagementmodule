@@ -1,0 +1,472 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SO Problem Management</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=24') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Problem Management</i> aims to manage the lifecycle of all Problems. The primary objectives of this ITIL process are to prevent Incidents from happening, and to minimize the impact of incidents that cannot be prevented. 'Proactive Problem Management' analyzes Incident Records, and uses data collected by other IT Service Management processes to identify trends or significant Problems.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: Problem Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>A new sub-process Major Problem Review has been introduced in ITIL V3 to review the solution history of major Problems in order to prevent a recurrence and learn lessons for the future. </p>
+  <p>&#160;</p>
+  <p>In <i><b>ITIL 2011</b></i> the new sub-process Proactive Problem Identification has been added to emphasize the importance of proactive Problem Management. </p>
+  <p>In Problem Categorization and Prioritization, it has been made clearer that categorization and prioritization should be harmonized with the approach used in Incident Management, to facilitate matching between Incidents and Problems. The process overview of <a href="/images/itilsofive.jpg"  title="Problem-management-itil.jpg">ITIL Problem Management</a> shows the key information flows. </p>
+  <p>The concept of recreating Problems during Problem Diagnosis and Resolution is now more prominent. This sub-process has been completely revised to provide clearer guidance on how this process cooperates with Incident Management. </p>
+  <p><i>Note:</i> The new ITIL 2011 books also contain an expanded section on problem analysis techniques and examples of situations where the various techniques may be applied. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Problem Management sub-processes:">These are the <strong class="selflink">ITIL Problem Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Problem_Management_Identification" itemprop="itemListElement">Proactive Problem Identification</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To improve overall availability of services by proactively identifying Problems. Proactive Problem Management aims to identify and solve Problems and/or provide suitable Workarounds before (further) Incidents recur. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Management_Prioritization" itemprop="itemListElement">Problem Categorization and Prioritization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To record and prioritize the Problem with appropriate diligence, in order to facilitate a swift and effective resolution. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Management_Resolution" itemprop="itemListElement">Problem Diagnosis and Resolution</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To identify the underlying root cause of a Problem and initiate the most appropriate and economical Problem solution. If possible, a temporary Workaround is supplied. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Control" itemprop="itemListElement">Problem and Error Control</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To constantly monitor outstanding Problems with regards to their processing status, so that where necessary corrective measures may be introduced. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Management_Closure" itemprop="itemListElement">Problem Closure and Evaluation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To ensure that - after a successful Problem solution - the Problem Record contains a full historical description, and that related Known Error Records are updated. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Major_Problem_Review" itemprop="itemListElement">Major Problem Review</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To review the resolution of a Problem in order to prevent recurrence and learn any lessons for the future. Furthermore it is to be verified whether the Problems marked as closed have actually been eliminated. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Management_Reporting" itemprop="itemListElement">Problem Management Reporting</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: ITIL Problem Management Reporting aims to ensure that the other Service Management processes as well as IT Management are informed of outstanding Problems, their processing-status and existing Workarounds (see "Problem Management Report"). </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Problem Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Known_Error" itemprop="itemListElement">Known Error</span></b> </p>
+    <ul>
+      <li itemprop="description">A Known Error is a problem that has a documented root cause and a Workaround. Known Errors are managed throughout their lifecycle by the Problem Management process. The details of each Known Error are recorded in a <i>Known Error Record</i> stored in the Known Error Database (KEDB). As a rule, Known Errors are identified by Problem Management, but Known Errors may also be suggested by other Service Management disciplines, e.g. Incident Management, or by suppliers. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Known_Error_Database_KEDB" itemprop="itemListElement">Known Error Database (KEDB)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Known Error Database (KEDB) is created by Problem Management and used by Incident and Problem Management to manage all Known Error Records. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Problem" itemprop="itemListElement">Problem</span></b> </p>
+    <ul>
+      <li itemprop="description">A cause of one or more Incidents. The cause is not usually known at the time a Problem Record is created. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Problem_Management_Report" itemprop="itemListElement">Problem Management Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A report supplying Problem-related information to the other Service Management processes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Problem_Record" itemprop="itemListElement">Problem Record</span></b> </p>
+    <ul>
+      <li itemprop="description">The Problem Record contains all details of a Problem, documenting the history of the Problem from detection to closure (NB<i>: ITIL Checklist Problem Record</i>). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Suggested_Known_Error" itemprop="itemListElement">Suggested new Known Error</span></b> </p>
+    <ul>
+      <li itemprop="description">A suggestion to create a new entry in the Known Error Database, for example raised by the Service Desk or by Release Management. Known Errors are managed throughout their lifecycle by Problem Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Suggested_Problem" itemprop="itemListElement">Suggested new Problem</span></b> </p>
+    <ul>
+      <li itemprop="description">A notification about a suspected Problem, handed over to Problem Management for further investigation, possibly leading to the formal logging of a Problem. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Suggested_Workaround" itemprop="itemListElement">Suggested new Workaround</span></b> </p>
+    <ul>
+      <li itemprop="description">A suggestion to enter a new Workaround in the Known Error Database, for example raised by the Service Desk or by Release Management. Workarounds are managed throughout their lifecycle by Problem Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Workaround" itemprop="itemListElement">Workaround</span></b> </p>
+    <ul>
+      <li itemprop="description">Workarounds are temporary solutions aimed at reducing or eliminating the impact of Known Errors (and thus Problems) for which a full resolution is not yet available. As such, Workarounds are often applied to reduce the impact of <a href="/index.php/Incident_Management#Incident" title="Incident Management">Incidents</a> or Problems if their underlying causes cannot be readily identified or removed. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Operation#ITIL_KPIs_Problem_Management" title="ITIL KPIs Problem Management">Key Performance Indicators (KPIs) Problem Management</a> </li>
+    <li><a href="/index.php/ITIL-Checklists#Problem_Management" title="ITIL Problem Management templates">Problem Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Problem_Record" title="Problem Record - How to record Problems">Checklist Problem Record</a>, and </li>
+        <li><a href="/index.php/Checklist_Problem_Priority" title="Problem Priority">Checklist Problem Priority</a> </li>
+        <li><a href="/index.php/Checklist_Closure_of_a_Problem" title="Closure of a Problem">Checklist Closure of a Problem</a> </li>
+        <li><a href="/index.php/Checklist_Problem_Report" title="Problem Report">Problem Report template</a> </li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Problem_Manager">Problem Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Problem Manager is responsible for managing the lifecycle of all Problems.</li>
+    <li>His primary objectives are to prevent Incidents from happening, and to minimize the impact of Incidents that cannot be prevented.</li>
+    <li>To this purpose he maintains information about Known Errors and Workarounds.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="4"><b><span id="RACI-Matrix-Problem-Management">Responsibility Matrix: ITIL Problem Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Problem Manager </th>
+        <th style="background:#ffffee;">Applications Analyst </th>
+        <th style="background:#ffffee;">Technical Analyst </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Identification">Proactive Problem Identification</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Prioritization">Problem Categorization and Prioritization</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Resolution">Problem Diagnosis and Resolution</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Control">Problem and Error Control</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Closure">Problem Closure and Evaluation</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Major_Problem_Review">Major Problem Review</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Reporting">Problem Management Reporting</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Problem Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Problem Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SO Problem Management</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=24') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Problem Management</i> aims to manage the lifecycle of all Problems. The primary objectives of this ITIL process are to prevent Incidents from happening, and to minimize the impact of incidents that cannot be prevented. 'Proactive Problem Management' analyzes Incident Records, and uses data collected by other IT Service Management processes to identify trends or significant Problems.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: Problem Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>A new sub-process Major Problem Review has been introduced in ITIL V3 to review the solution history of major Problems in order to prevent a recurrence and learn lessons for the future. </p>
+  <p>&#160;</p>
+  <p>In <i><b>ITIL 2011</b></i> the new sub-process Proactive Problem Identification has been added to emphasize the importance of proactive Problem Management. </p>
+  <p>In Problem Categorization and Prioritization, it has been made clearer that categorization and prioritization should be harmonized with the approach used in Incident Management, to facilitate matching between Incidents and Problems. The process overview of <a href="/images/itilsofive.jpg"  title="Problem-management-itil.jpg">ITIL Problem Management</a> shows the key information flows. </p>
+  <p>The concept of recreating Problems during Problem Diagnosis and Resolution is now more prominent. This sub-process has been completely revised to provide clearer guidance on how this process cooperates with Incident Management. </p>
+  <p><i>Note:</i> The new ITIL 2011 books also contain an expanded section on problem analysis techniques and examples of situations where the various techniques may be applied. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Problem Management sub-processes:">These are the <strong class="selflink">ITIL Problem Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Problem_Management_Identification" itemprop="itemListElement">Proactive Problem Identification</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To improve overall availability of services by proactively identifying Problems. Proactive Problem Management aims to identify and solve Problems and/or provide suitable Workarounds before (further) Incidents recur. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Management_Prioritization" itemprop="itemListElement">Problem Categorization and Prioritization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To record and prioritize the Problem with appropriate diligence, in order to facilitate a swift and effective resolution. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Management_Resolution" itemprop="itemListElement">Problem Diagnosis and Resolution</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To identify the underlying root cause of a Problem and initiate the most appropriate and economical Problem solution. If possible, a temporary Workaround is supplied. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Control" itemprop="itemListElement">Problem and Error Control</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To constantly monitor outstanding Problems with regards to their processing status, so that where necessary corrective measures may be introduced. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Management_Closure" itemprop="itemListElement">Problem Closure and Evaluation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To ensure that - after a successful Problem solution - the Problem Record contains a full historical description, and that related Known Error Records are updated. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Major_Problem_Review" itemprop="itemListElement">Major Problem Review</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To review the resolution of a Problem in order to prevent recurrence and learn any lessons for the future. Furthermore it is to be verified whether the Problems marked as closed have actually been eliminated. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Problem_Management_Reporting" itemprop="itemListElement">Problem Management Reporting</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: ITIL Problem Management Reporting aims to ensure that the other Service Management processes as well as IT Management are informed of outstanding Problems, their processing-status and existing Workarounds (see "Problem Management Report"). </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Problem Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Known_Error" itemprop="itemListElement">Known Error</span></b> </p>
+    <ul>
+      <li itemprop="description">A Known Error is a problem that has a documented root cause and a Workaround. Known Errors are managed throughout their lifecycle by the Problem Management process. The details of each Known Error are recorded in a <i>Known Error Record</i> stored in the Known Error Database (KEDB). As a rule, Known Errors are identified by Problem Management, but Known Errors may also be suggested by other Service Management disciplines, e.g. Incident Management, or by suppliers. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Known_Error_Database_KEDB" itemprop="itemListElement">Known Error Database (KEDB)</span></b> </p>
+    <ul>
+      <li itemprop="description">The Known Error Database (KEDB) is created by Problem Management and used by Incident and Problem Management to manage all Known Error Records. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Problem" itemprop="itemListElement">Problem</span></b> </p>
+    <ul>
+      <li itemprop="description">A cause of one or more Incidents. The cause is not usually known at the time a Problem Record is created. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Problem_Management_Report" itemprop="itemListElement">Problem Management Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A report supplying Problem-related information to the other Service Management processes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Problem_Record" itemprop="itemListElement">Problem Record</span></b> </p>
+    <ul>
+      <li itemprop="description">The Problem Record contains all details of a Problem, documenting the history of the Problem from detection to closure (NB<i>: ITIL Checklist Problem Record</i>). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Suggested_Known_Error" itemprop="itemListElement">Suggested new Known Error</span></b> </p>
+    <ul>
+      <li itemprop="description">A suggestion to create a new entry in the Known Error Database, for example raised by the Service Desk or by Release Management. Known Errors are managed throughout their lifecycle by Problem Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Suggested_Problem" itemprop="itemListElement">Suggested new Problem</span></b> </p>
+    <ul>
+      <li itemprop="description">A notification about a suspected Problem, handed over to Problem Management for further investigation, possibly leading to the formal logging of a Problem. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Suggested_Workaround" itemprop="itemListElement">Suggested new Workaround</span></b> </p>
+    <ul>
+      <li itemprop="description">A suggestion to enter a new Workaround in the Known Error Database, for example raised by the Service Desk or by Release Management. Workarounds are managed throughout their lifecycle by Problem Management. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Workaround" itemprop="itemListElement">Workaround</span></b> </p>
+    <ul>
+      <li itemprop="description">Workarounds are temporary solutions aimed at reducing or eliminating the impact of Known Errors (and thus Problems) for which a full resolution is not yet available. As such, Workarounds are often applied to reduce the impact of <a href="/index.php/Incident_Management#Incident" title="Incident Management">Incidents</a> or Problems if their underlying causes cannot be readily identified or removed. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Operation#ITIL_KPIs_Problem_Management" title="ITIL KPIs Problem Management">Key Performance Indicators (KPIs) Problem Management</a> </li>
+    <li><a href="/index.php/ITIL-Checklists#Problem_Management" title="ITIL Problem Management templates">Problem Management templates and checklists</a>:
+      <ul>
+        <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Problem_Record" title="Problem Record - How to record Problems">Checklist Problem Record</a>, and </li>
+        <li><a href="/index.php/Checklist_Problem_Priority" title="Problem Priority">Checklist Problem Priority</a> </li>
+        <li><a href="/index.php/Checklist_Closure_of_a_Problem" title="Closure of a Problem">Checklist Closure of a Problem</a> </li>
+        <li><a href="/index.php/Checklist_Problem_Report" title="Problem Report">Problem Report template</a> </li>
+      </ul>
+    </li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Problem_Manager">Problem Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Problem Manager is responsible for managing the lifecycle of all Problems.</li>
+    <li>His primary objectives are to prevent Incidents from happening, and to minimize the impact of Incidents that cannot be prevented.</li>
+    <li>To this purpose he maintains information about Known Errors and Workarounds.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="4"><b><span id="RACI-Matrix-Problem-Management">Responsibility Matrix: ITIL Problem Management</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Problem Manager </th>
+        <th style="background:#ffffee;">Applications Analyst </th>
+        <th style="background:#ffffee;">Technical Analyst </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Identification">Proactive Problem Identification</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Prioritization">Problem Categorization and Prioritization</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Resolution">Problem Diagnosis and Resolution</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Control">Problem and Error Control</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Closure">Problem Closure and Evaluation</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Major_Problem_Review">Major Problem Review</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Problem_Management_Reporting">Problem Management Reporting</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Problem Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Problem Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

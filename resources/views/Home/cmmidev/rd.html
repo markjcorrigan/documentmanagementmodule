@@ -1,0 +1,1024 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>RD</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+</div>
+<!-- #BeginEditable "content" -->
+
+
+	<div id="contentWrapper">
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td><span class="auto-style2"><strong>Requirements 
+					Development (RD)</strong><br />
+					<br />
+					</span></td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>Requirements development is a critical process within any SDLC, most software defects can be traced to misunderstood or incorrect requirements.
+<br />
+<br />
+One of the main issues for making the requirements that the customer (end user) <b>really wants</b> visible to the developer, in a format that both the technical developer and business user agree, is the level and form of abstraction of the system functionality description.
+<br />
+In general the business user will want to use <i>natural language</i> terms to describe what is required whilst the developer will want a more logical structure to precisely describe the intention of the requestor.  
+Many notations and strategies have evolved to try and bridge the communication gap between business and developer,
+one of the most popular requirements (and systems) modeling formats is the <a href="http://www.omg.org/gettingstarted/what_is_uml.htm">Unified Modeling Language UML</a>.
+<br />
+<br />
+Under UML the following diagrams are used to convey the requirements:<br /></p>
+<ul>
+
+<li>Structure Diagrams include the Class Diagram, Object Diagram, Component Diagram, Composite Structure Diagram, Package Diagram, and Deployment Diagram. </li>
+<li>Behavior Diagrams include the Use Case Diagram (used by some methodologies during requirements gathering); Activity Diagram, and State Machine Diagram. </li>
+<li>Interaction Diagrams, all derived from the more general Behavior Diagram, include the Sequence Diagram, Communication Diagram, Timing Diagram, and Interaction Overview Diagram.</li>
+</ul><p>
+Prior to producing the requirements knowledge (or requirements) elicitation is done, this activity is also done within the Requirements Development (RD) process area.</p>
+</td>
+</tr>
+</tbody>
+
+			</table>
+	
+			<table border="1" cellPadding="4"  width="100%">
+				<tr>
+					<td align="left"><p><b>Requirements Development (RD)<br />An Engineering Process Area at Maturity Level 3</b>
+<br/>
+<br/>
+
+<b>Purpose</b>
+<br/>
+
+<br/>
+The purpose of Requirements Development (RD) is to produce and analyze customer, product, and product component requirements.
+<br/>
+<br/>
+
+<b>
+Introductory Notes
+</b>
+
+<br/>
+<br/>
+This process area describes three types of requirements: customer requirements, product requirements, and product component requirements. Taken together, these requirements address the needs of relevant stakeholders, including those pertinent to various product lifecycle phases (e.g., acceptance testing criteria) and product attributes (e.g., safety, reliability, and maintainability). Requirements also address constraints caused by the selection of design solutions (e.g., integration of commercial off-the-shelf products).
+<br/>
+<br/>
+All development projects have requirements. In the case of a project that is focused on maintenance activities, the changes to the product or product components are based on changes to the existing requirements, design, or implementation. The requirements changes, if any, might be documented in change requests from the customer or users, or they might take the form of new requirements received from the requirements development process. Regardless of their source or form, the maintenance activities that are driven by changes to requirements are managed accordingly.
+<br/>
+<br/>
+Requirements are the basis for design. The development of requirements includes the following activities:</p>
+<ul><li>Elicitation, analysis, validation, and communication of customer needs, expectations, and constraints to obtain customer requirements that constitute an understanding of what will satisfy stakeholders
+</li><li>Collection and coordination of stakeholder needs
+</li><li>Development of the lifecycle requirements of the product
+</li><li>Establishment of the customer requirements
+</li><li>Establishment of initial product and product component requirements consistent with customer requirements</li></ul>
+<p>
+This process area addresses all customer requirements rather than only product-level requirements because the customer may also provide specific design requirements.
+<br/>
+<br/>
+Customer requirements are further refined into product and product component requirements. In addition to customer requirements, product and product component requirements are derived from the selected design solutions. Throughout the process areas, where we use the terms product and product component, their intended meanings also encompass services and their components.
+<br/>
+<br/>
+Requirements are identified and refined throughout the phases of the product lifecycle. Design decisions, subsequent corrective actions, and feedback during each phase of the product’s lifecycle are analyzed for impact on derived and allocated requirements.
+<br/>
+<br/>
+The Requirements Development process area includes three specific goals. The Develop Customer Requirements specific goal addresses defining a set of customer requirements to use in the development of product requirements. The Develop Product Requirements specific goal addresses defining a set of product or product component requirements to use in the design of products and product components. The Analyze and Validate Requirements specific goal addresses the necessary analysis of customer, product, and product component requirements to define, derive, and understand the requirements. The specific practices of the third specific goal are intended to assist the specific practices in the first two specific goals. The processes associated with the Requirements Development process area and those associated with the Technical Solution process area may interact recursively with one another.
+<br/>
+<br/>
+Analyses are used to understand, define, and select the requirements at all levels from competing alternatives. These analyses include the following:</p>
+<ul>	<li>Analysis of needs and requirements for each product lifecycle phase, including needs of relevant stakeholders, the operational environment, and factors that reflect overall customer and end-user expectations and satisfaction, such as safety, security, and affordability
+	</li>
+	<li>Development of an operational concept
+</li>
+	<li>Definition of the required functionality</li>
+</ul>
+<p>
+The definition of functionality, also referred to as “functional analysis,” is not the same as structured analysis in software development and does not presume a functionally oriented software design. In object-oriented software design, it relates to defining what are called “services” or “methods.” The definition of functions, their logical groupings, and their association with requirements is referred to as a “functional architecture.”
+
+<br/>
+Analyses occur recursively at successively more detailed layers of a product’s architecture until sufficient detail is available to enable detailed design, acquisition, and testing of the product to proceed. As a result of the analysis of requirements and the operational concept (including functionality, support, maintenance, and disposal), the manufacturing or production concept produces more derived requirements, including consideration of the following:</p>
+<ul>
+<li>Constraints of various types
+</li><li>Technological limitations
+</li><li>Cost and cost drivers
+</li><li>Time constraints and schedule drivers
+</li><li>Risks
+</li><li>Consideration of issues implied but not explicitly stated by the customer or end user
+</li><li>Factors introduced by the developer’s unique business considerations, regulations, and laws</li>
+</ul>
+<p>
+A hierarchy of logical entities (functions and subfunctions, object classes and subclasses) is established through iteration with the evolving operational concept. Requirements are refined, derived, and allocated to these logical entities. Requirements and logical entities are allocated to products, product components, people, or associated processes.
+<br/>
+Involvement of relevant stakeholders in both requirements development and analysis gives them visibility into the evolution of requirements. This activity continually assures them that the requirements are being properly defined.
+<br />
+<br />
+
+Related Process Areas
+<br />
+<br />
+
+Refer to the Requirements Management process area for more information about managing customer and product requirements, obtaining agreement with the requirements provider, obtaining commitments with those implementing the requirements, and maintaining traceability.
+<br />
+<br />
+
+Refer to the Technical Solution process area for more information about how the outputs of the requirements development processes are used, and the development of alternative solutions and designs used in refining and deriving requirements.
+<br />
+<br />
+
+Refer to the Product Integration process area for more information about interface requirements and interface management.
+<br />
+<br />
+
+Refer to the Verification process area for more information about verifying that the resulting product meets the requirements.
+
+<br />
+<br />
+Refer to the Validation process area for more information about how the product built will be validated against the customer needs.
+<br />
+<br />
+
+Refer to the Risk Management process area for more information about identifying and managing risks that are related to requirements.
+<br />
+<br />
+Refer to the Configuration Management process area for information about ensuring that key work products are controlled and managed.
+<br />
+<br />
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br/>
+
+<a name="sg1"></a><b>SG 1 Develop Customer Requirements</b>
+<br />
+<br />
+Stakeholder needs, expectations, constraints, and interfaces are collected and translated into customer requirements.
+<br />
+<br />
+The needs of stakeholders (e.g., customers, end users, suppliers, builders, testers, manufacturers, and logistics support personnel) are the basis for determining customer requirements. The stakeholder needs, expectations, constraints, interfaces, operational concepts, and product concepts are analyzed, harmonized, refined, and elaborated for translation into a set of customer requirements.
+<br />
+<br />
+Frequently, stakeholder needs, expectations, constraints, and interfaces are poorly identified or conflicting. Since stakeholder needs, expectations, constraints, and limitations should be clearly identified and understood, an iterative process is used throughout the life of the project to accomplish this objective. To facilitate the required interaction, a surrogate for the end user or customer is frequently involved to represent their needs and help resolve conflicts. The customer relations or marketing part of the organization as well as members of the development team from disciplines such as human engineering or support can be used as surrogates. Environmental, legal, and other constraints should be considered when creating and resolving the set of customer requirements.
+<br />
+<br />
+<a name="sp11"></a>
+<b>SP 1.1 Elicit Needs</b>
+<br />
+<br />
+Elicit stakeholder needs, expectations, constraints, and interfaces for all phases of the product lifecycle.
+<br />
+<br />
+Eliciting goes beyond collecting requirements by proactively identifying additional requirements not explicitly provided by customers. Additional requirements should address the various product lifecycle activities and their impact on the product.
+<br />
+<br />
+Examples of techniques to elicit needs include the following:</p>
+<ul>
+
+					<li>Technology demonstrations
+</li><li>Interface control working groups
+</li><li>Technical control working groups
+</li><li>Interim project reviews
+</li><li>Questionnaires, interviews, and operational scenarios obtained from end users
+</li><li>Operational walkthroughs and end-user task analysis
+</li><li>Prototypes and models
+</li><li>Brainstorming
+</li><li>Quality Function Deployment
+</li><li>Market surveys
+</li><li>Beta testing
+</li><li>Extraction from sources such as documents, standards, or specifications
+</li><li>Observation of existing products, environments, and workflow patterns
+</li><li>Use cases
+</li><li>Business case analysis
+</li><li>Reverse engineering (for legacy products)
+</li><li>Customer satisfaction surveys</li></ul>
+<p>
+Examples of sources of requirements that might not be identified by the customer include the following:</p>
+<ul>
+<li>Business policies
+</li><li>Standards
+</li><li>Business environmental requirements (e.g., laboratories, testing and other facilities, and information technology infrastructure)
+</li><li>Technology
+</li><li>Legacy products or product components (reuse product components)</li>
+</ul>
+
+<p>Subpractice 1: Engage relevant stakeholders using methods for eliciting needs, expectations, constraints, and external interfaces.
+<br />
+<br />
+<a name="sp12"></a> 
+<b>SP 1.2 Develop the Customer Requirements</b>
+<br />
+<br />
+Transform stakeholder needs, expectations, constraints, and interfaces into customer requirements.
+<br />
+<br />
+The various inputs from the relevant stakeholders must be consolidated, missing information must be obtained, and conflicts must be resolved in documenting the recognized set of customer requirements. The customer requirements may include needs, expectations, and constraints with regard to verification and validation.
+<br />
+<br />
+In some situations, the customer provides a set of requirements to the project, or the requirements exist as an output of a previous project's activities. In these situations, the customer requirements could conflict with the relevant stakeholders' needs, expectations, constraints, and interfaces and will need to be transformed into the recognized set of customer requirements after appropriate resolution of conflicts.
+<br />
+<br />
+Relevant stakeholders representing all phases of the product's lifecycle should include business as well as technical functions. In this way, concepts for all product-related lifecycle processes are considered concurrently with the concepts for the products. Customer requirements result from informed decisions on the business as well as technical effects of their requirements.
+<br />
+<br />
+Typical Work Products</p>
+
+<ul>
+
+					<li>Customer requirements
+</li><li>Customer constraints on the conduct of verification
+</li><li>Customer constraints on the conduct of validation</li></ul>
+<p>
+Subpractice 1: Translate the stakeholder needs, expectations, constraints, and interfaces into documented customer requirements.
+<br />
+<br />
+Subpractice 2: Define constraints for verification and validation.
+<br />
+<br />
+<a name="sg2"></a>  
+<b>SG 2 Develop Product Requirements</b>
+<br />
+<br />
+Customer requirements are refined and elaborated to develop product and product component requirements.
+<br />
+<br />
+Customer requirements are analyzed in conjunction with the development of the operational concept to derive more detailed and precise sets of requirements called “product and product component requirements.” Product and product component requirements address the needs associated with each product lifecycle phase. Derived requirements arise from constraints, consideration of issues implied but not explicitly stated in the customer requirements baseline, and factors introduced by the selected architecture, the design, and the developer’s unique business considerations. The requirements are reexamined with each successive, lower level set of requirements and functional architecture, and the preferred product concept is refined.
+<br />
+<br />
+The requirements are allocated to product functions and product components including objects, people, and processes. The traceability of requirements to functions, objects, tests, issues, or other entities is documented. The allocated requirements and functions are the basis for the synthesis of the technical solution. As internal components are developed, additional interfaces are defined and interface requirements are established.
+<br />
+<br />
+Refer to the Maintain Bidirectional Traceability of Requirements specific practice of the Requirements Management process area for more information about maintaining bidirectional traceability.
+<br />
+<br />
+<a name="sp21"></a>
+<b>SP 2.1 Establish Product and Product Component Requirements</b>
+<br />
+<br />
+Establish and maintain product and product component requirements, which are based on the customer requirements.
+<br />
+<br />
+The customer requirements may be expressed in the customer’s terms and may be nontechnical descriptions. The product requirements are the expression of these requirements in technical terms that can be used for design decisions. An example of this translation is found in the first House of Quality Function Deployment, which maps customer desires into technical parameters. For instance, “solid sounding door” might be mapped to size, weight, fit, dampening, and resonant frequencies.
+<br />
+<br />
+Product and product component requirements address the satisfaction of customer, business, and project objectives and associated attributes, such as effectiveness and affordability.
+<br />
+<br />
+Derived requirements also address the cost and performance of other lifecycle phases (e.g., production, operations, and disposal) to the extent compatible with business objectives.
+<br />
+<br />
+The modification of requirements due to approved requirement changes is covered by the “maintain” function of this specific practice; whereas, the administration of requirement changes is covered by the Requirements Management process area.
+<br />
+<br />
+Refer to the Requirements Management process area for more information about managing changes to requirements.
+<br />
+<br />
+Typical Work Products</p>
+<ul>
+<li>Derived requirements
+</li><li>Product requirements
+</li><li>Product component requirements</li>
+</ul>
+<p>
+Subpractice 1: Develop requirements in technical terms necessary for product and product component design.
+<br />
+<br />
+Develop architecture requirements addressing critical product qualities and performance necessary for product architecture design.
+<br />
+<br />
+Subpractice 2: Derive requirements that result from design decisions.
+<br />
+<br />
+Refer to the Technical Solution process area for more information about developing the solutions that generate additional derived requirements.
+<br />
+<br />
+Selection of a technology brings with it additional requirements. For instance, use of electronics requires additional technology-specific requirements such as electromagnetic interference limits.
+<br />
+<br />
+Subpractice 3: Establish and maintain relationships between requirements for consideration during change management and requirements allocation.
+<br />
+<br />
+Refer to the Requirements Management process area for more information about maintaining requirements traceability.
+<br />
+<br />
+Relationships between requirements can aid in evaluating the impact of changes.
+<br />
+<br />
+<a name="sp22"></a>
+<b>SP 2.2 Allocate Product Component Requirements</b>
+<br />
+<br />
+Allocate the requirements for each product component.
+<br />
+<br />
+Refer to the Technical Solution process area for more information about allocation of requirements to products and product components. This specific practice provides information for defining the allocation of requirements but must interact with the specific practices in the Technical Solution process area to establish solutions to which the requirements are allocated.
+<br />
+<br />
+The requirements for product components of the defined solution include allocation of product performance; design constraints; and fit, form, and function to meet requirements and facilitate production. In cases where a higher level requirement specifies performance that will be the responsibility of two or more product components, the performance must be partitioned for unique allocation to each product component as a derived requirement.
+<br />
+<br />
+Typical Work Products</p>
+<ul>
+<li>Requirement allocation sheets
+</li><li>Provisional requirement allocations
+</li><li>Design constraints
+</li><li>Derived requirements
+</li><li>Relationships among derived requirements</li>
+</ul>
+<p>
+Subpractice 1: Allocate requirements to functions.
+<br />
+<br />
+Subpractice 2: Allocate requirements to product components.
+<br />
+<br />
+Subpractice 3: Allocate design constraints to product components.
+<br />
+<br />
+Subpractice 4: Document relationships among allocated requirements.
+<br />
+<br />
+Relationships include dependencies in which a change in one requirement may affect other requirements.
+<br />
+<br />
+<a name="sp23"></a>
+<b>SP 2.3 Identify Interface Requirements</b>
+<br />
+<br />
+Identify interface requirements.
+<br />
+<br />
+Interfaces between functions (or between objects) are identified. Functional interfaces may drive the development of alternative solutions described in the Technical Solution process area.
+<br />
+<br />
+Refer to the Product Integration process area for more information about the management of interfaces and the integration of products and product components.
+<br />
+<br />
+Interface requirements between products or product components identified in the product architecture are defined. They are controlled as part of product and product component integration and are an integral part of the architecture definition.
+<br />
+<br />
+Typical Work Products</p>
+<ul>
+<li>Interface requirements</li>
+</ul>
+<p>
+Subpractice 1: Identify interfaces both external to the product and internal to the product (i.e., between functional partitions or objects).
+<br />
+<br />
+As the design progresses, the product architecture will be altered by technical solution processes, creating new interfaces between product components and components external to the product.
+<br />
+<br />
+Interfaces with product-related lifecycle processes should also be identified.
+<br />
+<br />
+Examples of these interfaces include interfaces with test equipment, transportation systems, support systems, and manufacturing facilities.
+<br />
+<br />
+Subpractice 2: Develop the requirements for the identified interfaces.
+<br />
+<br />
+Refer to the Technical Solution process area for more information about generating new interfaces during the design process.
+<br />
+<br />
+Requirements for interfaces are defined in terms such as origination, destination, stimulus, data characteristics for software, and electrical and mechanical characteristics for hardware.
+<br />
+<br />
+<a name="sg3"></a>  
+<b>SG 3 Analyze and Validate Requirements</b>
+<br />
+<br />
+The requirements are analyzed and validated, and a definition of required functionality is developed.
+<br />
+<br />
+The specific practices of the Analyze and Validate Requirements specific goal support the development of the requirements in both the Develop Customer Requirements specific goal and the Develop Product Requirements specific goal. The specific practices associated with this specific goal cover analyzing and validating the requirements with respect to the user’s intended environment.
+<br />
+<br />
+Analyses are performed to determine what impact the intended operational environment will have on the ability to satisfy the stakeholders’ needs, expectations, constraints, and interfaces. Considerations, such as feasibility, mission needs, cost constraints, potential market size, and acquisition strategy, must all be taken into account, depending on the product context. A definition of required functionality is also established. All specified usage modes for the product are considered, and a timeline analysis is generated for time-critical sequencing of functions.
+<br />
+<br />
+The objectives of the analyses are to determine candidate requirements for product concepts that will satisfy stakeholder needs, expectations, and constraints; and then to translate these concepts into requirements. In parallel with this activity, the parameters that will be used to evaluate the effectiveness of the product are determined based on customer input and the preliminary product concept.
+<br />
+<br />
+Requirements are validated to increase the probability that the resulting product will perform as intended in the use environment.
+<br />
+<br />
+<a name="sp31"></a>
+<b>SP 3.1 Establish Operational Concepts and Scenarios</b>
+<br />
+<br />
+Establish and maintain operational concepts and associated scenarios.
+<br />
+<br />
+A scenario is typically a sequence of events that might occur in the use of the product, which is used to make explicit some of the needs of the stakeholders. In contrast, an operational concept for a product usually depends on both the design solution and the scenario. For example, the operational concept for a satellite-based communications product is quite different from one based on landlines. Since the alternative solutions have not usually been defined when preparing the initial operational concepts, conceptual solutions are developed for use when analyzing the requirements. The operational concepts are refined as solution decisions are made and lower level detailed requirements are developed.
+<br />
+<br />
+Just as a design decision for a product may become a requirement for product components, the operational concept may become the scenarios (requirements) for product components. Operational concepts and scenarios are evolved to facilitate the selection of product component solutions that, when implemented, will satisfy the intended use of the product. Operational concepts and scenarios document the interaction of the product components with the environment, users, and other product components, regardless of engineering discipline. They should be documented for all modes and states within operations, product deployment, delivery, support (including maintenance and sustainment), training, and disposal.
+<br />
+<br />
+The scenarios may include operational sequences, provided those sequences are an expression of customer requirements rather than operational concepts.
+<br />
+<br />
+Typical Work Products</p>
+<ul><li>Operational concept
+</li><li>Product or product component installation, operational, maintenance, and support concepts
+</li><li>Disposal concepts
+</li><li>Use cases
+</li><li>Timeline scenarios
+</li><li>New requirements</li>
+</ul>
+<p>
+Subpractice 1: Develop operational concepts and scenarios that include functionality, performance, maintenance, support, and disposal as appropriate.
+<br />
+<br />
+Identify and develop scenarios, consistent with the level of detail in the stakeholder needs, expectations, and constraints in which the proposed product or product component is expected to operate.
+<br />
+<br />
+Subpractice 2: Define the environment in which the product or product component will operate, including boundaries and constraints.
+<br />
+<br />
+Subpractice 3: Review operational concepts and scenarios to refine and discover requirements.
+<br />
+<br />
+Operational concept and scenario development is an iterative process. The reviews should be held periodically to ensure that they agree with the requirements. The review may be in the form of a walkthrough.
+<br />
+<br />
+Subpractice 4: Develop a detailed operational concept, as products and product components are selected, that defines the interaction of the product, the end user, and the environment, and that satisfies the operational, maintenance, support, and disposal needs.
+<br />
+<br />
+<a name="sp32"></a>
+<b>SP 3.2 Establish a Definition of Required Functionality</b>
+<br />
+<br />
+Establish and maintain a definition of required functionality.
+<br />
+<br />
+The definition of functionality, also referred to as “functional analysis,” is the description of what the product is intended to do. The definition of functionality can include actions, sequence, inputs, outputs, or other information that communicates the manner in which the product will be used.
+<br />
+<br />
+Functional analysis is not the same as structured analysis in software development and does not presume a functionally oriented software design. In object-oriented software design, it relates to defining what are called “services” or “methods.” The definition of functions, their logical groupings, and their association with requirements is referred to as a functional architecture. (See the definition of “functional architecture” in the glossary.)
+<br />
+<br />
+Typical Work Products</p>
+<ul>
+<li>Functional architecture
+</li><li>Activity diagrams and use cases
+</li><li>Object-oriented analysis with services or methods identified</li>
+</ul>
+<p>
+Subpractice 1: Analyze and quantify functionality required by end users.
+<br />
+<br />
+Subpractice 2: Analyze requirements to identify logical or functional partitions (e.g., subfunctions).
+<br />
+<br />
+Subpractice 3: Partition requirements into groups, based on established criteria (e.g., similar functionality, performance, or coupling), to facilitate and focus the requirements analysis.
+<br />
+<br />
+Subpractice 4: Consider the sequencing of time-critical functions both initially and subsequently during product component development.
+<br />
+<br />
+Subpractice 5: Allocate customer requirements to functional partitions, objects, people, or support elements to support the synthesis of solutions.
+<br />
+<br />
+Subpractice 6: Allocate functional and performance requirements to functions and subfunctions.
+<br />
+<br />
+<a name="sp33"></a>
+<b>SP 3.3 Analyze Requirements</b>
+<br />
+<br />
+Analyze requirements to ensure that they are necessary and sufficient.
+<br />
+<br />
+In light of the operational concept and scenarios, the requirements for one level of the product hierarchy are analyzed to determine whether they are necessary and sufficient to meet the objectives of higher levels of the product hierarchy. The analyzed requirements then provide the basis for more detailed and precise requirements for lower levels of the product hierarchy.
+<br />
+<br />
+As requirements are defined, their relationship to higher level requirements and the higher level defined functionality must be understood. One of the other actions is the determination of which key requirements will be used to track progress. For instance, the weight of a product or size of a software product may be monitored through development based on its risk.
+<br />
+<br />
+Refer to the Verification process area for more information about verification methods that could be used to support this analysis.
+<br />
+<br />
+Typical Work Products</p>
+<ul>
+<li>Requirements defects reports
+</li><li>Proposed requirements changes to resolve defects
+</li><li>Key requirements
+</li><li>Technical performance measures</li>
+</ul>
+<p>
+Subpractice: 1 Analyze stakeholder needs, expectations, constraints, and external interfaces to remove conflicts and to organize into related subjects.
+<br />
+<br />
+Subpractice: 2 Analyze requirements to determine whether they satisfy the objectives of higher level requirements.
+<br />
+<br />
+Subpractice: 3 Analyze requirements to ensure that they are complete, feasible, realizable, and verifiable.
+<br />
+<br />
+While design determines the feasibility of a particular solution, this subpractice addresses knowing which requirements affect feasibility.
+<br />
+<br />
+Subpractice: 4 Identify key requirements that have a strong influence on cost, schedule, functionality, risk, or performance.
+<br />
+<br />
+Subpractice: 5 Identify technical performance measures that will be tracked during the development effort.
+<br />
+<br />
+Refer to the Measurement and Analysis process area for more information about the use of measurements.
+<br />
+<br />
+Subpractice: 6 Analyze operational concepts and scenarios to refine the customer needs, constraints, and interfaces and to discover new requirements.
+<br />
+<br />
+This analysis may result in more detailed operational concepts and scenarios as well as supporting the derivation of new requirements.
+<br />
+<br />
+<a name="sp34"></a>
+<b>SP 3.4 Analyze Requirements to Achieve Balance</b>
+<br />
+<br />
+Analyze requirements to balance stakeholder needs and constraints.
+<br />
+<br />
+Stakeholder needs and constraints can address cost, schedule, performance, functionality, reusable components, maintainability, or risk.
+<br />
+<br />
+Typical Work Products</p>
+<ul>
+<li>Assessment of risks related to requirements</li>
+</ul>
+<p>
+Subpractice 1: Use proven models, simulations, and prototyping to analyze the balance of stakeholder needs and constraints.
+<br />
+<br />
+Results of the analyses can be used to reduce the cost of the product and the risk in developing the product.
+<br />
+<br />
+Subpractice 2: Perform a risk assessment on the requirements and functional architecture.
+<br />
+<br />
+Refer to the Risk Management process area for information about performing a risk assessment on customer and product requirements and the functional architecture.
+<br />
+<br />
+Subpractice 3: Examine product lifecycle concepts for impacts of requirements on risks.
+<br />
+<br />
+<a name="sp35"></a>
+<b>SP 3.5 Validate Requirements</b>
+<br />
+<br />
+Validate requirements to ensure the resulting product will perform as intended in the user's environment.
+<br />
+<br />
+Requirements validation is performed early in the development effort with end users to gain confidence that the requirements are capable of guiding a development that results in successful final validation. This activity should be integrated with risk management activities. Mature organizations will typically perform requirements validation in a more sophisticated way using multiple techniques and will broaden the basis of the validation to include other stakeholder needs and expectations.
+<br />
+<br />
+Examples of techniques used for requirements validation include the following:</p>
+<ul><li>Analysis
+</li><li>Simulations
+</li><li>Prototyping
+</li><li>Demonstrations</li>
+</ul>
+<p>
+Typical Work Products</p>
+<ul>
+<li>Record of analysis methods and results</li>
+</ul>
+<p>
+Subpractice 1: Analyze the requirements to determine the risk that the resulting product will not perform appropriately in its intended-use environment.
+<br />
+<br />
+Subpractice 2: Explore the adequacy and completeness of requirements by developing product representations (e.g., prototypes, simulations, models, scenarios, and storyboards) and by obtaining feedback about them from relevant stakeholders.
+<br />
+<br />
+Refer to the Validation process area for information about preparing for and performing validation on products and product components.
+<br />
+<br />
+Subpractice 3: Assess the design as it matures in the context of the requirements validation environment to identify validation issues and expose unstated needs and customer requirements.
+<br />
+<br />
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br />
+<br />
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br />
+<br /> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br />
+<br />
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br />
+<br />
+Perform the specific practices of the requirements development process to develop work products and provide services to achieve the specific goals of the process area.
+<br />
+<br />
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br />
+<br />
+The process is institutionalized as a managed process.
+<br />
+<br />
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br />
+<br />
+Establish and maintain an organizational policy for planning and performing the requirements development process.
+<br />
+<br />
+Elaboration:
+<br />
+<br />
+This policy establishes organizational expectations for collecting stakeholder needs, formulating product and product component requirements, and analyzing and validating those requirements.
+<br />
+<br />
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br />
+<br />
+Establish and maintain the plan for performing the requirements development process.
+<br />
+<br />
+Elaboration:
+<br />
+<br />
+This plan for performing the requirements development process can be part of (or referenced by) the project plan as described in the Project Planning process area.
+<br />
+<br />
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br />
+<br />
+Provide adequate resources for performing the requirements development process, developing the work products, and providing the services of the process.
+<br />
+<br />
+Elaboration:
+<br />
+<br />
+Special expertise in the application domain, methods for eliciting stakeholder needs, and methods and tools for specifying and analyzing customer, product, and product component requirements may be required.
+<br />
+<br />
+Examples of other resources provided include the following tools:</p>
+<ul>
+<li>Requirements specification tools
+</li><li>Simulators and modeling tools
+</li><li>Prototyping tools
+</li><li>Scenario definition and management tools
+</li><li>Requirements tracking tools</li>
+</ul>
+<p>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br />
+<br />
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the requirements development process.
+<br />
+<br />
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br />
+<br />
+Train the people performing or supporting the requirements development process as needed.
+<br />
+<br />
+Elaboration:
+<br />
+<br />
+Examples of training topics include the following:</p>
+<ul><li>Application domain
+</li><li>Requirements definition and analysis
+</li><li>Requirements elicitation
+</li><li>Requirements specification and modeling
+</li><li>Requirements tracking</li>
+</ul>
+<p>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br />
+<br />
+Place designated work products of the requirements development process under appropriate levels of control.
+<br />
+<br />
+Elaboration:
+<br />
+<br />
+Examples of work products placed under control include the following:</p>
+<ul><li>Customer requirements
+</li><li>Functional architecture
+</li><li>Product and product component requirements
+</li><li>Interface requirements</li>
+</ul>
+<p>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br />
+<br />
+Identify and involve the relevant stakeholders of the requirements development process as planned.
+<br />
+<br />
+Elaboration:
+<br />
+<br />
+Select relevant stakeholders from customers, end users, developers, producers, testers, suppliers, marketers, maintainers, disposal personnel, and others who may be affected by, or may affect, the product as well as the process.
+<br />
+<br />
+Examples of activities for stakeholder involvement include the following:</p>
+<ul><li>Reviewing the adequacy of requirements in meeting needs, expectations, constraints, and interfaces
+</li><li>Establishing operational concepts and scenarios
+</li><li>Assessing the adequacy of requirements
+</li><li>Establishing product and product component requirements
+</li><li>Assessing product cost, schedule, and risk</li>
+</ul>
+<p>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br />
+<br />
+Monitor and control the requirements development process against the plan for performing the process and take appropriate corrective action.
+<br />
+<br />
+Elaboration:
+<br />
+<br />
+Examples of measures and work products used in monitoring and controlling include the following:</p>
+<ul>		<li>Cost, schedule, and effort expended for rework
+</li><li>Defect density of requirements specifications
+</li><li>Schedule for activities to develop a set of requirements.</li>
+</ul>
+<p>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br />
+<br />
+Objectively evaluate adherence of the requirements development process against its process description, standards, and procedures, and address noncompliance.
+<br />
+<br />
+Elaboration:
+<br />
+<br />
+Examples of activities reviewed include the following:</p>
+<ul><li>Collecting stakeholder needs
+</li><li>Formulating product and product component requirements
+</li><li>Analyzing and validating product and product component requirements</li>
+</ul>
+<p>
+Examples of work products reviewed include the following:</p>
+<ul>		<li>Product requirements
+</li><li>Product component requirements
+</li><li>Interface requirements
+</li><li>Functional architecture</li>
+</ul>
+<p>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br />
+<br />
+Review the activities, status, and results of the requirements development process with higher level management and resolve issues.
+<br />
+<br />
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br />
+<br />
+The process is institutionalized as a defined process.
+<br />
+<br />
+This generic goal's appearance here reflects its location in the continuous representation.
+<br />
+<br />
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br />
+<br />
+Establish and maintain the description of a defined requirements development process.
+<br />
+<br />
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br />
+<br />
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the requirements development process to support the future use and improvement of the organization’s processes and process assets.
+<br />
+<br />
+Elaboration:
+<br />
+<br />
+Examples of work products, measures, measurement results, and improvement information include the following:</p>
+<ul><li>List of the requirements for a product that are found to be ambiguous
+</li><li>Number of requirements introduced at each phase of the project lifecycle
+</li><li>Lessons learned from the requirements allocation process</li>
+</ul>
+<p>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br />
+<br />
+The process is institutionalized as a quantitatively managed process.
+<br />
+<br />
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br />
+<br />
+Establish and maintain quantitative objectives for the requirements development process, which address quality and process performance, based on customer needs and business objectives.
+<br />
+<br />
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br />
+<br />
+Stabilize the performance of one or more subprocesses to determine the ability of the requirements development process to achieve the established quantitative quality and process-performance objectives.
+<br />
+<br />
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br />
+<br />
+The process is institutionalized as an optimizing process.
+<br />
+<br />
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br />
+<br />
+Ensure continuous improvement of the requirements development process in fulfilling the relevant business objectives of the organization.
+<br />
+<br />
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br />
+<br />
+Identify and correct the root causes of defects and other problems in the requirements development process.
+</li>					
+			</table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

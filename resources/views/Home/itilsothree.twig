@@ -1,0 +1,366 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SO Request Fulfulment</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=21') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Request Fulfilment</i> aims to fulfill Service Requests, which in most cases are minor (standard) Changes - e.g. requests to change a password or requests for information.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: Incident Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Request Fulfilment has been added as a new process to ITIL V3 with the aim to have a specific process dealing with Service Requests. </p>
+  <p>This was motivated by a clear distinction in ITIL V3 between Incidents (Service Interruptions) and Service Requests (standard requests from users, such as password resets). </p>
+  <p><span id="Request_Fulfilment_2011">In <i><b>ITIL 2011</b></i>, <a class="mw-selflink selflink">Request Fulfilment</a> has been completely revised.</span> </p>
+  <p>To reflect the latest guidance Request Fulfilment now consists of five sub-processes, to provide a detailed description of all activities and decision points. </p>
+  <p>Request Fulfilment now contains interfaces </p>
+  <ul>
+    <li>with Incident Management - if a Service Request turns out to be an Incident and</li>
+    <li>with Service Transition - if fulfilling a Service Request requires the involvement of Change Management. The process overview of <a href="/images/itilsothree.jpg"  title="Request-fulfilment.jpg">ITIL Request Fulfilment</a> shows the key information flows.</li>
+  </ul>
+  <p>A clearer explanation of the information that describes a Service Request and its life cycle has been added. </p>
+  <p>The concept of Service Request Models is explained in more detail. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Request Fulfilment sub-processes:">These are the <strong class="selflink">ITIL Request Fulfilment</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Request_Fulfilment_Support" itemprop="itemListElement">Request Fulfilment Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide and maintain the tools, processes, skills and rules for an effective and efficient handling of Service Requests. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_Fulfilment_Logging" itemprop="itemListElement">Request Logging and Categorization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To record and categorize the Service Request with appropriate diligence and check the requester's authorization to submit the request, in order to facilitate a swift and effective processing. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_Fulfilment_Model" itemprop="itemListElement">Request Model Execution</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To process a Service Request within the agreed time schedule. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_Fulfilment_Escalation" itemprop="itemListElement">Request Monitoring and Escalation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To continuously monitor the processing status of outstanding Service Requests, so that counter-measures may be introduced as soon as possible if service levels are likely to be breached. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_Fulfilment_Evaluation" itemprop="itemListElement">Request Closure and Evaluation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To submit the Request Record to a final quality control before it is closed. The aim is to make sure that the Service Request is actually processed and that all information required to describe the request's life-cycle is supplied in sufficient detail. In addition to this, findings from the processing of the request are to be recorded for future use. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the Request Fulfilment process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Service_Request" itemprop="itemListElement">Request for Service</span></b> </p>
+    <ul>
+      <li itemprop="description">A formal request from a user for something to be provided
+        - for example, a request for information or advice; to reset a password; or to install a workstation for a new user. The details of a Request for Service are recorded by Request Fulfilment in a Service Request Record. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Request_Model" itemprop="itemListElement">Service Request Model</span></b> </p>
+    <ul>
+      <li itemprop="description">A (Service) Request Model defines specific agreed steps that will be followed for a Service Request of a particular type (or category). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Request_Record" itemprop="itemListElement">Service Request Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A record containing all details of a Service Request. Service Requests are formal requests from a user for something to be provided
+        - for example, a request for information or advice; to reset a password; or to install a workstation for a new user. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Request_Status_Information" itemprop="itemListElement">Service Request Status Information</span></b> </p>
+    <ul>
+      <li itemprop="description">A message containing the present status of a Service Request sent to a user who earlier reported requested a service. Status information is typically provided to users at various points during a Service Request's lifecycle. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Incident">Incident Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Incident Manager is responsible for the effective implementation of the Incident Management process and carries out the respective reporting. He represents the first stage of escalation for Incidents, should these not be resolvable within the agreed Service Levels.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="1st_Level_Support">1st Level Support</span></b> </p>
+  <ul>
+    <li>The responsibility of 1st Level Support is to register and classify received Incidents and to undertake an immediate effort in order to restore a failed IT service as quickly as possible. If no ad-hoc solution can be achieved, 1st Level Support will transfer the Incident to expert technical support groups (2nd Level Support). 1st Level Support also processes Service Requests and keeps users informed about their Incidents' status at agreed intervals.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="Service_Request_Fulfilment_Group">Service Request Fulfilment Group</span></b> </p>
+  <ul>
+    <li>Service Request Fulfilment Groups specialize on the fulfilment of certain types of Service Requests. Typically, 1st Level Support will process simpler requests, while others are forwarded to the specialized Fulfilment Groups.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="4"><b><span id="RACI-Matrix-Request-Fulfilment">Responsibility Matrix: ITIL Request Fulfilment</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Incident Manager </th>
+        <th style="background:#ffffee;">1st Level Support </th>
+        <th style="background:#ffffee;">Service Request Fulfilment Group </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Support">Request Fulfilment Support</a></td>
+        <td>AR </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Logging">Request Logging and Categorization</a></td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Model">Request Model Execution</a></td>
+        <td>A </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Escalation">Request Monitoring and Escalation</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Evaluation">Request Closure and Evaluation</a></td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Request Fulfilment process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Request Fulfilment.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SO Request Fulfulment</h3>
+  <p><i><a href="/home/itilso">Back to ITIL Service Operation</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=21') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Request Fulfilment</i> aims to fulfill Service Requests, which in most cases are minor (standard) Changes - e.g. requests to change a password or requests for information.</span></p>
+  <p><b>Part of</b>: Service Operation </p>
+  <p><b>Process Owner</b>: Incident Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>Request Fulfilment has been added as a new process to ITIL V3 with the aim to have a specific process dealing with Service Requests. </p>
+  <p>This was motivated by a clear distinction in ITIL V3 between Incidents (Service Interruptions) and Service Requests (standard requests from users, such as password resets). </p>
+  <p><span id="Request_Fulfilment_2011">In <i><b>ITIL 2011</b></i>, <a class="mw-selflink selflink">Request Fulfilment</a> has been completely revised.</span> </p>
+  <p>To reflect the latest guidance Request Fulfilment now consists of five sub-processes, to provide a detailed description of all activities and decision points. </p>
+  <p>Request Fulfilment now contains interfaces </p>
+  <ul>
+    <li>with Incident Management - if a Service Request turns out to be an Incident and</li>
+    <li>with Service Transition - if fulfilling a Service Request requires the involvement of Change Management. The process overview of <a href="/images/itilsothree.jpg"  title="Request-fulfilment.jpg">ITIL Request Fulfilment</a> shows the key information flows.</li>
+  </ul>
+  <p>A clearer explanation of the information that describes a Service Request and its life cycle has been added. </p>
+  <p>The concept of Service Request Models is explained in more detail. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Request Fulfilment sub-processes:">These are the <strong class="selflink">ITIL Request Fulfilment</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Request_Fulfilment_Support" itemprop="itemListElement">Request Fulfilment Support</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide and maintain the tools, processes, skills and rules for an effective and efficient handling of Service Requests. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_Fulfilment_Logging" itemprop="itemListElement">Request Logging and Categorization</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To record and categorize the Service Request with appropriate diligence and check the requester's authorization to submit the request, in order to facilitate a swift and effective processing. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_Fulfilment_Model" itemprop="itemListElement">Request Model Execution</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To process a Service Request within the agreed time schedule. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_Fulfilment_Escalation" itemprop="itemListElement">Request Monitoring and Escalation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To continuously monitor the processing status of outstanding Service Requests, so that counter-measures may be introduced as soon as possible if service levels are likely to be breached. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Request_Fulfilment_Evaluation" itemprop="itemListElement">Request Closure and Evaluation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To submit the Request Record to a final quality control before it is closed. The aim is to make sure that the Service Request is actually processed and that all information required to describe the request's life-cycle is supplied in sufficient detail. In addition to this, findings from the processing of the request are to be recorded for future use. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the Request Fulfilment process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Service_Request" itemprop="itemListElement">Request for Service</span></b> </p>
+    <ul>
+      <li itemprop="description">A formal request from a user for something to be provided
+        - for example, a request for information or advice; to reset a password; or to install a workstation for a new user. The details of a Request for Service are recorded by Request Fulfilment in a Service Request Record. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Service_Request_Model" itemprop="itemListElement">Service Request Model</span></b> </p>
+    <ul>
+      <li itemprop="description">A (Service) Request Model defines specific agreed steps that will be followed for a Service Request of a particular type (or category). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Request_Record" itemprop="itemListElement">Service Request Record</span></b> </p>
+    <ul>
+      <li itemprop="description">A record containing all details of a Service Request. Service Requests are formal requests from a user for something to be provided
+        - for example, a request for information or advice; to reset a password; or to install a workstation for a new user. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Service_Request_Status_Information" itemprop="itemListElement">Service Request Status Information</span></b> </p>
+    <ul>
+      <li itemprop="description">A message containing the present status of a Service Request sent to a user who earlier reported requested a service. Status information is typically provided to users at various points during a Service Request's lifecycle. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Incident">Incident Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Incident Manager is responsible for the effective implementation of the Incident Management process and carries out the respective reporting. He represents the first stage of escalation for Incidents, should these not be resolvable within the agreed Service Levels.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="1st_Level_Support">1st Level Support</span></b> </p>
+  <ul>
+    <li>The responsibility of 1st Level Support is to register and classify received Incidents and to undertake an immediate effort in order to restore a failed IT service as quickly as possible. If no ad-hoc solution can be achieved, 1st Level Support will transfer the Incident to expert technical support groups (2nd Level Support). 1st Level Support also processes Service Requests and keeps users informed about their Incidents' status at agreed intervals.</li>
+  </ul>
+  <p><br />
+  </p>
+  <p><b><span id="Service_Request_Fulfilment_Group">Service Request Fulfilment Group</span></b> </p>
+  <ul>
+    <li>Service Request Fulfilment Groups specialize on the fulfilment of certain types of Service Requests. Typically, 1st Level Support will process simpler requests, while others are forwarded to the specialized Fulfilment Groups.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="4"><b><span id="RACI-Matrix-Request-Fulfilment">Responsibility Matrix: ITIL Request Fulfilment</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 40%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Incident Manager </th>
+        <th style="background:#ffffee;">1st Level Support </th>
+        <th style="background:#ffffee;">Service Request Fulfilment Group </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Support">Request Fulfilment Support</a></td>
+        <td>AR </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Logging">Request Logging and Categorization</a></td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Model">Request Model Execution</a></td>
+        <td>A </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Escalation">Request Monitoring and Escalation</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Request_Fulfilment_Evaluation">Request Closure and Evaluation</a></td>
+        <td>A </td>
+        <td>R </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Request Fulfilment process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Request Fulfilment.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

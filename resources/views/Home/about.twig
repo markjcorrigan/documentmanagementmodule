@@ -1,0 +1,206 @@
+{% extends 'base.twig' %}
+{% block title %}{% if not user %}PMWay{% else %}Why PMWay{% endif %}{% endblock %}
+{% block body %}
+    {% if user %}
+
+        <div class="container" align="center">
+            <h3>PMWay web is an ideas sandbox</h3>
+
+            <p align="center"><font size="-1">Click the sandbox below for more information about this website</font></p>
+
+            <button class="btn align-center clearfix" type="button" data-toggle="collapse" data-target="#collapsewhypmway" aria-expanded="false" aria-controls="collapsewhypmway">
+                <img class="img-fluid"
+                     src="{{ asset('storage/images/sandpitwithoutshadow.png') }}"
+                     onmouseover="this.src='{{ asset('storage/images/sandpit1.png') }}'"
+                     onmouseout="this.src='{{ asset('storage/images/sandpitwithoutshadow.png') }}'"
+                     title="Click here to learn Why PMWay?">
+                <br><br>
+            </button>
+            <br>
+
+            <div class="collapse" id="collapsewhypmway">
+                <div class="container">
+                    <div class="card text-center">
+                        <h5 class="card-header" align="center">More Information About PMWay</h5>
+                        <div class="card-body text-center">
+                            <h3 align="left">PMWay: The Way to Project and Process Management Excellence</h3>
+                            <br>
+
+                            <ul>
+                                <li>
+                                    <p align="left">I built PMWay to store and organize knowledge about Project and Process Management. The <a href="/pmway/?slide=2" >Frameworks landscape</a> provides a quick overview of PMWay's scope. Over time, the website evolved to support my ICT MSc Dissertation.<br>
+                                        PMWay uses the PMBOK as its foundation because the PMBOK has status as a Standard <a href="/pmway/?slide=2" title="The Standards / Frameworks Landscape slide #2" >grouped with ANSI, ISO, and BS Standards</a>.</p>
+                                </li>
+
+                                <li>
+                                    <div align="left">
+                                        <p align="left">PMWay explains how to implement process improvements for higher Capability Maturity levels to increase Productivity and Quality. Process improvements also reduce Risk, Rework, and Waste.<br>
+                                            <a href="/pmway/?slide=4" >Capability Maturity Level 2 (CM L2) focuses on Project Management processes</a>. CM L2 automatically establishes <a href="/pmway/?slide=2" >Good Governance</a>.<br>
+                                            The ideas for operating at CM L2+ explored here (<a href="{{ asset('storage/images/mastersdissertationmodel20200201.jpg') }}" >summarized in this model</a>) apply wherever Quality and Productivity improvements and reducing <a href="{{ asset('storage/assets/chaos-report.pdf') }}" >the chaos</a> are the goals.</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <p style="text-align:left">The Project Management Body of Knowledge version 6 Dashboard (<a href="/pmway" >the matrix on the PMWay home page</a>) is:</p>
+
+                                        <p align="center"><span><em>"the beating heart (as primal source and power center)"</em></span><br></p>
+                                    </div>
+
+                                    <div style="text-align:center">
+                                        <img class="img-fluid" id="heart" alt="" height="82"
+                                             src="{{ asset('storage/images/beatingheart.gif') }}"
+                                             width="60"
+                                             title="Use your mouse and drag the heart around. Notice that when all is said and done, getting to the heart of project management, to do it right you will need to return to the processes found in the PMBOK Dashboard">
+                                        <br>
+                                    </div>
+
+                                    <div>
+                                        <p align="center"><span><i>for the collated knowledge found in the PMBOK"</i></span></p>
+                                    </div>
+
+                                    <p align="left">Using this Dashboard, you can easily access all the PMBOK Processes and their <strong>*ITTOs</strong> found within the Guide.</p>
+
+                                    <table border="1" style="width: 100%" cellpadding="10">
+                                        <tr>
+                                            <td>
+                                                <p style="text-align: left"><strong>*ITTOs are:</strong> <em><strong>Process Inputs, Tools and Techniques, and Outputs</strong></em> - for each of the 49 PMBOK processes on the Dashboard.<br>
+                                                    Processes (and their ITTOs) are used from the beginning (INITIATION) to the end (CLOSURE) of a project (cross-referenced by Knowledge Area), at each step of your project management journey. They form a well-defined method (think of it as a recipe with essential ingredients) for project management success.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+
+                                <li>
+                                    <p align="left">Using the PMBOK Dashboard means you can <strong>use</strong>, <strong>practice</strong>, and <strong>improve</strong> your grasp of the PMBOK version 6 processes (along with the associated ITTOs) as essential knowledge needed to:</p>
+
+                                    <ol>
+                                        <li style="text-align:left">Pass the Project Management Institute (PMI) Certified Associate in Project Management (CAPM) exam, or<br><br></li>
+
+                                        <li style="text-align:left">Pass the Agile Certified Practitioner (PMI-ACP) exam, or<br><br></li>
+
+                                        <li style="text-align:left">Pass the PMI flagship certification - the Project Management Professional (PMP) exam.<br><br></li>
+
+                                        <li style="text-align:left">Gain solid knowledge of project management processes, their ITTOs, and their implementation order. With common rules of the game mutually agreed and understood, you (and your team) can run projects better. You can also use the Process Selector Wheel to test your knowledge of Process Numbers and Processes. This is a fun way to learn the Processes.<br><br></li>
+
+                                        <li style="text-align:left">Signed-up members can use the Notes Section provided below each process in PMWay to log all your ideas to <strong>tailor</strong> these processes.<br>
+                                            The art of effective tailoring within the PMBOK is found in the processes and knowing what and why ITTOs should be included in your project (to what detail) or why not. The ability to log these decisions (from an audit perspective) is a key requirement of a project management professional, which is facilitated by these notes!<br>
+                                            We must always ensure that projects are kept simple, lean, and agile, with an achievable set of goals for the team to rally behind and deliver against.<br>
+                                            <strong>I.e., While (when) BEST PRACTICE is understood, BEST PRACTICAL (from an agile and lean perspective) can be better!</strong><br><br></li>
+
+                                        <li style="text-align:left">Since PMWay is all about process improvement, be aware that the above may need processes from other areas to be effective. Examples include ITIL and COBIT. <a href="{{ asset('storage/assets/itilagiledevops.pdf') }}" >Click here</a> for input regarding the importance of ITIL to ensure Agile delivers. PMWay provides process improvement advice for ITIL, COBIT, and other process improvement areas as shown in the Standards Frameworks Methodologies Landscape found if you <a href="/pmway/?slide=2" >click here</a>.<br><br></li>
+                                    </ol>
+                                </li>
+
+                                <li>
+                                    <p align="left">If you plan to use agile, you can now run these projects underpinned by the logic of the 'fully agile compliant' PMBOK 6 Dashboard above.<br><br>
+                                        In the sixth edition of the PMBOK® Guide, each knowledge area contains a new section entitled <strong>Approaches for Agile, Iterative and Adaptive Environments</strong>. For a specialized qualification in agile, consider the <strong>PMI Agile Certified Practitioner (PMI-ACP)</strong>. This formally recognizes your knowledge of agile principles and your skill with agile techniques (including XP, Scrum, Lean, and Kanban, etc.).<br>
+                                        If you think the PMBOK is outdated because it is "waterfall," I challenge you to work through the PMBOK "How To" (from the main menu). If you do this, I believe you will understand that your assumptions are incorrect and may not fully grasp all the pertinent issues. To illustrate why I say this, take the pin test now and ask yourself honestly:<br>
+                                        <a href="/cmmi" title="Use your mouse to drag me around for fun. Then click me if you want to get serious and Pin down your Capability Maturity level now!" ><u><i>where is your game really at</i></u>?<img alt="pin" id="pin" class="img-fluid" src="{{ asset('storage/images/pin40small.png') }}"></a><br><br></p>
+                                </li>
+                            </ul>
+
+                            <p align="left"><a href="/home/pmbokversix" >Click here</a> for the changes in PMBOK version 6 when compared to PMBOK version 5.</p>
+                            <br>
+                        </div>
+
+                        <div class="card-footer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+        </div>
+
+        <script src="/bootstrapfouroneone/jquery/jquery.js"></script>
+        <script src="/bootstrapfouroneone/jqueryui/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/bootstrapfouroneone/jqueryui/jquery-ui.css">
+
+        <script>
+            $(document).ready(function () {
+                $("#pin, #heart, #game").draggable({revert:"invalid"});
+                $("#target").droppable({
+                    greedy: true,
+                    tolerance: 'touch',
+                    drop: function (event, ui) {
+                        ui.draggable.draggable('option', 'revert', 'true');
+                        alert("OK! Knowing where you are is the first step to improvement!");
+                    }
+                });
+            });
+        </script>
+
+    {% endif %}
+
+    {% if not user %}
+
+        <div class="container" align="center">
+            <h3>PMWay web is an ideas sandbox</h3>
+
+            <button class="btn align-center clearfix" type="button" data-toggle="collapse" data-target="#collapsewhypmway" aria-expanded="false" aria-controls="collapsewhypmway">
+                <img class="img-fluid"
+                     src="{{ asset('storage/images/sandpitwithoutshadow.png') }}"
+                     onmouseover="this.src='{{ asset('storage/images/sandpit1.png') }}'"
+                     onmouseout="this.src='{{ asset('storage/images/sandpitwithoutshadow.png') }}'"
+                     title="Click here to learn Why PMWay?">
+                <br><br>
+            </button>
+            <br>
+
+            <div class="collapse" id="collapsewhypmway">
+                <div class="container">
+                    <div class="card text-center">
+                        <h5 class="card-header" align="center">PMWay: The Way to Project and Process Management Excellence</h5>
+
+                        <div class="card-body text-center">
+                            <p align="left">PMWay is an ideas website I started in 2009.<br><br>
+                                Recently, I expanded it to support my Master's of Science research. The research focused on software engineering, the people-process-technology triad, and ways (project and other methodologies) to improve governance and execution while implementing capability maturity levels.<br><br>
+                                PMWay explains how to implement process improvements for higher Capability Maturity levels to increase Productivity and Quality. Process improvements also reduce Risk, Rework, and Waste.<br>
+                                Capability Maturity Level 2 (CM L2) focuses on Project Management processes. Operating at CM L2 automatically establishes Good Governance.<br>
+                                The ideas for operating at CM L2+ explored here (<a href="{{ asset('storage/images/mastersdissertationmodel20200201.jpg') }}" >summarized in this model</a>) apply wherever Quality and Productivity improvements and reducing <a href="{{ asset('storage/assets/chaos-report.pdf') }}" >the chaos</a> are the goals.<br>
+                                There is more detail on this page when you log into the web site.<br><br>
+
+
+
+
+                                In a short time, this website has grown rapidly. It grew to over 6 TB in size and has been filled with many thousands of documents and various resources as I proceeded with my investigation.<br><br>
+                                Due to the size of the website, I was forced to host PMWay myself from a home server.  Home serving is NOT24/7 and I bring the web site online when I am consulting, so if you found this web at the top of Enid Blyton's Faraway Tree, then enjoy!&nbsp;  ;~)<br><br>
+                                I also use the website as my portfolio web to facilitate work contracts.  Anyone who has been following South African history will come to understand that we are now in a classic "reverse apartheid" existence.&nbsp;&nbsp;I.e. Thanks to the stupidity of the corrupt ANC Government (operating at Capability Maturity Level Zero) white people are no longer allowed to work in the country of their birth.<br><br>This, due to the ANC's racist and dumber than dumb BBBEE policies, implemented over the past 30 years, which have effectively destroyed South Africa, exactly as was done by the Communists in Zimbabwe to the NE of us.<br><br>
+                                In fact, George Orwell, in his amazing book Animal Farm, understood exactly how they would operate and, as it was foretold in that amazing allegory, so it has become.<br><br>
+                                The joke for me (Oh, did I tell you that there is a joke database inside this web as well...), with 4 University Degrees and over 35 years of working experience, is that Ramaphosa (The ANC President) recently bemoaned the fact that it was difficult to find honest and qualified people to run State Owned Enterprises and projects correctly, and with professionalism, integrity and skill.<br><br>This after 30 years of State Capture and Massive Corruption under the ANC watch.<br>
+                                Well, Mr President, per this web site, here I am...  "please be patient, your call will be answered...  <br><br>
+                                Bottom line, anyone who wants to use my skills, please contact me via this web site or find me on Linkedin.<br><br>
+                                </p>
+
+                            <h5 align="left">Keep well.</h5>
+                        </div>
+
+                        <div class="card-footer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+        </div>
+
+        <script src="/bootstrapfouroneone/jquery/jquery.js"></script>
+        <script src="/bootstrapfouroneone/jqueryui/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/bootstrapfouroneone/jqueryui/jquery-ui.css">
+
+        <script>
+            $(document).ready(function () {
+                $("#pin, #heart, #game").draggable({revert:"invalid"});
+                $("#target").droppable({
+                    greedy: true,
+                    tolerance: 'touch',
+                    drop: function (event, ui) {
+                        ui.draggable.draggable('option', 'revert', 'true');
+                        alert("OK! Knowing where you are is the first step to improvement!");
+                    }
+                });
+            });
+        </script>
+
+    {% endif %}
+
+{% endblock %}

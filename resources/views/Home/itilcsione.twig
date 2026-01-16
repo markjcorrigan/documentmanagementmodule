@@ -1,0 +1,198 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+CSI{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL CSI Service Review</h3>
+  <p><i><a href="/home/itilcsi">Back to ITIL Continual Service Improvement</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=1') }}" >Awesome summary of this process (Note the whole chapter is relevant to the CSI process)</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Service Review</i> aims to review business services and infrastructure services on a regular basis. The objective of this process is to improve service quality where necessary, and to identify more economical ways of providing a service where possible.</span></p>
+  <p><b>Part of</b>: Continual Service Improvement </p>
+  <p><b>Process Owner</b>: CSI Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>A key change between ITIL V2 and ITIL V3 has been a new focus on continually improving services and processes. <a class="mw-selflink selflink">Service Reviews</a> are an essential element of "Continual Service Improvement (CSI)". </p>
+  <p>The process overview of <a href="/images/itilcsione.jpg"  title="Service-review-itil.jpg">ITIL Service Review (.JPG)</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p>No sub-processes are specified for <a class="mw-selflink selflink">ITIL Service Review</a>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in <strong class="selflink">Service Review</strong> to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Service_Review_Report" itemprop="itemListElement">Service Review Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A document containing the results and findings from a <strong class="selflink">Service Review</strong>. This report is an important input for the definition of improvement initiatives (NB: Checklist Service Review Report). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Suggested_Service_Improvement" itemprop="itemListElement">Suggested Service Improvement</span></b> </p>
+    <ul>
+      <li itemprop="description">Suggestion for improving service quality or economics, handed over from other Service Management processes to the Continual Service Improvement process. Suggestions may originate from anywhere within or outside of the IT organization, and may include suggestions for improving the way a service is provided or for modifying service agreements (SLAs, OLAs and UCs). </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Continual_Service_Improvement#ITIL_KPIs_Service_Review" title="ITIL KPIs Service Review">Key Performance Indicators (KPIs) Service Review</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Service_Review_Report" title="Service Review Report template">Service Review Report</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="CSI_Manager">CSI Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Continual Service Improvement (CSI) Manager is responsible for managing improvements to IT Service Management processes and IT services. He will continually measure the performance of the service provider and design improvements to processes, services and infrastructure in order to increase efficiency, effectiveness, and cost effectiveness.</li>
+  </ul>
+  <p>&#160;</p>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b><span id="RACI-Matrix-Service-Review">Responsibility Matrix: ITIL Service Review</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 55%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">CSI Manager </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a class="mw-selflink selflink">Service Review</a><br />
+          <i>(no sub-processes specified)</i></td>
+        <td>AR </td>
+        <td>R </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Service Review process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Service Review.</span> </p>
+  <p><span id="Team">[3] Process Owner and Business Relationship Manager; </span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL CSI Service Review</h3>
+  <p><i><a href="/home/itilcsi">Back to ITIL Continual Service Improvement</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf#page=1') }}" >Awesome summary of this process (Note the whole chapter is relevant to the CSI process)</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Service Review</i> aims to review business services and infrastructure services on a regular basis. The objective of this process is to improve service quality where necessary, and to identify more economical ways of providing a service where possible.</span></p>
+  <p><b>Part of</b>: Continual Service Improvement </p>
+  <p><b>Process Owner</b>: CSI Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>A key change between ITIL V2 and ITIL V3 has been a new focus on continually improving services and processes. <a class="mw-selflink selflink">Service Reviews</a> are an essential element of "Continual Service Improvement (CSI)". </p>
+  <p>The process overview of <a href="/images/itilcsione.jpg"  title="Service-review-itil.jpg">ITIL Service Review (.JPG)</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p>No sub-processes are specified for <a class="mw-selflink selflink">ITIL Service Review</a>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in <strong class="selflink">Service Review</strong> to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Service_Review_Report" itemprop="itemListElement">Service Review Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A document containing the results and findings from a <strong class="selflink">Service Review</strong>. This report is an important input for the definition of improvement initiatives (NB: Checklist Service Review Report). </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Suggested_Service_Improvement" itemprop="itemListElement">Suggested Service Improvement</span></b> </p>
+    <ul>
+      <li itemprop="description">Suggestion for improving service quality or economics, handed over from other Service Management processes to the Continual Service Improvement process. Suggestions may originate from anywhere within or outside of the IT organization, and may include suggestions for improving the way a service is provided or for modifying service agreements (SLAs, OLAs and UCs). </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Continual_Service_Improvement#ITIL_KPIs_Service_Review" title="ITIL KPIs Service Review">Key Performance Indicators (KPIs) Service Review</a></li>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/Checklist_Service_Review_Report" title="Service Review Report template">Service Review Report</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="CSI_Manager">CSI Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Continual Service Improvement (CSI) Manager is responsible for managing improvements to IT Service Management processes and IT services. He will continually measure the performance of the service provider and design improvements to processes, services and infrastructure in order to increase efficiency, effectiveness, and cost effectiveness.</li>
+  </ul>
+  <p>&#160;</p>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="3"><b><span id="RACI-Matrix-Service-Review">Responsibility Matrix: ITIL Service Review</span></b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 55%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">CSI Manager </th>
+        <th style="background:#ffffee;">Other roles involved </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a class="mw-selflink selflink">Service Review</a><br />
+          <i>(no sub-processes specified)</i></td>
+        <td>AR </td>
+        <td>R </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Service Review process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Service Review.</span> </p>
+  <p><span id="Team">[3] Process Owner and Business Relationship Manager; </span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

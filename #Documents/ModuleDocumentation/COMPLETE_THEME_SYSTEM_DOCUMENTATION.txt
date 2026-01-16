@@ -1,0 +1,792 @@
+===============================================================================
+COMPLETE THEME SWITCHING SYSTEM DOCUMENTATION (UPDATED)
+===============================================================================
+PMWay Website - Dark Mode / Light Mode Implementation Guide
+Generated: December 29, 2024
+UPDATED: Layout files reorganized for clarity
+===============================================================================
+
+TABLE OF CONTENTS:
+==================
+1. localStorage Basics
+2. Theme System Overview
+3. Website Structure & Layout Locations (UPDATED)
+4. The Three localStorage Keys
+5. Why Multiple Keys Are Needed
+6. How Each Framework Uses Themes
+7. The Complete Synchronization Strategy
+8. Code Implementation
+9. Best Practices for Future Development
+10. Troubleshooting Guide
+
+
+===============================================================================
+SECTION 1: localStorage BASICS
+===============================================================================
+
+What is localStorage?
+---------------------
+localStorage is a browser feature that allows websites to store data permanently
+in the user's browser (until manually cleared). Unlike cookies, it:
+- Stores data as key-value pairs
+- Never expires (persists even after browser closes)
+- Can store up to 5-10MB of data
+- Is specific to each domain
+- Is accessible via JavaScript
+
+Basic Operations:
+-----------------
+
+WRITE (Save Data):
+------------------
+localStorage.setItem('keyName', 'value');
+
+Example:
+localStorage.setItem('theme', 'dark');
+localStorage.setItem('flux:appearance', 'light');
+localStorage.setItem('username', 'John');
+
+READ (Retrieve Data):
+---------------------
+const value = localStorage.getItem('keyName');
+
+Example:
+const theme = localStorage.getItem('theme');  // Returns: 'dark', 'light', or null
+const user = localStorage.getItem('username');  // Returns: 'John' or null
+
+If the key doesn't exist, it returns null.
+
+DELETE (Remove Data):
+---------------------
+localStorage.removeItem('keyName');
+
+Example:
+localStorage.removeItem('theme');
+
+CLEAR ALL:
+----------
+localStorage.clear();  // Removes everything (use with caution!)
+
+VIEW IN BROWSER:
+----------------
+1. Press F12 (Developer Tools)
+2. Go to "Application" tab
+3. Left sidebar → Storage → Local Storage → Select your domain
+4. You'll see all key-value pairs
+
+
+===============================================================================
+SECTION 2: THEME SYSTEM OVERVIEW
+===============================================================================
+
+Your Website Has TWO MAJOR SECTIONS:
+-------------------------------------
+
+1. LIVEWIRE/FLUX SECTION (Main Site/Home Page/Blog)
+   - Uses Livewire framework
+   - Uses Flux UI components
+   - Uses Tailwind CSS
+   - Located in: resources/views/components/layout.blade.php
+   - Theme stored in: localStorage 'flux.appearance' or 'flux:appearance'
+   - Theme applied via: .dark CLASS on <html> element
+
+2. BOOTSTRAP SECTION (Jokes Module)
+   - Uses Bootstrap 5 framework
+   - Standard PHP/Laravel views
+   - Located in: resources/views/jokes/layout.blade.php
+   - Theme stored in: localStorage 'theme'
+   - Theme applied via: data-bs-theme ATTRIBUTE on <html> element
+
+THE PROBLEM:
+------------
+When you switch themes in one section, the other section doesn't know about it
+because they're looking at DIFFERENT localStorage keys!
+
+Main site looks for: 'flux.appearance'
+Jokes section was looking for: 'theme'
+
+Result: Change theme on main site → jokes stay same theme (BAD!)
+
+
+===============================================================================
+SECTION 3: WEBSITE STRUCTURE & LAYOUT LOCATIONS (UPDATED)
+===============================================================================
+
+ORGANIZED FILE STRUCTURE:
+-------------------------
+
+Main Site (Livewire/Flux):
+resources/views/components/layout.blade.php
+    └── Used by: Home page, blog posts, main navigation
+    └── Framework: Livewire + Flux + Tailwind
+    └── Theme method: .dark class on <html>
+    └── localStorage key: 'flux.appearance'
+
+Jokes Module (Bootstrap):
+resources/views/jokes/layout.blade.php
+    └── Used by: All joke pages
+    └── Framework: Bootstrap 5
+    └── Theme method: data-bs-theme attribute
+    └── localStorage key: 'theme' (but now syncs with flux.appearance)
+
+Jokes Views:
+resources/views/jokes/
+    ├── layout.blade.php              ← Layout for jokes module
+    ├── index.blade.php               ← @extends('jokes.layout')
+    ├── create.blade.php              ← @extends('jokes.layout')
+    ├── edit.blade.php                ← @extends('jokes.layout')
+    ├── show.blade.php                ← @extends('jokes.layout')
+    └── category.blade.php            ← @extends('jokes.layout')
+
+Joke Categories Views:
+resources/views/jokecats/
+    ├── index.blade.php               ← @extends('jokes.layout')
+    ├── create.blade.php              ← @extends('jokes.layout')
+    └── edit.blade.php                ← @extends('jokes.layout')
+
+
+WHY THIS ORGANIZATION IS BETTER:
+---------------------------------
+✅ Each module's layout is in its own folder
+✅ Easy to find: jokes layout in jokes folder!
+✅ Clear separation of concerns
+✅ Prevents confusion between layouts
+✅ Easy to maintain and update
+
+
+HOW @extends WORKS:
+-------------------
+@extends('jokes.layout')
+    └── Looks for: resources/views/jokes/layout.blade.php
+
+@extends('components.layout')
+    └── Looks for: resources/views/components/layout.blade.php
+
+The dot (.) represents folder structure in Laravel Blade.
+
+
+===============================================================================
+SECTION 4: THE THREE localStorage KEYS
+===============================================================================
+
+Your website now uses THREE localStorage keys for maximum compatibility:
+
+KEY 1: 'flux.appearance'
+-------------------------
+Primary key used by: Livewire/Flux main site
+Format: 'dark', 'light', or 'system'
+Used by: resources/views/components/layout.blade.php
+Priority: HIGHEST (checked first)
+
+Example in main site:
+localStorage.getItem('flux.appearance')  // Returns: 'dark' or 'light'
+
+KEY 2: 'flux:appearance'
+-------------------------
+Alternate key (with colon instead of dot)
+Format: 'dark', 'light', or 'system'
+Used by: Some Flux/Livewire configurations
+Priority: MEDIUM (checked second if flux.appearance doesn't exist)
+
+Example:
+localStorage.getItem('flux:appearance')  // Returns: 'dark' or 'light'
+
+Note: The colon version exists because some JavaScript frameworks don't handle
+dots well in key names, so 'flux:appearance' is a fallback.
+
+KEY 3: 'theme'
+--------------
+Generic key used by: Bootstrap and other generic theme systems
+Format: 'dark' or 'light'
+Used by: resources/views/jokes/layout.blade.php
+Priority: LOWEST (checked last)
+
+Example:
+localStorage.getItem('theme')  // Returns: 'dark' or 'light'
+
+
+===============================================================================
+SECTION 5: WHY MULTIPLE KEYS ARE NEEDED
+===============================================================================
+
+Your website is a HYBRID APPLICATION with multiple frameworks:
+
+SCENARIO 1: User on Main Site (Livewire/Flux)
+----------------------------------------------
+User clicks theme toggle → Theme changes to dark
+What happens:
+✓ Main site immediately goes dark
+✓ localStorage 'flux.appearance' is set to 'dark'
+
+User navigates to Jokes page:
+✗ Jokes page looks for 'theme' key
+✗ Doesn't find 'flux.appearance'
+✗ Jokes page shows light mode (default)
+✗ USER FRUSTRATED - themes don't match!
+
+SCENARIO 2: User on Jokes Page (Bootstrap)
+-------------------------------------------
+User clicks theme toggle → Theme changes to dark
+What happens:
+✓ Jokes page immediately goes dark
+✓ localStorage 'theme' is set to 'dark'
+
+User navigates back to Main site:
+✗ Main site looks for 'flux.appearance' key
+✗ Doesn't find it
+✗ Main site shows light mode (default)
+✗ USER FRUSTRATED - themes don't match!
+
+THE SOLUTION: Write to ALL Keys Simultaneously
+-----------------------------------------------
+When user changes theme ANYWHERE on the site:
+✓ Write to 'flux.appearance' (for Livewire/Flux)
+✓ Write to 'flux:appearance' (for compatibility)
+✓ Write to 'theme' (for Bootstrap)
+
+Result: ALL sections of website stay synchronized!
+
+
+===============================================================================
+SECTION 6: HOW EACH FRAMEWORK USES THEMES
+===============================================================================
+
+LIVEWIRE/FLUX (Main Site)
+--------------------------
+Location: resources/views/components/layout.blade.php
+
+How it reads theme:
+const savedTheme = localStorage.getItem('flux.appearance') ||
+                   localStorage.getItem('flux:appearance') ||
+                   localStorage.getItem('theme');
+
+How it applies theme:
+if (theme === 'dark') {
+    document.documentElement.classList.add('dark');  // Adds CSS class
+} else {
+    document.documentElement.classList.remove('dark');
+}
+
+Result in HTML:
+<html class="dark">  ← Tailwind CSS looks for this class
+
+CSS checks:
+.dark body { background: black; color: white; }
+.dark .navbar { background: dark-gray; }
+
+
+BOOTSTRAP 5 (Jokes Module)
+---------------------------
+Location: resources/views/jokes/layout.blade.php
+
+How it reads theme:
+const savedTheme = localStorage.getItem('flux.appearance') ||
+                   localStorage.getItem('flux:appearance') ||
+                   localStorage.getItem('theme');
+
+How it applies theme:
+document.documentElement.setAttribute('data-bs-theme', theme);
+document.documentElement.setAttribute('data-theme', theme);
+document.documentElement.setAttribute('flux:appearance', theme);
+
+Result in HTML:
+<html data-bs-theme="dark" data-theme="dark" flux:appearance="dark">
+
+CSS checks:
+[data-bs-theme="dark"] body { background: black; color: white; }
+[data-bs-theme="dark"] .navbar { background: dark-gray; }
+
+
+===============================================================================
+SECTION 7: THE COMPLETE SYNCHRONIZATION STRATEGY
+===============================================================================
+
+READING THEME (Priority Order)
+-------------------------------
+Always check keys in this order:
+
+const savedTheme = localStorage.getItem('flux.appearance') ||    // Try first
+                   localStorage.getItem('flux:appearance') ||    // Try second
+                   localStorage.getItem('theme') ||              // Try third
+                   'light';                                      // Default fallback
+
+Why this order?
+1. 'flux.appearance' is your MAIN site's primary key (highest priority)
+2. 'flux:appearance' is a fallback for compatibility
+3. 'theme' is the generic Bootstrap key
+4. 'light' is the ultimate default if nothing is found
+
+JavaScript || Operator:
+-----------------------
+The || (OR) operator returns the first "truthy" value it finds.
+If localStorage.getItem() returns null, it tries the next one.
+
+Example:
+localStorage.getItem('flux.appearance')    → null (doesn't exist)
+localStorage.getItem('flux:appearance')    → 'dark' (FOUND! Returns this)
+localStorage.getItem('theme')              → not checked (already found value)
+
+
+WRITING THEME (Write to All)
+-----------------------------
+Always write to ALL THREE keys simultaneously:
+
+function saveTheme(newTheme) {
+    localStorage.setItem('flux.appearance', newTheme);   // For Livewire/Flux
+    localStorage.setItem('flux:appearance', newTheme);   // For compatibility
+    localStorage.setItem('theme', newTheme);             // For Bootstrap
+}
+
+Why write to all?
+- Ensures ANY part of your website can read the theme
+- Visitor might land on ANY page first
+- Different modules check different keys
+- Redundancy = reliability
+
+
+APPLYING THEME (Use Both Methods)
+----------------------------------
+Apply theme using BOTH .dark class AND data attributes:
+
+function applyTheme(theme) {
+    const html = document.documentElement;  // Get <html> element
+    
+    if (theme === 'dark') {
+        // Method 1: Add .dark class (for Tailwind/Livewire)
+        html.classList.add('dark');
+        
+        // Method 2: Set data attributes (for Bootstrap)
+        html.setAttribute('data-bs-theme', 'dark');
+        html.setAttribute('data-theme', 'dark');
+        html.setAttribute('flux:appearance', 'dark');
+    } else {
+        // Method 1: Remove .dark class
+        html.classList.remove('dark');
+        
+        // Method 2: Set data attributes
+        html.setAttribute('data-bs-theme', 'light');
+        html.setAttribute('data-theme', 'light');
+        html.setAttribute('flux:appearance', 'light');
+    }
+}
+
+Why both methods?
+- Tailwind CSS looks for .dark CLASS
+- Bootstrap looks for [data-bs-theme] ATTRIBUTE
+- Using both ensures compatibility with all frameworks
+
+
+===============================================================================
+SECTION 8: CODE IMPLEMENTATION
+===============================================================================
+
+COMPLETE THEME SWITCHER CODE
+-----------------------------
+Use this code in ALL layouts:
+- resources/views/components/layout.blade.php (main site)
+- resources/views/jokes/layout.blade.php (jokes module)
+
+<!-- In <head> - BEFORE any CSS loads -->
+<script>
+    // ✅ Apply theme IMMEDIATELY before page renders
+    (function() {
+        // STEP 1: Read theme from localStorage (priority order)
+        const savedTheme = localStorage.getItem('flux.appearance') ||
+                          localStorage.getItem('flux:appearance') ||
+                          localStorage.getItem('theme');
+        
+        // STEP 2: Check system preference if no saved theme
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // STEP 3: Resolve 'system' preference
+        let theme = savedTheme;
+        if (!savedTheme || savedTheme === 'system') {
+            theme = systemPrefersDark ? 'dark' : 'light';
+        }
+        
+        // STEP 4: Apply theme immediately
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.setAttribute('flux:appearance', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.setAttribute('data-bs-theme', 'light');
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.documentElement.setAttribute('flux:appearance', 'light');
+        }
+    })();
+</script>
+
+<!-- Later in page - Theme toggle function -->
+<script>
+    function toggleTheme() {
+        // STEP 1: Get current theme
+        const currentTheme = document.documentElement.getAttribute('data-bs-theme') ||
+                            (document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        
+        // STEP 2: Toggle to opposite theme
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        // STEP 3: Save to ALL localStorage keys
+        localStorage.setItem('flux.appearance', newTheme);
+        localStorage.setItem('flux:appearance', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // STEP 4: Apply theme to page
+        if (newTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.setAttribute('flux:appearance', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.setAttribute('data-bs-theme', 'light');
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.documentElement.setAttribute('flux:appearance', 'light');
+        }
+        
+        // STEP 5: Update icon
+        updateThemeIcon(newTheme);
+        
+        // STEP 6: Dispatch event for other scripts
+        window.dispatchEvent(new CustomEvent('themeChanged', { 
+            detail: { theme: newTheme }
+        }));
+    }
+    
+    function updateThemeIcon(theme) {
+        const icon = document.getElementById('themeIcon');
+        if (!icon) return;
+        
+        if (theme === 'dark') {
+            // Dark mode → show SUN icon (to switch back to light)
+            icon.classList.remove('bi-moon-stars');
+            icon.classList.add('bi-sun');
+        } else {
+            // Light mode → show MOON icon (to switch to dark)
+            icon.classList.remove('bi-sun');
+            icon.classList.add('bi-moon-stars');
+        }
+    }
+</script>
+
+<!-- HTML for theme toggle button -->
+<button id="themeToggle" onclick="toggleTheme()">
+    <i class="bi bi-moon-stars" id="themeIcon"></i>
+</button>
+
+
+CSS FOR THEME ICONS
+-------------------
+Add this CSS to make sun icon yellow:
+
+<style>
+    /* YELLOW SUN in dark mode */
+    [data-bs-theme="dark"] #themeIcon.bi-sun {
+        color: #ffc107 !important;
+    }
+    
+    /* Dark moon in light mode */
+    [data-bs-theme="light"] #themeIcon.bi-moon-stars {
+        color: #212529 !important;
+    }
+    
+    /* For Tailwind/Livewire layouts */
+    .dark #themeIcon.bi-sun {
+        color: #ffc107 !important;
+    }
+    
+    html:not(.dark) #themeIcon.bi-moon-stars {
+        color: #212529 !important;
+    }
+</style>
+
+
+===============================================================================
+SECTION 9: BEST PRACTICES FOR FUTURE DEVELOPMENT
+===============================================================================
+
+RULE 1: Keep Layouts in Module Folders
+---------------------------------------
+✅ DO: resources/views/jokes/layout.blade.php
+✅ DO: resources/views/components/layout.blade.php
+✅ DO: resources/views/admin/layout.blade.php
+❌ DON'T: resources/views/layout.blade.php (too generic!)
+
+Benefits:
+- Easy to find the right layout
+- Clear module separation
+- Prevents confusion
+
+
+RULE 2: Always Use the Same Reading Order
+------------------------------------------
+EVERY layout/module should check localStorage keys in this EXACT order:
+
+const theme = localStorage.getItem('flux.appearance') ||
+              localStorage.getItem('flux:appearance') ||
+              localStorage.getItem('theme') ||
+              'light';
+
+Never change this order! It ensures consistency across your entire site.
+
+
+RULE 3: Always Write to All Three Keys
+---------------------------------------
+Whenever you save theme, ALWAYS write to all three:
+
+localStorage.setItem('flux.appearance', theme);
+localStorage.setItem('flux:appearance', theme);
+localStorage.setItem('theme', theme);
+
+Never write to just one key!
+
+
+RULE 4: Apply Theme Using Both Methods
+---------------------------------------
+Always use BOTH .dark class AND data attributes:
+
+if (theme === 'dark') {
+    html.classList.add('dark');              // For Tailwind
+    html.setAttribute('data-bs-theme', 'dark');  // For Bootstrap
+    html.setAttribute('data-theme', 'dark');     // Generic
+    html.setAttribute('flux:appearance', 'dark'); // For Flux
+}
+
+
+RULE 5: Initialize Theme in <head>
+-----------------------------------
+Always put theme initialization in <head> BEFORE CSS loads.
+This prevents "flash of wrong theme" on page load.
+
+
+RULE 6: Use Immediate Function
+-------------------------------
+Wrap initialization in (function() { ... })(); to execute immediately.
+This ensures theme is applied BEFORE page renders.
+
+
+RULE 7: Adding New Modules/Sections
+------------------------------------
+When adding a new module to your site:
+
+1. Create module folder: resources/views/mymodule/
+2. Create layout: resources/views/mymodule/layout.blade.php
+3. Copy theme initialization code from existing layout
+4. Make views extend 'mymodule.layout'
+5. Make sure it reads from all three localStorage keys
+6. Make sure it writes to all three keys when toggling
+7. Test theme switching between old and new modules
+
+
+RULE 8: Document Your Layouts
+------------------------------
+Create a README.md in each module folder:
+
+resources/views/jokes/README.md:
+```
+# Jokes Module
+Layout: layout.blade.php
+Theme System: Bootstrap 5 with synchronized localStorage
+Views extend: @extends('jokes.layout')
+```
+
+
+RULE 9: Testing Theme Sync
+---------------------------
+After implementing, always test:
+
+1. Set theme on Module A → Navigate to Module B → Check if theme matches
+2. Set theme on Module B → Navigate to Module A → Check if theme matches
+3. Refresh page → Check if theme persists
+4. Clear localStorage → Check if default (light) shows
+5. Test on different browsers
+
+
+===============================================================================
+SECTION 10: TROUBLESHOOTING GUIDE
+===============================================================================
+
+PROBLEM: Themes Don't Sync Between Sections
+--------------------------------------------
+Cause: Different modules are using different localStorage keys
+
+Fix:
+1. Check what key each module is READING from
+2. Check what key each module is WRITING to
+3. Ensure ALL modules read from the same three keys (in priority order)
+4. Ensure ALL modules write to all three keys simultaneously
+
+Debug:
+Open browser console and run:
+console.log('flux.appearance:', localStorage.getItem('flux.appearance'));
+console.log('flux:appearance:', localStorage.getItem('flux:appearance'));
+console.log('theme:', localStorage.getItem('theme'));
+
+
+PROBLEM: Theme Doesn't Persist After Refresh
+---------------------------------------------
+Cause: Theme is not being written to localStorage
+
+Fix:
+1. Check if toggleTheme() function includes localStorage.setItem()
+2. Make sure there are no JavaScript errors blocking the save
+3. Check if browser has localStorage disabled (private mode?)
+
+Debug:
+In toggleTheme() function, add:
+console.log('Saving theme:', newTheme);
+localStorage.setItem('theme', newTheme);
+console.log('Saved! Check:', localStorage.getItem('theme'));
+
+
+PROBLEM: Flash of Wrong Theme on Page Load
+-------------------------------------------
+Cause: Theme is being applied too late (after CSS loads)
+
+Fix:
+1. Move theme initialization to <head>
+2. Put it BEFORE any <link> tags
+3. Wrap in immediate function: (function() { ... })();
+4. Apply theme to document.documentElement directly
+
+
+PROBLEM: Sun Icon Not Yellow
+-----------------------------
+Cause: CSS selector not specific enough or wrong attribute being checked
+
+Fix:
+Use more specific CSS selector:
+[data-bs-theme="dark"] #themeIcon.bi-sun {
+    color: #ffc107 !important;
+}
+
+Make sure you're checking the right attribute:
+- Bootstrap layouts: use [data-bs-theme="dark"]
+- Tailwind layouts: use .dark
+
+
+PROBLEM: Navbar Doesn't Change Color
+-------------------------------------
+Cause: Navbar has hardcoded classes like 'navbar-dark bg-dark'
+
+Fix:
+1. Remove hardcoded classes from <nav>
+2. Use CSS to apply colors based on theme:
+
+[data-bs-theme="light"] .navbar {
+    background-color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .navbar {
+    background-color: #212529 !important;
+}
+
+
+PROBLEM: Wrong Layout Being Used
+---------------------------------
+Cause: View file extends the wrong layout
+
+Fix:
+1. Check @extends() directive in view file
+2. Make sure it matches the correct layout location
+
+Example:
+❌ @extends('layout') - Too generic! Which layout?
+✅ @extends('jokes.layout') - Clear! Uses jokes module layout
+✅ @extends('components.layout') - Clear! Uses main site layout
+
+Debug:
+grep -n "@extends" resources/views/jokes/*.blade.php
+
+
+DEBUGGING COMMANDS
+------------------
+Open browser console (F12) and run these:
+
+// Check what's in localStorage
+console.log('All theme keys:', {
+    'flux.appearance': localStorage.getItem('flux.appearance'),
+    'flux:appearance': localStorage.getItem('flux:appearance'),
+    'theme': localStorage.getItem('theme')
+});
+
+// Check what's on HTML element
+console.log('HTML attributes:', {
+    'classList': document.documentElement.classList.toString(),
+    'data-bs-theme': document.documentElement.getAttribute('data-bs-theme'),
+    'data-theme': document.documentElement.getAttribute('data-theme'),
+    'flux:appearance': document.documentElement.getAttribute('flux:appearance')
+});
+
+// Manually set theme
+localStorage.setItem('flux.appearance', 'dark');
+localStorage.setItem('flux:appearance', 'dark');
+localStorage.setItem('theme', 'dark');
+location.reload();  // Refresh page
+
+// Clear all theme data
+localStorage.removeItem('flux.appearance');
+localStorage.removeItem('flux:appearance');
+localStorage.removeItem('theme');
+location.reload();  // Refresh page
+
+
+===============================================================================
+SUMMARY: QUICK REFERENCE
+===============================================================================
+
+LAYOUT FILE LOCATIONS:
+----------------------
+Main Site: resources/views/components/layout.blade.php
+Jokes: resources/views/jokes/layout.blade.php
+
+THREE localStorage KEYS:
+-------------------------
+1. 'flux.appearance' - Primary (Livewire/Flux)
+2. 'flux:appearance' - Fallback (Compatibility)
+3. 'theme' - Generic (Bootstrap)
+
+READING THEME:
+--------------
+const theme = localStorage.getItem('flux.appearance') ||
+              localStorage.getItem('flux:appearance') ||
+              localStorage.getItem('theme') ||
+              'light';
+
+WRITING THEME:
+--------------
+localStorage.setItem('flux.appearance', newTheme);
+localStorage.setItem('flux:appearance', newTheme);
+localStorage.setItem('theme', newTheme);
+
+APPLYING THEME:
+---------------
+// Add/remove .dark class (for Tailwind)
+html.classList.add('dark') or html.classList.remove('dark')
+
+// Set attributes (for Bootstrap)
+html.setAttribute('data-bs-theme', theme);
+html.setAttribute('data-theme', theme);
+html.setAttribute('flux:appearance', theme);
+
+BLADE @extends SYNTAX:
+----------------------
+@extends('jokes.layout')      → resources/views/jokes/layout.blade.php
+@extends('components.layout') → resources/views/components/layout.blade.php
+
+ICON STYLING:
+-------------
+Dark mode: Yellow sun (#ffc107)
+Light mode: Dark moon (#212529)
+
+CSS:
+[data-bs-theme="dark"] #themeIcon.bi-sun { color: #ffc107 !important; }
+[data-bs-theme="light"] #themeIcon.bi-moon-stars { color: #212529 !important; }
+
+
+===============================================================================
+END OF DOCUMENTATION
+===============================================================================

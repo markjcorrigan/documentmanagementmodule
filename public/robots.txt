@@ -1,0 +1,137 @@
+UsUser-agent: *
+# =========================
+# Newly Added Directories (Missing from original list)
+# =========================
+Disallow: /booklets/
+Disallow: /booksummaries/
+Disallow: /cbandmetercourses/
+Disallow: /complexprince/
+Disallow: /freezonecourses/
+Disallow: /macroecon/
+Disallow: /pmbok5/
+Disallow: /pmbok6/
+Disallow: /pmi2015/
+Disallow: /shsb/
+Disallow: /tao/
+Disallow: /techdic/
+Disallow: /technologydict/
+Disallow: /atecdic/
+
+# =========================
+# Original Disallow List
+# =========================
+Disallow: /PMWayLanding/
+Disallow: /ableaudio/
+Disallow: /ableaudiotracks/
+Disallow: /ablelvids/
+Disallow: /ableplayer/
+Disallow: /ablevids/
+Disallow: /agileprinciples/
+Disallow: /apology/
+Disallow: /assets/
+Disallow: /backend/
+Disallow: /bakjobs/
+Disallow: /books/
+Disallow: /bootstrapfourfivetwo/
+Disallow: /bootstrapfouroneone/
+Disallow: /bootstrapfourthreeone/
+Disallow: /breath/
+Disallow: /build/
+Disallow: /cmiitraining/
+Disallow: /cmm steps/
+Disallow: /cmmi1/
+Disallow: /cmmidev/
+Disallow: /cmmidevelopment/
+Disallow: /cmmimodels/
+Disallow: /conditions/
+Disallow: /css/
+Disallow: /cv/
+Disallow: /designpatterns/
+Disallow: /documents/
+Disallow: /dsdm/
+Disallow: /dsdmmanual/
+Disallow: /dsdmwhitepapers/
+Disallow: /emetercourse/
+Disallow: /ethics/
+Disallow: /fallacies/
+Disallow: /flipacp/
+Disallow: /flipdsdm/
+Disallow: /flippmbokfive/
+Disallow: /flippmp/
+Disallow: /flipprince2/
+Disallow: /flipprince22015/
+Disallow: /flipprince2a/
+Disallow: /fontawesome6/
+Disallow: /frontend/
+Disallow: /goodcheapfast/
+Disallow: /helpme/
+Disallow: /images/
+Disallow: /imagesv6/
+Disallow: /imgman/
+Disallow: /imgmap/
+Disallow: /includessub/
+Disallow: /itilfouroverview/
+Disallow: /itilfouroverviewsimple/
+Disallow: /itilfourstudyguide/
+Disallow: /js/
+Disallow: /latin/
+Disallow: /lovemstuffs/
+Disallow: /lrh/
+Disallow: /lrhbooks/
+Disallow: /madmoment/
+Disallow: /movies/
+Disallow: /pcmm/
+Disallow: /philosopherstoolkit/
+Disallow: /philosophy/
+Disallow: /phoenixlecturespics/
+Disallow: /pmboksixmanual/
+Disallow: /prince2agile/
+Disallow: /prince2mm/
+Disallow: /prince2procs/
+Disallow: /processesdash/
+Disallow: /prod/
+Disallow: /recharges/
+Disallow: /road to clear/
+Disallow: /robertsrulesoforder/
+Disallow: /scientology/
+Disallow: /scientologydict/
+Disallow: /scrum/
+Disallow: /scrummanual/
+Disallow: /silverbullet/
+Disallow: /sitaepmo/
+Disallow: /standardtechcourse/
+Disallow: /storage/
+Disallow: /strategystuff/
+Disallow: /study manual/
+Disallow: /studyitil/
+Disallow: /summitd/
+Disallow: /technical dictionary/
+Disallow: /thewayaudio/
+Disallow: /tinymce/
+Disallow: /tinymcefourthirteen/
+Disallow: /tinymcetwo/
+Disallow: /trscourse/
+Disallow: /twcsstraining/
+Disallow: /uploads/
+Disallow: /welcome/
+Disallow: /zen/
+
+# =========================
+# Allow Laravel routes (index.php and other dynamic routes)
+# =========================
+Allow: /$
+Allow: /index.php
+Allow: /login
+Allow: /register
+Allow: /dashboard
+Allow: /api/
+Allow: /web/
+
+# =========================
+# Optional: Block common PHP files
+# =========================
+Disallow: /*.php$
+Disallow: /*.env$
+Disallow: /*.git/
+
+#Sitemap: https://pmway.hopto.org/sitemap.xml

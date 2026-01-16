@@ -1,0 +1,66 @@
+<map id="ImgMap2" name="ImgMap2">
+		<area alt="" coords="107, 116, 237, 215" href="http://www.pmway.co.za/processesdash/pim.html" shape="rect" />
+		<area alt="" coords="239, 116, 359, 214" href="http://www.pmway.co.za/processesdash/4.1.html" shape="rect" />
+		<area alt="" coords="359, 112, 473, 214" href="http://www.pmway.co.za/processesdash/4.2.html" shape="rect" />
+		<area alt="" coords="472, 116, 590, 216" href="http://www.pmway.co.za/processesdash/4.3.html" shape="rect" />
+		<area alt="" coords="590, 116, 707, 165" href="http://www.pmway.co.za/processesdash/4.4.html" shape="rect" />
+		<area alt="" coords="589, 164, 707, 214" href="http://www.pmway.co.za/processesdash/4.5.html" shape="rect" />
+		<area alt="" coords="705, 117, 823, 213" href="http://www.pmway.co.za/processesdash/4.6.html" shape="rect" />
+		<area alt="" coords="109, 216, 233, 309" href="http://www.pmway.co.za/processesdash/psm.html" shape="rect" />
+		<area coords="358, 214, 474, 248" href="http://www.pmway.co.za/processesdash/5.1.html" shape="rect" />
+		<area alt="" coords="359, 245, 472, 276" href="http://www.pmway.co.za/processesdash/5.2.html" shape="rect" />
+		<area alt="" coords="355, 275, 473, 290" href="http://www.pmway.co.za/processesdash/5.3.html" shape="rect" />
+		<area alt="" coords="358, 287, 474, 311" href="http://www.pmway.co.za/processesdash/5.4.html" shape="rect" />
+		<area coords="589, 215, 707, 234" href="http://www.pmway.co.za/processesdash/5.5.html" shape="rect" />
+		<area coords="589, 232, 708, 251" href="http://www.pmway.co.za/processesdash/5.6.html" shape="rect" />
+		<area alt="" coords="359, 310, 474, 343" href="http://www.pmway.co.za/processesdash/6.1.html" shape="rect" />
+		<area alt="" coords="360, 342, 475, 374" href="http://www.pmway.co.za/processesdash/6.2.html" shape="rect" />
+		<area alt="" coords="357, 373, 476, 401" href="http://www.pmway.co.za/processesdash/6.3.html" shape="rect" />
+		<area alt="" coords="357, 398, 473, 430" href="http://www.pmway.co.za/processesdash/6.4.html" shape="rect" />
+		<area alt="" coords="356, 426, 475, 456" href="http://www.pmway.co.za/processesdash/6.5.html" shape="rect" />
+		<area alt="" coords="356, 453, 474, 490" href="http://www.pmway.co.za/processesdash/6.6.html" shape="rect" />
+		<area alt="" coords="355, 488, 477, 525" href="http://www.pmway.co.za/processesdash/7.1.html" shape="rect" />
+		<area alt="" coords="354, 524, 475, 539" href="http://www.pmway.co.za/processesdash/7.2.html" shape="rect" />
+		<area alt="" coords="358, 537, 475, 574" href="http://www.pmway.co.za/processesdash/7.3.html" shape="rect" />
+		<area alt="" coords="356, 573, 475, 628" href="http://www.pmway.co.za/processesdash/8.1.html" shape="rect" />
+		<area alt="" coords="356, 626, 474, 727" href="http://www.pmway.co.za/processesdash/9.1.html" shape="rect" />
+		<area alt="" coords="357, 725, 474, 786" href="http://www.pmway.co.za/processesdash/10.1.html" shape="rect" />
+		<area coords="355, 784, 475, 820" href="http://www.pmway.co.za/processesdash/11.1.html" shape="rect" />
+		<area coords="354, 816, 475, 833" href="http://www.pmway.co.za/processesdash/11.2.html" shape="rect" />
+		<area coords="355, 833, 473, 875" href="http://www.pmway.co.za/processesdash/11.3.html" shape="rect" />
+		<area alt="" coords="356, 873, 474, 917" href="http://www.pmway.co.za/processesdash/11.4.html" shape="rect" />
+		<area alt="" coords="356, 917, 473, 952" href="http://www.pmway.co.za/processesdash/11.5.html" shape="rect" />
+		<area alt="" coords="359, 949, 473, 1008" href="http://www.pmway.co.za/processesdash/12.1.html" shape="rect" />
+		<area alt="" coords="236, 1005, 358, 1065" href="http://www.pmway.co.za/processesdash/13.1.html" shape="rect" />
+		<area alt="" coords="360, 1007, 472, 1065" href="http://www.pmway.co.za/processesdash/13.2.html" shape="rect" />
+		<area alt="" coords="472, 1008, 592, 1065" href="http://www.pmway.co.za/processesdash/13.3.html" shape="rect" />
+		<area alt="" coords="591, 1005, 709, 1063" href="http://www.pmway.co.za/processesdash/13.4.html" shape="rect" />
+		<area alt="" coords="474, 949, 590, 1009" href="http://www.pmway.co.za/processesdash/12.2.html" shape="rect" />
+		<area alt="" coords="590, 950, 707, 1006" href="http://www.pmway.co.za/processesdash/12.3.html" shape="rect" />
+		<area coords="704, 951, 823, 1007" href="http://www.pmway.co.za/processesdash/12.4.html" shape="rect" />
+		<area alt="" coords="589, 783, 707, 811" href="http://www.pmway.co.za/processesdash/11.6.html" shape="rect" />
+		<area alt="" coords="473, 727, 590, 785" href="http://www.pmway.co.za/processesdash/10.2.html" shape="rect" />
+		<area alt="" coords="591, 725, 705, 784" href="http://www.pmway.co.za/processesdash/10.3.html" shape="rect" />
+		<area alt="" coords="473, 690, 590, 728" href="http://www.pmway.co.za/processesdash/9.4.html" shape="rect" />
+		<area alt="" coords="474, 663, 591, 693" href="http://www.pmway.co.za/processesdash/9.3.html" shape="rect" />
+		<area alt="" coords="472, 628, 593, 663" href="http://www.pmway.co.za/processesdash/9.2.html" shape="rect" />
+		<area alt="" coords="472, 572, 593, 629" href="http://www.pmway.co.za/processesdash/8.2.html" shape="rect" />
+		<area alt="" coords="590, 308, 707, 491" href="http://www.pmway.co.za/processesdash/6.7.html" shape="rect" />
+		<area alt="" coords="590, 488, 707, 572" href="http://www.pmway.co.za/processesdash/7.4.html" shape="rect" />
+		<area alt="" coords="591, 571, 707, 629" href="http://www.pmway.co.za/processesdash/8.3.html" shape="rect" />
+		<area alt="" coords="105, 1006, 234, 1065" href="http://www.pmway.co.za/processesdash/psm.html" shape="rect" />
+		<area alt="" coords="106, 950, 236, 1006" href="http://www.pmway.co.za/processesdash/ppm.html" shape="rect" />
+		<area alt="" coords="109, 784, 235, 951" href="http://www.pmway.co.za/processesdash/prm.html" shape="rect" />
+		<area alt="" coords="105, 725, 234, 786" href="http://www.pmway.co.za/processesdash/pcm.html" shape="rect" />
+		<area alt="" coords="105, 626, 237, 726" href="http://www.pmway.co.za/processesdash/phrm.html" shape="rect" />
+		<area alt="" coords="109, 571, 237, 627" href="http://www.pmway.co.za/processesdash/pqm.html" shape="rect" />
+		<area alt="" coords="108, 486, 235, 574" href="http://www.pmway.co.za/processesdash/pcm.html" shape="rect" />
+		<area alt="" coords="106, 309, 235, 487" href="http://www.pmway.co.za/processesdash/ptm.html" shape="rect" />
+		<area alt="" coords="238, 40, 358, 115" href="http://www.pmway.co.za/processesdash/ipg.html" shape="rect" />
+		<area coords="359, 115, 470, 215" href="http://www.pmway.co.za/processesdash/4.2.html" shape="rect" />
+		<area coords="473, 113, 588, 216" href="http://www.pmway.co.za/processesdash/4.3.html" shape="rect" />
+		<area alt="" coords="356, 40, 473, 114" href="http://www.pmway.co.za/processesdash/ppg.html" shape="rect" />
+		<area alt="" coords="476, 39, 590, 114" href="http://www.pmway.co.za/processesdash/epg.html" shape="rect" />
+		<area alt="" coords="590, 39, 707, 115" href="http://www.pmway.co.za/processesdash/macpg.html" shape="rect" />
+		<area alt="" coords="708, 38, 824, 114" href="http://www.pmway.co.za/processesdash/cpg.html" shape="rect" />
+		</map>

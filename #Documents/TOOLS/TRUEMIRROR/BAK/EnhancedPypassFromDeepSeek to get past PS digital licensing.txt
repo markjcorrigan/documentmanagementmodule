@@ -1,0 +1,5 @@
+# ===================== EXECUTION POLICY BYPASS =====================
+# Bypass execution policy for Windows 11 25H5+ digital signature requirements
+Write-Host "Setting execution policy to bypass for this session..." -ForegroundColor Yellow
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+Write-Host "Execution policy bypassed successfully." -ForegroundColor Green

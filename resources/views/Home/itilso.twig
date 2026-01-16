@@ -1,0 +1,133 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SO{% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SO</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf') }}" >Awesome Summary of SO</a></p>
+  <hr>
+  <dl>
+    <dt><a href="/home/itilsoone" title="Event Management" itemprop="itemListElement">(Process 21 of 26): Event Management</a> </dt>
+    <dd itemprop="description">Process Objective: To make sure CIs and services are constantly monitored, and to filter and categorize Events in order to decide on appropriate actions. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsotwo" title="Incident Management" itemprop="itemListElement">(Process 22 of 26): Incident Management</a> </dt>
+    <dd itemprop="description">Process Objective: To manage the lifecycle of all Incidents. The primary objective of Incident Management is to return the IT service to users as quickly as possible. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsothree" title="Request Fulfilment" itemprop="itemListElement">(Process 23 of 26): Request Fulfilment</a> </dt>
+    <dd itemprop="description">Process Objective: To fulfill Service Requests, which in most cases are minor (standard) Changes (e.g. requests to change a password) or requests for information. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsofour" title="Problem Management" itemprop="itemListElement">(Process 24 of 26): Problem Management</a> </dt>
+    <dd itemprop="description">Process Objective: To manage the lifecycle of all Problems. The primary objectives of Problem Management are to prevent Incidents from happening, and to minimize the impact of incidents that cannot be prevented. Proactive Problem Management analyzes Incident Records, and uses data collected by other IT Service Management processes to identify trends or significant Problems. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsofive" title="Access Management" itemprop="itemListElement">(Process 25 of 26): Access Management</a> </dt>
+    <dd itemprop="description">Process Objective: To grant authorized users the right to use a service, while preventing access to non-authorized users. The Access Management processes essentially execute policies defined in Information Security Management. Access Management is sometimes also referred to as Rights Management or Identity Management. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsosix" title="ITIL Operations Control" itemprop="itemListElement">IT Operations Control</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To monitor and control the IT services and their underlying infrastructure. The process IT Operations Control executes day-to-day routine tasks related to the operation of infrastructure components and applications. This includes job scheduling, backup and restore activities, print and output management, and routine maintenance. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsoseven" title="ITIL Facilities Management" itemprop="itemListElement">Facilities Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To manage the physical environment where the IT infrastructure is located. Facilities Management includes all aspects of managing the physical environment, for example power and cooling, building access management, and environmental monitoring. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsoeight" title="ITIL Application Management" itemprop="itemListElement">Application Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description"> Application Management is responsible for managing applications throughout their lifecycle. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsonine" title="ITIL Technical Management" itemprop="itemListElement">Technical Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Technical Management provides technical expertise and support for the management of the IT infrastructure. </dd>
+  </dl>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/Service-operation-itil.jpg') }}" ></p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<!--BODY-->
+<div align="left" class="container">
+  <h3>ITIL SO</h3>
+  <p><i><a href="/home/itiloverview">Back to ITIL Overview</a></i></p>
+  <p><a href="{{ asset('storage/assets/sosummary.pdf') }}" >Awesome Summary of SO</a></p>
+  <hr>
+  <dl>
+    <dt><a href="/home/itilsoone" title="Event Management" itemprop="itemListElement">(Process 21 of 26): Event Management</a> </dt>
+    <dd itemprop="description">Process Objective: To make sure CIs and services are constantly monitored, and to filter and categorize Events in order to decide on appropriate actions. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsotwo" title="Incident Management" itemprop="itemListElement">(Process 22 of 26): Incident Management</a> </dt>
+    <dd itemprop="description">Process Objective: To manage the lifecycle of all Incidents. The primary objective of Incident Management is to return the IT service to users as quickly as possible. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsothree" title="Request Fulfilment" itemprop="itemListElement">(Process 23 of 26): Request Fulfilment</a> </dt>
+    <dd itemprop="description">Process Objective: To fulfill Service Requests, which in most cases are minor (standard) Changes (e.g. requests to change a password) or requests for information. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsofour" title="Problem Management" itemprop="itemListElement">(Process 24 of 26): Problem Management</a> </dt>
+    <dd itemprop="description">Process Objective: To manage the lifecycle of all Problems. The primary objectives of Problem Management are to prevent Incidents from happening, and to minimize the impact of incidents that cannot be prevented. Proactive Problem Management analyzes Incident Records, and uses data collected by other IT Service Management processes to identify trends or significant Problems. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsofive" title="Access Management" itemprop="itemListElement">(Process 25 of 26): Access Management</a> </dt>
+    <dd itemprop="description">Process Objective: To grant authorized users the right to use a service, while preventing access to non-authorized users. The Access Management processes essentially execute policies defined in Information Security Management. Access Management is sometimes also referred to as Rights Management or Identity Management. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsosix" title="ITIL Operations Control" itemprop="itemListElement">IT Operations Control</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To monitor and control the IT services and their underlying infrastructure. The process IT Operations Control executes day-to-day routine tasks related to the operation of infrastructure components and applications. This includes job scheduling, backup and restore activities, print and output management, and routine maintenance. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsoseven" title="ITIL Facilities Management" itemprop="itemListElement">Facilities Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Process Objective: To manage the physical environment where the IT infrastructure is located. Facilities Management includes all aspects of managing the physical environment, for example power and cooling, building access management, and environmental monitoring. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsoeight" title="ITIL Application Management" itemprop="itemListElement">Application Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description"> Application Management is responsible for managing applications throughout their lifecycle. </dd>
+  </dl>
+  <p><br />
+  </p>
+  <dl>
+    <dt><a href="/home/itilsonine" title="ITIL Technical Management" itemprop="itemListElement">Technical Management</a> (NB Not on the official ITIL V3 process list) </dt>
+    <dd itemprop="description">Technical Management provides technical expertise and support for the management of the IT infrastructure. </dd>
+  </dl>
+  <p align="center"> <img alt="" class="img-fluid" src="{{ asset('storage/images/Service-operation-itil.jpg') }}" ></p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

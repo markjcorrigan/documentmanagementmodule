@@ -1,0 +1,320 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+ST{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL ST Project Management - Transition Planning and Support</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=35') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Project Management (Transition Planning &amp; Support)</i> aims to plan and coordinate the resources to deploy a major Release within the predicted cost, time and quality estimates.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Project Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>ITIL Project Management (Transition Planning and Support) is a new process in ITIL V3; ITIL V2 covered some aspects of this process within Release Management but ITIL V3 provides considerably enhanced guidance. </p>
+  <p>Transition Planning and Support in ITIL V3 is mostly about managing service transition projects, so at IT Process Maps we decided to make this clear by slightly changing its name to <i>Project Management (Transition Planning and Support)</i>. </p>
+  <p>ITIL does not provide a detailed explanation of all aspects of Project Management. Rather, it highlights the most important activities and assists in identifying interfaces with other Service Management processes. </p>
+  <p>However, having a basic ITIL Project Management process defined will provide a good starting point for adopting best-practice Project Management frameworks like PRINCE2 or PMBOK (as recommended in the ITIL V3 books). </p>
+  <p>&#160;</p>
+  <p>In <i><b>ITIL 2011</b></i> Project Management has been revised to highlight that its main responsibility is to coordinate the various service transition projects and resolve conflicts. </p>
+  <p>Projects are initiated when Service Portfolio Management has chartered a new or substantially changed service. </p>
+  <p>The Project Management process now calls upon other processes like Service Design Coordination and Release Planning, to perform planning activities at a detailed level. </p>
+  <p>The process overview of <a href="/images/itilstthree.jpg"  title="Itil-project-management.jpg">ITIL Project Management (Transition Planning and Support)</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="ITIL Project Management sub-processes:">These are the <strong class="selflink">ITIL Project Management (Transition Planning and Support)</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Project_Management_Initiation" itemprop="itemListElement">Project Initiation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define stakeholders, responsibilities and resources available to the project, as well as documenting risks, constraints and assumptions affecting the project. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Project_Management_Planning" itemprop="itemListElement">Project Planning and Coordination</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To make sure service transitions projects are planned in accordance with the organization's Project Management guidelines, and to coordinate activities and resources across projects. This process is not responsible for detailed planning of project phases but triggers planning activities performed by other processes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Project_Management_Control" itemprop="itemListElement">Project Control</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To monitor project progress and resource consumption, to expedite progress when required and to initiate corrective action if required. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Project_Management_Reporting" itemprop="itemListElement">Project Reporting and Communication</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide an overall summary of all planned or ongoing Service Transition projects as information for customers and other Service Management processes. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Project Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Data_for_Project_Plan_Update" itemprop="itemListElement">Data for Project Plan Update</span></b> </p>
+    <ul>
+      <li itemprop="description">Current information related to project progress and resource consumption. This information is sent from various Service Transition processes to Project Management as input for Project Control and Project Reporting. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Project_Charter" itemprop="itemListElement">Project Charter</span></b> </p>
+    <ul>
+      <li itemprop="description">The Project Charter is a statement of the scope, objectives and participants in a project. It outlines the project objectives, identifies the main stakeholders, defines the authority of the Project Manager and the resources at his disposal, and lists any constraints and assumptions affecting the project. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Project_History_Log" itemprop="itemListElement">Project History Log</span></b> </p>
+    <ul>
+      <li itemprop="description">A document recording important events during the course of the project, e.g. decisions, escalations and changes to the project scope. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Project_Plan" itemprop="itemListElement">Project Plan (Service Transition Plan)</span></b> </p>
+    <ul>
+      <li itemprop="description">A Project Plan (in ITIL also referred to as <i>Service Transition Plan</i>) is a formal, approved document showing the major deliverables, milestones, activities and resources for a project, used to guide both project execution and project control. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Project_Portfolio_Status_Report" itemprop="itemListElement">Project Portfolio Status Report</span></b> </p>
+    <ul>
+      <li itemprop="description">The Project Portfolio Status Report is an overall summary of all planned or ongoing projects, listing key project data like milestones and current project status. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/KPIs_ITIL_Project_Management_-_Transition_Planning_and_Support" title="ITIL KPIs Project Management">Key Performance Indicators (KPIs) ITIL Project Management - Transition Planning and Support</a></li>
+    <li>For your routine tasks in ITIL Project Management we provide a comprehensive collection of helpful <a href="https://wiki.en.it-processmaps.com/index.php/Project_Management_-_Templates,_Checklists_and_Tips" title="Project Management templates">project management templates, checklists and tips</a> under the heading of <a href="https://wiki.en.it-processmaps.com/index.php/Project_Management" title="What is Project Management">General Project Management</a>.</li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="ITIL_Project_Manager">Project Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Project Manager is responsible for planning and coordinating the resources to deploy a major Release within the predicted cost, time and quality estimates.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b>Responsibility Matrix: ITIL Project Management (Transition Planning &amp; Support)</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Project Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Project_Management_Initiation">Project Initiation</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Project_Management_Planning">Project Planning and Coordination</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Project_Management_Control">Project Control</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Project_Management_Reporting">Project Reporting and Communication</a></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Project Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within ITIL Project Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL ST Project Management - Transition Planning and Support</h3>
+  <p><i><a href="/home/itilst">Back to ITIL Service Transition</a></i></p>
+  <p><a href="{{ asset('storage/assets/stsummary.pdf#page=35') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Project Management (Transition Planning &amp; Support)</i> aims to plan and coordinate the resources to deploy a major Release within the predicted cost, time and quality estimates.</span></p>
+  <p><b>Part of</b>: Service Transition </p>
+  <p><b>Process Owner</b>: Project Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Templates_.7C_KPIs"><span class="tocnumber">4</span> <span class="toctext"><span>Templates | KPIs</span></span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>ITIL Project Management (Transition Planning and Support) is a new process in ITIL V3; ITIL V2 covered some aspects of this process within Release Management but ITIL V3 provides considerably enhanced guidance. </p>
+  <p>Transition Planning and Support in ITIL V3 is mostly about managing service transition projects, so at IT Process Maps we decided to make this clear by slightly changing its name to <i>Project Management (Transition Planning and Support)</i>. </p>
+  <p>ITIL does not provide a detailed explanation of all aspects of Project Management. Rather, it highlights the most important activities and assists in identifying interfaces with other Service Management processes. </p>
+  <p>However, having a basic ITIL Project Management process defined will provide a good starting point for adopting best-practice Project Management frameworks like PRINCE2 or PMBOK (as recommended in the ITIL V3 books). </p>
+  <p>&#160;</p>
+  <p>In <i><b>ITIL 2011</b></i> Project Management has been revised to highlight that its main responsibility is to coordinate the various service transition projects and resolve conflicts. </p>
+  <p>Projects are initiated when Service Portfolio Management has chartered a new or substantially changed service. </p>
+  <p>The Project Management process now calls upon other processes like Service Design Coordination and Release Planning, to perform planning activities at a detailed level. </p>
+  <p>The process overview of <a href="/images/itilstthree.jpg"  title="Itil-project-management.jpg">ITIL Project Management (Transition Planning and Support)</a> shows the key information flows. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="ITIL Project Management sub-processes:">These are the <strong class="selflink">ITIL Project Management (Transition Planning and Support)</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Project_Management_Initiation" itemprop="itemListElement">Project Initiation</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To define stakeholders, responsibilities and resources available to the project, as well as documenting risks, constraints and assumptions affecting the project. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Project_Management_Planning" itemprop="itemListElement">Project Planning and Coordination</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To make sure service transitions projects are planned in accordance with the organization's Project Management guidelines, and to coordinate activities and resources across projects. This process is not responsible for detailed planning of project phases but triggers planning activities performed by other processes. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Project_Management_Control" itemprop="itemListElement">Project Control</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To monitor project progress and resource consumption, to expedite progress when required and to initiate corrective action if required. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Project_Management_Reporting" itemprop="itemListElement">Project Reporting and Communication</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To provide an overall summary of all planned or ongoing Service Transition projects as information for customers and other Service Management processes. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in ITIL Project Management to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Data_for_Project_Plan_Update" itemprop="itemListElement">Data for Project Plan Update</span></b> </p>
+    <ul>
+      <li itemprop="description">Current information related to project progress and resource consumption. This information is sent from various Service Transition processes to Project Management as input for Project Control and Project Reporting. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Project_Charter" itemprop="itemListElement">Project Charter</span></b> </p>
+    <ul>
+      <li itemprop="description">The Project Charter is a statement of the scope, objectives and participants in a project. It outlines the project objectives, identifies the main stakeholders, defines the authority of the Project Manager and the resources at his disposal, and lists any constraints and assumptions affecting the project. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Project_History_Log" itemprop="itemListElement">Project History Log</span></b> </p>
+    <ul>
+      <li itemprop="description">A document recording important events during the course of the project, e.g. decisions, escalations and changes to the project scope. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Project_Plan" itemprop="itemListElement">Project Plan (Service Transition Plan)</span></b> </p>
+    <ul>
+      <li itemprop="description">A Project Plan (in ITIL also referred to as <i>Service Transition Plan</i>) is a formal, approved document showing the major deliverables, milestones, activities and resources for a project, used to guide both project execution and project control. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Project_Portfolio_Status_Report" itemprop="itemListElement">Project Portfolio Status Report</span></b> </p>
+    <ul>
+      <li itemprop="description">The Project Portfolio Status Report is an overall summary of all planned or ongoing projects, listing key project data like milestones and current project status. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Templates_|_KPIs"></span><span class="mw-headline" id="Templates_.7C_KPIs"><span id="Checklists_.7C_KPIs">Templates | KPIs</span></span></h2>
+  <p class="mw-empty-elt"> </p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/KPIs_ITIL_Project_Management_-_Transition_Planning_and_Support" title="ITIL KPIs Project Management">Key Performance Indicators (KPIs) ITIL Project Management - Transition Planning and Support</a></li>
+    <li>For your routine tasks in ITIL Project Management we provide a comprehensive collection of helpful <a href="https://wiki.en.it-processmaps.com/index.php/Project_Management_-_Templates,_Checklists_and_Tips" title="Project Management templates">project management templates, checklists and tips</a> under the heading of <a href="https://wiki.en.it-processmaps.com/index.php/Project_Management" title="What is Project Management">General Project Management</a>.</li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="ITIL_Project_Manager">Project Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Project Manager is responsible for planning and coordinating the resources to deploy a major Release within the predicted cost, time and quality estimates.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b>Responsibility Matrix: ITIL Project Management (Transition Planning &amp; Support)</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Project Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Project_Management_Initiation">Project Initiation</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#Project_Management_Planning">Project Planning and Coordination</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Project_Management_Control">Project Control</a></td>
+        <td>AR </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Project_Management_Reporting">Project Reporting and Communication</a></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Project Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within ITIL Project Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

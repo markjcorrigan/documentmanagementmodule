@@ -1,0 +1,28 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Unbroken release strategy{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" > <br>
+  <h3 align="left">For the "un-broken release strategy it's done like this!</h3>
+  <hr>
+  <br>
+  <p align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/skateboard.jpg') }}" ></p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" > <br>
+  <h3 align="left">For the "un-broken release strategy it's done like this!</h3>
+  <hr>
+  <br>
+  <p align="center"><img alt="" class="img-fluid" src="{{ asset('storage/images/skateboard.jpg') }}" ></p>
+  <br>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

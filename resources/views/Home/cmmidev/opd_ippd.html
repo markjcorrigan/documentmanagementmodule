@@ -1,0 +1,1199 @@
+<?php
+session_start();
+if ( ! isset($_SESSION['user_id'])) {   // from App\Auth::getUser
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);   // from Core\Controller::redirect
+    exit;
+}
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-31126291-1');
+</script>
+
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>OPD</title>
+
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="General" name="rating" />
+<meta content="no" http-equiv="imagetoolbar" />
+<link href="styles/site.css" rel="stylesheet" type="text/css" />
+<!--<link rel="stylesheet" href="css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="css/styles.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+.fontsizesmall {
+font-size: small;
+}
+.fontsizemedium {
+font-size: medium;
+}
+</style>
+
+<style type="text/css">
+
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//en.wikipedia.org/w/resources-1.19/resources/jquery/images/sort_both.gif?2012-02-10T22:31:40Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.auto-style1 {
+	background-color: #d0d0d0;
+}
+.auto-style2 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.7em;
+	color: #6699CC;
+}
+</style>
+
+<a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none;" src="http://www.pmway.co.za/images/top.png"/></a>
+
+
+</head>
+
+
+
+<body>
+
+<!-- DO NOT MOVE! The following AllWebMenus linking code section must always be placed right AFTER the BODY tag-->
+<!-- ******** BEGIN ALLWEBMENUS CODE FOR menu ******** -->
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="886";</script><script charset="UTF-8" src="menu.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+<!-- ******** END ALLWEBMENUS CODE FOR menu ******** -->
+
+
+
+
+
+<div id="outerWrapper">
+
+<!-- Masthead begins here -->
+<div id="header">
+	<table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%"><h1><span style="font-size:20pt;"><a href="/">PMWay</a></span></h1></td>
+<td width="10%"><p class="auto-style53"><a href="logout.php" title="Logout"><span class="fontsizesmall">Logout</span></a>&nbsp;&nbsp;</p>
+</td><td width="40%" class="fontsizesmedium"><?php include("includes/sescookie.php"); ?>
+</td>
+</tr>
+</table>
+</div>
+<!-- Masthead ends here -->
+<!-- Navigation begins here -->
+<div id="topNavigation">
+	<ul>
+	<li><a href="indexlegacy.php" title="Home">Home</a></li>
+		<li><a href="index.php" title="Navigate this Web Site">Key 
+		Concepts </a></li>
+	<li>
+	<a href="contact.php" title="Please forward all questions to the Project Office">Contact 
+	Me</a></li>
+	</ul>
+<!-- Navigation ends here -->
+</div><!-- Closes off the Navigation Div -->
+
+
+
+
+<!-- Content Container begins here -->
+<div id="contentWrapper">
+
+<!-- Left Column begins here -->
+<!--			<div id="leftColumn1">-->
+				<!-- Place Left Column content directly below -->
+				
+				<!-- </div> -->
+<!-- Left Column ends here -->
+
+<!-- Right Column begins here
+<!--		<div id="rightColumn1">
+			<!-- Place Left Column content directly below -->
+
+		    <!--</div> -->
+<!-- Right Column ends here -->
+
+
+<!-- Main Content begins here -->
+<!-- #BeginEditable "content" -->
+
+
+<div id="content">
+
+<!--This is where the main stuff goes--->
+	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong>Organizational Process 
+					Definition (OPD)</strong><br />
+					<br />
+					</td></tr>
+				</table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+	<td><p>This process area is responsible for the production and maintenance of any <i>Process Documentation</i> used within the organization.
+This area is directly related to Software Quality Assurance as SQA assures that processes are appropriate for the project and are correctly implemented. 
+<i>Appropriate processes</i> are defined within the Organizational Process Definition (OPD) Process Area. 
+<br>
+<br>
+One major process description that is documented is the <b>SDLC</b>, it is important to note that under CMMi a number of SDLC's could be documented and then chosen, as <i>being appropriate</i> for a given project.
+<br>
+<br>
+Many people associate the <i>Water Fall model</i> with CMMI but, within the Organizational Process Definition (OPD) Process Area, other SDLC's can be defined including:-
+<br>
+<br>
+<li>Waterfall 
+</li><li>Spiral 
+</li><li>Evolutionary 
+</li><li>Incremental 
+</li><li>Iterative 
+<br>
+<br>
+The role of <i>Organizational Process Definition</i> would be to make sure each of these processes were defined (using standard templates) and then <i>Project Management</i> would select a suitable SDLC process.
+Finally Software Quality Assurance (Process and Product Quality Assurance, PPQA, under CMMi) would verify that the selected SDLC was indeed being followed.
+<br>
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><b>Organizational Process Definition (OPD)<br />A Process Management Process Area at Maturity Level 3</b>
+<br>
+<br>
+<center>
+<b>Purpose</b>
+</center>
+<br>
+<br>
+The purpose of Organizational Process Definition (OPD) is to establish and maintain a usable set of organizational process assets and work environment standards.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+For IPPD, Organizational Process Definition +IPPD also covers the establishment of organizational rules and guidelines that enable conducting work using integrated teams.
+<br>
+<br>
+<center>
+<b>
+Introductory Notes
+</b>
+</center>
+<br>
+<br>
+Organizational process assets enable consistent process performance across the organization and provide a basis for cumulative, long-term benefits to the organization. (See the definition of “organizational process assets” in the glossary.)
+<br>
+<br>
+The organization’s process asset library is a collection of items maintained by the organization for use by the people and projects of the organization. This collection of items includes descriptions of processes and process elements, descriptions of lifecycle models, process tailoring guidelines, process-related documentation, and data. The organization’s process asset library supports organizational learning and process improvement by allowing the sharing of best practices and lessons learned across the organization.
+<br>
+<br>
+The organization’s set of standard processes is tailored by projects to create their defined processes. The other organizational process assets are used to support tailoring as well as the implementation of the defined processes. The work environment standards are used to guide creation of project work environments.
+<br>
+<br>
+A standard process is composed of other processes (i.e., subprocesses) or process elements. A process element is the fundamental (e.g., atomic) unit of process definition and describes the activities and tasks to consistently perform work. Process architecture provides rules for connecting the process elements of a standard process. The organization’s set of standard processes may include multiple process architectures.
+<br>
+<br>
+(See the definitions of “standard process,” “process architecture,” “subprocess,” and “process element” in the glossary.)
+<br>
+<br>
+The organizational process assets may be organized in many ways, depending on the implementation of the Organizational Process Definition process area. Examples include the following:
+<br>
+<br>
+<li>Descriptions of lifecycle models may be documented as part of the organization’s set of standard processes, or they may be documented separately.
+</li><li>The organization’s set of standard processes may be stored in the organization’s process asset library, or they may be stored separately.
+</li><li>A single repository may contain both the measurements and the process-related documentation, or they may be stored separately.
+<br>
+<br>
+Related Process Areas
+<br>
+<br>
+Refer to the Organizational Process Focus process area for more information about organizational process-related matters.
+<br>
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1 Establish Organizational Process Assets</b>
+<br>
+<br>
+A set of organizational process assets is established and maintained.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+Integrated processes that emphasize parallel rather than serial development are a cornerstone of IPPD implementation. The processes for developing the product and for developing product-related lifecycle processes, such as the manufacturing process and the support process, are integrated and conducted concurrently. Such integrated processes should accommodate the information provided by stakeholders representing all phases of the product lifecycle from both business and technical functions. Processes for effective teamwork are also needed.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<a name="sp11"></a>
+<b>SP 1.1 Establish Standard Processes</b>
+<br>
+<br>
+Establish and maintain the organization's set of standard processes.
+<br>
+<br>
+Standard processes may be defined at multiple levels in an enterprise and they may be related in a hierarchical manner. For example, an enterprise may have a set of standard processes that is tailored by individual organizations (e.g., a division or site) in the enterprise to establish their set of standard processes. The set of standard processes may also be tailored for each of the organization’s business areas or product lines. Thus “the organization’s set of standard processes” can refer to the standard processes established at the organization level and standard processes that may be established at lower levels, although some organizations may only have a single level of standard processes. (See the definitions of “standard process” and “organization’s set of standard processes” in the glossary.)
+<br>
+<br>
+Multiple standard processes may be needed to address the needs of different application domains, lifecycle models, methodologies, and tools. The organization’s set of standard processes contains process elements (e.g., a work product size-estimating element) that may be interconnected according to one or more process architectures that describe the relationships among these process elements.
+<br>
+<br>
+The organization’s set of standard processes typically includes technical, management, administrative, support, and organizational processes.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+In an IPPD environment, the organization's set of standard processes includes a process that projects use to establish a shared vision.
+<br>
+<br>
+The organization’s set of standard processes should collectively cover all processes needed by the organization and projects, including those processes addressed by the process areas at Maturity Level 2.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Organization's set of standard processes
+<br>
+<br>
+Subpractice 1: Decompose each standard process into constituent process elements to the detail needed to understand and describe the process.
+<br>
+<br>
+Each process element covers a bounded and closely related set of activities. The descriptions of the process elements may be templates to be filled in, fragments to be completed, abstractions to be refined, or complete descriptions to be tailored or used unmodified. These elements are described in sufficient detail such that the process, when fully defined, can be consistently performed by appropriately trained and skilled people.
+<br>
+<br>
+Examples of process elements include the following:
+<br>
+<br>
+</li><li>Template for generating work product size estimates
+</li><li>Description of work product design methodology
+</li><li>Tailorable peer review methodology
+</li><li>Template for conduct of management reviews
+<br>
+<br>
+Subpractice 2: Specify the critical attributes of each process element.
+<br>
+<br>
+Examples of critical attributes include the following:
+<br>
+<br>
+</li><li>Process roles
+</li><li>Applicable standards
+</li><li>Applicable procedures, methods, tools, and resources
+</li><li>Process-performance objectives
+</li><li>Entry criteria
+</li><li>Inputs
+</li><li>Product and process measures to be collected and used
+</li><li>Verification points (e.g., peer reviews)
+</li><li>Outputs
+</li><li>Interfaces
+</li><li>Exit criteria
+<br>
+<br>
+Subpractice 3: Specify the relationships of the process elements.
+<br>
+<br>
+Examples of relationships include the following:
+<br>
+<br>
+</li><li>Ordering of the process elements
+</li><li>Interfaces among the process elements
+</li><li>Interfaces with external processes
+</li><li>Interdependencies among the process elements
+<br>
+<br>
+The rules for describing the relationships among process elements are referred to as “process architecture.” The process architecture covers the essential requirements and guidelines. The detailed specifications of these relationships are covered in the descriptions of the defined processes that are tailored from the organization’s set of standard processes.
+<br>
+<br>
+Subpractice 4: Ensure that the organization's set of standard processes adheres to applicable policies, standards, and models.
+<br>
+<br>
+Adherence to applicable process standards and models is typically demonstrated by developing a mapping from the organization’s set of standard processes to the relevant process standards and models. In addition, this mapping will be a useful input to future appraisals.
+<br>
+<br>
+Subpractice 5: Ensure that the organization’s set of standard processes satisfies the process needs and objectives of the organization.
+<br>
+<br>
+Refer to the Organizational Process Focus process area for more information about establishing and maintaining the organization’s process needs and objectives.
+<br>
+<br>
+Subpractice 6: Ensure that there is appropriate integration among the processes that are included in the organization’s set of standard processes.
+<br>
+<br>
+Subpractice 7: Document the organization's set of standard processes.
+<br>
+<br>
+Subpractice 8: Conduct peer reviews on the organization's set of standard processes.
+<br>
+<br>
+Refer to the Verification process area for more information about peer review.
+<br>
+<br>
+Subpractice 9: Revise the organization's set of standard processes as necessary.
+<br>
+<br>
+<a name="sp12"></a> 
+<b>SP 1.2 Establish Lifecycle Model Descriptions</b>
+<br>
+<br>
+Establish and maintain descriptions of the lifecycle models approved for use in the organization.
+<br>
+<br>
+Lifecycle models may be developed for a variety of customers or in a variety of situations, since one lifecycle model may not be appropriate for all situations. Lifecycle models are often used to define the phases of the project. Also, the organization may define different lifecycle models for each type of product and service it delivers.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Descriptions of lifecycle models
+<br>
+<br>
+Subpractice 1: Select lifecycle models based on the needs of projects and the organization.
+<br>
+<br>
+For example, project lifecycle models include the following:
+<br>
+<br>
+</li><li>Waterfall
+</li><li>Spiral
+</li><li>Evolutionary
+</li><li>Incremental
+</li><li>Iterative
+<br>
+<br>
+Subpractice 2: Document the descriptions of the lifecycle models.
+<br>
+<br>
+The lifecycle models may be documented as part of the organization’s standard process descriptions or they may be documented separately.
+<br>
+<br>
+Subpractice 3: Conduct peer reviews on the lifecycle models.
+<br>
+<br>
+Refer to the Verification process area for more information about conducting peer reviews.
+<br>
+<br>
+Subpractice 4: Revise the descriptions of the lifecycle models as necessary.
+<br>
+<br>
+<a name="sp13"></a> 
+<b>SP 1.3 Establish Tailoring Criteria and Guidelines</b>
+<br>
+<br>
+Establish and maintain the tailoring criteria and guidelines for the organization's set of standard processes.
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+In creating the tailoring criteria and guidelines, include considerations for concurrent development and operating with integrated teams. For example, how one tailors the manufacturing process will be different depending on whether it is developed serially after the product has been developed or in parallel with the development of the product, as in IPPD. Processes, such as resource allocation, will also be tailored differently if the project is operating with integrated teams.
+<br>
+<br>
+The tailoring criteria and guidelines describe the following:
+<br>
+<br>
+</li><li>How the organization’s set of standard processes and organizational process assets are used to create the defined processes
+</li><li>Mandatory requirements that must be satisfied by the defined processes (e.g., the subset of the organizational process assets that are essential for any defined process)
+</li><li>Options that can be exercised and criteria for selecting among the options
+</li><li>Procedures that must be followed in performing and documenting process tailoring
+<br>
+<br>
+Examples of reasons for tailoring include the following:
+<br>
+<br>
+</li><li>Adapting the process for a new product line or work environment
+</li><li>Customizing the process for a specific application or class of similar applications
+</li><li>Elaborating the process description so that the resulting defined process can be performed
+<br>
+<br>
+Flexibility in tailoring and defining processes is balanced with ensuring appropriate consistency in the processes across the organization. Flexibility is needed to address contextual variables such as the domain; nature of the customer; cost, schedule, and quality tradeoffs; technical difficulty of the work; and experience of the people implementing the process. Consistency across the organization is needed so that organizational standards, objectives, and strategies are appropriately addressed, and process data and lessons learned can be shared.
+<br>
+<br>
+Tailoring criteria and guidelines may allow for using a standard process “as is,” with no tailoring.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Tailoring guidelines for the organization's set of standard processes
+<br>
+<br>
+Subpractice 1: Specify the selection criteria and procedures for tailoring the organization's set of standard processes.
+<br>
+<br>
+Examples of criteria and procedures include the following:
+<br>
+<br>
+</li><li>Criteria for selecting lifecycle models from those approved by the organization
+</li><li>Criteria for selecting process elements from the organization’s set of standard processes
+</li><li>Procedures for tailoring the selected lifecycle models and process elements to accommodate specific process characteristics and needs
+<br>
+<br>
+Examples of tailoring actions include the following:
+<br>
+<br>
+</li><li>Modifying a lifecycle model
+</li><li>Combining elements of different lifecycle models
+</li><li>Modifying process elements
+</li><li>Replacing process elements
+</li><li>Reordering process elements
+<br>
+<br>
+Subpractice 2: Specify the standards for documenting the defined processes.
+<br>
+<br>
+Subpractice 3: Specify the procedures for submitting and obtaining approval of waivers from the requirements of the organization’s set of standard processes.
+<br>
+<br>
+Subpractice 4: Document the tailoring guidelines for the organization's set of standard processes.
+<br>
+<br>
+Subpractice 5: Conduct peer reviews on the tailoring guidelines.
+<br>
+<br>
+Refer to the Verification process area for more information about conducting peer reviews.
+<br>
+<br>
+Subpractice 6: Revise the tailoring guidelines as necessary.
+<br>
+<br>
+<a name="sp14"></a> 
+<b>SP 1.4 Establish the Organization’s Measurement Repository</b>
+<br>
+<br>
+Establish and maintain the organization’s measurement repository.
+<br>
+<br>
+Refer to the Use Organizational Process Assets for Planning Project Activities specific practice of the Integrated Project Management process area for more information about the use of the organization’s measurement repository in planning project activities.
+<br>
+<br>
+The repository contains both product and process measures that are related to the organization’s set of standard processes. It also contains or refers to the information needed to understand and interpret the measures and assess them for reasonableness and applicability. For example, the definitions of the measures are used to compare similar measures from different processes.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Definition of the common set of product and process measures for the organization’s set of standard processes
+</li><li>Design of the organization’s measurement repository
+</li><li>Organization's measurement repository (that is, the repository structure and support environment)
+</li><li>Organization’s measurement data
+<br>
+<br>
+Subpractice 1: Determine the organization's needs for storing, retrieving, and analyzing measurements.
+<br>
+<br>
+Subpractice 2: Define a common set of process and product measures for the organization's set of standard processes.
+<br>
+<br>
+The measures in the common set are selected based on the organization’s set of standard processes. They are selected for their ability to provide visibility into process performance to support expected business objectives. The common set of measures may vary for different standard processes.
+<br>
+<br>
+Operational definitions for the measures specify the procedures for collecting valid data and the point in the process where the data will be collected.
+<br>
+<br>
+Examples of classes of commonly used measures include the following:
+<br>
+<br>
+</li><li>Estimates of work product size (e.g., pages)
+</li><li>Estimates of effort and cost (e.g., person hours)
+</li><li>Actual measures of size, effort, and cost
+</li><li>Quality measures (e.g., number of defects found or severity of defects)
+</li><li>Peer review coverage
+</li><li>Test coverage
+</li><li>Reliability measures (e.g., mean time to failure)
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about defining measures.
+<br>
+<br>
+Subpractice 3: Design and implement the measurement repository.
+<br>
+<br>
+Subpractice 4: Specify the procedures for storing, updating, and retrieving measures.
+<br>
+<br>
+Subpractice 5: Conduct peer reviews on the definitions of the common set of measures and the procedures for storing and retrieving measures.
+<br>
+<br>
+Refer to the Verification process area for more information about conducting peer reviews.
+<br>
+<br>
+Subpractice 6: Enter the specified measures into the repository.
+<br>
+<br>
+Refer to the Measurement and Analysis process area for more information about collecting and analyzing data.
+<br>
+<br>
+Subpractice 7: Make the contents of the measurement repository available for use by the organization and projects as appropriate.
+<br>
+<br>
+Subpractice 8: Revise the measurement repository, common set of measures, and procedures as the organization’s needs change.
+<br>
+<br>
+Examples of when the common set of measures may need to be revised include the following:
+<br>
+<br>
+</li><li>New processes are added
+</li><li>Processes are revised and new measures are needed
+</li><li>Finer granularity of data is required
+</li><li>Greater visibility into the process is required
+</li><li>Measures are retired
+<br>
+<br>
+<a name="sp15"></a> 
+<b>SP 1.5 Establish the Organization’s Process Asset Library</b>
+<br>
+<br>
+Establish and maintain the organization's process asset library.
+<br>
+<br>
+Examples of items to be stored in the organization’s process asset library include the following:
+<br>
+<br>
+</li><li>Organizational policies
+</li><li>Defined process descriptions
+</li><li>Procedures (e.g., estimating procedure)
+</li><li>Development plans
+</li><li>Acquisition plans
+</li><li>Quality assurance plans
+</li><li>Training materials
+</li><li>Process aids (e.g., checklists)
+</li><li>Lessons-learned reports
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Design of the organization’s process asset library
+</li><li>Organization's process asset library
+</li><li>Selected items to be included in the organization’s process asset library
+</li><li>Catalog of items in the organization’s process asset library
+<br>
+<br>
+Subpractice 1: Design and implement the organization’s process asset library, including the library structure and support environment.
+<br>
+<br>
+Subpractice 2: Specify the criteria for including items in the library.
+<br>
+<br>
+The items are selected based primarily on their relationship to the organization’s set of standard processes.
+<br>
+<br>
+Subpractice 3: Specify the procedures for storing and retrieving items.
+<br>
+<br>
+Subpractice 4: Enter the selected items into the library and catalog them for easy reference and retrieval.
+<br>
+<br>
+Subpractice 5: Make the items available for use by the projects.
+<br>
+<br>
+Subpractice 6: Periodically review the use of each item and use the results to maintain the library contents.
+<br>
+<br>
+Subpractice 7: Revise the organization’s process asset library as necessary.
+<br>
+<br>
+Examples of when the library may need to be revised include the following:
+<br>
+<br>
+</li><li>New items are added
+</li><li>Items are retired
+</li><li>Current versions of items are changed
+<br>
+<br>
+<a name="sp16"></a> 
+<b>SP 1.6 Establish Work Environment Standards</b>
+<br>
+<br>
+Establish and maintain work environment standards.
+<br>
+<br>
+Work environment standards allow the organization and projects to benefit from common tools, training, and maintenance, as well as cost savings from volume purchases. Work environment standards address the needs of all stakeholders and consider productivity, cost, availability, security, and workplace health, safety, and ergonomic factors. Work environment standards can include guidelines for tailoring and/or the use of waivers that allow adaptation of the project’s work environment to meet specific needs.
+<br>
+<br>
+Examples of work environment standards include
+<br>
+<br>
+</li><li>Procedures for operation, safety, and security of the work environment
+</li><li>Standard workstation hardware and software
+</li><li>Standard application software and tailoring guidelines for it
+</li><li>Standard production and calibration equipment
+</li><li>Process for requesting and approving tailoring or waivers
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Work environment standards
+<br>
+<br>
+Subpractice 1: Evaluate commercially-available work environment standards appropriate for the organization.
+<br>
+<br>
+Subpractice 2: Adopt existing work environment standards and develop new ones to fill gaps based on the organization’s process needs and objectives.
+<br>
+<br>
+<a name="sg2"></a>  
+<b>SG 2 Enable IPPD Management - IPPD Addition</b>
+<br>
+<br>
+Organizational rules and guidelines, which govern the operation of integrated teams, are provided.
+<br>
+<br>
+An organizational infrastructure that supports and promotes IPPD concepts is critical if it is to be successfully sustained over the long term. These rules and guidelines promote concepts such as integrated teaming and allow for empowered decision making at many levels. Through its rules and guidelines, the organization demonstrates commitment to IPPD and the success of its integrated teams.
+<br>
+<br>
+IPPD rules and guidelines become part of the organization’s set of standard processes and the project’s defined process. The organization’s standard processes enable, promote, and reinforce the behaviors expected from projects, integrated teams, and people. These expected behaviors are typically communicated in the form of policies, operating procedures, guidelines, and other organizational process assets.
+<br>
+<br>
+<a name="sp21"></a> 
+<b>SP 2.1 Establish Empowerment Mechanisms</b>
+<br>
+<br>
+Establish and maintain empowerment mechanisms to enable timely decision making.
+<br>
+<br>
+In a successful IPPD environment, clear channels of responsibility and authority must be established. Issues can arise at any level of the organization when integrated teams assume too much or too little authority and when it is unclear who is responsible for making decisions. Documenting and deploying organizational guidelines that clearly define the empowerment of integrated teams can prevent these issues.
+<br>
+<br>
+Implementing IPPD introduces challenges to leadership because of the cultural changes required when people and integrated teams are empowered and decisions are driven to the lowest level appropriate. Effective and efficient communication mechanisms are critical to timely and sound decision making in the integrated work environment. Once an integrated team project structure is established and training is provided, mechanisms to handle empowerment, decision making, and issue resolution also need to be provided.
+<br>
+<br>
+Refer to the Decision Analysis and Resolution process area for more information about decision making.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Empowerment rules and guidelines for people and integrated teams
+</li><li>Decision-making rules and guidelines
+</li><li>Issue resolution documentation
+<br>
+<br>
+Subpractice 1: Determine rules and guidelines for the degree of empowerment provided to people and integrated teams.
+<br>
+<br>
+Factors to consider regarding integrated team empowerment include the following:
+<br>
+<br>
+</li><li>Authority of teams to pick their own leader
+</li><li>Authority of teams to implement subteams (e.g., a product team forming an integration subteam)
+</li><li>The degree of collective decision making
+</li><li>The level of consensus needed for integrated team decisions
+</li><li>How conflicts and differences of opinion within the integrated teams are addressed and resolved
+<br>
+<br>
+Subpractice 2: Determine rules and guidelines for the use of different decision types in making various kinds of team decisions.
+<br>
+<br>
+Subpractice 3: Define the process for using the decision-making rules and guidelines.
+<br>
+<br>
+Subpractice 4: Define a process for issue resolution when an issue cannot be decided at the level at which it arose.
+<br>
+<br>
+Refer to the Resolve Coordination Issues specific practice in the Integrated Project Management process area for more information about resolving issues with relevant stakeholders.
+<br>
+<br>
+Subpractice 5: Maintain the empowerment mechanisms and the rules and guidelines for decision making
+<br>
+<br>
+<a name="sp22"></a> 
+<b>SP 2.2 Establish Rules and Guidelines for Integrated Teams</b>
+<br>
+<br>
+Establish and maintain organizational rules and guidelines for structuring and forming integrated teams.
+<br>
+<br>
+
+Operating rules and guidelines for the integrated teams define and control how teams interact to accomplish objectives. These rules and guidelines also promote the effective leveraging of the teams’ efforts, high performance, and productivity. Integrated team members must understand the standards for work and participate according to those standards.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Rules and guidelines for the structuring and formation of integrated teams
+<br>
+<br>
+Subpractice 1: Establish rules and guidelines for structuring and forming integrated teams.
+<br>
+<br>
+Organizational process assets can help the project to structure and implement integrated teams. Such assets may include the following:
+<br>
+<br>
+</li><li>Team structure guidelines
+</li><li>Team formation guidelines
+</li><li>Team authority and responsibility guidelines
+</li><li>IPPD implementation techniques
+</li><li>Guidelines for managing risks in IPPD
+</li><li>Guidelines for establishing lines of communication and authority
+</li><li>Team leader selection criteria
+</li><li>Team responsibility guidelines
+
+<br>
+<br>
+
+
+Subpractice 2: Define the expectations, rules, and guidelines that will guide how the integrated teams work collectively.
+<br>
+<br>
+These rules and guidelines establish organizational practices for consistency across integrated teams and can include the following:
+<br>
+<br>
+</li><li>How interfaces among integrated teams are established and maintained
+</li><li>How assignments are accepted
+</li><li>How resources and input are accessed
+</li><li>How work gets done
+</li><li>Who checks, reviews, and approves work
+</li><li>How work is approved
+</li><li>How work is delivered and communicated
+</li><li>Reporting chains
+</li><li>Reporting requirements (cost, schedule, and performance status), measures, and methods
+</li><li>Progress reporting measures and methods
+<br>
+<br>
+Subpractice 3: Maintain the rules and guidelines for structuring and forming integrated teams.
+<br>
+<br>
+<a name="sp23"></a>
+<b>SP 2.3 Balance Team and Home Organization Responsibilities</b>
+<br>
+<br>
+Establish and maintain organizational guidelines to help team members balance their team and home organization responsibilities.
+<br>
+<br>
+A “home organization” is the part of the organization to which team members are assigned when they are not on an integrated team. A home organization may be called a “functional organization,” “home base,” “home office,” or “direct organization.” Home organizations are often responsible for the career growth of their members (e.g., performance appraisals and training to maintain functional and discipline expertise).
+<br>
+<br>
+In an IPPD environment, reporting procedures and rating systems assume that members’ responsibilities are focused on the integrated team, not on the home organization. However, the responsibility of integrated team members to their home organizations is also important, specifically for process implementation and improvement. Workloads and responsibilities should be balanced between projects and functions, and career growth and advancement. Organizational mechanisms should exist that support the home organization while aligning the workforce to meet business objectives in a teaming environment.
+<br>
+<br>
+Sometimes teams persist beyond their productive life in organizations that do not have a home organization for the team members to return to after the integrated the team is dissolved. Therefore, there should be guidelines for disbanding the integrated teams and maintaining home organizations.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Organizational guidelines for balancing team and home organization responsibilities
+</li><li>Performance review process that considers both functional supervisor and team leader input
+<br>
+<br>
+Subpractice 1: Establish guidelines for home organization responsibilities that promote integrated team behavior.
+<br>
+<br>
+Subpractice 2: Establish guidelines for team management responsibilities to ensure integrated team members report appropriately to their home organizations.
+<br>
+<br>
+Subpractice 3: Establish a performance review process that considers input from both home organization and integrated team leaders.
+<br>
+<br>
+Subpractice 4: Maintain the guidelines for balancing team and home organization responsibilities.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a> 
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp11"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the organizational process definition process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp21"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the organizational process definition process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for establishing and maintaining a set of standard processes for use by the organization and making organizational process assets available across the organization.
+<br>
+<br>
+<a name="gp22"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the organizational process definition process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the organizational process definition process can be part of (or referenced by) the organization’s process improvement plan.
+<br>
+<br>
+<a name="gp23"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the organizational process definition process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+A process group typically manages the organizational process definition activities. This group typically is staffed by a core of professionals whose primary responsibility is coordinating organizational process improvement. This group is supported by process owners and people with expertise in various disciplines such as the following:
+<br>
+<br>
+</li><li>Project management
+</li><li>The appropriate engineering disciplines
+</li><li>Configuration management
+</li><li>Quality assurance
+<br>
+<br>
+Examples of other resources provided include the following tools:
+<br>
+<br>
+</li><li>Database management systems
+</li><li>Process modeling tools
+</li><li>Web page builders and browsers
+<br>
+<br>
+<a name="gp24"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the organizational process definition process.
+<br>
+<br>
+<a name="gp25"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the organizational process definition process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>CMMI and other process and process improvement reference models
+</li><li>Planning, managing, and monitoring processes
+</li><li>Process modeling and definition
+</li><li>Developing a tailorable standard process
+</li><li>Developing work environment standards
+</li><li>Ergonomics
+<br>
+<br>
+<a name="gp26"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the organizational process definition process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Organization’s set of standard processes
+</li><li>Descriptions of the lifecycle models
+</li><li>Tailoring guidelines for the organization’s set of standard processes
+</li><li>Definitions of the common set of product and process measures
+</li><li>Organization’s measurement data
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Empowerment rules and guidelines for people and integrated teams
+</li><li>Organizational process documentation for issue resolution
+<br>
+<br>
+<a name="gp27"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the organizational process definition process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Reviewing the organization’s set of standard processes
+</li><li>Reviewing the organization’s lifecycle models
+</li><li>Resolving issues on the tailoring guidelines
+</li><li>Assessing the definitions of the common set of process and product measures
+</li><li>Reviewing the work environment standards
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+Examples of activities for stakeholder involvement also include the following:
+<br>
+<br>
+</li><li>Establishing and maintaining IPPD empowerment mechanisms
+</li><li>Establishing and maintaining organizational rules and guidelines for the structuring and forming of integrated teams
+<br>
+<br>
+<a name="gp28"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the organizational process definition process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Percentage of projects using the process architectures and process elements of the organization’s set of standard processes
+</li><li>Defect density of each process element of the organization’s set of standard processes
+</li><li>Number of worker's compensation claims due to ergonomic problems
+</li><li>Schedule for development of a process or process change
+<br>
+<br>
+<a name="gp29"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the organizational process definition process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Establishing organizational process assets
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+Examples of activities reviewed also include the following:
+<br>
+<br>
+</li><li>Determining rules and guidelines for the degree of empowerment provided to people and integrated teams
+</li><li>Establishing and maintaining an issue resolution process
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Organization’s set of standard processes
+</li><li>Descriptions of the lifecycle models
+</li><li>Tailoring guidelines for the organization’s set of standard processes
+</li><li>Organization’s measurement data
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+Examples of work products reviewed also include the following:
+<br>
+<br>
+</li><li>Empowerment rules and guidelines for people and integrated teams
+</li><li>Organizational process documentation
+<br>
+<br>
+<a name="gp210"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the organizational process definition process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+This generic goal's appearance here reflects its location in the continuous representation.
+<br>
+<br>
+<a name="gp31"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined organizational process definition process.
+<br>
+<br>
+<a name="gp32"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the organizational process definition process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Submission of lessons learned to the organization's process asset library
+</li><li>Submission of measurement data to the organization's measurement repository
+</li><li>Status of the change requests submitted to modify the organization's standard process
+</li><li>Record of non-standard tailoring requests
+<br>
+<br>
+IPPD Addition
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information also include the following:
+<br>
+<br>
+</li><li>Status of performance review input from integrated teams
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp41"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the organizational process definition process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>Stabilize the performance of one or more subprocesses to determine the ability of the organizational process definition process to achieve the established quantitative quality and process-performance objectives. Stabilize the performance of one or more subprocesses to determine the ability of the organizational innovation and deployment process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+The process is institutionalized as an optimizing process.
+<br>
+<br>
+<a name="gp51"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the organizational process definition process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp52"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the organizational process definition process.
+<br>
+<br>
+</li></table>
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+	<p>&nbsp;</p>
+		
+</div><!--This div belongs to content--->
+<!-- Main Content ends here -->
+
+<br class="clearFloat" /> <br />
+	<br />
+	<!-- Don't edit this line on left.  It is used to ensure divs can stay in place -->
+</div>
+<!-- Content Container ends here -->	
+
+
+
+
+
+<!-- Footer begins here --> 
+<div id="footer">
+	
+				<p style="color:#69c"><a href="disclaim.php" target="_blank">PMWay disclaimer</a></p><p style="color:#69c">
+		<br />
+		Contact
+		<a title="Copy and Paste the email address to your email editor to send me mail.">
+		Mark@PMWay.co.za</a>
+		</p>
+
+
+
+
+
+</div><!-- Ties up to Page Container above -->
+
+							
+
+                      
+
+      
+    
+<!-- #EndEditable -->
+		
+</body>
+</html>
+

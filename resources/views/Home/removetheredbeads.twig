@@ -1,0 +1,1158 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %}   {% if user %}Remove the Red Beads{% endif %}  {% endblock %}
+{% block body %}
+    {% if user %}
+
+
+
+        <div class="container" align="left">
+  <h5>W. Edwards Deming's Red Bead Experiment - moving towards the 14 Observations for Management</h5>
+ <hr>
+	<h4>	<a href="/home/redbeadsvids" >Click here for three video's about the Red Bead Experiment</a></h4>
+	<hr>
+  <row ><a href="/home/gamestats"><img alt="red beads out" align="right" class="img/fluid" src="{{ asset('storage/images/redbeadsoutsmall.png') }}" title="Its all about production stats!  Where are yours at?" ></a></row>
+  <p align="left"><strong>W. Edwards Deming (the productivity / quality improvement and CMMi guru) suggested that as much as 94% of the cost of quality is management's problem and responsibility. <br>
+    Once it has hit the floor, the worker level, the workers
+    will have little ability and control to improve anything.</strong></p>
+
+  <p align="left"> The 14 Observations for Management (below) is how you (as the Executive Action Team) EAT the Red Beads.</p>
+  <hr>
+  <p align="left">Dr. Deming used the Red Bead Experiment to clearly and dramatically illustrate several points about poor management practices.
+    This includes the fallacy of rating people and ranking them in order of
+    performance for next year, based on previous performance.<br>
+    <br>
+    The experiment (actually a management game that illustrates the concept)
+    uses a container of White and Red beads as shown in the image below.&nbsp;
+    People in the experiment (staff) who play the game
+    are asked to remove only the red beads with a special paddle with holes in it.&nbsp;
+    The white beads in the bucket symbolize the good things that we experience each day as we
+    do our work and the red beads symbolize the problems or bad things
+    (inefficient processes, problematic technology etc.) that we experience.&nbsp;&nbsp; <br>
+    <br>
+    The Red Bead Experiment uses statistical theory to show that even though a "willing worker" wants to do a good job, their success is directly tied to and limited by the nature of the system they are working within. Real and sustainable improvement on the part of the willing worker is achieved only when management is able to improve the system.&nbsp;
+  <p align="center"><em>Hover your mouse over this slide to get the point!</em></p>
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/peopleprocesstechbeads.jpg') }}" onmouseover="this.src='{{ asset('storage/images/peopleprocessbottomline.png') }}'" onmouseout="this.src='{{ asset('storage/images/peopleprocesstechbeads.jpg') }}'"></p>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseone" aria-expanded="false" aria-controls=
+        "collapseone">Lessons Learned <br>
+  from the Red Bead Experiment </button>
+  <div class="collapse" id="collapseone">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">Here is the bottom line:</h5>
+        <div class="card-body text-center">
+          <p align="left">What is
+            the Red Bead experiment bottom line:&nbsp; <strong><br>
+            <br>
+            Management must simply take the colored (red beads) out
+            of the bowl (tray or container)! <br>
+            If management are not striving to do this on a daily basis (through process definition that leads to quality production improvements<br>
+            that assist their loyal and motivated staff to do their clearly defined jobs well, to obtain job satisfaction)<br>
+            then they management are not doing their jobs!</strong><br>
+            <br>
+            This will ensure that a drive towards ZERO Defects is attainable!&nbsp; <br>
+            I.e. In business,
+            management must create an environment (through defined processes that work and help the business) where staff are empowered to do their work such that they obtain satisfaction from their improved quality production efforts.
+            I.e. they (management) must strive to find ways to totally remove the colored
+            (red) beads from the bowl (defects in their production process) <br>
+            as this is the only way to ensure staff can do their jobs well and also to ensure there is collective move towards zero defects!<br>
+            Again note that W. Edwards Deming suggest that as much as 85% of the cost of quality is
+            management&#39;s problem and responsibility!<br>
+            Once the quality problem or issue has hit the floor, or worker level,
+            workers have little control! </p>
+          <p align="center">Ultimately only the Executive can remove the RED
+            BEADS!<br>
+            <img alt="" class="img-fluid" src="{{ asset('storage/images/redbeadremoved.png') }}" ></p>
+          <p align="center"><a href="/cmmi" >Click here to see how it is done</a>!</p>
+          <br>
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsetwo" aria-expanded="false" aria-controls=
+        "collapseptwo">The Red Bead
+  experiment<br>
+  described in detail: </button>
+  <div class="collapse" id="collapsetwo">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">If you understand the above then do not worry about the detail below!</h5>
+        <div class="card-body text-center">
+          <p align="left">This is a clever demonstration of the futility of most management systems for improving quality. <br>
+            In fact, Dr. Deming often refers to it as a stupid experiment that you'll never forget. <br>
+            <br>
+            The experiment is described below in a form similar to Dr. Deming's presentation in his seminars. </p>
+          <p align="left">The experiment starts with a sampling device (a bowl of beads and a special
+            paddle with holes in them to collect the beads from the bowl) that has a composition of 80% white and 20% colored beads, normally red beads, hence the name "red bead experiment".&nbsp;
+            Note:&nbsp; When this experiment was first shown it used a ping pong paddle with
+            holes drilled into it and these were used to scoop out the beads from a bowl.&nbsp;<br>
+            <img alt="" class="img-fluid" src="{{ asset('storage/images/pingpongpaddleswithholes.jpg') }}" ><br>
+            Later sophisticated push button bead drop sampling devices were used.</p>
+          <p align="left">While Dr. Deming used 80% white beads and 20% red, you will find this experiment done with 80% white and 20% colored. The colored beads add another dimension to the demonstration. This will be become self evident as the script is read.</p>
+          <p align="left">The fact that the some sampling devices have various colored beads instead of all red is of no consequence, the experiment works just as well. <br>
+            It is necessary however to have 20% colored beads to go along with the text of this demonstration. </p>
+          <p align="left"><strong>The objective of the bead factory in the demonstration is to make white beads. </strong> </p>
+          <p align="left"><strong>The customer will not accept anything but white beads, all colored beads are defective. </strong><br>
+            <br>
+            The colored beads themselves represent defects in an organization's business processes. <br>
+            They represent a faulty machine or tool, a bad engineering design, a defective part, a procedural flaw, an unreasonable change request, ... all the things that can and do go wrong with a process. Supervisors and management control the number of red bead in the processes that are given to the workers. </p>
+          <p align="left">Now. let's proceed assuming that management has developed and purchased the white bead process for the workers of this experiment.</p>
+          <h3>The Experiment</h3>
+          <p align="left">The instructor should take on the role of the department foreman or department supervisor and first of all selects his work team. Realizing that one of the objectives of this demonstration is to point out management prejudices, the instructor can use whatever slogans or phrases he believes fit his particular audience. It many start like the following:<br>
+          </p>
+          <p align="left">Foreman: Okay I need eight bodies. (Pointing to people he wants to select) Can you count? Okay you're hired . Can you push buttons? Okay you're hired. You don't have to think, you just have to do what I tell you. You'll be on an apprenticeship for a while and if you work out we'll hire you. We believe in high quality. We need good people.
+
+            So the process goes until all nine people are selected. The roles they will perform are as follows:<br>
+          </p>
+          <p align="left">Foreman (the instructor)<br>
+          </p>
+          <p align="left">Workers 1 - 6 (assuming fictitious names for this description):<br>
+            <br>
+            &nbsp;&nbsp;&nbsp; <strong>Bob, Dorothy, Henry, Calvin, Carol, Judy</strong></p>
+          <p align="left">And Inspectors:</p>
+          <p align="left">&nbsp;&nbsp;&nbsp; <strong>Inspector 1 - Ron</strong></p>
+          <p align="left">&nbsp;&nbsp;&nbsp; <strong>Inspector 2 - Marty</strong></p>
+          <p align="left">&nbsp;&nbsp;&nbsp; <strong>Chief Inspector - Darwin</strong></p>
+          <p align="left">What will happen is that each worker will take turns drawing a sample of 50 from the sampling device. </p>
+          <p align="left">If you are using a sampling bowl then use the 50 hole paddle. If you are using a sampling box then designate the 50 hole pattern that you will use. This can be done verbally, mark on the face of the box with a water based transparency marker, or mask off the excess holes with masking tape, etc. </p>
+          <p align="left">Once a sample is drawn, then it will be checked by both inspectors (this high quality company has 200% inspection) who will independently write down the number of colored beads they count and show it to the chief inspector. </p>
+          <p align="left">The chief inspector will compare the counts, record the information on a data sheet and a graph, and then announce the number of colored beads drawn in the sample. </p>
+          <p align="left">The data sheet will show the names of the six workers and how many colored beads they each draw for the four days of the experiment. The data sheet will look like the sample data shown in figure 1. </p>
+          <p align="left">The graph will have six plot points for each day for four days and look like the graph in figure 2. </p>
+          <p align="left">These graphs can be set up on chart pads or overhead transparencies.</p>
+          <h2> Red Bead Experiment Data: Output per Worker</h2>
+          <div>
+            <table style="width: 50%" border="1" align="left">
+              <tr>
+                <td class="auto-style4"><strong>Figure 1.</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Worker Day</strong></td>
+                <td class="auto-style4"><strong>Day 1</strong></td>
+                <td class="auto-style4"><strong>Day 2</strong></td>
+                <td class="auto-style4"><strong>Day 3</strong></td>
+                <td class="auto-style4"><strong>Day 4</strong></td>
+                <td class="auto-style4"><strong>Total</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Bob</strong></td>
+                <td class="auto-style4"><strong>14</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>9</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>43</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Dorothy</strong></td>
+                <td class="auto-style4"><strong>12&nbsp;</strong></td>
+                <td class="auto-style4"><strong>5</strong></td>
+                <td class="auto-style4"><strong>13</strong></td>
+                <td class="auto-style4"><strong>5</strong></td>
+                <td class="auto-style4"><strong>35</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Henry</strong></td>
+                <td class="auto-style4"><strong>15</strong></td>
+                <td class="auto-style4"><strong>6</strong></td>
+                <td class="auto-style4"><strong>4</strong></td>
+                <td class="auto-style4"><strong>9</strong></td>
+                <td class="auto-style4"><strong>34</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Calvin</strong></td>
+                <td class="auto-style4"><strong>8</strong></td>
+                <td class="auto-style4"><strong>8</strong></td>
+                <td class="auto-style4"><strong>9</strong></td>
+                <td class="auto-style4"><strong>7</strong></td>
+                <td class="auto-style4"><strong>32</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Carol</strong></td>
+                <td class="auto-style4"><strong>10&nbsp;</strong></td>
+                <td class="auto-style4"><strong>11</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>8</strong></td>
+                <td class="auto-style4"><strong>39</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Judy</strong></td>
+                <td class="auto-style4"><strong>6</strong></td>
+                <td class="auto-style4"><strong>11</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>37</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Total</strong></td>
+                <td class="auto-style4"><strong>65</strong></td>
+                <td class="auto-style4"><strong>51</strong></td>
+                <td class="auto-style4"><strong>55</strong></td>
+                <td class="auto-style4"><strong>49</strong></td>
+                <td class="auto-style4"><strong>220</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Average</strong></td>
+                <td class="auto-style4"><strong>10.8</strong></td>
+                <td class="auto-style4"><strong>8.5</strong></td>
+                <td class="auto-style4"><strong>9.2</strong></td>
+                <td class="auto-style4"><strong>8.2</strong></td>
+                <td class="auto-style4"><strong>&nbsp;9.2</strong></td>
+              </tr>
+            </table>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h2>Here is the above data captured in an image:</h2>
+          <p class="ctr"> <img alt="" class="img-fluid" src="{{ asset('storage/images/red-bd01.gif') }}" ></p>
+          <p align="left">After the samples are counted, the beads are returned to the sampling device and another sample is drawn (shaking the box or mixing the bowl adds to the demonstration). Obviously the percent defective is a constant 20% but the actual percentage will vary with each sample due to sampling error and this is where the spoof begins. </p>
+          <p align="left">While there are some lessons in statistics than can be taught from this experiment, the real punch line is in the way the instructor conducts the demonstration and allows people to see themselves and the futility of management practices for improving quality. Each instructor has to know
+            his (or her) audience and how far he can push the points made without
+            turning his audience off.</p>
+          <p align="left">As the experiment is carried out over the four days the instructor uses the results of the samples to make his points. Realizing that the data will most likely vary between 1 and 19 (determined from the control chart calculations for UCL and LCL for a process that is 20% defective and sample sizes of 50). </p>
+          <p align="left">There are a variety of points that can be made. The exact order that the instructor will make the points will be dependent on the actual data developed in the experiment. However, after 24 samples you will have enough high and low readings along with increasing and decreasing trends to make all the points.<br>
+          </p>
+          <h2>Clear Instructions:</h2>
+          <p align="left">The first point of the demonstration has to do with giving clear instructions. Management often believes that if they make the objectives clear then the problems will go away. It could go something like the following:
+          <p align="left">Foreman: Bob you know that our job is to make white beads, the customer will not accept colored beads. You make white beads by first of making sure that the material is well mixed. If it is not mixed well you will have trouble making white beads. (Demonstrate how you want the box
+            shaken or the beads mixed in the bowl)
+          <p align="left">You then turn the box over and hold it completely flat while you push this button on the end and white beads will fall into the holes. (If you are using a sampling bowl then the describe how the paddle is to be used to draw a sample.) Place the paddle into the bowl at the end, scoop deep into the beads and raise the paddle slowly at an angle of precisely 30 degrees and let the extra beads roll off the paddle. Now I've described the job for all your
+            team very clearly. I'm sure that all of you can now make white beads. Bob, would you please make our first batch of white beads.
+          <p align="left">Bob draws the first sample and shows it to the inspectors who record the count and they show it to the chief inspector. He then announces that we have 14 red beads. If colored beads are used then let red beads be red defects, green be green defects, yellow be yellow defects, etc. Still have the chief inspector count and record the total number of colored beads, but have him also report the different number for each color. The instructor can then use this to attach more blame to the worker, i.e. "Yellow defects, you know they are the worst kind and most costly to repair," and so on.
+          <p align="left">Foreman: Bob I've told you that the customer will only accept white beads, colored beads are not acceptable. Did you mix the material and hold the box completely flat like I told you? (Did you hold the sampling paddle at precisely 30 degrees?)
+          <p align="left">Bob: Yes I did
+          <p align="left">Foreman: Well you must not have been paying attention. Dorothy can you please make us a batch of white beads? Remember all that I've told you. (repeat the appropriate instructions again). <br>
+            Dorothy draws a sample and it comes out to be 12 colored beads.
+          <p align="left">Foreman: Well Dorothy that is better than Bob, but you must not have been paying attention either. Let me repeat the instructions once again. (repeat the appropriate instructions) Henry will you please run this process. Remember that the customer will only accept white beads.
+          <h2>Intimidation</h2>
+          <p align="left">Henry then draws a sample and it comes out to be 15.
+          <p align="left">Foreman: Henry I need to talk to you. Didn't you hear me when I gave all these people instructions on how to make white beads? What were you doing at the time, dreaming of some date you were going to have with Judy? I thought you said you wanted a job. We bring you here, give you clear instructions, show you how to make white beads and you still don't do it. What's the matter with you? Now I'm telling you people, you all better start paying attention or I'll have to fire all of you. Calvin it's your turn.</p>
+          <h2>Praise and Comparison</h2>
+          <p align="left">Calvin draws a sample and it comes out at 8 colored beads.</p>
+          <p align="left">Foreman: Now that's much better. Calvin you are catching on. Calvin got the same instructions as the rest of you and he is now beginning to master the process. He was almost twice as good as Henry. We are going in the right direction now. Henry, you especially need to watch Calvin and see how he did it. In fact, the rest of you should all watch Calvin and see how he does it. Carol, it is your turn.</p>
+          <h2>Banners and Slogans</h2>
+          <p align="left">Carol draws a sample and it turns out to be 10.<br>
+          <p align="left">Foreman: Carol, I told you to watch Calvin. He knows how to do it. Now all of you listen up. We have firm quality standards at this factory. Didn't you read the quality first banner over the door of the factory? See that poster on the wall over there, it says "Satisfied customers are happy customers and that means they will buy more." Quality is critical to our survival as a company and you know what that means for all our jobs. This company has to get the silver star quality award. It is crucial to our success in the marketplace. Judy please show us how it's done.
+          <p align="left">Judy draws and sample and it come out to be 6. The foreman then walks over and talks to the chief inspector. <br>
+          <p align="left">Foreman: Darwin, here is a prime example of quality improvement. You see once I pointed out to everyone that we are really serious about quality at this factory, people started to improve. Judy ran the best batch of white beads that we've seen so far. I think that we need to put a poster by everyone's machine instead of just a few on the wall that we have. You know if we buy some of those quality first buttons we all could wear one and give one to every employee that improves. I'm sure that we can drive the point home more about quality. While today wasn't the best I'm sure we'll do better tomorrow. (while walking over to Judy) Judy, excellent job.
+          <p align="left">Keep up the good work.
+          <h2>Incentives</h2>
+          <p align="left">Tomorrow comes and the foreman asks Bob to run his batch of white beads. Bob runs his sample and it comes out at 10. <br>
+          <p align="left">Foreman: Bob you've done better than you did yesterday but we are still going in the wrong direction. I've talked this matter over with our management and we are going to institute a quality bonus for everyone who runs good parts. If you guys and gals will all do better we will have a big pizza party and bonus for everyone. <br>
+            After the bonus scheme is in place Dorothy draws 5, Henry draws 6, and Calvin draws 8 colored beads. The foreman then talks to the audience as if they were the management. He is explaining the value of the bonus scheme. <br>
+          <p align="left">Foreman: Well after we instituted the bonus scheme that I recommended things got better immediately. While things have been going up and down we are still much better than we were yesterday. I think that our people are finally getting the message and all our efforts with the new quality banners and quality first buttons are paying off. We are definitely on the road to zero defects. I think that we should design another button with a big zero in the middle that is surrounded by gold stars that we can present to our best employees. In fact I would like for one of you to speak at our employee meeting and tell them about this exciting new zero defects button program.
+          <h2>Blame</h2>
+          <p align="left">Carol and Judy then each draw 11 colored beads.
+          <p align="left">The foreman is very upset that things are going bad after he has told management that things were improving. He then goes over to the chief inspector and discusses the problem with him. <br>
+          <p align="left">Foreman: Darwin, I'm really upset. These people don't care. Here you give them a good job and show that it is possible to improve and what do they do, ignore you and make life easy for themselves. I know that our incentive scheme was working, look at the results. I think Carol and Judy are spending too much time talking to one another and not paying attention to their job. I think that I'll warn both of them about their performance and tell them if I catch them talking again that I'll have to discipline them.
+          <h2>Performance Appraisals</h2>
+          <p align="left">This process continues again and again until all 24 samples have been taken. The data is then summarized for display and the supervisor then rates everyone's performance. The data is then placed on an overhead projector or summarized on a chart pad. <br>
+          </p>
+          <p align="left">Foreman: Bob, you started off bad and then improved slightly. You have got to do better. Dorothy, you started off bad, then you improved, then you fell off the wagon again, and then improved again. You need to pay closer attention to your work and gain more consistency. Henry, you started off terrible and then you finally caught on. You have the same problem as Dorothy, you need more consistency. Calvin, your the best employee in the department, but you still have room for improvement. You could be the first employee to earn the zero defects button that the manager talked about at the employee meeting. Carol, your performance needs to improve. Your overall rating was good. You can do better if you stop all that talking with Judy I warned you about. Judy, you need to pay attention to your work. You started off good and something must have distracted you. I think it was all the talking with Carol. <br>
+          </p>
+          <p align="left">The foreman should now take on the role of explaining the results to management as he turns to the audience. The focus can now be on the graph and the noting of the various trends. The same praise and blame is offered for the trends. An evaluation of the trends for each day and an overall comparison of each of the workers may be appropriate at this point, as you try to present the results with the best possible explanation. The supervisor would then promise that they can do better and explain all the new quality programs that are in place to address the problems, i.e. posters, etc. He would make special note that he had warned the Judy and Carol and gave them unfavorable performance evaluations. <br>
+          </p>
+          <h2>Discussion of the Experiment</h2>
+          <p align="left">The instructor then steps out of his foreman role and now asks
+            questions as an instructor in order to get the class to evaluate
+            what has happened.</p>
+          <p align="left">What was the average of number of defects for the experiment
+            (X-Bar)? Take the total number of colored beads (220) and divide
+            by 24. (X-Bar=220/24=9.2 for this experiment)<br>
+            Ask them what they
+            expected the average to be and why. <br>
+            Facilitate a discussion that
+            gets them to see that the average has got to be 20% defective
+            since we know that there was a fixed 20% defective all the time
+            in the sampling device. Explain that &quot;p bar&quot; is merely
+            the average percent defective for a given sample size. <br>
+            Given that
+            we had 20% defective, and samples of 50, 20% of 50 is 10. In our
+            example the actual average was 9.2. <br>
+            This will vary slightly with
+            each demonstration.</p>
+          <p align="left">Next show that a simple p-Chart would have control limits of
+            1 and 17. This is determined by using the following formulas:</p>
+          <p class="ctr">P Bar = 220 / 6 * 4 * 50 = .18</p>
+          <p class="ctr">UCL or LCL = X Bar (plus/minus) 3 <i><tt>Sq Root</tt></i> [(X-Bar)(1-P Bar)]</p>
+          <p class="ctr">9.2 (plus/minus) 3 <i><tt>Sq Root</tt></i> [(9.2)(.82)] </p>
+          <p class="ctr">or</p>
+          <p class="ctr">9.2 (plus/minus) 8.24 = .96 to 17.44</p>
+          <p class="ctr"><img class="img-fluid" src="{{ asset('storage/images/red-bd02.gif') }}"></p>
+          <p align="left">What this means is that given a 20% defective process, and with
+            sample sizes of 50, that the number of colored beads will vary
+            over 99% of the time between 1 and 17 just due to random chance.
+            In the demonstration we knew that it was random chance because
+            we controlled the experiment by virtue of a constant number of
+            beads. In actuality, we have what Dr. Deming calls a &quot;stable
+            process,&quot; or a system that is varying only because of random
+            chance. This random chance is also referred to as only being affected
+            by &quot;chance or common causes.&quot; Note that a stable process
+            may still turn out faulty items.</p>
+          <p align="left">What this means is that given a 20% defective process, and with
+            sample sizes of 50, that the number of colored beads will vary
+            over 99% of the time between 1 and 17 just due to random chance.
+            In the demonstration we knew that it was random chance because
+            we controlled the experiment by virtue of a constant number of
+            beads. In actuality, we have what Dr. Deming calls a &quot;stable
+            process,&quot; or a system that is varying only because of random
+            chance. This random chance is also referred to as only being affected
+            by &quot;chance or common causes.&quot; Note that a stable process
+            may still turn out faulty items.</p>
+          <h3>Here are 11 sub-lessons (axiomatic [self evident] truths), extrapolated from the above bottom line:</h3>
+          <p align="left">1.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" >All the variations came from the process. There was no evidence that any worker was better than another.<br>
+          </p>
+          <p align="left">2.<img alt="" class="img-fluid"  src="{{ asset('storage/images/lightbulbidea.png') }}" > The workers could, under no circumstances, do any better. The best people doing their best does not matter. Therefore, as managers, we must not rush to blame employees. We must improve our processes and make them so robust that it produces acceptable products no matter who runs it. So, when a problem with a process occurs, we must first investigate what went wrong with the process. If we find the process to be in order, we can then begin to determine if there was an operator error.<br>
+          </p>
+          <p align="left">3.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Pay for performance can be futile. The performance of the workers was governed by the process.<br>
+          </p>
+          <p align="left">4.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Inspection after the process is complete does not improve quality but merely catches defects before they leave the plant. The quality inspectors in the red bead experiment were not adding value to the process. They are there just to make sure defective product did not reach the customer. Since no inspection process is perfect, we can assume that even with 2 quality inspectors, some defective product still made it to the customer. As managers, we must instill quality efforts at all stages of the process so that defects can be caught as soon as they are made rather than discovering them after we have performed more valued added activities to them. The beads may have been defective when we received them from our supplier, but with
+            &#39;<strong>end-of-the-line</strong>&#39; inspection, we will not discover them until we have wasted a lot of time and effort working on them.<br>
+          </p>
+          <p align="left">5.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Clear instructions to workers will only increase the probability that the process will behave as intended. Clear instructions will not improve a process that is out of control (a process that has wild variation from day to day).<br>
+          </p>
+          <p align="left">6.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}"> Intimidation creates fear which does nothing to improve a process.<br>
+          </p>
+          <p align="left">7.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Praise will encourage a person to perform the process as they have learned to perform it. It will not improve a process.<br>
+          </p>
+          <p align="left">8.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Banners and Slogans raise the awareness of quality as an issue to be concerned with, but also tells people that management believes that a reminder a required to produce a quality produce, thus creating an environment of mistrust.<br>
+          </p>
+          <p align="left">9.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Incentives will not improve a process and have a short effect on employee moral. </p>
+          <p align="left">10. The process has natural variation. Each day the process will produce data different from the day before within a natural range of values. We must collect data about the process to understand the range and variance of the variation.<br>
+          </p>
+          <p align="left">11. To satisfy the customer consistently, the process must be capable of meeting customer requirements. If the customer&#39;s requirements are tighter than we can produce on a consistent basis, then we will only produce acceptable products by accident.</p>
+          <p align="left"><br>
+          </p>
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsethree" aria-expanded="false" aria-controls=
+        "collapsethree">The 14 Observations for Management </button>
+  <div class="collapse" id="collapsethree">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">The Red Bead Experiment and 14 Observations for Management<br>
+          underpin the Capability Maturity Model</h5>
+        <div class="card-body text-center">
+          <hr>
+          <h1>Here are the 14 Observations:</h1>
+          <div class="container" align="left">
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">1. Constancy of purpose:</h2>
+            <h3>Create constancy of purpose toward continual improvement of product and service, with a plan to become competitive and to stay in business.</h3>
+            <p align="left"><a href="/images/deming-pt1.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt1" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="4e7ee0fa-6924-47c4-9a69-7b05c9191a2e" src="{{ asset('storage/images/deming-pt1.jpg') }}" class="en-media"></a></p>
+            <p align="left">Management have two concerns. One deals with running the business on a day to day basis. The other deals with the future of the business.</p>
+            <p align="left">They must have clarity on the questions; what are we doing, and why are we doing it?</p>
+            <p align="left">The answer to these questions requires knowledge and looking to the future. It is the difference between short term and long term thinking; the tortoise and the hare.</p>
+            <p align="left">Problems of the future require constancy of purpose, and dedication to improvement.</p>
+            <p align="left">Create constancy of purpose toward continual improvement of products and service, allocating resources to provide for long range needs, rather than only short term profitability, with the aim to become competitive, stay in business and to provide jobs.</p>
+            <p align="left">To stay in business requires that leaders spend time on innovation, research and education. They must constantly improve the design of their product and service.</p>
+            <p align="left">Purpose is an intent, a goal, a vision of some future desired state. To have constancy of purpose then one must first have a purpose.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">2. The new philosophy:</h2>
+            <h3>We are in a new economic age, created in Japan. Management must awaken to the challenge, must learn their responsibilities, and take on leadership for change.</h3>
+            <p align="left"><a href="/images/deming-pt2.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt2" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="12bc14de-1cd1-426b-9e54-f9191668c019" src="{{ asset('storage/images/deming-pt2.jpg') }}" class="en-media"></a></p>
+            <p align="left">Improvement never stops. The system is capricious, erratic, it will affect people in different ways from one month to another. Which is why you need continuous improvement, it can never finish as change never finishes.</p>
+            <p align="left">The customer demands and tastes change very fast, and the competition in the market grows at a rapid rate today.</p>
+            <p align="left">Henry Ward Beecher&nbsp;said "Philosophy of one century is the common sense of the next"; we have to accept new philosophies according to the market trends and technology revolutions.</p>
+            <p align="left">Learn and adopt the new philosophy, one of cooperation to everyone's benefit.</p>
+            <p align="left">Management must awaken to the challenge, learn their responsibilities and take on leadership for change.</p>
+            <p align="left">We are in a new economic age, created in Japan. We can no longer live with commonly accepted levels of delays, mistakes, defective materials and defective workmanship. We cannot accept today, the levels of error that could be tolerated yesterday.&nbsp;Defective products and services are a cost to the system.</p>
+            <p align="left">Only management is in a position to do something about the vast majority of errors. Transformation of Western management style is necessary to halt the continued decline of business and industry.</p>
+            <p align="left">Its management's task to remove the obstacles that prevent people from doing their jobs correctly.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">3. Cease dependence on mass inspection:</h2>
+            <h3>Eliminate the dependence on inspection to achieve quality. Eliminate the need for inspection on a mass basis by building quality into the product in the first place.</h3>
+            <p align="left"><a href="/images/deming-pt3.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt3" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="04fa8229-878f-447e-8cce-3ebde010c253" src="{{ asset('storage/images/deming-pt3.jpg') }}" class="en-media"></a></p>
+            <p align="left">You can not save money if you are more worried about money, than you are about quality.</p>
+            <p align="left">Cease dependence on mass inspection to achieve quality. Mass inspection is not reliable. Inspection sound right, but it is wrong.</p>
+            <p align="left">You can't inspect quality in, yet we have
+              organizations using ISO and audits as a means to prove quality.</p>
+            <p align="left">Routine inspection is the same as planning for defects, acknowledging that the process isn't correct, or that the specifications made no sense in the first place. Inspection is too late as well as ineffective and costly.</p>
+            <p align="left">Instead require statistical evidence that quality is built in.</p>
+            <p align="left">Quality
+              doesn&#39;t come from inspection, but from improvement of the process. Improve the process so that defects aren't produced in the first place. This eliminates the need for inspection on a mass basis.</p>
+            <p align="left">Eliminate the need for mass inspections, as the way of life to achieve quality, by building quality into the product in the first place. Require statistical evidence of quality improvements.</p>
+            <p align="left">You can not save money if you are more worried about money, than you are about quality.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">4. End lowest tender contracts:</h2>
+            <h3>End the practice of awarding business on the basis of price tag along. Instead,
+              minimize total cost. Move toward a single supplier for any one item, on a long-term relationship of loyalty and trust.</h3>
+            <p align="left"><a href="/images/deming-pt4.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt4" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="a4a64ab0-e4c8-4c9d-b85a-af942355db31" src="/images/
+
+deming-pt4.jpg" class="en-media"></a></p>
+            <p align="left">Without adequate measures of quality, business drifts to the lowest bidder, therefore the result is low quality and high cost.</p>
+            <p align="left">Price has no meaning without measure of the quality purchased.</p>
+            <p align="left">End the practice of awarding business on a price tag alone. Instead, require meaningful measures of quality along with price.</p>
+            <p align="left">Reduce the number of suppliers for the same item, by eliminating those that do not qualify with statistical and other evidence of quality.</p>
+            <p align="left">The aim is for both parties to work together, by
+              minimizing variation to increase quality, and to minimize total cost (not merely initial costs)&nbsp;for both parties.</p>
+            <p align="left">This may be achieved by moving toward a single supplier for any one item, on a long term relationship of loyalty and trust.</p>
+            <p align="left">It will lead to continuous improvement between both parties and as a result you will get quality supplies at reduced costs.&nbsp;This is why Japanese manufacturers are so closely aligned to their suppliers.</p>
+            <p align="left">We often spend lots of time and money to find better suppliers and shift rapidly between them for slight monetary gains. Instead of getting vendors to compete on price think long term. Purchasing managers have a new job and must learn it.</p>
+            <p align="left">Today many
+              organizations just outsource to the cheapest supplier, and often to multiple suppliers within the same business unit or project.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">5. Improve every process:</h2>
+            <h3>Improve constantly and forever the system of production and service, to improve quality and productivity, and thus constantly decrease costs.</h3>
+            <p align="left"><a href="/images/deming-pt5.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt5" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="8cf5dab9-d804-4ab9-9848-e102d747a9b4" src="{{ asset('storage/images/deming-pt5.jpg') }}" class="en-media"></a></p>
+            <p align="left">Constantly improve the production and service system to improve quality and productivity, thus decreasing costs.</p>
+            <p align="left">Accept nothing is ever good enough. Improve constantly and forever every process for planning, production and service.</p>
+            <p align="left">Improvement isn't a project with a finite end. Instead, think continuous, never ending improvement.</p>
+            <p align="left">Institute innovation.<br>
+              Everyone should search continually for problems in order to improve every activity in the company, to improve quality and productivity and thus to constantly decrease costs.</p>
+            <p align="left">Finding what's wrong is not improvement. Plugging leaks is not improvement. Don't look at outcomes or defects, instead look at what produces the defects.</p>
+            <p align="left">There should be continual education on waste and continued improvement of quality in every activity, this will yield a continual rise in productivity.</p>
+            <p align="left">It is management's job to work continually on the system (for example work design, incoming work, improvement of tools, supervision, training and retraining). There in no stopping point in the process of quality management.</p>
+            <p align="left">The enterprise system and services must keep growing indefinitely in order to catch up with the competitive market.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">6. Institute training on the job:</h2>
+            <h3>Institute modern methods of training on the job.</h3>
+            <p align="left"><a href="/images/deming-pt61.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt6" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="6cd27c12-ead4-4b84-a7e9-b2ebea07276e" src="/images/
+
+deming-pt61.jpg" class="en-media"></a></p>
+            <p align="left">Provide learning and development. Institute training on the job, training for new skills.</p>
+            <p align="left">People learn in different ways. Training must be totally reconstructed.</p>
+            <p align="left">When training, people need to understand <em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">what</strong></em> the job is and <em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">why</strong></em> it is being done.</p>
+            <p align="left">Training must be done on the job, learning by doing; going into the work and experimenting with work methods and new ideas, studying the results, and striving for perfection.</p>
+            <p align="left">A trained worker has more productivity and quality than an untrained one, so giving training sessions will drastically improve the quality of the person, and also directly helps in better performance with regard to product quality.</p>
+            <p align="left">Institute modern methods of training on the job for all, including management, to make better use of every employee.</p>
+            <p align="left">New skills are required to keep up with changes in tools, methods, techniques,&nbsp;product and service design.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">7. Institute leadership of people:</h2>
+            <h3>The aim of management should be to help people to do a better job. Management is in need of overhaul.</h3>
+            <p align="left"><a href="/images/deming-pt7.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt7" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="ecbfe250-16c1-49c1-9dff-14e404b44783" src="/images/
+
+deming-pt7.jpg" class="en-media"></a></p>
+            <p align="left">Leadership is required <em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">not</strong></em> supervision.</p>
+            <p align="left">Leadership is in need of overhaul, the job of leaders is to help people.</p>
+            <p align="left">Adopt and institute leadership aimed at helping people to do a better job.</p>
+            <p align="left">Adopt and institute principles for leadership improvement.</p>
+            <p align="left">The emphasis of management must be changed from sheer numbers to quality. Improvement of quality will automatically improve productivity.</p>
+            <p align="left">Management must ensure that investigation and actions are taken on reports of inherited defects, system conditions, poor tools, fuzzy operational definitions, variation and all conditions detrimental to quality.&nbsp;You can't delegate quality, its a road to failure.</p>
+            <p align="left">The basic principle is that it's the managers job to coach their staff and improve the system</p>
+            <ul style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px 26px 26px 0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;padding-left:26px;list-style:disc;">
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Firstly, they spend time in the work reinforcing the
+                organizations commitment to its customers and to quality.</li>
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Secondly, they devote time to ensuring the staff doing the work have everything they need to be able to serve the customer.</li>
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Thirdly, when they have a decision to make about either of the above they get data to base their decisions on. There is no knee jerk, instead they get knowledge.</li>
+            </ul>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">8. Drive out fear:</h2>
+            <h3>Drive out fear so that everyone may work effectively for the company.</h3>
+            <p align="left"><a href="/images/deming-pt8.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt8" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="1a13ce24-f711-42a8-a1cb-6fb442fdc0de" src="{{ asset('storage/images/deming-pt8.jpg') }}" class="en-media"></a></p>
+            <p align="left">Extinguish fear so everyone may work effectively for the
+              organization.</p>
+            <p align="left">Build trust. Cooperation and collaboration requires a whole different set of values and relationships than that used in the outdated command and control method.</p>
+            <p align="left">People are afraid of change, any attempt to make things better will lead to a fear of the unknown.</p>
+            <p align="left">Many
+              organizations are run by fear; fear of not getting their bonus, being afraid that they can't meet their annual rating, or fear that they will be low on rating ladders.</p>
+            <p align="left">To achieve better quality people need to feel secure. We need to eliminate fear so that everyone may work effectively for the company. Fear will disappear as management improves and as employees develop confidence in management.</p>
+            <p align="left">Driving our fear is part of at least 8 of the 14 points.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">9. Break down barriers:</h2>
+            <h3>Break down barriers between departments. People in research, design, sales, technology and production must work as a team.</h3>
+            <p align="left"><a href="/images/deming-pt9.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt9" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="65398b1a-60ed-4cbb-8bb6-92cb7e64b592" src="{{ asset('storage/images/deming-pt9.jpg') }}" class="en-media"></a></p>
+            <p align="left">Break down barriers and silos between departments. In other words build a system.</p>
+            <p align="left">Traditionally each silo becomes independent kingdoms, each trying to
+              maximize their own figures.</p>
+            <p align="left">People in research, design, sales, technology&nbsp;and production must work as a team to be able to foresee any production problems, and potential product or service issues.</p>
+            <p align="left">Unless staff work jointly in a spirit of co-operation, each area will try to do what is best for itself, rather than
+              what&#39;s good for the organization. It means cooperation not competition, <strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">everybody wins if the system wins</em></strong>.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">10. Eliminate exhortations:</h2>
+            <h3>Eliminate the use of slogans and exhortations for the work force asking for zero defects and new levels of productivity.</h3>
+            <ul style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px 26px 26px 0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;padding-left:26px;list-style:disc;">
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Eliminate work standards (quotas). Substitute leadership.</strong></li>
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Eliminate management by objective. Substitute leadership.</strong></li>
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Eliminate management by numbers, numerical&nbsp;goals. Substitute leadership.</strong></li>
+            </ul>
+            <p align="left"><a href="/images/deming-pt10.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt10" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="68c52f69-3e4b-4d39-ac35-927137b609a2" src="{{ asset('storage/images/deming-pt10.jpg') }}" class="en-media"></a>Eliminate slogans, warnings and targets for the work force asking for zero defects, doing it right first time and new levels of productivity. Such urging only creates hostile relationships.</p>
+            <p align="left">Posters ask people to do what they can not do.</p>
+            <p align="left">Posters and slogans on the wall stating "do it right first time"; who can do it right first time, when the stuff someone has to work on is already wrong?</p>
+            <p align="left">The causes go beyond the power of the work force, as the majority of low quality and low productivity causes result from the system.</p>
+            <p align="left">If the system has been built around quality, then it will be done right first time, so the slogan will be meaningless.</p>
+            <p align="left">Ensure you substitute work standards and quotas with effective leadership and effective methods. Substitute management (by objectives, numbers and numerical goals) with effective leadership.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">11. Eliminate arbitrary numerical targets:</h2>
+            <h3>Eliminate work standards that prescribe quotas for the work force and numerical goals for people in management. The responsibility of
+              management must be changed from sheer numbers to quality.</h3>
+            <p align="left"><a href="/images/deming-pt11.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt11" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="6e412111-638c-42f3-97a2-b24f0a753768" src="/images/
+
+deming-pt11.jpg" class="en-media"></a></p>
+            <p align="left">Numerical goals accomplish nothing.</p>
+            <p align="left">Traditionally quantity rules over quality.</p>
+            <p align="left">The cost of caring more about numbers than you do about quality is enormous, it results in high costs finding and fixing mistakes. That money spent produces nothing.</p>
+            <p align="left">Focus on quality rather than quantity of product. Remove obstacles depriving workers of their right to take pride in their work. Managers must focus on quality, rather than sheer numbers.</p>
+            <p align="left">Substitute aids and helpful leadership in order to achieve continual improvement of quality and productivity.</p>
+            <p align="left">A system of continuous improvement yields greater production at lower costs. The focus is <strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">not on how many you make</em></strong>, it is on <strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">how well you make them</em></strong>.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">12. Permit pride of workmanship:</h2>
+            <h3>Remove barriers that rob workers and people in management of their right to having pride in their work. This means, for example, abolishment of the annual or merit rating and of management by objective.</h3>
+            <p align="left"><a href="/images/deming-pt12.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt12" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:10px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="e2de34bb-ca80-457c-ba80-ca1c46f0981f" src="/images/
+
+deming-pt12.jpg" class="en-media"></a>Remove the obstacles and barriers that deprive workers, and people in management, of their right to take pride and joy in their work. This implies abolition of the annual merit rating (appraisal of performance) and of Management by Objective, all of which creates conflict and competition.</p>
+            <p align="left">These barriers to pride (a basic human need) among other things, results in low morale and absenteeism.</p>
+            <p align="left">We need people to have pride in their work, not in their ability to meet ratings.</p>
+            <p align="left">Again, the responsibility of Team Leaders, Managers, Directors and senior leaders must be changed from sheer numbers to quality.</p>
+            <p align="left">Fixing points for employees, and ranking them inside the company, infuses competition within that
+              organization. We want collaboration not competition.</p>
+            <p align="left">Involve employees, at all levels, in the process of improvement. Supply workers with the proper methods, materials and tools. Managers work on the system that is impeding performance.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">13. Encourage education:</h2>
+            <h3>Institute a vigorous
+              programmed of education and self-improvement.</h3>
+            <p align="left"><a href="/images/deming-pt13.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt13" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="2628b133-205b-48d8-bd2e-81e6c7045a5e" src="/images/
+
+deming-pt13.jpg" class="en-media"></a></p>
+            <p align="left">Institute a vigorous program of education and encourage self improvement for everyone.</p>
+            <p align="left">What an
+              organization needs is not just good people; it needs people that are improving with education.</p>
+            <p align="left">Education may not be in a subject that is connected to their work.</p>
+            <p align="left">Self improvement keeps people's minds developing. Point 6 is training for the job, point 13 is elevating people's minds.</p>
+            <p align="left">Advances in competitive position will have their roots in knowledge. No
+              organization can survive with just good people, they need people that are improving.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">14. Top management commitment and action:</h2>
+            <h3>Put everybody in the company to work to accomplish the transformation. The transformation is everybody's job.</h3>
+            <p align="left"><a href="/images/deming-pt14.jpg" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt14" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="a13296a5-be7b-49b5-b0aa-2b7f8d55db6b" src="/images/
+
+deming-pt14.jpg" ></a>Put everybody in the organization to work to accomplish the change.</p>
+            <p align="left">Develop a critical mass that will bring about the change; a critical mass including top management.</p>
+            <p align="left">Create a structure in management who take an active part and who spend time in the work reinforcing the 14 points, and the
+              organization&#39;s commitment to it's customers and to quality.</p>
+            <p align="left">Managers should devote time to ensuring the staff doing the work have everything they need to be able to serve the customer. They use data and real knowledge obtained from the customer's point of view to make decisions.</p>
+            <p align="left">Without such a structure no viable long-term benefits will be achieved.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">Summary</h2>
+            <p align="left">The 14 points are not a menu you can pick and choose from. Deming intended you use all 14. <br>
+              They are one philosophy.</p>
+            <blockquote style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:26px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;quotes:none;"><span style="font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;text-indent:0px;quotes:none;">
+              <p style="border-style: none; border-color: inherit; border-width: 0px; font-family:inherit; font-style:inherit; font-variant:inherit; font-weight:inherit; line-height:inherit; outline:0px; padding:0px; text-indent:0px; vertical-align:baseline; margin-bottom:26px; margin-left: 0px; margin-right: 0px; margin-top: 0px;" class="auto-style1">"The way not to depend on mass inspection (point 3) is to continually improve the process (point 5), to do that you will need quality supplies
+
+                (point 4), finding a quality supplier takes time (point 1), to do so you will need to adopt the philosophy (point 2)" Lloyd Dobbins</p>
+              <p style="border-style: none; border-color: inherit; border-width: 0px; line-height:inherit; outline:0px; padding:0px; text-indent:0px; vertical-align:baseline; margin-bottom:26px; margin-left: 0px; margin-right: 0px; margin-top: 0px;" class="auto-style3">"We want our people to work together, but its hard to do so without point 8, 9, 10, 11 and 12." Lloyd Dobbins</p>
+            </blockquote>
+            <p align="left">The 14 points apply anywhere, to small
+              organizations as well as to large ones, to the service industry as well as to manufacturing. They equally apply to any division within a company.</p>
+            <blockquote style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:26px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;quotes:none;"><span style="font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;text-indent:0px;quotes:none;">
+              <p style="border-style: none; border-color: inherit; border-width: 0px; line-height:inherit; outline:0px; padding:0px; text-indent:0px; vertical-align:baseline; margin-bottom:26px; margin-left: 0px; margin-right: 0px; margin-top: 0px;" class="auto-style3">"The 14 points all have one aim, make it possible for people to work with joy and pride" Deming</p>
+            </blockquote>
+            <span style="font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;text-indent:0px;display:table;clear:both;"></div>
+        </div>
+      </div>
+      <div class="card-footer">
+		  <a href="/home/deming">Click here</a> for another version of the 14 Points</div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+</div>
+<br>
+<br>
+<br>
+{% endif %}
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+
+<div class="container" align="left">
+  <h5>W. Edwards Deming's Red Bead Experiment - moving towards the 14 Observations for Management</h5>
+  <hr>
+	<h4>	<a href="/home/redbeadsvids" >Click here for three video's about the Red Bead Experiment</a></h4>
+	<hr>
+  <row ><a href="/home/gamestats"><img alt="red beads out" align="right" class="img/fluid" src="{{ asset('storage/images/redbeadsoutsmall.png') }}" title="Its all about production stats!  Where are yours at?" ></a></row>
+  <p align="left"><strong>W. Edwards Deming (the productivity / quality improvement and CMMi guru) suggested that as much as 94% of the cost of quality is management's problem and responsibility. <br>
+    Once it has hit the floor, the worker level, the workers
+    will have little ability and control to improve anything.</strong></p>
+  <p align="left">The 14 Observations for Management (below) is how you (as the Executive Action Team) EAT the Red Beads.</p>
+  <hr>
+  <p align="left">Dr. Deming used the Red Bead Experiment to clearly and dramatically illustrate several points about poor management practices.
+    This includes the fallacy of rating people and ranking them in order of
+    performance for next year, based on previous performance.<br>
+    <br>
+    The experiment (actually a management game that illustrates the concept)
+    uses a container of White and Red beads as shown in the image below.&nbsp;
+    People in the experiment (staff) who play the game
+    are asked to remove only the red beads with a special paddle with holes in it.&nbsp;
+    The white beads in the bucket symbolize the good things that we experience each day as we
+    do our work and the red beads symbolize the problems or bad things
+    (inefficient processes, problematic technology etc.) that we experience.&nbsp;&nbsp; <br>
+    <br>
+    The Red Bead Experiment uses statistical theory to show that even though a "willing worker" wants to do a good job, their success is directly tied to and limited by the nature of the system they are working within. Real and sustainable improvement on the part of the willing worker is achieved only when management is able to improve the system.&nbsp;
+  <p align="center"><em>Hover your mouse over this slide to get the point!</em></p>
+  <p align="center"><img class="img-fluid" src="{{ asset('storage/images/peopleprocesstechbeads.jpg') }}" onmouseover="this.src='{{ asset('storage/images/peopleprocessbottomline.png') }}'" onmouseout="this.src='{{ asset('storage/images/peopleprocesstechbeads.jpg') }}'"></p>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseone" aria-expanded="false" aria-controls=
+        "collapseone">Lessons Learned <br>
+  from the Red Bead Experiment </button>
+  <div class="collapse" id="collapseone">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">Here is the bottom line:</h5>
+        <div class="card-body text-center">
+          <p align="left">What is
+            the Red Bead experiment bottom line:&nbsp; <strong><br>
+            <br>
+            Management must simply take the colored (red beads) out
+            of the bowl (tray or container)! <br>
+            If management are not striving to do this on a daily basis (through process definition that leads to quality production improvements<br>
+            that assist their loyal and motivated staff to do their clearly defined jobs well, to obtain job satisfaction)<br>
+            then they management are not doing their jobs!</strong><br>
+            <br>
+            This will ensure that a drive towards ZERO Defects is attainable!&nbsp; <br>
+            I.e. In business,
+            management must create an environment (through defined processes that work and help the business) where staff are empowered to do their work such that they obtain satisfaction from their improved quality production efforts.
+            I.e. they (management) must strive to find ways to totally remove the colored
+            (red) beads from the bowl (defects in their production process) <br>
+            as this is the only way to ensure staff can do their jobs well and also to ensure there is collective move towards zero defects!</p>
+          <p>Again note the importance of W. Edwards Deming suggestion:</p>
+          <p><i><b>As much as 85% of the cost of quality is
+            management&#39;s problem and responsibility!<br>
+            Once the quality problem or issue has hit the floor, or worker level,
+            workers have little control!</b></i></p>
+          <p align="center">Ultimately only the Executive can remove the RED
+            BEADS!<br>
+            <img alt="" class="img-fluid" src="{{ asset('storage/images/redbeadremoved.png') }}" ></p>
+          <p align="center"><a href="/cmmi" >Click here to see how it is done</a>!</p>
+          <br>
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsetwo" aria-expanded="false" aria-controls=
+        "collapseptwo">The Red Bead
+  experiment<br>
+  described in detail: </button>
+  <div class="collapse" id="collapsetwo">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">If you understand the above then do not worry about the detail below!</h5>
+        <div class="card-body text-center">
+          <p align="left">This is a clever demonstration of the futility of most management systems for improving quality. <br>
+            In fact, Dr. Deming often refers to it as a stupid experiment that you'll never forget. <br>
+            <br>
+            The experiment is described below in a form similar to Dr. Deming's presentation in his seminars. </p>
+          <p align="left">The experiment starts with a sampling device (a bowl of beads and a special
+            paddle with holes in them to collect the beads from the bowl) that has a composition of 80% white and 20% colored beads, normally red beads, hence the name "red bead experiment".&nbsp;
+            Note:&nbsp; When this experiment was first shown it used a ping pong paddle with
+            holes drilled into it and these were used to scoop out the beads from a bowl.&nbsp;<br>
+            <img alt="" class="img-fluid" src="{{ asset('storage/images/pingpongpaddleswithholes.jpg') }}" ><br>
+            Later sophisticated push button bead drop sampling devices were used.</p>
+          <p align="left">While Dr. Deming used 80% white beads and 20% red, you will find this experiment done with 80% white and 20% colored. The colored beads add another dimension to the demonstration. This will be become self evident as the script is read.</p>
+          <p align="left">The fact that the some sampling devices have various colored beads instead of all red is of no consequence, the experiment works just as well. <br>
+            It is necessary however to have 20% colored beads to go along with the text of this demonstration. </p>
+          <p align="left"><strong>The objective of the bead factory in the demonstration is to make white beads. </strong> </p>
+          <p align="left"><strong>The customer will not accept anything but white beads, all colored beads are defective. </strong><br>
+            <br>
+            The colored beads themselves represent defects in an organization's business processes. <br>
+            They represent a faulty machine or tool, a bad engineering design, a defective part, a procedural flaw, an unreasonable change request, ... all the things that can and do go wrong with a process. Supervisors and management control the number of red bead in the processes that are given to the workers. </p>
+          <p align="left">Now. let's proceed assuming that management has developed and purchased the white bead process for the workers of this experiment.</p>
+          <h3>The Experiment</h3>
+          <p align="left">The instructor should take on the role of the department foreman or department supervisor and first of all selects his work team. Realizing that one of the objectives of this demonstration is to point out management prejudices, the instructor can use whatever slogans or phrases he believes fit his particular audience. It many start like the following:<br>
+          </p>
+          <p align="left">Foreman: Okay I need eight bodies. (Pointing to people he wants to select) Can you count? Okay you're hired . Can you push buttons? Okay you're hired. You don't have to think, you just have to do what I tell you. You'll be on an apprenticeship for a while and if you work out we'll hire you. We believe in high quality. We need good people.
+
+            So the process goes until all nine people are selected. The roles they will perform are as follows:<br>
+          </p>
+          <p align="left">Foreman (the instructor)<br>
+          </p>
+          <p align="left">Workers 1 - 6 (assuming fictitious names for this description):<br>
+            <br>
+            &nbsp;&nbsp;&nbsp; <strong>Bob, Dorothy, Henry, Calvin, Carol, Judy</strong></p>
+          <p align="left">And Inspectors:</p>
+          <p align="left">&nbsp;&nbsp;&nbsp; <strong>Inspector 1 - Ron</strong></p>
+          <p align="left">&nbsp;&nbsp;&nbsp; <strong>Inspector 2 - Marty</strong></p>
+          <p align="left">&nbsp;&nbsp;&nbsp; <strong>Chief Inspector - Darwin</strong></p>
+          <p align="left">What will happen is that each worker will take turns drawing a sample of 50 from the sampling device. </p>
+          <p align="left">If you are using a sampling bowl then use the 50 hole paddle. If you are using a sampling box then designate the 50 hole pattern that you will use. This can be done verbally, mark on the face of the box with a water based transparency marker, or mask off the excess holes with masking tape, etc. </p>
+          <p align="left">Once a sample is drawn, then it will be checked by both inspectors (this high quality company has 200% inspection) who will independently write down the number of colored beads they count and show it to the chief inspector. </p>
+          <p align="left">The chief inspector will compare the counts, record the information on a data sheet and a graph, and then announce the number of colored beads drawn in the sample. </p>
+          <p align="left">The data sheet will show the names of the six workers and how many colored beads they each draw for the four days of the experiment. The data sheet will look like the sample data shown in figure 1. </p>
+          <p align="left">The graph will have six plot points for each day for four days and look like the graph in figure 2. </p>
+          <p align="left">These graphs can be set up on chart pads or overhead transparencies.</p>
+          <h2> Red Bead Experiment Data: Output per Worker</h2>
+          <div>
+            <table style="width: 50%" border="1" align="left">
+              <tr>
+                <td class="auto-style4"><strong>Figure 1.</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Worker Day</strong></td>
+                <td class="auto-style4"><strong>Day 1</strong></td>
+                <td class="auto-style4"><strong>Day 2</strong></td>
+                <td class="auto-style4"><strong>Day 3</strong></td>
+                <td class="auto-style4"><strong>Day 4</strong></td>
+                <td class="auto-style4"><strong>Total</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Bob</strong></td>
+                <td class="auto-style4"><strong>14</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>9</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>43</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Dorothy</strong></td>
+                <td class="auto-style4"><strong>12&nbsp;</strong></td>
+                <td class="auto-style4"><strong>5</strong></td>
+                <td class="auto-style4"><strong>13</strong></td>
+                <td class="auto-style4"><strong>5</strong></td>
+                <td class="auto-style4"><strong>35</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Henry</strong></td>
+                <td class="auto-style4"><strong>15</strong></td>
+                <td class="auto-style4"><strong>6</strong></td>
+                <td class="auto-style4"><strong>4</strong></td>
+                <td class="auto-style4"><strong>9</strong></td>
+                <td class="auto-style4"><strong>34</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Calvin</strong></td>
+                <td class="auto-style4"><strong>8</strong></td>
+                <td class="auto-style4"><strong>8</strong></td>
+                <td class="auto-style4"><strong>9</strong></td>
+                <td class="auto-style4"><strong>7</strong></td>
+                <td class="auto-style4"><strong>32</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Carol</strong></td>
+                <td class="auto-style4"><strong>10&nbsp;</strong></td>
+                <td class="auto-style4"><strong>11</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>8</strong></td>
+                <td class="auto-style4"><strong>39</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Judy</strong></td>
+                <td class="auto-style4"><strong>6</strong></td>
+                <td class="auto-style4"><strong>11</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>10</strong></td>
+                <td class="auto-style4"><strong>37</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Total</strong></td>
+                <td class="auto-style4"><strong>65</strong></td>
+                <td class="auto-style4"><strong>51</strong></td>
+                <td class="auto-style4"><strong>55</strong></td>
+                <td class="auto-style4"><strong>49</strong></td>
+                <td class="auto-style4"><strong>220</strong></td>
+              </tr>
+              <tr>
+                <td class="auto-style4"><strong>Average</strong></td>
+                <td class="auto-style4"><strong>10.8</strong></td>
+                <td class="auto-style4"><strong>8.5</strong></td>
+                <td class="auto-style4"><strong>9.2</strong></td>
+                <td class="auto-style4"><strong>8.2</strong></td>
+                <td class="auto-style4"><strong>&nbsp;9.2</strong></td>
+              </tr>
+            </table>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h2>Here is the above data captured in an image:</h2>
+          <p class="ctr"> <img alt="" class="img-fluid" src="{{ asset('storage/images/red-bd01.gif') }}" ></p>
+          <p align="left">After the samples are counted, the beads are returned to the sampling device and another sample is drawn (shaking the box or mixing the bowl adds to the demonstration). Obviously the percent defective is a constant 20% but the actual percentage will vary with each sample due to sampling error and this is where the spoof begins. </p>
+          <p align="left">While there are some lessons in statistics than can be taught from this experiment, the real punch line is in the way the instructor conducts the demonstration and allows people to see themselves and the futility of management practices for improving quality. Each instructor has to know
+            his (or her) audience and how far he can push the points made without
+            turning his audience off.</p>
+          <p align="left">As the experiment is carried out over the four days the instructor uses the results of the samples to make his points. Realizing that the data will most likely vary between 1 and 19 (determined from the control chart calculations for UCL and LCL for a process that is 20% defective and sample sizes of 50). </p>
+          <p align="left">There are a variety of points that can be made. The exact order that the instructor will make the points will be dependent on the actual data developed in the experiment. However, after 24 samples you will have enough high and low readings along with increasing and decreasing trends to make all the points.<br>
+          </p>
+          <h2>Clear Instructions:</h2>
+          <p align="left">The first point of the demonstration has to do with giving clear instructions. Management often believes that if they make the objectives clear then the problems will go away. It could go something like the following:
+          <p align="left">Foreman: Bob you know that our job is to make white beads, the customer will not accept colored beads. You make white beads by first of making sure that the material is well mixed. If it is not mixed well you will have trouble making white beads. (Demonstrate how you want the box
+            shaken or the beads mixed in the bowl)
+          <p align="left">You then turn the box over and hold it completely flat while you push this button on the end and white beads will fall into the holes. (If you are using a sampling bowl then the describe how the paddle is to be used to draw a sample.) Place the paddle into the bowl at the end, scoop deep into the beads and raise the paddle slowly at an angle of precisely 30 degrees and let the extra beads roll off the paddle. Now I've described the job for all your
+            team very clearly. I'm sure that all of you can now make white beads. Bob, would you please make our first batch of white beads.
+          <p align="left">Bob draws the first sample and shows it to the inspectors who record the count and they show it to the chief inspector. He then announces that we have 14 red beads. If colored beads are used then let red beads be red defects, green be green defects, yellow be yellow defects, etc. Still have the chief inspector count and record the total number of colored beads, but have him also report the different number for each color. The instructor can then use this to attach more blame to the worker, i.e. "Yellow defects, you know they are the worst kind and most costly to repair," and so on.
+          <p align="left">Foreman: Bob I've told you that the customer will only accept white beads, colored beads are not acceptable. Did you mix the material and hold the box completely flat like I told you? (Did you hold the sampling paddle at precisely 30 degrees?)
+          <p align="left">Bob: Yes I did
+          <p align="left">Foreman: Well you must not have been paying attention. Dorothy can you please make us a batch of white beads? Remember all that I've told you. (repeat the appropriate instructions again). <br>
+            Dorothy draws a sample and it comes out to be 12 colored beads.
+          <p align="left">Foreman: Well Dorothy that is better than Bob, but you must not have been paying attention either. Let me repeat the instructions once again. (repeat the appropriate instructions) Henry will you please run this process. Remember that the customer will only accept white beads.
+          <h2>Intimidation</h2>
+          <p align="left">Henry then draws a sample and it comes out to be 15.
+          <p align="left">Foreman: Henry I need to talk to you. Didn't you hear me when I gave all these people instructions on how to make white beads? What were you doing at the time, dreaming of some date you were going to have with Judy? I thought you said you wanted a job. We bring you here, give you clear instructions, show you how to make white beads and you still don't do it. What's the matter with you? Now I'm telling you people, you all better start paying attention or I'll have to fire all of you. Calvin it's your turn.</p>
+          <h2>Praise and Comparison</h2>
+          <p align="left">Calvin draws a sample and it comes out at 8 colored beads.</p>
+          <p align="left">Foreman: Now that's much better. Calvin you are catching on. Calvin got the same instructions as the rest of you and he is now beginning to master the process. He was almost twice as good as Henry. We are going in the right direction now. Henry, you especially need to watch Calvin and see how he did it. In fact, the rest of you should all watch Calvin and see how he does it. Carol, it is your turn.</p>
+          <h2>Banners and Slogans</h2>
+          <p align="left">Carol draws a sample and it turns out to be 10.<br>
+          <p align="left">Foreman: Carol, I told you to watch Calvin. He knows how to do it. Now all of you listen up. We have firm quality standards at this factory. Didn't you read the quality first banner over the door of the factory? See that poster on the wall over there, it says "Satisfied customers are happy customers and that means they will buy more." Quality is critical to our survival as a company and you know what that means for all our jobs. This company has to get the silver star quality award. It is crucial to our success in the marketplace. Judy please show us how it's done.
+          <p align="left">Judy draws and sample and it come out to be 6. The foreman then walks over and talks to the chief inspector. <br>
+          <p align="left">Foreman: Darwin, here is a prime example of quality improvement. You see once I pointed out to everyone that we are really serious about quality at this factory, people started to improve. Judy ran the best batch of white beads that we've seen so far. I think that we need to put a poster by everyone's machine instead of just a few on the wall that we have. You know if we buy some of those quality first buttons we all could wear one and give one to every employee that improves. I'm sure that we can drive the point home more about quality. While today wasn't the best I'm sure we'll do better tomorrow. (while walking over to Judy) Judy, excellent job.
+          <p align="left">Keep up the good work.
+          <h2>Incentives</h2>
+          <p align="left">Tomorrow comes and the foreman asks Bob to run his batch of white beads. Bob runs his sample and it comes out at 10. <br>
+          <p align="left">Foreman: Bob you've done better than you did yesterday but we are still going in the wrong direction. I've talked this matter over with our management and we are going to institute a quality bonus for everyone who runs good parts. If you guys and gals will all do better we will have a big pizza party and bonus for everyone. <br>
+            After the bonus scheme is in place Dorothy draws 5, Henry draws 6, and Calvin draws 8 colored beads. The foreman then talks to the audience as if they were the management. He is explaining the value of the bonus scheme. <br>
+          <p align="left">Foreman: Well after we instituted the bonus scheme that I recommended things got better immediately. While things have been going up and down we are still much better than we were yesterday. I think that our people are finally getting the message and all our efforts with the new quality banners and quality first buttons are paying off. We are definitely on the road to zero defects. I think that we should design another button with a big zero in the middle that is surrounded by gold stars that we can present to our best employees. In fact I would like for one of you to speak at our employee meeting and tell them about this exciting new zero defects button program.
+          <h2>Blame</h2>
+          <p align="left">Carol and Judy then each draw 11 colored beads.
+          <p align="left">The foreman is very upset that things are going bad after he has told management that things were improving. He then goes over to the chief inspector and discusses the problem with him. <br>
+          <p align="left">Foreman: Darwin, I'm really upset. These people don't care. Here you give them a good job and show that it is possible to improve and what do they do, ignore you and make life easy for themselves. I know that our incentive scheme was working, look at the results. I think Carol and Judy are spending too much time talking to one another and not paying attention to their job. I think that I'll warn both of them about their performance and tell them if I catch them talking again that I'll have to discipline them.
+          <h2>Performance Appraisals</h2>
+          <p align="left">This process continues again and again until all 24 samples have been taken. The data is then summarized for display and the supervisor then rates everyone's performance. The data is then placed on an overhead projector or summarized on a chart pad. <br>
+          </p>
+          <p align="left">Foreman: Bob, you started off bad and then improved slightly. You have got to do better. Dorothy, you started off bad, then you improved, then you fell off the wagon again, and then improved again. You need to pay closer attention to your work and gain more consistency. Henry, you started off terrible and then you finally caught on. You have the same problem as Dorothy, you need more consistency. Calvin, your the best employee in the department, but you still have room for improvement. You could be the first employee to earn the zero defects button that the manager talked about at the employee meeting. Carol, your performance needs to improve. Your overall rating was good. You can do better if you stop all that talking with Judy I warned you about. Judy, you need to pay attention to your work. You started off good and something must have distracted you. I think it was all the talking with Carol. <br>
+          </p>
+          <p align="left">The foreman should now take on the role of explaining the results to management as he turns to the audience. The focus can now be on the graph and the noting of the various trends. The same praise and blame is offered for the trends. An evaluation of the trends for each day and an overall comparison of each of the workers may be appropriate at this point, as you try to present the results with the best possible explanation. The supervisor would then promise that they can do better and explain all the new quality programs that are in place to address the problems, i.e. posters, etc. He would make special note that he had warned the Judy and Carol and gave them unfavorable performance evaluations. <br>
+          </p>
+          <h2>Discussion of the Experiment</h2>
+          <p align="left">The instructor then steps out of his foreman role and now asks
+            questions as an instructor in order to get the class to evaluate
+            what has happened.</p>
+          <p align="left">What was the average of number of defects for the experiment
+            (X-Bar)? Take the total number of colored beads (220) and divide
+            by 24. (X-Bar=220/24=9.2 for this experiment)<br>
+            Ask them what they
+            expected the average to be and why. <br>
+            Facilitate a discussion that
+            gets them to see that the average has got to be 20% defective
+            since we know that there was a fixed 20% defective all the time
+            in the sampling device. Explain that &quot;p bar&quot; is merely
+            the average percent defective for a given sample size. <br>
+            Given that
+            we had 20% defective, and samples of 50, 20% of 50 is 10. In our
+            example the actual average was 9.2. <br>
+            This will vary slightly with
+            each demonstration.</p>
+          <p align="left">Next show that a simple p-Chart would have control limits of
+            1 and 17. This is determined by using the following formulas:</p>
+          <p class="ctr">P Bar = 220 / 6 * 4 * 50 = .18</p>
+          <p class="ctr">UCL or LCL = X Bar (plus/minus) 3 <i><tt>Sq Root</tt></i> [(X-Bar)(1-P Bar)]</p>
+          <p class="ctr">9.2 (plus/minus) 3 <i><tt>Sq Root</tt></i> [(9.2)(.82)] </p>
+          <p class="ctr">or</p>
+          <p class="ctr">9.2 (plus/minus) 8.24 = .96 to 17.44</p>
+          <p class="ctr"></p>
+          <p class="ctr"><img class="img-fluid" src="{{ asset('storage/images/red-bd02.gif') }}"></p>
+          <p align="left">What this means is that given a 20% defective process, and with
+            sample sizes of 50, that the number of colored beads will vary
+            over 99% of the time between 1 and 17 just due to random chance.
+            In the demonstration we knew that it was random chance because
+            we controlled the experiment by virtue of a constant number of
+            beads. In actuality, we have what Dr. Deming calls a &quot;stable
+            process,&quot; or a system that is varying only because of random
+            chance. This random chance is also referred to as only being affected
+            by &quot;chance or common causes.&quot; Note that a stable process
+            may still turn out faulty items.</p>
+          <p align="left">What this means is that given a 20% defective process, and with
+            sample sizes of 50, that the number of colored beads will vary
+            over 99% of the time between 1 and 17 just due to random chance.
+            In the demonstration we knew that it was random chance because
+            we controlled the experiment by virtue of a constant number of
+            beads. In actuality, we have what Dr. Deming calls a &quot;stable
+            process,&quot; or a system that is varying only because of random
+            chance. This random chance is also referred to as only being affected
+            by &quot;chance or common causes.&quot; Note that a stable process
+            may still turn out faulty items.</p>
+          <h3>Here are 11 sub-lessons (axiomatic [self evident] truths), extrapolated from the above bottom line:</h3>
+          <p align="left">1.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" >All the variations came from the process. There was no evidence that any worker was better than another.<br>
+          </p>
+          <p align="left">2.<img alt="" class="img-fluid"  src="{{ asset('storage/images/lightbulbidea.png') }}" > The workers could, under no circumstances, do any better. The best people doing their best does not matter. Therefore, as managers, we must not rush to blame employees. We must improve our processes and make them so robust that it produces acceptable products no matter who runs it. So, when a problem with a process occurs, we must first investigate what went wrong with the process. If we find the process to be in order, we can then begin to determine if there was an operator error.<br>
+          </p>
+          <p align="left">3.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Pay for performance can be futile. The performance of the workers was governed by the process.<br>
+          </p>
+          <p align="left">4.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Inspection after the process is complete does not improve quality but merely catches defects before they leave the plant. The quality inspectors in the red bead experiment were not adding value to the process. They are there just to make sure defective product did not reach the customer. Since no inspection process is perfect, we can assume that even with 2 quality inspectors, some defective product still made it to the customer. As managers, we must instill quality efforts at all stages of the process so that defects can be caught as soon as they are made rather than discovering them after we have performed more valued added activities to them. The beads may have been defective when we received them from our supplier, but with
+            &#39;<strong>end-of-the-line</strong>&#39; inspection, we will not discover them until we have wasted a lot of time and effort working on them.<br>
+          </p>
+          <p align="left">5.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Clear instructions to workers will only increase the probability that the process will behave as intended. Clear instructions will not improve a process that is out of control (a process that has wild variation from day to day).<br>
+          </p>
+          <p align="left">6.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}"> Intimidation creates fear which does nothing to improve a process.<br>
+          </p>
+          <p align="left">7.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Praise will encourage a person to perform the process as they have learned to perform it. It will not improve a process.<br>
+          </p>
+          <p align="left">8.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Banners and Slogans raise the awareness of quality as an issue to be concerned with, but also tells people that management believes that a reminder a required to produce a quality produce, thus creating an environment of mistrust.<br>
+          </p>
+          <p align="left">9.<img alt="" class="img-fluid" src="{{ asset('storage/images/lightbulbidea.png') }}" > Incentives will not improve a process and have a short effect on employee moral. </p>
+          <p align="left">10. The process has natural variation. Each day the process will produce data different from the day before within a natural range of values. We must collect data about the process to understand the range and variance of the variation.<br>
+          </p>
+          <p align="left">11. To satisfy the customer consistently, the process must be capable of meeting customer requirements. If the customer&#39;s requirements are tighter than we can produce on a consistent basis, then we will only produce acceptable products by accident.</p>
+          <p align="left"><br>
+          </p>
+        </div>
+        <div class="card-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapsethree" aria-expanded="false" aria-controls=
+        "collapsethree">The 14 Observationsfor Management </button>
+  <div class="collapse" id="collapsethree">
+    <div class="container">
+      <div class="card text-center">
+        <h5 class="card-header" align="center">The Red Bead Experiment and 14 Observations for Management<br>
+          underpin the Capability Maturity Model</h5>
+        <div class="card-body text-center">
+          <hr>
+          <h1>Here are the 14 Observations:</h1>
+          <div class="container" align="left">
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">1. Constancy of purpose:</h2>
+            <h3>Create constancy of purpose toward continual improvement of product and service, with a plan to become competitive and to stay in business.</h3>
+            <p align="left"><a href="/images/deming-pt1.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt1" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="4e7ee0fa-6924-47c4-9a69-7b05c9191a2e" src="{{ asset('storage/images/deming-pt1.jpg') }}" class="en-media"></a></p>
+            <p align="left">Management have two concerns. One deals with running the business on a day to day basis. The other deals with the future of the business.</p>
+            <p align="left">They must have clarity on the questions; what are we doing, and why are we doing it?</p>
+            <p align="left">The answer to these questions requires knowledge and looking to the future. It is the difference between short term and long term thinking; the tortoise and the hare.</p>
+            <p align="left">Problems of the future require constancy of purpose, and dedication to improvement.</p>
+            <p align="left">Create constancy of purpose toward continual improvement of products and service, allocating resources to provide for long range needs, rather than only short term profitability, with the aim to become competitive, stay in business and to provide jobs.</p>
+            <p align="left">To stay in business requires that leaders spend time on innovation, research and education. They must constantly improve the design of their product and service.</p>
+            <p align="left">Purpose is an intent, a goal, a vision of some future desired state. To have constancy of purpose then one must first have a purpose.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">2. The new philosophy:</h2>
+            <h3>We are in a new economic age, created in Japan. Management must awaken to the challenge, must learn their responsibilities, and take on leadership for change.</h3>
+            <p align="left"><a href="/images/deming-pt2.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt2" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="12bc14de-1cd1-426b-9e54-f9191668c019" src="{{ asset('storage/images/deming-pt2.jpg') }}" class="en-media"></a></p>
+            <p align="left">Improvement never stops. The system is capricious, erratic, it will affect people in different ways from one month to another. Which is why you need continuous improvement, it can never finish as change never finishes.</p>
+            <p align="left">The customer demands and tastes change very fast, and the competition in the market grows at a rapid rate today.</p>
+            <p align="left">Henry Ward Beecher&nbsp;said "Philosophy of one century is the common sense of the next"; we have to accept new philosophies according to the market trends and technology revolutions.</p>
+            <p align="left">Learn and adopt the new philosophy, one of cooperation to everyone's benefit.</p>
+            <p align="left">Management must awaken to the challenge, learn their responsibilities and take on leadership for change.</p>
+            <p align="left">We are in a new economic age, created in Japan. We can no longer live with commonly accepted levels of delays, mistakes, defective materials and defective workmanship. We cannot accept today, the levels of error that could be tolerated yesterday.&nbsp;Defective products and services are a cost to the system.</p>
+            <p align="left">Only management is in a position to do something about the vast majority of errors. Transformation of Western management style is necessary to halt the continued decline of business and industry.</p>
+            <p align="left">Its management's task to remove the obstacles that prevent people from doing their jobs correctly.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">3. Cease dependence on mass inspection:</h2>
+            <h3>Eliminate the dependence on inspection to achieve quality. Eliminate the need for inspection on a mass basis by building quality into the product in the first place.</h3>
+            <p align="left"><a href="/images/deming-pt3.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt3" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="04fa8229-878f-447e-8cce-3ebde010c253" src="{{ asset('storage/images/deming-pt3.jpg') }}" class="en-media"></a></p>
+            <p align="left">You can not save money if you are more worried about money, than you are about quality.</p>
+            <p align="left">Cease dependence on mass inspection to achieve quality. Mass inspection is not reliable. Inspection sound right, but it is wrong.</p>
+            <p align="left">You can't inspect quality in, yet we have
+              organizations using ISO and audits as a means to prove quality.</p>
+            <p align="left">Routine inspection is the same as planning for defects, acknowledging that the process isn't correct, or that the specifications made no sense in the first place. Inspection is too late as well as ineffective and costly.</p>
+            <p align="left">Instead require statistical evidence that quality is built in.</p>
+            <p align="left">Quality
+              doesn&#39;t come from inspection, but from improvement of the process. Improve the process so that defects aren't produced in the first place. This eliminates the need for inspection on a mass basis.</p>
+            <p align="left">Eliminate the need for mass inspections, as the way of life to achieve quality, by building quality into the product in the first place. Require statistical evidence of quality improvements.</p>
+            <p align="left">You can not save money if you are more worried about money, than you are about quality.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">4. End lowest tender contracts:</h2>
+            <h3>End the practice of awarding business on the basis of price tag along. Instead,
+              minimize total cost. Move toward a single supplier for any one item, on a long-term relationship of loyalty and trust.</h3>
+            <p align="left"><a href="/images/deming-pt4.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt4" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="a4a64ab0-e4c8-4c9d-b85a-af942355db31" src="/images/
+
+deming-pt4.jpg" class="en-media"></a></p>
+            <p align="left">Without adequate measures of quality, business drifts to the lowest bidder, therefore the result is low quality and high cost.</p>
+            <p align="left">Price has no meaning without measure of the quality purchased.</p>
+            <p align="left">End the practice of awarding business on a price tag alone. Instead, require meaningful measures of quality along with price.</p>
+            <p align="left">Reduce the number of suppliers for the same item, by eliminating those that do not qualify with statistical and other evidence of quality.</p>
+            <p align="left">The aim is for both parties to work together, by
+              minimizing variation to increase quality, and to minimize total cost (not merely initial costs)&nbsp;for both parties.</p>
+            <p align="left">This may be achieved by moving toward a single supplier for any one item, on a long term relationship of loyalty and trust.</p>
+            <p align="left">It will lead to continuous improvement between both parties and as a result you will get quality supplies at reduced costs.&nbsp;This is why Japanese manufacturers are so closely aligned to their suppliers.</p>
+            <p align="left">We often spend lots of time and money to find better suppliers and shift rapidly between them for slight monetary gains. Instead of getting vendors to compete on price think long term. Purchasing managers have a new job and must learn it.</p>
+            <p align="left">Today many
+              organizations just outsource to the cheapest supplier, and often to multiple suppliers within the same business unit or project.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">5. Improve every process:</h2>
+            <h3>Improve constantly and forever the system of production and service, to improve quality and productivity, and thus constantly decrease costs.</h3>
+            <p align="left"><a href="/images/deming-pt5.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt5" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="8cf5dab9-d804-4ab9-9848-e102d747a9b4" src="{{ asset('storage/images/deming-pt5.jpg') }}" class="en-media"></a></p>
+            <p align="left">Constantly improve the production and service system to improve quality and productivity, thus decreasing costs.</p>
+            <p align="left">Accept nothing is ever good enough. Improve constantly and forever every process for planning, production and service.</p>
+            <p align="left">Improvement isn't a project with a finite end. Instead, think continuous, never ending improvement.</p>
+            <p align="left">Institute innovation.<br>
+              Everyone should search continually for problems in order to improve every activity in the company, to improve quality and productivity and thus to constantly decrease costs.</p>
+            <p align="left">Finding what's wrong is not improvement. Plugging leaks is not improvement. Don't look at outcomes or defects, instead look at what produces the defects.</p>
+            <p align="left">There should be continual education on waste and continued improvement of quality in every activity, this will yield a continual rise in productivity.</p>
+            <p align="left">It is management's job to work continually on the system (for example work design, incoming work, improvement of tools, supervision, training and retraining). There in no stopping point in the process of quality management.</p>
+            <p align="left">The enterprise system and services must keep growing indefinitely in order to catch up with the competitive market.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">6. Institute training on the job:</h2>
+            <h3>Institute modern methods of training on the job.</h3>
+            <p align="left"><a href="/images/deming-pt61.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt6" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="6cd27c12-ead4-4b84-a7e9-b2ebea07276e" src="/images/
+
+deming-pt61.jpg" class="en-media"></a></p>
+            <p align="left">Provide learning and development. Institute training on the job, training for new skills.</p>
+            <p align="left">People learn in different ways. Training must be totally reconstructed.</p>
+            <p align="left">When training, people need to understand <em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">what</strong></em> the job is and <em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">why</strong></em> it is being done.</p>
+            <p align="left">Training must be done on the job, learning by doing; going into the work and experimenting with work methods and new ideas, studying the results, and striving for perfection.</p>
+            <p align="left">A trained worker has more productivity and quality than an untrained one, so giving training sessions will drastically improve the quality of the person, and also directly helps in better performance with regard to product quality.</p>
+            <p align="left">Institute modern methods of training on the job for all, including management, to make better use of every employee.</p>
+            <p align="left">New skills are required to keep up with changes in tools, methods, techniques,&nbsp;product and service design.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">7. Institute leadership of people:</h2>
+            <h3>The aim of management should be to help people to do a better job. Management is in need of overhaul.</h3>
+            <p align="left"><a href="/images/deming-pt7.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt7" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="ecbfe250-16c1-49c1-9dff-14e404b44783" src="/images/
+
+deming-pt7.jpg" class="en-media"></a></p>
+            <p align="left">Leadership is required <em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">not</strong></em> supervision.</p>
+            <p align="left">Leadership is in need of overhaul, the job of leaders is to help people.</p>
+            <p align="left">Adopt and institute leadership aimed at helping people to do a better job.</p>
+            <p align="left">Adopt and institute principles for leadership improvement.</p>
+            <p align="left">The emphasis of management must be changed from sheer numbers to quality. Improvement of quality will automatically improve productivity.</p>
+            <p align="left">Management must ensure that investigation and actions are taken on reports of inherited defects, system conditions, poor tools, fuzzy operational definitions, variation and all conditions detrimental to quality.&nbsp;You can't delegate quality, its a road to failure.</p>
+            <p align="left">The basic principle is that it's the managers job to coach their staff and improve the system</p>
+            <ul style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px 26px 26px 0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;padding-left:26px;list-style:disc;">
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Firstly, they spend time in the work reinforcing the
+                organizations commitment to its customers and to quality.</li>
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Secondly, they devote time to ensuring the staff doing the work have everything they need to be able to serve the customer.</li>
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Thirdly, when they have a decision to make about either of the above they get data to base their decisions on. There is no knee jerk, instead they get knowledge.</li>
+            </ul>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">8. Drive out fear:</h2>
+            <h3>Drive out fear so that everyone may work effectively for the company.</h3>
+            <p align="left"><a href="/images/deming-pt8.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt8" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="1a13ce24-f711-42a8-a1cb-6fb442fdc0de" src="{{ asset('storage/images/deming-pt8.jpg') }}" class="en-media"></a></p>
+            <p align="left">Extinguish fear so everyone may work effectively for the
+              organization.</p>
+            <p align="left">Build trust. Cooperation and collaboration requires a whole different set of values and relationships than that used in the outdated command and control method.</p>
+            <p align="left">People are afraid of change, any attempt to make things better will lead to a fear of the unknown.</p>
+            <p align="left">Many
+              organizations are run by fear; fear of not getting their bonus, being afraid that they can't meet their annual rating, or fear that they will be low on rating ladders.</p>
+            <p align="left">To achieve better quality people need to feel secure. We need to eliminate fear so that everyone may work effectively for the company. Fear will disappear as management improves and as employees develop confidence in management.</p>
+            <p align="left">Driving our fear is part of at least 8 of the 14 points.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">9. Break down barriers:</h2>
+            <h3>Break down barriers between departments. People in research, design, sales, technology and production must work as a team.</h3>
+            <p align="left"><a href="/images/deming-pt9.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt9" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="65398b1a-60ed-4cbb-8bb6-92cb7e64b592" src="{{ asset('storage/images/deming-pt9.jpg') }}" class="en-media"></a></p>
+            <p align="left">Break down barriers and silos between departments. In other words build a system.</p>
+            <p align="left">Traditionally each silo becomes independent kingdoms, each trying to
+              maximize their own figures.</p>
+            <p align="left">People in research, design, sales, technology&nbsp;and production must work as a team to be able to foresee any production problems, and potential product or service issues.</p>
+            <p align="left">Unless staff work jointly in a spirit of co-operation, each area will try to do what is best for itself, rather than
+              what&#39;s good for the organization. It means cooperation not competition, <strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">everybody wins if the system wins</em></strong>.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">10. Eliminate exhortations:</h2>
+            <h3>Eliminate the use of slogans and exhortations for the work force asking for zero defects and new levels of productivity.</h3>
+            <ul style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px 26px 26px 0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;padding-left:26px;list-style:disc;">
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Eliminate work standards (quotas). Substitute leadership.</strong></li>
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Eliminate management by objective. Substitute leadership.</strong></li>
+              <li style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">Eliminate management by numbers, numerical&nbsp;goals. Substitute leadership.</strong></li>
+            </ul>
+            <p align="left"><a href="/images/deming-pt10.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt10" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="68c52f69-3e4b-4d39-ac35-927137b609a2" src="{{ asset('storage/images/deming-pt10.jpg') }}" class="en-media"></a>Eliminate slogans, warnings and targets for the work force asking for zero defects, doing it right first time and new levels of productivity. Such urging only creates hostile relationships.</p>
+            <p align="left">Posters ask people to do what they can not do.</p>
+            <p align="left">Posters and slogans on the wall stating "do it right first time"; who can do it right first time, when the stuff someone has to work on is already wrong?</p>
+            <p align="left">The causes go beyond the power of the work force, as the majority of low quality and low productivity causes result from the system.</p>
+            <p align="left">If the system has been built around quality, then it will be done right first time, so the slogan will be meaningless.</p>
+            <p align="left">Ensure you substitute work standards and quotas with effective leadership and effective methods. Substitute management (by objectives, numbers and numerical goals) with effective leadership.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">11. Eliminate arbitrary numerical targets:</h2>
+            <h3>Eliminate work standards that prescribe quotas for the work force and numerical goals for people in management. The responsibility of
+              management must be changed from sheer numbers to quality.</h3>
+            <p align="left"><a href="/images/deming-pt11.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt11" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="6e412111-638c-42f3-97a2-b24f0a753768" src="/images/
+
+deming-pt11.jpg" class="en-media"></a></p>
+            <p align="left">Numerical goals accomplish nothing.</p>
+            <p align="left">Traditionally quantity rules over quality.</p>
+            <p align="left">The cost of caring more about numbers than you do about quality is enormous, it results in high costs finding and fixing mistakes. That money spent produces nothing.</p>
+            <p align="left">Focus on quality rather than quantity of product. Remove obstacles depriving workers of their right to take pride in their work. Managers must focus on quality, rather than sheer numbers.</p>
+            <p align="left">Substitute aids and helpful leadership in order to achieve continual improvement of quality and productivity.</p>
+            <p align="left">A system of continuous improvement yields greater production at lower costs. The focus is <strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">not on how many you make</em></strong>, it is on <strong style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:700;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;"><em style="border:0px;font-family:inherit;font-size:inherit;font-style:italic;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;">how well you make them</em></strong>.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">12. Permit pride of workmanship:</h2>
+            <h3>Remove barriers that rob workers and people in management of their right to having pride in their work. This means, for example, abolishment of the annual or merit rating and of management by objective.</h3>
+            <p align="left"><a href="/images/deming-pt12.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt12" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:10px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="e2de34bb-ca80-457c-ba80-ca1c46f0981f" src="/images/
+
+deming-pt12.jpg" class="en-media"></a>Remove the obstacles and barriers that deprive workers, and people in management, of their right to take pride and joy in their work. This implies abolition of the annual merit rating (appraisal of performance) and of Management by Objective, all of which creates conflict and competition.</p>
+            <p align="left">These barriers to pride (a basic human need) among other things, results in low morale and absenteeism.</p>
+            <p align="left">We need people to have pride in their work, not in their ability to meet ratings.</p>
+            <p align="left">Again, the responsibility of Team Leaders, Managers, Directors and senior leaders must be changed from sheer numbers to quality.</p>
+            <p align="left">Fixing points for employees, and ranking them inside the company, infuses competition within that
+              organization. We want collaboration not competition.</p>
+            <p align="left">Involve employees, at all levels, in the process of improvement. Supply workers with the proper methods, materials and tools. Managers work on the system that is impeding performance.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">13. Encourage education:</h2>
+            <h3>Institute a vigorous
+              programmed of education and self-improvement.</h3>
+            <p align="left"><a href="/images/deming-pt13.jpg" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt13" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="2628b133-205b-48d8-bd2e-81e6c7045a5e" src="/images/
+
+deming-pt13.jpg" class="en-media"></a></p>
+            <p align="left">Institute a vigorous program of education and encourage self improvement for everyone.</p>
+            <p align="left">What an
+              organization needs is not just good people; it needs people that are improving with education.</p>
+            <p align="left">Education may not be in a subject that is connected to their work.</p>
+            <p align="left">Self improvement keeps people's minds developing. Point 6 is training for the job, point 13 is elevating people's minds.</p>
+            <p align="left">Advances in competitive position will have their roots in knowledge. No
+              organization can survive with just good people, they need people that are improving.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">&nbsp; </h2>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">14. Top management commitment and action:</h2>
+            <h3>Put everybody in the company to work to accomplish the transformation. The transformation is everybody's job.</h3>
+            <p align="left"><a href="/images/deming-pt14.jpg" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;color:rgb(13, 61, 155);text-decoration:none;transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;"><img title="Deming pt14" class="img-fluid" style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:8px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;height:auto;max-width:100%;display:block;float:right;" name="a13296a5-be7b-49b5-b0aa-2b7f8d55db6b" src="/images/
+
+deming-pt14.jpg" ></a>Put everybody in the organization to work to accomplish the change.</p>
+            <p align="left">Develop a critical mass that will bring about the change; a critical mass including top management.</p>
+            <p align="left">Create a structure in management who take an active part and who spend time in the work reinforcing the 14 points, and the
+              organization&#39;s commitment to it's customers and to quality.</p>
+            <p align="left">Managers should devote time to ensuring the staff doing the work have everything they need to be able to serve the customer. They use data and real knowledge obtained from the customer's point of view to make decisions.</p>
+            <p align="left">Without such a structure no viable long-term benefits will be achieved.</p>
+            <h2 style="border:0px;font-family:&#39;Droid Serif&#39;, Georgia, Cambria, &#39;Times New Roman&#39;, Times, serif;font-size:3.6rem;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:52px;margin:0px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;clear:both;margin-bottom:26px;">Summary</h2>
+            <p align="left">The 14 points are not a menu you can pick and choose from. Deming intended you use all 14. <br>
+              They are one philosophy.</p>
+            <blockquote style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:26px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;quotes:none;"><span style="font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;text-indent:0px;quotes:none;">
+              <p style="border-style: none; border-color: inherit; border-width: 0px; font-family:inherit; font-style:inherit; font-variant:inherit; font-weight:inherit; line-height:inherit; outline:0px; padding:0px; text-indent:0px; vertical-align:baseline; margin-bottom:26px; margin-left: 0px; margin-right: 0px; margin-top: 0px;" class="auto-style1">"The way not to depend on mass inspection (point 3) is to continually improve the process (point 5), to do that you will need quality supplies
+
+                (point 4), finding a quality supplier takes time (point 1), to do so you will need to adopt the philosophy (point 2)" Lloyd Dobbins</p>
+              <p style="border-style: none; border-color: inherit; border-width: 0px; line-height:inherit; outline:0px; padding:0px; text-indent:0px; vertical-align:baseline; margin-bottom:26px; margin-left: 0px; margin-right: 0px; margin-top: 0px;" class="auto-style3">"We want our people to work together, but its hard to do so without point 8, 9, 10, 11 and 12." Lloyd Dobbins</p>
+            </blockquote>
+            <p align="left">The 14 points apply anywhere, to small
+              organizations as well as to large ones, to the service industry as well as to manufacturing. They equally apply to any division within a company.</p>
+            <blockquote style="border:0px;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;margin:26px;outline:0px;padding:0px;text-indent:0px;vertical-align:baseline;quotes:none;"><span style="font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;text-indent:0px;quotes:none;">
+              <p style="border-style: none; border-color: inherit; border-width: 0px; line-height:inherit; outline:0px; padding:0px; text-indent:0px; vertical-align:baseline; margin-bottom:26px; margin-left: 0px; margin-right: 0px; margin-top: 0px;" class="auto-style3">"The 14 points all have one aim, make it possible for people to work with joy and pride" Deming</p>
+            </blockquote>
+            <span style="font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;text-indent:0px;display:table;clear:both;"></div>
+        </div>
+      </div>
+      <div class="card-footer"> 	  <a href="/home/deming">Click here</a> for another version of the 14 Points</div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+</div>
+<br>
+<br>
+<br>
+{% endif %}
+
+    {% if not user %}
+
+
+
+    {% endif %}
+{% endblock %}

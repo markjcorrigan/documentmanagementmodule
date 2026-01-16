@@ -1,0 +1,160 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SS{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container" >
+  <h3>ITIL SS Demand Management</h3>
+  <p><i><a href="/home/itilss">Back to ITIL SS</a></i></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Demand Management</i> aims to understand, anticipate and influence customer demand for services. This process works with Capacity Management to ensure that the service provider has sufficient capacity to meet the required demand for particular services.</span></p>
+  <p><b>Part of</b>: Service Strategy </p>
+  <p><b>Process Owner</b>: Demand Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>The chapter on Demand Management in the Service Strategy book (ITIL V3 2007 Edition) did not offer enough substance to justify a separate Demand Management process, so at IT Process Maps we have decided to treat Demand Management as part of Capacity Management. </p>
+  <p>As the latest <i><b>ITIL 2011</b></i> guidance includes clarifications on the differences in scope between Demand Management and Capacity Management, a specific Demand Management process has been introduced as part of Service Strategy. The process overview of <a href="/images/itilssfour.jpg"  title="Demand-management-itil.jpg">ITIL Demand Management (.JPG)</a> shows the key information flows. </p>
+  <p>The role Demand Manager has been introduced to perform the activities in the Demand Management process. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p>No sub-processes are specified for <a class="mw-selflink selflink">ITIL Demand Management</a>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Demand Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Pattern_of_Business_Activity_PBA" itemprop="itemListElement">Pattern of Business Activity (PBA)</span></b> </p>
+    <ul>
+      <li itemprop="description">Patterns of Business Activity (PBA) are workload profiles describing the demand for particular services. PBAs are an important tool used by Demand Management for anticipating and influencing service demand. <i>(Note: New output in ITIL 2011.)</i> </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Demand_Manager">Demand Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Demand Manager is responsible for understanding, anticipating and influencing customer demand for services. The Demand Manager works with capacity management to ensure that the service provider has sufficient capacity to meet the required demand.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b>Responsibility Matrix: ITIL Demand Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 65%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Demand Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a class="mw-selflink selflink">Demand Management</a><br />
+          <i>(no sub-processes specified)</i></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Demand Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Demand Management.</span> </p>
+  <br>
+  <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Demand_Management"  >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container" >
+  <h3>ITIL SS Demand Management</h3>
+  <p><i><a href="/home/itilss">Back to ITIL SS</a></i></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>ITIL Demand Management</i> aims to understand, anticipate and influence customer demand for services. This process works with Capacity Management to ensure that the service provider has sufficient capacity to meet the required demand for particular services.</span></p>
+  <p><b>Part of</b>: Service Strategy </p>
+  <p><b>Process Owner</b>: Demand Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">4</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>The chapter on Demand Management in the Service Strategy book (ITIL V3 2007 Edition) did not offer enough substance to justify a separate Demand Management process, so at IT Process Maps we have decided to treat Demand Management as part of Capacity Management. </p>
+  <p>As the latest <i><b>ITIL 2011</b></i> guidance includes clarifications on the differences in scope between Demand Management and Capacity Management, a specific Demand Management process has been introduced as part of Service Strategy. The process overview of <a href="/images/itilssfour.jpg"  title="Demand-management-itil.jpg">ITIL Demand Management (.JPG)</a> shows the key information flows. </p>
+  <p>The role Demand Manager has been introduced to perform the activities in the Demand Management process. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p>No sub-processes are specified for <a class="mw-selflink selflink">ITIL Demand Management</a>. </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the ITIL Demand Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Pattern_of_Business_Activity_PBA" itemprop="itemListElement">Pattern of Business Activity (PBA)</span></b> </p>
+    <ul>
+      <li itemprop="description">Patterns of Business Activity (PBA) are workload profiles describing the demand for particular services. PBAs are an important tool used by Demand Management for anticipating and influencing service demand. <i>(Note: New output in ITIL 2011.)</i> </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Demand_Manager">Demand Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Demand Manager is responsible for understanding, anticipating and influencing customer demand for services. The Demand Manager works with capacity management to ensure that the service provider has sufficient capacity to meet the required demand.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="2"><b>Responsibility Matrix: ITIL Demand Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 65%; text-align:center">ITIL Role / Sub-Process </th>
+        <th style="background:#ffffee;">Demand Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a class="mw-selflink selflink">Demand Management</a><br />
+          <i>(no sub-processes specified)</i></td>
+        <td>AR </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the ITIL Demand Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within Demand Management.</span> </p>
+  <br>
+  <br>
+  <p align="left"><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_Demand_Management"  >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

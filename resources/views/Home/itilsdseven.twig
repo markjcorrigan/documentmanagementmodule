@@ -1,0 +1,408 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}ITIL
+SD{% endif %} {% endblock %} {% block body %} {% if user %}
+<div align="left" class="container">
+  <h3>ITIL SD Information Security Management</h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=22') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Information Security Management</i> aims to ensure the confidentiality, integrity and availability of an organization's information, data and IT services. ITIL Security Management usually forms part of an organizational approach to security management which has a wider scope than the IT Service Provider.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Information Security Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#KPIs"><span class="tocnumber">4</span> <span class="toctext">KPIs</span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>ITIL V3 treats Information Security Management as part of the Service Design core volume, resulting in a better integration of this process into the Service Lifecycle (the previous ITIL version provided guidance on Security Management in a separate book). </p>
+  <p>The process has been updated to account for new information security concerns. </p>
+  <p>ITIL does not provide a detailed explanation of all aspects of Information Security Management, as there are dedicated and more detailed standards available (see, for example, ISO 27001). Rather, ITIL highlights the most important activities and assists in identifying interfaces with other Service Management processes. </p>
+  <p>Following the introduction of Design Coordination in <i><b>ITIL 2011</b></i> the information flows have been adapted. The process overview of <a href="/images/itilsdeight.jpg"  title="Itil-security-management.jpg">ITIL Security Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Security Management sub-processes:">These are the <strong class="selflink">Information Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Security_Management_Controls" itemprop="itemListElement">Design of Security Controls</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To design appropriate technical and organizational measures in order to ensure the confidentiality, integrity, security and availability of an organization's assets, information, data and services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Management_Testing" itemprop="itemListElement">Security Testing</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To make sure that all security mechanisms are subject to regular testing. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Management_Incidents" itemprop="itemListElement">Management of Security Incidents</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To detect and fight attacks and intrusions, and to minimize the damage incurred by security breaches. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Management_Review" itemprop="itemListElement">Security Review</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To review if security measures and procedures are still in line with risk perceptions from the business side, and to verify if those measures and procedures are regularly maintained and tested. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the Security Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Availability-ITSCM-Security-Testing-Schedule" itemprop="itemListElement">Availability/ ITSCM/ Security Testing Schedule</span></b> </p>
+    <ul>
+      <li itemprop="description">A schedule for the regular testing of all availability, continuity and security mechanisms, jointly maintained by Availability, IT Service Continuity and <strong class="selflink">Information Security Management</strong>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Management_Rules" itemprop="itemListElement">Event Filtering and Correlation Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">Rules and criteria used to determine if an Event is significant and to decide upon an appropriate response. Event Filtering and Correlation Rules are typically used by Event Monitoring systems. Some of those rules are defined during the Service Design stage, for example to ensure that Events are triggered when the required service availability is endangered. </li>
+      <li><i>Note: The output "Event Filtering and Correlation Rules" has been added in ITIL 2011, to emphasize that (some) Event filtering and correlation rules should be designed by Information Security Management to support the detection of security issues.</i> </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Policy" itemprop="itemListElement">Information Security Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">The Information Security Management Policy describes and communicates the organization's approach to managing information security. It includes references to more specific Underpinning Information Security Policies which, for example, set binding rules for the use of systems and information. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Report" itemprop="itemListElement">Information Security Report</span></b> </p>
+    <ul>
+      <li itemprop="description">The Information Security Report provides other Service Management processes and IT Management with information related to Information Security issues. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Security-Advisories" itemprop="itemListElement">Security Advisories</span></b> </p>
+    <ul>
+      <li itemprop="description">A list of known security vulnerabilities compiled from input by third-party product suppliers. The list contains instructions for preventive measures and for the handling of security breaches once they occur. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Security_Alert" itemprop="itemListElement">Security Alert</span></b> </p>
+    <ul>
+      <li itemprop="description">A warning produced by Information Security Management, typically released when outbreaks of security threats are foreseeable or already under way. The aim is to make sure that users and IT staff are able to identify any attacks and take appropriate precautions. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Security-Management-Information-System" itemprop="itemListElement">Security Management Information System (SMIS)</span></b> </p>
+    <ul>
+      <li itemprop="description">A virtual repository of all Information Security Management data, usually stored in multiple physical locations. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Test_Report" itemprop="itemListElement">Test Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A Test Report provides a summary of testing and assessment activities. A Test Report is created for example during Release tests in the Service Transition stage or during tests carried out by Availability, IT Service Continuity or <strong class="selflink">Information Security Management</strong>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Underpinning-Information-Security-Policy" itemprop="itemListElement">Underpinning Information Security Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">Underpinning Information Security Policies are specific policies complementing the main Information Security Policy by setting binding rules for the use of systems and information as well as for the use and delivery of services, with the aim of improving information security. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="KPIs">KPIs</span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Design#ITIL_KPIs_Information_Security_Management" title="ITIL KPIs Security Management">Key Performance Indicators (KPIs) Information Security Management</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Information_Security_Manager">Information Security Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Information Security Manager is responsible for ensuring the confidentiality, integrity and availability of an organization's assets, information, data and IT services. He is usually involved in an organizational approach to Security Management which has a wider scope than the IT service provider, and includes handling of paper, building access, phone calls etc., for the entire organization.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="7"><b>Responsibility Matrix: ITIL Security Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Information Security Manager </th>
+        <th style="background:#ffffee;">Service Owner </th>
+        <th style="background:#ffffee;">Applications Analyst </th>
+        <th style="background:#ffffee;">Technical Analyst </th>
+        <th style="background:#ffffee;">IT Operator </th>
+        <th style="background:#ffffee;">Facilities Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Security_Management_Controls">Design of Security Controls</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>R </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Security_Management_Testing">Security Testing</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Security_Management_Incidents">Management of Security Incidents</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Security_Management_Review">Security Review</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Information Security Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within ITIL Security Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h3>ITIL SD Information Security Management</h3>
+  <p><i><a href="/home/itilsd">Back to ITIL Service Design</a></i></p>
+  <p><a href="{{ asset('storage/assets/sdsummary.pdf#page=22') }}" >Awesome summary of this process</a></p>
+  <hr>
+  <p><b><span id="Overview">Objective:</span></b> <span id="md-webpage-description" itemprop="description"><i>Information Security Management</i> aims to ensure the confidentiality, integrity and availability of an organization's information, data and IT services. ITIL Security Management usually forms part of an organizational approach to security management which has a wider scope than the IT Service Provider.</span></p>
+  <p><b>Part of</b>: Service Design </p>
+  <p><b>Process Owner</b>: Information Security Manager </p>
+  <p>&#160;</p>
+  <div id="toc" class="toc">
+    <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2>Contents</h2>
+      <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label>
+      </span></div>
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Process_Description"><span class="tocnumber">1</span> <span class="toctext">Process Description</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="#Sub-Processes"><span class="tocnumber">2</span> <span class="toctext">Sub-Processes</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="#Definitions"><span class="tocnumber">3</span> <span class="toctext">Definitions</span></a></li>
+      <li class="toclevel-1 tocsection-4"><a href="#KPIs"><span class="tocnumber">4</span> <span class="toctext">KPIs</span></a></li>
+      <li class="toclevel-1 tocsection-5"><a href="#Roles_.7C_Responsibilities"><span class="tocnumber">5</span> <span class="toctext">Roles | Responsibilities</span></a></li>
+    </ul>
+  </div>
+  <h2><span class="mw-headline" id="Process_Description">Process Description</span></h2>
+  <p>ITIL V3 treats Information Security Management as part of the Service Design core volume, resulting in a better integration of this process into the Service Lifecycle (the previous ITIL version provided guidance on Security Management in a separate book). </p>
+  <p>The process has been updated to account for new information security concerns. </p>
+  <p>ITIL does not provide a detailed explanation of all aspects of Information Security Management, as there are dedicated and more detailed standards available (see, for example, ISO 27001). Rather, ITIL highlights the most important activities and assists in identifying interfaces with other Service Management processes. </p>
+  <p>Following the introduction of Design Coordination in <i><b>ITIL 2011</b></i> the information flows have been adapted. The process overview of <a href="/images/itilsdeight.jpg"  title="Itil-security-management.jpg">ITIL Security Management (.JPG)</a> shows the key information flows (see Fig. 1). </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Sub-Processes">Sub-Processes</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name" content="Security Management sub-processes:">These are the <strong class="selflink">Information Management</strong> sub-processes and their process objectives:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="ITIL_Security_Management_Controls" itemprop="itemListElement">Design of Security Controls</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To design appropriate technical and organizational measures in order to ensure the confidentiality, integrity, security and availability of an organization's assets, information, data and services. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Management_Testing" itemprop="itemListElement">Security Testing</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To make sure that all security mechanisms are subject to regular testing. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Management_Incidents" itemprop="itemListElement">Management of Security Incidents</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To detect and fight attacks and intrusions, and to minimize the damage incurred by security breaches. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Management_Review" itemprop="itemListElement">Security Review</span></b> </p>
+    <ul>
+      <li itemprop="description">Process Objective: To review if security measures and procedures are still in line with risk perceptions from the business side, and to verify if those measures and procedures are regularly maintained and tested. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+  <p class="mw-empty-elt"></p>
+  <div itemscope="itemscope" itemtype="https://schema.org/ItemList"><!-- define schema.org/ItemList -->
+    <meta itemprop="itemListOrder" content="Ascending" />
+    <p><span itemprop="name">The following ITIL terms and acronyms (<i>information objects</i>) are used in the Security Management process to represent process outputs and inputs:</span> </p>
+    <p>&#160;</p>
+    <p><b><span id="Availability-ITSCM-Security-Testing-Schedule" itemprop="itemListElement">Availability/ ITSCM/ Security Testing Schedule</span></b> </p>
+    <ul>
+      <li itemprop="description">A schedule for the regular testing of all availability, continuity and security mechanisms, jointly maintained by Availability, IT Service Continuity and <strong class="selflink">Information Security Management</strong>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Management_Rules" itemprop="itemListElement">Event Filtering and Correlation Rules</span></b> </p>
+    <ul>
+      <li itemprop="description">Rules and criteria used to determine if an Event is significant and to decide upon an appropriate response. Event Filtering and Correlation Rules are typically used by Event Monitoring systems. Some of those rules are defined during the Service Design stage, for example to ensure that Events are triggered when the required service availability is endangered. </li>
+      <li><i>Note: The output "Event Filtering and Correlation Rules" has been added in ITIL 2011, to emphasize that (some) Event filtering and correlation rules should be designed by Information Security Management to support the detection of security issues.</i> </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Policy" itemprop="itemListElement">Information Security Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">The Information Security Management Policy describes and communicates the organization's approach to managing information security. It includes references to more specific Underpinning Information Security Policies which, for example, set binding rules for the use of systems and information. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="ITIL_Security_Report" itemprop="itemListElement">Information Security Report</span></b> </p>
+    <ul>
+      <li itemprop="description">The Information Security Report provides other Service Management processes and IT Management with information related to Information Security issues. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Security-Advisories" itemprop="itemListElement">Security Advisories</span></b> </p>
+    <ul>
+      <li itemprop="description">A list of known security vulnerabilities compiled from input by third-party product suppliers. The list contains instructions for preventive measures and for the handling of security breaches once they occur. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Security_Alert" itemprop="itemListElement">Security Alert</span></b> </p>
+    <ul>
+      <li itemprop="description">A warning produced by Information Security Management, typically released when outbreaks of security threats are foreseeable or already under way. The aim is to make sure that users and IT staff are able to identify any attacks and take appropriate precautions. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Security-Management-Information-System" itemprop="itemListElement">Security Management Information System (SMIS)</span></b> </p>
+    <ul>
+      <li itemprop="description">A virtual repository of all Information Security Management data, usually stored in multiple physical locations. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Test_Report" itemprop="itemListElement">Test Report</span></b> </p>
+    <ul>
+      <li itemprop="description">A Test Report provides a summary of testing and assessment activities. A Test Report is created for example during Release tests in the Service Transition stage or during tests carried out by Availability, IT Service Continuity or <strong class="selflink">Information Security Management</strong>. </li>
+    </ul>
+    <p><br />
+    </p>
+    <p><b><span id="Underpinning-Information-Security-Policy" itemprop="itemListElement">Underpinning Information Security Policy</span></b> </p>
+    <ul>
+      <li itemprop="description">Underpinning Information Security Policies are specific policies complementing the main Information Security Policy by setting binding rules for the use of systems and information as well as for the use and delivery of services, with the aim of improving information security. </li>
+    </ul>
+  </div>
+  <!-- end of schema.org/ItemList -->
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span class="mw-headline" id="KPIs">KPIs</span></h2>
+  <p class="mw-empty-elt"></p>
+  <ul>
+    <li><a href="https://wiki.en.it-processmaps.com/index.php/ITIL_KPIs_Service_Design#ITIL_KPIs_Information_Security_Management" title="ITIL KPIs Security Management">Key Performance Indicators (KPIs) Information Security Management</a></li>
+  </ul>
+  <p class="mw-empty-elt"> </p>
+  <p>&#160;</p>
+  <h2><span id="Roles_|_Responsibilities"></span><span class="mw-headline" id="Roles_.7C_Responsibilities">Roles | Responsibilities</span></h2>
+  <p><b><span id="Information_Security_Manager">Information Security Manager - Process Owner</span></b> </p>
+  <ul>
+    <li>The Information Security Manager is responsible for ensuring the confidentiality, integrity and availability of an organization's assets, information, data and IT services. He is usually involved in an organizational approach to Security Management which has a wider scope than the IT service provider, and includes handling of paper, building access, phone calls etc., for the entire organization.</li>
+  </ul>
+  <p>&#160;</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="margin-left: auto; margin-right: auto; text-align:center;">
+    <tbody>
+      <tr>
+        <td style="background:#ffffdd;" colspan="7"><b>Responsibility Matrix: ITIL Security Management</b></td>
+      </tr>
+      <tr>
+        <th style="background:#ffffee; width: 50%; text-align:center">ITIL Role | Sub-Process </th>
+        <th style="background:#ffffee;">Information Security Manager </th>
+        <th style="background:#ffffee;">Service Owner </th>
+        <th style="background:#ffffee;">Applications Analyst </th>
+        <th style="background:#ffffee;">Technical Analyst </th>
+        <th style="background:#ffffee;">IT Operator </th>
+        <th style="background:#ffffee;">Facilities Manager </th>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Security_Management_Controls">Design of Security Controls</a></td>
+        <td>AR </td>
+        <td>R </td>
+        <td>R </td>
+        <td>R </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Security_Management_Testing">Security Testing</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>R </td>
+        <td>R </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Security_Management_Incidents">Management of Security Incidents</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><a href="#ITIL_Security_Management_Review">Security Review</a></td>
+        <td>AR </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+        <td>- </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&#160;</p>
+  <p><b>Remarks</b> </p>
+  <p><span id="Accountable">[1] <i>A: Accountable</i> according to the RACI Model: Those who are ultimately accountable for the correct and thorough completion of the Information Security Management process.</span> </p>
+  <p><span id="Responsible">[2] <i>R: Responsible</i> according to the RACI Model: Those who do the work to achieve a task within ITIL Security Management.</span> </p>
+  <br>
+  <br>
+  <p><a href="https://wiki.en.it-processmaps.com/index.php/Service_Catalogue_Management" >Thanks WIKI</a></p>
+  <br>
+  <br>
+</div>
+{% endif %}
+{% endblock %}

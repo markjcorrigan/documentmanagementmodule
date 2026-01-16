@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Template Name{% endif %}  {% endblock %}
+{% block body %}
+
+
+
+
+
+
+
+
+{% if user %}
+
+<div class="container">
+<p>test in</p>
+	</div>
+
+{% else %}
+
+<div class="container">
+<p>test out</p>
+	</div>
+{% endif %}
+
+
+{% endblock %}

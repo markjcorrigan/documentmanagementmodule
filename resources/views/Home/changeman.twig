@@ -1,0 +1,409 @@
+{% extends 'base.twig' %} {% block title %} {% if not user %}PMWay{% endif %} {% if user %}Change Management (PM){% endif %} {% endblock %} {% block body %} {% if user %} <!--BODY-->
+<div align="left" class="container">
+  <h2><strong>Definition of Change Management in Context</strong></h2>
+  <p>The Prosci definition of change management:&nbsp;the process, tools and techniques to manage the&nbsp;people side&nbsp;of change to achieve a required business outcome.</p>
+  <h2>The Background of Our Change Management Definition</h2>
+  <p>"What is change management?"&nbsp;This is a question you may have heard from colleagues or coworkers in passing or in formal presentations. While many of us know intuitively what change management is, we have a hard time conveying to others what we really mean.</p>
+  <p>In thinking about how to define change management, it is important to provide&nbsp;context&nbsp;related to two other concepts: the&nbsp;change&nbsp;itself and project management. Change management and project management are two critical disciplines that are applied to a&nbsp;variety&nbsp;of organizational changes to improve the&nbsp;likelihood of success&nbsp;and&nbsp;return on investment.&nbsp;</p>
+  <h2>The Goal of Change: Improving an Organization by Altering How Work Is Done</h2>
+  <p>When you introduce a change to the organization, you are ultimately going to be impacting one or more of the following:</p>
+  <ul>
+    <li>Processes</li>
+    <li>Systems</li>
+    <li>Organization structure</li>
+    <li>Job roles</li>
+  </ul>
+  <p>While there are numerous approaches and tools that can be used to improve the organization, all of them ultimately prescribe adjustments to one or more of the four parts of the organization listed above. Change&nbsp;typically results as a reaction to specific problems or opportunities the organization is facing based on internal or external stimuli. While the notion of becoming &ldquo;more competitive&rdquo; or &ldquo;closer to the customer&rdquo; or &ldquo;more efficient&rdquo; can be the motivation to change, at some point these goals must be transformed into the&nbsp;specific impacts&nbsp;on processes, systems, organization structures or job roles. This is the process of defining the&nbsp;change.</p>
+  <p style="text-align:center">Looking for more detail on the above?<br>
+    Added to this page from Prosci by PMWay.<br>
+    Taken from the Carnegie Mellon Capability Maturity Model.</p>
+  <div style="text-align:center">
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseppt" aria-expanded="false" aria-controls=
+        "collapseppt">The<br>
+    People, Process
+    and Technology <br>
+    Triad </button>
+    <div class="collapse" id="collapseppt">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center">The People, Process
+            and Technology Triad</h5>
+          <div class="card-body text-center">
+            <h5>Improved processes, defined and knitted into your systems (technology), will enable your people <br>
+              to better service your valued clients.</h5>
+            <p class="medium text-center"><em>Hover your mouse over the image below.</em></p>
+            <img class="img-fluid" src=
+                "/images/ppt.png" onmouseover=
+                                                                         "this.src='{{ asset('storage/images/peopleprocessbottomlineboxedin.png') }}'"
+                                                                         onmouseout=
+                                                                         "this.src='{{ asset('storage/images/ppt.png') }}'"/>
+            <h5>Everyone realizes the importance of having a motivated, quality workforce
+              but even our finest people cannot perform at their best when the
+              process is not understood or operating at its best.</h5>
+          </div>
+          <div class="card-footer">&nbsp;The three points
+            (nodes) of this triangle <br>
+            pulled outward (focused upon,
+            utilized correctly, mutually improved), <br>
+            drives the positive change
+            that is needed to create business value.<br>
+            <em>And<br>
+            'Process
+            is the glue that ties the triad together'!</em> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------</div>-------------->
+  <br>
+  <h2>Defining Change Management and Project Management</h2>
+  <p>It is not enough to merely prescribe the&nbsp;change and expect it to happen; creating change within an organization takes hard work and an understanding of what must actually take place to make the change&nbsp;happen. To begin, let&rsquo;s look at the formal definitions of change management&nbsp;and project management, two key disciplines required to bring a change to life. These are two commonly accepted definitions that help us begin to think about these two distinct but intertwined disciplines:</p>
+  <h3>Project management</h3>
+  <p>Project management is the application of knowledge, skills, tools and techniques to&nbsp;project activities&nbsp;to meet project requirements.</p>
+  <p>Project management is accomplished through the application and integration of the project management processes of initiating, planning, executing, monitoring and controlling, and closing.</p>
+  <p><em>(From PMBOK&reg;&nbsp;Guide, Sixth Edition)</em></p>
+  <h3>Change management</h3>
+  <p>Change management is the process, tools and techniques to manage the&nbsp;people side&nbsp;of change to achieve the required business outcome.</p>
+  <p>Change management incorporates the organizational tools that can be utilized to help individuals make successful personal transitions resulting in the adoption and realization of change.</p>
+  <p><img alt="States of Change change management and project management integration" class="img-fluid" src="{{ asset('storage/images/statesofchangea.png') }}" style="margin: 10px auto; display: block;" title="States of Change change management and project management integration">&nbsp;</p>
+  <p>As shown above, both project management and change management support moving an organization from a&nbsp;current state&nbsp;(how things are done today), through a&nbsp;transition&nbsp;state to a&nbsp;desired future state&nbsp;(the new processes, systems, organization structures or job roles defined by the&nbsp;change). Project management focuses on the&nbsp;tasks&nbsp;to achieve project requirements. Change management focuses on the&nbsp;people&nbsp;impacted by the change.</p>
+  <p>Any change to processes, systems, organization structures and/or job roles will have a technical side and a people side. Project management and change management have evolved as disciplines to provide both the structure and the tools needed to manage and realize change successfully on the technical and people side.</p>
+  <p>&nbsp;</p>
+  <div>
+    <table border="0" class="table table-hover" style="width: 40%;">
+      <tbody>
+        <tr>
+          <td><h5>Discipline</h5></td>
+          <td><h5>Process</h5></td>
+          <td><h5>Tools</h5></td>
+        </tr>
+        <tr>
+          <td><p>&nbsp;</p>
+            <p>Project management</p></td>
+          <td><ul>
+              <li>Initiating</li>
+              <li>Planning</li>
+              <li>Executing</li>
+              <li>Monitoring and controlling</li>
+              <li>Closing</li>
+            </ul>
+            <p><i>(From PMBOK&reg; Guide, Third Edition)</i><i></i></p></td>
+          <td><ul>
+              <li>Statement of work,</li>
+              <li>Project charter,</li>
+              <li>Business case</li>
+              <li>Work breakdown structure,</li>
+              <li>Budget estimations</li>
+              <li>Resource allocation</li>
+              <li>Schedules</li>
+              <li>Tracking</li>
+              <li>Risk identification and mitigation</li>
+              <li>Reports on performance and compliance</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td><p>&nbsp;</p>
+            <p>Change management</p></td>
+          <td><ul>
+              <li>Planning for change</li>
+              <li>Managing change</li>
+              <li>Reinforcing change</li>
+            </ul>
+            <p><i>(From Prosci's research-based methodology)</i><i></i></p></td>
+          <td><ul>
+              <li>Individual change model</li>
+              <li>Communications</li>
+              <li>Sponsorship</li>
+              <li>Coaching</li>
+              <li>Training</li>
+              <li>Resistance management</li>
+            </ul></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2>What Each Team Is Trying to Achieve</h2>
+  <p>The project team outlines the specific activities for defining and prescribing how to move from point A to point B (by changing processes, systems, organization structures or job roles). The change team outlines the steps needed to help the individuals impacted by the change do their jobs in the new way (for example, people transitioning from fulfilling Function A to Function B as shown below).</p>
+  <p><img alt="states of change defining cm and pm" class="img-fluid" src="{{ asset('storage/images/statesofchangeb.png') }}" style="margin: 10px auto; display: block;" title="states of change defining cm and pm" ></p>
+  <p>The goal of project management is to effectively deploy resources in a structured manner to develop and implement the solution in terms of what needs to be done to processes, systems, organizational structure and job roles. The goal of change management is to help each individual impacted by the change to make a successful transition, given what is required by the solution.</p>
+  <h2>The Right Amount of Change Management and Project Management</h2>
+  <p>Each initiative or project you undertake requires&nbsp;some level&nbsp;of project management and change management. These two disciplines are tools used to support the implementation of a variety of changes that you may be undertaking. There are very few instances where you will not need both disciplines. For example, the five projects below need both project management and change management:</p>
+  <ol>
+    <li>Deploying an ERP solution across the entire organization</li>
+    <li>Reengineering the work processes and contact scripts of your call center agents</li>
+    <li>Integrating two organizations and their information systems following a merger or acquisition</li>
+    <li>Redesigning the physical layout of an office space</li>
+    <li>Developing a new sales channel</li>
+  </ol>
+  <p>Change management and project management are tools that need to be applied&nbsp;independent&nbsp;of the actual&nbsp;change&nbsp;that you are undertaking. Anytime you alter processes, systems, organization structures or job roles, you need a structured approach to manage both the technical side and the people side of the pending change.</p>
+  <p>Do project management and change management look the same for every initiative? Typically not. While the right amount of project management and change management is at least&nbsp;some, each of these tools are at their best when they are&nbsp;customized&nbsp;for the unique situation that you are facing. Your organization, its culture and history, and the specific&nbsp;change&nbsp;that you are implementing all influence the right amount of project management and change management.</p>
+  <h3>How much&nbsp;project management&nbsp;is needed?</h3>
+  <p>The amount of project management depends on the complexity and degree of the change to existing processes, systems, organizational structure and job roles.</p>
+  <h3>How much&nbsp;change management&nbsp;is needed?</h3>
+  <p>Change management engagement depends on the amount of disruption created in individual employees&rsquo; day-to-day work. It also depends on the organization&rsquo;s attributes, such as culture, value system and history with past changes.</p>
+  <h2>Integrating Change Management and Project Management</h2>
+  <p>While separate as fields of study, on a real project change management and project management are integrated. The steps and activities move in&nbsp;unison&nbsp;as teams work to move from the current state to the desired future state.</p>
+  <h3>Change Management and Project Management Planning Activities</h3>
+  <p>As an example, think about what activities occur during the planning phase of a project between both teams.</p>
+  <p>Project managers are:</p>
+  <ul>
+    <li>Identifying the milestones and activities that must be completed</li>
+    <li>Outlining the resources needed and how they will work together</li>
+    <li>Defining the scope of what will be part of the project and what will not be</li>
+  </ul>
+  <p>Change managers are:</p>
+  <ul>
+    <li>Crafting key messages that must be communicated</li>
+    <li>Working with project sponsors to build strong and active coalitions of senior leaders</li>
+    <li>Making the case of why the change is needed to employees throughout the organization, even before the specific details of the solution are complete</li>
+  </ul>
+  <p>The most effective projects integrate these activities into a&nbsp;single project plan.</p>
+  <h2>Defining the Change, Project Management and Change Management</h2>
+  <p>It can be difficult to separate out the&nbsp;change, project management, and change management. In practice, these three components are intertwined in order to deliver a positive outcome to the organization. However, there is value in separating out the components.</p>
+  <p>Thinking about the three components separately makes it easier to&nbsp;define&nbsp;and help others&nbsp;understand&nbsp;these distinct elements. Separating out these three components is also a solid first step when&nbsp;troubleshooting&nbsp;on a particular project that may not be moving ahead as expected. For instance, are our challenges coming from:</p>
+  <ul>
+    <li>The design of the&nbsp;change?</li>
+    <li>The technical steps, activities or resources (project management)?</li>
+    <li>How individuals are accepting or resisting the change (change management)?</li>
+  </ul>
+  <p>Think about what each component is trying to achieve (see the table below) and use this to describe change management in context of the change and project management.</p>
+  <div>
+    <table border="0" class="table table-hover" style="width: 60%;">
+      <tbody>
+        <tr>
+          <td><h5>Element:</h5></td>
+          <td><h5>Goal or objective:</h5></td>
+        </tr>
+        <tr>
+          <td><p>The change</p></td>
+          <td><p>To improve the organization in some fashion, such as reducing costs, improving revenues, solving problems, seizing opportunities, aligning work and strategy or streamlining information flow within the organization</p></td>
+        </tr>
+        <tr>
+          <td><p>Project management</p></td>
+          <td><p>To develop a set of specific plans and actions to achieve "the change" given time, cost and scope constraints and to utilize resources effectively (managing the technical side of the change)</p></td>
+        </tr>
+        <tr>
+          <td><p>Change management</p></td>
+          <td><p>To apply a systematic approach for helping the individuals impacted by "the change" be successful by building support, addressing resistance and developing the required knowledge and ability to implement the change (managing the people side of the change)</p></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Thank you: https://www.prosci.com/change-management/thought-leadership-library/change-management-definition </p>
+</div>
+<!-- Content Container ends here -->{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div align="left" class="container">
+  <h2><strong>Definition of Change Management in Context</strong></h2>
+  <p>The Prosci definition of change management:&nbsp;the process, tools and techniques to manage the&nbsp;people side&nbsp;of change to achieve a required business outcome.</p>
+  <h2>The Background of Our Change Management Definition</h2>
+  <p>"What is change management?"&nbsp;This is a question you may have heard from colleagues or coworkers in passing or in formal presentations. While many of us know intuitively what change management is, we have a hard time conveying to others what we really mean.</p>
+  <p>In thinking about how to define change management, it is important to provide&nbsp;context&nbsp;related to two other concepts: the&nbsp;change&nbsp;itself and project management. Change management and project management are two critical disciplines that are applied to a&nbsp;variety&nbsp;of organizational changes to improve the&nbsp;likelihood of success&nbsp;and&nbsp;return on investment.&nbsp;</p>
+  <h2>The Goal of Change: Improving an Organization by Altering How Work Is Done</h2>
+  <p>When you introduce a change to the organization, you are ultimately going to be impacting one or more of the following:</p>
+  <ul>
+    <li>Processes</li>
+    <li>Systems</li>
+    <li>Organization structure</li>
+    <li>Job roles</li>
+  </ul>
+  <p>While there are numerous approaches and tools that can be used to improve the organization, all of them ultimately prescribe adjustments to one or more of the four parts of the organization listed above. Change&nbsp;typically results as a reaction to specific problems or opportunities the organization is facing based on internal or external stimuli. While the notion of becoming &ldquo;more competitive&rdquo; or &ldquo;closer to the customer&rdquo; or &ldquo;more efficient&rdquo; can be the motivation to change, at some point these goals must be transformed into the&nbsp;specific impacts&nbsp;on processes, systems, organization structures or job roles. This is the process of defining the&nbsp;change.</p>
+  <p style="text-align:center">Looking for more detail on the above?<br>
+    Added to this page from Prosci by PMWay.<br>
+    Taken from the Carnegie Mellon Capability Maturity Model.</p>
+  <div style="text-align:center">
+    <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapseppt" aria-expanded="false" aria-controls=
+        "collapseppt">The<br>
+    People, Process
+    and Technology <br>
+    Triad </button>
+    <div class="collapse" id="collapseppt">
+      <div class="container">
+        <div class="card text-center">
+          <h5 class="card-header" align="center">The People, Process
+            and Technology Triad</h5>
+          <div class="card-body text-center">
+            <h5>Improved processes, defined and knitted into your systems (technology), will enable your people <br>
+              to better service your valued clients.</h5>
+            <p class="medium text-center"><em>Hover your mouse over the image below.</em></p>
+              <img class="img-fluid hover-swap"
+                   src="{{ asset('storage/images/ppt.png') }}"
+                   data-hover-src="{{ asset('storage/images/peopleprocessbottomlineboxedin.png') }}"
+                   data-original-src="{{ asset('storage/images/ppt.png') }}"
+                   alt="People Process Bottom Line"/>
+
+              <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                      document.querySelectorAll('.hover-swap').forEach(img => {
+                          const originalSrc = img.getAttribute('data-original-src');
+                          const hoverSrc = img.getAttribute('data-hover-src');
+
+                          img.addEventListener('mouseenter', () => {
+                              img.src = hoverSrc;
+                          });
+
+                          img.addEventListener('mouseleave', () => {
+                              img.src = originalSrc;
+                          });
+                      });
+                  });
+              </script>
+            <h5>Everyone realizes the importance of having a motivated, quality workforce
+              but even our finest people cannot perform at their best when the
+              process is not understood or operating at its best.</h5>
+          </div>
+          <div class="card-footer">&nbsp;The three points
+            (nodes) of this triangle <br>
+            pulled outward (focused upon,
+            utilized correctly, mutually improved), <br>
+            drives the positive change
+            that is needed to create business value.<br>
+            <em>And<br>
+            'Process
+            is the glue that ties the triad together'!</em> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------</div>-------------->
+  <br>
+  <h2>Defining Change Management and Project Management</h2>
+  <p>It is not enough to merely prescribe the&nbsp;change and expect it to happen; creating change within an organization takes hard work and an understanding of what must actually take place to make the change&nbsp;happen. To begin, let&rsquo;s look at the formal definitions of change management&nbsp;and project management, two key disciplines required to bring a change to life. These are two commonly accepted definitions that help us begin to think about these two distinct but intertwined disciplines:</p>
+  <h3>Project management</h3>
+  <p>Project management is the application of knowledge, skills, tools and techniques to&nbsp;project activities&nbsp;to meet project requirements.</p>
+  <p>Project management is accomplished through the application and integration of the project management processes of initiating, planning, executing, monitoring and controlling, and closing.</p>
+  <p><em>(From PMBOK&reg;&nbsp;Guide, Sixth Edition)</em></p>
+  <h3>Change management</h3>
+  <p>Change management is the process, tools and techniques to manage the&nbsp;people side&nbsp;of change to achieve the required business outcome.</p>
+  <p>Change management incorporates the organizational tools that can be utilized to help individuals make successful personal transitions resulting in the adoption and realization of change.</p>
+  <p><img alt="States of Change change management and project management integration" class="img-fluid" src="{{ asset('storage/images/statesofchangea.png') }}" style="margin: 10px auto; display: block;" title="States of Change change management and project management integration">&nbsp;</p>
+  <p>As shown above, both project management and change management support moving an organization from a&nbsp;current state&nbsp;(how things are done today), through a&nbsp;transition&nbsp;state to a&nbsp;desired future state&nbsp;(the new processes, systems, organization structures or job roles defined by the&nbsp;change). Project management focuses on the&nbsp;tasks&nbsp;to achieve project requirements. Change management focuses on the&nbsp;people&nbsp;impacted by the change.</p>
+  <p>Any change to processes, systems, organization structures and/or job roles will have a technical side and a people side. Project management and change management have evolved as disciplines to provide both the structure and the tools needed to manage and realize change successfully on the technical and people side.</p>
+  <p>&nbsp;</p>
+  <div>
+    <table border="0" class="table table-hover" style="width: 40%;">
+      <tbody>
+        <tr>
+          <td><h5>Discipline</h5></td>
+          <td><h5>Process</h5></td>
+          <td><h5>Tools</h5></td>
+        </tr>
+        <tr>
+          <td><p>&nbsp;</p>
+            <p>Project management</p></td>
+          <td><ul>
+              <li>Initiating</li>
+              <li>Planning</li>
+              <li>Executing</li>
+              <li>Monitoring and controlling</li>
+              <li>Closing</li>
+            </ul>
+            <p><i>(From PMBOK&reg; Guide, Third Edition)</i><i></i></p></td>
+          <td><ul>
+              <li>Statement of work,</li>
+              <li>Project charter,</li>
+              <li>Business case</li>
+              <li>Work breakdown structure,</li>
+              <li>Budget estimations</li>
+              <li>Resource allocation</li>
+              <li>Schedules</li>
+              <li>Tracking</li>
+              <li>Risk identification and mitigation</li>
+              <li>Reports on performance and compliance</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td><p>&nbsp;</p>
+            <p>Change management</p></td>
+          <td><ul>
+              <li>Planning for change</li>
+              <li>Managing change</li>
+              <li>Reinforcing change</li>
+            </ul>
+            <p><i>(From Prosci's research-based methodology)</i><i></i></p></td>
+          <td><ul>
+              <li>Individual change model</li>
+              <li>Communications</li>
+              <li>Sponsorship</li>
+              <li>Coaching</li>
+              <li>Training</li>
+              <li>Resistance management</li>
+            </ul></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2>What Each Team Is Trying to Achieve</h2>
+  <p>The project team outlines the specific activities for defining and prescribing how to move from point A to point B (by changing processes, systems, organization structures or job roles). The change team outlines the steps needed to help the individuals impacted by the change do their jobs in the new way (for example, people transitioning from fulfilling Function A to Function B as shown below).</p>
+  <p><img alt="states of change defining cm and pm" class="img-fluid" src="{{ asset('storage/images/statesofchangeb.png') }}" style="margin: 10px auto; display: block;" title="states of change defining cm and pm" ></p>
+  <p>The goal of project management is to effectively deploy resources in a structured manner to develop and implement the solution in terms of what needs to be done to processes, systems, organizational structure and job roles. The goal of change management is to help each individual impacted by the change to make a successful transition, given what is required by the solution.</p>
+  <h2>The Right Amount of Change Management and Project Management</h2>
+  <p>Each initiative or project you undertake requires&nbsp;some level&nbsp;of project management and change management. These two disciplines are tools used to support the implementation of a variety of changes that you may be undertaking. There are very few instances where you will not need both disciplines. For example, the five projects below need both project management and change management:</p>
+  <ol>
+    <li>Deploying an ERP solution across the entire organization</li>
+    <li>Reengineering the work processes and contact scripts of your call center agents</li>
+    <li>Integrating two organizations and their information systems following a merger or acquisition</li>
+    <li>Redesigning the physical layout of an office space</li>
+    <li>Developing a new sales channel</li>
+  </ol>
+  <p>Change management and project management are tools that need to be applied&nbsp;independent&nbsp;of the actual&nbsp;change&nbsp;that you are undertaking. Anytime you alter processes, systems, organization structures or job roles, you need a structured approach to manage both the technical side and the people side of the pending change.</p>
+  <p>Do project management and change management look the same for every initiative? Typically not. While the right amount of project management and change management is at least&nbsp;some, each of these tools are at their best when they are&nbsp;customized&nbsp;for the unique situation that you are facing. Your organization, its culture and history, and the specific&nbsp;change&nbsp;that you are implementing all influence the right amount of project management and change management.</p>
+  <h3>How much&nbsp;project management&nbsp;is needed?</h3>
+  <p>The amount of project management depends on the complexity and degree of the change to existing processes, systems, organizational structure and job roles.</p>
+  <h3>How much&nbsp;change management&nbsp;is needed?</h3>
+  <p>Change management engagement depends on the amount of disruption created in individual employees&rsquo; day-to-day work. It also depends on the organization&rsquo;s attributes, such as culture, value system and history with past changes.</p>
+  <h2>Integrating Change Management and Project Management</h2>
+  <p>While separate as fields of study, on a real project change management and project management are integrated. The steps and activities move in&nbsp;unison&nbsp;as teams work to move from the current state to the desired future state.</p>
+  <h3>Change Management and Project Management Planning Activities</h3>
+  <p>As an example, think about what activities occur during the planning phase of a project between both teams.</p>
+  <p>Project managers are:</p>
+  <ul>
+    <li>Identifying the milestones and activities that must be completed</li>
+    <li>Outlining the resources needed and how they will work together</li>
+    <li>Defining the scope of what will be part of the project and what will not be</li>
+  </ul>
+  <p>Change managers are:</p>
+  <ul>
+    <li>Crafting key messages that must be communicated</li>
+    <li>Working with project sponsors to build strong and active coalitions of senior leaders</li>
+    <li>Making the case of why the change is needed to employees throughout the organization, even before the specific details of the solution are complete</li>
+  </ul>
+  <p>The most effective projects integrate these activities into a&nbsp;single project plan.</p>
+  <h2>Defining the Change, Project Management and Change Management</h2>
+  <p>It can be difficult to separate out the&nbsp;change, project management, and change management. In practice, these three components are intertwined in order to deliver a positive outcome to the organization. However, there is value in separating out the components.</p>
+  <p>Thinking about the three components separately makes it easier to&nbsp;define&nbsp;and help others&nbsp;understand&nbsp;these distinct elements. Separating out these three components is also a solid first step when&nbsp;troubleshooting&nbsp;on a particular project that may not be moving ahead as expected. For instance, are our challenges coming from:</p>
+  <ul>
+    <li>The design of the&nbsp;change?</li>
+    <li>The technical steps, activities or resources (project management)?</li>
+    <li>How individuals are accepting or resisting the change (change management)?</li>
+  </ul>
+  <p>Think about what each component is trying to achieve (see the table below) and use this to describe change management in context of the change and project management.</p>
+  <div>
+    <table border="0" class="table table-hover" style="width: 60%;">
+      <tbody>
+        <tr>
+          <td><h5>Element:</h5></td>
+          <td><h5>Goal or objective:</h5></td>
+        </tr>
+        <tr>
+          <td><p>The change</p></td>
+          <td><p>To improve the organization in some fashion, such as reducing costs, improving revenues, solving problems, seizing opportunities, aligning work and strategy or streamlining information flow within the organization</p></td>
+        </tr>
+        <tr>
+          <td><p>Project management</p></td>
+          <td><p>To develop a set of specific plans and actions to achieve "the change" given time, cost and scope constraints and to utilize resources effectively (managing the technical side of the change)</p></td>
+        </tr>
+        <tr>
+          <td><p>Change management</p></td>
+          <td><p>To apply a systematic approach for helping the individuals impacted by "the change" be successful by building support, addressing resistance and developing the required knowledge and ability to implement the change (managing the people side of the change)</p></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Thank you: https://www.prosci.com/change-management/thought-leadership-library/change-management-definition </p>
+</div>
+{% endif %} {% endblock %}

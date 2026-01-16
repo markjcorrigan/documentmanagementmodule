@@ -1,0 +1,646 @@
+{% extends 'base.html' %}
+{% block title %} {% if not current_user %}PMWay{% endif %} {% if current_user %}CAR{% endif %}  {% endblock %}
+{% block body %}
+{% if current_user %}
+<div class="container">	<table border="1" width="100%">
+		<tr>
+			<td colSpan="4">
+			<table border="1" cellPadding="4" class="fyi-table" width="100%">
+				<tr>
+					<td class="auto-style2"><strong><a href="/home/cmmidevdash">Validation (VAL)</a></strong><br />
+					<br />
+					</td>
+				</tr></table>		
+<table border="1" cellpadding="4" width="100%" bgcolor="#FFFFFF"> 
+<tbody>
+
+				<tr>
+<td><p>Validation in CMMi is a Software Quality Control (SQC) process that addresses the question:-
+<br>
+<br>
+<b>Are we building the correct product?</b>
+<br>
+<br>
+This question can be asked at any time during the SDLC but the essence of the question is, when this software product is placed in its proper environment does it fulfill the goals and needs of the end user, as expressed in the requirements.
+<br>
+<br>
+Contrast this with <b>Verification</b> another SQC process that makes sure a given work product (which could be a design specification or software component) is written to a given standard or meets a particular specification.
+<br>
+<br>
+For further information on Validation and the roles played by SQA and SQC with regard to this process area see <a href="http://www.sqa.net/softwarequalitycontrol.php">Clarification of the definitions of SQA and SQC</a> .
+
+</p>
+
+</td>
+</tr>
+
+			</table>
+	<font size="2">
+			<table border="1" cellPadding="4" class="sort-table" width="100%">
+				<tr class="auto-style1">
+					<td align="left"><font size="2"><b>Validation (VAL)<br />An Engineering Process Area at Maturity Level 3</b>
+<br>
+<br>
+<b>Purpose</b>
+<br>
+<br>
+The purpose of Validation (VAL) is to demonstrate that a product or product component fulfills its intended use when placed in its intended environment.
+<br>
+<br>
+<b>
+Introductory Notes
+</b>
+Validation activities can be applied to all aspects of the product in any of its intended environments, such as operation, training, manufacturing, maintenance, and support services. The methods employed to accomplish validation can be applied to work products as well as to the product and product components. (Throughout the process areas, where we use the terms product and product component, their intended meanings also encompass services and their components.) The work products (e.g., requirements, designs, and prototypes) should be selected on the basis of which are the best predictors of how well the product and product component will satisfy user needs and thus validation is performed early and incrementally throughout the product lifecycle.
+<br>
+<br>
+The validation environment should represent the intended environment for the product and product components as well as represent the intended environment suitable for validation activities with work products.
+<br>
+<br>
+Validation demonstrates that the product, as provided, will fulfill its intended use; whereas, verification addresses whether the work product properly reflects the specified requirements. In other words, verification ensures that “you built it right”; whereas, validation ensures that “you built the right thing.” Validation activities use approaches similar to verification (e.g., test, analysis, inspection, demonstration, or simulation). Often, the end users and other relevant stakeholders are involved in the validation activities. Both validation and verification activities often run concurrently and may use portions of the same environment.
+<br>
+<br>
+Refer to the Verification process area for more information about verification activities.
+<br>
+<br>
+Whenever possible, validation should be accomplished using the product or product component operating in its intended environment. The entire environment can be used or only part of it. However, validation issues can be discovered early in the life of the project using work products by involving relevant stakeholders. Validation activities for services can be applied to work products such as proposals, service catalogs, statements of work, and service records.
+<br>
+<br>
+When validation issues are identified, they are referred to the processes associated with the Requirements Development, Technical Solution, or Project Monitoring and Control process areas for resolution.
+<br>
+<br>
+The specific practices of this process area build on each other in the following way:
+<br>
+<br>
+<li>The Select Products for Validation specific practice enables the identification of the product or product component to be validated and the methods to be used to perform the validation.
+</li><li>The Establish the Validation Environment specific practice enables the determination of the environment that will be used to carry out the validation.
+</li><li>The Establish Validation Procedures and Criteria specific practice enables the development of validation procedures and criteria that are aligned with the characteristics of selected products, customer constraints on validation, methods, and the validation environment.
+</li><li>The Perform Validation specific practice enables the performance of validation according to the methods, procedures, and criteria.
+<br>
+<br>
+<b>Related Process Areas.</b>
+<br>
+<br>
+Refer to the Requirements Development process area for more information about requirements validation.
+<br>
+<br>
+Refer to the Technical Solution process area for more information about transforming requirements into product specifications and for corrective action when validation issues are identified that affect the product or product component design.
+<br>
+<br>
+Refer to the Verification process area for more information about verifying that the product or product component meets its requirements.
+<br> 
+<br>
+<a name="sgp"></a>
+<b>Specific Practices by Goal</b>
+<br>
+<br>
+<a name="sg1"></a>  
+<b>SG 1	Prepare for Validation</b>
+<br>
+<br>
+Preparation for validation is conducted.
+<br>
+<br>
+Preparation activities include selecting products and product components for validation and establishing and maintaining the validation environment, procedures, and criteria. The items selected for validation may include only the product or it may include appropriate levels of the product components that are used to build the product. Any product or product component may be subject to validation, including replacement, maintenance, and training products, to name a few.
+<br>
+<br>
+The environment required to validate the product or product component is prepared. The environment may be purchased or may be specified, designed, and built. The environments used for product integration and verification may be considered in collaboration with the validation environment to reduce cost and improve efficiency or productivity.
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9851462094153359";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+//2007-05-12: sqaorg
+google_ad_channel = "4385070952";
+google_color_border = "d0d0d0";
+google_color_bg = "d0d0d0";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+<a name="sp1.1"></a>
+<b>SP 1.1 Select Products for Validation</b>
+<br>
+<br>
+Select products and product components to be validated and the validation methods that will be used for each.
+<br>
+<br>
+Products and product components are selected for validation on the basis of their relationship to user needs. For each product component, the scope of the validation (e.g., operational behavior, maintenance, training, and user interface) should be determined.
+<br>
+<br>
+Examples of products and product components that can be validated include the following:
+<br>
+<br>
+</li><li>Product and product component requirements and designs
+</li><li>Product and product components (e.g., system, hardware units, software, and service documentation)
+</li><li>User interfaces
+</li><li>User manuals
+</li><li>Training materials
+</li><li>Process documentation
+<br>
+<br>
+The requirements and constraints for performing validation are collected. Then, validation methods are selected based on their ability to demonstrate that user needs are satisfied. The validation methods not only define the approach to product validation, but also drive the needs for the facilities, equipment, and environments. This may result in the generation of lower level product component requirements that are handled by the requirements development processes. Derived requirements, such as interface requirements to test sets and test equipment, can be generated. These requirements are also passed to the requirements development processes to ensure that the product or product components can be validated in an environment that supports the methods.
+<br>
+<br>
+Validation methods should be selected early in the life of the project so that they are clearly understood and agreed to by the relevant stakeholders.
+<br>
+<br>
+The validation methods address the development, maintenance, support, and training for the product or product component as appropriate.
+<br>
+<br>
+Examples of validation methods include the following:
+<br>
+<br>
+</li><li>Discussions with the users, perhaps in the context of a formal review
+</li><li>Prototype demonstrations
+</li><li>Functional demonstrations (e.g., system, hardware units, software, service documentation, and user interfaces)
+</li><li>Pilots of training materials
+</li><li>Analyses of product and product components (e.g., simulations, modeling, and user analyses)
+<br>
+<br>
+For Hardware Engineering
+<br>
+<br>
+Hardware validation activities include modeling to validate form, fit, and function of mechanical designs; thermal modeling; maintainability and reliability analysis; timeline demonstrations; and electrical design simulations of electronic or mechanical product components.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Lists of products and product components selected for validation
+</li><li>Validation methods for each product or product component
+</li><li>Requirements for performing validation for each product or product component
+</li><li>Validation constraints for each product or product component
+<br>
+<br>
+Subpractice 1: Identify the key principles, features, and phases for product or product component validation throughout the life of the project.
+<br>
+<br>
+Subpractice 2: Determine which categories of user needs (operational, maintenance, training, or support) are to be validated.
+<br>
+<br>
+The product or product component must be maintainable and supportable in its intended operational environment. This specific practice also addresses the actual maintenance, training, and support services that may be delivered along with the product.
+<br>
+<br>
+An example of evaluation of maintenance concepts in the operational environment is a demonstration that maintenance tools are operating with the actual product.
+<br>
+<br>
+Subpractice 3: Select the product and product components to be validated.
+<br>
+<br>
+Subpractice 4: Select the evaluation methods for product or product component validation.
+<br>
+<br>
+Subpractice 5: Review the validation selection, constraints, and methods with relevant stakeholders.
+<br>
+<br>
+<a name="sp1.2"></a>
+<b>SP 1.2 Establish the Validation Environment</b>
+<br>
+<br>
+Establish and maintain the environment needed to support validation.
+<br>
+<br>
+The requirements for the validation environment are driven by the product or product components selected, by the type of the work products (e.g., design, prototype, and final version), and by the methods of validation. These may yield requirements for the purchase or development of equipment, software, or other resources. These requirements are provided to the requirements development processes for development. The validation environment may include the reuse of existing resources. In this case, arrangements for the use of these resources must be made. Examples of the type of elements in a validation environment include the following:
+<br>
+<br>
+</li><li>Test tools interfaced with the product being validated (e.g., scope, electronic devices, and probes)
+</li><li>Temporary embedded test software
+</li><li>Recording tools for dump or further analysis and replay
+</li><li>Simulated subsystems or components (by software, electronics, or mechanics)
+</li><li>Simulated interfaced systems (e.g., a dummy warship for testing a naval radar)
+</li><li>Real interfaced systems (e.g., aircraft for testing a radar with trajectory tracking facilities)
+</li><li>Facilities and customer-supplied products
+</li><li>The skilled people to operate or use all the preceding elements
+</li><li>Dedicated computing or network test environment (e.g., pseudo-operational telecommunications-network testbed or facility with actual trunks, switches, and systems established for realistic integration and validation trials)
+<br>
+<br>
+Early selection of the products or product components to be validated, the work products to be used in the validation, and the validation methods is needed to ensure that the validation environment will be available when necessary.
+<br>
+<br>
+The validation environment should be carefully controlled to provide for replication, analysis of results, and revalidation of problem areas.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Validation environment
+<br>
+<br>
+Subpractice 1: Identify validation environment requirements.
+<br>
+<br>
+Subpractice 2: Identify customer-supplied products.
+<br>
+<br>
+Subpractice 3: Identify reuse items.
+<br>
+<br>
+Subpractice 4: Identify test equipment and tools.
+<br>
+<br>
+Subpractice 5: Identify validation resources that are available for reuse and modification.
+<br>
+<br>
+Subpractice 6: Plan the availability of resources in detail.
+<br>
+<br>
+<a name="sp1.3"></a>
+<b>SP 1.3 Establish Validation Procedures and Criteria</b>
+<br>
+<br>
+Establish and maintain procedures and criteria for validation.
+<br>
+<br>
+Validation procedures and criteria are defined to ensure that the product or product component will fulfill its intended use when placed in its intended environment. Acceptance test cases and procedures may meet the need for validation procedures.
+<br>
+<br>
+The validation procedures and criteria include test and evaluation of maintenance, training, and support services.
+<br>
+<br>
+Examples of sources for validation criteria include the following:
+<br>
+<br>
+</li><li>Product and product component requirements
+</li><li>Standards
+</li><li>Customer acceptance criteria
+</li><li>Environmental performance
+</li><li>Thresholds of performance deviation
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Validation procedures
+</li><li>Validation criteria
+</li><li>Test and evaluation procedures for maintenance, training, and support
+<br>
+<br>
+Subpractice 1: Review the product requirements to ensure that issues affecting validation of the product or product component are identified and resolved.
+<br>
+<br>
+Subpractice 2: Document the environment, operational scenario, procedures, inputs, outputs, and criteria for the validation of the selected product or product component.
+<br>
+<br>
+Subpractice 3: Assess the design as it matures in the context of the validation environment to identify validation issues.
+<br>
+<br>
+<a name="sg2"></a> 
+<b>SG 2	Validate Product or Product Components</b>
+<br>
+<br>
+The product or product components are validated to ensure that they are suitable for use in their intended operating environment.
+<br>
+<br>
+The validation methods, procedures, and criteria are used to validate the selected products and product components and any associated maintenance, training, and support services using the appropriate validation environment. Validation activities are performed throughout the product lifecycle.
+<br>
+<br>
+<a name="sp2.1"></a> 
+<b>SP 2.1 Perform Validation</b>
+<br>
+<br>
+Perform validation on the selected products and product components.
+<br>
+<br>
+To be acceptable to users, a product or product component must perform as expected in its intended operational environment.
+<br>
+<br>
+Validation activities are performed and the resulting data are collected according to the established methods, procedures, and criteria.
+<br>
+<br>
+The as-run validation procedures should be documented and the deviations occurring during the execution should be noted, as appropriate.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Validation reports
+</li><li>Validation results
+</li><li>Validation cross-reference matrix
+</li><li>As-run procedures log
+</li><li>Operational demonstrations
+<br>
+<br>
+<a name="sp2.2"></a>
+<b>SP 2.2 Analyze Validation Results</b>
+<br>
+<br>
+Analyze the results of the validation activities.
+<br>
+<br>
+The data resulting from validation tests, inspections, demonstrations, or evaluations are analyzed against the defined validation criteria. Analysis reports indicate whether the needs were met; in the case of deficiencies, these reports document the degree of success or failure and categorize probable cause of failure. The collected test, inspection, or review results are compared with established evaluation criteria to determine whether to proceed or to address requirements or design issues in the requirements development or technical solution processes.
+<br>
+<br>
+Analysis reports or as-run validation documentation may also indicate that bad test results are due to a validation procedure problem or a validation environment problem.
+<br>
+<br>
+Typical Work Products
+<br>
+<br>
+</li><li>Validation deficiency reports
+</li><li>Validation issues
+</li><li>Procedure change request
+<br>
+<br>
+Subpractice 1: Compare actual results to expected results.
+<br>
+<br>
+Subpractice 2: Based on the established validation criteria, identify products and product components that do not perform suitably in their intended operating environments, or identify problems with the methods, criteria, and/or environment.
+<br>
+<br>
+Subpractice 3: Analyze the validation data for defects.
+<br>
+<br>
+Subpractice 4: Record the results of the analysis and identify issues.
+<br>
+<br>
+Subpractice 5: Use validation results to compare actual measurements and performance to intended use or operational need.
+<br>
+<br>
+<a name="ggp"></a>
+<b>Generic Practices by Goal</b>
+<br>
+<br>
+<a name="gg1"></a>
+<b>GG 1 Achieve Specific Goals</b>
+<br>
+<br> 
+The process supports and enables achievement of the specific goals of the process area by transforming identifiable input work products to produce identifiable output work products.
+<br>
+<br>
+<a name="gp1.1"></a>
+<b>GP 1.1 Perform Specific Practices</b>
+<br>
+<br>
+Perform the specific practices of the validation process to develop work products and provide services to achieve the specific goals of the process area.
+<br>
+<br>
+<a name="gg2"></a>
+<b>GG 2 Institutionalize a Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a managed process.
+<br>
+<br>
+<a name="gp2.1"></a>
+<b>GP 2.1 Establish an Organizational Policy</b>
+<br>
+<br>
+Establish and maintain an organizational policy for planning and performing the validation process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This policy establishes organizational expectations for selecting products and product components for validation; for selecting validation methods; and for establishing and maintaining validation procedures, criteria, and environments that ensure the products and product components satisfy user needs in their intended operating environment.
+<br>
+<br>
+<a name="gp2.2"></a>
+<b>GP 2.2 Plan the Process</b>
+<br>
+<br>
+Establish and maintain the plan for performing the validation process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+This plan for performing the validation process can be included in (or referenced by) the project plan, which is described in the Project Planning process area.
+<br>
+<br>
+<a name="gp2.3"></a>
+<b>GP 2.3 Provide Resources</b>
+<br>
+<br>
+Provide adequate resources for performing the validation process, developing the work products, and providing the services of the process.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Special facilities may be required for validating the product or product components. When necessary, the facilities required for validation are developed or purchased.
+<br>
+<br>
+Examples of other resources provided include the following tools:
+<br>
+<br>
+</li><li>Test-management tools
+</li><li>Test-case generators
+</li><li>Test-coverage analyzers
+</li><li>Simulators
+</li><li>Load, stress, and performance tools
+<br>
+<br>
+<a name="gp2.4"></a>
+<b>GP 2.4 Assign Responsibility</b>
+<br>
+<br>
+Assign responsibility and authority for performing the process, developing the work products, and providing the services of the validation process.
+<br>
+<br>
+<a name="gp2.5"></a>
+<b>GP 2.5 Train People</b>
+<br>
+<br>
+Train the people performing or supporting the validation process as needed.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of training topics include the following:
+<br>
+<br>
+</li><li>Application domain
+</li><li>Validation principles, standards, and methods
+</li><li>Intended-use environment
+<br>
+<br>
+<a name="gp2.6"></a>
+<b>GP 2.6 Manage Configurations</b>
+<br>
+<br>
+Place designated work products of the validation process under appropriate levels of control.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products placed under control include the following:
+<br>
+<br>
+</li><li>Lists of products and product components selected for validation
+</li><li>Validation methods, procedures, and criteria
+</li><li>Validation reports
+<br>
+<br>
+<a name="gp2.7"></a>
+<b>GP 2.7 Identify and Involve Relevant Stakeholders</b>
+<br>
+<br>
+Identify and involve the relevant stakeholders of the validation process as planned.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Select relevant stakeholders from customers, end users, developers, producers, testers, suppliers, marketers, maintainers, disposal personnel, and others who may be affected by, or may affect, the product as well as the process.
+<br>
+<br>
+Examples of activities for stakeholder involvement include the following:
+<br>
+<br>
+</li><li>Selecting the products and product components to be validated
+</li><li>Establishing the validation methods, procedures, and criteria
+</li><li>Reviewing results of product and product component validation and resolving issues
+</li><li>Resolving issues with the customers or end users
+<br>
+<br>
+Issues with the customers or end users are resolved particularly when there are significant deviations from their baseline needs for the following:
+<br>
+<br>
+</li><li>Waivers on the contract or agreement (what, when, and for which products)
+</li><li>Additional in-depth studies, trials, tests, or evaluations
+</li><li>Possible changes in the contracts or agreements
+<br>
+<br>
+<a name="gp2.8"></a>
+<b>GP 2.8 Monitor and Control the Process</b>
+<br>
+<br>
+Monitor and control the validation process against the plan for performing the process and take appropriate corrective action.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of measures and work products used in monitoring and controlling include the following:
+<br>
+<br>
+</li><li>Number of validation activities completed (planned versus actual)
+</li><li>Validation problem report trends (e.g., number written and number closed)
+</li><li>Validation problem report aging (i.e., how long each problem report has been open)
+</li><li>Schedule for a specific validation activity
+<br>
+<br>
+<a name="gp2.9"></a>
+<b>GP 2.9 Objectively Evaluate Adherence</b>
+<br>
+<br>
+Objectively evaluate adherence of the validation process against its process description, standards, and procedures, and address noncompliance.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of activities reviewed include the following:
+<br>
+<br>
+</li><li>Selecting the products and product components to be validated
+</li><li>Establishing and maintaining validation methods, procedures, and criteria
+</li><li>Validating products or product components
+<br>
+<br>
+Examples of work products reviewed include the following:
+<br>
+<br>
+</li><li>Validation methods, procedures, and criteria
+<br>
+<br>
+<a name="gp2.10"></a>
+<b>GP 2.10 Review Status with Higher Level Management</b>
+<br>
+<br>
+Review the activities, status, and results of the validation process with higher level management and resolve issues.
+<br>
+<br>
+<a name="gg3"></a>
+<b>GG 3 Institutionalize a Defined Process</b>
+<br>
+<br>
+The process is institutionalized as a defined process.
+<br>
+<br>
+<a name="gp3.1"></a>
+<b>GP 3.1 Establish a Defined Process</b>
+<br>
+<br>
+Establish and maintain the description of a defined validation process.
+<br>
+<br>
+<a name="gp3.2"></a>
+<b>GP 3.2 Collect Improvement Information</b>
+<br>
+<br>
+Collect work products, measures, measurement results, and improvement information derived from planning and performing the validation process to support the future use and improvement of the organization’s processes and process assets.
+<br>
+<br>
+Elaboration:
+<br>
+<br>
+Examples of work products, measures, measurement results, and improvement information include the following:
+<br>
+<br>
+</li><li>Product component prototype
+</li><li>Percent of time the validation environment is available
+</li><li>Number of product defects found through validation per development phase
+</li><li>Validation analysis report
+<br>
+<br>
+<a name="gg4"></a>
+<b>GG 4 Institutionalize a Quantitatively Managed Process</b>
+<br>
+<br>
+The process is institutionalized as a quantitatively managed process.
+<br>
+<br>
+<a name="gp4.1"></a>
+<b>GP 4.1 Establish Quantitative Objectives for the Process</b>
+<br>
+<br>
+Establish and maintain quantitative objectives for the validation process, which address quality and process performance, based on customer needs and business objectives.
+<br>
+<br>
+<a name="gp42"></a>
+<b>GP 4.2 Stabilize Subprocess Performance</b>
+<br>
+<br>
+Stabilize the performance of one or more subprocesses to determine the ability of the validation process to achieve the established quantitative quality and process-performance objectives.
+<br>
+<br>
+<a name="gg5"></a>
+<b>GG 5	Institutionalize an Optimizing Process</b>
+<br>
+<br>
+<b>The process is institutionalized as an optimizing process.</b>
+<br>
+<br>
+<a name="gp5.1"></a>
+<b>GP 5.1 Ensure Continuous Process Improvement</b>
+<br>
+<br>
+Ensure continuous improvement of the validation process in fulfilling the relevant business objectives of the organization.
+<br>
+<br>
+<a name="gp5.2"></a>
+<b>GP 5.2 Correct Root Causes of Problems</b>
+<br>
+<br>
+Identify and correct the root causes of defects and other problems in the validation process.
+<br>
+</li>			
+			<!-- END TREE DECORATION --></td>
+		</tr>
+	</table>
+	
+
+</div>
+{% endif %}
+{% endblock %}

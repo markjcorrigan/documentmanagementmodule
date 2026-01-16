@@ -1,0 +1,2702 @@
+=== LIVEWIRE COMPONENTS WITH LAYOUTS ===
+app/Livewire/AboutPmway.php-use Livewire\Attributes\Layout;
+app/Livewire/AboutPmway.php-
+app/Livewire/AboutPmway.php:#[Layout('components.layouts.app.frontend', ['title' => 'About'])]
+app/Livewire/AboutPmway.php-class AboutPmway extends FrontendComponent
+--
+app/Livewire/Accelerate.php-    }
+app/Livewire/Accelerate.php-
+app/Livewire/Accelerate.php:    #[Layout('components.layouts.app.frontend', ['title' => 'Accelerate'])]
+app/Livewire/Accelerate.php-    public function render(): View
+--
+app/Livewire/AcidDatabase.php-use Livewire\Attributes\Layout;
+app/Livewire/AcidDatabase.php-
+app/Livewire/AcidDatabase.php:#[Layout('components.layouts.app.frontend', ['title' => 'ACID Database Properties - PMWay'])]
+app/Livewire/AcidDatabase.php-class AcidDatabase extends FrontendComponent
+--
+app/Livewire/Admin/Index.php-class Index extends Component
+app/Livewire/Admin/Index.php-{
+app/Livewire/Admin/Index.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Index.php-    public function render(): View
+--
+app/Livewire/Admin/Permissions/CreatePermission.php-    }
+app/Livewire/Admin/Permissions/CreatePermission.php-
+app/Livewire/Admin/Permissions/CreatePermission.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Permissions/CreatePermission.php-    public function render(): View
+--
+app/Livewire/Admin/Permissions/EditPermission.php-    }
+app/Livewire/Admin/Permissions/EditPermission.php-
+app/Livewire/Admin/Permissions/EditPermission.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Permissions/EditPermission.php-    public function render(): View
+--
+app/Livewire/Admin/Permissions.php-    }
+app/Livewire/Admin/Permissions.php-
+app/Livewire/Admin/Permissions.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Permissions.php-    public function render(): View
+--
+app/Livewire/Admin/Roles/CreateRole.php-    }
+app/Livewire/Admin/Roles/CreateRole.php-
+app/Livewire/Admin/Roles/CreateRole.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Roles/CreateRole.php-    public function render(): View
+--
+app/Livewire/Admin/Roles/EditRole.php-    }
+app/Livewire/Admin/Roles/EditRole.php-
+app/Livewire/Admin/Roles/EditRole.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Roles/EditRole.php-    public function render(): View
+--
+app/Livewire/Admin/Roles.php-    }
+app/Livewire/Admin/Roles.php-
+app/Livewire/Admin/Roles.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Roles.php-    public function render(): View
+--
+app/Livewire/Admin/Users/CreateUser.php-    }
+app/Livewire/Admin/Users/CreateUser.php-
+app/Livewire/Admin/Users/CreateUser.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Users/CreateUser.php-    public function render(): View
+--
+app/Livewire/Admin/Users/EditUser.php-    }
+app/Livewire/Admin/Users/EditUser.php-
+app/Livewire/Admin/Users/EditUser.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Users/EditUser.php-    public function render(): View
+--
+app/Livewire/Admin/Users/ViewUser.php-    }
+app/Livewire/Admin/Users/ViewUser.php-
+app/Livewire/Admin/Users/ViewUser.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Users/ViewUser.php-    public function render(): View
+--
+app/Livewire/Admin/Users.php-    }
+app/Livewire/Admin/Users.php-
+app/Livewire/Admin/Users.php:    #[Layout('components.layouts.admin')]
+app/Livewire/Admin/Users.php-    public function render(): View
+--
+app/Livewire/AgileMethodsCarousel.php-use Livewire\Attributes\Layout;
+app/Livewire/AgileMethodsCarousel.php-
+app/Livewire/AgileMethodsCarousel.php:#[Layout('components.layouts.app.frontend', ['title' => 'Agile Methods - High Level Overview'])]
+app/Livewire/AgileMethodsCarousel.php-class AgileMethodsCarousel extends FrontendComponent
+--
+app/Livewire/AgilevsTraditional.php-use Livewire\Attributes\Layout;
+app/Livewire/AgilevsTraditional.php-
+app/Livewire/AgilevsTraditional.php:#[Layout('components.layouts.app.frontend', ['title' => 'Traditional vs Agile'])]
+app/Livewire/AgilevsTraditional.php-class AgilevsTraditional extends FrontendComponent
+--
+app/Livewire/AmericanFootball.php-use Livewire\Attributes\Layout;
+app/Livewire/AmericanFootball.php-
+app/Livewire/AmericanFootball.php:#[Layout('components.layouts.app.frontend', ['title' => 'American Football - CM Level 2+ in Action'])]
+app/Livewire/AmericanFootball.php-class AmericanFootball extends FrontendComponent
+--
+app/Livewire/AmericanFootballVideos.php-use Livewire\Attributes\Layout;
+app/Livewire/AmericanFootballVideos.php-
+app/Livewire/AmericanFootballVideos.php:#[Layout('components.layouts.app.frontend', ['title' => 'American Football Videos - Super Bowl 2019 & 2020'])]
+app/Livewire/AmericanFootballVideos.php-class AmericanFootballVideos extends FrontendComponent
+--
+app/Livewire/ATemplate.php-use Livewire\Attributes\Layout;
+app/Livewire/ATemplate.php-
+app/Livewire/ATemplate.php:#[Layout('components.layouts.app.frontend', ['title' => 'ATemplate'])]
+app/Livewire/ATemplate.php-class ATemplate extends FrontendComponent
+--
+app/Livewire/Auth/ConfirmPassword.php-use Livewire\Component;
+app/Livewire/Auth/ConfirmPassword.php-
+app/Livewire/Auth/ConfirmPassword.php:#[Layout('components.layouts.auth')]
+app/Livewire/Auth/ConfirmPassword.php-class ConfirmPassword extends Component
+--
+app/Livewire/Auth/ForgotPassword.php-use Livewire\Component;
+app/Livewire/Auth/ForgotPassword.php-
+app/Livewire/Auth/ForgotPassword.php:#[Layout('components.layouts.auth')]
+app/Livewire/Auth/ForgotPassword.php-class ForgotPassword extends Component
+--
+app/Livewire/Auth/Login.php-use Livewire\Component;
+app/Livewire/Auth/Login.php-
+app/Livewire/Auth/Login.php:#[Layout('components.layouts.auth')]
+app/Livewire/Auth/Login.php-class Login extends Component
+--
+app/Livewire/Auth/Register.php-use Livewire\Component;
+app/Livewire/Auth/Register.php-
+app/Livewire/Auth/Register.php:#[Layout('components.layouts.auth')]
+app/Livewire/Auth/Register.php-class Register extends Component
+--
+app/Livewire/Auth/ResetPassword.php-use Livewire\Component;
+app/Livewire/Auth/ResetPassword.php-
+app/Livewire/Auth/ResetPassword.php:#[Layout('components.layouts.auth')]
+app/Livewire/Auth/ResetPassword.php-class ResetPassword extends Component
+--
+app/Livewire/Auth/VerifyEmail.php-use Livewire\Component;
+app/Livewire/Auth/VerifyEmail.php-
+app/Livewire/Auth/VerifyEmail.php:#[Layout('components.layouts.auth')]
+app/Livewire/Auth/VerifyEmail.php-class VerifyEmail extends Component
+--
+app/Livewire/Avatarform.php-use Livewire\WithFileUploads;
+app/Livewire/Avatarform.php-
+app/Livewire/Avatarform.php:#[Layout('components.layouts.app.frontend', ['title' => 'Manage Avatar'])]
+app/Livewire/Avatarform.php-class Avatarform extends NewBlogComponent
+--
+app/Livewire/Blog/Addfollow.php-use Livewire\Attributes\Layout;
+app/Livewire/Blog/Addfollow.php-
+app/Livewire/Blog/Addfollow.php:#[Layout('components.layouts.app.frontend', ['title' => 'Add Following'])]
+app/Livewire/Blog/Addfollow.php-class Addfollow extends FrontendComponent
+--
+app/Livewire/Blog/CreatePost.php-use Livewire\WithFileUploads;
+app/Livewire/Blog/CreatePost.php-
+app/Livewire/Blog/CreatePost.php:#[Layout('components.layouts.app.frontend', ['title' => 'Create New Post'])]
+app/Livewire/Blog/CreatePost.php-class CreatePost extends FrontendComponent
+--
+app/Livewire/Blog/EditPost.php-use Livewire\WithFileUploads;
+app/Livewire/Blog/EditPost.php-
+app/Livewire/Blog/EditPost.php:#[Layout('components.layouts.app.frontend', ['title' => 'Edit Post'])]
+app/Livewire/Blog/EditPost.php-class EditPost extends FrontendComponent
+--
+app/Livewire/Blog/ProfileFollowers.php-use Livewire\Attributes\Layout;
+app/Livewire/Blog/ProfileFollowers.php-
+app/Livewire/Blog/ProfileFollowers.php:#[Layout('components.layouts.app.frontend', ['title' => 'Followers'])]
+app/Livewire/Blog/ProfileFollowers.php-class ProfileFollowers extends FrontendComponent
+--
+app/Livewire/Blog/ProfileFollowing.php-use Livewire\Attributes\Layout;
+app/Livewire/Blog/ProfileFollowing.php-
+app/Livewire/Blog/ProfileFollowing.php:#[Layout('components.layouts.app.frontend', ['title' => 'Following'])]
+app/Livewire/Blog/ProfileFollowing.php-class ProfileFollowing extends FrontendComponent
+--
+app/Livewire/Blog/ProfilePosts.php-use Livewire\WithPagination;
+app/Livewire/Blog/ProfilePosts.php-
+app/Livewire/Blog/ProfilePosts.php:#[Layout('components.layouts.app.frontend', ['title' => 'Profile'])]
+app/Livewire/Blog/ProfilePosts.php-class ProfilePosts extends FrontendComponent
+--
+app/Livewire/Blog/SinglePost.php-use Livewire\Attributes\Layout;
+app/Livewire/Blog/SinglePost.php-
+app/Livewire/Blog/SinglePost.php:#[Layout('components.layouts.app.frontend', ['title' => 'Single Post'])]
+app/Livewire/Blog/SinglePost.php-class SinglePost extends FrontendComponent
+--
+app/Livewire/Blog/SinglePost.php-    }
+app/Livewire/Blog/SinglePost.php-
+app/Livewire/Blog/SinglePost.php:    //    #[Layout('components.layouts.app.frontend')]
+app/Livewire/Blog/SinglePost.php-    public function render(): View
+--
+app/Livewire/Blog/Writefull.php-use Livewire\WithPagination;
+app/Livewire/Blog/Writefull.php-
+app/Livewire/Blog/Writefull.php:#[Layout('components.layouts.app.frontend', ['title' => 'Blog Feed'])]
+app/Livewire/Blog/Writefull.php-class Writefull extends FrontendComponent
+--
+app/Livewire/BurndownShort.php-use Livewire\Attributes\Layout;
+app/Livewire/BurndownShort.php-
+app/Livewire/BurndownShort.php:#[Layout('components.layouts.app.frontend', ['title' => 'Sprint Burndown - PMWay'])]
+app/Livewire/BurndownShort.php-class BurndownShort extends FrontendComponent
+--
+app/Livewire/CapabilityMaturityModel.php-use Livewire\Attributes\Layout;
+app/Livewire/CapabilityMaturityModel.php-
+app/Livewire/CapabilityMaturityModel.php:#[Layout('components.layouts.app.frontend', ['title' => 'Capability Maturity Model'])]
+app/Livewire/CapabilityMaturityModel.php-class CapabilityMaturityModel extends FrontendComponent
+--
+app/Livewire/CmmiDevDashboard.php-use Livewire\Attributes\Layout;
+app/Livewire/CmmiDevDashboard.php-
+app/Livewire/CmmiDevDashboard.php:#[Layout('components.layouts.app.frontend', ['title' => 'CMMi Dev Dashboard - PMWay'])]
+app/Livewire/CmmiDevDashboard.php-class CmmiDevDashboard extends FrontendComponent
+--
+app/Livewire/CmmiDevResources.php-use Livewire\Attributes\Layout;
+app/Livewire/CmmiDevResources.php-
+app/Livewire/CmmiDevResources.php:#[Layout('components.layouts.app.frontend', ['title' => 'Cmmi Dev Resources'])]
+app/Livewire/CmmiDevResources.php-class CmmiDevResources extends FrontendComponent
+--
+app/Livewire/CMMiLanding.php-use Livewire\Attributes\Layout;
+app/Livewire/CMMiLanding.php-
+app/Livewire/CMMiLanding.php:#[Layout('components.layouts.app.frontend', ['title' => 'CMMi'])]
+app/Livewire/CMMiLanding.php-class CMMiLanding extends FrontendComponent
+--
+app/Livewire/CmmiLevelOne.php-use Livewire\Attributes\Layout;
+app/Livewire/CmmiLevelOne.php-
+app/Livewire/CmmiLevelOne.php:#[Layout('components.layouts.app.frontend', ['title' => 'CMMi Level 1 Rules - PMWay'])]
+app/Livewire/CmmiLevelOne.php-class CmmiLevelOne extends FrontendComponent
+--
+app/Livewire/CrocodileHunter.php-use Livewire\Attributes\Layout;
+app/Livewire/CrocodileHunter.php-
+app/Livewire/CrocodileHunter.php:#[Layout('components.layouts.app.frontend', ['title' => 'How to Catch a Crocodile - PMWay'])]
+app/Livewire/CrocodileHunter.php-class CrocodileHunter extends FrontendComponent
+--
+app/Livewire/CvIndex.php-use Livewire\Attributes\Layout;
+app/Livewire/CvIndex.php-
+app/Livewire/CvIndex.php:#[Layout('components.layouts.app.frontend', ['title' => 'CV Index'])]
+app/Livewire/CvIndex.php-class CvIndex extends FrontendComponent
+--
+app/Livewire/CvIndex.php-    }
+app/Livewire/CvIndex.php-
+app/Livewire/CvIndex.php:    //    #[Layout('components.layouts.app.frontend')]
+app/Livewire/CvIndex.php-
+--
+app/Livewire/Dashboard.php-    }
+app/Livewire/Dashboard.php-
+app/Livewire/Dashboard.php:    #[Layout('components.layouts.app')]
+app/Livewire/Dashboard.php-    public function render(): View
+--
+app/Livewire/Dashboard.php-    use WithPagination;
+app/Livewire/Dashboard.php-
+app/Livewire/Dashboard.php:    #[Layout('components.layouts.app')]
+app/Livewire/Dashboard.php-    public function render()
+--
+app/Livewire/DocumentUploader.php-use Livewire\WithFileUploads;
+app/Livewire/DocumentUploader.php-
+app/Livewire/DocumentUploader.php:#[Layout('components.layouts.app.frontend', ['title' => 'Document Man'])]
+app/Livewire/DocumentUploader.php-class DocumentUploader extends FrontendComponent
+--
+app/Livewire/DoneDone.php-use Livewire\Attributes\Layout;
+app/Livewire/DoneDone.php-
+app/Livewire/DoneDone.php:#[Layout('components.layouts.app.frontend', ['title' => 'Done Done - It ain\'t over till it\'s over - PMWay'])]
+app/Livewire/DoneDone.php-class DoneDone extends FrontendComponent
+--
+app/Livewire/Editpost.php-use Mews\Purifier\Facades\Purifier;
+app/Livewire/Editpost.php-
+app/Livewire/Editpost.php:#[Layout('components.layouts.app.frontend', ['title' => 'Edit Post'])]
+app/Livewire/Editpost.php-class Editpost extends Component
+--
+app/Livewire/EthosLogosPathos.php-use Livewire\Attributes\Layout;
+app/Livewire/EthosLogosPathos.php-
+app/Livewire/EthosLogosPathos.php:#[Layout('components.layouts.app.frontend', ['title' => 'Ethos, Logos, Pathos - PMWay'])]
+app/Livewire/EthosLogosPathos.php-class EthosLogosPathos extends FrontendComponent
+--
+app/Livewire/FreedomsBarriersGoals.php-use Livewire\Attributes\Layout;
+app/Livewire/FreedomsBarriersGoals.php-
+app/Livewire/FreedomsBarriersGoals.php:#[Layout('components.layouts.app.frontend', ['title' => 'Freedoms, Barriers and Goals'])]
+app/Livewire/FreedomsBarriersGoals.php-class FreedomsBarriersGoals extends FrontendComponent
+--
+app/Livewire/FrontendComponent.php-use Livewire\Component;
+app/Livewire/FrontendComponent.php-
+app/Livewire/FrontendComponent.php:#[Layout('components.layouts.app.frontend')]
+app/Livewire/FrontendComponent.php-class FrontendComponent extends Component
+--
+app/Livewire/GameStatsNew.php-use Livewire\Attributes\Layout;
+app/Livewire/GameStatsNew.php-
+app/Livewire/GameStatsNew.php:#[Layout('components.layouts.app.frontend', ['title' => 'Game Stats'])]
+app/Livewire/GameStatsNew.php-class GameStatsNew extends FrontendComponent
+--
+app/Livewire/HamAndEggs.php-use Livewire\Attributes\Layout;
+app/Livewire/HamAndEggs.php-
+app/Livewire/HamAndEggs.php:#[Layout('components.layouts.app.frontend', ['title' => 'SCRUM Pigs and Chickens - PMWay'])]
+app/Livewire/HamAndEggs.php-class HamAndEggs extends FrontendComponent
+--
+app/Livewire/Home.php-    }
+app/Livewire/Home.php-
+app/Livewire/Home.php:    #[Layout('components.layouts.app.frontend', ['title' => 'Home'])]
+app/Livewire/Home.php-    public function render()
+--
+app/Livewire/ItilFourPracticesLive.php-use Livewire\Attributes\Layout;
+app/Livewire/ItilFourPracticesLive.php-
+app/Livewire/ItilFourPracticesLive.php:#[Layout('components.layouts.app.frontend', ['title' => 'ITIL 4 Practices'])]
+app/Livewire/ItilFourPracticesLive.php-class ItilFourPractices extends FrontendComponent
+--
+app/Livewire/KanbanCoffee.php-use Livewire\Attributes\Layout;
+app/Livewire/KanbanCoffee.php-
+app/Livewire/KanbanCoffee.php:#[Layout('components.layouts.app.frontend', ['title' => 'KanBan Coffee - Process Demonstration'])]
+app/Livewire/KanbanCoffee.php-class KanbanCoffee extends FrontendComponent
+--
+app/Livewire/LittlesLaw.php-use Livewire\Attributes\Layout;
+app/Livewire/LittlesLaw.php-
+app/Livewire/LittlesLaw.php:#[Layout('components.layouts.app.frontend', ['title' => "Little's Law"])]
+app/Livewire/LittlesLaw.php-class LittlesLaw extends FrontendComponent
+--
+app/Livewire/Livewireprocs.php-    }
+app/Livewire/Livewireprocs.php-
+app/Livewire/Livewireprocs.php:    #[Layout('components.layouts.app')]
+app/Livewire/Livewireprocs.php-    public function render(): View
+--
+app/Livewire/NewBlogComponent.php- * Automatically applies the Tailwind frontend layout
+app/Livewire/NewBlogComponent.php- */
+app/Livewire/NewBlogComponent.php:#[Layout('components.layouts.app.frontend')]
+app/Livewire/NewBlogComponent.php-class NewBlogComponent extends Component
+--
+app/Livewire/NewBlogComponent.php-     * Individual components can override the title:
+app/Livewire/NewBlogComponent.php-     *
+app/Livewire/NewBlogComponent.php:     * #[Layout('components.layouts.app.frontend', ['title' => 'Your Page Title'])]
+app/Livewire/NewBlogComponent.php-     */
+--
+app/Livewire/PageRefresh.php-    }
+app/Livewire/PageRefresh.php-
+app/Livewire/PageRefresh.php:    #[Layout('components.layouts.app')]
+app/Livewire/PageRefresh.php-    public function render(): View
+--
+app/Livewire/PersonalKanban.php-use Livewire\Attributes\Layout;
+app/Livewire/PersonalKanban.php-
+app/Livewire/PersonalKanban.php:#[Layout('components.layouts.app.frontend', ['title' => 'Personal Kanban - Kanban Made Simple'])]
+app/Livewire/PersonalKanban.php-class PersonalKanban extends FrontendComponent
+--
+app/Livewire/PmbokProcessExample.php-use Livewire\Attributes\Layout;
+app/Livewire/PmbokProcessExample.php-
+app/Livewire/PmbokProcessExample.php:#[Layout('components.layouts.app.frontend', ['title' => 'PMBOK 6 Process 4.1 Example'])]
+app/Livewire/PmbokProcessExample.php-class PmbokProcessExample extends FrontendComponent
+--
+app/Livewire/PmbokProcessNutshell.php-use Livewire\Attributes\Layout;
+app/Livewire/PmbokProcessNutshell.php-
+app/Livewire/PmbokProcessNutshell.php:#[Layout('components.layouts.app.frontend', ['title' => 'PMBOK6 Nutshell'])]
+app/Livewire/PmbokProcessNutshell.php-class PmbokProcessNutshell extends FrontendComponent
+--
+app/Livewire/PmbokProcessNutshell.php-    }
+app/Livewire/PmbokProcessNutshell.php-
+app/Livewire/PmbokProcessNutshell.php:    #[Layout('components.layouts.app')]
+app/Livewire/PmbokProcessNutshell.php-    public function render(): View
+--
+app/Livewire/PmbokSpa/Dashboard.php-use Livewire\Component;
+app/Livewire/PmbokSpa/Dashboard.php-
+app/Livewire/PmbokSpa/Dashboard.php:#[Layout('components.layouts.app.frontend')]
+app/Livewire/PmbokSpa/Dashboard.php-class Dashboard extends Component
+--
+app/Livewire/PmbokSpa/ProcessPage.php-use Livewire\Component;
+app/Livewire/PmbokSpa/ProcessPage.php-
+app/Livewire/PmbokSpa/ProcessPage.php:#[Layout('components.layouts.app.frontend')]
+app/Livewire/PmbokSpa/ProcessPage.php-class ProcessPage extends Component
+--
+app/Livewire/PmbokSpa/ProjectList.php-use Livewire\Component;
+app/Livewire/PmbokSpa/ProjectList.php-
+app/Livewire/PmbokSpa/ProjectList.php:#[Layout('components.layouts.app.frontend')]
+app/Livewire/PmbokSpa/ProjectList.php-class ProjectList extends Component
+--
+app/Livewire/PmbokSpa/ProjectsManager.php-use Livewire\Component;
+app/Livewire/PmbokSpa/ProjectsManager.php-
+app/Livewire/PmbokSpa/ProjectsManager.php:#[Layout('components.layouts.app.frontend')]
+app/Livewire/PmbokSpa/ProjectsManager.php-#[Title('My PMBOK Projects')]
+--
+app/Livewire/Pmway/About.php-    }
+app/Livewire/Pmway/About.php-
+app/Livewire/Pmway/About.php:    #[Layout('components.layouts.app.frontend', ['title' => 'About'])]
+app/Livewire/Pmway/About.php-    public function render(): View
+--
+app/Livewire/Pmway/Itil/ItilFourPracticesLive.php-use Livewire\Attributes\Layout;
+app/Livewire/Pmway/Itil/ItilFourPracticesLive.php-
+app/Livewire/Pmway/Itil/ItilFourPracticesLive.php:#[Layout('components.layouts.app.frontend', ['title' => 'ITIL 4 Practices'])]
+app/Livewire/Pmway/Itil/ItilFourPracticesLive.php-class ItilFourPracticesLive extends FrontendComponent
+--
+app/Livewire/Pmway/Laws.php-    }
+app/Livewire/Pmway/Laws.php-
+app/Livewire/Pmway/Laws.php:    #[Layout('components.layouts.app.frontend', ['title' => 'Laws'])]
+app/Livewire/Pmway/Laws.php-    public function render(): View
+--
+app/Livewire/PMWaySearch.php-use Livewire\WithPagination;
+app/Livewire/PMWaySearch.php-
+app/Livewire/PMWaySearch.php:#[Layout('components.layouts.app.frontend', ['title' => 'Search PMWay'])]
+app/Livewire/PMWaySearch.php-class PMWaySearch extends Component
+--
+app/Livewire/PMWaySearch.php-// use Livewire\Component;
+app/Livewire/PMWaySearch.php-//
+app/Livewire/PMWaySearch.php:// #[Layout('components.layouts.app')]
+app/Livewire/PMWaySearch.php-// class PMWaySearch extends Component
+--
+app/Livewire/PrivateOne.php-    }
+app/Livewire/PrivateOne.php-
+app/Livewire/PrivateOne.php:    #[Layout('components.layouts.app')]
+app/Livewire/PrivateOne.php-    public function render(): View
+--
+app/Livewire/ProductIncrement.php-use Livewire\Attributes\Layout;
+app/Livewire/ProductIncrement.php-
+app/Livewire/ProductIncrement.php:#[Layout('components.layouts.app.frontend', ['title' => 'Product Increment'])]
+app/Livewire/ProductIncrement.php-class ProductIncrement extends FrontendComponent
+--
+app/Livewire/Profile/ShowProfile.php-use Livewire\Component;
+app/Livewire/Profile/ShowProfile.php-
+app/Livewire/Profile/ShowProfile.php:#[Layout('components.layouts.app.frontend', ['title' => 'User Profile'])]
+app/Livewire/Profile/ShowProfile.php-class ShowProfile extends Component
+--
+app/Livewire/RedBeadExperiment.php-use Livewire\Attributes\Layout;
+app/Livewire/RedBeadExperiment.php-
+app/Livewire/RedBeadExperiment.php:#[Layout('components.layouts.app.frontend', ['title' => 'Red Bead Experiment - Deming\'s 14 Observations'])]
+app/Livewire/RedBeadExperiment.php-class RedBeadExperiment extends FrontendComponent
+--
+app/Livewire/ReleaseManagement.php-use Livewire\Attributes\Layout;
+app/Livewire/ReleaseManagement.php-
+app/Livewire/ReleaseManagement.php:#[Layout('components.layouts.app.frontend', ['title' => 'Release Management'])]
+app/Livewire/ReleaseManagement.php-class ReleaseManagement extends FrontendComponent
+--
+app/Livewire/SafeCritique.php-use Livewire\Attributes\Layout;
+app/Livewire/SafeCritique.php-
+app/Livewire/SafeCritique.php:#[Layout('components.layouts.app.frontend', ['title' => 'SAFe is unsafe'])]
+app/Livewire/SafeCritique.php-class SafeCritique extends FrontendComponent
+--
+app/Livewire/SafeCritique.php-    }
+app/Livewire/SafeCritique.php-
+app/Livewire/SafeCritique.php:    #[Layout('components.layouts.app')]
+app/Livewire/SafeCritique.php-    public function render(): View
+--
+app/Livewire/Sbokfour.php-use Livewire\Attributes\Layout;
+app/Livewire/Sbokfour.php-
+app/Livewire/Sbokfour.php:#[Layout('components.layouts.app.frontend', ['title' => 'SBOK 4'])]
+app/Livewire/Sbokfour.php-class Sbokfour extends FrontendComponent
+--
+app/Livewire/Sbokfour.php-    }
+app/Livewire/Sbokfour.php-
+app/Livewire/Sbokfour.php:    #[Layout('components.layouts.app.frontend', ['title' => 'SBok 4'])]
+app/Livewire/Sbokfour.php-    public function render()
+--
+app/Livewire/ScrumDashboards.php-use Livewire\Attributes\Layout;
+app/Livewire/ScrumDashboards.php-
+app/Livewire/ScrumDashboards.php:#[Layout('components.layouts.app.frontend', ['title' => 'Scrum Dashboards'])]
+app/Livewire/ScrumDashboards.php-class ScrumDashboards extends FrontendComponent
+--
+app/Livewire/Scrumfix.php-use Livewire\Attributes\Layout;
+app/Livewire/Scrumfix.php-
+app/Livewire/Scrumfix.php:#[Layout('components.layouts.app.frontend', ['title' => 'Scrum RCA'])]
+app/Livewire/Scrumfix.php-class Scrumfix extends FrontendComponent
+--
+app/Livewire/Scrumfix.php-    }
+app/Livewire/Scrumfix.php-
+app/Livewire/Scrumfix.php:    //    #[Layout('components.layouts.app')]
+app/Livewire/Scrumfix.php-    public function render(): View
+--
+app/Livewire/ScrumSpike.php-use Livewire\Attributes\Layout;
+app/Livewire/ScrumSpike.php-
+app/Livewire/ScrumSpike.php:#[Layout('components.layouts.app.frontend', ['title' => 'The Spike: Understanding Agile Research Stories'])]
+app/Livewire/ScrumSpike.php-class ScrumSpike extends FrontendComponent
+--
+app/Livewire/ScrumStudyVids.php-use Livewire\Attributes\Layout;
+app/Livewire/ScrumStudyVids.php-
+app/Livewire/ScrumStudyVids.php:#[Layout('components.layouts.app.frontend', ['title' => 'Scrum Study Videos'])]
+app/Livewire/ScrumStudyVids.php-class ScrumStudyVids extends FrontendComponent
+--
+app/Livewire/Settings/Appearance.php-use Livewire\Attributes\Layout;
+app/Livewire/Settings/Appearance.php-
+app/Livewire/Settings/Appearance.php:#[Layout('components.layouts.app.frontend', ['title' => 'Settings: Appearance'])]
+app/Livewire/Settings/Appearance.php-class Appearance extends FrontendComponent
+app/Livewire/Settings/Appearance.php-{
+app/Livewire/Settings/Appearance.php:    //    #[Layout('components.layouts.app.frontend')]
+app/Livewire/Settings/Appearance.php-
+--
+app/Livewire/Settings/Locale.php-use Livewire\Attributes\Layout;
+app/Livewire/Settings/Locale.php-
+app/Livewire/Settings/Locale.php:#[Layout('components.layouts.app.frontend', ['title' => 'Settings: Locale'])]
+app/Livewire/Settings/Locale.php-class Locale extends FrontendComponent
+--
+app/Livewire/Settings/Locale.php-    }
+app/Livewire/Settings/Locale.php-
+app/Livewire/Settings/Locale.php:    //    #[Layout('components.layouts.app.frontend')]
+app/Livewire/Settings/Locale.php-
+--
+app/Livewire/Settings/Password.php-use Livewire\Attributes\Layout;
+app/Livewire/Settings/Password.php-
+app/Livewire/Settings/Password.php:#[Layout('components.layouts.app.frontend', ['title' => 'Settings: Password'])]
+app/Livewire/Settings/Password.php-class Password extends FrontendComponent
+--
+app/Livewire/Settings/Password.php-    }
+app/Livewire/Settings/Password.php-
+app/Livewire/Settings/Password.php:    //    #[Layout('components.layouts.app.frontend')]
+app/Livewire/Settings/Password.php-
+--
+app/Livewire/Settings/Profile.php-use Livewire\Component;
+app/Livewire/Settings/Profile.php-
+app/Livewire/Settings/Profile.php:#[Layout('components.layouts.app.frontend', ['title' => 'Settings: Profile'])]
+app/Livewire/Settings/Profile.php-class Profile extends FrontendComponent
+--
+app/Livewire/SevenFs.php-use Livewire\Attributes\Layout;
+app/Livewire/SevenFs.php-
+app/Livewire/SevenFs.php:#[Layout('components.layouts.app.frontend', ['title' => '3 P\'s & 7 F\'s - Development that Pays'])]
+app/Livewire/SevenFs.php-class SevenFs extends FrontendComponent
+--
+app/Livewire/SevenRulesOfScrum.php-use Livewire\Attributes\Layout;
+app/Livewire/SevenRulesOfScrum.php-
+app/Livewire/SevenRulesOfScrum.php:#[Layout('components.layouts.app.frontend', ['title' => 'Seven Rules of Scrum - PMWay'])]
+app/Livewire/SevenRulesOfScrum.php-class SevenRulesOfScrum extends FrontendComponent
+--
+app/Livewire/SiteTransition.php-use Livewire\Attributes\Layout;
+app/Livewire/SiteTransition.php-
+app/Livewire/SiteTransition.php:#[Layout('components.layouts.app.frontend', ['title' => 'Transition'])]
+app/Livewire/SiteTransition.php-class SiteTransition extends FrontendComponent
+--
+app/Livewire/Snowbird.php-use Livewire\Attributes\Layout;
+app/Livewire/Snowbird.php-
+app/Livewire/Snowbird.php:#[Layout('components.layouts.app.frontend', ['title' => 'Snowbird Playlist'])]
+app/Livewire/Snowbird.php-class Snowbird extends FrontendComponent
+--
+app/Livewire/SpeedboatTool.php-use Livewire\Attributes\Layout;
+app/Livewire/SpeedboatTool.php-
+app/Livewire/SpeedboatTool.php:#[Layout('components.layouts.app.frontend', ['title' => 'Speedboat (Sailboat) Tool'])]
+app/Livewire/SpeedboatTool.php-class SpeedboatTool extends FrontendComponent
+--
+app/Livewire/StudyMethods.php-use Livewire\Attributes\Layout;
+app/Livewire/StudyMethods.php-
+app/Livewire/StudyMethods.php:#[Layout('components.layouts.app.frontend', ['title' => 'Procrastination'])]
+app/Livewire/StudyMethods.php-class StudyMethods extends FrontendComponent
+--
+app/Livewire/StudyMethods.php-    }
+app/Livewire/StudyMethods.php-
+app/Livewire/StudyMethods.php:    #[Layout('components.layouts.app')]
+app/Livewire/StudyMethods.php-    public function render(): View
+--
+app/Livewire/StyleGuide.php-use Livewire\Attributes\Layout;
+app/Livewire/StyleGuide.php-
+app/Livewire/StyleGuide.php:#[Layout('components.layouts.app.frontend', ['title' => 'Style Guide'])]
+app/Livewire/StyleGuide.php-class StyleGuide extends FrontendComponent
+--
+app/Livewire/ThePMWay.php-use Livewire\Attributes\Layout;
+app/Livewire/ThePMWay.php-
+app/Livewire/ThePMWay.php:#[Layout('components.layouts.app.frontend', ['title' => 'The PMWay'])]
+app/Livewire/ThePMWay.php-class ThePMWay extends FrontendComponent
+--
+app/Livewire/TWCSSTraining.php-    }
+app/Livewire/TWCSSTraining.php-
+app/Livewire/TWCSSTraining.php:    #[Layout('components.layouts.app')]
+app/Livewire/TWCSSTraining.php-    public function render()
+--
+app/Livewire/VModel.php-use Livewire\Attributes\Layout;
+app/Livewire/VModel.php-
+app/Livewire/VModel.php:#[Layout('components.layouts.app.frontend', ['title' => 'V Model - PMWay'])]
+app/Livewire/VModel.php-class VModel extends FrontendComponent
+--
+app/Livewire/WorkingSoftware.php-use Livewire\Attributes\Layout;
+app/Livewire/WorkingSoftware.php-
+app/Livewire/WorkingSoftware.php:#[Layout('components.layouts.app.frontend', ['title' => 'Working Software'])]
+app/Livewire/WorkingSoftware.php-class WorkingSoftware extends FrontendComponent
+
+
+=== ROUTES ===
+<?php
+
+use App\Helpers\ProtectedFiles;
+use App\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\BlogPostController;
+use App\Http\Controllers\backend\CommentController;
+use App\Http\Controllers\backend\HeroController;
+use App\Http\Controllers\backend\PortfolioController;
+use App\Http\Controllers\backend\ResumeController;
+use App\Http\Controllers\backend\ServicesController;
+use App\Http\Controllers\backend\SiteSettingsController;
+use App\Http\Controllers\backend\SkillsController;
+use App\Http\Controllers\backend\TestimonialController;
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\DocumentDownloadController;
+use App\Http\Controllers\EditorController;
+use App\Http\Controllers\FileDemoController;
+use App\Http\Controllers\frontend\FrontendController;
+use App\Http\Controllers\frontend\UserPostsBlogPostController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\ImageDemoController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\JokecatController;
+use App\Http\Controllers\JokeController;
+use App\Http\Controllers\LegacyController;
+use App\Http\Controllers\MailerController;
+use App\Http\Controllers\PmboksixController;
+use App\Http\Controllers\StuffController;
+use App\Http\Controllers\TinymceController;
+use App\Http\Middleware\TransitionInterceptor;
+use App\Livewire\AboutPmway;
+use App\Livewire\Accelerate;
+use App\Livewire\AcidDatabase;
+use App\Livewire\AgileMethodsCarousel;
+use App\Livewire\AgilevsTraditional;
+use App\Livewire\AmericanFootball;
+use App\Livewire\AmericanFootballVideos;
+use App\Livewire\ATemplate;
+use App\Livewire\Avatarform;
+use App\Livewire\Blog\CreatePost;
+use App\Livewire\Blog\EditPost;
+use App\Livewire\Blog\ProfileFollowers;
+use App\Livewire\Blog\ProfileFollowing;
+use App\Livewire\Blog\ProfilePosts;
+use App\Livewire\Blog\SinglePost;
+use App\Livewire\Blog\Writefull;
+use App\Livewire\BurndownShort;
+use App\Livewire\CapabilityMaturityModel;
+use App\Livewire\CategoriesManager;
+use App\Livewire\Chat\ChatDashboard;
+use App\Livewire\CmmiDevDashboard;
+use App\Livewire\CMMiLanding;
+use App\Livewire\CmmiLevelOne;
+use App\Livewire\CrocodileHunter;
+use App\Livewire\DocumentUploader;
+use App\Livewire\DoneDone;
+use App\Livewire\EthosLogosPathos;
+use App\Livewire\FreedomsBarriersGoals;
+use App\Livewire\GameStatsNew;
+use App\Livewire\HamAndEggs;
+use App\Livewire\Home;
+use App\Livewire\KanbanCoffee;
+use App\Livewire\LittlesLaw;
+use App\Livewire\Livewireprocs;
+use App\Livewire\NotesManager;
+use App\Livewire\PersonalKanban;
+use App\Livewire\PmbokProcessExample;
+use App\Livewire\PmbokProcessNutshell;
+use App\Livewire\Pmway\Itil\ItilFourPracticesLive;
+use App\Livewire\Pmway\Laws;
+use App\Livewire\PrivateOne;
+use App\Livewire\ProductIncrement;
+use App\Livewire\RedBeadExperiment;
+use App\Livewire\ReleaseManagement;
+use App\Livewire\SafeCritique;
+use App\Livewire\Sbokfour;
+use App\Livewire\ScrumDashboards;
+use App\Livewire\Scrumfix;
+use App\Livewire\ScrumSpike;
+use App\Livewire\ScrumStudyVids;
+use App\Livewire\SevenFs;
+use App\Livewire\SevenRulesOfScrum;
+use App\Livewire\SiteTransition;
+use App\Livewire\Snowbird;
+use App\Livewire\SpeedboatTool;
+use App\Livewire\StudyMethods;
+use App\Livewire\StyleGuide;
+use App\Livewire\ThePMWay;
+use App\Livewire\VModel;
+use App\Livewire\WorkCarousel;
+use App\Livewire\WorkingSoftware;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Route;
+
+
+
+
+// ... your existing routes ...
+
+use App\Events\VisitorConnected;
+use App\Models\VisitorLog;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+
+use App\Livewire\LogsManager;
+use App\Livewire\LogCategoriesManager;
+
+use App\Livewire\VisitorAnalytics;
+
+/*
+|--------------------------------------------------------------------------
+| Logs Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware(['auth', 'verified', 'permission:visitor analytics'])->group(function () {
+    Route::get('/logs', LogsManager::class)->name('logs.index');
+    Route::get('/logs/categories', LogCategoriesManager::class)->name('logs.categories');
+    // Alternative: If you want a more RESTful structure
+    // Route::prefix('logs')->name('logs.')->group(function () {
+    //     Route::get('/', LogsManager::class)->name('index');
+    // });
+
+});
+
+/*
+|--------------------------------------------------------------------------
+| Visitor Analytics
+|--------------------------------------------------------------------------
+*/
+
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/logs', LogsManager::class)->name('logs.index');
+    Route::get('/logs/categories', LogCategoriesManager::class)->name('logs.categories');
+    Route::get('/visitor-analytics', VisitorAnalytics::class)->name('visitor.analytics');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Storage Protected Folders
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/test-auth-simple', function () {
+    return 'Should prompt for password';
+})->middleware('basicauth');
+
+// Add this to routes/web.php for testing
+// Route::get('/debug-file-check', function() {
+//    $testPath = storage_path('protected/scientology/index.html');
+//
+//    return response()->json([
+//        'path' => $testPath,
+//        'exists' => file_exists($testPath),
+//        'is_readable' => is_readable($testPath),
+//        'is_file' => is_file($testPath),
+//        'files_in_dir' => scandir(storage_path('protected/scientology'))
+//    ]);
+// });
+
+// routes/web.php
+Route::prefix('scientology')->middleware('basicauth')->group(function () {
+    Route::get('{path?}', function ($path = '') {
+        \Log::info("🌐 Route accessed: /scientology/{$path}");
+
+        return ProtectedFiles::serveFile('scientology', $path);
+    })->where('path', '.*');
+});
+
+// Route::prefix('scientology')->middleware('basicauth')->group(function () {
+//    Route::get('{path?}', function ($path = '') {
+//        return ProtectedFiles::serveFile('scientology', $path);
+//    })->where('path', '.*');
+// });
+
+// Example: Protect "client-area" folder
+// Route::prefix('client-area')->middleware('basicauth')->group(function () {
+//    Route::get('{path?}', function ($path = '') {
+//        return ProtectedFiles::serveFile('client-area', $path);
+//    })->where('path', '.*');
+// });
+
+// Add more folders as needed...
+// Just copy and paste the Route::prefix block above
+// and change 'folder-name' to your actual folder name
+
+/*
+
+/*
+|--------------------------------------------------------------------------
+| Public Routes
+|--------------------------------------------------------------------------
+*/
+
+// Home & Main Landing
+Route::get('/', Home::class)->name('home');
+Route::get('/home', Home::class);
+
+// Jokes Module (Home Page)
+Route::prefix('jokes')->name('jokes.')->group(function () {
+    Route::get('/', [JokeController::class, 'index'])->name('index');
+    Route::get('/create', [JokeController::class, 'create'])->name('create');
+    Route::post('/', [JokeController::class, 'store'])->name('store');
+    Route::get('/random', [JokeController::class, 'random'])->name('random');
+    Route::get('/{joke}', [JokeController::class, 'show'])->name('show');
+    Route::get('/{joke}/edit', [JokeController::class, 'edit'])->name('edit');
+    Route::put('/{joke}', [JokeController::class, 'update'])->name('update');
+    Route::delete('/{joke}', [JokeController::class, 'destroy'])->name('destroy');
+    Route::get('/category/{id}', [JokeController::class, 'byCategory'])->name('category');
+    Route::post('/delete-multiple', [JokeController::class, 'destroyMultiple'])->name('destroyMultiple');
+    Route::get('/export/csv', [JokeController::class, 'exportCsv'])->name('export.csv');
+    Route::post('/{joke}/toggle-favorite', [JokeController::class, 'toggleFavorite'])->name('toggleFavorite');
+});
+
+// Joke Categories
+Route::prefix('categories')->name('jokecats.')->group(function () {
+    Route::get('/', [JokecatController::class, 'index'])->name('index');
+    Route::get('/create', [JokecatController::class, 'create'])->name('create');
+    Route::post('/', [JokecatController::class, 'store'])->name('store');
+    Route::get('/{jokecat}/edit', [JokecatController::class, 'edit'])->name('edit');
+    Route::put('/{jokecat}', [JokecatController::class, 'update'])->name('update');
+    Route::delete('/{jokecat}', [JokecatController::class, 'destroy'])->name('destroy');
+});
+
+// Contact
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+/*
+|--------------------------------------------------------------------------
+| BLOG ROUTES - All Consolidated Here
+|--------------------------------------------------------------------------
+*/
+
+Route::prefix('blog')->name('blog.')->group(function () {
+
+    // Public blog routes (everyone can view)
+    Route::get('/post/{post}', SinglePost::class)->name('post');
+    Route::get('/profile/{username}', ProfilePosts::class)->name('profile');
+    Route::get('/profile/{username}/followers', ProfileFollowers::class)->name('profile.followers');
+    Route::get('/profile/{username}/following', ProfileFollowing::class)->name('profile.following');
+
+    // Authenticated blog routes
+    Route::middleware(['auth'])->group(function () {
+        // Following feed
+        Route::get('/feed', Writefull::class)->name('feed');
+
+        // Create post
+        Route::get('/create', CreatePost::class)->name('create');
+
+        // Edit post
+        Route::get('/post/{post}/edit', EditPost::class)->name('edit');
+
+        // Most voted posts
+        Route::get('/most-voted', [FrontendController::class, 'MostVotedPosts'])->name('most.voted');
+        Route::get('/top-voted', function () {
+            return view('tailwind-most-voted');
+        })->name('top.voted');
+    });
+});
+
+// LEGACY BLOG ROUTES - Still in use (Bootstrap-based blog listing, portfolio, admin)
+Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
+Route::get('/post/details/{slug}', [FrontendController::class, 'BlogDetails']);
+Route::get('/post/details/{id}', [FrontendController::class, 'BlogDetails']);
+Route::post('store-comment', [FrontendController::class, 'StoreComment'])->name('store.comment');
+
+// Legacy Most Voted (used by legacy blog views)
+Route::get('/most-voted-posts', [FrontendController::class, 'MostVotedPosts'])->name('most.voted');
+
+// Legacy Writestuff route (redirects to new blog feed)
+Route::get('/writestuff', Writefull::class)->middleware('auth')->name('writestuff');
+
+// OLD PROFILE ROUTES - Commented out (replaced by /blog/profile/* Livewire routes)
+// Route::get('/profile/{user:name}', [UserController::class, 'profile']);
+// Route::get('/profile/{user:name}/followers', [UserController::class, 'profileFollowers']);
+// Route::get('/profile/{user:name}/following', [UserController::class, 'profileFollowing']);
+// Route::post('/create-follow/{user:name}', [FollowController::class, 'createFollow']);
+// Route::post('/remove-follow/{user:name}', [FollowController::class, 'removeFollow']);
+
+/*
+|--------------------------------------------------------------------------
+| Style Guide & Templates
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/style-guide', StyleGuide::class);
+Route::get('/atemplate', ATemplate::class)->name('atemplate');
+
+// =============================================
+// PROTECTED FOLDERS - ADD YOUR FOLDERS HERE
+// =============================================
+
+/*
+|--------------------------------------------------------------------------
+| TRANSITION WARNING PAGE
+|--------------------------------------------------------------------------
+| This shows users a warning before entering legacy pages
+*/
+Route::get('/transition', SiteTransition::class)->name('site.transition');
+
+/*
+|--------------------------------------------------------------------------
+| LIVEWIRE PAGES (Modern, Converted Pages)
+|--------------------------------------------------------------------------
+| These are the NEW Livewire versions that replace legacy pages
+| No /home/ prefix, no transition middleware
+*/
+
+/*
+|------------------------------------------------------------------------------------------------
+| ROUTING STRUCTURE RULES FOR PMWAY FOR THE NEW LIVEWIRE STYLE GUIDE AND OLDER LEGACY PAGES BELOW
+|------------------------------------------------------------------------------------------------
+|
+| RULE 1: ALL legacy Blade view pages MUST use /home/ prefix
+| -----------------------------------------------------------
+| Pattern: Route::get('/home/pagename', [IndexController::class, 'pagename']);
+| Example: /home/itilsd, /home/measurement, /home/procrastination
+| Purpose: Old pages that need transition warning before viewing
+| Middleware: TransitionInterceptor (warns users about style changes)
+| Views: Located in resources/views/Home/pagename.blade.php
+|
+| ✅ CORRECT:   /home/procrastination
+| ❌ WRONG:     /procrastination (unless it's a Livewire component)
+|
+| RULE 2: NO /home/ prefix for MODERN Livewire pages
+| ----------------------------------------------------
+| Pattern: Route::get('/pagename', PagenameComponent::class);
+| Example: /burndownshort, /product-increment, /agile-traditional
+| Purpose: New converted pages with modern styling and Livewire features
+| Middleware: None (no warning needed, these are the "good" pages)
+| Views: Livewire components in app/Livewire/
+|
+| RULE 3: URL structure is STRICT - the prefix determines the type
+| -----------------------------------------------------------------
+| HAS /home/    → Legacy Blade view with transition warning
+| NO /home/     → Modern Livewire component without warning
+|
+| Examples:
+| ✅ /home/itilsd        → Legacy page (IndexController)
+| ❌ /itilsd             → 404 (no route exists)
+| ✅ /agile-traditional  → Modern page (Livewire)
+| ✅ /home/procrastination → Legacy page (IndexController)
+|
+| RULE 4: NO EXCEPTIONS - consistency is key
+| -------------------------------------------
+| Every legacy page must follow the /home/ pattern
+| This makes it easy to understand what type of page you're looking at
+| and ensures the transition warning middleware works correctly
+|
+| RULE 5: File serving routes use different patterns
+| ---------------------------------------------------
+| PDFs:    /viewpdf/{filename} or /legacy/pdf/{filename}
+| Videos:  /viewvideo/{subfolder}/{filename}
+| Files:   /cmmidev/{path} (serves from public/cmmidev/)
+| These use LegacyController and DON'T get transition warnings
+|
+| RULE 6: When to use which controller
+| -------------------------------------
+| IndexController:  Display legacy Blade views (pages with content)
+| LegacyController: Serve files (PDFs, videos, downloads, static HTML)
+|
+| RULE 7: Duplicate content strategy
+| -----------------------------------
+| If a page exists in BOTH Livewire and legacy versions:
+| - Livewire version: /pagename (preferred, link to this)
+| - Legacy version:   /home/pagename (keep for backwards compatibility)
+| Eventually, migrate all traffic to Livewire versions
+|
+*/
+
+/*
+ * REMINDER FOR FUTURE AI PROCESSING: These commented-out middleware routes in the section below are intentionally preserved for reference and should not be removed during any cleanup or formatting operations.
+ * Please do ont delete them!
+ */
+
+// Route::get('/the-pmway', ThePMWay::class)->name('the-pmway')->middleware('auth');
+Route::get('/the-pmway', ThePMWay::class)->name('the-pmway');
+
+// Route::get('/gamestatsnew', GameStatsNew::class)->name('gamestatsnew')->middleware('auth');
+Route::get('/gamestatsnew', GameStatsNew::class)->name('gamestatsnew');
+
+// Route::get('/agile-traditional', AgilevsTraditional::class)->name('agile-traditional')->middleware('auth');
+Route::get('/agile-traditional', AgilevsTraditional::class)->name('agile-traditional');
+
+// Route::get('/scrumfix', Scrumfix::class)->name('scrumfix')->middleware('auth');
+Route::get('/scrumfix', Scrumfix::class)->name('scrumfix');
+
+// Route::get('/about-pmway', AboutPmway::class)->name('about-pmway')->middleware('auth');
+Route::get('/about-pmway', AboutPmway::class)->name('about-pmway');
+
+// Route::get('/cmmidevdashboard', CmmiDevDashboard::class)->name('cmmidevdashboard')->middleware('auth');
+Route::get('/cmmidevdashboard', CmmiDevDashboard::class)->name('cmmidevdashboard');
+
+// Route::get('/cmmi-landing', CMMiLanding::class)->name('cmmi-landing')->middleware('auth');
+Route::get('/cmmi-landing', CMMiLanding::class)->name('cmmi-landing');
+
+// Route::get('/cmmi-level-one', CmmiLevelOne::class)->name('cmmi-level-one')->middleware('auth');
+Route::get('/cmmi-level-one', CmmiLevelOne::class)->name('cmmi-level-one');
+
+// Route::get('/done-done', DoneDone::class)->name('done-done')->middleware('auth');
+Route::get('/done-done', DoneDone::class)->name('done-done');
+
+// Route::get('/crocodile-hunter', CrocodileHunter::class)->name('crocodile-hunter')->middleware('auth');
+Route::get('/crocodile-hunter', CrocodileHunter::class)->name('crocodile-hunter');
+
+// Route::get('/acid-database', AcidDatabase::class)->name('acid-database')->middleware('auth');
+Route::get('/acid-database', AcidDatabase::class)->name('acid-database');
+
+// Route::get('/ethos-logos-pathos', EthosLogosPathos::class)->name('ethos-logos-pathos')->middleware('auth');
+Route::get('/ethos-logos-pathos', EthosLogosPathos::class)->name('ethos-logos-pathos');
+
+// Route::get('/personal-kanban', PersonalKanban::class)->name('personal-kanban')->middleware('auth');
+Route::get('/personal-kanban', PersonalKanban::class)->name('personal-kanban');
+
+// Route::get('/laws', Laws::class)->name('laws')->middleware('auth');
+Route::get('/laws', Laws::class)->name('laws');
+
+// Route::get('/agile-methods', AgileMethodsCarousel::class)->name('agile.methods')->middleware('auth');
+Route::get('/agile-methods', AgileMethodsCarousel::class)->name('agile.methods');
+
+// Route::get('/red-bead-experiment', RedBeadExperiment::class)->name('red-bead-experiment')->middleware('auth');
+Route::get('/red-bead-experiment', RedBeadExperiment::class)->name('red-bead-experiment');
+
+// Route::get('/scrum-dashboards', ScrumDashboards::class)->name('scrum.dashboards')->middleware('auth');
+Route::get('/scrum-dashboards', ScrumDashboards::class)->name('scrum.dashboards');
+
+// Route::get('/pmbok-process-example', PmbokProcessExample::class)->name('pmbok.process.example')->middleware('auth');
+Route::get('/pmbok-process-example', PmbokProcessExample::class)->name('pmbok.process.example');
+
+// Route::get('/vmodel', VModel::class)->name('vmodel')->middleware('auth');
+Route::get('/vmodel', VModel::class)->name('vmodel');
+
+// Route::get('/burndownshort', BurndownShort::class)->name('burndownshort')->middleware('auth');
+Route::get('/burndownshort', BurndownShort::class)->name('burndownshort');
+
+// Route::get('/hamandeggs', HamAndEggs::class)->name('hamandeggs')->middleware('auth');
+Route::get('/hamandeggs', HamAndEggs::class)->name('hamandeggs');
+
+// Route::get('/kanbancoffee', KanbanCoffee::class)->name('kanban.coffee')->middleware('auth');
+Route::get('/kanbancoffee', KanbanCoffee::class)->name('kanban.coffee');
+
+// Route::get('/seven-rules-of-scrum', SevenRulesOfScrum::class)->name('seven-rules-of-scrum')->middleware('auth');
+Route::get('/seven-rules-of-scrum', SevenRulesOfScrum::class)->name('seven-rules-of-scrum');
+
+// Route::get('/accelerate', Accelerate::class)->name('accelerate')->middleware('auth');
+Route::get('/accelerate', Accelerate::class)->name('accelerate');
+
+// Route::get('/working-software', WorkingSoftware::class)->name('working.software')->middleware('auth');
+Route::get('/working-software', WorkingSoftware::class)->name('working.software');
+
+// Route::get('/release-management', ReleaseManagement::class)->name('release.management')->middleware('auth');
+Route::get('/release-management', ReleaseManagement::class)->name('release.management');
+
+// Route::get('/product-increment', ProductIncrement::class)->name('product.increment')->middleware('auth');
+Route::get('/product-increment', ProductIncrement::class)->name('product.increment');
+
+// Route::get('/safe-critique', SafeCritique::class)->name('safe.critique')->middleware('auth');
+Route::get('/safe-critique', SafeCritique::class)->name('safe.critique');
+
+// Route::get('/itilfourpracticeslive', ItilFourPracticeslive::class)->name('itilfourpracticeslive')->middleware('auth');
+Route::get('/itilfourpracticeslive', ItilFourPracticeslive::class)->name('itilfourpracticeslive');
+
+// Route::get('/snowbird', Snowbird::class)->name('snowbird')->middleware('auth');
+Route::get('/snowbird', Snowbird::class)->name('snowbird');
+
+// Route::get('/american-football', AmericanFootball::class)->name('american-football')->middleware('auth');
+Route::get('/american-football', AmericanFootball::class)->name('american-football');
+
+// Route::get('/american-football-videos', AmericanFootballVideos::class)->name('american-football.videos')->middleware('auth');
+Route::get('/american-football-videos', AmericanFootballVideos::class)->name('american-football.videos');
+
+// Route::get('/sevenfs', SevenFs::class)->name('sevenfs')->middleware('auth');
+Route::get('/sevenfs', SevenFs::class)->name('sevenfs');
+
+// Route::get('/sbok-four', Sbokfour::class)->name('sbok-four')->middleware('auth');
+Route::get('/sbok-four', Sbokfour::class)->name('sbok-four');
+
+// Route::get('/capability-maturity-model', CapabilityMaturityModel::class)->name('cmm')->middleware('auth');
+Route::get('/capability-maturity-model', CapabilityMaturityModel::class)->name('cmm');
+
+// Route::get('/study-methods', StudyMethods::class)->name('study-methods')->middleware('auth');
+Route::get('/study-methods', StudyMethods::class)->name('study-methods');
+
+// Route::get('/freedoms-barriers-goals', FreedomsBarriersGoals::class)->name('freedoms.barriers.goals')->middleware('auth');
+Route::get('/freedoms-barriers-goals', FreedomsBarriersGoals::class)->name('freedoms.barriers.goals');
+
+// Route::get('/speedboat-tool', SpeedboatTool::class)->name('speedboat.tool')->middleware('auth');
+Route::get('/speedboat-tool', SpeedboatTool::class)->name('speedboat.tool');
+
+// Route::get('/scrum-spike', ScrumSpike::class)->name('the.spike')->middleware('auth');
+Route::get('/scrum-spike', ScrumSpike::class)->name('the.spike');
+
+// Route::get('/littles-law', LittlesLaw::class)->name('littles-law')->middleware('auth');
+Route::get('/littles-law', LittlesLaw::class)->name('littles-law');
+
+// Route::get('/scrum-study-vids', ScrumStudyVids::class)->name('scrum-study-vids')->middleware('auth');
+Route::get('/scrum-study-vids', ScrumStudyVids::class)->name('scrum-study-vids');
+
+// Livewire search component for old blog
+Route::get('/lwsearch', \App\Livewire\LWSearch::class)->name('lwsearch');
+
+/*
+|--------------------------------------------------------------------------
+| LIVEWIRE COMPONENTS (Demo/Testing)
+|--------------------------------------------------------------------------
+*/
+Route::get('/greeter', \App\Livewire\Greeter::class)->name('greeter');
+Route::get('/livewireprocs', Livewireprocs::class)->name('livewireprocs');
+Route::get('/calculator', \App\Livewire\Calculator::class)->name('calculator');
+Route::get('/todo-list', \App\Livewire\TodoList::class)->name('todo-list');
+Route::get('/cascading-dropdown', \App\Livewire\CascadingDropdown::class)->name('cascading-dropdown');
+Route::get('/products', \App\Livewire\ProductsSearch::class)->name('products');
+Route::get('/image-upload', \App\Livewire\ImageUpload::class)->name('image-upload');
+Route::get('/registertest', \App\Livewire\RegisterForm::class)->name('registertest');
+
+/*
+|--------------------------------------------------------------------------
+| LEGACY BLADE VIEW ROUTES (IndexController)
+|--------------------------------------------------------------------------
+| OLD pages with transition middleware warning
+| These use /home/ prefix OR special routes like /procrastination
+*/
+Route::middleware([TransitionInterceptor::class])->group(function () {
+
+    // ITIL Routes
+    Route::get('/home/itilfourpractices', [IndexController::class, 'itilfourpractices']);
+    Route::get('/home/itiloverview', [IndexController::class, 'itiloverview']);
+    Route::get('/home/itilss', [IndexController::class, 'itilss']);
+    Route::get('/home/itilsd', [IndexController::class, 'itilsd']);
+    Route::get('/home/itilst', [IndexController::class, 'itilst']);
+    Route::get('/home/itilso', [IndexController::class, 'itilso']);
+    Route::get('/home/itilcsi', [IndexController::class, 'itilcsi']);
+    Route::get('/home/itil', [IndexController::class, 'itil']);
+    Route::get('/home/itilpm', [IndexController::class, 'itilpm']);
+
+    // Scrum Routes
+    Route::get('/home/scrumroleclarity', [IndexController::class, 'scrumroleclarity']);
+    Route::get('/home/userstories', [IndexController::class, 'userstories']);
+    Route::get('/home/mvp', [IndexController::class, 'mvp']);
+    Route::get('/home/burndownshort', [IndexController::class, 'burndownshort']);
+    Route::get('/home/productincrement', [IndexController::class, 'productincrement']);
+    Route::get('/home/sprintupclose', [IndexController::class, 'sprintupclose']);
+    Route::get('/home/sailboat', [IndexController::class, 'sailboat'])->name('sailboat');
+    Route::get('/home/scrum', [IndexController::class, 'scrum']); // CHANGED: added /home/
+
+    // SAFe Routes
+    Route::get('/home/spo', [IndexController::class, 'spo']);
+    Route::get('/home/ssm', [IndexController::class, 'ssm']);
+
+    // Change Management Routes
+    Route::get('/home/changeman', [IndexController::class, 'changeman']);
+    Route::get('/home/changeadkar', [IndexController::class, 'changeadkar']);
+
+    // Metrics & Measurement Routes
+    Route::get('/home/measurement', [IndexController::class, 'measurement']);
+    Route::get('/home/gamestats', [IndexController::class, 'gamestats'])->name('gamestats');
+    Route::get('/home/removetheredbeads', [IndexController::class, 'removetheredbeads']);
+
+    // Productivity Routes - NOW ALL HAVE /home/ PREFIX
+    Route::get('/home/procrastination', [IndexController::class, 'procrastination']); // CHANGED
+    Route::get('/home/recharge', [IndexController::class, 'recharge']);
+    Route::get('/home/freedoms', [IndexController::class, 'freedoms']);
+    Route::get('/home/monkey', [IndexController::class, 'monkey']);
+
+    // Other Legacy Routes - NOW ALL HAVE /home/ PREFIX
+    Route::get('/home/about', [IndexController::class, 'about']);
+    Route::get('/home/baseline', [IndexController::class, 'baseline']); // CHANGED
+    Route::get('/home/dml', [IndexController::class, 'dml']); // CHANGED
+    Route::get('/home/test', [IndexController::class, 'test']); // CHANGED
+});
+
+/*
+|--------------------------------------------------------------------------
+| LEGACY FILE SERVING ROUTES (LegacyController)
+|--------------------------------------------------------------------------
+| Serves PDFs, videos, downloads from legacy structure
+| NO transition middleware - these are direct file access
+*/
+
+// Legacy HTML pages catch-all (should be LAST in legacy section)
+Route::get('/home/{page}', [LegacyController::class, 'show']);
+
+// PDF viewing routes
+Route::get('/viewpdf/{subfolder}/{filename}', [LegacyController::class, 'viewPdf']);
+Route::get('/viewpdf/{filename}', [LegacyController::class, 'viewPdf']);
+Route::get('/legacy/pdf/{subfolder}/{filename}', [LegacyController::class, 'viewPdf'])
+    ->where('filename', '.*\.pdf');
+Route::get('/legacy/pdf/{filename}', [LegacyController::class, 'viewPdf'])
+    ->where('filename', '.*\.pdf');
+
+// Video viewing routes
+Route::get('/viewvideo/{subfolder}/{filename}', [LegacyController::class, 'viewVideo']);
+Route::get('/legacy/video/{subfolder}/{filename}', [LegacyController::class, 'viewVideo'])
+    ->where('filename', '.*\.(mp4|avi|mov|wmv)');
+
+// Download routes
+Route::get('/download/{subfolder}/{filename}', [LegacyController::class, 'download']);
+Route::get('/downloadzip/{filename}', [LegacyController::class, 'downloadZip']);
+Route::get('/legacy/download/{subfolder}/{filename}', [LegacyController::class, 'download']);
+Route::get('/legacy/download-zip/{filename}', [LegacyController::class, 'downloadZip'])
+    ->middleware('auth');
+
+// Public file serving from cmmidev directory
+Route::get('/cmmidev/{path}', [LegacyController::class, 'servePublicFile'])
+    ->where('path', '.*');
+
+// CMMI files from storage
+Route::get('/cmmi/files/{path}', function ($path) {
+    $filePath = storage_path('app/public/assets/cmmidev/'.$path);
+    if (! file_exists($filePath)) {
+        abort(404);
+    }
+
+    return response()->file($filePath);
+})->where('path', '.*')->name('cmmi.files');
+
+// View PDF for ITIL 4 guides
+Route::get('/view-pdf/{filename}', function ($filename) {
+    $filePath = base_path('resources/views/livewire/pmway/itil/itil4guides/'.$filename);
+    if (file_exists($filePath)) {
+        return response()->file($filePath);
+    }
+    abort(404);
+});
+
+// Individual legacy page route (if still needed)
+Route::get('/cmmidevdash', [LegacyController::class, 'page'])->name('cmmidevdash');
+/*
+|--------------------------------------------------------------------------
+| PMBOK Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware(['auth'])->prefix('pmbok-spa')->name('pmbok.spa.')->group(function () {
+    Route::get('/', \App\Livewire\PmbokSpa\Dashboard::class)->name('dashboard');
+    Route::get('/projects', \App\Livewire\PmbokSpa\ProjectList::class)->name('projects');
+    Route::get('/process/{processId}', \App\Livewire\PmbokSpa\ProcessPage::class)->name('process');
+});
+
+Route::get('/pmboknutshell', PmbokProcessNutshell::class)->name('pmboknutshell')->middleware('auth');
+
+Route::middleware(['auth'])->prefix('pmboksix')->controller(PmboksixController::class)->group(function () {
+    Route::get('initiate', 'initiate');
+    Route::get('plan', 'plan');
+    Route::get('execute', 'execute');
+    Route::get('monitorandcontrol', 'monitorandcontrol');
+    Route::get('close', 'close');
+    Route::get('pmbokprocessnutshell', 'pmbokprocessnutshell');
+    Route::get('pmnotes', 'pmnotes');
+    Route::get('integration', 'integration');
+    Route::get('communication', 'communication');
+    Route::get('procurement', 'procurement');
+    Route::get('quality', 'quality');
+    Route::get('resource', 'resource');
+    Route::get('risk', 'risk');
+    Route::get('schedule', 'schedule');
+    Route::get('scope', 'scope');
+    Route::get('cost', 'cost');
+    Route::get('stakeholder', 'stakeholder');
+
+    foreach (['four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen'] as $prefix) {
+        foreach (['one', 'two', 'three', 'four', 'five', 'six', 'seven'] as $suffix) {
+            Route::get("{$prefix}{$suffix}", $prefix.$suffix);
+        }
+    }
+});
+
+/*
+|--------------------------------------------------------------------------
+| ITIL Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/view-pdf/{filename}', function ($filename) {
+    $filePath = base_path('resources/views/livewire/pmway/itil/itil4guides/'.$filename);
+
+    return file_exists($filePath) ? response()->file($filePath) : abort(404);
+});
+
+Route::get('/itiloverview', [IndexController::class, 'itiloverview']);
+Route::get('/itilss', [IndexController::class, 'itilss']);
+Route::get('/itilsd', [IndexController::class, 'itilsd']);
+Route::get('/itilst', [IndexController::class, 'itilst']);
+Route::get('/itilso', [IndexController::class, 'itilst']);
+Route::get('/itilcsi', [IndexController::class, 'itilcsi']);
+
+/*
+|--------------------------------------------------------------------------
+| Chat Module
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/chat', ChatDashboard::class)->name('chat.index');
+
+/*
+|--------------------------------------------------------------------------
+| Notes App
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/notes', NotesManager::class)->name('notes.index');
+    Route::get('/notes/categories', CategoriesManager::class)->name('notes.categories');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Portfolio/Resume/Frontend
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/portfolio', [FrontendController::class, 'portfolio'])->name('portfolio');
+Route::get('/workcarousel', WorkCarousel::class);
+Route::get('/mycv', \App\Livewire\CvIndex::class)->name('mycv')->middleware('permission:mycv noaccess');
+Route::post('store-contact-message', [FrontendController::class, 'StoreContactMessage'])->name('store.contact.message');
+
+/*
+|--------------------------------------------------------------------------
+| File Management & Downloads
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/download/assets/{filename}', function ($filename) {
+    $filename = basename($filename);
+    $filePath = storage_path('app/public/assets/'.$filename);
+
+    if (! File::exists($filePath)) {
+        abort(404, 'File not found');
+    }
+
+    $allowedExtensions = ['pdf', 'zip', 'doc', 'docx', 'xls', 'xlsx'];
+    $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+    if (! in_array($extension, $allowedExtensions)) {
+        abort(403, 'File type not allowed');
+    }
+
+    return response()->download($filePath);
+})->middleware('auth')->name('download.asset');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('viewpdf/{subfolder}/{filename}', [IndexController::class, 'viewpdf'])
+        ->where('filename', '.*')
+        ->name('viewpdf');
+
+    Route::get('viewvideo/{subfolder}/{filename}', [IndexController::class, 'viewvideo'])
+        ->where('subfolder', '[^/]+')
+        ->where('filename', '.*')
+        ->name('viewvideo');
+
+    Route::get('download/{subfolder}/{filename}', [IndexController::class, 'saveAction'])
+        ->where('subfolder', '[^/]+')
+        ->where('filename', '.*')
+        ->name('download');
+
+    Route::get('downloadzip/{filename}', [IndexController::class, 'downloadZip'])
+        ->where('filename', '.*')
+        ->name('downloadzip');
+
+    Route::get('user-view/{subfolder}/{filename}', [IndexController::class, 'userViewFile'])
+        ->name('user.view.file');
+
+    Route::get('/download-pdf/{filename}', [IndexController::class, 'downloadPdf'])
+        ->name('download.pdf');
+});
+
+Route::get('/myfile-demo', [FileDemoController::class, 'index'])->name('myfile-demo');
+Route::delete('/myfile-demo/{id}', [FileDemoController::class, 'destroy'])->name('myfile-demo.destroy');
+Route::get('/myfile-demo/file/{filename}', [FileDemoController::class, 'serve'])->name('myfile-demo.serve');
+
+Route::get('/myimage-demo', [ImageDemoController::class, 'index'])->name('myimage-demo');
+Route::delete('/myimage-demo/{id}', [ImageDemoController::class, 'destroy'])->name('myimage-demo.destroy');
+Route::get('/myimage-demo/image/{imagename}', [ImageDemoController::class, 'serve'])->name('myimage-demo.serve');
+
+Route::post('upload-file', [IndexController::class, 'uploadFile'])
+    ->middleware(['auth', 'verified', 'permission:file demo']);
+
+/*
+|--------------------------------------------------------------------------
+| TinyMCE & Editor
+|--------------------------------------------------------------------------
+*/
+
+Route::post('/tinymce/upload', [TinymceController::class, 'upload'])->name('tinymce.upload');
+Route::get('/editor/{filename?}', [EditorController::class, 'load'])->name('editor.load');
+Route::post('/editor/save', [EditorController::class, 'save'])->name('editor.save');
+Route::post('/editor/delete/{filename}', [EditorController::class, 'delete'])->name('editor.delete');
+
+/*
+|--------------------------------------------------------------------------
+| Tailwind CSS Training
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/twcsstraining', \App\Livewire\TWCSSTraining::class)->name('twcsstraining');
+Route::get('/twcsstraining/{file}', function ($file) {
+    $path = public_path('twcsstraining/'.$file);
+
+    return file_exists($path) ? response()->file($path) : abort(404);
+})->where('file', '.*');
+
+/*
+|--------------------------------------------------------------------------
+| Utility Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::view('/tailwind', 'tailwind')->name('tailwind');
+Route::get('/simulate-500', function () {
+    abort(500, 'Simulated 500 error');
+});
+
+/*
+|--------------------------------------------------------------------------
+| System Administration Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/optimize', function () {
+    $kernel = app()->make(Illuminate\Contracts\Console\Kernel::class);
+    $commands = [
+        'queue:restart' => 'Queue restarted',
+        'cache:clear' => 'Cache cleared',
+        'config:cache' => 'Config cached',
+        'route:clear' => 'Routes cleared',
+        'view:clear' => 'Views cleared',
+        'optimize:clear' => 'Optimization cleared',
+        'optimize' => 'Optimization completed',
+        'config:clear' => 'Config cleared',
+    ];
+
+    foreach ($commands as $command => $message) {
+        $kernel->call($command);
+        echo "$message.\n";
+        flush();
+    }
+
+    exec('composer dump-autoload', $output, $result);
+    echo "Composer autoload dumped.\n";
+    echo 'All optimization steps completed!';
+    flush();
+});
+
+Route::get('routeslisting', function () {
+    $routeCollection = Route::getRoutes();
+    echo "<table style='width:100%'>";
+    echo "<tr><td width='10%'><h4>HTTP Method</h4></td><td width='10%'><h4>Route</h4></td><td width='10%'><h4>Name</h4></td><td width='70%'><h4>Action</h4></td></tr>";
+    foreach ($routeCollection as $value) {
+        echo "<tr><td>{$value->methods()[0]}</td><td>{$value->uri()}</td><td>{$value->getName()}</td><td>{$value->getActionName()}</td></tr>";
+    }
+    echo '</table>';
+});
+
+Route::get('/route-cache', function () {
+    try {
+        $exitCode = Artisan::call('route:cache');
+
+        return $exitCode === 0 ? 'Route cache generated!' : 'Error generating route cache: '.Artisan::output();
+    } catch (\Exception $e) {
+        return 'Error generating route cache: '.$e->getMessage();
+    }
+});
+
+Route::get('/route-clear', function () {
+    try {
+        Artisan::call('route:clear');
+
+        return 'Route cache cleared!';
+    } catch (\Exception $e) {
+        return 'Error clearing route cache: '.$e->getMessage();
+    }
+});
+
+/*
+|--------------------------------------------------------------------------
+| Authenticated Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware(['auth', 'verified'])->group(function () {
+
+    // Dashboard
+    Route::get('/dashboard', \App\Livewire\Dashboard::class)->name('dashboard');
+    Route::get('/pmwaysearch', \App\Livewire\PMWaySearch::class)->name('pmwaysearch');
+    Route::post('/forcelogout', [AuthenticatedSessionController::class, 'destroy'])->name('forcelogout');
+
+    // Avatar Management
+    Route::get('/manage-avatar', Avatarform::class);
+
+    // Document Management
+    Route::get('/document-uploads', [DocumentController::class, 'uploads'])->name('uploads')->middleware('permission:document uploads');
+    Route::post('/document-upload', [DocumentController::class, 'upload'])->name('upload')->middleware('permission:document upload');
+    Route::get('/documents', [DocumentController::class, 'documents'])->name('documents');
+    Route::get('/downloadbyshortname/{shortname}', [DocumentController::class, 'downloadByShortName'])->name('downloadByShortName')->middleware('permission:download byshortname');
+    Route::delete('/documents/{id}', [DocumentController::class, 'destroy'])->name('documents.destroy')->middleware('permission:documents destroy');
+    Route::get('/documents/{id}/edit', [DocumentController::class, 'edit'])->name('documents.edit')->middleware('permission:documents edit');
+    Route::put('/documents/{id}', [DocumentController::class, 'update'])->name('documents.update')->middleware('permission:documents update');
+    Route::get('/docusearch/{term}', [DocumentController::class, 'search']);
+    Route::get('/documents/{shortname}/download', [DocumentController::class, 'downloadByShortName'])->name('documents.download');
+
+    // Image Management
+    Route::get('/image-uploads', [ImageController::class, 'uploads'])->name('image-uploading')->middleware('permission:document uploads');
+    Route::post('/image-upload', [ImageController::class, 'upload'])->name('uploading')->middleware('permission:image upload');
+    Route::get('/images', [ImageController::class, 'images'])->name('images');
+    Route::delete('/images/{id}', [ImageController::class, 'destroy'])->name('images.destroy')->middleware('permission:images destroy');
+    Route::get('/images/{id}/edit', [ImageController::class, 'edit'])->name('images.edit')->middleware('permission:images edit');
+    Route::put('/images/{id}', [ImageController::class, 'update'])->name('images.update')->middleware('permission:images update');
+    Route::get('/images/{shortname}/download', [ImageController::class, 'downloadByShortName'])->name('images.download');
+
+    // OLD Blog Post Routes (Backend/Admin)
+    Route::post('/update-post-status', [BlogPostController::class, 'updatePostStatus'])->name('update.post.status')->middleware('permission:blog approved');
+    Route::get('/useraddpost', [UserPostsBlogPostController::class, 'UserAddPost'])->name('user.add.post');
+    Route::post('/userstorepost', [UserPostsBlogPostController::class, 'UserStorePost'])->name('user.store.post');
+    Route::get('/search', [UserPostsBlogPostController::class, 'usersearch'])->name('usersearch');
+    Route::get('/post/details', [UserPostsBlogPostController::class, 'firstPost'])->name('first.post');
+
+    Route::controller(BlogPostController::class)->group(function () {
+        Route::get('all-post', 'AllPost')->middleware('permission:all post')->name('all.post');
+        Route::get('/blogsbyauthor', 'blogsByAuthor')->middleware('permission:all postsbyauthor')->name('blogs.by.author');
+        Route::get('add-post', 'AddPost')->middleware('permission:add post')->name('add.post');
+        Route::post('store-post', 'StorePost')->middleware('permission:store post')->name('store.post');
+        Route::get('edit-post/{id}', 'EditPost')->middleware('permission:edit post')->name('edit.post');
+        Route::post('update-post/{id}', 'UpdatePost')->middleware('permission:update post')->name('update.post');
+        Route::get('delete-post/{id}', 'DeletePost')->middleware('permission:delete post')->name('delete.post');
+        Route::get('/post/{post}', 'viewSinglePost')->name('view.post');
+        Route::get('/admin/post/{post}', 'viewSinglePost');
+    });
+
+    // Portfolio Dashboard
+    Route::get('/portfoliodash', [AdminController::class, 'PortfolioDash'])->name('portfoliodash')->middleware('permission:portfolio dash');
+
+    // Hero Section
+    Route::controller(HeroController::class)->group(function () {
+        Route::get('here-section', 'HeroSection')->name('hero.section')->middleware('permission:all hero');
+        Route::post('update-here-section', 'UpdateHeroSection')->name('update.here.section')->middleware('permission:update hero');
+    });
+
+    // Services
+    Route::controller(ServicesController::class)->group(function () {
+        Route::get('all-services', 'AllServices')->name('all.services')->middleware('permission:all service');
+        Route::get('add-service', 'AddService')->name('add.service')->middleware('permission:add service');
+        Route::post('store-service', 'StoreService')->name('store.service')->middleware('permission:store service');
+        Route::get('edit-service/{id}', 'EditService')->name('edit.service')->middleware('permission:edit service');
+        Route::post('update-service', 'UpdateService')->name('update.service')->middleware('permission:update service');
+        Route::get('delete-service/{id}', 'DeleteService')->name('delete.service')->middleware('permission:delete service');
+    });
+
+    // Portfolio/Recent Works
+    Route::controller(PortfolioController::class)->group(function () {
+        Route::get('all-recent-works', 'AllRecentWorks')->name('all.recent.works')->middleware('permission:all work');
+        Route::get('all-work', 'AddWork')->name('add.work')->middleware('permission:add work');
+        Route::post('store-work', 'StoreWork')->name('store.work')->middleware('permission:store work');
+        Route::get('edit-word/{id}', 'EditWork')->name('edit.work')->middleware('permission:edit work');
+        Route::post('update-work', 'UpdateWork')->name('update.work')->middleware('permission:update work');
+        Route::get('delete-word/{id}', 'DeleteWork')->name('delete.work')->middleware('permission:delete work');
+    });
+
+    // Experience & Education
+    Route::controller(ResumeController::class)->group(function () {
+        Route::get('my-experience', 'MyExperience')->name('my.experience')->middleware('permission:all experience');
+        Route::post('store-experience', 'StoreExperience')->name('store.experience')->middleware('permission:store experience');
+        Route::get('edit-experience/{id}', 'EditExperience')->middleware('permission:edit experience');
+        Route::post('update-experience', 'UpdateExperience')->name('update.experience')->middleware('permission:update experience');
+        Route::get('delete-experience/{id}', 'DeleteExperience')->name('delete.experience')->middleware('permission:delete experience');
+        Route::get('my-education', 'MyEducation')->name('my.education')->middleware('permission:all education');
+    });
+
+    // Skills
+    Route::controller(SkillsController::class)->group(function () {
+        Route::get('add-skill', 'AddSkill')->name('add.skill')->middleware('permission:add skill');
+        Route::post('store-skill', 'StoreSkill')->name('store.skill')->middleware('permission:store skill');
+        Route::get('all-skills', 'AllSkills')->name('all.skills')->middleware('permission:all skill');
+        Route::get('edit-skill/{id}', 'EditSkill')->name('edit.skill')->middleware('permission:edit skill');
+        Route::post('update-skill', 'UpdateSkill')->name('update.skill')->middleware('permission:update skill');
+        Route::get('delete-skill/{id}', 'DeleteSkill')->name('delete.skill')->middleware('permission:delete skill');
+    });
+
+    // Testimonials
+    Route::controller(TestimonialController::class)->group(function () {
+        Route::get('add-testimony', 'AddTestimony')->name('add.testimony')->middleware('permission:add testimony');
+        Route::post('store-testimony', 'StoreTestimony')->name('store.testimony')->middleware('permission:store testimony');
+        Route::get('all-testimoies', 'AllTestimonies')->name('all.testimoies')->middleware('permission:all testimony');
+        Route::get('edit-testimony/{id}', 'EditTestimony')->name('edit.testimony')->middleware('permission:edit testimony');
+        Route::post('update-testimony', 'UpdateTestimony')->name('update.testimony')->middleware('permission:update testimony');
+        Route::get('delete-testimony/{id}', 'DeleteTestimony')->name('delete.testimony')->middleware('permission:delete testimony');
+    });
+
+    // Comments & Contacts
+    Route::controller(CommentController::class)->group(function () {
+        Route::get('user-comments', 'UserComments')->name('user.comments');
+        Route::post('comment-status-update', 'CommentStatusUpdate')->name('comment.status.update')->middleware('permission:update comment');
+        Route::get('contact-message', 'ContactMessage')->name('contact.message')->middleware('permission:all contact');
+        Route::get('delete-contact/{id}', 'DeleteContact')->name('delete.contact')->middleware('permission:delete contact');
+    });
+
+    // Site Settings
+    Route::controller(SiteSettingsController::class)->group(function () {
+        Route::get('site-settings', 'SiteSettings')->name('site.settings')->middleware('permission:all setting');
+        Route::post('update-site-settings', 'UpdateSiteSettings')->name('update.site.settings')->middleware('permission:update setting');
+    });
+
+    // FilePond Document Manager
+    Route::middleware(['role:Super User'])->group(function () {
+        Route::get('/admin/upload-documents', DocumentUploader::class)->name('admin.upload.documents');
+    });
+
+    Route::get('/admin/document-manager', DocumentUploader::class)
+        ->name('admin.document.manager')
+        ->middleware('permission:manage documents');
+
+    Route::get('/admin/documents/download', [DocumentDownloadController::class, 'download'])
+        ->name('admin.download.document')
+        ->middleware('permission:manage documents');
+
+    Route::get('/admin/documents/view', [DocumentDownloadController::class, 'view'])
+        ->name('admin.view.document')
+        ->middleware('permission:manage documents');
+
+    // Impersonation
+    Route::post('/impersonate/{user}', [\App\Http\Controllers\ImpersonationController::class, 'store'])
+        ->name('impersonate.store')
+        ->middleware('permission:impersonate');
+    Route::delete('/impersonate/stop', [\App\Http\Controllers\ImpersonationController::class, 'destroy'])
+        ->name('impersonate.destroy');
+
+    // Settings
+    Route::redirect('settings', 'settings/profile');
+    Route::get('settings/profile', \App\Livewire\Settings\Profile::class)->name('settings.profile');
+    Route::get('settings/password', \App\Livewire\Settings\Password::class)->name('settings.password');
+    Route::get('settings/appearance', \App\Livewire\Settings\Appearance::class)->name('settings.appearance');
+    Route::get('settings/locale', \App\Livewire\Settings\Locale::class)->name('settings.locale');
+
+    // Admin Routes
+    Route::prefix('admin')->as('admin.')->group(function () {
+        Route::get('/', \App\Livewire\Admin\Index::class)->name('index')->middleware('permission:access dashboard');
+        Route::get('/users', \App\Livewire\Admin\Users::class)->name('users.index')->middleware('permission:view users');
+        Route::get('/users/create', \App\Livewire\Admin\Users\CreateUser::class)->name('users.create')->middleware('permission:create users');
+        Route::get('/users/{user}', \App\Livewire\Admin\Users\ViewUser::class)->name('users.show')->middleware('permission:view users');
+        Route::get('/users/{user}/edit', \App\Livewire\Admin\Users\EditUser::class)->name('users.edit')->middleware('permission:update users');
+        Route::get('/roles', \App\Livewire\Admin\Roles::class)->name('roles.index')->middleware('permission:view roles');
+        Route::get('/roles/create', \App\Livewire\Admin\Roles\CreateRole::class)->name('roles.create')->middleware('permission:create roles');
+        Route::get('/roles/{role}/edit', \App\Livewire\Admin\Roles\EditRole::class)->name('roles.edit')->middleware('permission:update roles');
+        Route::get('/permissions', \App\Livewire\Admin\Permissions::class)->name('permissions.index')->middleware('permission:view permissions');
+        Route::get('/permissions/create', \App\Livewire\Admin\Permissions\CreatePermission::class)->name('permissions.create')->middleware('permission:create permissions');
+        Route::get('permissions/{permission}/edit', \App\Livewire\Admin\Permissions\EditPermission::class)->name('permissions.edit')->middleware('permission:update permissions');
+    });
+
+    // Protected Content
+    Route::middleware('role:Super Admin')->group(function () {
+        Route::get('/privateone', PrivateOne::class);
+    });
+
+    Route::get('/scrumvidlessons', [IndexController::class, 'scrumvidlessons']);
+});
+
+/*
+|--------------------------------------------------------------------------
+| Super User Only Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware(['superuser'])->group(function () {
+    Route::get('/stuffs/jokes/{filename}', [StuffController::class, 'show'])->where('filename', '.*');
+});
+
+Route::get('/admins-only', function () {
+    return 'Only admins should be able to see this page';
+})->middleware('can:visitAdminPages');
+
+/*
+|--------------------------------------------------------------------------
+| PHPMailer Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::get('email', [MailerController::class, 'email'])->name('email');
+Route::post('send-email', [MailerController::class, 'composeEmail'])->name('send-email');
+
+/*
+|--------------------------------------------------------------------------
+| Dynamic Page Loader (Keep Last)
+|--------------------------------------------------------------------------
+*/
+
+Route::get('home/{page}', [IndexController::class, 'homePage'])->where('page', '.*');
+
+require __DIR__.'/auth.php';
+
+
+=== BLADE VIEW STRUCTURE ===
+resources/views/Home/itilfourpracticeslegacy.blade.php
+resources/views/admin/admin_dashboard.blade.php
+resources/views/admin/pages/change_password.blade.php
+resources/views/admin/pages/edit_profile.blade.php
+resources/views/admin/pages/index.blade.php
+resources/views/admin/partials/footer.blade.php
+resources/views/admin/partials/navbar.blade.php
+resources/views/admin/partials/sidebar.blade.php
+resources/views/backend/blog/add_post.blade.php
+resources/views/backend/blog/all_posts.blade.php
+resources/views/backend/blog/blogsbyauthor.blade.php
+resources/views/backend/blog/edit_post.blade.php
+resources/views/backend/blog/single_post.blade.php
+resources/views/backend/comment/comments.blade.php
+resources/views/backend/contact/all_contact_messages.blade.php
+resources/views/backend/hero/here_section.blade.php
+resources/views/backend/portfolio/add_work.blade.php
+resources/views/backend/portfolio/all_recent_works.blade.php
+resources/views/backend/portfolio/edit_work.blade.php
+resources/views/backend/resume/my_education.blade.php
+resources/views/backend/resume/my_experience.blade.php
+resources/views/backend/services/add_service.blade.php
+resources/views/backend/services/all_services.blade.php
+resources/views/backend/services/edit_service.blade.php
+resources/views/backend/setting/site_settings.blade.php
+resources/views/backend/skills/add_skill.blade.php
+resources/views/backend/skills/all_skills.blade.php
+resources/views/backend/skills/edit_skill.blade.php
+resources/views/backend/testimonial/add_testimony.blade.php
+resources/views/backend/testimonial/all_testimonies.blade.php
+resources/views/backend/testimonial/edit_testimony.blade.php
+resources/views/components/action-message.blade.php
+resources/views/components/action-section.blade.php
+resources/views/components/alert.blade.php
+resources/views/components/app-logo-icon-black.blade.php
+resources/views/components/app-logo-icon-white.blade.php
+resources/views/components/app-logo-icon.blade.php
+resources/views/components/app-logo.blade.php
+resources/views/components/application-logo.blade.php
+resources/views/components/application-mark.blade.php
+resources/views/components/auth-header.blade.php
+resources/views/components/auth-session-status.blade.php
+resources/views/components/authentication-card-logo.blade.php
+resources/views/components/authentication-card.blade.php
+resources/views/components/banner.blade.php
+resources/views/components/blog-loading-preloader.blade.php
+resources/views/components/button.blade.php
+resources/views/components/checkbox.blade.php
+resources/views/components/cogs.blade.php
+resources/views/components/cogsico.blade.php
+resources/views/components/cogsicon.blade.php
+resources/views/components/confirmation-modal.blade.php
+resources/views/components/confirms-password.blade.php
+resources/views/components/danger-button.blade.php
+resources/views/components/dialog-modal.blade.php
+resources/views/components/documentsnav.blade.php
+resources/views/components/dropdown-link.blade.php
+resources/views/components/dropdown.blade.php
+resources/views/components/file-entry.blade.php
+resources/views/components/footer.blade.php
+resources/views/components/footerbs.blade.php
+resources/views/components/form-section.blade.php
+resources/views/components/form.blade.php
+resources/views/components/input-error.blade.php
+resources/views/components/input.blade.php
+resources/views/components/label.blade.php
+resources/views/components/layout.blade.php
+resources/views/components/layouts/admin.blade.php
+resources/views/components/layouts/app.blade.php
+resources/views/components/layouts/app/frontend.blade.php
+resources/views/components/layouts/app/header.blade.php
+resources/views/components/layouts/app/logs.blade.php
+resources/views/components/layouts/app/sidebar.blade.php
+resources/views/components/layouts/app/visitor-analytics.blade.php
+resources/views/components/layouts/auth.blade.php
+resources/views/components/layouts/auth/card.blade.php
+resources/views/components/layouts/auth/simple.blade.php
+resources/views/components/layouts/auth/split.blade.php
+resources/views/components/layouts/post.blade.php
+resources/views/components/layouts/profile.blade.php
+resources/views/components/modal.blade.php
+resources/views/components/nav-link.blade.php
+resources/views/components/page-heading.blade.php
+resources/views/components/placeholder-pattern.blade.php
+resources/views/components/post.blade.php
+resources/views/components/profile.blade.php
+resources/views/components/responsive-nav-link.blade.php
+resources/views/components/secondary-button.blade.php
+resources/views/components/section-border.blade.php
+resources/views/components/section-title.blade.php
+resources/views/components/settings/layout.blade.php
+resources/views/components/switchable-team.blade.php
+resources/views/components/table.blade.php
+resources/views/components/table/cell.blade.php
+resources/views/components/table/heading.blade.php
+resources/views/components/table/row.blade.php
+resources/views/components/text-link.blade.php
+resources/views/components/toast-notification.blade.php
+resources/views/components/useraddblognav.blade.php
+resources/views/components/validation-errors.blade.php
+resources/views/components/welcome.blade.php
+resources/views/contact.blade.php
+resources/views/create-post.blade.php
+resources/views/documents/documentlayout/default.blade.php
+resources/views/documents/documents.blade.php
+resources/views/documents/download.blade.php
+resources/views/documents/edit.blade.php
+resources/views/documents/upload.blade.php
+resources/views/documents/uploads.blade.php
+resources/views/edit-post.blade.php
+resources/views/emails/contact-form-email.blade.php
+resources/views/errors/403.blade.php
+resources/views/errors/404.blade.php
+resources/views/errors/500.blade.php
+resources/views/errors/503.blade.php
+resources/views/flux/icon/book-open-text.blade.php
+resources/views/flux/icon/chevrons-up-down.blade.php
+resources/views/flux/icon/folder-git-2.blade.php
+resources/views/flux/icon/layout-grid.blade.php
+resources/views/flux/icon/loader-circle.blade.php
+resources/views/flux/icon/save.blade.php
+resources/views/flux/icon/shield-check.blade.php
+resources/views/flux/icon/shield-user.blade.php
+resources/views/flux/icon/shield.blade.php
+resources/views/flux/navlist/group.blade.php
+resources/views/forcelogout.blade.php
+resources/views/frontend/blog/add_post.blade.php
+resources/views/frontend/blog/most_voted.blade.php
+resources/views/frontend/blog/post_details.blade.php
+resources/views/frontend/blog/searchresults.blade.php
+resources/views/frontend/blogpage.blade.php
+resources/views/frontend/legacy_footer.blade.php
+resources/views/frontend/legacy_header.blade.php
+resources/views/frontend/legacy_master.blade.php
+resources/views/frontend/legacy_nav.blade.php
+resources/views/frontend/partials/blog.blade.php
+resources/views/frontend/partials/contact.blade.php
+resources/views/frontend/partials/footer.blade.php
+resources/views/frontend/partials/header.blade.php
+resources/views/frontend/partials/hero.blade.php
+resources/views/frontend/partials/portfolio.blade.php
+resources/views/frontend/partials/resume.blade.php
+resources/views/frontend/partials/services.blade.php
+resources/views/frontend/partials/skills.blade.php
+resources/views/frontend/partials/testimonial.blade.php
+resources/views/frontend/pmboksix_master.blade.php
+resources/views/frontend/portfoliopage.blade.php
+resources/views/home.blade.php
+resources/views/homepage-feed.blade.php
+resources/views/homepage.blade.php
+resources/views/images/download.blade.php
+resources/views/images/edit.blade.php
+resources/views/images/imagelayout/default.blade.php
+resources/views/images/images.blade.php
+resources/views/images/upload.blade.php
+resources/views/images/uploads.blade.php
+resources/views/jokecats/create.blade.php
+resources/views/jokecats/edit.blade.php
+resources/views/jokecats/index.blade.php
+resources/views/jokes/category.blade.php
+resources/views/jokes/create.blade.php
+resources/views/jokes/edit.blade.php
+resources/views/jokes/index.blade.php
+resources/views/jokes/show.blade.php
+resources/views/layout.blade.php
+resources/views/layouts/app.blade.php
+resources/views/legacy_footer.blade.php
+resources/views/legacy_header.blade.php
+resources/views/legacy_master.blade.php
+resources/views/legacy_nav.blade.php
+resources/views/livewire/Profile/show-profile.blade.php
+resources/views/livewire/a-template.blade.php
+resources/views/livewire/about-pmway.blade.php
+resources/views/livewire/accelerate.blade.php
+resources/views/livewire/acid-database.blade.php
+resources/views/livewire/admin/index.blade.php
+resources/views/livewire/admin/permissions.blade.php
+resources/views/livewire/admin/permissions/create-permission.blade.php
+resources/views/livewire/admin/permissions/edit-permission.blade.php
+resources/views/livewire/admin/roles.blade.php
+resources/views/livewire/admin/roles/create-role.blade.php
+resources/views/livewire/admin/roles/edit-role.blade.php
+resources/views/livewire/admin/users.blade.php
+resources/views/livewire/admin/users/create-user.blade.php
+resources/views/livewire/admin/users/edit-user.blade.php
+resources/views/livewire/admin/users/view-user.blade.php
+resources/views/livewire/agile-methods-carousel.blade.php
+resources/views/livewire/agile-traditional.blade.php
+resources/views/livewire/american-football-videos.blade.php
+resources/views/livewire/american-football.blade.php
+resources/views/livewire/article-index.blade.php
+resources/views/livewire/article-list.blade.php
+resources/views/livewire/auth/confirm-password.blade.php
+resources/views/livewire/auth/forgot-password.blade.php
+resources/views/livewire/auth/login.blade.php
+resources/views/livewire/auth/register.blade.php
+resources/views/livewire/auth/reset-password.blade.php
+resources/views/livewire/auth/verify-email.blade.php
+resources/views/livewire/avatarform.blade.php
+resources/views/livewire/avatarupload.blade.php
+resources/views/livewire/blog-post-list.blade.php
+resources/views/livewire/blog-post-votes.blade.php
+resources/views/livewire/blog/addfollow.blade.php
+resources/views/livewire/blog/create-post.blade.php
+resources/views/livewire/blog/edit-post.blade.php
+resources/views/livewire/blog/profile-followers.blade.php
+resources/views/livewire/blog/profile-following.blade.php
+resources/views/livewire/blog/profile-posts.blade.php
+resources/views/livewire/blog/removefollow.blade.php
+resources/views/livewire/blog/search.blade.php
+resources/views/livewire/blog/single-post.blade.php
+resources/views/livewire/blog/writefull.blade.php
+resources/views/livewire/blogpost-votes.blade.php
+resources/views/livewire/bootstrap/blog-post-votes.blade.php
+resources/views/livewire/bootstrap/most-voted-posts.blade.php
+resources/views/livewire/burndown-short.blade.php
+resources/views/livewire/calculator.blade.php
+resources/views/livewire/capability-maturity-model.blade.php
+resources/views/livewire/cascading-dropdown.blade.php
+resources/views/livewire/categories/categories-manager.blade.php
+resources/views/livewire/chat/chat-dashboard.blade.php
+resources/views/livewire/chat/chat-requests.blade.php
+resources/views/livewire/chat/chat-window.blade.php
+resources/views/livewire/chat/online-user-count-badge.blade.php
+resources/views/livewire/chat/online-user-count-menu.blade.php
+resources/views/livewire/chat/online-user-count.blade.php
+resources/views/livewire/chat/online-users.blade.php
+resources/views/livewire/chat/presence-tracker.blade.php
+resources/views/livewire/cmmi-dev-dashboard.blade.php
+resources/views/livewire/cmmi-dev-resources.blade.php
+resources/views/livewire/cmmi-dr.blade.php
+resources/views/livewire/cmmi-landing.blade.php
+resources/views/livewire/cmmi-level-one.blade.php
+resources/views/livewire/contact-form.blade.php
+resources/views/livewire/counter.blade.php
+resources/views/livewire/create-article.blade.php
+resources/views/livewire/crocodile-hunter.blade.php
+resources/views/livewire/cv-index.blade.php
+resources/views/livewire/dashboard-map.blade.php
+resources/views/livewire/dashboard.blade.php
+resources/views/livewire/deletepost.blade.php
+resources/views/livewire/document-uploader.blade.php
+resources/views/livewire/done-done.blade.php
+resources/views/livewire/edit-article.blade.php
+resources/views/livewire/editpost.blade.php
+resources/views/livewire/ethos-logos-pathos.blade.php
+resources/views/livewire/freedoms-barriers-goals.blade.php
+resources/views/livewire/game-stats-new.blade.php
+resources/views/livewire/greeter.blade.php
+resources/views/livewire/ham-and-eggs.blade.php
+resources/views/livewire/home.blade.php
+resources/views/livewire/image-upload.blade.php
+resources/views/livewire/index.blade.php
+resources/views/livewire/itilfourpractices.blade.php
+resources/views/livewire/kanban-coffee.blade.php
+resources/views/livewire/littles-law.blade.php
+resources/views/livewire/livewireprocs.blade.php
+resources/views/livewire/log-categories-manager.blade.php
+resources/views/livewire/log-categories/log-categories-manager.blade.php
+resources/views/livewire/logout.blade.php
+resources/views/livewire/logs/logs-manager.blade.php
+resources/views/livewire/logs/partials/log-modal.blade.php
+resources/views/livewire/logs/partials/preview-modal.blade.php
+resources/views/livewire/logs/partials/share.modal.blade.php
+resources/views/livewire/logs/partials/template.modal.blade.php
+resources/views/livewire/lwsearch.blade.php
+resources/views/livewire/most-voted-posts.blade.php
+resources/views/livewire/notes/notes-manager.blade.php
+resources/views/livewire/notes/partials/note-modal.blade.php
+resources/views/livewire/notes/partials/preview-modal.blade.php
+resources/views/livewire/notes/partials/share-modal.blade.php
+resources/views/livewire/notes/partials/template-modal.blade.php
+resources/views/livewire/page-refresh.blade.php
+resources/views/livewire/personal-kanban.blade.php
+resources/views/livewire/placeholder.blade.php
+resources/views/livewire/pmbok-process-example.blade.php
+resources/views/livewire/pmbok-process-nutshell.blade.php
+resources/views/livewire/pmbok-spa/dashboard-map.blade.php
+resources/views/livewire/pmbok-spa/dashboard.blade.php
+resources/views/livewire/pmbok-spa/process-page.blade.php
+resources/views/livewire/pmbok-spa/project-list.blade.php
+resources/views/livewire/pmbok-spa/projects-manager.blade.php
+resources/views/livewire/pmway-search.blade.php
+resources/views/livewire/pmway/itil/itilfourpracticeslive.blade.php
+resources/views/livewire/pmway/laws.blade.php
+resources/views/livewire/post-following-list.blade.php
+resources/views/livewire/post-list.blade.php
+resources/views/livewire/private-one.blade.php
+resources/views/livewire/product-form.blade.php
+resources/views/livewire/product-increment.blade.php
+resources/views/livewire/products-search.blade.php
+resources/views/livewire/published-count.blade.php
+resources/views/livewire/red-bead-experiment.blade.php
+resources/views/livewire/registration-form.blade.php
+resources/views/livewire/release-management.blade.php
+resources/views/livewire/safe-critique.blade.php
+resources/views/livewire/sbok-four.blade.php
+resources/views/livewire/scroll-up-button.blade.php
+resources/views/livewire/scrum-dashboards.blade.php
+resources/views/livewire/scrum-spike.blade.php
+resources/views/livewire/scrum-study-vids.blade.php
+resources/views/livewire/scrumfix.blade.php
+resources/views/livewire/search-docs.blade.php
+resources/views/livewire/search-images.blade.php
+resources/views/livewire/search-results.blade.php
+resources/views/livewire/settings/appearance.blade.php
+resources/views/livewire/settings/delete-user-form.blade.php
+resources/views/livewire/settings/locale.blade.php
+resources/views/livewire/settings/password.blade.php
+resources/views/livewire/settings/profile.blade.php
+resources/views/livewire/seven-fs.blade.php
+resources/views/livewire/seven-rules-of-scrum.blade.php
+resources/views/livewire/show-article.blade.php
+resources/views/livewire/singlepost.blade.php
+resources/views/livewire/site-transition.blade.php
+resources/views/livewire/snowbird.blade.php
+resources/views/livewire/speedboat-tool.blade.php
+resources/views/livewire/study-methods.blade.php
+resources/views/livewire/style-guide.blade.php
+resources/views/livewire/tailwind/blog-post-votes.blade.php
+resources/views/livewire/tailwind/most-voted-posts.blade.php
+resources/views/livewire/test-component.blade.php
+resources/views/livewire/the-pmway.blade.php
+resources/views/livewire/todo-list.blade.php
+resources/views/livewire/twcsstraining.blade.php
+resources/views/livewire/v-model.blade.php
+resources/views/livewire/visitor-analytics.blade.php
+resources/views/livewire/websocket-status.blade.php
+resources/views/livewire/work-carousel.blade.php
+resources/views/livewire/working-software.blade.php
+resources/views/logs/export-pdf.blade.php
+resources/views/mail/blog-post-notification.blade.php
+resources/views/mail/contact-mail.blade.php
+resources/views/most-voted-new-blog.blade.php
+resources/views/myfile-demo.blade.php
+resources/views/myimage-demo.blade.php
+resources/views/myjobs.blade.php
+resources/views/new-post-email.blade.php
+resources/views/notes/export-pdf.blade.php
+resources/views/partials/footer.blade.php
+resources/views/partials/head.blade.php
+resources/views/partials/headings/permissions-heading.blade.php
+resources/views/partials/headings/roles-heading.blade.php
+resources/views/partials/headings/settings-heading.blade.php
+resources/views/partials/headings/users-heading.blade.php
+resources/views/pmboksix/bak before sonet 4/baseline.blade.php
+resources/views/pmboksix/bak before sonet 4/close.blade.php
+resources/views/pmboksix/bak before sonet 4/communication.blade.php
+resources/views/pmboksix/bak before sonet 4/cost.blade.php
+resources/views/pmboksix/bak before sonet 4/eightone.blade.php
+resources/views/pmboksix/bak before sonet 4/eightthree.blade.php
+resources/views/pmboksix/bak before sonet 4/eighttwo.blade.php
+resources/views/pmboksix/bak before sonet 4/elevenfive.blade.php
+resources/views/pmboksix/bak before sonet 4/elevenfour.blade.php
+resources/views/pmboksix/bak before sonet 4/elevenone.blade.php
+resources/views/pmboksix/bak before sonet 4/elevenseven.blade.php
+resources/views/pmboksix/bak before sonet 4/elevensix.blade.php
+resources/views/pmboksix/bak before sonet 4/eleventhree.blade.php
+resources/views/pmboksix/bak before sonet 4/eleventwo.blade.php
+resources/views/pmboksix/bak before sonet 4/execute.blade.php
+resources/views/pmboksix/bak before sonet 4/fivefive.blade.php
+resources/views/pmboksix/bak before sonet 4/fivefour.blade.php
+resources/views/pmboksix/bak before sonet 4/fiveone.blade.php
+resources/views/pmboksix/bak before sonet 4/fivesix.blade.php
+resources/views/pmboksix/bak before sonet 4/fivethree.blade.php
+resources/views/pmboksix/bak before sonet 4/fivetwo.blade.php
+resources/views/pmboksix/bak before sonet 4/fourfive.blade.php
+resources/views/pmboksix/bak before sonet 4/fourfour.blade.php
+resources/views/pmboksix/bak before sonet 4/fourone.blade.php
+resources/views/pmboksix/bak before sonet 4/fourseven.blade.php
+resources/views/pmboksix/bak before sonet 4/foursix.blade.php
+resources/views/pmboksix/bak before sonet 4/fourthree.blade.php
+resources/views/pmboksix/bak before sonet 4/fourtwo.blade.php
+resources/views/pmboksix/bak before sonet 4/initiate.blade.php
+resources/views/pmboksix/bak before sonet 4/integration.blade.php
+resources/views/pmboksix/bak before sonet 4/monitorandcontrol.blade.php
+resources/views/pmboksix/bak before sonet 4/ninefive.blade.php
+resources/views/pmboksix/bak before sonet 4/ninefour.blade.php
+resources/views/pmboksix/bak before sonet 4/nineone.blade.php
+resources/views/pmboksix/bak before sonet 4/ninesix.blade.php
+resources/views/pmboksix/bak before sonet 4/ninethree.blade.php
+resources/views/pmboksix/bak before sonet 4/ninetwo.blade.php
+resources/views/pmboksix/bak before sonet 4/plan.blade.php
+resources/views/pmboksix/bak before sonet 4/pmbokprocessnutshell.blade.php
+resources/views/pmboksix/bak before sonet 4/pmnotes.blade.php
+resources/views/pmboksix/bak before sonet 4/procurement.blade.php
+resources/views/pmboksix/bak before sonet 4/quality.blade.php
+resources/views/pmboksix/bak before sonet 4/resource.blade.php
+resources/views/pmboksix/bak before sonet 4/risk.blade.php
+resources/views/pmboksix/bak before sonet 4/schedule.blade.php
+resources/views/pmboksix/bak before sonet 4/scope.blade.php
+resources/views/pmboksix/bak before sonet 4/sevenfour.blade.php
+resources/views/pmboksix/bak before sonet 4/sevenone.blade.php
+resources/views/pmboksix/bak before sonet 4/seventhree.blade.php
+resources/views/pmboksix/bak before sonet 4/seventwo.blade.php
+resources/views/pmboksix/bak before sonet 4/sixfive.blade.php
+resources/views/pmboksix/bak before sonet 4/sixfour.blade.php
+resources/views/pmboksix/bak before sonet 4/sixone.blade.php
+resources/views/pmboksix/bak before sonet 4/sixsix.blade.php
+resources/views/pmboksix/bak before sonet 4/sixthree.blade.php
+resources/views/pmboksix/bak before sonet 4/sixtwo.blade.php
+resources/views/pmboksix/bak before sonet 4/stakeholder.blade.php
+resources/views/pmboksix/bak before sonet 4/template.blade.php
+resources/views/pmboksix/bak before sonet 4/tenone.blade.php
+resources/views/pmboksix/bak before sonet 4/tenthree.blade.php
+resources/views/pmboksix/bak before sonet 4/tentwo.blade.php
+resources/views/pmboksix/bak before sonet 4/thirteenfour.blade.php
+resources/views/pmboksix/bak before sonet 4/thirteenone.blade.php
+resources/views/pmboksix/bak before sonet 4/thirteenthree.blade.php
+resources/views/pmboksix/bak before sonet 4/thirteentwo.blade.php
+resources/views/pmboksix/bak before sonet 4/twelveone.blade.php
+resources/views/pmboksix/bak before sonet 4/twelvethree.blade.php
+resources/views/pmboksix/bak before sonet 4/twelvetwo.blade.php
+resources/views/pmboksix/bak/pmbokprocessnutshell.blade.php
+resources/views/pmboksix/baseline.blade.php
+resources/views/pmboksix/close.blade.php
+resources/views/pmboksix/communication.blade.php
+resources/views/pmboksix/cost.blade.php
+resources/views/pmboksix/eightone.blade.php
+resources/views/pmboksix/eightthree.blade.php
+resources/views/pmboksix/eighttwo.blade.php
+resources/views/pmboksix/elevenfive.blade.php
+resources/views/pmboksix/elevenfour.blade.php
+resources/views/pmboksix/elevenone.blade.php
+resources/views/pmboksix/elevenseven.blade.php
+resources/views/pmboksix/elevensix.blade.php
+resources/views/pmboksix/eleventhree.blade.php
+resources/views/pmboksix/eleventwo.blade.php
+resources/views/pmboksix/execute.blade.php
+resources/views/pmboksix/fivefive.blade.php
+resources/views/pmboksix/fivefour.blade.php
+resources/views/pmboksix/fiveone.blade.php
+resources/views/pmboksix/fivesix.blade.php
+resources/views/pmboksix/fivethree.blade.php
+resources/views/pmboksix/fivetwo.blade.php
+resources/views/pmboksix/fourfive.blade.php
+resources/views/pmboksix/fourfour.blade.php
+resources/views/pmboksix/fourone.blade.php
+resources/views/pmboksix/fourseven.blade.php
+resources/views/pmboksix/foursix.blade.php
+resources/views/pmboksix/fourthree.blade.php
+resources/views/pmboksix/fourtwo.blade.php
+resources/views/pmboksix/initiate.blade.php
+resources/views/pmboksix/integration.blade.php
+resources/views/pmboksix/monitorandcontrol.blade.php
+resources/views/pmboksix/ninefive.blade.php
+resources/views/pmboksix/ninefour.blade.php
+resources/views/pmboksix/nineone.blade.php
+resources/views/pmboksix/ninesix.blade.php
+resources/views/pmboksix/ninethree.blade.php
+resources/views/pmboksix/ninetwo.blade.php
+resources/views/pmboksix/plan.blade.php
+resources/views/pmboksix/pmbokprocessnutshell.blade.php
+resources/views/pmboksix/pmnotes.blade.php
+resources/views/pmboksix/procurement.blade.php
+resources/views/pmboksix/quality.blade.php
+resources/views/pmboksix/resource.blade.php
+resources/views/pmboksix/risk.blade.php
+resources/views/pmboksix/schedule.blade.php
+resources/views/pmboksix/scope.blade.php
+resources/views/pmboksix/sevenfour.blade.php
+resources/views/pmboksix/sevenone.blade.php
+resources/views/pmboksix/seventhree.blade.php
+resources/views/pmboksix/seventwo.blade.php
+resources/views/pmboksix/sixfive.blade.php
+resources/views/pmboksix/sixfour.blade.php
+resources/views/pmboksix/sixone.blade.php
+resources/views/pmboksix/sixsix.blade.php
+resources/views/pmboksix/sixthree.blade.php
+resources/views/pmboksix/sixtwo.blade.php
+resources/views/pmboksix/stakeholder.blade.php
+resources/views/pmboksix/template.blade.php
+resources/views/pmboksix/tenone.blade.php
+resources/views/pmboksix/tenthree.blade.php
+resources/views/pmboksix/tentwo.blade.php
+resources/views/pmboksix/thirteenfour.blade.php
+resources/views/pmboksix/thirteenone.blade.php
+resources/views/pmboksix/thirteenthree.blade.php
+resources/views/pmboksix/thirteentwo.blade.php
+resources/views/pmboksix/twelveone.blade.php
+resources/views/pmboksix/twelvethree.blade.php
+resources/views/pmboksix/twelvetwo.blade.php
+resources/views/profile-followers-only.blade.php
+resources/views/profile-followers.blade.php
+resources/views/profile-following-only.blade.php
+resources/views/profile-following.blade.php
+resources/views/profile-posts-only.blade.php
+resources/views/profile-posts.blade.php
+resources/views/recap-email.blade.php
+resources/views/recapemail.blade.php
+resources/views/single-post.blade.php
+resources/views/tailwind-most-voted.blade.php
+resources/views/tailwind.blade.php
+resources/views/template bootstrap/template.blade.php
+resources/views/template tailwind/template.blade.php
+resources/views/vendor/livewire/tailwind.blade.php
+resources/views/vendor/mail/html/button.blade.php
+resources/views/vendor/mail/html/footer.blade.php
+resources/views/vendor/mail/html/header.blade.php
+resources/views/vendor/mail/html/layout.blade.php
+resources/views/vendor/mail/html/message.blade.php
+resources/views/vendor/mail/html/panel.blade.php
+resources/views/vendor/mail/html/subcopy.blade.php
+resources/views/vendor/mail/html/table.blade.php
+resources/views/vendor/mail/text/button.blade.php
+resources/views/vendor/mail/text/footer.blade.php
+resources/views/vendor/mail/text/header.blade.php
+resources/views/vendor/mail/text/layout.blade.php
+resources/views/vendor/mail/text/message.blade.php
+resources/views/vendor/mail/text/panel.blade.php
+resources/views/vendor/mail/text/subcopy.blade.php
+resources/views/vendor/mail/text/table.blade.php
+resources/views/vendor/pagination/bootstrap-4.blade.php
+resources/views/vendor/pagination/bootstrap-5.blade.php
+resources/views/vendor/pagination/default.blade.php
+resources/views/vendor/pagination/semantic-ui.blade.php
+resources/views/vendor/pagination/simple-bootstrap-4.blade.php
+resources/views/vendor/pagination/simple-bootstrap-5.blade.php
+resources/views/vendor/pagination/simple-default.blade.php
+resources/views/vendor/pagination/simple-tailwind.blade.php
+resources/views/vendor/pagination/tailwind.blade.php
+resources/views/welcome.blade.php
+
+
+=== TWIG FILES IN HOME ===
+resources/views/Home/404.twig
+resources/views/Home/500.twig
+resources/views/Home/_capability_maturity_section.twig
+resources/views/Home/_carousel_slides.twig
+resources/views/Home/_wagile_fragile_section.twig
+resources/views/Home/ablenewtemplate.twig
+resources/views/Home/about.twig
+resources/views/Home/accelerate.twig
+resources/views/Home/access.twig
+resources/views/Home/accordiantemplate.twig
+resources/views/Home/acid.twig
+resources/views/Home/addpostbak.twig
+resources/views/Home/admin.twig
+resources/views/Home/af.twig
+resources/views/Home/afplays.twig
+resources/views/Home/agile.twig
+resources/views/Home/agileatscale.twig
+resources/views/Home/agilecm.twig
+resources/views/Home/agileisdead.twig
+resources/views/Home/azure.twig
+resources/views/Home/backlogrefinement.twig
+resources/views/Home/backlogrefiniement.twig
+resources/views/Home/banting.twig
+resources/views/Home/blank.twig
+resources/views/Home/burndownshort.twig
+resources/views/Home/carousel.twig
+resources/views/Home/cave.twig
+resources/views/Home/changeadkar.twig
+resources/views/Home/changeman.twig
+resources/views/Home/charioteer.twig
+resources/views/Home/cleancode.twig
+resources/views/Home/clear.twig
+resources/views/Home/close.twig
+resources/views/Home/cmdb.twig
+resources/views/Home/cmmi.twig
+resources/views/Home/cmmidevdash.twig
+resources/views/Home/contact.twig
+resources/views/Home/crazyatwork.twig
+resources/views/Home/crocodile.twig
+resources/views/Home/cv.twig
+resources/views/Home/deming.twig
+resources/views/Home/demoitto.twig
+resources/views/Home/desiderata.twig
+resources/views/Home/devops.twig
+resources/views/Home/distributedteams.twig
+resources/views/Home/dml.twig
+resources/views/Home/donedone.twig
+resources/views/Home/dry.twig
+resources/views/Home/dsu.twig
+resources/views/Home/ec.twig
+resources/views/Home/editor.twig
+resources/views/Home/eightone.twig
+resources/views/Home/eightthree.twig
+resources/views/Home/eighttwo.twig
+resources/views/Home/elevenfive.twig
+resources/views/Home/elevenfour.twig
+resources/views/Home/elevenone.twig
+resources/views/Home/elevenseven.twig
+resources/views/Home/elevensix.twig
+resources/views/Home/eleventhree.twig
+resources/views/Home/eleventwo.twig
+resources/views/Home/empirical.twig
+resources/views/Home/empiricalprocesscontrol.twig
+resources/views/Home/execute.twig
+resources/views/Home/fail.twig
+resources/views/Home/fallacies.twig
+resources/views/Home/fish.twig
+resources/views/Home/fivefive.twig
+resources/views/Home/fivefour.twig
+resources/views/Home/fiveone.twig
+resources/views/Home/fivesix.twig
+resources/views/Home/fivethree.twig
+resources/views/Home/fivetwo.twig
+resources/views/Home/fourfive.twig
+resources/views/Home/fourfour.twig
+resources/views/Home/fourone.twig
+resources/views/Home/fourseven.twig
+resources/views/Home/foursix.twig
+resources/views/Home/fourthree.twig
+resources/views/Home/fourtwo.twig
+resources/views/Home/freedoms.twig
+resources/views/Home/gamestats.twig
+resources/views/Home/hamandeggs.twig
+resources/views/Home/headbanging.twig
+resources/views/Home/howtodsu.twig
+resources/views/Home/howtodsutwo.twig
+resources/views/Home/howtoiterationplanning.twig
+resources/views/Home/if.twig
+resources/views/Home/index.twig
+resources/views/Home/initiate.twig
+resources/views/Home/intenmins.twig
+resources/views/Home/introtopiplanning.twig
+resources/views/Home/intwomins.twig
+resources/views/Home/invictus.twig
+resources/views/Home/iterationplanning.twig
+resources/views/Home/iterationreview.twig
+resources/views/Home/itil.twig
+resources/views/Home/itilcsi.twig
+resources/views/Home/itilcsifour.twig
+resources/views/Home/itilcsione.twig
+resources/views/Home/itilcsithree.twig
+resources/views/Home/itilcsitwo.twig
+resources/views/Home/itilfourbigpicture.twig
+resources/views/Home/itilfourposter.twig
+resources/views/Home/itilfourpractices.twig
+resources/views/Home/itilfourtenchanges.twig
+resources/views/Home/itiloverview.twig
+resources/views/Home/itilpm.twig
+resources/views/Home/itilpractices.twig
+resources/views/Home/itilsd.twig
+resources/views/Home/itilsdeight.twig
+resources/views/Home/itilsdeleven.twig
+resources/views/Home/itilsdfive.twig
+resources/views/Home/itilsdfour.twig
+resources/views/Home/itilsdnine.twig
+resources/views/Home/itilsdone.twig
+resources/views/Home/itilsdseven.twig
+resources/views/Home/itilsdsix.twig
+resources/views/Home/itilsdten.twig
+resources/views/Home/itilsdthree.twig
+resources/views/Home/itilsdtwo.twig
+resources/views/Home/itilso.twig
+resources/views/Home/itilsoeight.twig
+resources/views/Home/itilsofive.twig
+resources/views/Home/itilsofour.twig
+resources/views/Home/itilsonine.twig
+resources/views/Home/itilsoone.twig
+resources/views/Home/itilsoseven.twig
+resources/views/Home/itilsosix.twig
+resources/views/Home/itilsothree.twig
+resources/views/Home/itilsotwo.twig
+resources/views/Home/itilss.twig
+resources/views/Home/itilssfive.twig
+resources/views/Home/itilssfour.twig
+resources/views/Home/itilssone.twig
+resources/views/Home/itilssthree.twig
+resources/views/Home/itilsstwo.twig
+resources/views/Home/itilst.twig
+resources/views/Home/itilsteight.twig
+resources/views/Home/itilstfive.twig
+resources/views/Home/itilstfour.twig
+resources/views/Home/itilstone.twig
+resources/views/Home/itilstseven.twig
+resources/views/Home/itilstsix.twig
+resources/views/Home/itilstthree.twig
+resources/views/Home/itilsttwo.twig
+resources/views/Home/justdoitbadly.twig
+resources/views/Home/kanban.twig
+resources/views/Home/kanbancoffee.twig
+resources/views/Home/landscape.twig
+resources/views/Home/laws.twig
+resources/views/Home/leanagilemindset.twig
+resources/views/Home/levelonewheel.twig
+resources/views/Home/leveltwowheel.twig
+resources/views/Home/linuxcommands.twig
+resources/views/Home/littleslaw.twig
+resources/views/Home/log.twig
+resources/views/Home/mande.twig
+resources/views/Home/mars.twig
+resources/views/Home/measurement.twig
+resources/views/Home/mm.twig
+resources/views/Home/monitorandcontrol.twig
+resources/views/Home/monkey.twig
+resources/views/Home/mtvideowithaudio.twig
+resources/views/Home/mvp.twig
+resources/views/Home/ninefive.twig
+resources/views/Home/ninefour.twig
+resources/views/Home/nineone.twig
+resources/views/Home/ninesix.twig
+resources/views/Home/ninethree.twig
+resources/views/Home/ninetwo.twig
+resources/views/Home/nottwentyfourseven.twig
+resources/views/Home/oodaloops.twig
+resources/views/Home/oop.twig
+resources/views/Home/original index.twig/index.twig
+resources/views/Home/oxygen.twig
+resources/views/Home/partials/editor.twig
+resources/views/Home/pigeonbrains.twig
+resources/views/Home/pin.twig
+resources/views/Home/piplanningprep.twig
+resources/views/Home/plan.twig
+resources/views/Home/playbook.twig
+resources/views/Home/pmbokprocessnutshell.twig
+resources/views/Home/pmbokversix.twig
+resources/views/Home/pmis.twig
+resources/views/Home/pmway.twig
+resources/views/Home/pmwaydash.twig
+resources/views/Home/pmwayguestpartbak.twig
+resources/views/Home/powerofpiplanning.twig
+resources/views/Home/processfocus.twig
+resources/views/Home/processnotoutcome.twig
+resources/views/Home/procrastination.twig
+resources/views/Home/productincrement.twig
+resources/views/Home/raci.twig
+resources/views/Home/realstory.twig
+resources/views/Home/redbeadsvids.twig
+resources/views/Home/releasebamboo.twig
+resources/views/Home/removetheredbeads.twig
+resources/views/Home/retrospectives.twig
+resources/views/Home/roadmaptovalue.twig
+resources/views/Home/safe.twig
+resources/views/Home/safedevops.twig
+resources/views/Home/safeisunsafe.twig
+resources/views/Home/safeprogramboard.twig
+resources/views/Home/saferetro.twig
+resources/views/Home/safeuserstories.twig
+resources/views/Home/sailboat.twig
+resources/views/Home/sandboxpostonly.twig
+resources/views/Home/sasm.twig
+resources/views/Home/scrum.twig
+resources/views/Home/scrumban.twig
+resources/views/Home/scrumbut.twig
+resources/views/Home/scrumcourse.twig
+resources/views/Home/scruminterview.twig
+resources/views/Home/scrumorkanban.twig
+resources/views/Home/scrumrca.twig
+resources/views/Home/scrumroleclarity.twig
+resources/views/Home/scrumsixmins.twig
+resources/views/Home/scrumstudy.twig
+resources/views/Home/scrumvaluemodel.twig
+resources/views/Home/scrumvalues.twig
+resources/views/Home/scrumvidlessons.twig
+resources/views/Home/sdavenav.twig
+resources/views/Home/sevenfour.twig
+resources/views/Home/sevenfs.twig
+resources/views/Home/sevenone.twig
+resources/views/Home/sevenrulesofscrum.twig
+resources/views/Home/seventhree.twig
+resources/views/Home/seventwo.twig
+resources/views/Home/sixfive.twig
+resources/views/Home/sixfour.twig
+resources/views/Home/sixone.twig
+resources/views/Home/sixsix.twig
+resources/views/Home/sixthree.twig
+resources/views/Home/sixtwo.twig
+resources/views/Home/skateboard.twig
+resources/views/Home/snowbird.twig
+resources/views/Home/southafrica.twig
+resources/views/Home/spike.twig
+resources/views/Home/spo.twig
+resources/views/Home/sprintupclose.twig
+resources/views/Home/ssm.twig
+resources/views/Home/star.twig
+resources/views/Home/stats.twig
+resources/views/Home/strategicthemes.twig
+resources/views/Home/strategy.twig
+resources/views/Home/superbowl.twig
+resources/views/Home/ta.twig
+resources/views/Home/taaudio.twig
+resources/views/Home/tagames.twig
+resources/views/Home/team.twig
+resources/views/Home/template.twig
+resources/views/Home/tenone.twig
+resources/views/Home/tenthree.twig
+resources/views/Home/tentwo.twig
+resources/views/Home/thegame.twig
+resources/views/Home/thesis.twig
+resources/views/Home/thirteenfour.twig
+resources/views/Home/thirteenone.twig
+resources/views/Home/thirteenthree.twig
+resources/views/Home/thirteentwo.twig
+resources/views/Home/twelveone.twig
+resources/views/Home/twelveprinciples.twig
+resources/views/Home/twelvethree.twig
+resources/views/Home/twelvetwo.twig
+resources/views/Home/ubuntu.twig
+resources/views/Home/userstories.twig
+resources/views/Home/vmodel.twig
+resources/views/Home/waste.twig
+resources/views/Home/waterfallvsagile.twig
+resources/views/Home/workingsoftware.twig
+resources/views/Home/worldofhadoop.twig
+resources/views/Home/wsjf.twig
+resources/views/Home/wsjftwo.twig
+resources/views/Home/zaprobsol.twig
+resources/views/Home/zebras.twig
+resources/views/Home/zzzvidsmultitemplate.twig
+
+
+=== ALL LIVEWIRE COMPONENTS ===
+app/Livewire/ATemplate.php
+app/Livewire/AboutPmway.php
+app/Livewire/Accelerate.php
+app/Livewire/AcidDatabase.php
+app/Livewire/Actions/Logout.php
+app/Livewire/Admin/Index.php
+app/Livewire/Admin/Permissions.php
+app/Livewire/Admin/Permissions/CreatePermission.php
+app/Livewire/Admin/Permissions/EditPermission.php
+app/Livewire/Admin/Roles.php
+app/Livewire/Admin/Roles/CreateRole.php
+app/Livewire/Admin/Roles/EditRole.php
+app/Livewire/Admin/Users.php
+app/Livewire/Admin/Users/CreateUser.php
+app/Livewire/Admin/Users/EditUser.php
+app/Livewire/Admin/Users/ViewUser.php
+app/Livewire/AgileMethodsCarousel.php
+app/Livewire/AgilevsTraditional.php
+app/Livewire/AmericanFootball.php
+app/Livewire/AmericanFootballVideos.php
+app/Livewire/ArticleIndex.php
+app/Livewire/ArticleList.php
+app/Livewire/Auth/ConfirmPassword.php
+app/Livewire/Auth/ForgotPassword.php
+app/Livewire/Auth/Login.php
+app/Livewire/Auth/Logout.php
+app/Livewire/Auth/Register.php
+app/Livewire/Auth/ResetPassword.php
+app/Livewire/Auth/VerifyEmail.php
+app/Livewire/Avatarform.php
+app/Livewire/Avatarupload.php
+app/Livewire/Blog/Addfollow.php
+app/Livewire/Blog/CreatePost.php
+app/Livewire/Blog/EditPost.php
+app/Livewire/Blog/ProfileFollowers.php
+app/Livewire/Blog/ProfileFollowing.php
+app/Livewire/Blog/ProfilePosts.php
+app/Livewire/Blog/Removefollow.php
+app/Livewire/Blog/Search.php
+app/Livewire/Blog/SinglePost.php
+app/Livewire/Blog/Writefull.php
+app/Livewire/BlogPostList.php
+app/Livewire/BlogPostVotes.php
+app/Livewire/BurndownShort.php
+app/Livewire/CMMiLanding.php
+app/Livewire/Calculator.php
+app/Livewire/CapabilityMaturityModel.php
+app/Livewire/CascadingDropdown.php
+app/Livewire/CategoriesManager.php
+app/Livewire/Chat/ChatDashboard.php
+app/Livewire/Chat/ChatRequests.php
+app/Livewire/Chat/ChatWindow.php
+app/Livewire/Chat/OnlineUserCount.php
+app/Livewire/Chat/OnlineUserCountBadge.php
+app/Livewire/Chat/OnlineUserCountMenu.php
+app/Livewire/Chat/OnlineUsers.php
+app/Livewire/Chat/PresenceTracker.php
+app/Livewire/CmmiDevDashboard.php
+app/Livewire/CmmiDevResources.php
+app/Livewire/CmmiDr.php
+app/Livewire/CmmiLevelOne.php
+app/Livewire/ContactForm.php
+app/Livewire/Counter.php
+app/Livewire/CreateArticle.php
+app/Livewire/CrocodileHunter.php
+app/Livewire/CvIndex.php
+app/Livewire/Dashboard.php
+app/Livewire/Deletepost.php
+app/Livewire/DocumentUploader.php
+app/Livewire/DoneDone.php
+app/Livewire/EditArticle.php
+app/Livewire/Editpost.php
+app/Livewire/EthosLogosPathos.php
+app/Livewire/FreedomsBarriersGoals.php
+app/Livewire/FrontendComponent.php
+app/Livewire/GameStatsNew.php
+app/Livewire/Greeter.php
+app/Livewire/HamAndEggs.php
+app/Livewire/Home.php
+app/Livewire/ImageUpload.php
+app/Livewire/ItilFourPracticesLive.php
+app/Livewire/KanbanCoffee.php
+app/Livewire/LWSearch.php
+app/Livewire/LittlesLaw.php
+app/Livewire/Livewireprocs.php
+app/Livewire/LogCategoriesManager.php
+app/Livewire/LogsManager.php
+app/Livewire/MostVotedPosts.php
+app/Livewire/NewBlogComponent.php
+app/Livewire/NotesManager.php
+app/Livewire/PMWaySearch.php
+app/Livewire/PageRefresh.php
+app/Livewire/PersonalKanban.php
+app/Livewire/PmbokProcessExample.php
+app/Livewire/PmbokProcessNutshell.php
+app/Livewire/PmbokSpa/Dashboard.php
+app/Livewire/PmbokSpa/DashboardMap.php
+app/Livewire/PmbokSpa/ProcessPage.php
+app/Livewire/PmbokSpa/ProjectList.php
+app/Livewire/PmbokSpa/ProjectsManager.php
+app/Livewire/Pmway/About.php
+app/Livewire/Pmway/Itil/ItilFourPracticesLive.php
+app/Livewire/Pmway/Laws.php
+app/Livewire/PostFollowingList.php
+app/Livewire/PostList.php
+app/Livewire/PrivateOne.php
+app/Livewire/ProductForm.php
+app/Livewire/ProductIncrement.php
+app/Livewire/ProductsSearch.php
+app/Livewire/Profile/ShowProfile.php
+app/Livewire/PublishedCount.php
+app/Livewire/RedBeadExperiment.php
+app/Livewire/RegisterForm.php
+app/Livewire/ReleaseManagement.php
+app/Livewire/SafeCritique.php
+app/Livewire/Sbokfour.php
+app/Livewire/ScrollUpButton.php
+app/Livewire/ScrumDashboards.php
+app/Livewire/ScrumSpike.php
+app/Livewire/ScrumStudyVids.php
+app/Livewire/Scrumfix.php
+app/Livewire/SearchDocs.php
+app/Livewire/SearchImages.php
+app/Livewire/SearchResults.php
+app/Livewire/Settings/Appearance.php
+app/Livewire/Settings/DeleteUserForm.php
+app/Livewire/Settings/Locale.php
+app/Livewire/Settings/Password.php
+app/Livewire/Settings/Profile.php
+app/Livewire/SevenFs.php
+app/Livewire/SevenRulesOfScrum.php
+app/Livewire/ShowArticle.php
+app/Livewire/SinglePost.php
+app/Livewire/SiteTransition.php
+app/Livewire/Snowbird.php
+app/Livewire/SpeedboatTool.php
+app/Livewire/StudyMethods.php
+app/Livewire/StyleGuide.php
+app/Livewire/TWCSSTraining.php
+app/Livewire/TestComponent.php
+app/Livewire/ThePMWay.php
+app/Livewire/TodoList.php
+app/Livewire/VModel.php
+app/Livewire/VisitorAnalytics.php
+app/Livewire/WebsocketStatus.php
+app/Livewire/WorkCarousel.php
+app/Livewire/WorkingSoftware.php
+
+
+=== BLOG RELATED FILES ===
+resources/views/Home/Scrum/resources/CMS 4.2.1 (NEW 2019 CMS)/Blog.php
+resources/views/Home/Scrum/resources/CMS 4.2.1 (NEW 2019 CMS)/Images/startblog.PNG
+resources/views/Home/Scrum/resources/CMS 4.2.1 (NEW 2019 CMS)/Uploads/travelBlogger.jpg
+resources/views/Home/Scrum/resources/PHPCOURSE (Older CMS)/PHPCMS/Blog.php
+resources/views/backend/blog
+resources/views/backend/blog/add_post.blade.php
+resources/views/backend/blog/all_posts.blade.php
+resources/views/backend/blog/blogsbyauthor.blade.php
+resources/views/backend/blog/edit_post.blade.php
+resources/views/backend/blog/single_post.blade.php
+resources/views/components/blog-loading-preloader.blade.php
+resources/views/components/useraddblognav.blade.php
+resources/views/frontend/blog
+resources/views/frontend/blog/add_post.blade.php
+resources/views/frontend/blog/most_voted.blade.php
+resources/views/frontend/blog/post_details.blade.php
+resources/views/frontend/blog/searchresults.blade.php
+resources/views/frontend/blogpage.blade.php
+resources/views/frontend/partials/blog.blade.php
+resources/views/livewire/blog
+resources/views/livewire/blog-post-list.blade.php
+resources/views/livewire/blog-post-votes.blade.php
+resources/views/livewire/blog/addfollow.blade.php
+resources/views/livewire/blog/create-post.blade.php
+resources/views/livewire/blog/edit-post.blade.php
+resources/views/livewire/blog/profile-followers.blade.php
+resources/views/livewire/blog/profile-following.blade.php
+resources/views/livewire/blog/profile-posts.blade.php
+resources/views/livewire/blog/removefollow.blade.php
+resources/views/livewire/blog/search.blade.php
+resources/views/livewire/blog/single-post.blade.php
+resources/views/livewire/blog/writefull.blade.php
+resources/views/livewire/blogpost-votes.blade.php
+resources/views/livewire/bootstrap/blog-post-votes.blade.php
+resources/views/livewire/tailwind/blog-post-votes.blade.php
+resources/views/mail/blog-post-notification.blade.php
+resources/views/most-voted-new-blog.blade.php
+
+
+=== COMPONENT VIEWS ===
+resources/views/components/action-message.blade.php
+resources/views/components/action-section.blade.php
+resources/views/components/alert.blade.php
+resources/views/components/app-logo-icon-black.blade.php
+resources/views/components/app-logo-icon-white.blade.php
+resources/views/components/app-logo-icon.blade.php
+resources/views/components/app-logo.blade.php
+resources/views/components/application-logo.blade.php
+resources/views/components/application-mark.blade.php
+resources/views/components/auth-header.blade.php
+resources/views/components/auth-session-status.blade.php
+resources/views/components/authentication-card-logo.blade.php
+resources/views/components/authentication-card.blade.php
+resources/views/components/banner.blade.php
+resources/views/components/blog-loading-preloader.blade.php
+resources/views/components/button.blade.php
+resources/views/components/checkbox.blade.php
+resources/views/components/cogs.blade.php
+resources/views/components/cogsico.blade.php
+resources/views/components/cogsicon.blade.php
+resources/views/components/confirmation-modal.blade.php
+resources/views/components/confirms-password.blade.php
+resources/views/components/danger-button.blade.php
+resources/views/components/dialog-modal.blade.php
+resources/views/components/documentsnav.blade.php
+resources/views/components/dropdown-link.blade.php
+resources/views/components/dropdown.blade.php
+resources/views/components/file-entry.blade.php
+resources/views/components/footer.blade.php
+resources/views/components/footerbs.blade.php
+resources/views/components/form-section.blade.php
+resources/views/components/form.blade.php
+resources/views/components/input-error.blade.php
+resources/views/components/input.blade.php
+resources/views/components/label.blade.php
+resources/views/components/layout.blade.php
+resources/views/components/layouts/admin.blade.php
+resources/views/components/layouts/app.blade.php
+resources/views/components/layouts/app/.header.blade.php.swp
+resources/views/components/layouts/app/frontend.blade.php
+resources/views/components/layouts/app/header.blade.php
+resources/views/components/layouts/app/logs.blade.php
+resources/views/components/layouts/app/sidebar.blade.php
+resources/views/components/layouts/app/visitor-analytics.blade.php
+resources/views/components/layouts/auth.blade.php
+resources/views/components/layouts/auth/card.blade.php
+resources/views/components/layouts/auth/simple.blade.php
+resources/views/components/layouts/auth/split.blade.php
+resources/views/components/layouts/post.blade.php
+resources/views/components/layouts/profile.blade.php
+resources/views/components/modal.blade.php
+resources/views/components/nav-link.blade.php
+resources/views/components/page-heading.blade.php
+resources/views/components/placeholder-pattern.blade.php
+resources/views/components/post.blade.php
+resources/views/components/profile.blade.php
+resources/views/components/responsive-nav-link.blade.php
+resources/views/components/secondary-button.blade.php
+resources/views/components/section-border.blade.php
+resources/views/components/section-title.blade.php
+resources/views/components/settings/layout.blade.php
+resources/views/components/switchable-team.blade.php
+resources/views/components/table.blade.php
+resources/views/components/table/cell.blade.php
+resources/views/components/table/heading.blade.php
+resources/views/components/table/row.blade.php
+resources/views/components/text-link.blade.php
+resources/views/components/toast-notification.blade.php
+resources/views/components/useraddblognav.blade.php
+resources/views/components/validation-errors.blade.php
+resources/views/components/welcome.blade.php

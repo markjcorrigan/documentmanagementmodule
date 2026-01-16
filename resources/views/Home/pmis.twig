@@ -1,0 +1,566 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}PMIS{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<!--BODY-->
+<div class="container" align="left">
+<h3 >Microsoft Enterprise Project Management Server<br>
+  [EPMS (also called the PMIS)] </h3>
+<hr>
+<img alt="" class="img-fluid"  src="{{ asset('storage/images/projectserver.jpg') }}" >
+<hr>
+<p><a href="/radar.php"  title="Click here to find out about the use of the War Room and RADAR"><img alt="" class="img-fluid"  src="{{ asset('storage/images/awacs01.png') }}" ></a><a href="/radar.php"  title="Click here to find out about the use of the War Room and RADAR"><img alt="" class="img-fluid"  src="{{ asset('storage/images/warroom.png') }}" ></a></p>
+<hr>
+<h5>The 'Direct and Manage Project Work' Process #4.3<br>
+  (Project Integration Knowledge Area) from the PMBOK&reg; Guide <br>
+  shows the Project Management Information System, <a href="/pdca.php" ><br>
+  Regular Meetings</a> and Expert Judgment as essential Tools and Techniques.<br>
+  <br>
+  &nbsp;<a href="/processesdash/4.3.php" ><img alt="" class="img-fluid"  src="{{ asset('storage/images/dandmpwprocess.jpg') }}"  ></a><br>
+</h5>
+<p class="auto-style3">Note:&nbsp; The Project Management Information
+  System (PMIS) in the PMBOK® is called the Enterprise Project Management
+  Server (EPMS) in PMWay. <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It is PMWay's
+  considered opinion that you cannot achieve CMMi Level 2+ without this
+  essential Tool and Associated Techniques that the EPMS enables.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A few
+  examples (illustrated below) are:&nbsp; Human Resource Pool Management - <a href="/wbs.php" >TAsking (Time
+  Asking) by the hour</a>, Team Collaboration, Web Access, Base lining
+  schedules, <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; slip lines on
+  slipped tasks, <a href="/gate.php" > Stage Gate</a> / Program Management, <a href="/ria.php" >Risk and Issue
+  Management</a> via collaboration engine, and the big one: <a href="/evm.php" >Earned Value
+  Management</a> etc.</p>
+<hr>
+<h5>Project Time Management (coordinated with other knowledge areas in the PMBOK) is where the EPMS 'rubber
+  really hit the road!'&nbsp;&nbsp; Can you see it?</h5>
+<hr>
+&nbsp;
+<map id="ImgMap1" name="ImgMap1">
+  <area coords="609, 292, 560, 274, 512, 280, 506, 321, 483, 356, 478, 406, 496, 515, 612, 516" href="/images/emp2013.pdf" shape="poly" />
+  <area coords="4, 221, 115, 304" href="/project documents/integrationman.pdf" shape="rect"  />
+  <area coords="2, 304, 115, 385" href="/project%20documents/scopeman.pdf" shape="rect"  />
+  <area coords="2, 384, 113, 522" href="/project%20documents/timeman.pdf" shape="rect"  />
+  <area alt="" coords="3, 517, 113, 607" href="/project%20documents/costman.pdf" shape="rect"  />
+  <area alt="" coords="0, 605, 116, 655" href="/project%20documents/qualman.pdf" shape="rect"  />
+  <area alt="" coords="1, 654, 115, 736" href="/project%20documents/hrman.pdf" shape="rect"  />
+  <area alt="" coords="0, 786, 113, 925" href="/project%20documents/riskman.pdf" shape="rect"  />
+  <area alt="" coords="1, 923, 115, 973" href="/project%20documents/procman.pdf" shape="rect"  />
+  <area alt="" coords="2, 973, 114, 1019" href="/project%20documents/stakeman.pdf" shape="rect"  />
+  <area coords="0, 130, 113, 221" href="/project%20documents/summary.pdf" shape="rect"  />
+  <area alt="" coords="0, 1020, 115, 1030" href="/project%20documents/general.pdf" shape="rect"  />
+  <area alt="" coords="0, 736, 112, 789" href="/project%20documents/comsman.pdf" shape="rect"  />
+  <area alt="" coords="114, 385, 152, 522" href="/project%20documents/networkdiags.pdf" shape="rect"  />
+  <area alt="" coords="113, 518, 152, 607" href="/project%20documents/evm.pdf" shape="rect" />
+</map>
+<p style="text-align:center"><img alt="" class="img-fluid"  src="{{ asset('storage/images/pmbokepmslip.png') }}" title="The Microsoft Enterprise Project Server is key towards professional delivery of projects.  Go to the EPMS tab in the Key Concepts Tab to find out more"> </p>
+<a name="topofboxepms1"></a>
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapse1" aria-expanded="false" aria-controls=
+        "collapse1">
+&nbsp;A quick overview of EPMS benefits towards achieving a stable CMMi Level 2+.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style5">Remember that <a href="/cmmi.php#diag" >CMMi
+		improvements reduce Risk and Waste and aim to increase Productivity and
+		Quality
+</button>
+<div class="collapse" id="collapse1">
+  <div class="container">
+    <div class="card text-center">
+      <h5 class="card-header" align="center">Unfortunately this table cannot be compressed for devices with small screens.</h5>
+      <div class="card-body text-center">
+        <ul>
+          <li>
+            <p>The EPMS <a href="/wbs.php" >controls resources by the hour</a> stopping the '<a href="/resourceallocationsyndrome.php" >Resource
+              Allocation Syndrome</a>' dead in its tracks.</p>
+          </li>
+          <li>
+            <p>Collaboration on the EPMS means that once a project is loaded onto the EPMS server all resources (managed from within the resource pool of the EPMS) with web access can update their tasks, update status reports by task, view resource availability, task slippage, print reports, load new risks and respond to issues etc. working virtually off the centralized schedule on the server from a web browser.</p>
+          </li>
+          <li>
+            <p>And if <a href="/wbs.php#slip" >base lined tasks on schedules slip</a> these are
+              flagged graphically in real time, facilitating tighter <a href="/etc.php" >resource Estimated to Complete (ETC)</a>.</p>
+          </li>
+          <li>
+            <p>Remember that <a href="/cmmidevdash.php" >PP and PMC is the heart of CMMi Level 2</a>! <br>
+              With the server <a href="/evm.php" > EVM </a> (and especially the To Complete Performance Index [<a href="/images/tcpi.jpg" >TCPI</a>] - the one calculation that rules them all) is simple to install and administer.</p>
+          </li>
+          <li>
+            <p>Program management is incredibly easy to facilitate <a href="/pmwaymodel.php#pipeline" >as
+              each project's status in the program is controlled and reported on by stage
+              gates with the click of a button</a> by the EPMO on the EPMS.</p>
+          </li>
+          <li>
+            <p>In addition <a href="/ria.php" >Risks and Issues</a> via
+              web based team collaboration in the Project Web Access module of the EPMS is a breeze!<br>
+              <a href="/cmmidevdash.php" >Remember that RSKM is a key area for CMMi Level 3</a> and an essential tool for Traditional Project Management (TPM) and <a href="/chefnotcook.php" >vital if the team are going to do Agile Project Management (APM)!</a></p>
+          </li>
+          <li>
+            <p>Document management for CMMi's PPQA process area is easily managed (<a href="/gate.php" >with control from the EPMS capability to enforce compliance through stage gates</a>).<br>
+              See the process flow below that details how key governance documents can be efficiently controlled by the EPMS.<br>
+              <img alt="Project Document Flow" height="946" src="{{ asset('storage/images/project%20control%20document%20flow.png') }}" width="763"><br>
+            </p>
+            <p><a href="/pmwaymodel.php#docs" >Click here for a visual (conceptual) overview of how this works</a>.  Think tortoise not hare (<a href="/tarpit.php#starthere" >click here, open 'Show Agile is often touted as a way to successfully navigate the
+              Tar Pit' button</a> and at the bottom watch the video of Aesop's famous and relevant fable.<br>
+              I.e. projects are successful if they are run <a href="/continuity.php" >consistently and systematically</a> and step by step (ticking off each next task) towards the agreed milestones / goals, rather than if they are run in inconsistent bursts of uncoordinated energy / mad dashes.  The important thing about the EPMS is that with constant visibility (at task level / by the hour) a project can quickly be brought back on track if it starts to <a href="/sloshing.php" >slosh or slip</a> (production stats start to fall).<br>
+              <br>
+              <a href="/realstoryatcmmil1.php#1" >Click here for a very important point</a>!<br>
+              <a href="/realstoryatcmmil1.php#40" >And click here for another one!</a><br>
+              I.e. SLOW &Aacute; Steady, step by step (keeping the project '<a href="/stats.php" >up stat</a>' and 'in gradient' <a href="/fail.php#crash" >[Click Show The essence of Project Failure - a quick overview] button for more information on this.</a>), WINS THE RACE!</p>
+            <p>More about Document Control (CMMi's PPQA process area) on the EPMS can be found by <a href="/uml.php" >clicking the 'Show Why "process design" is the glue - in a nutshell' button here</a>.</p>
+          </li>
+          <li>
+            <p>While more detail on the EPMS and other tips for CMMi Level 2+ can be found in the web page below, you can also <a href="/cmmisteps.php" >click here for the 'How To CMMi Level 2 steps (checklist)'</a> that you could follow to move yourself from CMMi Level 1 'Just Do It' maturity to CMMi Level 2 'Now we are ready to do it' maturity.<br>
+              These steps are all based around a <a href="/typesofpmo.php" >Directive EPMO</a> (or PMO hubs feeding into a central hub) on top of an EPMS.</p>
+          </li>
+          <li>
+            <p>All the above helps to <a href="/stats.php" >increase
+              measurable production statistics</a> (alleviating <a href="/cmm.php#justdoit" >CMMi
+              Level 1 problems</a>) which (Not JUST DO IT at CMMi Level 1) but instead being able to be measured becomes (NOW WE ARE READY TO DO IT at CMMi Level 2+). <br>
+              I.e. (<a href="/pdca.php" >PDCA</a>)
+              is the essence of CMMi Level 2+.</p>
+          </li>
+          <li>
+            <p>Take the PMWay Quality Tour now to see how the quality gates work.  Imagine how well you can run projects to achieve this type of quality using the EPMS which <strong>ENFORCES STAGE GATE / QUALITY COMPLIANCE AT THE HEART OF PROJECT MANAGEMENT!  I.E. <a href="/wbs.php" >By TASKed Forces who agree to deliver at task level managed for quality by the hour.</a> - This is essentially the <a href="/irontriangle.php" >IRON TRIANGLE</a> and WHO must do WHAT by WHEN with WHAT (I.e. see how this is coordinated in the PMBOK&reg; Dashboard below.</strong><br>
+              <a href="/processesdash/pmbokdashnutshell.php#qatour" title="Click here to go to the Projects Quality Assurance tour." > <img alt="" height="80" src="{{ asset('storage/images/qa toursmall.jpg') }}" width="80" class="shakeimage" onmouseover="init(this);rattleimage()" onmouseout="stoprattle(this);top.focus()" onclick="top.focus()" style="left: 3px; top: 3px;"></a></p>
+          </li>
+        </ul>
+        <p>N.B.  Only the Executive (<a href="/typesofpmo.php" >via a '<strong>Directive EPMO</strong>'</a>) can <a href="/redbeads.php" >create the correct environment to implement the EPMS!</a> <br>
+          I.e. it is pulled into place from the top of the organization by pulling compliance (<a href="/feather.php" >enforcing
+          quality compliance</a>) upwards and into the <a href="/transparency.php" > accountable and transparent</a> (as you would use an accounting system and monthly financial periods) PROJECT SYSTEM / ENGINE (<href="/governance.php" >enforcing governance</a>) that (<a href="/cmmi.php#diag" >achieving true CMMi Level 2</a>) can only be truly achieved with an EPMS.</p>
+      </div>
+      <div class="card-footer"> </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapse2" aria-expanded="false" aria-controls=
+        "collapse2">
+&nbsp;Here is
+		where <a href="/prince.php" >PRINCE2</a> would put the PMIS/EPMS
+        </button>
+        <div class="collapse" id="collapse2">
+  <div class="container">
+            <div class="card text-center">
+      <h5 class="card-header" align="center">Unfortunately this table cannot be compressed for devices with small screens.</h5>
+      <div class="card-body text-center">
+                <p class="ctr"> <img alt="" class=img-fluid src="{{ asset('storage/images/centre%20of%20excellence.png') }}" ></p>
+              </div>
+      <div class="card-footer"> </div>
+    </div>
+          </div>
+</div>
+        <br>
+        <button class="btn btn-primary align-center clearfix" type="button" data-toggle=
+"collapse" data-target="#collapse3" aria-expanded="false" aria-controls=
+        "collapse3">&nbsp;The quality challenges from the PMBOK dashboard that the EPMS can tame </button>
+        <div class="collapse" id="collapse3">
+  <div class="container">
+            <div class="card text-center">
+      <h5 class="card-header" align="center">Unfortunately this table cannot be compressed for devices with small screens.</h5>
+      <div class="card-body text-center">
+                <p class="ctr">PMWay has taken the liberty of dividing up the PMBOK dashboard below with a moat, castle (guardhouse) and drawbridge <br>
+          [in an area to the right of the moat (just after the Develop Schedule process 6.6) in the TIME MANAGEMENT row moving across <br>
+          and (to the right of the moat - the EXECUTE PROCESS GROUP column) moving down.<br>
+          Can you see why this would be important for project management success?</p>
+                <p class="ctr"><img alt="" height="1001" src="{{ asset('storage/images/pmbok5%20gate.png') }}" width="700" /></p>
+                <br>
+                <map id="ImgMap4" name="ImgMap4">
+          <area alt="" coords="322, 1017, 445, 1041" href="/pdca.php" shape="rect" title="Show me all about PDCA" >
+          <area alt="" coords="534, 988, 732, 1041" href="/processesdash/pmbokdashnutshell.php#qatour" shape="rect" title="Show me the Quality Tour and outputs needed to open each Stage / Quality Gate" >
+          <area alt="" coords="176, 36, 583, 187" href="/gate.php" shape="rect" title="Show me all about Stage / Quality Gates" >
+        </map>
+                <p class="ctr"><img alt="" height="1042" src="{{ asset('storage/images/manage%20pipeline.jpg') }}" width="746" usemap="#ImgMap4"></p>
+                <br>
+                <p class="ctr">If you still cannot see how the EPMS can tame the project quality challenges of CMMi Level 1 <br>
+          then take the PMWay Project Quality Tour now <br>
+          <a href="/processesdash/pmbokdashnutshell.php#qatour" title="Click here to go to the Projects Quality Assurance tour." > <img alt="" height="80" src="{{ asset('storage/images/qa toursmall.jpg') }}" width="80" class="shakeimage" onmouseover="init(this);rattleimage()" onmouseout="stoprattle(this);top.focus()" onclick="top.focus()" style="left: 0px; top: 0px;"></a> </p>
+                <br>
+                <br>
+              </div>
+      <div class="card-footer"> </div>
+    </div>
+          </div>
+</div>
+        </section>
+        <hr>
+        <h5>The Microsoft Enterprise Project Management Server System (an EPMS PMWay
+  recommends) is actually a
+  very simple tool:&nbsp; </h5>
+        <p class="auto-style4"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/self-parking-garage1.jpg') }}" ></p>
+        <p>Read these 3 key points below to understand exactly what the Microsoft EPMS is:</p>
+        <ul>
+  <li>Everyone should know Microsoft Project Professional (MSP) client.  I.e. the project software that runs on a single computer.&nbsp;
+            If not there are literally thousands of books / video's / courses that
+            explain how to use this excellent and mature software project management
+            tool! </li>
+  <li>Microsoft's Enterprise Project Management Server System (EPMS) is simply Microsoft Project
+            for the individual (described above) but now as a storage and management
+            repository for many projects in a client server environment.&nbsp;
+            You can think of the EPMS as a storage warehouse (with extensive
+            reporting and management tools telling you everything you need to know
+            about the status (on an ongoing basis / on demand) of your warehouse).&nbsp; I.e. exactly what your
+            current stock
+            levels are per stock item, re-order points etc. But instead of stock
+            reports the EPMS will
+            be able to provide information about projects status of all projects in the EPMS
+            projects repository / warehouse.&nbsp; <br>
+            Just as you would use MS Project on your own computer, now, with the
+            EPMS, you simply save it to the EPMS server (for centralized storage and
+            management) and then re-open it from the server when you want to work on
+            it again.&nbsp; </li>
+  <li>As an alternative you can also use the web based view of what is in the
+            EPMS server called PWA (Project Web Access) to connect to and view / manage
+            parts of your project
+            plan.&nbsp; Being web based PWA has strengths and weaknesses.&nbsp; I.e.
+            you can do certain things quickly and easily - update tasks, view to-do
+            lists, manage issues and lists, view documents, view reports etc. if you
+            are connected to the server via an internet browser.&nbsp; This is a
+            lite version of the original MSP and has advantages and disadvantages
+            depending on what you aim to achieve.&nbsp; For myself, I like to use
+            the MSP application (book the projects I am working on in and then book
+            them out of the EPMS) when working on a project within the EPMS client
+            server environment.&nbsp; While PWA can be accessed via the Intranet / Internet not
+            many companies are happy to expose their information (the project server)
+            unless adequate security is in place to ensure their data remains safe and confidential.<br>
+            NOTE:&nbsp; With EPMS 2013 Microsoft have now fully enabled their
+            project server for Cloud
+            Computing.&nbsp; <br>
+            This means that via PWA, resources will now be able to
+            connect from anywhere there is an internet connection.&nbsp; Also
+            project servers can be hosted anywhere in the world by 3rd parties.&nbsp;
+            The advantages for specialization (remotely hosted servers maintained by
+            specialists who administrate the machines well), remote access (all
+            resources simply jump onto the internet and update their tasks) and <span class="auto-style2">Project Monitoring and Control</span> are
+            now incredibly advanced! <br>
+            <br>
+            NOTE:&nbsp; Microsoft are also moving Visual Studio, Enterprise Project
+            Management Server, Team Foundation Server (via SharePoint) closer
+            together to further enable Productivity and Quality in the Software
+            Project (or other type) Management Arena.<br>
+            <p>The above said, incredible advantages can be obtained by centralizing Microsoft Project into a
+      Client Server environment - as a read below will elucidate.&nbsp; <a href="project%20documents/epm%20solution%20guide.pdf" >First read the EPMS 2010 overview as this is the essence</a>, then read further
+      down the page for PMWay observations on how the EPMS can be used to "beef" up your business
+      plans, project office etc. towards sustained and quality delivery.<br>
+      &nbsp;<em>&nbsp;<br>
+              (Note:&nbsp;
+              While I fully support Microsoft's EPMS as it (2010 version) has now come of age, if another Enterprise Project Management System can offer the
+              same or better advantages then please feel free to use this!&nbsp; I.e. PMWay's interest
+              in Microsoft's EPMS is not a vested one!&nbsp; <br>
+              I (as I am sure do you)
+              simply want to get the job done with the best toolset available at
+              the moment. PMWay is not about promoting a certain toolset over another, but rather about
+              "getting at" the essence of Enterprise Project Management / Projectization.&nbsp;
+              I.e. CMMi Level 2. (which is <strong>"projects correctly managed"</strong>) <strong>PMWay strongly believes can only be achieved on an EPMS!</strong>&nbsp;<br>
+              <br>
+              Conversely, without an EPMS, the CMMi Level 2 requirements and the necessary project office
+              / project management controls that are offered by the EPMS (I.e.
+              Central control that is online and in real time including but not
+              limited to tight
+              Project
+              Management (off centrally control baselines, centrally controlled and
+              co-ordinated resource management, team collaboration, business level project
+              /
+              program and portfolio management (tied to <a href="strategy.php" >strategic direction</a> for the company), rubber
+              hitting the road reporting across the key (but not limited to the) <a href="irontriangle.php" >IRON TRIANGLE</a> dimensions, online real-time agility, online real-time
+              risks and issues management that is highly efficient and effective etc.,),
+              it is PMWay's firm belief that project managers will not have the
+              necessary controls in place to fully manage projects to get
+              the job done!&nbsp; Due to this, the only way to be sure of Project Success
+              (time and time again per CMMi Level 2.) is
+              with a centrally controlled Project Office running on an EPMS.&nbsp; Without the governance and central control offered by a
+              Project Office running off an EPMS success in projects will be highly
+              questionable, no matter how excellent a project manager you are!&nbsp;
+              The only way to achieve CMMi Levels 2, 3 and 4 are off the base of an
+              EPMS!&nbsp; Phew!&nbsp; Hope you have this very
+              important point by now!&nbsp; ;~)&nbsp; <br>
+              If not read further for more on this very important assertion!</em>
+          </li>
+</ul>
+        <div>
+  <p>Below you can see an architecture diagram showing the EPMS:&nbsp; While
+            this may appear overwhelming to many luddites out there, you are welcome
+            to simply gloss over it and
+            read my more user friendly overview of how use the EPMS
+            management reporting capability below.&nbsp; The
+            architecture diagram simply shows the power of the EPMS for an Information
+            Technology point
+            of view to assist with
+            project management controls and delivery / team collaboration etc.!&nbsp; <br>
+            <br>
+            <strong>KNOW THIS:&nbsp; To FORMULATE A PLAN is easy.&nbsp; To SUCCESSFULLY
+    IMPLEMENT THE PLAN (<a href="baseline.php" >Jump the GAP</a>) is where the real challenge exists. This
+    is where the POWER OF THE EPMS will assist you if you follow standard
+    Project Management Process (PMP) and the tips offered in the PMWay web
+    site (summarized within the PMWay model):</strong><br>
+          <div>
+            <p> <img alt="" class="img-fluid"  src="{{ asset('storage/images/2010arch.png') }}" ><br>
+              <br>
+              <a href="project%20documents/epm%20solution%20guide.pdf" >Click here for the Microsoft EPMS 2010
+              overview / solution guide</a><br>
+            <p>Many management tools and reports can be obtained from the EPMS once the project schedule (the gap) has been
+              base line.&nbsp; </p>
+            <p> For example:<br>
+              <br>
+              From the most basic report:&nbsp; <br>
+              &nbsp;-&nbsp; A full list of all projects by project phase or stage and by %complete
+              (possibly by business area).
+            <p> <img alt="" class="img-fluid"  src="{{ asset('storage/images/dash2.png') }}" ><br>
+
+            <p>Click here for more information on <a href="tolerance.php" >keeping a project within agreed tolerances</a> and <a href="rag.php" >a project's RAG status</a>.&nbsp;
+              Remember a <a href="sloshing.php" >sloshing project </a> has <a href="essence.php" >statistics that are on a
+              downward trend</a>!</p>
+            <p> &nbsp;-&nbsp; Manage the Global Resources pool within the EPMS.&nbsp; I.e.
+              which resource (name / skill / rate per hour etc.) is assigned to what project, when and for how many hours,
+              and on which
+              particular days.&nbsp; <br>
+              <br>
+              <a name="task"></a>Remember that for tasks, while we can work on % Complete, we
+              should actually use the full power of the EPMS and manage staff on
+              actual delivery time spent against estimated (agreed by the resource)
+              delivery time.&nbsp; <br>
+              <br>
+              Resource:&nbsp; "Yes I agree to do X task spending four full days at 8 hours and can have the task completed by 12PM next Thursday." <br>
+              Project Manager:  "Excellent!  Are you happy to sign off the schedule so I can sign off your commitment? <br>
+              I need this as part of the sign off on the project to move through our
+              stage gate and fully into Execute Phase.  I.e. to enable me to instruct the project office to apply the project baseline
+              to our project on the EPMS server.  If you sign off, with all the other
+              resources having signed off, we&nbsp; will be good to go!" <br>
+              <br>
+              As the Project Manager has to agree that tasks are completed when using the EPMS.  I.e. the resource completes the task (or X hours of work within a task on a particular day) and for the task to be fully completed the other leg of the completion must be agreed to by the Project Manager.&nbsp;&nbsp;
+              This is called a SUBMIT / ACK (ACK=Acknowledged).&nbsp; I.e. I submit my completed time in
+              EPMS to the Project Manager and he then ticks that he has accepted this
+              I.e. ACK's it as ok.&nbsp; <br>
+              <br>
+              During the SUBMIT / ACK cycle it is a very good time to CHECK THE QUALITY OF THE WORK!&nbsp;&nbsp; <br>
+              I.e. "I want to sign off your task.  Please show me what you have done."</p>
+            <ol>
+              <li>
+                <p>See the image below for a view of how the EPMS manages the allocation of staff time and as project tasks are updated these, if approved by the Project Manager, automatically update the project schedule - OUR PLAYING FIELD!</p>
+                <img alt="" class="img-fluid"  src="{{ asset('storage/images/timesheet.png') }}" ></li>
+              <li>
+                <p>Using the EPMS scheduling engine correctly means the Project Manager remains in control and the <a href="irontriangle.php" >IRON TRIANGLE</a> can be managed for quality!</p>
+              </li>
+              <li>
+                <p>The image below show how resource over allocation can be
+                  managed immediately a resource is over allocated on the EPMS!<br>
+                  I.e. <strong>Resource A</strong> cannot be applied to a new schedule next week as he is
+                  currently over allocated in <strong>Project XYZ and PQR.</strong>&nbsp; I.e. working on other projects.&nbsp;
+                  Using the dashboard you can quickly see that the resources selected are over allocated in September, October and February.</p>
+                <img alt="" class="img-fluid"  src="{{ asset('storage/images/overallocated on epms.jpg') }}" ><br>
+                <br>
+                <img alt="" class="img-fluid"  src="{{ asset('storage/images/overallocated%20to%20solve.jpg') }}" >
+                <p>The RED man Icon in the Gantt Chart (Microsoft project plan) also shows
+                  over allocation at task level.</p>
+                <p> <img alt="" class="img-fluid"  src="{{ asset('storage/images/overallocated red man.png') }}" > </p>
+                <p>And here is above from the Gantt Chart (Microsoft project plan)</p>
+                <p><img alt="" class="img-fluid"  src="{{ asset('storage/images/resource graph over gantt.png') }}" ></p>
+              </li>
+            </ol>
+            <p> -&nbsp; Below is a diagram showing a simple example of viewing the project on the
+              Microsoft Project client (off the central server) and monitoring slippage via the use of the "slippage /
+              progress
+              lines" view.&nbsp; <br>
+              Note:&nbsp; The progress line runs from top to bottom between the two blue
+              arrows.&nbsp; If the project is 100% in track there will not be any leftwards
+              kinks in the progress line!&nbsp; </p>
+            <img alt="" class="img-fluid"  src="{{ asset('storage/images/progresslines.png') }}" >
+            <p> <a href="/lemmings.php" >Click here to see how this very important concept applied to the fictitious <strong>"Let's get the Lemmings home"</strong> project!</a></p>
+            <p>I.e. with the EPMS, via weekly (or more frequent minutes) the PM can
+              keep accurate project status and quickly escalate problems that cannot be solved by the project team.&nbsp; <a href="sponsor.php" >Click here</a> for the importance
+              of the project sponsor and the PID!</p>
+            <p> - <a href="tolerance.php" >Base lining a project </a>gives us a wealth of information on project progress and status
+              (health). <br>
+              <br>
+              It must be born in mind that a project schedule (the plan as a Gantt Chart above is an example), once baselined, runs directly above the invisible
+              FROZEN (in time) COPY (baseline) of itself (there can also be many baselines saved at various times during the life of a project).  Numerous standard or custom EPMS reports are available / can be created (including EPMS dashboards) which use the % difference between where a task is in relation to the baseline of that same task
+              baseline is over time.&nbsp;  If a task is over an agreed variance in relation to its baseline then it will show up as a
+              positive or negative variance (also color coded images can be used I.e.
+              green smiley face means task on track, neutral face with an amber color (task
+              late) or
+              sad face in red (task very late)) within agreed parameters off the
+              latest saved baseline. <br>
+              <br>
+              <strong>The way the EPMS is supposed to work, when administrated from a Project Office, is that tasks not completed at the end of the week must be pushed forward to the next week!&nbsp;&nbsp; <br>
+              (think of this as a week end reconciliation similar to a month end in
+              bookkeeping / accounting) <br>
+              This can be achieved at a click of a button on Microsoft Project.<br>
+              <br>
+              At the end of the week (weekend EPMS administration) project timesheets
+              are completed and submitted [forcing Project Managers to ACK tasks for
+              final completion], resources paid and the EPMS system reporting is
+              produced for the weekend status reporting.</strong><br>
+              <br>
+              This is an extremely important process because this forced moving forward of unfinished work means that variance against baseline will quickly become visible if work is not completed
+              on time!&nbsp; <br>
+              Examples of calculations used, if you are interested, can be found if you <a href="project%20documents/slippage%20formules.doc" >click here</a>.&nbsp;
+              The calculation may, at first&nbsp; appear to the uninitiated as being
+              quite complicated.&nbsp; However, these are the typical calculations that are used to calculate variance off baseline allowing tighter management of the IRON TRIANGLE
+              quality dimensions that are crucial to Project Management Process [PMP].&nbsp;&nbsp;  (If you are confused about
+              the calculation you are welcome to contact me via email for more information or advice).&nbsp;  Remember that these
+              calculations (customizable per installation) are set up in the EPMS when the installation is first created and, once in place, are always accessible as long as the project has been baselined.&nbsp;
+              This is because all project progress calculations
+              are fundamentally dependent on the project baseline as the base from which actuals are worked out. <br>
+              <br>
+              This is the reason why, from a project office administration point of
+              view, we insist, within the PMWay model that a project charter be signed off and the project schedule baselined
+              [<a href="gate.php" >AS A "GO/NO GO" STAGE GATE</a>] at the end of the Planning Phase.
+
+            <p> Successfully compiling the signed off Project Charter (with all key
+              documents including WBS / Gantt etc. as annexures) sets up the EPMS environment so that
+              the Project Office administrator can <a href="baseline.php" >baseline the gap </a>and the project
+              manager and team can now JUMP THE GAP!
+
+            <p> -  In addition Project Management dashboards and Project Office / Executive reports are a breeze off the EPMS.  These can also be highly customized using SQL Server Reporting Services (SSRS) pulling information directly off the back end databases (Online Analytical Analysis Processing) OLAP stores / Reporting databases. <br>
+              <br>
+              &nbsp;-&nbsp; In addition Project Management dashboards and Project Office /
+              Executive reports are a breeze off the EPMS and easy to use for project
+              resources, managers and project office administrators.&nbsp;&nbsp; For
+              example here is the web based Project Center available to the project
+              manager and resources (if they have access) giving them an overview of
+              the projects they have rights to see.
+            <p> <img alt="" class="img-fluid"  src="{{ asset('storage/images/project-server-2010-project-center1.png') }}">
+            <p>The
+              dashboards (and reports - not shown here but accessible via the
+              reporting server web links) on EPMS can also be
+              highly customized using SQL Server Reporting Services (SSRS) pulling
+              information directly off the back end databases (Online Analytical
+              Analysis Processing) OLAP stores / Reporting databases. <br>
+
+            <p><img alt="" class="img-fluid"  src="{{ asset('storage/images/dbastro.png') }}" >
+            <p> And here is a project portfolio view
+              obtained from the Business Intelligence (BI) center:
+            <p> <img alt="" class="img-fluid"  src="{{ asset('storage/images/epm_screen_2.gif') }}" ></p>
+            <p>And most imporantly EVM</p>
+            <a name="cogs"></a>
+            <p class="ctr"><a href="/evm.php" title="The Project Management Information System facilitates Earned Value Management" > <img alt="" class="img-fluid"  src="{{ asset('storage/images/evmlarge.png') }}"  class="auto-style6"></a></p>
+            <img alt="" class="img-fluid"  src="{{ asset('storage/images/evms0092.png') }}" >
+            </p>
+            <p class="ctr"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/evm-earned-value-management.jpg') }}" ></p>
+            <p>Earned value is a powerful tracking and budgeting feature in Project. Despite the slew of intimidating acronyms that defines it (like AC, BCWP, TPI, EV, and the like), it isn’t especially complicated. Earned value helps you answer questions like, “Looking at the amount of work done so far in this project, how much money were we supposed to have spent?” Which then leads to other questions like, "Will we finish on time?"&nbsp;&nbsp;
+              For more information on EVM and how to install and use it <a href="#cogs">click on
+              the 'cogs' above</a>.&nbsp; </p>
+            <p>These are just the tip of what the EPMS has to offer!</p>
+            <hr>
+            <a name="howto"></a>
+            <p> Remember that you can <strong>take it slow</strong> when implementing an
+              EPMS in your company.&nbsp; <br>
+              <strong>Rome was not built in a day!</strong></p>
+            <hr>
+            <p> <strong>THE EPMS, LIKE A FINANCIAL OR ACCOUNTING CONTROL SYSTEM, IS A
+              PROJECT CONTROL SYSTEM!<br>
+              </strong><a href="feather.php" > <img alt="" class="img-fluid"  src="{{ asset('storage/images/featherorhard.png') }}" ></a></p>
+            <p >
+
+            <p> Here are some first steps:</p>
+            <p> 1.&nbsp; Get a trained project server administrator on board!&nbsp; An
+              experienced EPMS consultant can also assist you to implement the EPMS
+              towards institutionalizing the system within your environment.</p>
+            <p>2.&nbsp; Then I advise implementing an EPMS as a simple repository of
+              project plans at first.&nbsp; I.e. Just use it initially as a central
+              warehouse where project plans can be stored and kept safe (I.e. from a
+              custodianship point of view).&nbsp;
+              In this phase you can teach users how to upload and download their plans.&nbsp; I.e. create
+              the resource pool and link people to the server.&nbsp; Remember that a
+              plan can be downloaded from the server and run stand alone on a laptop.&nbsp;
+              However, to update the server with the updated / changed project plan
+              the Project Manager will have to sign up to the server again and safe
+              the new plan to the server.&nbsp; HERE IS THE THING!&nbsp; If you do not
+              publish your project plan back to the server then the server is out of
+              whack with your plan.&nbsp; Therefore a regular upload cycle must be
+              implemented.&nbsp; The way to do this is to have a week end (or week
+              beginning) CUT OFF for reporting.&nbsp; To prepare for this Project
+              Managers (and resources they are managing) must do a week end and finish
+              updating tasks etc. in preparation for the publish to the EPMS.&nbsp;
+              Only at this time can the Project Management Office (PMO) produce
+              weekend reports.&nbsp; <a href="feather.php" >Just like
+              a financial system that needs to do month end or year end.</a>&nbsp;
+              Remember Project Plans are about INVESTED MONEY and are just as
+              important as accounting books.&nbsp; It is vital for a company to be
+              able to know when the benefit it has invested is no longer worth the
+              cost of the investment!&nbsp; Obvious is it not! </p>
+            <p>3.&nbsp; Then move towards creating a structure within the EPMS
+              outline codes that will tie projects to the phases of the Project
+              Management Process:&nbsp; I.e. Initiate, Plan, Execute, Close etc.&nbsp;&nbsp; </p>
+            <p>4.&nbsp; Then (with small projects at first) move towards base lining
+              plans on the server towards tighter control / delivery against the agreed baseline.&nbsp;
+              This is a big and quite difficult step!&nbsp; I.e. moving from CMMi
+              Level 1. to CMMi Level 2!&nbsp; The administrator should be able to show project managers how to manage
+              their projects using slippage of tasks reports etc.&nbsp; Then I suggest
+              that weekly meetings be held where plans are shown to all resources via overhead presentation.&nbsp;
+              This will be off the EPMS server (as the server contains (or should
+              contain) the latest / most up to date plan), to the project team, at weekly project
+              meetings.&nbsp; I.e. actual delivery in the plan is seen against its
+              baseline and slipping tasks / resources / the Project Manager are held accountable.&nbsp;</p>
+            <p>5.&nbsp; The use of
+              project minutes must be used and all <a href="risksiac.php" >issues from risks</a> placed
+              immediately in the minutes as actions for accountable resources to do.&nbsp;&nbsp; <a href="mm.php" >Put the monkey</a> on the backs of
+              those who must manage them, and ensure the task (or issues etc.) gets
+              sorted out / dusted.&nbsp; Even if it is a manager or the CEO!&nbsp;&nbsp;
+              The vital importance of an <a href="sponsor.php" > empowered sponsor</a> has been shown in the Lemmings project above!&nbsp; </p>
+            <p>&nbsp;6.&nbsp; Then
+              systematically (a step at a time) start to empower the project office
+              with more and more functionality as you decide what is essential for
+              successful project management and what additional functionality can be
+              added in phase 2, 3 etc.&nbsp;&nbsp; IT IS NOT ABOUT HOW FANCY YOUR
+              BUSINESS INTELLIGENCE / REPORTS ARE!&nbsp; A FEW KEY REPORTS (FOR
+              EXAMPLE), IF THEY HELP YOU <a href="baseline.php" > SUCCESSFULLY JUMP THE GAP</a>, ARE ALL YOU NEED!</p>
+            <p>7.&nbsp; There is obviously a lot more you can do.&nbsp; Here is a
+              final tip to help you with CMMi.&nbsp; Create CMMi Governance Plans
+              alongside each of your project plans in the EPMS.&nbsp; These "mini
+              plans" (you can separate them from the normal projects in all PWA views
+              I.e. create their own area within the EPMS) will ensure that CMMi
+              "artifacts" like Project Charters etc. are delivered "signed and
+              scanned" to the Project Management Office (PMP) and then "secured" within
+              the PMO document repository.&nbsp; When you have a CMMi <strong>SCAMPI </strong>(<strong>S</strong>tandard <strong>C</strong>MMi <strong>A</strong>ppraisal <strong>M</strong>ethod for <strong>P</strong>rocess <strong>I</strong>mprovement)
+              audit this checklist will really help you.&nbsp; And each time you
+              create a new project in the EPMS it creates a Web Site along with it.&nbsp;
+              Use each CMMi mini plan's web to secure all project documentation for
+              use within the Project Management Approach I.e. can I move through gate
+              1. etc. or to get you ready for your SCAMPI. </p>
+            <hr>
+            <p> <strong>PROJECT MONITORING & CONTROL: Managing a project without a baseline is like trying to drive a car without
+              dial indicator pointers!&nbsp; </strong> <br>
+              <br>
+              <img alt="" class="img-fluid"  src="{{ asset('storage/images/dash.png') }}" ><br>
+              <br>
+              <br>
+            </p>
+            <p>
+            <strong> &nbsp;Remember:<a href="baseline.php"  title="No managed baseline = no project!"><img alt="" class="img-fluid"  src="{{ asset('storage/images/mind-the-gaphypo.png') }}" ></a>is
+            project management off a managed baseline!<br>
+            <br>
+            Minding the Gap, in all seriousness, cannot be done <a href="efficient.php" >efficiently and effectively</a> without an
+            established Project Office running off an <a href="epms.php" >EPMS!</a><br>
+            <br>
+            <a href="fail.php#drive"  title="Click here to learn about safe driving!"> <img alt="" class="img-fluid"  src="{{ asset('storage/images/dashboard1.png') }}" ></a><br>
+            <h5>CMMi Level 2. is all about project "MANAGE"ment!&nbsp; </h5>
+            <h3><br>
+              This is how you implement an EPMS while considering CMMi:</h3>
+            <br>
+            <img alt="" class="img-fluid"  src="{{ asset('storage/images/build-a-plan.jpg') }}" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tips.php#inch"><img alt="" class="img-fluid"  src="{{ asset('storage/images/stepbystep.png') }}" ></a>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" class="img-fluid"  src="{{ asset('storage/images/mind-the-gaphypo.png') }}" ><img alt="" class="img-fluid"  src="{{ asset('storage/images/touchdownscoring.png') }}" ><br>
+            <br>
+            &nbsp;
+            <p>Keep focus of your objectives for Level 2 (project "MANAGE"ment
+              installed), via your EPMS / CMMi implementation plan and take it a step at a time, putting in the
+              effort required to achieve your goal.</p>
+            <p><a href="/project%20documents/pmis.pdf" >Click here</a> for an excellent article about the value of the PMIS</p>
+            <p><a href="/project%20documents/pmis2.pdf" >Click here</a> for another</p>
+            <p><a href="/project%20documents/pmis3.pdf" >Click here</a> for another</p>
+          </div>
+</div>
+        <!-- Content Container ends here -->
+
+        {% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+        <div class="container" align="center">
+  <!--SWITCH ON AND OFF-->
+  <!--The insecure stuff goens here-->
+
+</div>
+{% endif %}
+
+
+{% endblock %}

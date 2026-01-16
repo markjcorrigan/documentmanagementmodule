@@ -1,0 +1,74 @@
+{% extends 'base.twig' %}
+{% block title %} {% if not user %}PMWay{% endif %} {% if user %}Process focus{% endif %}  {% endblock %}
+{% block body %}
+{% if user %}
+<div class="container" align="left">
+  <h3 class="entry-title">Focus on process, not outcome </h3>
+  <hr>
+  <h5><a href="/home/processfocus" >Some videos on this</a></h5>
+  <p>It seems like the best way to reach a desired result would be to focus on that result, try to move toward it, and judge each attempt by how closely you approximate it. But actually that approach is far from optimal. If you focus your attention and effort less on the results you&#8217;re hoping for and more on the processes and techniques you use, you will learn faster, become more successful, and be happier with the outcome.</p>
+  <p>By default we tend to be forward-looking, goal-pursuing, results-focused. Why? Because we&#8217;re wired for a discontentment with the present and a striving for a better future. Because results are easier to measure and evaluate than processes. Because we know others judge us based on results and we tend to care too much what others think.</p>
+  <p>But focusing on process rather than outcome is a much better strategy. Why?</p>
+  <ul>
+    <li>It eliminates the noise of external factors. Success can follow a flawed effort and failure can follow a flawless effort. In those cases, judging performance by outcome will reinforce the wrong techniques. You&#8217;ll achieve mastery of a new skill more quickly if you can learn to detect those cases and reinforce the correct processes whether or not they happened to lead to the desired outcome in that instance.</li>
+    <li>It encourages experimentation. When you&#8217;re wholly focused on a specific desired result, you&#8217;re less willing to try long shots, less inclined to experiment, less open to serendipity, and less likely to stumble on an even better outcome than the one you were aiming for</li>
+    <li>It lets you enjoy the process more. Life is lived in the present, not the future, and happiness is a process, not a place. Focusing on process will let you engage more deeply with the present and experience it more fully, which will help you learn faster and experience life more completely.</li>
+    <li>It puts you in control. You have only partial control over whether you reach a specific external goal. But you have complete control over the process you use. Whether you give your best effort is entirely within your power. An internal locus of control leads to empowerment, higher self-esteem, and success, all of which contribute meaningfully to life satisfaction.</li>
+    <li>It lets you enjoy and benefit more from whatever outcome does occur. In the long run things rarely turn out the way we expect them to. If your happiness is predicated on your success, and if your success is predicated on a specific outcome, you are setting yourself up for a high likelihood of frustration and disappointment. If you instead let go of the need for any particular outcome, you increase your chances for success and contentment. It&#8217;s fine to desire a certain outcome; just don&#8217;t make your happiness contigent on it. Instead, derive happiness from knowing that you gave every attempt your best effort.</li>
+    <li>It will give you confidence. Not confidence that you&#8217;ll succeed in the current attempt, but confidence that you&#8217;re on the right path to mastery. You&#8217;ll worry less about the future because you&#8217;ll know that you&#8217;ll be happy regardless of the outcome of any given situation or event. You&#8217;ll be more free to get out of your comfort zone, to be spontaneous and take risks. And being unattached to a specific outcome means you won&#8217;t be needy, or get upset when things don&#8217;t go as you had hoped. The more you focus on process over outcome, the more confident you&#8217;ll become, and there&#8217;s nothing more attractive than confidence.</li>
+  </ul>
+  <div>
+    <p>So how can you focus on process over outcome?</p>
+    <ul>
+      <li> Don&#8217;t pursue the rewards directly, trust that they will come. Focus on the process with diligence and effortful study, and let the outcome take care of itself.</li>
+      <li>Stop worrying about what others will think of your performance.</li>
+      <li>View each attempt as merely practice for the next attempt.</li>
+      <li>Choose for yourself how to rate your performance. Rate yourself based on the effort, not the outcome. Don&#8217;t try to win today, try to become a winner. Be happier when your best effort results in defeat than when a weak effort results in victory. Determine what your best effort would look like, and then make it happen.</li>
+      <li>Bring awareness to your performance, either during or immediately after it, so you can learn to identify when bad results follow good processes, and vice-versa. With practice you will build the confidence needed to avoid second-guessing yourself when the results are bad but your technique is good.</li>
+    </ul>
+    <br>
+    <br>
+    <p>Thanks Tom Murcko</p>
+  </div>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% if not user %}<div class="container" align="left" ><h3 align="left">Please log on to access the content on this page</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>{% endif %}{% if not current_user and false %}
+<div class="container" align="left">
+  <h3 class="entry-title">Focus on process, not outcome </h3>
+  <hr>
+  <h5><a href="/home/processfocus" >Some videos on this</a></h5>
+  <p>It seems like the best way to reach a desired result would be to focus on that result, try to move toward it, and judge each attempt by how closely you approximate it. But actually that approach is far from optimal. If you focus your attention and effort less on the results you&#8217;re hoping for and more on the processes and techniques you use, you will learn faster, become more successful, and be happier with the outcome.</p>
+  <p>By default we tend to be forward-looking, goal-pursuing, results-focused. Why? Because we&#8217;re wired for a discontentment with the present and a striving for a better future. Because results are easier to measure and evaluate than processes. Because we know others judge us based on results and we tend to care too much what others think.</p>
+  <p>But focusing on process rather than outcome is a much better strategy. Why?</p>
+  <ul>
+    <li>It eliminates the noise of external factors. Success can follow a flawed effort and failure can follow a flawless effort. In those cases, judging performance by outcome will reinforce the wrong techniques. You&#8217;ll achieve mastery of a new skill more quickly if you can learn to detect those cases and reinforce the correct processes whether or not they happened to lead to the desired outcome in that instance.</li>
+    <li>It encourages experimentation. When you&#8217;re wholly focused on a specific desired result, you&#8217;re less willing to try long shots, less inclined to experiment, less open to serendipity, and less likely to stumble on an even better outcome than the one you were aiming for</li>
+    <li>It lets you enjoy the process more. Life is lived in the present, not the future, and happiness is a process, not a place. Focusing on process will let you engage more deeply with the present and experience it more fully, which will help you learn faster and experience life more completely.</li>
+    <li>It puts you in control. You have only partial control over whether you reach a specific external goal. But you have complete control over the process you use. Whether you give your best effort is entirely within your power. An internal locus of control leads to empowerment, higher self-esteem, and success, all of which contribute meaningfully to life satisfaction.</li>
+    <li>It lets you enjoy and benefit more from whatever outcome does occur. In the long run things rarely turn out the way we expect them to. If your happiness is predicated on your success, and if your success is predicated on a specific outcome, you are setting yourself up for a high likelihood of frustration and disappointment. If you instead let go of the need for any particular outcome, you increase your chances for success and contentment. It&#8217;s fine to desire a certain outcome; just don&#8217;t make your happiness contigent on it. Instead, derive happiness from knowing that you gave every attempt your best effort.</li>
+    <li>It will give you confidence. Not confidence that you&#8217;ll succeed in the current attempt, but confidence that you&#8217;re on the right path to mastery. You&#8217;ll worry less about the future because you&#8217;ll know that you&#8217;ll be happy regardless of the outcome of any given situation or event. You&#8217;ll be more free to get out of your comfort zone, to be spontaneous and take risks. And being unattached to a specific outcome means you won&#8217;t be needy, or get upset when things don&#8217;t go as you had hoped. The more you focus on process over outcome, the more confident you&#8217;ll become, and there&#8217;s nothing more attractive than confidence.</li>
+  </ul>
+  <div>
+    <p>So how can you focus on process over outcome?</p>
+    <ul>
+      <li> Don&#8217;t pursue the rewards directly, trust that they will come. Focus on the process with diligence and effortful study, and let the outcome take care of itself.</li>
+      <li>Stop worrying about what others will think of your performance.</li>
+      <li>View each attempt as merely practice for the next attempt.</li>
+      <li>Choose for yourself how to rate your performance. Rate yourself based on the effort, not the outcome. Don&#8217;t try to win today, try to become a winner. Be happier when your best effort results in defeat than when a weak effort results in victory. Determine what your best effort would look like, and then make it happen.</li>
+      <li>Bring awareness to your performance, either during or immediately after it, so you can learn to identify when bad results follow good processes, and vice-versa. With practice you will build the confidence needed to avoid second-guessing yourself when the results are bad but your technique is good.</li>
+    </ul>
+    <br>
+    <br>
+    <p>Thanks Tom Murcko</p>
+  </div>
+</div>
+<!-- Content Container ends here -->
+
+{% endif %}
+
+
+{% endblock %}

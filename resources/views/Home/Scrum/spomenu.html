@@ -1,0 +1,104 @@
+{% extends 'able.html' %}
+
+
+{% block title %}Scrum Product Owner{% endblock %}
+
+{% block body %}
+
+      <!--{% if current_user %}
+    	<img alt="stow logo" height="78" src="http://www.stow.co.za/images/stowsmall.png" width="100">
+        <br>Hello {{ current_user.name }}.
+    {% else %}{% endif %}-->
+
+
+
+
+<h3 style="text-align:center" class="seacolor" ><!--Container Selector--></h3><br>
+<br>
+<br>
+<div class="container">
+<h3>Scrum Product Owner</h3>
+<div>
+		<ul>
+
+
+ 		<li><a href="/scrum/spoone/index" title="What is Agile?  Why use Agile" target="blank" target="blank"><p style="color:navy">PO1: What is Agile?  Why use Agile (2:13)</p></a></li>
+		<li><a href="/scrum/spotwo/index" title="The Agile Manifesto" target="blank"><p style="color:navy">PO2: The Agile Manifesto (3:33)</p></a></li>
+		<li><a href="/scrum/spothree/index" title="Principles of the Agile Manifesto" target="blank"><p style="color:navy">PO3: Principles of the Agile Manifesto (4:10)</p></a></li>
+		<li><a href="/scrum/spofour/index" title="What has Changed" target="blank"><p style="color:navy">PO4: What has Changed (3:10)</p></a></li>
+		<li><a href="/scrum/spofive/index" title="POC Agile Methods" target="blank"><p style="color:navy">PO5: POC Agile Methods (8:36)</p></a></li>
+		<li><a href="/scrum/sposix/index" title="SPOC Scrum Principles" target="blank"><p style="color:navy">PO6: SPOC Scrum Principles (3:05)</p></a></li>
+		<li><a href="/scrum/sposeven/index" title="Scrum Characteristics" target="blank"><p style="color:navy">PO7: Scrum Characteristics (3:02)</p></a></li>
+		<li><a href="/scrum/spoeight/index" title="Advantages of Scrum" target="blank"><p style="color:navy">PO8: Advantages of Scrum (4:39)</p></a></li>
+		<li><a href="/scrum/sponine/index" title="The Product Owner" target="blank"><p style="color:navy">PO9: The Product Owner (3:34)</p></a></li>
+		<li><a href="/scrum/spoten/index" title="The Scrum TEam" target="blank"><p style="color:navy">PO10: The Scrum Team (4:10)</p></a></li>
+		<li><a href="/scrum/spoeleven/index" title="The Scrum Team" target="blank"><p style="color:navy">PO11: The Scrum Master (2:44)</p></a></li>
+		<li><a href="/scrum/spotwelve/index" title="Scrum Flow" target="blank"><p style="color:navy">PO12: Scrum Flow (1:30)</p></a></li>
+		<li><a href="/scrum/spothirteen/index" title="Scrum Flow" target="blank"><p style="color:navy">
+		PO13: Requirements in Scrum and Prioritizing the Product Backlog (3:33)</p></a></li>
+		<li><a href="/scrum/spofourteen/index" title="Requirements in Scrum and Prioritizing the Product Backlog" target="blank"><p style="color:navy">PO14: Adaptive Project Management and Scrum Planning (22:54)</p></a></li>
+		<li><a href="/scrum/spofifteen/index" title="Adaptive Project Management and Scrum Planning" target="blank"><p style="color:navy">PO15: Acceptance Criteria/Done Criteria/Estimation (4:42)</p></a></li>
+		<li><a href="/scrum/sposixteen/index" title="Acceptance Criteria/Done Criteria/Estimation" target="blank"><p style="color:navy">
+		PO16: Importance of Value (2:47)</p></a></li>
+		<li><a href="/scrum/sposeventeen/index" title="Importance of Value" target="blank"><p style="color:navy">PO17: Risk Burndown graphics/Risk-Adjusted Backlog (1:26)</p></a></li>
+		<li><a href="/scrum/spoeighteen/index" title="Risk Burndown graphics/Risk-Adjusted Backlog" target="blank"><p style="color:navy">PO18: Scrum Board (7:54)</p></a></li>
+		<li><a href="/scrum/sponineteen/index" title="Scrum Board" target="blank"><p style="color:navy">PO19: Sprints (1:34)</p></a></li>
+		<li><a href="/scrum/spotwenty/index" title="Sprints" target="blank"><p style="color:navy">PO20: Sprint Planning Meeting (0:34)</p></a></li>
+		<li><a href="/scrum/spotwentyone/index" title="Sprint Planning Meeting" target="blank"><p style="color:navy">PO21: Product Owners role in Sprint Planning Meeting (1:30)</p></a></li>
+		<li><a href="/scrum/spotwentytwo/index" title="Product Owners role in Sprint Planning Meeting" target="blank"><p style="color:navy">PO22: Task Estimation (1:33)</p></a></li>
+        <li><a href="/scrum/spotwentythree/index" title="Task Estimation" target="blank"><p style="color:navy">PO23: The Sprint Backlog (1:13)</p></a></li>
+		<li><a href="/scrum/spotwentyfour/index" title="The Sprint Backlog" target="blank"><p style="color:navy">PO24: Daily Stand-up Meeting (7:15)</p></a></li>
+		<li><a href="/scrum/spotwentyfive/index" title="Daily Stand-up Meeting" target="blank"><p style="color:navy">PO25: Sprint Review Meeting Overview (2:46)</p></a></li>
+		<li><a href="/scrum/spotwentysix/index" title="Sprint Review Meeting Overview" target="blank"><p style="color:navy">PO26: Sprint Retrospective Meeting (1:15)</p></a></li>
+		<li><a href="/scrum/spotwentyseven/index" title="Sprint Retrospective Meeting" target="blank"><p style="color:navy">PO27: Product Backlog Grooming (6:01)</p></a></li>
+		<li><a href="/scrum/spotwentyeight/index" title="Product Backlog Grooming/Product Backlog Grooming Overview" target="blank"><p style="color:navy">PO28: The Chief Product Owner (3:38)</p></a></li>
+		<li><a href="/scrum/spotwentynine/index" title="The Chief Product Owner" target="blank"><p style="color:navy">PO29: Distributed Teams in Scrum (1:44)</p></a></li>
+		<li><a href="/scrum/spothirty/index" title="Distributed Teams in Scrum" target="blank"><p style="color:navy">PO30: Maintaining Staekholder Involvement (1:43)</p></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+			<p><a href="/scrummedia/artofscrum" >Click here</a> for the awesome book about scrum (The Art of Scrum) by its founder:  Jess Sutherland.</p>
+</div>
+
+</div>
+
+
+
+
+
+
+ 	 <br><br><br><br><br><br>
+
+
+
+{% endblock %}
