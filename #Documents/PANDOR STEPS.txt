@@ -1,0 +1,7 @@
+1.  Get the notes from Teams and click it (top right) and put it into Obsidian.
+2.  New Section then new note.  Ctrl C Ctrl V
+3.  Export to Markdown (Hugo) i.e. to desktop folder Markdown
+4.  Right click on the folder and say cmd in top banner
+5.  pandoc as.md -o pandortest.docx
+6.  You will have to then copy and paste again leaving out the irritating CoPilot summary into another .docs document.
+
