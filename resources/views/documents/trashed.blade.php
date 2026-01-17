@@ -1,32 +1,7 @@
 @extends('documents.layouts.main')
 
 @section('content')
-    {{-- Theme initialization script --}}
-    <script>
-        (function() {
-            try {
-                const savedTheme = localStorage.getItem('flux.appearance') ||
-                                  localStorage.getItem('flux:appearance') ||
-                                  localStorage.getItem('theme');
-                
-                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                
-                let theme = savedTheme;
-                if (!savedTheme || savedTheme === 'system') {
-                    theme = systemPrefersDark ? 'dark' : 'light';
-                }
-                
-                if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                    document.body.classList.add('dark');
-                }
-            } catch (error) {
-                console.log('Theme init failed');
-            }
-        })();
-    </script>
-
-<div class="container mx-auto px-4 py-8">
+<div class="container mx-auto px-4 py-8 !bg-white dark:!bg-zinc-900 min-h-screen transition-colors duration-300">
     <!-- Header -->
     <div class="flex justify-between items-center mb-6">
         <div>
@@ -47,18 +22,18 @@
 
             {{-- Dark/Light Mode Toggle --}}
             <button
-                onclick="toggleTheme()"
+                id="docs-theme-toggle"
                 class="px-3 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 border border-gray-300 dark:border-gray-600"
                 aria-label="Toggle theme"
-                style="min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center;">
+                style="min-width: 44px; min-height: 44px;">
                 
                 {{-- BLACK MOON for light mode --}}
-                <svg id="theme-toggle-moon-icon" style="display: block;" class="w-5 h-5 text-gray-900 transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20">
+                <svg id="moon-icon" class="w-5 h-5 text-gray-900 transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                 </svg>
                 
                 {{-- YELLOW SUN for dark mode --}}
-                <svg id="theme-toggle-sun-icon" style="display: none;" class="w-5 h-5 text-yellow-500 transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20">
+                <svg id="sun-icon" class="w-5 h-5 text-yellow-500 transition-transform duration-500 hidden" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                 </svg>
             </button>
@@ -72,55 +47,76 @@
         </div>
     @endif
 
+    @if(session('error'))
+        <div class="mb-6 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-800 text-red-700 dark:text-red-200 px-4 py-3 rounded relative" role="alert">
+            <span class="block sm:inline">{{ session('error') }}</span>
+        </div>
+    @endif
+
     <!-- Trashed Documents List Component -->
     @livewire('documents.trashed-list')
 </div>
 @endsection
 
 @push('scripts')
-    <script>
-        function toggleTheme() {
-            const html = document.documentElement;
-            const body = document.body;
-            const moonIcon = document.getElementById('theme-toggle-moon-icon');
-            const sunIcon = document.getElementById('theme-toggle-sun-icon');
-            
-            const isDark = html.classList.contains('dark');
-            
-            if (isDark) {
-                // Switch to LIGHT mode - show moon
-                html.classList.remove('dark');
-                body.classList.remove('dark');
-                localStorage.setItem('flux.appearance', 'light');
-                localStorage.setItem('theme', 'light');
-                
-                moonIcon.style.display = 'block';
-                sunIcon.style.display = 'none';
-            } else {
-                // Switch to DARK mode - show sun
-                html.classList.add('dark');
-                body.classList.add('dark');
-                localStorage.setItem('flux.appearance', 'dark');
-                localStorage.setItem('theme', 'dark');
-                
-                moonIcon.style.display = 'none';
-                sunIcon.style.display = 'block';
-            }
+<script>
+(function() {
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+    const toggleBtn = document.getElementById('docs-theme-toggle');
+    
+    function updateIcons() {
+        const isDark = document.documentElement.classList.contains('dark');
+        
+        if (isDark) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
         }
-
-        // Initialize icon state on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const html = document.documentElement;
-            const moonIcon = document.getElementById('theme-toggle-moon-icon');
-            const sunIcon = document.getElementById('theme-toggle-sun-icon');
-            
-            if (html.classList.contains('dark')) {
-                moonIcon.style.display = 'none';
-                sunIcon.style.display = 'block';
-            } else {
-                moonIcon.style.display = 'block';
-                sunIcon.style.display = 'none';
-            }
-        });
-    </script>
+        
+        if (isDark) {
+            moonIcon?.classList.add('hidden');
+            sunIcon?.classList.remove('hidden');
+        } else {
+            moonIcon?.classList.remove('hidden');
+            sunIcon?.classList.add('hidden');
+        }
+    }
+    
+    updateIcons();
+    
+    toggleBtn?.addEventListener('click', function() {
+        const isDark = document.documentElement.classList.contains('dark');
+        const newTheme = isDark ? 'light' : 'dark';
+        
+        localStorage.setItem('flux.appearance', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        if (newTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.body.classList.remove('dark');
+        }
+        
+        updateIcons();
+    });
+    
+    const observer = new MutationObserver(function(mutations) {
+        updateIcons();
+    });
+    
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class']
+    });
+    
+    window.addEventListener('storage', function(e) {
+        if (e.key === 'flux.appearance' || e.key === 'theme') {
+            updateIcons();
+        }
+    });
+})();
+</script>
 @endpush
