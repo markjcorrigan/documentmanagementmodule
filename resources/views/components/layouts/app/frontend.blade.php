@@ -379,6 +379,10 @@
                                 Project Logs
                             </flux:navlist.item>
 
+                            <flux:menu.item href="/documents" class="text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                                <i class="fa-solid fa-envelope mr-2"></i> Documents
+                            </flux:menu.item>
+
                             <flux:menu.item href="/contact" class="text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                                 <i class="fa-solid fa-envelope mr-2"></i> Contact
                             </flux:menu.item>
