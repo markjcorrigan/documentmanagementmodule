@@ -1,0 +1,13 @@
+127.0.0.1 pmway.local
+
+
+<VirtualHost *:80>
+    ServerName pmway.local
+    DocumentRoot "C:/xampp/htdocs/pmway/public"
+    <Directory "C:/xampp/htdocs/pmway/public">
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+I.e.  Use npm run dev

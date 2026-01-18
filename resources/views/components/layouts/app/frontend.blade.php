@@ -434,16 +434,28 @@
                 </flux:dropdown>
             </div>
 
-            {{-- Theme Toggle Icon - MOBILE FIXED --}}
+            {{-- Theme Toggle Icon - MOBILE FIXED for not having fontawesome--}}
             <div wire:ignore class="flex-shrink-0">
-                <i id="themeIcon"
-                   class="fa-solid fa-moon cursor-pointer text-lg md:text-xl hover:rotate-180 hover:scale-110 transition-all duration-300"
-                   style="color: #1f2937;"
-                   title="Toggle theme"
-                   role="button"
-                   tabindex="0"
-                   aria-label="Toggle theme"></i>
+                <button id="themeToggle"
+                        class="px-3 py-2 rounded-md bg-gray-200 hover:bg-gray-300 text-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white transition-all duration-300 text-sm font-medium"
+                        title="Toggle theme"
+                        aria-label="Toggle theme">
+                    <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
+                    <span id="themeText">Theme</span>
+                </button>
             </div>
+
+
+            {{--            --}}{{-- Theme Toggle Icon - MOBILE FIXED --}}
+{{--            <div wire:ignore class="flex-shrink-0">--}}
+{{--                <i id="themeIcon"--}}
+{{--                   class="fa-solid fa-moon cursor-pointer text-lg md:text-xl hover:rotate-180 hover:scale-110 transition-all duration-300"--}}
+{{--                   style="color: #1f2937;"--}}
+{{--                   title="Toggle theme"--}}
+{{--                   role="button"--}}
+{{--                   tabindex="0"--}}
+{{--                   aria-label="Toggle theme"></i>--}}
+{{--            </div>--}}
         </nav>
     </div>
 </flux:header>
@@ -635,10 +647,173 @@
         });
     </script>
 @endauth
+
 {{-- SCRIPTS --}}
 @stack('scripts')
 @livewireScripts
 @fluxScripts
+
+
+
+
+{{-- Theme Toggle Functionality without fontawesome--}}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
+
+        if (!themeToggle) return;
+
+        // Function to get current theme
+        function getCurrentTheme() {
+            const savedTheme = localStorage.getItem('flux.appearance') ||
+                localStorage.getItem('flux:appearance') ||
+                localStorage.getItem('theme');
+
+            if (savedTheme && savedTheme !== 'system') {
+                return savedTheme;
+            }
+
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        // Function to update button
+        function updateButton(theme) {
+            if (theme === 'dark') {
+                if (themeIcon) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                }
+                if (themeText) {
+                    themeText.textContent = 'Light';
+                }
+            } else {
+                if (themeIcon) {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+                if (themeText) {
+                    themeText.textContent = 'Dark';
+                }
+            }
+        }
+
+        // Function to apply theme
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+                document.body.style.backgroundColor = '#27272a';
+                document.documentElement.style.backgroundColor = '#27272a';
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.body.classList.remove('dark');
+                document.body.style.backgroundColor = '#ffffff';
+                document.documentElement.style.backgroundColor = '#ffffff';
+            }
+
+            // Update button
+            updateButton(theme);
+
+            // Store in all possible locations
+            localStorage.setItem('flux.appearance', theme);
+            localStorage.setItem('flux:appearance', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        // Initialize button on load
+        const currentTheme = getCurrentTheme();
+        updateButton(currentTheme);
+
+        // Toggle theme on click
+        themeToggle.addEventListener('click', function() {
+            const current = getCurrentTheme();
+            const newTheme = current === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
+    });
+</script>
+
+
+{{-- Theme Toggle Functionality --}}
+{{--<script>--}}
+{{--    document.addEventListener('DOMContentLoaded', function() {--}}
+{{--        const themeIcon = document.getElementById('themeIcon');--}}
+
+{{--        if (!themeIcon) return;--}}
+
+{{--        // Function to get current theme--}}
+{{--        function getCurrentTheme() {--}}
+{{--            const savedTheme = localStorage.getItem('flux.appearance') ||--}}
+{{--                localStorage.getItem('flux:appearance') ||--}}
+{{--                localStorage.getItem('theme');--}}
+
+{{--            if (savedTheme && savedTheme !== 'system') {--}}
+{{--                return savedTheme;--}}
+{{--            }--}}
+
+{{--            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';--}}
+{{--        }--}}
+
+{{--        // Function to update icon--}}
+{{--        function updateIcon(theme) {--}}
+{{--            if (theme === 'dark') {--}}
+{{--                themeIcon.classList.remove('fa-moon');--}}
+{{--                themeIcon.classList.add('fa-sun');--}}
+{{--                themeIcon.style.color = '#f3f4f6';--}}
+{{--            } else {--}}
+{{--                themeIcon.classList.remove('fa-sun');--}}
+{{--                themeIcon.classList.add('fa-moon');--}}
+{{--                themeIcon.style.color = '#1f2937';--}}
+{{--            }--}}
+{{--        }--}}
+
+{{--        // Function to apply theme--}}
+{{--        function applyTheme(theme) {--}}
+{{--            if (theme === 'dark') {--}}
+{{--                document.documentElement.classList.add('dark');--}}
+{{--                document.body.classList.add('dark');--}}
+{{--                document.body.style.backgroundColor = '#27272a';--}}
+{{--                document.documentElement.style.backgroundColor = '#27272a';--}}
+{{--            } else {--}}
+{{--                document.documentElement.classList.remove('dark');--}}
+{{--                document.body.classList.remove('dark');--}}
+{{--                document.body.style.backgroundColor = '#ffffff';--}}
+{{--                document.documentElement.style.backgroundColor = '#ffffff';--}}
+{{--            }--}}
+
+{{--            // Update icon--}}
+{{--            updateIcon(theme);--}}
+
+{{--            // Store in all possible locations--}}
+{{--            localStorage.setItem('flux.appearance', theme);--}}
+{{--            localStorage.setItem('flux:appearance', theme);--}}
+{{--            localStorage.setItem('theme', theme);--}}
+{{--        }--}}
+
+{{--        // Initialize icon on load--}}
+{{--        const currentTheme = getCurrentTheme();--}}
+{{--        updateIcon(currentTheme);--}}
+
+{{--        // Toggle theme on click--}}
+{{--        themeIcon.addEventListener('click', function() {--}}
+{{--            const current = getCurrentTheme();--}}
+{{--            const newTheme = current === 'dark' ? 'light' : 'dark';--}}
+{{--            applyTheme(newTheme);--}}
+{{--        });--}}
+
+{{--        // Handle Enter/Space key--}}
+{{--        themeIcon.addEventListener('keydown', function(e) {--}}
+{{--            if (e.key === 'Enter' || e.key === ' ') {--}}
+{{--                e.preventDefault();--}}
+{{--                const current = getCurrentTheme();--}}
+{{--                const newTheme = current === 'dark' ? 'light' : 'dark';--}}
+{{--                applyTheme(newTheme);--}}
+{{--            }--}}
+{{--        });--}}
+{{--    });--}}
+{{--</script>--}}
 
 {{-- Mobile chat button text replacement ONLY --}}
 <script>

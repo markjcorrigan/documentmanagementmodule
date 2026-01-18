@@ -8,4 +8,3 @@ php artisan cache:clear
 php artisan event:clear
 php artisan clear-compiled
 echo Done! All caches cleared.
-pause

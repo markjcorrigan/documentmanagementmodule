@@ -1,0 +1,10 @@
+Option 1: Create New User with Full Privileges
+sql
+CREATE USER 'markjc'@'localhost' IDENTIFIED BY 'your_password_here';
+GRANT ALL PRIVILEGES ON *.* TO 'markjc'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+Option 2: If User Already Exists (Just Grant Privileges)
+sql
+GRANT ALL PRIVILEGES ON *.* TO 'markjc'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;

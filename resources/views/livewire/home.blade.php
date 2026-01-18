@@ -600,6 +600,7 @@
 
                     <!-- Dunning Kruger Image with Hover Effect -->
                     <div x-data="{ showSecond: false }"
+
                          class="relative cursor-pointer w-full"
                          @mouseenter="showSecond = true"
                          @mouseleave="showSecond = false"
@@ -633,10 +634,339 @@
 
                     <p class="text-zinc-900 dark:text-zinc-100 mt-6">Position the pin on the diagram above:</p>
 
+                    {{-- Dig Into Dunning Kruger Section --}}
+                    <section class="mb-8">
+                        {{-- Video Collapsible Section --}}
+                        <div x-data="{ videoOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden mb-4">
+                            {{-- Video Toggle Header --}}
+                            <button
+                                    @click="videoOpen = !videoOpen"
+                                    class="w-full flex items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            >
+                                <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">
+                                    Dig deeper into the Dunning Kruger effect:
+                                </h3>
+                                <svg
+                                        class="w-5 h-5 text-zinc-900 dark:text-white transition-transform duration-200"
+                                        :class="{ 'rotate-180': videoOpen }"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            {{-- Video Toggle Content --}}
+                            <div
+                                    x-show="videoOpen"
+                                    x-transition:enter="transition ease-out duration-200"
+                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform translate-y-0"
+                                    x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                    class="bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-600"
+                                    style="display: none;"
+                            >
+                                <div class="flex justify-center items-center py-8 px-6">
+                                    <video
+                                            class="max-w-full h-auto rounded-lg shadow-lg"
+                                            style="max-width: 800px;"
+                                            controls
+                                    >
+                                        <source src="{{ asset('storage/assets/dunningk.mp4') }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="px-6 pb-4">
+                                    <small class="text-gray-600 dark:text-gray-400" style="font-size: 10px !important;">Credit: YouTube - Thought Architect. Note: Content incorporates ideas and media from various sources. All creators are gratefully acknowledged.</small>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- Image Collapsible Section --}}
+                        <div x-data="{ imageOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden mb-4">
+                            {{-- Image Toggle Header --}}
+                            <button
+                                    @click="imageOpen = !imageOpen"
+                                    class="w-full flex items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            >
+                                <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">
+                                    Know / Not Know (Forget, Remember, Occlude, Nothingness, Mystery scale)
+                                </h3>
+                                <svg
+                                        class="w-5 h-5 text-zinc-900 dark:text-white transition-transform duration-200"
+                                        :class="{ 'rotate-180': imageOpen }"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            {{-- Image Toggle Content --}}
+                            <div
+                                    x-show="imageOpen"
+                                    x-transition:enter="transition ease-out duration-200"
+                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform translate-y-0"
+                                    x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                    class="bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-600"
+                                    style="display: none;"
+                            >
+                                <div class="flex flex-col justify-center items-center py-8 px-6">
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 text-center">
+                                        <img src="{{ asset('storage/images/knowhurt.png') }}" onmouseover="this.src='{{ asset('storage/images/knowknow.png') }}'" onmouseout="this.src='{{ asset('storage/images/knowhurt.png') }}'" class="rounded-lg mx-auto dark:bg-white p-2 cursor-pointer" style="max-width: 600px;" alt="Knowledge hover effect">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Parable Collapsible Section --}}
+                        <div x-data="{ parableOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden mb-4">
+                            {{-- Toggle Header --}}
+                            <button
+                                    @click="parableOpen = !parableOpen"
+                                    class="w-full flex items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            >
+                                <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">
+                                    The Parable of the Forgetting
+                                </h3>
+                                <svg
+                                        class="w-5 h-5 text-zinc-900 dark:text-white transition-transform duration-200"
+                                        :class="{ 'rotate-180': parableOpen }"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            {{-- Toggle Content --}}
+                            <div
+                                    x-show="parableOpen"
+                                    x-transition:enter="transition ease-out duration-200"
+                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform translate-y-0"
+                                    x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                    class="bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-600"
+                                    style="display: none;"
+                            >
+                                <div class="py-8 px-6">
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-gray-700 dark:text-gray-300 space-y-4 leading-relaxed">
+                                        <p>There was once a being from a far-bright civilization, an alien whose mind had long ago outgrown the crude mechanics of buttons and handles. Thought itself was their technology.</p>
+
+                                        <p>At the end of each cycle, they would glide home in their small, silver craft, humming softly as it folded into its docking cradle. Inside their dwelling, the air was calm and familiar. The alien would lower themselves into a chair shaped by years of use, rest two fingers against the side of their head, and know.</p>
+
+                                        <p>In that knowing, the refrigerator door would open in the kitchen without a sound. An ice-cold beer would lift gently from its shelf, drifting through the corridor, rounding the corner, and settling perfectly into their waiting hand. No effort. No doubt. This had been the way of things for as long as memory reached. Reality responded because it was understood.</p>
+
+                                        <p>One cycle, while traveling to their place of work, another craft swerved wildly, cutting across their path. The alien's calm fractured. In a flash of fury, their thoughts sharpened into something ugly.</p>
+
+                                        <p class="italic ml-6">
+                                            "Idiot," they thought.<br>
+                                            "May they crash."<br>
+                                            "Serves them right if they burn into the planet."
+                                        </p>
+
+                                        <p>The moment passed. The alien sped on.</p>
+
+                                        <p>Not long after, a tremor rippled through the sky. Behind them, a violent bloom of light erupted. The other craft spiraled, failed, and struck the planet below in a thunder of fire.</p>
+
+                                        <p>The alien did not turn back.<br>
+                                            They did not reflect.<br>
+                                            They did not connect the moment of thought with the moment of destruction.</p>
+
+                                        <p>They continued their day.</p>
+
+                                        <p>That evening, they returned home as always. The chair welcomed them. Two fingers rose to the temple. The familiar request formed—not as effort, but as expectation.</p>
+
+                                        <p class="italic ml-6">Beer.</p>
+
+                                        <p>Nothing happened.</p>
+
+                                        <p>They tried again. Concentrating now. Reaching.</p>
+
+                                        <p>Still nothing.</p>
+
+                                        <p>A faint unease crept in. The alien leaned forward, fingers pressing harder, mind pushing where once it simply knew. The refrigerator did not open. The beer did not move.</p>
+
+                                        <p>Confusion replaced certainty.</p>
+
+                                        <p class="italic ml-6">
+                                            Why isn't this working?<br>
+                                            It always works.
+                                        </p>
+
+                                        <p>They strained, forcing thought into command. The knowing slipped into not knowing. Confidence into doubt. Doubt into forgetting. Forgetting into occlusion.</p>
+
+                                        <p>The harder they tried, the further away the beer seemed—not just from the fridge, but from reality itself. Eventually there was only mystery. Then blankness. Then nothing at all.</p>
+
+                                        <p>The chair felt colder now.</p>
+
+                                        <p>Somewhere deep beneath awareness, something had invalidated itself. A being who once knew they were cause had briefly denied that truth—and the denial had been accepted.</p>
+
+                                        <p class="font-semibold mt-6">Perhaps this is how it happened for us.</p>
+
+                                        <p>Not with thunder or punishment, but with a moment of unowned creation. A thought disowned. A power denied. A quiet fall from knowing into forgetting.</p>
+
+                                        <p>Maybe this is what it meant to be cast from the garden—not thrown out by a jealous god, but stepping away from certainty into confusion, until the gates closed behind us and we forgot we had ever opened them ourselves.</p>
+
+                                        <p class="italic">And somewhere, still waiting, an ice-cold beer floats patiently in the dark, wondering why it is no longer being called home.</p>
+
+                                        <p><i><b>The above said:</b>&nbsp;&nbsp;Imagine you are at the level mystery and striving upwards for clarity, expertise and professionalism.  Always question yourself hardest and be open to make sure your assumptions of based on the clearest knowledge you have available.</i></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Dig Deeper Collapsible Section --}}
+                        <div x-data="{ digDeeperOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden mb-4">
+                            {{-- Dig Deeper Toggle Header --}}
+                            <button
+                                    @click="digDeeperOpen = !digDeeperOpen"
+                                    class="w-full flex items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            >
+                                <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">
+                                    Dig Deeper (Only if interested. Philosophy stuff)
+                                </h3>
+                                <svg
+                                        class="w-5 h-5 text-zinc-900 dark:text-white transition-transform duration-200"
+                                        :class="{ 'rotate-180': digDeeperOpen }"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            {{-- Dig Deeper Toggle Content --}}
+                            <div
+                                    x-show="digDeeperOpen"
+                                    x-transition:enter="transition ease-out duration-200"
+                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform translate-y-0"
+                                    x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                    class="bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-600"
+                                    style="display: none;"
+                            >
+                                <div class="flex flex-col justify-center items-center py-8 px-6">
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                                        <div class="text-left text-gray-700 dark:text-gray-300 space-y-4">
+                                            <p class="font-semibold text-lg">
+                                                The "Know to Mystery Scale" (often referred to as the Know-to-Nothingness Scale) is a fundamental conceptual tool that maps an individual's ability to create, perceive, and interact with the physical universe and their own existence. It defines a gradient of awareness that ranges from absolute knowledge (complete control and identification) down to "Mystery" or "Not-Knowingness" (total ignorance or inability to confront).
+                                            </p>
+
+                                            <h4 class="font-semibold text-lg mt-6">Core Concepts of the Know-to-Mystery Scale</h4>
+                                            <p class="mb-2">This scale describe how an individual (a soul (you and me in our bodies)) becomes trapped in matter, energy, space, and time (MEST).</p>
+
+                                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                                <li><strong>Knowingness (Top):</strong> This is the highest state on this scale, representing complete identification, understanding, and the ability to cause or create.</li>
+                                                <li><strong>Gradual Degradation:</strong> As an individual moves down the scale, they move away from being able to directly know things toward having to rely on intermediate steps like looking, emoting, efforting, and thinking to understand their environment.</li>
+                                                <li><strong>Effort Band:</strong> Lower on the scale, individuals are in the "Effort" band, where they feel they must work or physically interact with everything to know it.</li>
+                                                <li><strong>Mystery/Not-Knowingness (Bottom):</strong> At the bottom is "Mystery," which is defined as "Not-Knowingness". It is characterized by a complete inability to perceive, understand, or confront. In this state, an individual is simply "not knowing" or has forgotten.</li>
+                                            </ul>
+
+                                            <h4 class="font-semibold text-lg mt-6">Key Definitions within the Scale</h4>
+                                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                                <li><strong>Is-ness:</strong> The state of being or existence.</li>
+                                                <li><strong>As-is-ness:</strong> Viewing a thing as it is, causing it to vanish (true understanding).</li>
+                                                <li><strong>Not-is-ness:</strong> Refusal to accept that something exists, a step towards not-knowingness.</li>
+                                                <li><strong>Nothingness:</strong> Defined as an absence of something.</li>
+                                            </ul>
 
 
+
+
+                                            <div class="my-6 flex justify-center">
+                                                <img id="rightwrong"
+                                                     src="{{ asset('storage/assets/mysterytoknowstaircase.png') }}"
+                                                     alt="Right Wrong"
+                                                     class="shadow-lg dark:shadow-[0_0_15px_rgba(255,255,255,0.2)] max-w-2xl w-full"
+                                                     style="cursor: pointer;">
+                                            </div>
+
+                                            <div class="my-6 flex justify-center">
+                                                <img id="rightwrong"
+                                                     src="{{ asset('storage/assets/rightwrong.png') }}"
+                                                     alt="Right Wrong"
+                                                     class="shadow-lg dark:shadow-[0_0_15px_rgba(255,255,255,0.2)] max-w-2xl w-full"
+                                                     style="cursor: pointer;">
+                                            </div>
+                                            <div class="my-6 flex justify-center">
+                                                <img id="rightwrongmain"
+                                                     src="{{ asset('storage/assets/rightwrongmain.png') }}"
+                                                     alt="Right Wrong Main"
+                                                     class="shadow-lg dark:shadow-[0_0_15px_rgba(255,255,255,0.2)] max-w-2xl w-full"
+                                                     style="cursor: pointer;">
+                                            </div>
+
+
+                                            <p class="mt-4 italic">
+                                                An individual is considered to be "downtone" or stuck in low-level, non-survival states when they are operating at the "Mystery" or Not-Knowingness end of the scale.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        {{-- Chess Pigeon Collapsible Section --}}
+                        <div x-data="{ pigeonOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden">
+                            {{-- Toggle Header --}}
+                            <button
+                                    @click="pigeonOpen = !pigeonOpen"
+                                    class="w-full flex items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            >
+                                <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">
+                                    Chess with a Pigeon
+                                </h3>
+                                <svg
+                                        class="w-5 h-5 text-zinc-900 dark:text-white transition-transform duration-200"
+                                        :class="{ 'rotate-180': pigeonOpen }"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            {{-- Toggle Content --}}
+                            <div
+                                    x-show="pigeonOpen"
+                                    x-transition:enter="transition ease-out duration-200"
+                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform translate-y-0"
+                                    x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                    class="bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-600"
+                                    style="display: none;"
+                            >
+                                <div class="flex justify-center items-center py-8 px-6">
+                                    <img
+                                            src="{{ asset('storage/images/chesswithapigeon.jpg') }}"
+                                            alt="Chess with a Pigeon"
+                                            class="max-w-full h-auto rounded-lg shadow-lg"
+                                            style="max-width: 600px;"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <p class="text-zinc-800 dark:text-zinc-200 mt-4">
-                        If you are serious about professional project management and operating at CM Levels 2 and above,
+                        If you are serious about professional project management (strategy management / business management etc.) and operating at CM Levels 2 and above,
                         then anything to the left of the ladder in the image above is a major problem.
                     </p>
 
