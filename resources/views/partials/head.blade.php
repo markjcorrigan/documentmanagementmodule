@@ -111,6 +111,3 @@
 
 <!-- Able Player JS (must come AFTER jQuery and js-cookie) -->
 <script src="{{ asset('ableplayer/build/ableplayer.min.js') }}"></script>
-
-<!-- Livewire Alert -->
-<x-livewire-alert::scripts />

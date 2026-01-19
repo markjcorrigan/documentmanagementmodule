@@ -3,7 +3,6 @@
 namespace App\Livewire\Admin\Permissions;
 
 use Illuminate\Contracts\View\View;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -11,7 +10,6 @@ use Spatie\Permission\Models\Permission;
 
 class CreatePermission extends Component
 {
-    use LivewireAlert;
 
     #[Validate('required|string|max:255')]
     public string $name = '';

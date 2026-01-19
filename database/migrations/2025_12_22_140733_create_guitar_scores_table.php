@@ -19,8 +19,8 @@ return new class extends Migration
 
             // Basic file information (same as protected_files)
             $table->string('name');                     // Filename
-            $table->text('path');                       // Relative path from protectedGuitar folder
-            $table->text('parent_path')->nullable();    // Parent directory path
+            $table->string('path', 1000);               // Relative path from protectedGuitar folder
+            $table->string('parent_path', 500)->nullable();    // Parent directory path
             $table->enum('type', ['file', 'folder']);   // File or folder
 
             // File-specific fields
@@ -49,7 +49,7 @@ return new class extends Migration
             $table->index(['type', 'extension']);
 
             // Full-text search
-            $table->fullText(['name', 'composer', 'title', 'performer', 'notes']);
+            $table->fullText(['name', 'composer', 'title', 'performer']);
         });
     }
 

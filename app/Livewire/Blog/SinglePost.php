@@ -5,13 +5,12 @@ namespace App\Livewire\Blog;
 use App\Livewire\FrontendComponent;
 use App\Models\BlogPost;
 use Illuminate\View\View;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
 
 #[Layout('components.layouts.app.frontend', ['title' => 'Single Post'])]
 class SinglePost extends FrontendComponent
 {
-    use LivewireAlert;
+    //use LivewireAlert;
 
     public BlogPost $post;
 

@@ -7,7 +7,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -15,7 +14,6 @@ use Spatie\Permission\Models\Role;
 
 class CreateUser extends Component
 {
-    use LivewireAlert;
 
     #[Validate('required|string|max:255')]
     public string $name = '';

@@ -684,6 +684,7 @@
                                 </div>
                             </div>
                         </div>
+
                         {{-- Image Collapsible Section --}}
                         <div x-data="{ imageOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden mb-4">
                             {{-- Image Toggle Header --}}
@@ -834,7 +835,7 @@
                                     class="w-full flex items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                             >
                                 <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">
-                                    Dig Deeper (Only if interested. Philosophy stuff)
+                                    Dig Deeper (Philosophy stuff)
                                 </h3>
                                 <svg
                                         class="w-5 h-5 text-zinc-900 dark:text-white transition-transform duration-200"
@@ -884,9 +885,6 @@
                                                 <li><strong>Nothingness:</strong> Defined as an absence of something.</li>
                                             </ul>
 
-
-
-
                                             <div class="my-6 flex justify-center">
                                                 <img id="rightwrong"
                                                      src="{{ asset('storage/assets/mysterytoknowstaircase.png') }}"
@@ -895,13 +893,7 @@
                                                      style="cursor: pointer;">
                                             </div>
 
-                                            <div class="my-6 flex justify-center">
-                                                <img id="rightwrong"
-                                                     src="{{ asset('storage/assets/rightwrong.png') }}"
-                                                     alt="Right Wrong"
-                                                     class="shadow-lg dark:shadow-[0_0_15px_rgba(255,255,255,0.2)] max-w-2xl w-full"
-                                                     style="cursor: pointer;">
-                                            </div>
+
                                             <div class="my-6 flex justify-center">
                                                 <img id="rightwrongmain"
                                                      src="{{ asset('storage/assets/rightwrongmain.png') }}"
@@ -909,7 +901,6 @@
                                                      class="shadow-lg dark:shadow-[0_0_15px_rgba(255,255,255,0.2)] max-w-2xl w-full"
                                                      style="cursor: pointer;">
                                             </div>
-
 
                                             <p class="mt-4 italic">
                                                 An individual is considered to be "downtone" or stuck in low-level, non-survival states when they are operating at the "Mystery" or Not-Knowingness end of the scale.
@@ -920,16 +911,15 @@
                             </div>
                         </div>
 
-
                         {{-- Chess Pigeon Collapsible Section --}}
-                        <div x-data="{ pigeonOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden">
+                        <div x-data="{ pigeonOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden mb-4">
                             {{-- Toggle Header --}}
                             <button
                                     @click="pigeonOpen = !pigeonOpen"
                                     class="w-full flex items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                             >
                                 <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">
-                                    Chess with a Pigeon
+                                    Chess with a Pigeon (Cancel Culture etc.)
                                 </h3>
                                 <svg
                                         class="w-5 h-5 text-zinc-900 dark:text-white transition-transform duration-200"
@@ -961,6 +951,105 @@
                                             class="max-w-full h-auto rounded-lg shadow-lg"
                                             style="max-width: 600px;"
                                     >
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Cancel Culture Video with My Opinion Section --}}
+                        <div x-data="{ videoOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden mb-4">
+                            {{-- Video Toggle Header --}}
+                            <button
+                                    @click="videoOpen = !videoOpen"
+                                    class="w-full flex items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            >
+                                <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">
+                                    Radicalization / Wokeness / Cancel culture / Communism / Bribery and Corruption/ Censorship
+                                </h3>
+                                <svg
+                                        class="w-5 h-5 text-zinc-900 dark:text-white transition-transform duration-200"
+                                        :class="{ 'rotate-180': videoOpen }"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            {{-- Video Toggle Content --}}
+                            <div
+                                    x-show="videoOpen"
+                                    x-transition:enter="transition ease-out duration-200"
+                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform translate-y-0"
+                                    x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                    class="bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-600"
+                                    style="display: none;"
+                            >
+                                <div class="flex justify-center items-center py-8 px-6">
+                                    <video
+                                            class="max-w-full h-auto rounded-lg shadow-lg"
+                                            style="max-width: 800px;"
+                                            controls
+                                    >
+                                        <source src="{{ asset('storage/assets/cancelculture.mp4') }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="px-6 pb-4">
+                                    <small class="text-gray-600 dark:text-gray-400" style="font-size: 10px !important;">Credit: YouTube -
+                                        How Cancel Culture Destroys Trust in Expertise - Greg Lukianoff. <br>Note: Content incorporates ideas and media from various sources. All creators are gratefully acknowledged.</small>
+                                </div>
+
+                                {{-- My Opinion Section --}}
+                                <div class="px-6 pb-8">
+                                    <h4 class="text-xl font-semibold text-zinc-900 dark:text-white mb-4 mt-6">My Opinion</h4>
+
+                                    <div class="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+                                        <p><strong>The Autoimmune Disorder of a Thoughtless Age: How the Abandonment of Reason Breeds New Dogmas</strong></p>
+
+                                        <p>We are living through a social autoimmune disease. A healthy society, like a healthy body, possesses mechanisms to identify and isolate genuine threats—be they pathogens or dangerous ideas. This system relies on discernment: the careful, reasoned application of evidence and principle. Its ethic is the scientific method, extended beyond the lab into the public square. It demands openness, hypothesis, scrutiny, and the humility to be proven wrong.</p>
+
+                                        <p>But that system is now attacking the host.</p>
+
+                                        <p>The disease manifests as the widespread celebration of a certain kind of idiocy—not a lack of innate intelligence, but a cultivated inability to think. It is the willful rejection of dispassionate inquiry in favor of the intoxicating simplicity of high-emotion discourse. When outrage, tribal loyalty, and moral vanity become the primary currencies of debate, the ability to think logically doesn't just waver; it is ritualistically discarded as a form of disloyalty. The complex becomes heretical; the nuanced becomes suspicious.</p>
+
+                                        <p>This emotional ecosystem is the perfect petri dish for radicalization. Radicalization is not merely the adoption of extreme views. It is the cognitive process of replacing a messy, evidence-based reality with a clean, emotionally satisfying narrative of absolute good versus absolute evil. It offers a powerful antidote to anxiety: certainty. And to maintain that certainty, it must build walls. The first wall is against contradictory facts. The second is against the people who bear them.</p>
+
+                                        <p>Thus, we arrive at the social enforcement arm of this process: cancel culture and its sibling, censorship. They are not merely "people being held accountable." They are the natural, tyrannical outcome of a radicalized emotional state. When an idea or person is deemed a contaminant to the pure narrative, the immune response must be total: not engagement, not rebuttal, but erasure. This is intolerance canonized as a civic virtue. It is the corruption of discourse itself, where the goal is not to discover truth but to silence its perceived enemies.</p>
+
+                                        <p>And here lies the terminal stage of the disease: the corruption of systems and the rise of a new, secular dogma. Corruption, in this decay, is more than bribery. It is the corruption of truth into "lived experience" or "party doctrine." It is the corruption of institutions—universities, media, tech platforms—that surrender their duty to open inquiry to become enforcers of orthodoxy. It is the corruption of language, where words are stripped of meaning and wielded as blunt instruments of power.</p>
+
+                                        <p>This is where a reference to Communism finds its chilling resonance. I am not speaking of economic theory, but of the 20th century's most brutal case study in this very pathology. Communism began, in part, as a claim to scientific, materialist truth. But it rapidly mutated into the ultimate closed system. It demanded absolute ideological purity, could tolerate no dissent, and wielded "criticism and self-criticism" as tools of psychological terror. It radicalized populations against "class enemies," corrupted every institution into an arm of the Party, and built a reality where the map—the ideology—was more real than the territory of human suffering beneath it.</p>
+
+                                        <p>Our modern iteration does not require a Vanguard Party or a gulag archipelago. It is softer, more digital, and perhaps more insidious for it. But the pattern is identical: The retreat from open, reasoned inquiry creates an intellectual vacuum. That vacuum is filled by the totalizing certainty of radicalized emotion. That emotion demands intolerance to survive. And that intolerance, when institutionalized, becomes the corrupt engine of a new orthodoxy.</p>
+
+                                        <p>We are not becoming the Soviet Union. We are replicating the human failure that made it possible: the replacement of the difficult, liberating work of thought with the easy, enslaving comfort of feeling right. We are trading the scientific method for the dogma of the mob, and in doing so, we are building our own little cathedrals of unquestionable truth—beautiful, emotion-soaked, and utterly devoid of reason.</p>
+
+                                        <p>The cure is not a different dogma. It is the courageous, unfashionable recommitment to the principles we have abandoned: that to be wrong is not a sin, but a step toward being right; that the person who disagrees with you is not a heretic, but a potential source of correction; and that the only thing more dangerous than a bad idea is a society that has forgotten how to think its way through one.</p>
+
+
+                                        <div class="my-6 flex justify-center">
+                                            <img id="rightwrong"
+                                                 src="{{ asset('storage/assets/postulates.png') }}"
+                                                 alt="Right Wrong"
+                                                 class="shadow-lg dark:shadow-[0_0_15px_rgba(255,255,255,0.2)] max-w-2xl w-full"
+                                                 style="cursor: pointer;">
+                                        </div>
+                                        <p>Therefore.  Per the scale above, Striving upwards to higher levels of knowingness.</p>
+                                        <p>We need to move our thinking patterns to the right per the image below.</p>
+                                        <div class="my-6 flex justify-center">
+                                            <img id="rightwrong"
+                                                 src="{{ asset('storage/assets/rightwrong.png') }}"
+                                                 alt="Right Wrong"
+                                                 class="shadow-lg dark:shadow-[0_0_15px_rgba(255,255,255,0.2)] max-w-2xl w-full"
+                                                 style="cursor: pointer;">
+                                        </div>
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div>

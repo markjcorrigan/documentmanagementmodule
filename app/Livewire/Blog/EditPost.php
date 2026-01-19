@@ -6,7 +6,6 @@ use App\Livewire\FrontendComponent;
 use App\Models\BlogPost;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\WithFileUploads;
@@ -14,7 +13,7 @@ use Livewire\WithFileUploads;
 #[Layout('components.layouts.app.frontend', ['title' => 'Edit Post'])]
 class EditPost extends FrontendComponent
 {
-    use LivewireAlert, WithFileUploads;
+   // use LivewireAlert, WithFileUploads;
 
     public BlogPost $post;
 

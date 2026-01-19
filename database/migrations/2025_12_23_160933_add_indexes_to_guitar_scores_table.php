@@ -18,33 +18,13 @@ return new class extends Migration
 
         // Only add indexes that don't exist
         Schema::table('guitar_scores', function (Blueprint $table) use ($existingIndexes) {
-            if (!isset($existingIndexes['guitar_scores_composer_index'])) {
-                $table->index('composer', 'guitar_scores_composer_index');
-            }
-
-            if (!isset($existingIndexes['guitar_scores_performer_index'])) {
-                $table->index('performer', 'guitar_scores_performer_index');
-            }
-
+            // Add name index if it doesn't exist (this is the only one missing from original migration)
             if (!isset($existingIndexes['guitar_scores_name_index'])) {
                 $table->index('name', 'guitar_scores_name_index');
             }
 
-            if (!isset($existingIndexes['guitar_scores_title_index'])) {
-                $table->index('title', 'guitar_scores_title_index');
-            }
-
-            if (!isset($existingIndexes['guitar_scores_working_on_index'])) {
-                $table->index('working_on', 'guitar_scores_working_on_index');
-            }
-
-            if (!isset($existingIndexes['guitar_scores_interested_in_index'])) {
-                $table->index('interested_in', 'guitar_scores_interested_in_index');
-            }
-
-            if (!isset($existingIndexes['guitar_scores_path_index'])) {
-                $table->index('path', 'guitar_scores_path_index');
-            }
+            // Note: composer, performer, title, working_on, interested_in already have indexes from the create migration
+            // Note: path is too long (1000 chars) to index efficiently, so we're skipping it
         });
     }
 
@@ -52,13 +32,7 @@ return new class extends Migration
     {
         // Remove indexes if they exist
         Schema::table('guitar_scores', function (Blueprint $table) {
-            $table->dropIndexIfExists('guitar_scores_composer_index');
-            $table->dropIndexIfExists('guitar_scores_performer_index');
             $table->dropIndexIfExists('guitar_scores_name_index');
-            $table->dropIndexIfExists('guitar_scores_title_index');
-            $table->dropIndexIfExists('guitar_scores_working_on_index');
-            $table->dropIndexIfExists('guitar_scores_interested_in_index');
-            $table->dropIndexIfExists('guitar_scores_path_index');
         });
     }
 };

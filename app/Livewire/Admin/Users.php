@@ -4,7 +4,6 @@ namespace App\Livewire\Admin;
 
 use App\Models\User;
 use Illuminate\Contracts\View\View;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Session;
 use Livewire\Attributes\Url;
@@ -14,7 +13,6 @@ use Spatie\Permission\Models\Role;
 
 class Users extends Component
 {
-    use LivewireAlert;
     use WithPagination;
 
     /** @var array<string,string> */

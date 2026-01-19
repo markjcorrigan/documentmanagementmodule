@@ -6,7 +6,6 @@ use App\Livewire\FrontendComponent;
 use App\Models\BlogPost;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\WithFileUploads;
@@ -14,7 +13,7 @@ use Livewire\WithFileUploads;
 #[Layout('components.layouts.app.frontend', ['title' => 'Create New Post'])]
 class CreatePost extends FrontendComponent
 {
-    use LivewireAlert, WithFileUploads;
+   // use LivewireAlert, WithFileUploads;
 
     #[Validate('required|min:3|max:255')]
     public $post_title = '';

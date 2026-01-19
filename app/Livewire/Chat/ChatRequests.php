@@ -8,13 +8,11 @@ use App\Models\ChatRequest;
 use App\Models\ChatSession;
 use Illuminate\Support\Collection;
 use Illuminate\View\View;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
 class ChatRequests extends Component
 {
-    use LivewireAlert;
 
     public Collection $pendingRequests;
 

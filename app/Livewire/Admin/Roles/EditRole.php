@@ -3,7 +3,6 @@
 namespace App\Livewire\Admin\Roles;
 
 use Illuminate\Contracts\View\View;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -12,7 +11,6 @@ use Spatie\Permission\Models\Role;
 
 class EditRole extends Component
 {
-    use LivewireAlert;
 
     public Role $role;
 

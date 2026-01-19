@@ -5,7 +5,6 @@ namespace App\Livewire\Admin\Users;
 use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Arr;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -15,7 +14,6 @@ use Spatie\Permission\Models\Role;
 class EditUser extends Component
 {
     use HandlesRedirects;
-    use LivewireAlert;
 
     public User $user;
 

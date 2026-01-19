@@ -3,7 +3,6 @@
 namespace App\Livewire\Admin\Permissions;
 
 use Illuminate\Contracts\View\View;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -11,7 +10,6 @@ use Spatie\Permission\Models\Permission;
 
 class EditPermission extends Component
 {
-    use LivewireAlert;
 
     public Permission $permission;
 
