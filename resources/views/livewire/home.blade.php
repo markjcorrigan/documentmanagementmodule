@@ -634,6 +634,47 @@
 
                     <p class="text-zinc-900 dark:text-zinc-100 mt-6">Position the pin on the diagram above:</p>
 
+                    {{-- Dig Deeper Parent Section --}}
+                    <section class="mb-8">
+                        <div x-data="{ parentOpen: false }" class="border border-gray-300 dark:border-blue-900 rounded-lg shadow-sm overflow-hidden">
+                            {{-- Parent Toggle Header --}}
+                            <button
+                                    @click="parentOpen = !parentOpen"
+                                    class="w-full flex items-center justify-between px-6 py-4 bg-blue-100 dark:bg-blue-900 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+                            >
+                                <h2 class="text-xl font-bold text-zinc-900 dark:text-white">
+                                    Dig Deeper?
+                                </h2>
+                                <svg
+                                        class="w-6 h-6 text-zinc-900 dark:text-white transition-transform duration-200"
+                                        :class="{ 'rotate-180': parentOpen }"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+
+                            {{-- Parent Toggle Content --}}
+                            <div
+                                    x-show="parentOpen"
+                                    x-transition:enter="transition ease-out duration-200"
+                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform translate-y-0"
+                                    x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                    class="bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-600 p-6"
+                                    style="display: none;"
+                            >
+                                {{-- All your existing collapsible sections go here --}}
+
+
+
+
+
                     {{-- Dig Into Dunning Kruger Section --}}
                     <section class="mb-8">
                         {{-- Video Collapsible Section --}}
@@ -1086,6 +1127,7 @@
 
                 </div>
             </div>
+
         </section>
 
             {{-- User Story Section --}}
